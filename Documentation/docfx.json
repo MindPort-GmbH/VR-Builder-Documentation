@@ -3,13 +3,26 @@
     {
       "src": [
         {
-          "src": "D:/Repos/VR-Builder-UAS-2020/Assets",
+          "src": "D:/Repos/VR-Builder-UAS-2020",
           "files": [
             "**.cs"
+          ],
+          "exclude": [
+            "**.meta",
+            "**/obj/**",
+            "**/bin/**",
+            "**/Tests/**",
+            "**/Library/**"
+        ],
+          "references": [
+            "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEngine.dll",
+            "C:/Program Files/Unity/Hub/Editor/2022.3.25f1/Editor/Data/Managed/UnityEditor.dll"
           ]
+
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "filter": "filterConfig.yml"
     }
   ],
   "build": {
@@ -26,7 +39,9 @@
     "resource": [
       {
         "files": [
-          "articles/images/**"
+          "articles/images/**",
+          "logo.svg",
+          "favicon.ico"
         ]
       }
     ],
@@ -38,8 +53,15 @@
     "globalMetadata": {
       "_appName": "VR Builder Documentation",
       "_appTitle": "VR Builder Documentation",
+      "_appLogoPath": "logo.svg",
+      "_enableNewTab": true,
       "_enableSearch": true,
-      "pdf": false
+      "_disableBreadcrumb": true,
+      "pdf": false,
+      "_gitContribute": {
+        "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
+        "branch": "develop"
+    }
     }
   }
 }
