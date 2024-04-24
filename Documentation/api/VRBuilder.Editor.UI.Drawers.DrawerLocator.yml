@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator
+  commentId: T:VRBuilder.Editor.UI.Drawers.DrawerLocator
+  id: DrawerLocator
+  parent: VRBuilder.Editor.UI.Drawers
+  children:
+  - VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember(System.Reflection.MemberInfo,System.Object)
+  - VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue(System.Object,System.Type)
+  - VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer(System.Type)
+  langs:
+  - csharp
+  - vb
+  name: DrawerLocator
+  nameWithType: DrawerLocator
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: DrawerLocator
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: >-
+      [InitializeOnLoad]
+
+      public static class DrawerLocator
+    content.vb: >-
+      <InitializeOnLoad>
+
+      Public Module DrawerLocator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: UnityEditor.InitializeOnLoadAttribute
+    ctor: UnityEditor.InitializeOnLoadAttribute.#ctor
+    arguments: []
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember(System.Reflection.MemberInfo,System.Object)
+  commentId: M:VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember(System.Reflection.MemberInfo,System.Object)
+  id: GetDrawerForMember(System.Reflection.MemberInfo,System.Object)
+  parent: VRBuilder.Editor.UI.Drawers.DrawerLocator
+  langs:
+  - csharp
+  - vb
+  name: GetDrawerForMember(MemberInfo, object)
+  nameWithType: DrawerLocator.GetDrawerForMember(MemberInfo, object)
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember(System.Reflection.MemberInfo, object)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetDrawerForMember
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+    startLine: 59
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: >-
+    Returns required drawer for a given object member.
+
+    If the member has a <xref href="VRBuilder.Core.Attributes.UsesSpecificProcessDrawerAttribute" data-throw-if-not-resolved="false"></xref>, returns the drawer defined in that attribute.
+
+    If the member contains non-null value, tries to find drawers from most concrete type definition (which is actual value's type) and up through inheritance tree.
+
+    If member's value is null, does the same starting from the property declared type instead.
+
+    If drawer is still not found, checks drawers for interfaces.
+
+    If everything else fails, returns the drawer for System.Object.
+  example: []
+  syntax:
+    content: public static IProcessDrawer GetDrawerForMember(MemberInfo memberInfo, object owner)
+    parameters:
+    - id: memberInfo
+      type: System.Reflection.MemberInfo
+      description: Reflection information about the member for which drawer is needed.
+    - id: owner
+      type: System.Object
+      description: Object to which this member belongs to.
+    return:
+      type: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+      description: Returns suitable Process drawer. Returns null only if the member is not a property or field, or the specified custom drawer is not found.
+    content.vb: Public Shared Function GetDrawerForMember(memberInfo As MemberInfo, owner As Object) As IProcessDrawer
+  overload: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember*
+  nameWithType.vb: DrawerLocator.GetDrawerForMember(MemberInfo, Object)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember(System.Reflection.MemberInfo, Object)
+  name.vb: GetDrawerForMember(MemberInfo, Object)
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue(System.Object,System.Type)
+  commentId: M:VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue(System.Object,System.Type)
+  id: GetDrawerForValue(System.Object,System.Type)
+  parent: VRBuilder.Editor.UI.Drawers.DrawerLocator
+  langs:
+  - csharp
+  - vb
+  name: GetDrawerForValue(object, Type)
+  nameWithType: DrawerLocator.GetDrawerForValue(object, Type)
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue(object, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetDrawerForValue
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+    startLine: 85
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: >-
+    Returns required drawer for a given value.
+
+    If the value is not null, try to find drawers from most concrete type definition (which is actual value's type) and up through inheritance tree.
+
+    If the value is null, does the same starting from the member declaring type instead.
+
+    If drawer is still not found, checks drawers for interfaces.
+
+    If everything else fails, returns the drawer for System.Object.
+  example: []
+  syntax:
+    content: public static IProcessDrawer GetDrawerForValue(object value, Type declaredType)
+    parameters:
+    - id: value
+      type: System.Object
+      description: Value to get drawer for.
+    - id: declaredType
+      type: System.Type
+      description: Declaring type of the class member that contains the value.
+    return:
+      type: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+      description: Returns suitable Process drawer.
+    content.vb: Public Shared Function GetDrawerForValue(value As Object, declaredType As Type) As IProcessDrawer
+  overload: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue*
+  nameWithType.vb: DrawerLocator.GetDrawerForValue(Object, Type)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue(Object, System.Type)
+  name.vb: GetDrawerForValue(Object, Type)
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer(System.Type)
+  commentId: M:VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer(System.Type)
+  id: GetInstantiatorDrawer(System.Type)
+  parent: VRBuilder.Editor.UI.Drawers.DrawerLocator
+  langs:
+  - csharp
+  - vb
+  name: GetInstantiatorDrawer(Type)
+  nameWithType: DrawerLocator.GetInstantiatorDrawer(Type)
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetInstantiatorDrawer
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/DrawerLocator.cs
+    startLine: 98
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: Get a drawer for a view that creates a new instance of <code class="paramref">declaredType</code>
+  example: []
+  syntax:
+    content: public static IProcessDrawer GetInstantiatorDrawer(Type declaredType)
+    parameters:
+    - id: declaredType
+      type: System.Type
+    return:
+      type: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+    content.vb: Public Shared Function GetInstantiatorDrawer(declaredType As Type) As IProcessDrawer
+  overload: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer*
+references:
+- uid: VRBuilder.Editor.UI.Drawers
+  commentId: N:VRBuilder.Editor.UI.Drawers
+  href: VRBuilder.html
+  name: VRBuilder.Editor.UI.Drawers
+  nameWithType: VRBuilder.Editor.UI.Drawers
+  fullName: VRBuilder.Editor.UI.Drawers
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.UI
+    name: UI
+    href: VRBuilder.Editor.UI.html
+  - name: .
+  - uid: VRBuilder.Editor.UI.Drawers
+    name: Drawers
+    href: VRBuilder.Editor.UI.Drawers.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.UI
+    name: UI
+    href: VRBuilder.Editor.UI.html
+  - name: .
+  - uid: VRBuilder.Editor.UI.Drawers
+    name: Drawers
+    href: VRBuilder.Editor.UI.Drawers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.Attributes.UsesSpecificProcessDrawerAttribute
+  commentId: T:VRBuilder.Core.Attributes.UsesSpecificProcessDrawerAttribute
+  parent: VRBuilder.Core.Attributes
+  href: VRBuilder.Core.Attributes.UsesSpecificProcessDrawerAttribute.html
+  name: UsesSpecificProcessDrawerAttribute
+  nameWithType: UsesSpecificProcessDrawerAttribute
+  fullName: VRBuilder.Core.Attributes.UsesSpecificProcessDrawerAttribute
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember
+  href: VRBuilder.Editor.UI.Drawers.DrawerLocator.html#VRBuilder_Editor_UI_Drawers_DrawerLocator_GetDrawerForMember_System_Reflection_MemberInfo_System_Object_
+  name: GetDrawerForMember
+  nameWithType: DrawerLocator.GetDrawerForMember
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForMember
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+  commentId: T:VRBuilder.Editor.UI.Drawers.IProcessDrawer
+  parent: VRBuilder.Editor.UI.Drawers
+  href: VRBuilder.Editor.UI.Drawers.IProcessDrawer.html
+  name: IProcessDrawer
+  nameWithType: IProcessDrawer
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+- uid: VRBuilder.Core.Attributes
+  commentId: N:VRBuilder.Core.Attributes
+  href: VRBuilder.html
+  name: VRBuilder.Core.Attributes
+  nameWithType: VRBuilder.Core.Attributes
+  fullName: VRBuilder.Core.Attributes
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Attributes
+    name: Attributes
+    href: VRBuilder.Core.Attributes.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Attributes
+    name: Attributes
+    href: VRBuilder.Core.Attributes.html
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue
+  href: VRBuilder.Editor.UI.Drawers.DrawerLocator.html#VRBuilder_Editor_UI_Drawers_DrawerLocator_GetDrawerForValue_System_Object_System_Type_
+  name: GetDrawerForValue
+  nameWithType: DrawerLocator.GetDrawerForValue
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetDrawerForValue
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer
+  href: VRBuilder.Editor.UI.Drawers.DrawerLocator.html#VRBuilder_Editor_UI_Drawers_DrawerLocator_GetInstantiatorDrawer_System_Type_
+  name: GetInstantiatorDrawer
+  nameWithType: DrawerLocator.GetInstantiatorDrawer
+  fullName: VRBuilder.Editor.UI.Drawers.DrawerLocator.GetInstantiatorDrawer

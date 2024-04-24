@@ -1,0 +1,4376 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  commentId: T:VRBuilder.Editor.UI.Graphics.StepGraphNode
+  id: StepGraphNode
+  parent: VRBuilder.Editor.UI.Graphics
+  children:
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.#ctor(VRBuilder.Core.IStep)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.Name
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.Position
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort(UnityEditor.Experimental.GraphView.Port)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  - VRBuilder.Editor.UI.Graphics.StepGraphNode.step
+  langs:
+  - csharp
+  - vb
+  name: StepGraphNode
+  nameWithType: StepGraphNode
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: StepGraphNode
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 12
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Step node in a graph view editor.
+  example: []
+  syntax:
+    content: 'public class StepGraphNode : ProcessGraphNode, IEventHandler, ITransform, ITransitionAnimations, IExperimentalFeatures, IVisualElementScheduler, IResolvedStyle, ISelectable, ICollectibleElement'
+    content.vb: Public Class StepGraphNode Inherits ProcessGraphNode Implements IEventHandler, ITransform, ITransitionAnimations, IExperimentalFeatures, IVisualElementScheduler, IResolvedStyle, ISelectable, ICollectibleElement
+  inheritance:
+  - System.Object
+  - UnityEngine.UIElements.CallbackEventHandler
+  - UnityEngine.UIElements.Focusable
+  - UnityEngine.UIElements.VisualElement
+  - UnityEditor.Experimental.GraphView.GraphElement
+  - UnityEditor.Experimental.GraphView.Node
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  derivedClasses:
+  - VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchGraphNode
+  - VRBuilder.Editor.UI.Graphics.EndChapterNode
+  - VRBuilder.Editor.UI.Graphics.ParallelExecutionNode
+  - VRBuilder.Editor.UI.Graphics.StepGroupNode
+  implements:
+  - UnityEngine.UIElements.IEventHandler
+  - UnityEngine.UIElements.ITransform
+  - UnityEngine.UIElements.Experimental.ITransitionAnimations
+  - UnityEngine.UIElements.IExperimentalFeatures
+  - UnityEngine.UIElements.IVisualElementScheduler
+  - UnityEngine.UIElements.IResolvedStyle
+  - UnityEditor.Experimental.GraphView.ISelectable
+  - UnityEditor.Experimental.GraphView.ICollectibleElement
+  inheritedMembers:
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.deleteIconFileName
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.editIconFileName
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.defaultNodeSize
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.IsEntryPoint
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(System.Boolean,System.Int32)
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.CreatePort(UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity)
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(System.String)
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OpenTextEditor
+  - VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OnEditTextFinished(UnityEngine.UIElements.TextField)
+  - UnityEditor.Experimental.GraphView.Node.m_CollapseButton
+  - UnityEditor.Experimental.GraphView.Node.m_ButtonContainer
+  - UnityEditor.Experimental.GraphView.Node.RefreshExpandedState
+  - UnityEditor.Experimental.GraphView.Node.GetPosition
+  - UnityEditor.Experimental.GraphView.Node.SetPosition(UnityEngine.Rect)
+  - UnityEditor.Experimental.GraphView.Node.OnPortRemoved(UnityEditor.Experimental.GraphView.Port)
+  - UnityEditor.Experimental.GraphView.Node.InstantiatePort(UnityEditor.Experimental.GraphView.Orientation,UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity,System.Type)
+  - UnityEditor.Experimental.GraphView.Node.RefreshPorts
+  - UnityEditor.Experimental.GraphView.Node.ToggleCollapse
+  - UnityEditor.Experimental.GraphView.Node.UseDefaultStyling
+  - UnityEditor.Experimental.GraphView.Node.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)
+  - UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet{UnityEditor.Experimental.GraphView.GraphElement},System.Func{UnityEditor.Experimental.GraphView.GraphElement,System.Boolean})
+  - UnityEditor.Experimental.GraphView.Node.mainContainer
+  - UnityEditor.Experimental.GraphView.Node.titleContainer
+  - UnityEditor.Experimental.GraphView.Node.inputContainer
+  - UnityEditor.Experimental.GraphView.Node.outputContainer
+  - UnityEditor.Experimental.GraphView.Node.titleButtonContainer
+  - UnityEditor.Experimental.GraphView.Node.topContainer
+  - UnityEditor.Experimental.GraphView.Node.extensionContainer
+  - UnityEditor.Experimental.GraphView.Node.expanded
+  - UnityEditor.Experimental.GraphView.Node.title
+  - UnityEditor.Experimental.GraphView.GraphElement.ResetLayer
+  - UnityEditor.Experimental.GraphView.GraphElement.OnCustomStyleResolved(UnityEngine.UIElements.ICustomStyle)
+  - UnityEditor.Experimental.GraphView.GraphElement.IsSelectable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsMovable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsResizable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsDroppable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsAscendable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsRenamable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsCopiable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsSnappable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsGroupable
+  - UnityEditor.Experimental.GraphView.GraphElement.IsStackable
+  - UnityEditor.Experimental.GraphView.GraphElement.GetGlobalCenter
+  - UnityEditor.Experimental.GraphView.GraphElement.UpdatePresenterPosition
+  - UnityEditor.Experimental.GraphView.GraphElement.OnUnselected
+  - UnityEditor.Experimental.GraphView.GraphElement.HitTest(UnityEngine.Vector2)
+  - UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement,System.Boolean)
+  - UnityEditor.Experimental.GraphView.GraphElement.Unselect(UnityEngine.UIElements.VisualElement)
+  - UnityEditor.Experimental.GraphView.GraphElement.IsSelected(UnityEngine.UIElements.VisualElement)
+  - UnityEditor.Experimental.GraphView.GraphElement.elementTypeColor
+  - UnityEditor.Experimental.GraphView.GraphElement.layer
+  - UnityEditor.Experimental.GraphView.GraphElement.showInMiniMap
+  - UnityEditor.Experimental.GraphView.GraphElement.capabilities
+  - UnityEditor.Experimental.GraphView.GraphElement.selected
+  - UnityEngine.UIElements.VisualElement.disabledUssClassName
+  - UnityEngine.UIElements.VisualElement.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)
+  - UnityEngine.UIElements.VisualElement.Focus
+  - UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)
+  - UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(System.Boolean)
+  - UnityEngine.UIElements.VisualElement.SetEnabled(System.Boolean)
+  - UnityEngine.UIElements.VisualElement.MarkDirtyRepaint
+  - UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)
+  - UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)
+  - UnityEngine.UIElements.VisualElement.DoMeasure(System.Single,UnityEngine.UIElements.VisualElement.MeasureMode,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode)
+  - UnityEngine.UIElements.VisualElement.ToString
+  - UnityEngine.UIElements.VisualElement.GetClasses
+  - UnityEngine.UIElements.VisualElement.ClearClassList
+  - UnityEngine.UIElements.VisualElement.AddToClassList(System.String)
+  - UnityEngine.UIElements.VisualElement.RemoveFromClassList(System.String)
+  - UnityEngine.UIElements.VisualElement.ToggleInClassList(System.String)
+  - UnityEngine.UIElements.VisualElement.EnableInClassList(System.String,System.Boolean)
+  - UnityEngine.UIElements.VisualElement.ClassListContains(System.String)
+  - UnityEngine.UIElements.VisualElement.FindAncestorUserData
+  - UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.Insert(System.Int32,UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.RemoveAt(System.Int32)
+  - UnityEngine.UIElements.VisualElement.Clear
+  - UnityEngine.UIElements.VisualElement.ElementAt(System.Int32)
+  - UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.Children
+  - UnityEngine.UIElements.VisualElement.Sort(System.Comparison{UnityEngine.UIElements.VisualElement})
+  - UnityEngine.UIElements.VisualElement.BringToFront
+  - UnityEngine.UIElements.VisualElement.SendToBack
+  - UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.RemoveFromHierarchy
+  - UnityEngine.UIElements.VisualElement.GetFirstOfType``1
+  - UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType``1
+  - UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)
+  - UnityEngine.UIElements.VisualElement.viewDataKey
+  - UnityEngine.UIElements.VisualElement.userData
+  - UnityEngine.UIElements.VisualElement.canGrabFocus
+  - UnityEngine.UIElements.VisualElement.focusController
+  - UnityEngine.UIElements.VisualElement.usageHints
+  - UnityEngine.UIElements.VisualElement.transform
+  - UnityEngine.UIElements.VisualElement.layout
+  - UnityEngine.UIElements.VisualElement.contentRect
+  - UnityEngine.UIElements.VisualElement.paddingRect
+  - UnityEngine.UIElements.VisualElement.worldBound
+  - UnityEngine.UIElements.VisualElement.localBound
+  - UnityEngine.UIElements.VisualElement.worldTransform
+  - UnityEngine.UIElements.VisualElement.pickingMode
+  - UnityEngine.UIElements.VisualElement.name
+  - UnityEngine.UIElements.VisualElement.enabledInHierarchy
+  - UnityEngine.UIElements.VisualElement.enabledSelf
+  - UnityEngine.UIElements.VisualElement.visible
+  - UnityEngine.UIElements.VisualElement.generateVisualContent
+  - UnityEngine.UIElements.VisualElement.experimental
+  - UnityEngine.UIElements.VisualElement.hierarchy
+  - UnityEngine.UIElements.VisualElement.cacheAsBitmap
+  - UnityEngine.UIElements.VisualElement.parent
+  - UnityEngine.UIElements.VisualElement.panel
+  - UnityEngine.UIElements.VisualElement.contentContainer
+  - UnityEngine.UIElements.VisualElement.visualTreeAssetSource
+  - UnityEngine.UIElements.VisualElement.Item(System.Int32)
+  - UnityEngine.UIElements.VisualElement.childCount
+  - UnityEngine.UIElements.VisualElement.schedule
+  - UnityEngine.UIElements.VisualElement.style
+  - UnityEngine.UIElements.VisualElement.customStyle
+  - UnityEngine.UIElements.VisualElement.styleSheets
+  - UnityEngine.UIElements.VisualElement.tooltip
+  - UnityEngine.UIElements.VisualElement.resolvedStyle
+  - UnityEngine.UIElements.Focusable.Blur
+  - UnityEngine.UIElements.Focusable.focusable
+  - UnityEngine.UIElements.Focusable.tabIndex
+  - UnityEngine.UIElements.Focusable.delegatesFocus
+  - UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{{TEventType}},UnityEngine.UIElements.TrickleDown)
+  - UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{{TEventType},{TUserArgsType}},{TUserArgsType},UnityEngine.UIElements.TrickleDown)
+  - UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{{TEventType}},UnityEngine.UIElements.TrickleDown)
+  - UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{{TEventType},{TUserArgsType}},UnityEngine.UIElements.TrickleDown)
+  - UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)
+  - UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers
+  - UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers
+  - UnityEngine.UIElements.CallbackEventHandler.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.step
+  commentId: F:VRBuilder.Editor.UI.Graphics.StepGraphNode.step
+  id: step
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: step
+  nameWithType: StepGraphNode.step
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.step
+  type: Field
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: step
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  syntax:
+    content: protected IStep step
+    return:
+      type: VRBuilder.Core.IStep
+    content.vb: Protected [step] As IStep
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Name
+  commentId: P:VRBuilder.Editor.UI.Graphics.StepGraphNode.Name
+  id: Name
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: StepGraphNode.Name
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Name
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Name
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 17
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Name of the node.
+  example: []
+  syntax:
+    content: public override string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides Property Name As String
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Name
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.Name*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint
+  commentId: P:VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint
+  id: EntryPoint
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: EntryPoint
+  nameWithType: StepGraphNode.EntryPoint
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: EntryPoint
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 20
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Step other nodes connect to.
+  example: []
+  syntax:
+    content: public override IStep EntryPoint { get; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.IStep
+    content.vb: Public Overrides ReadOnly Property EntryPoint As IStep
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.EntryPoint
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs
+  commentId: P:VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs
+  id: Outputs
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: Outputs
+  nameWithType: StepGraphNode.Outputs
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Outputs
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 23
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Steps this node leads to.
+  example: []
+  syntax:
+    content: public override IStep[] Outputs { get; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.IStep[]
+    content.vb: Public Overrides ReadOnly Property Outputs As IStep()
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Outputs
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Position
+  commentId: P:VRBuilder.Editor.UI.Graphics.StepGraphNode.Position
+  id: Position
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: StepGraphNode.Position
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Position
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Position
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 26
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Position in the graph.
+  example: []
+  syntax:
+    content: public override Vector2 Position { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector2
+    content.vb: Public Overrides Property Position As Vector2
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Position
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.Position*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.#ctor(VRBuilder.Core.IStep)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.#ctor(VRBuilder.Core.IStep)
+  id: '#ctor(VRBuilder.Core.IStep)'
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: StepGraphNode(IStep)
+  nameWithType: StepGraphNode.StepGraphNode(IStep)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.StepGraphNode(VRBuilder.Core.IStep)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 28
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  syntax:
+    content: public StepGraphNode(IStep step)
+    parameters:
+    - id: step
+      type: VRBuilder.Core.IStep
+    content.vb: Public Sub New([step] As IStep)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.#ctor*
+  nameWithType.vb: StepGraphNode.New(IStep)
+  fullName.vb: VRBuilder.Editor.UI.Graphics.StepGraphNode.New(VRBuilder.Core.IStep)
+  name.vb: New(IStep)
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh
+  id: Refresh
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: Refresh()
+  nameWithType: StepGraphNode.Refresh()
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Refresh
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 55
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Refreshes the node's graphics.
+  example: []
+  syntax:
+    content: public override void Refresh()
+    content.vb: Public Overrides Sub Refresh()
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Refresh
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo
+  id: CreatePortWithUndo
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: CreatePortWithUndo()
+  nameWithType: StepGraphNode.CreatePortWithUndo()
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: CreatePortWithUndo
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 64
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Creates a transition port supporting undo.
+  example: []
+  syntax:
+    content: protected virtual void CreatePortWithUndo()
+    content.vb: Protected Overridable Sub CreatePortWithUndo()
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort(UnityEditor.Experimental.GraphView.Port)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort(UnityEditor.Experimental.GraphView.Port)
+  id: RemovePort(UnityEditor.Experimental.GraphView.Port)
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: RemovePort(Port)
+  nameWithType: StepGraphNode.RemovePort(Port)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort(UnityEditor.Experimental.GraphView.Port)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: RemovePort
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 84
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Removes the specified output port.
+  example: []
+  syntax:
+    content: protected void RemovePort(Port port)
+    parameters:
+    - id: port
+      type: UnityEditor.Experimental.GraphView.Port
+    content.vb: Protected Sub RemovePort(port As Port)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  id: RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: RemovePortWithUndo(Port)
+  nameWithType: StepGraphNode.RemovePortWithUndo(Port)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: RemovePortWithUndo
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 111
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Removes the specified output port supporting undo.
+  example: []
+  syntax:
+    content: protected override void RemovePortWithUndo(Port port)
+    parameters:
+    - id: port
+      type: UnityEditor.Experimental.GraphView.Port
+    content.vb: Protected Overrides Sub RemovePortWithUndo(port As Port)
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected
+  id: OnSelected
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: OnSelected()
+  nameWithType: StepGraphNode.OnSelected()
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: OnSelected
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 132
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: <p>Called when the GraphElement is selected.</p>
+  example: []
+  syntax:
+    content: public override void OnSelected()
+    content.vb: Public Overrides Sub OnSelected()
+  overridden: UnityEditor.Experimental.GraphView.GraphElement.OnSelected
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+  id: SetOutput(System.Int32,VRBuilder.Core.IStep)
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: SetOutput(int, IStep)
+  nameWithType: StepGraphNode.SetOutput(int, IStep)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput(int, VRBuilder.Core.IStep)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SetOutput
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 141
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Sets an output to the specified step.
+  example: []
+  syntax:
+    content: public override void SetOutput(int index, IStep output)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: output
+      type: VRBuilder.Core.IStep
+    content.vb: Public Overrides Sub SetOutput(index As Integer, output As IStep)
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput*
+  nameWithType.vb: StepGraphNode.SetOutput(Integer, IStep)
+  fullName.vb: VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput(Integer, VRBuilder.Core.IStep)
+  name.vb: SetOutput(Integer, IStep)
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  id: AddToChapter(VRBuilder.Core.IChapter)
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: AddToChapter(IChapter)
+  nameWithType: StepGraphNode.AddToChapter(IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: AddToChapter
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 147
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Adds node to specified chapter.
+  example: []
+  syntax:
+    content: public override void AddToChapter(IChapter chapter)
+    parameters:
+    - id: chapter
+      type: VRBuilder.Core.IChapter
+    content.vb: Public Overrides Sub AddToChapter(chapter As IChapter)
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  id: RemoveFromChapter(VRBuilder.Core.IChapter)
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: RemoveFromChapter(IChapter)
+  nameWithType: StepGraphNode.RemoveFromChapter(IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: RemoveFromChapter
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 153
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Removes node from specified chapter.
+  example: []
+  syntax:
+    content: public override void RemoveFromChapter(IChapter chapter)
+    parameters:
+    - id: chapter
+      type: VRBuilder.Core.IChapter
+    content.vb: Public Overrides Sub RemoveFromChapter(chapter As IChapter)
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter*
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  commentId: M:VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  id: UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  parent: VRBuilder.Editor.UI.Graphics.StepGraphNode
+  langs:
+  - csharp
+  - vb
+  name: UpdateOutputPortName(Port, Node)
+  nameWithType: StepGraphNode.UpdateOutputPortName(Port, Node)
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port, UnityEditor.Experimental.GraphView.Node)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: UpdateOutputPortName
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/GraphView/StepGraphNode.cs
+    startLine: 165
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Graphics
+  summary: Updates the name of the output port depending on the node it is connected with.
+  example: []
+  syntax:
+    content: public override void UpdateOutputPortName(Port outputPort, Node input)
+    parameters:
+    - id: outputPort
+      type: UnityEditor.Experimental.GraphView.Port
+    - id: input
+      type: UnityEditor.Experimental.GraphView.Node
+    content.vb: Public Overrides Sub UpdateOutputPortName(outputPort As Port, input As Node)
+  overridden: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  overload: VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName*
+references:
+- uid: VRBuilder.Editor.UI.Graphics
+  commentId: N:VRBuilder.Editor.UI.Graphics
+  href: VRBuilder.html
+  name: VRBuilder.Editor.UI.Graphics
+  nameWithType: VRBuilder.Editor.UI.Graphics
+  fullName: VRBuilder.Editor.UI.Graphics
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.UI
+    name: UI
+    href: VRBuilder.Editor.UI.html
+  - name: .
+  - uid: VRBuilder.Editor.UI.Graphics
+    name: Graphics
+    href: VRBuilder.Editor.UI.Graphics.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.UI
+    name: UI
+    href: VRBuilder.Editor.UI.html
+  - name: .
+  - uid: VRBuilder.Editor.UI.Graphics
+    name: Graphics
+    href: VRBuilder.Editor.UI.Graphics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.UIElements.CallbackEventHandler
+  commentId: T:UnityEngine.UIElements.CallbackEventHandler
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: CallbackEventHandler
+  nameWithType: CallbackEventHandler
+  fullName: UnityEngine.UIElements.CallbackEventHandler
+- uid: UnityEngine.UIElements.Focusable
+  commentId: T:UnityEngine.UIElements.Focusable
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: Focusable
+  nameWithType: Focusable
+  fullName: UnityEngine.UIElements.Focusable
+- uid: UnityEngine.UIElements.VisualElement
+  commentId: T:UnityEngine.UIElements.VisualElement
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: UnityEngine.UIElements.VisualElement
+- uid: UnityEditor.Experimental.GraphView.GraphElement
+  commentId: T:UnityEditor.Experimental.GraphView.GraphElement
+  parent: UnityEditor.Experimental.GraphView
+  isExternal: true
+  name: GraphElement
+  nameWithType: GraphElement
+  fullName: UnityEditor.Experimental.GraphView.GraphElement
+- uid: UnityEditor.Experimental.GraphView.Node
+  commentId: T:UnityEditor.Experimental.GraphView.Node
+  parent: UnityEditor.Experimental.GraphView
+  isExternal: true
+  name: Node
+  nameWithType: Node
+  fullName: UnityEditor.Experimental.GraphView.Node
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  commentId: T:VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  parent: VRBuilder.Editor.UI.Graphics
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html
+  name: ProcessGraphNode
+  nameWithType: ProcessGraphNode
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+- uid: UnityEngine.UIElements.IEventHandler
+  commentId: T:UnityEngine.UIElements.IEventHandler
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: IEventHandler
+  nameWithType: IEventHandler
+  fullName: UnityEngine.UIElements.IEventHandler
+- uid: UnityEngine.UIElements.ITransform
+  commentId: T:UnityEngine.UIElements.ITransform
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: ITransform
+  nameWithType: ITransform
+  fullName: UnityEngine.UIElements.ITransform
+- uid: UnityEngine.UIElements.Experimental.ITransitionAnimations
+  commentId: T:UnityEngine.UIElements.Experimental.ITransitionAnimations
+  parent: UnityEngine.UIElements.Experimental
+  isExternal: true
+  name: ITransitionAnimations
+  nameWithType: ITransitionAnimations
+  fullName: UnityEngine.UIElements.Experimental.ITransitionAnimations
+- uid: UnityEngine.UIElements.IExperimentalFeatures
+  commentId: T:UnityEngine.UIElements.IExperimentalFeatures
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: IExperimentalFeatures
+  nameWithType: IExperimentalFeatures
+  fullName: UnityEngine.UIElements.IExperimentalFeatures
+- uid: UnityEngine.UIElements.IVisualElementScheduler
+  commentId: T:UnityEngine.UIElements.IVisualElementScheduler
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: IVisualElementScheduler
+  nameWithType: IVisualElementScheduler
+  fullName: UnityEngine.UIElements.IVisualElementScheduler
+- uid: UnityEngine.UIElements.IResolvedStyle
+  commentId: T:UnityEngine.UIElements.IResolvedStyle
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: IResolvedStyle
+  nameWithType: IResolvedStyle
+  fullName: UnityEngine.UIElements.IResolvedStyle
+- uid: UnityEditor.Experimental.GraphView.ISelectable
+  commentId: T:UnityEditor.Experimental.GraphView.ISelectable
+  parent: UnityEditor.Experimental.GraphView
+  isExternal: true
+  name: ISelectable
+  nameWithType: ISelectable
+  fullName: UnityEditor.Experimental.GraphView.ISelectable
+- uid: UnityEditor.Experimental.GraphView.ICollectibleElement
+  commentId: T:UnityEditor.Experimental.GraphView.ICollectibleElement
+  parent: UnityEditor.Experimental.GraphView
+  isExternal: true
+  name: ICollectibleElement
+  nameWithType: ICollectibleElement
+  fullName: UnityEditor.Experimental.GraphView.ICollectibleElement
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.deleteIconFileName
+  commentId: F:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.deleteIconFileName
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_deleteIconFileName
+  name: deleteIconFileName
+  nameWithType: ProcessGraphNode.deleteIconFileName
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.deleteIconFileName
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.editIconFileName
+  commentId: F:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.editIconFileName
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_editIconFileName
+  name: editIconFileName
+  nameWithType: ProcessGraphNode.editIconFileName
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.editIconFileName
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.defaultNodeSize
+  commentId: F:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.defaultNodeSize
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_defaultNodeSize
+  name: defaultNodeSize
+  nameWithType: ProcessGraphNode.defaultNodeSize
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.defaultNodeSize
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.IsEntryPoint
+  commentId: P:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.IsEntryPoint
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_IsEntryPoint
+  name: IsEntryPoint
+  nameWithType: ProcessGraphNode.IsEntryPoint
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.IsEntryPoint
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(System.Boolean,System.Int32)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(System.Boolean,System.Int32)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_AddTransitionPort_System_Boolean_System_Int32_
+  name: AddTransitionPort(bool, int)
+  nameWithType: ProcessGraphNode.AddTransitionPort(bool, int)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(bool, int)
+  nameWithType.vb: ProcessGraphNode.AddTransitionPort(Boolean, Integer)
+  fullName.vb: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(Boolean, Integer)
+  name.vb: AddTransitionPort(Boolean, Integer)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(System.Boolean,System.Int32)
+    name: AddTransitionPort
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_AddTransitionPort_System_Boolean_System_Int32_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddTransitionPort(System.Boolean,System.Int32)
+    name: AddTransitionPort
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_AddTransitionPort_System_Boolean_System_Int32_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.CreatePort(UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.CreatePort(UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_CreatePort_UnityEditor_Experimental_GraphView_Direction_UnityEditor_Experimental_GraphView_Port_Capacity_
+  name: CreatePort(Direction, Capacity)
+  nameWithType: ProcessGraphNode.CreatePort(Direction, Port.Capacity)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.CreatePort(UnityEditor.Experimental.GraphView.Direction, UnityEditor.Experimental.GraphView.Port.Capacity)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.CreatePort(UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity)
+    name: CreatePort
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_CreatePort_UnityEditor_Experimental_GraphView_Direction_UnityEditor_Experimental_GraphView_Port_Capacity_
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Direction
+    name: Direction
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Port.Capacity
+    name: Capacity
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.CreatePort(UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity)
+    name: CreatePort
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_CreatePort_UnityEditor_Experimental_GraphView_Direction_UnityEditor_Experimental_GraphView_Port_Capacity_
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Direction
+    name: Direction
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Port.Capacity
+    name: Capacity
+    isExternal: true
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(System.String)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(System.String)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_GetIcon_System_String_
+  name: GetIcon(string)
+  nameWithType: ProcessGraphNode.GetIcon(string)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(string)
+  nameWithType.vb: ProcessGraphNode.GetIcon(String)
+  fullName.vb: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(String)
+  name.vb: GetIcon(String)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(System.String)
+    name: GetIcon
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_GetIcon_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.GetIcon(System.String)
+    name: GetIcon
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_GetIcon_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OpenTextEditor
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OpenTextEditor
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_OpenTextEditor
+  name: OpenTextEditor()
+  nameWithType: ProcessGraphNode.OpenTextEditor()
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OpenTextEditor()
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OpenTextEditor
+    name: OpenTextEditor
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_OpenTextEditor
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OpenTextEditor
+    name: OpenTextEditor
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_OpenTextEditor
+  - name: (
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OnEditTextFinished(UnityEngine.UIElements.TextField)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OnEditTextFinished(UnityEngine.UIElements.TextField)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_OnEditTextFinished_UnityEngine_UIElements_TextField_
+  name: OnEditTextFinished(TextField)
+  nameWithType: ProcessGraphNode.OnEditTextFinished(TextField)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OnEditTextFinished(UnityEngine.UIElements.TextField)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OnEditTextFinished(UnityEngine.UIElements.TextField)
+    name: OnEditTextFinished
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_OnEditTextFinished_UnityEngine_UIElements_TextField_
+  - name: (
+  - uid: UnityEngine.UIElements.TextField
+    name: TextField
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.OnEditTextFinished(UnityEngine.UIElements.TextField)
+    name: OnEditTextFinished
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_OnEditTextFinished_UnityEngine_UIElements_TextField_
+  - name: (
+  - uid: UnityEngine.UIElements.TextField
+    name: TextField
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.m_CollapseButton
+  commentId: F:UnityEditor.Experimental.GraphView.Node.m_CollapseButton
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: m_CollapseButton
+  nameWithType: Node.m_CollapseButton
+  fullName: UnityEditor.Experimental.GraphView.Node.m_CollapseButton
+- uid: UnityEditor.Experimental.GraphView.Node.m_ButtonContainer
+  commentId: F:UnityEditor.Experimental.GraphView.Node.m_ButtonContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: m_ButtonContainer
+  nameWithType: Node.m_ButtonContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.m_ButtonContainer
+- uid: UnityEditor.Experimental.GraphView.Node.RefreshExpandedState
+  commentId: M:UnityEditor.Experimental.GraphView.Node.RefreshExpandedState
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: RefreshExpandedState()
+  nameWithType: Node.RefreshExpandedState()
+  fullName: UnityEditor.Experimental.GraphView.Node.RefreshExpandedState()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.RefreshExpandedState
+    name: RefreshExpandedState
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.RefreshExpandedState
+    name: RefreshExpandedState
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.GetPosition
+  commentId: M:UnityEditor.Experimental.GraphView.Node.GetPosition
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: GetPosition()
+  nameWithType: Node.GetPosition()
+  fullName: UnityEditor.Experimental.GraphView.Node.GetPosition()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.GetPosition
+    name: GetPosition
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.GetPosition
+    name: GetPosition
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.SetPosition(UnityEngine.Rect)
+  commentId: M:UnityEditor.Experimental.GraphView.Node.SetPosition(UnityEngine.Rect)
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: SetPosition(Rect)
+  nameWithType: Node.SetPosition(Rect)
+  fullName: UnityEditor.Experimental.GraphView.Node.SetPosition(UnityEngine.Rect)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.SetPosition(UnityEngine.Rect)
+    name: SetPosition
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.SetPosition(UnityEngine.Rect)
+    name: SetPosition
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.OnPortRemoved(UnityEditor.Experimental.GraphView.Port)
+  commentId: M:UnityEditor.Experimental.GraphView.Node.OnPortRemoved(UnityEditor.Experimental.GraphView.Port)
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: OnPortRemoved(Port)
+  nameWithType: Node.OnPortRemoved(Port)
+  fullName: UnityEditor.Experimental.GraphView.Node.OnPortRemoved(UnityEditor.Experimental.GraphView.Port)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.OnPortRemoved(UnityEditor.Experimental.GraphView.Port)
+    name: OnPortRemoved
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Port
+    name: Port
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.OnPortRemoved(UnityEditor.Experimental.GraphView.Port)
+    name: OnPortRemoved
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Port
+    name: Port
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.InstantiatePort(UnityEditor.Experimental.GraphView.Orientation,UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity,System.Type)
+  commentId: M:UnityEditor.Experimental.GraphView.Node.InstantiatePort(UnityEditor.Experimental.GraphView.Orientation,UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity,System.Type)
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: InstantiatePort(Orientation, Direction, Capacity, Type)
+  nameWithType: Node.InstantiatePort(Orientation, Direction, Port.Capacity, Type)
+  fullName: UnityEditor.Experimental.GraphView.Node.InstantiatePort(UnityEditor.Experimental.GraphView.Orientation, UnityEditor.Experimental.GraphView.Direction, UnityEditor.Experimental.GraphView.Port.Capacity, System.Type)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.InstantiatePort(UnityEditor.Experimental.GraphView.Orientation,UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity,System.Type)
+    name: InstantiatePort
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Orientation
+    name: Orientation
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Direction
+    name: Direction
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Port.Capacity
+    name: Capacity
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.InstantiatePort(UnityEditor.Experimental.GraphView.Orientation,UnityEditor.Experimental.GraphView.Direction,UnityEditor.Experimental.GraphView.Port.Capacity,System.Type)
+    name: InstantiatePort
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Orientation
+    name: Orientation
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Direction
+    name: Direction
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Port.Capacity
+    name: Capacity
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.RefreshPorts
+  commentId: M:UnityEditor.Experimental.GraphView.Node.RefreshPorts
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: RefreshPorts()
+  nameWithType: Node.RefreshPorts()
+  fullName: UnityEditor.Experimental.GraphView.Node.RefreshPorts()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.RefreshPorts
+    name: RefreshPorts
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.RefreshPorts
+    name: RefreshPorts
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.ToggleCollapse
+  commentId: M:UnityEditor.Experimental.GraphView.Node.ToggleCollapse
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: ToggleCollapse()
+  nameWithType: Node.ToggleCollapse()
+  fullName: UnityEditor.Experimental.GraphView.Node.ToggleCollapse()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.ToggleCollapse
+    name: ToggleCollapse
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.ToggleCollapse
+    name: ToggleCollapse
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.UseDefaultStyling
+  commentId: M:UnityEditor.Experimental.GraphView.Node.UseDefaultStyling
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: UseDefaultStyling()
+  nameWithType: Node.UseDefaultStyling()
+  fullName: UnityEditor.Experimental.GraphView.Node.UseDefaultStyling()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.UseDefaultStyling
+    name: UseDefaultStyling
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.UseDefaultStyling
+    name: UseDefaultStyling
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)
+  commentId: M:UnityEditor.Experimental.GraphView.Node.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: BuildContextualMenu(ContextualMenuPopulateEvent)
+  nameWithType: Node.BuildContextualMenu(ContextualMenuPopulateEvent)
+  fullName: UnityEditor.Experimental.GraphView.Node.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)
+    name: BuildContextualMenu
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.ContextualMenuPopulateEvent
+    name: ContextualMenuPopulateEvent
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)
+    name: BuildContextualMenu
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.ContextualMenuPopulateEvent
+    name: ContextualMenuPopulateEvent
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet{UnityEditor.Experimental.GraphView.GraphElement},System.Func{UnityEditor.Experimental.GraphView.GraphElement,System.Boolean})
+  commentId: M:UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet{UnityEditor.Experimental.GraphView.GraphElement},System.Func{UnityEditor.Experimental.GraphView.GraphElement,System.Boolean})
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: CollectElements(HashSet<GraphElement>, Func<GraphElement, bool>)
+  nameWithType: Node.CollectElements(HashSet<GraphElement>, Func<GraphElement, bool>)
+  fullName: UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet<UnityEditor.Experimental.GraphView.GraphElement>, System.Func<UnityEditor.Experimental.GraphView.GraphElement, bool>)
+  nameWithType.vb: Node.CollectElements(HashSet(Of GraphElement), Func(Of GraphElement, Boolean))
+  fullName.vb: UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet(Of UnityEditor.Experimental.GraphView.GraphElement), System.Func(Of UnityEditor.Experimental.GraphView.GraphElement, Boolean))
+  name.vb: CollectElements(HashSet(Of GraphElement), Func(Of GraphElement, Boolean))
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet{UnityEditor.Experimental.GraphView.GraphElement},System.Func{UnityEditor.Experimental.GraphView.GraphElement,System.Boolean})
+    name: CollectElements
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: UnityEditor.Experimental.GraphView.GraphElement
+    name: GraphElement
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: UnityEditor.Experimental.GraphView.GraphElement
+    name: GraphElement
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.Node.CollectElements(System.Collections.Generic.HashSet{UnityEditor.Experimental.GraphView.GraphElement},System.Func{UnityEditor.Experimental.GraphView.GraphElement,System.Boolean})
+    name: CollectElements
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.GraphElement
+    name: GraphElement
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.GraphElement
+    name: GraphElement
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.Node.mainContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.mainContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: mainContainer
+  nameWithType: Node.mainContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.mainContainer
+- uid: UnityEditor.Experimental.GraphView.Node.titleContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.titleContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: titleContainer
+  nameWithType: Node.titleContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.titleContainer
+- uid: UnityEditor.Experimental.GraphView.Node.inputContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.inputContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: inputContainer
+  nameWithType: Node.inputContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.inputContainer
+- uid: UnityEditor.Experimental.GraphView.Node.outputContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.outputContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: outputContainer
+  nameWithType: Node.outputContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.outputContainer
+- uid: UnityEditor.Experimental.GraphView.Node.titleButtonContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.titleButtonContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: titleButtonContainer
+  nameWithType: Node.titleButtonContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.titleButtonContainer
+- uid: UnityEditor.Experimental.GraphView.Node.topContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.topContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: topContainer
+  nameWithType: Node.topContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.topContainer
+- uid: UnityEditor.Experimental.GraphView.Node.extensionContainer
+  commentId: P:UnityEditor.Experimental.GraphView.Node.extensionContainer
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: extensionContainer
+  nameWithType: Node.extensionContainer
+  fullName: UnityEditor.Experimental.GraphView.Node.extensionContainer
+- uid: UnityEditor.Experimental.GraphView.Node.expanded
+  commentId: P:UnityEditor.Experimental.GraphView.Node.expanded
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: expanded
+  nameWithType: Node.expanded
+  fullName: UnityEditor.Experimental.GraphView.Node.expanded
+- uid: UnityEditor.Experimental.GraphView.Node.title
+  commentId: P:UnityEditor.Experimental.GraphView.Node.title
+  parent: UnityEditor.Experimental.GraphView.Node
+  isExternal: true
+  name: title
+  nameWithType: Node.title
+  fullName: UnityEditor.Experimental.GraphView.Node.title
+- uid: UnityEditor.Experimental.GraphView.GraphElement.ResetLayer
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.ResetLayer
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: ResetLayer()
+  nameWithType: GraphElement.ResetLayer()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.ResetLayer()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.ResetLayer
+    name: ResetLayer
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.ResetLayer
+    name: ResetLayer
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.OnCustomStyleResolved(UnityEngine.UIElements.ICustomStyle)
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.OnCustomStyleResolved(UnityEngine.UIElements.ICustomStyle)
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: OnCustomStyleResolved(ICustomStyle)
+  nameWithType: GraphElement.OnCustomStyleResolved(ICustomStyle)
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.OnCustomStyleResolved(UnityEngine.UIElements.ICustomStyle)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.OnCustomStyleResolved(UnityEngine.UIElements.ICustomStyle)
+    name: OnCustomStyleResolved
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.ICustomStyle
+    name: ICustomStyle
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.OnCustomStyleResolved(UnityEngine.UIElements.ICustomStyle)
+    name: OnCustomStyleResolved
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.ICustomStyle
+    name: ICustomStyle
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsSelectable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsSelectable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsSelectable()
+  nameWithType: GraphElement.IsSelectable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsSelectable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsSelectable
+    name: IsSelectable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsSelectable
+    name: IsSelectable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsMovable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsMovable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsMovable()
+  nameWithType: GraphElement.IsMovable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsMovable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsMovable
+    name: IsMovable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsMovable
+    name: IsMovable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsResizable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsResizable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsResizable()
+  nameWithType: GraphElement.IsResizable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsResizable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsResizable
+    name: IsResizable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsResizable
+    name: IsResizable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsDroppable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsDroppable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsDroppable()
+  nameWithType: GraphElement.IsDroppable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsDroppable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsDroppable
+    name: IsDroppable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsDroppable
+    name: IsDroppable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsAscendable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsAscendable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsAscendable()
+  nameWithType: GraphElement.IsAscendable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsAscendable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsAscendable
+    name: IsAscendable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsAscendable
+    name: IsAscendable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsRenamable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsRenamable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsRenamable()
+  nameWithType: GraphElement.IsRenamable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsRenamable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsRenamable
+    name: IsRenamable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsRenamable
+    name: IsRenamable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsCopiable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsCopiable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsCopiable()
+  nameWithType: GraphElement.IsCopiable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsCopiable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsCopiable
+    name: IsCopiable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsCopiable
+    name: IsCopiable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsSnappable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsSnappable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsSnappable()
+  nameWithType: GraphElement.IsSnappable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsSnappable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsSnappable
+    name: IsSnappable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsSnappable
+    name: IsSnappable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsGroupable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsGroupable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsGroupable()
+  nameWithType: GraphElement.IsGroupable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsGroupable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsGroupable
+    name: IsGroupable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsGroupable
+    name: IsGroupable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsStackable
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsStackable
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsStackable()
+  nameWithType: GraphElement.IsStackable()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsStackable()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsStackable
+    name: IsStackable
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsStackable
+    name: IsStackable
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.GetGlobalCenter
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.GetGlobalCenter
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: GetGlobalCenter()
+  nameWithType: GraphElement.GetGlobalCenter()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.GetGlobalCenter()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.GetGlobalCenter
+    name: GetGlobalCenter
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.GetGlobalCenter
+    name: GetGlobalCenter
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.UpdatePresenterPosition
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.UpdatePresenterPosition
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: UpdatePresenterPosition()
+  nameWithType: GraphElement.UpdatePresenterPosition()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.UpdatePresenterPosition()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.UpdatePresenterPosition
+    name: UpdatePresenterPosition
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.UpdatePresenterPosition
+    name: UpdatePresenterPosition
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.OnUnselected
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.OnUnselected
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: OnUnselected()
+  nameWithType: GraphElement.OnUnselected()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.OnUnselected()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.OnUnselected
+    name: OnUnselected
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.OnUnselected
+    name: OnUnselected
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.HitTest(UnityEngine.Vector2)
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.HitTest(UnityEngine.Vector2)
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: HitTest(Vector2)
+  nameWithType: GraphElement.HitTest(Vector2)
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.HitTest(UnityEngine.Vector2)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.HitTest(UnityEngine.Vector2)
+    name: HitTest
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.HitTest(UnityEngine.Vector2)
+    name: HitTest
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement,System.Boolean)
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement,System.Boolean)
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Select(VisualElement, bool)
+  nameWithType: GraphElement.Select(VisualElement, bool)
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement, bool)
+  nameWithType.vb: GraphElement.Select(VisualElement, Boolean)
+  fullName.vb: UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement, Boolean)
+  name.vb: Select(VisualElement, Boolean)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement,System.Boolean)
+    name: Select
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.Select(UnityEngine.UIElements.VisualElement,System.Boolean)
+    name: Select
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.Unselect(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.Unselect(UnityEngine.UIElements.VisualElement)
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: Unselect(VisualElement)
+  nameWithType: GraphElement.Unselect(VisualElement)
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.Unselect(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.Unselect(UnityEngine.UIElements.VisualElement)
+    name: Unselect
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.Unselect(UnityEngine.UIElements.VisualElement)
+    name: Unselect
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.IsSelected(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.IsSelected(UnityEngine.UIElements.VisualElement)
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: IsSelected(VisualElement)
+  nameWithType: GraphElement.IsSelected(VisualElement)
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.IsSelected(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsSelected(UnityEngine.UIElements.VisualElement)
+    name: IsSelected
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.IsSelected(UnityEngine.UIElements.VisualElement)
+    name: IsSelected
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEditor.Experimental.GraphView.GraphElement.elementTypeColor
+  commentId: P:UnityEditor.Experimental.GraphView.GraphElement.elementTypeColor
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: elementTypeColor
+  nameWithType: GraphElement.elementTypeColor
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.elementTypeColor
+- uid: UnityEditor.Experimental.GraphView.GraphElement.layer
+  commentId: P:UnityEditor.Experimental.GraphView.GraphElement.layer
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: layer
+  nameWithType: GraphElement.layer
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.layer
+- uid: UnityEditor.Experimental.GraphView.GraphElement.showInMiniMap
+  commentId: P:UnityEditor.Experimental.GraphView.GraphElement.showInMiniMap
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: showInMiniMap
+  nameWithType: GraphElement.showInMiniMap
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.showInMiniMap
+- uid: UnityEditor.Experimental.GraphView.GraphElement.capabilities
+  commentId: P:UnityEditor.Experimental.GraphView.GraphElement.capabilities
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: capabilities
+  nameWithType: GraphElement.capabilities
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.capabilities
+- uid: UnityEditor.Experimental.GraphView.GraphElement.selected
+  commentId: P:UnityEditor.Experimental.GraphView.GraphElement.selected
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: selected
+  nameWithType: GraphElement.selected
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.selected
+- uid: UnityEngine.UIElements.VisualElement.disabledUssClassName
+  commentId: F:UnityEngine.UIElements.VisualElement.disabledUssClassName
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: disabledUssClassName
+  nameWithType: VisualElement.disabledUssClassName
+  fullName: UnityEngine.UIElements.VisualElement.disabledUssClassName
+- uid: UnityEngine.UIElements.VisualElement.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)
+  commentId: M:UnityEngine.UIElements.VisualElement.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: ExecuteDefaultAction(EventBase)
+  nameWithType: VisualElement.ExecuteDefaultAction(EventBase)
+  fullName: UnityEngine.UIElements.VisualElement.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)
+    name: ExecuteDefaultAction
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)
+    name: ExecuteDefaultAction
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Focus
+  commentId: M:UnityEngine.UIElements.VisualElement.Focus
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Focus()
+  nameWithType: VisualElement.Focus()
+  fullName: UnityEngine.UIElements.VisualElement.Focus()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Focus
+    name: Focus
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Focus
+    name: Focus
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)
+  commentId: M:UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: SendEvent(EventBase)
+  nameWithType: VisualElement.SendEvent(EventBase)
+  fullName: UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)
+    name: SendEvent
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)
+    name: SendEvent
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(System.Boolean)
+  commentId: M:UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(System.Boolean)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: SetEnabledFromHierarchy(bool)
+  nameWithType: VisualElement.SetEnabledFromHierarchy(bool)
+  fullName: UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(bool)
+  nameWithType.vb: VisualElement.SetEnabledFromHierarchy(Boolean)
+  fullName.vb: UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(Boolean)
+  name.vb: SetEnabledFromHierarchy(Boolean)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(System.Boolean)
+    name: SetEnabledFromHierarchy
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(System.Boolean)
+    name: SetEnabledFromHierarchy
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.SetEnabled(System.Boolean)
+  commentId: M:UnityEngine.UIElements.VisualElement.SetEnabled(System.Boolean)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: SetEnabled(bool)
+  nameWithType: VisualElement.SetEnabled(bool)
+  fullName: UnityEngine.UIElements.VisualElement.SetEnabled(bool)
+  nameWithType.vb: VisualElement.SetEnabled(Boolean)
+  fullName.vb: UnityEngine.UIElements.VisualElement.SetEnabled(Boolean)
+  name.vb: SetEnabled(Boolean)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.MarkDirtyRepaint
+  commentId: M:UnityEngine.UIElements.VisualElement.MarkDirtyRepaint
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: MarkDirtyRepaint()
+  nameWithType: VisualElement.MarkDirtyRepaint()
+  fullName: UnityEngine.UIElements.VisualElement.MarkDirtyRepaint()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.MarkDirtyRepaint
+    name: MarkDirtyRepaint
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.MarkDirtyRepaint
+    name: MarkDirtyRepaint
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)
+  commentId: M:UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: ContainsPoint(Vector2)
+  nameWithType: VisualElement.ContainsPoint(Vector2)
+  fullName: UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)
+    name: ContainsPoint
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)
+    name: ContainsPoint
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)
+  commentId: M:UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Overlaps(Rect)
+  nameWithType: VisualElement.Overlaps(Rect)
+  fullName: UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)
+    name: Overlaps
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)
+    name: Overlaps
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.DoMeasure(System.Single,UnityEngine.UIElements.VisualElement.MeasureMode,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode)
+  commentId: M:UnityEngine.UIElements.VisualElement.DoMeasure(System.Single,UnityEngine.UIElements.VisualElement.MeasureMode,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: DoMeasure(float, MeasureMode, float, MeasureMode)
+  nameWithType: VisualElement.DoMeasure(float, VisualElement.MeasureMode, float, VisualElement.MeasureMode)
+  fullName: UnityEngine.UIElements.VisualElement.DoMeasure(float, UnityEngine.UIElements.VisualElement.MeasureMode, float, UnityEngine.UIElements.VisualElement.MeasureMode)
+  nameWithType.vb: VisualElement.DoMeasure(Single, VisualElement.MeasureMode, Single, VisualElement.MeasureMode)
+  fullName.vb: UnityEngine.UIElements.VisualElement.DoMeasure(Single, UnityEngine.UIElements.VisualElement.MeasureMode, Single, UnityEngine.UIElements.VisualElement.MeasureMode)
+  name.vb: DoMeasure(Single, MeasureMode, Single, MeasureMode)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.DoMeasure(System.Single,UnityEngine.UIElements.VisualElement.MeasureMode,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode)
+    name: DoMeasure
+    isExternal: true
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement.MeasureMode
+    name: MeasureMode
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement.MeasureMode
+    name: MeasureMode
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.DoMeasure(System.Single,UnityEngine.UIElements.VisualElement.MeasureMode,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode)
+    name: DoMeasure
+    isExternal: true
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement.MeasureMode
+    name: MeasureMode
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement.MeasureMode
+    name: MeasureMode
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.ToString
+  commentId: M:UnityEngine.UIElements.VisualElement.ToString
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: ToString()
+  nameWithType: VisualElement.ToString()
+  fullName: UnityEngine.UIElements.VisualElement.ToString()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.GetClasses
+  commentId: M:UnityEngine.UIElements.VisualElement.GetClasses
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: GetClasses()
+  nameWithType: VisualElement.GetClasses()
+  fullName: UnityEngine.UIElements.VisualElement.GetClasses()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.GetClasses
+    name: GetClasses
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.GetClasses
+    name: GetClasses
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.ClearClassList
+  commentId: M:UnityEngine.UIElements.VisualElement.ClearClassList
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: ClearClassList()
+  nameWithType: VisualElement.ClearClassList()
+  fullName: UnityEngine.UIElements.VisualElement.ClearClassList()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ClearClassList
+    name: ClearClassList
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ClearClassList
+    name: ClearClassList
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.AddToClassList(System.String)
+  commentId: M:UnityEngine.UIElements.VisualElement.AddToClassList(System.String)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: AddToClassList(string)
+  nameWithType: VisualElement.AddToClassList(string)
+  fullName: UnityEngine.UIElements.VisualElement.AddToClassList(string)
+  nameWithType.vb: VisualElement.AddToClassList(String)
+  fullName.vb: UnityEngine.UIElements.VisualElement.AddToClassList(String)
+  name.vb: AddToClassList(String)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.AddToClassList(System.String)
+    name: AddToClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.AddToClassList(System.String)
+    name: AddToClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.RemoveFromClassList(System.String)
+  commentId: M:UnityEngine.UIElements.VisualElement.RemoveFromClassList(System.String)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: RemoveFromClassList(string)
+  nameWithType: VisualElement.RemoveFromClassList(string)
+  fullName: UnityEngine.UIElements.VisualElement.RemoveFromClassList(string)
+  nameWithType.vb: VisualElement.RemoveFromClassList(String)
+  fullName.vb: UnityEngine.UIElements.VisualElement.RemoveFromClassList(String)
+  name.vb: RemoveFromClassList(String)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.RemoveFromClassList(System.String)
+    name: RemoveFromClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.RemoveFromClassList(System.String)
+    name: RemoveFromClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.ToggleInClassList(System.String)
+  commentId: M:UnityEngine.UIElements.VisualElement.ToggleInClassList(System.String)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ToggleInClassList(string)
+  nameWithType: VisualElement.ToggleInClassList(string)
+  fullName: UnityEngine.UIElements.VisualElement.ToggleInClassList(string)
+  nameWithType.vb: VisualElement.ToggleInClassList(String)
+  fullName.vb: UnityEngine.UIElements.VisualElement.ToggleInClassList(String)
+  name.vb: ToggleInClassList(String)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ToggleInClassList(System.String)
+    name: ToggleInClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ToggleInClassList(System.String)
+    name: ToggleInClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.EnableInClassList(System.String,System.Boolean)
+  commentId: M:UnityEngine.UIElements.VisualElement.EnableInClassList(System.String,System.Boolean)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: EnableInClassList(string, bool)
+  nameWithType: VisualElement.EnableInClassList(string, bool)
+  fullName: UnityEngine.UIElements.VisualElement.EnableInClassList(string, bool)
+  nameWithType.vb: VisualElement.EnableInClassList(String, Boolean)
+  fullName.vb: UnityEngine.UIElements.VisualElement.EnableInClassList(String, Boolean)
+  name.vb: EnableInClassList(String, Boolean)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.EnableInClassList(System.String,System.Boolean)
+    name: EnableInClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.EnableInClassList(System.String,System.Boolean)
+    name: EnableInClassList
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.ClassListContains(System.String)
+  commentId: M:UnityEngine.UIElements.VisualElement.ClassListContains(System.String)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ClassListContains(string)
+  nameWithType: VisualElement.ClassListContains(string)
+  fullName: UnityEngine.UIElements.VisualElement.ClassListContains(string)
+  nameWithType.vb: VisualElement.ClassListContains(String)
+  fullName.vb: UnityEngine.UIElements.VisualElement.ClassListContains(String)
+  name.vb: ClassListContains(String)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ClassListContains(System.String)
+    name: ClassListContains
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ClassListContains(System.String)
+    name: ClassListContains
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.FindAncestorUserData
+  commentId: M:UnityEngine.UIElements.VisualElement.FindAncestorUserData
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: FindAncestorUserData()
+  nameWithType: VisualElement.FindAncestorUserData()
+  fullName: UnityEngine.UIElements.VisualElement.FindAncestorUserData()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.FindAncestorUserData
+    name: FindAncestorUserData
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.FindAncestorUserData
+    name: FindAncestorUserData
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Add(VisualElement)
+  nameWithType: VisualElement.Add(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)
+    name: Add
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)
+    name: Add
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Insert(System.Int32,UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.Insert(System.Int32,UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Insert(int, VisualElement)
+  nameWithType: VisualElement.Insert(int, VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.Insert(int, UnityEngine.UIElements.VisualElement)
+  nameWithType.vb: VisualElement.Insert(Integer, VisualElement)
+  fullName.vb: UnityEngine.UIElements.VisualElement.Insert(Integer, UnityEngine.UIElements.VisualElement)
+  name.vb: Insert(Integer, VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Insert(System.Int32,UnityEngine.UIElements.VisualElement)
+    name: Insert
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Insert(System.Int32,UnityEngine.UIElements.VisualElement)
+    name: Insert
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Remove(VisualElement)
+  nameWithType: VisualElement.Remove(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)
+    name: Remove
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)
+    name: Remove
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.RemoveAt(System.Int32)
+  commentId: M:UnityEngine.UIElements.VisualElement.RemoveAt(System.Int32)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: RemoveAt(int)
+  nameWithType: VisualElement.RemoveAt(int)
+  fullName: UnityEngine.UIElements.VisualElement.RemoveAt(int)
+  nameWithType.vb: VisualElement.RemoveAt(Integer)
+  fullName.vb: UnityEngine.UIElements.VisualElement.RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Clear
+  commentId: M:UnityEngine.UIElements.VisualElement.Clear
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Clear()
+  nameWithType: VisualElement.Clear()
+  fullName: UnityEngine.UIElements.VisualElement.Clear()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.ElementAt(System.Int32)
+  commentId: M:UnityEngine.UIElements.VisualElement.ElementAt(System.Int32)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: ElementAt(int)
+  nameWithType: VisualElement.ElementAt(int)
+  fullName: UnityEngine.UIElements.VisualElement.ElementAt(int)
+  nameWithType.vb: VisualElement.ElementAt(Integer)
+  fullName.vb: UnityEngine.UIElements.VisualElement.ElementAt(Integer)
+  name.vb: ElementAt(Integer)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.ElementAt(System.Int32)
+    name: ElementAt
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.ElementAt(System.Int32)
+    name: ElementAt
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: IndexOf(VisualElement)
+  nameWithType: VisualElement.IndexOf(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)
+    name: IndexOf
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)
+    name: IndexOf
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Children
+  commentId: M:UnityEngine.UIElements.VisualElement.Children
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Children()
+  nameWithType: VisualElement.Children()
+  fullName: UnityEngine.UIElements.VisualElement.Children()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Children
+    name: Children
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Children
+    name: Children
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Sort(System.Comparison{UnityEngine.UIElements.VisualElement})
+  commentId: M:UnityEngine.UIElements.VisualElement.Sort(System.Comparison{UnityEngine.UIElements.VisualElement})
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  name: Sort(Comparison<VisualElement>)
+  nameWithType: VisualElement.Sort(Comparison<VisualElement>)
+  fullName: UnityEngine.UIElements.VisualElement.Sort(System.Comparison<UnityEngine.UIElements.VisualElement>)
+  nameWithType.vb: VisualElement.Sort(Comparison(Of VisualElement))
+  fullName.vb: UnityEngine.UIElements.VisualElement.Sort(System.Comparison(Of UnityEngine.UIElements.VisualElement))
+  name.vb: Sort(Comparison(Of VisualElement))
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Sort(System.Comparison{UnityEngine.UIElements.VisualElement})
+    name: Sort
+    isExternal: true
+  - name: (
+  - uid: System.Comparison`1
+    name: Comparison
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  - name: <
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Sort(System.Comparison{UnityEngine.UIElements.VisualElement})
+    name: Sort
+    isExternal: true
+  - name: (
+  - uid: System.Comparison`1
+    name: Comparison
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.comparison-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.BringToFront
+  commentId: M:UnityEngine.UIElements.VisualElement.BringToFront
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: BringToFront()
+  nameWithType: VisualElement.BringToFront()
+  fullName: UnityEngine.UIElements.VisualElement.BringToFront()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.BringToFront
+    name: BringToFront
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.BringToFront
+    name: BringToFront
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.SendToBack
+  commentId: M:UnityEngine.UIElements.VisualElement.SendToBack
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: SendToBack()
+  nameWithType: VisualElement.SendToBack()
+  fullName: UnityEngine.UIElements.VisualElement.SendToBack()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.SendToBack
+    name: SendToBack
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.SendToBack
+    name: SendToBack
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: PlaceBehind(VisualElement)
+  nameWithType: VisualElement.PlaceBehind(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)
+    name: PlaceBehind
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)
+    name: PlaceBehind
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: PlaceInFront(VisualElement)
+  nameWithType: VisualElement.PlaceInFront(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)
+    name: PlaceInFront
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)
+    name: PlaceInFront
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.RemoveFromHierarchy
+  commentId: M:UnityEngine.UIElements.VisualElement.RemoveFromHierarchy
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: RemoveFromHierarchy()
+  nameWithType: VisualElement.RemoveFromHierarchy()
+  fullName: UnityEngine.UIElements.VisualElement.RemoveFromHierarchy()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.RemoveFromHierarchy
+    name: RemoveFromHierarchy
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.RemoveFromHierarchy
+    name: RemoveFromHierarchy
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.GetFirstOfType``1
+  commentId: M:UnityEngine.UIElements.VisualElement.GetFirstOfType``1
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: GetFirstOfType<T>()
+  nameWithType: VisualElement.GetFirstOfType<T>()
+  fullName: UnityEngine.UIElements.VisualElement.GetFirstOfType<T>()
+  nameWithType.vb: VisualElement.GetFirstOfType(Of T)()
+  fullName.vb: UnityEngine.UIElements.VisualElement.GetFirstOfType(Of T)()
+  name.vb: GetFirstOfType(Of T)()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.GetFirstOfType``1
+    name: GetFirstOfType
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.GetFirstOfType``1
+    name: GetFirstOfType
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType``1
+  commentId: M:UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType``1
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: GetFirstAncestorOfType<T>()
+  nameWithType: VisualElement.GetFirstAncestorOfType<T>()
+  fullName: UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType<T>()
+  nameWithType.vb: VisualElement.GetFirstAncestorOfType(Of T)()
+  fullName.vb: UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType(Of T)()
+  name.vb: GetFirstAncestorOfType(Of T)()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType``1
+    name: GetFirstAncestorOfType
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType``1
+    name: GetFirstAncestorOfType
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: Contains(VisualElement)
+  nameWithType: VisualElement.Contains(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)
+    name: Contains
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)
+    name: Contains
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: FindCommonAncestor(VisualElement)
+  nameWithType: VisualElement.FindCommonAncestor(VisualElement)
+  fullName: UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)
+    name: FindCommonAncestor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)
+    name: FindCommonAncestor
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.viewDataKey
+  commentId: P:UnityEngine.UIElements.VisualElement.viewDataKey
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: viewDataKey
+  nameWithType: VisualElement.viewDataKey
+  fullName: UnityEngine.UIElements.VisualElement.viewDataKey
+- uid: UnityEngine.UIElements.VisualElement.userData
+  commentId: P:UnityEngine.UIElements.VisualElement.userData
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: userData
+  nameWithType: VisualElement.userData
+  fullName: UnityEngine.UIElements.VisualElement.userData
+- uid: UnityEngine.UIElements.VisualElement.canGrabFocus
+  commentId: P:UnityEngine.UIElements.VisualElement.canGrabFocus
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: canGrabFocus
+  nameWithType: VisualElement.canGrabFocus
+  fullName: UnityEngine.UIElements.VisualElement.canGrabFocus
+- uid: UnityEngine.UIElements.VisualElement.focusController
+  commentId: P:UnityEngine.UIElements.VisualElement.focusController
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: focusController
+  nameWithType: VisualElement.focusController
+  fullName: UnityEngine.UIElements.VisualElement.focusController
+- uid: UnityEngine.UIElements.VisualElement.usageHints
+  commentId: P:UnityEngine.UIElements.VisualElement.usageHints
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: usageHints
+  nameWithType: VisualElement.usageHints
+  fullName: UnityEngine.UIElements.VisualElement.usageHints
+- uid: UnityEngine.UIElements.VisualElement.transform
+  commentId: P:UnityEngine.UIElements.VisualElement.transform
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: transform
+  nameWithType: VisualElement.transform
+  fullName: UnityEngine.UIElements.VisualElement.transform
+- uid: UnityEngine.UIElements.VisualElement.layout
+  commentId: P:UnityEngine.UIElements.VisualElement.layout
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: layout
+  nameWithType: VisualElement.layout
+  fullName: UnityEngine.UIElements.VisualElement.layout
+- uid: UnityEngine.UIElements.VisualElement.contentRect
+  commentId: P:UnityEngine.UIElements.VisualElement.contentRect
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: contentRect
+  nameWithType: VisualElement.contentRect
+  fullName: UnityEngine.UIElements.VisualElement.contentRect
+- uid: UnityEngine.UIElements.VisualElement.paddingRect
+  commentId: P:UnityEngine.UIElements.VisualElement.paddingRect
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: paddingRect
+  nameWithType: VisualElement.paddingRect
+  fullName: UnityEngine.UIElements.VisualElement.paddingRect
+- uid: UnityEngine.UIElements.VisualElement.worldBound
+  commentId: P:UnityEngine.UIElements.VisualElement.worldBound
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: worldBound
+  nameWithType: VisualElement.worldBound
+  fullName: UnityEngine.UIElements.VisualElement.worldBound
+- uid: UnityEngine.UIElements.VisualElement.localBound
+  commentId: P:UnityEngine.UIElements.VisualElement.localBound
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: localBound
+  nameWithType: VisualElement.localBound
+  fullName: UnityEngine.UIElements.VisualElement.localBound
+- uid: UnityEngine.UIElements.VisualElement.worldTransform
+  commentId: P:UnityEngine.UIElements.VisualElement.worldTransform
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: worldTransform
+  nameWithType: VisualElement.worldTransform
+  fullName: UnityEngine.UIElements.VisualElement.worldTransform
+- uid: UnityEngine.UIElements.VisualElement.pickingMode
+  commentId: P:UnityEngine.UIElements.VisualElement.pickingMode
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: pickingMode
+  nameWithType: VisualElement.pickingMode
+  fullName: UnityEngine.UIElements.VisualElement.pickingMode
+- uid: UnityEngine.UIElements.VisualElement.name
+  commentId: P:UnityEngine.UIElements.VisualElement.name
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: name
+  nameWithType: VisualElement.name
+  fullName: UnityEngine.UIElements.VisualElement.name
+- uid: UnityEngine.UIElements.VisualElement.enabledInHierarchy
+  commentId: P:UnityEngine.UIElements.VisualElement.enabledInHierarchy
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: enabledInHierarchy
+  nameWithType: VisualElement.enabledInHierarchy
+  fullName: UnityEngine.UIElements.VisualElement.enabledInHierarchy
+- uid: UnityEngine.UIElements.VisualElement.enabledSelf
+  commentId: P:UnityEngine.UIElements.VisualElement.enabledSelf
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: enabledSelf
+  nameWithType: VisualElement.enabledSelf
+  fullName: UnityEngine.UIElements.VisualElement.enabledSelf
+- uid: UnityEngine.UIElements.VisualElement.visible
+  commentId: P:UnityEngine.UIElements.VisualElement.visible
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: visible
+  nameWithType: VisualElement.visible
+  fullName: UnityEngine.UIElements.VisualElement.visible
+- uid: UnityEngine.UIElements.VisualElement.generateVisualContent
+  commentId: P:UnityEngine.UIElements.VisualElement.generateVisualContent
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: generateVisualContent
+  nameWithType: VisualElement.generateVisualContent
+  fullName: UnityEngine.UIElements.VisualElement.generateVisualContent
+- uid: UnityEngine.UIElements.VisualElement.experimental
+  commentId: P:UnityEngine.UIElements.VisualElement.experimental
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: experimental
+  nameWithType: VisualElement.experimental
+  fullName: UnityEngine.UIElements.VisualElement.experimental
+- uid: UnityEngine.UIElements.VisualElement.hierarchy
+  commentId: P:UnityEngine.UIElements.VisualElement.hierarchy
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: hierarchy
+  nameWithType: VisualElement.hierarchy
+  fullName: UnityEngine.UIElements.VisualElement.hierarchy
+- uid: UnityEngine.UIElements.VisualElement.cacheAsBitmap
+  commentId: P:UnityEngine.UIElements.VisualElement.cacheAsBitmap
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: cacheAsBitmap
+  nameWithType: VisualElement.cacheAsBitmap
+  fullName: UnityEngine.UIElements.VisualElement.cacheAsBitmap
+- uid: UnityEngine.UIElements.VisualElement.parent
+  commentId: P:UnityEngine.UIElements.VisualElement.parent
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: parent
+  nameWithType: VisualElement.parent
+  fullName: UnityEngine.UIElements.VisualElement.parent
+- uid: UnityEngine.UIElements.VisualElement.panel
+  commentId: P:UnityEngine.UIElements.VisualElement.panel
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: panel
+  nameWithType: VisualElement.panel
+  fullName: UnityEngine.UIElements.VisualElement.panel
+- uid: UnityEngine.UIElements.VisualElement.contentContainer
+  commentId: P:UnityEngine.UIElements.VisualElement.contentContainer
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: contentContainer
+  nameWithType: VisualElement.contentContainer
+  fullName: UnityEngine.UIElements.VisualElement.contentContainer
+- uid: UnityEngine.UIElements.VisualElement.visualTreeAssetSource
+  commentId: P:UnityEngine.UIElements.VisualElement.visualTreeAssetSource
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: visualTreeAssetSource
+  nameWithType: VisualElement.visualTreeAssetSource
+  fullName: UnityEngine.UIElements.VisualElement.visualTreeAssetSource
+- uid: UnityEngine.UIElements.VisualElement.Item(System.Int32)
+  commentId: P:UnityEngine.UIElements.VisualElement.Item(System.Int32)
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: VisualElement.this[int]
+  fullName: UnityEngine.UIElements.VisualElement.this[int]
+  nameWithType.vb: VisualElement.this[](Integer)
+  fullName.vb: UnityEngine.UIElements.VisualElement.this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.UIElements.VisualElement.Item(System.Int32)
+    name: this[]
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UnityEngine.UIElements.VisualElement.childCount
+  commentId: P:UnityEngine.UIElements.VisualElement.childCount
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: childCount
+  nameWithType: VisualElement.childCount
+  fullName: UnityEngine.UIElements.VisualElement.childCount
+- uid: UnityEngine.UIElements.VisualElement.schedule
+  commentId: P:UnityEngine.UIElements.VisualElement.schedule
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: schedule
+  nameWithType: VisualElement.schedule
+  fullName: UnityEngine.UIElements.VisualElement.schedule
+- uid: UnityEngine.UIElements.VisualElement.style
+  commentId: P:UnityEngine.UIElements.VisualElement.style
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: style
+  nameWithType: VisualElement.style
+  fullName: UnityEngine.UIElements.VisualElement.style
+- uid: UnityEngine.UIElements.VisualElement.customStyle
+  commentId: P:UnityEngine.UIElements.VisualElement.customStyle
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: customStyle
+  nameWithType: VisualElement.customStyle
+  fullName: UnityEngine.UIElements.VisualElement.customStyle
+- uid: UnityEngine.UIElements.VisualElement.styleSheets
+  commentId: P:UnityEngine.UIElements.VisualElement.styleSheets
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: styleSheets
+  nameWithType: VisualElement.styleSheets
+  fullName: UnityEngine.UIElements.VisualElement.styleSheets
+- uid: UnityEngine.UIElements.VisualElement.tooltip
+  commentId: P:UnityEngine.UIElements.VisualElement.tooltip
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: tooltip
+  nameWithType: VisualElement.tooltip
+  fullName: UnityEngine.UIElements.VisualElement.tooltip
+- uid: UnityEngine.UIElements.VisualElement.resolvedStyle
+  commentId: P:UnityEngine.UIElements.VisualElement.resolvedStyle
+  parent: UnityEngine.UIElements.VisualElement
+  isExternal: true
+  name: resolvedStyle
+  nameWithType: VisualElement.resolvedStyle
+  fullName: UnityEngine.UIElements.VisualElement.resolvedStyle
+- uid: UnityEngine.UIElements.Focusable.Blur
+  commentId: M:UnityEngine.UIElements.Focusable.Blur
+  parent: UnityEngine.UIElements.Focusable
+  isExternal: true
+  name: Blur()
+  nameWithType: Focusable.Blur()
+  fullName: UnityEngine.UIElements.Focusable.Blur()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.Focusable.Blur
+    name: Blur
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.Focusable.Blur
+    name: Blur
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.Focusable.focusable
+  commentId: P:UnityEngine.UIElements.Focusable.focusable
+  parent: UnityEngine.UIElements.Focusable
+  isExternal: true
+  name: focusable
+  nameWithType: Focusable.focusable
+  fullName: UnityEngine.UIElements.Focusable.focusable
+- uid: UnityEngine.UIElements.Focusable.tabIndex
+  commentId: P:UnityEngine.UIElements.Focusable.tabIndex
+  parent: UnityEngine.UIElements.Focusable
+  isExternal: true
+  name: tabIndex
+  nameWithType: Focusable.tabIndex
+  fullName: UnityEngine.UIElements.Focusable.tabIndex
+- uid: UnityEngine.UIElements.Focusable.delegatesFocus
+  commentId: P:UnityEngine.UIElements.Focusable.delegatesFocus
+  parent: UnityEngine.UIElements.Focusable
+  isExternal: true
+  name: delegatesFocus
+  nameWithType: Focusable.delegatesFocus
+  fullName: UnityEngine.UIElements.Focusable.delegatesFocus
+- uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{{TEventType}},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  definition: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  name: RegisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  nameWithType: CallbackEventHandler.RegisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback<TEventType>(UnityEngine.UIElements.EventCallback<TEventType>, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.RegisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback(Of TEventType)(UnityEngine.UIElements.EventCallback(Of TEventType), UnityEngine.UIElements.TrickleDown)
+  name.vb: RegisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{{TEventType},{TUserArgsType}},{TUserArgsType},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  definition: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+  name: RegisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TUserArgsType, TrickleDown)
+  nameWithType: CallbackEventHandler.RegisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TUserArgsType, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback<TEventType, TUserArgsType>(UnityEngine.UIElements.EventCallback<TEventType, TUserArgsType>, TUserArgsType, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.RegisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TUserArgsType, TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback(Of TEventType, TUserArgsType)(UnityEngine.UIElements.EventCallback(Of TEventType, TUserArgsType), TUserArgsType, UnityEngine.UIElements.TrickleDown)
+  name.vb: RegisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TUserArgsType, TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{{TEventType}},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  definition: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  name: UnregisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  nameWithType: CallbackEventHandler.UnregisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback<TEventType>(UnityEngine.UIElements.EventCallback<TEventType>, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.UnregisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback(Of TEventType)(UnityEngine.UIElements.EventCallback(Of TEventType), UnityEngine.UIElements.TrickleDown)
+  name.vb: UnregisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{{TEventType},{TUserArgsType}},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  definition: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+  name: UnregisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TrickleDown)
+  nameWithType: CallbackEventHandler.UnregisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback<TEventType, TUserArgsType>(UnityEngine.UIElements.EventCallback<TEventType, TUserArgsType>, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.UnregisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback(Of TEventType, TUserArgsType)(UnityEngine.UIElements.EventCallback(Of TEventType, TUserArgsType), UnityEngine.UIElements.TrickleDown)
+  name.vb: UnregisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  isExternal: true
+  name: HandleEvent(EventBase)
+  nameWithType: CallbackEventHandler.HandleEvent(EventBase)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)
+    name: HandleEvent
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)
+    name: HandleEvent
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  isExternal: true
+  name: HasTrickleDownHandlers()
+  nameWithType: CallbackEventHandler.HasTrickleDownHandlers()
+  fullName: UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers
+    name: HasTrickleDownHandlers
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers
+    name: HasTrickleDownHandlers
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  isExternal: true
+  name: HasBubbleUpHandlers()
+  nameWithType: CallbackEventHandler.HasBubbleUpHandlers()
+  fullName: UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers()
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers
+    name: HasBubbleUpHandlers
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers
+    name: HasBubbleUpHandlers
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)
+  parent: UnityEngine.UIElements.CallbackEventHandler
+  isExternal: true
+  name: ExecuteDefaultActionAtTarget(EventBase)
+  nameWithType: CallbackEventHandler.ExecuteDefaultActionAtTarget(EventBase)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)
+    name: ExecuteDefaultActionAtTarget
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)
+    name: ExecuteDefaultActionAtTarget
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.UIElements.EventBase
+    name: EventBase
+    isExternal: true
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+- uid: UnityEditor.Experimental.GraphView
+  commentId: N:UnityEditor.Experimental.GraphView
+  isExternal: true
+  name: UnityEditor.Experimental.GraphView
+  nameWithType: UnityEditor.Experimental.GraphView
+  fullName: UnityEditor.Experimental.GraphView
+  spec.csharp:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Experimental
+    name: Experimental
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Experimental.GraphView
+    name: GraphView
+    isExternal: true
+  spec.vb:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Experimental
+    name: Experimental
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Experimental.GraphView
+    name: GraphView
+    isExternal: true
+- uid: UnityEngine.UIElements.Experimental
+  commentId: N:UnityEngine.UIElements.Experimental
+  isExternal: true
+  name: UnityEngine.UIElements.Experimental
+  nameWithType: UnityEngine.UIElements.Experimental
+  fullName: UnityEngine.UIElements.Experimental
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements.Experimental
+    name: Experimental
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements.Experimental
+    name: Experimental
+    isExternal: true
+- uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  isExternal: true
+  name: RegisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  nameWithType: CallbackEventHandler.RegisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback<TEventType>(UnityEngine.UIElements.EventCallback<TEventType>, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.RegisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback(Of TEventType)(UnityEngine.UIElements.EventCallback(Of TEventType), UnityEngine.UIElements.TrickleDown)
+  name.vb: RegisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+  isExternal: true
+  name: RegisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TUserArgsType, TrickleDown)
+  nameWithType: CallbackEventHandler.RegisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TUserArgsType, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback<TEventType, TUserArgsType>(UnityEngine.UIElements.EventCallback<TEventType, TUserArgsType>, TUserArgsType, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.RegisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TUserArgsType, TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback(Of TEventType, TUserArgsType)(UnityEngine.UIElements.EventCallback(Of TEventType, TUserArgsType), TUserArgsType, UnityEngine.UIElements.TrickleDown)
+  name.vb: RegisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TUserArgsType, TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.RegisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},``1,UnityEngine.UIElements.TrickleDown)
+    name: RegisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+  isExternal: true
+  name: UnregisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  nameWithType: CallbackEventHandler.UnregisterCallback<TEventType>(EventCallback<TEventType>, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback<TEventType>(UnityEngine.UIElements.EventCallback<TEventType>, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.UnregisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback(Of TEventType)(UnityEngine.UIElements.EventCallback(Of TEventType), UnityEngine.UIElements.TrickleDown)
+  name.vb: UnregisterCallback(Of TEventType)(EventCallback(Of TEventType), TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``1(UnityEngine.UIElements.EventCallback{``0},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`1
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+  commentId: M:UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+  isExternal: true
+  name: UnregisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TrickleDown)
+  nameWithType: CallbackEventHandler.UnregisterCallback<TEventType, TUserArgsType>(EventCallback<TEventType, TUserArgsType>, TrickleDown)
+  fullName: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback<TEventType, TUserArgsType>(UnityEngine.UIElements.EventCallback<TEventType, TUserArgsType>, UnityEngine.UIElements.TrickleDown)
+  nameWithType.vb: CallbackEventHandler.UnregisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TrickleDown)
+  fullName.vb: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback(Of TEventType, TUserArgsType)(UnityEngine.UIElements.EventCallback(Of TEventType, TUserArgsType), UnityEngine.UIElements.TrickleDown)
+  name.vb: UnregisterCallback(Of TEventType, TUserArgsType)(EventCallback(Of TEventType, TUserArgsType), TrickleDown)
+  spec.csharp:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: <
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback``2(UnityEngine.UIElements.EventCallback{``0,``1},UnityEngine.UIElements.TrickleDown)
+    name: UnregisterCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: (
+  - uid: UnityEngine.UIElements.EventCallback`2
+    name: EventCallback
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventType
+  - name: ','
+  - name: " "
+  - name: TUserArgsType
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.TrickleDown
+    name: TrickleDown
+    isExternal: true
+  - name: )
+- uid: VRBuilder.Core.IStep
+  commentId: T:VRBuilder.Core.IStep
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IStep.html
+  name: IStep
+  nameWithType: IStep
+  fullName: VRBuilder.Core.IStep
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Name
+  commentId: P:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Name
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_Name
+  name: Name
+  nameWithType: ProcessGraphNode.Name
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Name
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Name*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.Name
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_Name
+  name: Name
+  nameWithType: StepGraphNode.Name
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.EntryPoint
+  commentId: P:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.EntryPoint
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_EntryPoint
+  name: EntryPoint
+  nameWithType: ProcessGraphNode.EntryPoint
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.EntryPoint
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_EntryPoint
+  name: EntryPoint
+  nameWithType: StepGraphNode.EntryPoint
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.EntryPoint
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Outputs
+  commentId: P:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Outputs
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_Outputs
+  name: Outputs
+  nameWithType: ProcessGraphNode.Outputs
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Outputs
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_Outputs
+  name: Outputs
+  nameWithType: StepGraphNode.Outputs
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Outputs
+- uid: VRBuilder.Core.IStep[]
+  isExternal: true
+  name: IStep[]
+  nameWithType: IStep[]
+  fullName: VRBuilder.Core.IStep[]
+  nameWithType.vb: IStep()
+  fullName.vb: VRBuilder.Core.IStep()
+  name.vb: IStep()
+  spec.csharp:
+  - uid: VRBuilder.Core.IStep
+    name: IStep
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: VRBuilder.Core.IStep
+    name: IStep
+  - name: (
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Position
+  commentId: P:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Position
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_Position
+  name: Position
+  nameWithType: ProcessGraphNode.Position
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Position
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Position*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.Position
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_Position
+  name: Position
+  nameWithType: StepGraphNode.Position
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Position
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.#ctor*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.#ctor
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode__ctor_VRBuilder_Core_IStep_
+  name: StepGraphNode
+  nameWithType: StepGraphNode.StepGraphNode
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.StepGraphNode
+  nameWithType.vb: StepGraphNode.New
+  fullName.vb: VRBuilder.Editor.UI.Graphics.StepGraphNode.New
+  name.vb: New
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Refresh
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Refresh
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_Refresh
+  name: Refresh()
+  nameWithType: ProcessGraphNode.Refresh()
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Refresh()
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Refresh
+    name: Refresh
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_Refresh
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.Refresh
+    name: Refresh
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_Refresh
+  - name: (
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_Refresh
+  name: Refresh
+  nameWithType: StepGraphNode.Refresh
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.Refresh
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_CreatePortWithUndo
+  name: CreatePortWithUndo
+  nameWithType: StepGraphNode.CreatePortWithUndo
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.CreatePortWithUndo
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_RemovePort_UnityEditor_Experimental_GraphView_Port_
+  name: RemovePort
+  nameWithType: StepGraphNode.RemovePort
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePort
+- uid: UnityEditor.Experimental.GraphView.Port
+  commentId: T:UnityEditor.Experimental.GraphView.Port
+  parent: UnityEditor.Experimental.GraphView
+  isExternal: true
+  name: Port
+  nameWithType: Port
+  fullName: UnityEditor.Experimental.GraphView.Port
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_RemovePortWithUndo_UnityEditor_Experimental_GraphView_Port_
+  name: RemovePortWithUndo(Port)
+  nameWithType: ProcessGraphNode.RemovePortWithUndo(Port)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+    name: RemovePortWithUndo
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_RemovePortWithUndo_UnityEditor_Experimental_GraphView_Port_
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Port
+    name: Port
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemovePortWithUndo(UnityEditor.Experimental.GraphView.Port)
+    name: RemovePortWithUndo
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_RemovePortWithUndo_UnityEditor_Experimental_GraphView_Port_
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Port
+    name: Port
+    isExternal: true
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_RemovePortWithUndo_UnityEditor_Experimental_GraphView_Port_
+  name: RemovePortWithUndo
+  nameWithType: StepGraphNode.RemovePortWithUndo
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemovePortWithUndo
+- uid: UnityEditor.Experimental.GraphView.GraphElement.OnSelected
+  commentId: M:UnityEditor.Experimental.GraphView.GraphElement.OnSelected
+  parent: UnityEditor.Experimental.GraphView.GraphElement
+  isExternal: true
+  name: OnSelected()
+  nameWithType: GraphElement.OnSelected()
+  fullName: UnityEditor.Experimental.GraphView.GraphElement.OnSelected()
+  spec.csharp:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.OnSelected
+    name: OnSelected
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Experimental.GraphView.GraphElement.OnSelected
+    name: OnSelected
+    isExternal: true
+  - name: (
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_OnSelected
+  name: OnSelected
+  nameWithType: StepGraphNode.OnSelected
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.OnSelected
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_SetOutput_System_Int32_VRBuilder_Core_IStep_
+  name: SetOutput(int, IStep)
+  nameWithType: ProcessGraphNode.SetOutput(int, IStep)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(int, VRBuilder.Core.IStep)
+  nameWithType.vb: ProcessGraphNode.SetOutput(Integer, IStep)
+  fullName.vb: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(Integer, VRBuilder.Core.IStep)
+  name.vb: SetOutput(Integer, IStep)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+    name: SetOutput
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_SetOutput_System_Int32_VRBuilder_Core_IStep_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: VRBuilder.Core.IStep
+    name: IStep
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.SetOutput(System.Int32,VRBuilder.Core.IStep)
+    name: SetOutput
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_SetOutput_System_Int32_VRBuilder_Core_IStep_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: VRBuilder.Core.IStep
+    name: IStep
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_SetOutput_System_Int32_VRBuilder_Core_IStep_
+  name: SetOutput
+  nameWithType: StepGraphNode.SetOutput
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.SetOutput
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_AddToChapter_VRBuilder_Core_IChapter_
+  name: AddToChapter(IChapter)
+  nameWithType: ProcessGraphNode.AddToChapter(IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+    name: AddToChapter
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_AddToChapter_VRBuilder_Core_IChapter_
+  - name: (
+  - uid: VRBuilder.Core.IChapter
+    name: IChapter
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.AddToChapter(VRBuilder.Core.IChapter)
+    name: AddToChapter
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_AddToChapter_VRBuilder_Core_IChapter_
+  - name: (
+  - uid: VRBuilder.Core.IChapter
+    name: IChapter
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_AddToChapter_VRBuilder_Core_IChapter_
+  name: AddToChapter
+  nameWithType: StepGraphNode.AddToChapter
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.AddToChapter
+- uid: VRBuilder.Core.IChapter
+  commentId: T:VRBuilder.Core.IChapter
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IChapter.html
+  name: IChapter
+  nameWithType: IChapter
+  fullName: VRBuilder.Core.IChapter
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_RemoveFromChapter_VRBuilder_Core_IChapter_
+  name: RemoveFromChapter(IChapter)
+  nameWithType: ProcessGraphNode.RemoveFromChapter(IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+    name: RemoveFromChapter
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_RemoveFromChapter_VRBuilder_Core_IChapter_
+  - name: (
+  - uid: VRBuilder.Core.IChapter
+    name: IChapter
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.RemoveFromChapter(VRBuilder.Core.IChapter)
+    name: RemoveFromChapter
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_RemoveFromChapter_VRBuilder_Core_IChapter_
+  - name: (
+  - uid: VRBuilder.Core.IChapter
+    name: IChapter
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_RemoveFromChapter_VRBuilder_Core_IChapter_
+  name: RemoveFromChapter
+  nameWithType: StepGraphNode.RemoveFromChapter
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.RemoveFromChapter
+- uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  commentId: M:VRBuilder.Editor.UI.Graphics.ProcessGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+  parent: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
+  isExternal: true
+  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_UpdateOutputPortName_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_Node_
+  name: UpdateOutputPortName(Port, Node)
+  nameWithType: ProcessGraphNode.UpdateOutputPortName(Port, Node)
+  fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port, UnityEditor.Experimental.GraphView.Node)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+    name: UpdateOutputPortName
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_UpdateOutputPortName_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_Node_
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Port
+    name: Port
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Node
+    name: Node
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.UpdateOutputPortName(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.Node)
+    name: UpdateOutputPortName
+    href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html#VRBuilder_Editor_UI_Graphics_ProcessGraphNode_UpdateOutputPortName_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_Node_
+  - name: (
+  - uid: UnityEditor.Experimental.GraphView.Port
+    name: Port
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEditor.Experimental.GraphView.Node
+    name: Node
+    isExternal: true
+  - name: )
+- uid: VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName*
+  commentId: Overload:VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName
+  href: VRBuilder.Editor.UI.Graphics.StepGraphNode.html#VRBuilder_Editor_UI_Graphics_StepGraphNode_UpdateOutputPortName_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_Node_
+  name: UpdateOutputPortName
+  nameWithType: StepGraphNode.UpdateOutputPortName
+  fullName: VRBuilder.Editor.UI.Graphics.StepGraphNode.UpdateOutputPortName

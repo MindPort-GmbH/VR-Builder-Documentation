@@ -1,0 +1,1016 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  commentId: T:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  id: TextToSpeechAudio
+  parent: VRBuilder.TextToSpeech.Audio
+  children:
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor(System.String)
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text
+  langs:
+  - csharp
+  - vb
+  name: TextToSpeechAudio
+  nameWithType: TextToSpeechAudio
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  type: Class
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: TextToSpeechAudio
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: This class retrieves and stores AudioClips generated based in a provided localized text.
+  example: []
+  syntax:
+    content: >-
+      [DataContract(IsReference = true)]
+
+      [DisplayName("Play Text to Speech")]
+
+      public class TextToSpeechAudio : TextToSpeechContent, ITextToSpeechContent, ILocalizedContent, IAudioData, ICanBeEmpty
+    content.vb: >-
+      <DataContract(IsReference:=True)>
+
+      <DisplayName("Play Text to Speech")>
+
+      Public Class TextToSpeechAudio Inherits TextToSpeechContent Implements ITextToSpeechContent, ILocalizedContent, IAudioData, ICanBeEmpty
+  inheritance:
+  - System.Object
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+  implements:
+  - VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
+  - VRBuilder.Core.Localization.ILocalizedContent
+  - VRBuilder.Core.Audio.IAudioData
+  - VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  inheritedMembers:
+  - VRBuilder.TextToSpeech.Audio.TextToSpeechContent.IsCached(UnityEngine.Localization.Locale)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: IsReference
+      type: System.Boolean
+      value: true
+  - type: VRBuilder.Core.Attributes.DisplayNameAttribute
+    ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Play Text to Speech
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text
+  commentId: P:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text
+  id: Text
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: TextToSpeechAudio.Text
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text
+  type: Property
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Text
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 22
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: Text content to be fed to the TTS provider.
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      [DisplayName("Text/Key")]
+
+      public override string Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember>
+
+      <DisplayName("Text/Key")>
+
+      Public Overrides Property Text As String
+  overridden: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.Text
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  - type: VRBuilder.Core.Attributes.DisplayNameAttribute
+    ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Text/Key
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor
+  id: '#ctor'
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: TextToSpeechAudio()
+  nameWithType: TextToSpeechAudio.TextToSpeechAudio()
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.TextToSpeechAudio()
+  type: Constructor
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 40
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  syntax:
+    content: protected TextToSpeechAudio()
+    content.vb: Protected Sub New()
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor*
+  nameWithType.vb: TextToSpeechAudio.New()
+  fullName.vb: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.New()
+  name.vb: New()
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor(System.String)
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: TextToSpeechAudio(string)
+  nameWithType: TextToSpeechAudio.TextToSpeechAudio(string)
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.TextToSpeechAudio(string)
+  type: Constructor
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 44
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  syntax:
+    content: public TextToSpeechAudio(string text)
+    parameters:
+    - id: text
+      type: System.String
+    content.vb: Public Sub New(text As String)
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor*
+  nameWithType.vb: TextToSpeechAudio.New(String)
+  fullName.vb: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.New(String)
+  name.vb: New(String)
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip
+  commentId: P:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip
+  id: HasAudioClip
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: HasAudioClip
+  nameWithType: TextToSpeechAudio.HasAudioClip
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip
+  type: Property
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: HasAudioClip
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 57
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: True when there is an Audio Clip loaded.
+  example: []
+  syntax:
+    content: public bool HasAudioClip { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasAudioClip As Boolean
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip*
+  implements:
+  - VRBuilder.Core.Audio.IAudioData.HasAudioClip
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading
+  commentId: P:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading
+  id: IsLoading
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: IsLoading
+  nameWithType: TextToSpeechAudio.IsLoading
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading
+  type: Property
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IsLoading
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 68
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: Returns true only when is busy loading an Audio Clip.
+  example: []
+  syntax:
+    content: public bool IsLoading { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLoading As Boolean
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading*
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip
+  commentId: P:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip
+  id: AudioClip
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: AudioClip
+  nameWithType: TextToSpeechAudio.AudioClip
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip
+  type: Property
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: AudioClip
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 73
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: The AudioClip of this source, can be null. Best check first with HasAudio.
+  example: []
+  syntax:
+    content: public AudioClip AudioClip { get; }
+    parameters: []
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public Property AudioClip As AudioClip
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip*
+  implements:
+  - VRBuilder.Core.Audio.IAudioData.AudioClip
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData
+  commentId: P:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData
+  id: ClipData
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: ClipData
+  nameWithType: TextToSpeechAudio.ClipData
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData
+  type: Property
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ClipData
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 76
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: Data used to retrieve the audio clip.
+  example: []
+  syntax:
+    content: public string ClipData { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClipData As String
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData*
+  implements:
+  - VRBuilder.Core.Audio.IAudioData.ClipData
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip
+  id: InitializeAudioClip
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: InitializeAudioClip()
+  nameWithType: TextToSpeechAudio.InitializeAudioClip()
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip()
+  type: Method
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: InitializeAudioClip
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 91
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: Creates the audio clip based on the provided parameters.
+  example: []
+  syntax:
+    content: public void InitializeAudioClip()
+    content.vb: Public Sub InitializeAudioClip()
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip*
+  implements:
+  - VRBuilder.Core.Audio.IAudioData.InitializeAudioClip
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty
+  id: IsEmpty
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty()
+  nameWithType: TextToSpeechAudio.IsEmpty()
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty()
+  type: Method
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IsEmpty
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 126
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: Returns true when this object is not properly filled.
+  example: []
+  syntax:
+    content: public bool IsEmpty()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsEmpty() As Boolean
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty*
+  implements:
+  - VRBuilder.Core.Runtime.Properties.ICanBeEmpty.IsEmpty
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent
+  id: GetLocalizedContent
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedContent()
+  nameWithType: TextToSpeechAudio.GetLocalizedContent()
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent()
+  type: Method
+  source:
+    remote:
+      path: Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetLocalizedContent
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/TextToSpeechAudio.cs
+    startLine: 131
+  assemblies:
+  - VRBuilder.TextToSpeech
+  namespace: VRBuilder.TextToSpeech.Audio
+  summary: Returns localized content according to the localization and process configuration.
+  example: []
+  syntax:
+    content: public override string GetLocalizedContent()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function GetLocalizedContent() As String
+  overridden: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.GetLocalizedContent
+  overload: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent*
+references:
+- uid: VRBuilder.TextToSpeech.Audio
+  commentId: N:VRBuilder.TextToSpeech.Audio
+  href: VRBuilder.html
+  name: VRBuilder.TextToSpeech.Audio
+  nameWithType: VRBuilder.TextToSpeech.Audio
+  fullName: VRBuilder.TextToSpeech.Audio
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.TextToSpeech
+    name: TextToSpeech
+    href: VRBuilder.TextToSpeech.html
+  - name: .
+  - uid: VRBuilder.TextToSpeech.Audio
+    name: Audio
+    href: VRBuilder.TextToSpeech.Audio.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.TextToSpeech
+    name: TextToSpeech
+    href: VRBuilder.TextToSpeech.html
+  - name: .
+  - uid: VRBuilder.TextToSpeech.Audio
+    name: Audio
+    href: VRBuilder.TextToSpeech.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+  commentId: T:VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+  parent: VRBuilder.TextToSpeech.Audio
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html
+  name: TextToSpeechContent
+  nameWithType: TextToSpeechContent
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+- uid: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
+  commentId: T:VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
+  parent: VRBuilder.TextToSpeech.Audio
+  href: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent.html
+  name: ITextToSpeechContent
+  nameWithType: ITextToSpeechContent
+  fullName: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
+- uid: VRBuilder.Core.Localization.ILocalizedContent
+  commentId: T:VRBuilder.Core.Localization.ILocalizedContent
+  parent: VRBuilder.Core.Localization
+  href: VRBuilder.Core.Localization.ILocalizedContent.html
+  name: ILocalizedContent
+  nameWithType: ILocalizedContent
+  fullName: VRBuilder.Core.Localization.ILocalizedContent
+- uid: VRBuilder.Core.Audio.IAudioData
+  commentId: T:VRBuilder.Core.Audio.IAudioData
+  parent: VRBuilder.Core.Audio
+  href: VRBuilder.Core.Audio.IAudioData.html
+  name: IAudioData
+  nameWithType: IAudioData
+  fullName: VRBuilder.Core.Audio.IAudioData
+- uid: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  commentId: T:VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  parent: VRBuilder.Core.Runtime.Properties
+  href: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.html
+  name: ICanBeEmpty
+  nameWithType: ICanBeEmpty
+  fullName: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.IsCached(UnityEngine.Localization.Locale)
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechContent.IsCached(UnityEngine.Localization.Locale)
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_IsCached_UnityEngine_Localization_Locale_
+  name: IsCached(Locale)
+  nameWithType: TextToSpeechContent.IsCached(Locale)
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.IsCached(UnityEngine.Localization.Locale)
+  spec.csharp:
+  - uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.IsCached(UnityEngine.Localization.Locale)
+    name: IsCached
+    href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_IsCached_UnityEngine_Localization_Locale_
+  - name: (
+  - uid: UnityEngine.Localization.Locale
+    name: Locale
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.IsCached(UnityEngine.Localization.Locale)
+    name: IsCached
+    href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_IsCached_UnityEngine_Localization_Locale_
+  - name: (
+  - uid: UnityEngine.Localization.Locale
+    name: Locale
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.Localization
+  commentId: N:VRBuilder.Core.Localization
+  href: VRBuilder.html
+  name: VRBuilder.Core.Localization
+  nameWithType: VRBuilder.Core.Localization
+  fullName: VRBuilder.Core.Localization
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Localization
+    name: Localization
+    href: VRBuilder.Core.Localization.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Localization
+    name: Localization
+    href: VRBuilder.Core.Localization.html
+- uid: VRBuilder.Core.Audio
+  commentId: N:VRBuilder.Core.Audio
+  href: VRBuilder.html
+  name: VRBuilder.Core.Audio
+  nameWithType: VRBuilder.Core.Audio
+  fullName: VRBuilder.Core.Audio
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Audio
+    name: Audio
+    href: VRBuilder.Core.Audio.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Audio
+    name: Audio
+    href: VRBuilder.Core.Audio.html
+- uid: VRBuilder.Core.Runtime.Properties
+  commentId: N:VRBuilder.Core.Runtime.Properties
+  href: VRBuilder.html
+  name: VRBuilder.Core.Runtime.Properties
+  nameWithType: VRBuilder.Core.Runtime.Properties
+  fullName: VRBuilder.Core.Runtime.Properties
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime
+    name: Runtime
+    href: VRBuilder.Core.Runtime.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime.Properties
+    name: Properties
+    href: VRBuilder.Core.Runtime.Properties.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime
+    name: Runtime
+    href: VRBuilder.Core.Runtime.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime.Properties
+    name: Properties
+    href: VRBuilder.Core.Runtime.Properties.html
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.Text
+  commentId: P:VRBuilder.TextToSpeech.Audio.TextToSpeechContent.Text
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_Text
+  name: Text
+  nameWithType: TextToSpeechContent.Text
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.Text
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_Text
+  name: Text
+  nameWithType: TextToSpeechAudio.Text
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.Text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.#ctor
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio__ctor
+  name: TextToSpeechAudio
+  nameWithType: TextToSpeechAudio.TextToSpeechAudio
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.TextToSpeechAudio
+  nameWithType.vb: TextToSpeechAudio.New
+  fullName.vb: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.New
+  name.vb: New
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_HasAudioClip
+  name: HasAudioClip
+  nameWithType: TextToSpeechAudio.HasAudioClip
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.HasAudioClip
+- uid: VRBuilder.Core.Audio.IAudioData.HasAudioClip
+  commentId: P:VRBuilder.Core.Audio.IAudioData.HasAudioClip
+  parent: VRBuilder.Core.Audio.IAudioData
+  href: VRBuilder.Core.Audio.IAudioData.html#VRBuilder_Core_Audio_IAudioData_HasAudioClip
+  name: HasAudioClip
+  nameWithType: IAudioData.HasAudioClip
+  fullName: VRBuilder.Core.Audio.IAudioData.HasAudioClip
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_IsLoading
+  name: IsLoading
+  nameWithType: TextToSpeechAudio.IsLoading
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsLoading
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_AudioClip
+  name: AudioClip
+  nameWithType: TextToSpeechAudio.AudioClip
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.AudioClip
+- uid: VRBuilder.Core.Audio.IAudioData.AudioClip
+  commentId: P:VRBuilder.Core.Audio.IAudioData.AudioClip
+  parent: VRBuilder.Core.Audio.IAudioData
+  href: VRBuilder.Core.Audio.IAudioData.html#VRBuilder_Core_Audio_IAudioData_AudioClip
+  name: AudioClip
+  nameWithType: IAudioData.AudioClip
+  fullName: VRBuilder.Core.Audio.IAudioData.AudioClip
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_ClipData
+  name: ClipData
+  nameWithType: TextToSpeechAudio.ClipData
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.ClipData
+- uid: VRBuilder.Core.Audio.IAudioData.ClipData
+  commentId: P:VRBuilder.Core.Audio.IAudioData.ClipData
+  parent: VRBuilder.Core.Audio.IAudioData
+  href: VRBuilder.Core.Audio.IAudioData.html#VRBuilder_Core_Audio_IAudioData_ClipData
+  name: ClipData
+  nameWithType: IAudioData.ClipData
+  fullName: VRBuilder.Core.Audio.IAudioData.ClipData
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_InitializeAudioClip
+  name: InitializeAudioClip
+  nameWithType: TextToSpeechAudio.InitializeAudioClip
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.InitializeAudioClip
+- uid: VRBuilder.Core.Audio.IAudioData.InitializeAudioClip
+  commentId: M:VRBuilder.Core.Audio.IAudioData.InitializeAudioClip
+  parent: VRBuilder.Core.Audio.IAudioData
+  href: VRBuilder.Core.Audio.IAudioData.html#VRBuilder_Core_Audio_IAudioData_InitializeAudioClip
+  name: InitializeAudioClip()
+  nameWithType: IAudioData.InitializeAudioClip()
+  fullName: VRBuilder.Core.Audio.IAudioData.InitializeAudioClip()
+  spec.csharp:
+  - uid: VRBuilder.Core.Audio.IAudioData.InitializeAudioClip
+    name: InitializeAudioClip
+    href: VRBuilder.Core.Audio.IAudioData.html#VRBuilder_Core_Audio_IAudioData_InitializeAudioClip
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.Audio.IAudioData.InitializeAudioClip
+    name: InitializeAudioClip
+    href: VRBuilder.Core.Audio.IAudioData.html#VRBuilder_Core_Audio_IAudioData_InitializeAudioClip
+  - name: (
+  - name: )
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_IsEmpty
+  name: IsEmpty
+  nameWithType: TextToSpeechAudio.IsEmpty
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.IsEmpty
+- uid: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.IsEmpty
+  commentId: M:VRBuilder.Core.Runtime.Properties.ICanBeEmpty.IsEmpty
+  parent: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  href: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.html#VRBuilder_Core_Runtime_Properties_ICanBeEmpty_IsEmpty
+  name: IsEmpty()
+  nameWithType: ICanBeEmpty.IsEmpty()
+  fullName: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.IsEmpty()
+  spec.csharp:
+  - uid: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.IsEmpty
+    name: IsEmpty
+    href: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.html#VRBuilder_Core_Runtime_Properties_ICanBeEmpty_IsEmpty
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.IsEmpty
+    name: IsEmpty
+    href: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.html#VRBuilder_Core_Runtime_Properties_ICanBeEmpty_IsEmpty
+  - name: (
+  - name: )
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.GetLocalizedContent
+  commentId: M:VRBuilder.TextToSpeech.Audio.TextToSpeechContent.GetLocalizedContent
+  parent: VRBuilder.TextToSpeech.Audio.TextToSpeechContent
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_GetLocalizedContent
+  name: GetLocalizedContent()
+  nameWithType: TextToSpeechContent.GetLocalizedContent()
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.GetLocalizedContent()
+  spec.csharp:
+  - uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.GetLocalizedContent
+    name: GetLocalizedContent
+    href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_GetLocalizedContent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.GetLocalizedContent
+    name: GetLocalizedContent
+    href: VRBuilder.TextToSpeech.Audio.TextToSpeechContent.html#VRBuilder_TextToSpeech_Audio_TextToSpeechContent_GetLocalizedContent
+  - name: (
+  - name: )
+- uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent*
+  commentId: Overload:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent
+  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html#VRBuilder_TextToSpeech_Audio_TextToSpeechAudio_GetLocalizedContent
+  name: GetLocalizedContent
+  nameWithType: TextToSpeechAudio.GetLocalizedContent
+  fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.GetLocalizedContent

@@ -1,0 +1,1061 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ActionBasedControllerManager | VR Builder Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ActionBasedControllerManager | VR Builder Documentation ">
+      
+      <meta name="description" content="Use this class to map input actions to each controller state (mode) and set up the transitions between controller states (modes).">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_ActionBasedControllerManager.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.ActionBasedControllerManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+            VR Builder Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager">
+
+
+
+  <h1 id="VRBuilder_XRInteraction_ActionBasedControllerManager" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager" class="text-break">
+Class ActionBasedControllerManager  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.html">VRBuilder</a>.<a class="xref" href="VRBuilder.XRInteraction.html">XRInteraction</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VRBuilder.XRInteraction.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Use this class to map input actions to each controller state (mode)
+and set up the transitions between controller states (modes).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AddComponentMenu(&quot;XR/Action Based Controller Manager&quot;)]
+[DefaultExecutionOrder(10)]
+public class ActionBasedControllerManager : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">ActionBasedControllerManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_BaseController_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.BaseController*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_BaseController" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.BaseController">
+  BaseController
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The base controller <span class="xref">UnityEngine.GameObject</span>, used for changing default settings on its components during state transitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject BaseController { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_InteractState_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.InteractState*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_InteractState" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.InteractState">
+  InteractState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>(Read Only) The default Interact state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBasedControllerManager.ControllerState InteractState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.html">ActionBasedControllerManager</a>.<a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.ControllerState.html">ControllerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_Move_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Move*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_Move" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Move">
+  Move
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of moving the XR rig with this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference Move { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_RotateAnchor_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.RotateAnchor*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_RotateAnchor" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.RotateAnchor">
+  RotateAnchor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of rotating the selected object of this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference RotateAnchor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_SelectState_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.SelectState*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_SelectState" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.SelectState">
+  SelectState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>(Read Only) The default Select state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBasedControllerManager.ControllerState SelectState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.html">ActionBasedControllerManager</a>.<a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.ControllerState.html">ControllerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportController_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportController*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportController" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportController">
+  TeleportController
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The teleport controller <span class="xref">UnityEngine.GameObject</span>, used for changing default settings on its components during state transitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject TeleportController { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportModeActivate_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportModeActivate*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportModeActivate" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportModeActivate">
+  TeleportModeActivate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of activating the teleport mode for this controller.&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference TeleportModeActivate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportModeCancel_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportModeCancel*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportModeCancel" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportModeCancel">
+  TeleportModeCancel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of canceling the teleport mode for this controller.&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference TeleportModeCancel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportState_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportState*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_TeleportState" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TeleportState">
+  TeleportState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>(Read Only) The default Teleport state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBasedControllerManager.ControllerState TeleportState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.html">ActionBasedControllerManager</a>.<a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.ControllerState.html">ControllerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_TranslateAnchor_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TranslateAnchor*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_TranslateAnchor" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.TranslateAnchor">
+  TranslateAnchor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of translating the selected object of this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference TranslateAnchor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_Turn_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Turn*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_Turn" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Turn">
+  Turn
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of turning the XR rig with this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference Turn { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_UIController_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.UIController*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_UIController" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.UIController">
+  UIController
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The UI controller <span class="xref">UnityEngine.GameObject</span>, used for changing default settings on its components during state transitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject UIController { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_UIModeActivate_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.UIModeActivate*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_UIModeActivate" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.UIModeActivate">
+  UIModeActivate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The reference to the action of activating the teleport mode for this controller.&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputActionReference UIModeActivate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_UIState_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.UIState*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_UIState" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.UIState">
+  UIState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>(Read Only) The default Interact state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionBasedControllerManager.ControllerState UIState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.html">ActionBasedControllerManager</a>.<a class="xref" href="VRBuilder.XRInteraction.ActionBasedControllerManager.ControllerState.html">ControllerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_OnDisable_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.OnDisable*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_OnDisable" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_OnEnable_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.OnEnable*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_OnEnable" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_Start_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Start*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_Start" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_ActionBasedControllerManager_Update_" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Update*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_ActionBasedControllerManager_Update" data-uid="VRBuilder.XRInteraction.ActionBasedControllerManager.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

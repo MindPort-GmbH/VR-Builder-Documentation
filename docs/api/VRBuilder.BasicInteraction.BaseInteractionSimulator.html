@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BaseInteractionSimulator | VR Builder Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BaseInteractionSimulator | VR Builder Documentation ">
+      
+      <meta name="description" content="Base interaction simulator, only have one concrete simulator implementation in your project. If no concrete implementation is found a  will be used.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_BaseInteractionSimulator.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.BaseInteractionSimulator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+            VR Builder Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator">
+
+
+
+  <h1 id="VRBuilder_BasicInteraction_BaseInteractionSimulator" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator" class="text-break">
+Class BaseInteractionSimulator  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.html">VRBuilder</a>.<a class="xref" href="VRBuilder.BasicInteraction.html">BasicInteraction</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VRBuilder.BasicInteraction.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base interaction simulator, only have one concrete simulator implementation in your project.
+If no concrete implementation is found a <a class="xref" href="VRBuilder.BasicInteraction.BaseInteractionSimulatorDummy.html">BaseInteractionSimulatorDummy</a> will be used.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BaseInteractionSimulator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BaseInteractionSimulator</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="VRBuilder.BasicInteraction.BaseInteractionSimulatorDummy.html">BaseInteractionSimulatorDummy</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Instance_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Instance*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Instance" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current instance of the interaction simulator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BaseInteractionSimulator Instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.BasicInteraction.BaseInteractionSimulator.html">BaseInteractionSimulator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_GetTeleportationBaseType_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.GetTeleportationBaseType*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_GetTeleportationBaseType" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.GetTeleportationBaseType">
+  GetTeleportationBaseType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the base class used for teleportation in your VR framework.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Type GetTeleportationBaseType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Grab_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Grab*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Grab_VRBuilder_BasicInteraction_IInteractableObject_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Grab(VRBuilder.BasicInteraction.IInteractableObject)">
+  Grab(IInteractableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates grabbing the given object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Grab(IInteractableObject interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <a class="xref" href="VRBuilder.BasicInteraction.IInteractableObject.html">IInteractableObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_HoverSnapZone_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.HoverSnapZone*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_HoverSnapZone_VRBuilder_BasicInteraction_ISnapZone_VRBuilder_BasicInteraction_IInteractableObject_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.HoverSnapZone(VRBuilder.BasicInteraction.ISnapZone,VRBuilder.BasicInteraction.IInteractableObject)">
+  HoverSnapZone(ISnapZone, IInteractableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates a hover over a SnapZone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void HoverSnapZone(ISnapZone snapZone, IInteractableObject interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>snapZone</code> <a class="xref" href="VRBuilder.BasicInteraction.ISnapZone.html">ISnapZone</a></dt>
+    <dd></dd>
+    <dt><code>interactable</code> <a class="xref" href="VRBuilder.BasicInteraction.IInteractableObject.html">IInteractableObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_IsColliderValid_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.IsColliderValid*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_IsColliderValid_UnityEngine_GameObject_UnityEngine_Collider_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.IsColliderValid(UnityEngine.GameObject,UnityEngine.Collider)">
+  IsColliderValid(GameObject, Collider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if the provided <code class="paramref">colliderToValidate</code> is an active collider of the <code class="paramref">teleportationObject</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsColliderValid(GameObject teleportationObject, Collider colliderToValidate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>teleportationObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The object with the teleportation logic or used to teleport into.</p>
+</dd>
+    <dt><code>colliderToValidate</code> <span class="xref">Collider</span></dt>
+    <dd><p>Collider to validate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Release_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Release*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Release" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Release">
+  Release()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates releasing the given object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Release()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_StopTouch_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.StopTouch*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_StopTouch" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.StopTouch">
+  StopTouch()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates stop touching the given object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void StopTouch()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_StopUse_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.StopUse*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_StopUse_VRBuilder_BasicInteraction_IInteractableObject_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.StopUse(VRBuilder.BasicInteraction.IInteractableObject)">
+  StopUse(IInteractableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates stop using the given object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void StopUse(IInteractableObject interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <a class="xref" href="VRBuilder.BasicInteraction.IInteractableObject.html">IInteractableObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Teleport_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Teleport*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Teleport_UnityEngine_GameObject_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Teleport(UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)">
+  Teleport(GameObject, GameObject, Vector3, Quaternion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a teleport action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Teleport(GameObject rig, GameObject teleportationObject, Vector3 targetPosition, Quaternion targetRotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rig</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The rig object.</p>
+</dd>
+    <dt><code>teleportationObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>The object with the teleportation logic or used to teleport into.</p>
+</dd>
+    <dt><code>targetPosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>Desired position.</p>
+</dd>
+    <dt><code>targetRotation</code> <span class="xref">Quaternion</span></dt>
+    <dd><p>Desired rotation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Touch_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Touch*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Touch_VRBuilder_BasicInteraction_IInteractableObject_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Touch(VRBuilder.BasicInteraction.IInteractableObject)">
+  Touch(IInteractableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates touching the given object. Expected behavior is that the object stays touched until StopTouch is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Touch(IInteractableObject interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <a class="xref" href="VRBuilder.BasicInteraction.IInteractableObject.html">IInteractableObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_UnhoverSnapZone_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.UnhoverSnapZone*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_UnhoverSnapZone_VRBuilder_BasicInteraction_ISnapZone_VRBuilder_BasicInteraction_IInteractableObject_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.UnhoverSnapZone(VRBuilder.BasicInteraction.ISnapZone,VRBuilder.BasicInteraction.IInteractableObject)">
+  UnhoverSnapZone(ISnapZone, IInteractableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates a unhover over a SnapZone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UnhoverSnapZone(ISnapZone snapZone, IInteractableObject interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>snapZone</code> <a class="xref" href="VRBuilder.BasicInteraction.ISnapZone.html">ISnapZone</a></dt>
+    <dd></dd>
+    <dt><code>interactable</code> <a class="xref" href="VRBuilder.BasicInteraction.IInteractableObject.html">IInteractableObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Use_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Use*"></a>
+
+  <h3 id="VRBuilder_BasicInteraction_BaseInteractionSimulator_Use_VRBuilder_BasicInteraction_IInteractableObject_" data-uid="VRBuilder.BasicInteraction.BaseInteractionSimulator.Use(VRBuilder.BasicInteraction.IInteractableObject)">
+  Use(IInteractableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates usage of the object and keeps using the given object until StopUse is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Use(IInteractableObject interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <a class="xref" href="VRBuilder.BasicInteraction.IInteractableObject.html">IInteractableObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/docs/Source/Basic-Interaction-Component/Runtime/Interaction/BaseInteractionSimulator.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

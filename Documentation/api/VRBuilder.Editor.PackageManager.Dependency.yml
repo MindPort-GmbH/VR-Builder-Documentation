@@ -1,0 +1,794 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Editor.PackageManager.Dependency
+  commentId: T:VRBuilder.Editor.PackageManager.Dependency
+  id: Dependency
+  parent: VRBuilder.Editor.PackageManager
+  children:
+  - VRBuilder.Editor.PackageManager.Dependency.#ctor
+  - VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled
+  - VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled
+  - VRBuilder.Editor.PackageManager.Dependency.Layers
+  - VRBuilder.Editor.PackageManager.Dependency.OnPackageDisabled
+  - VRBuilder.Editor.PackageManager.Dependency.OnPackageEnabled
+  - VRBuilder.Editor.PackageManager.Dependency.Package
+  - VRBuilder.Editor.PackageManager.Dependency.Priority
+  - VRBuilder.Editor.PackageManager.Dependency.Samples
+  - VRBuilder.Editor.PackageManager.Dependency.Version
+  langs:
+  - csharp
+  - vb
+  name: Dependency
+  nameWithType: Dependency
+  fullName: VRBuilder.Editor.PackageManager.Dependency
+  type: Class
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Dependency
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 16
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: Base class for dependencies used by the <xref href="VRBuilder.Editor.PackageManager.DependencyManager" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public abstract class Dependency
+    content.vb: Public MustInherit Class Dependency
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VRBuilder.Editor.PackageManager.InputSystemPackageEnabler
+  - VRBuilder.Editor.PackageManager.LocalizationPackageEnabler
+  - VRBuilder.Editor.PackageManager.NewtonsoftJSONPackageEnabler
+  - VRBuilder.Editor.PackageManager.PostProcessingPackageEnabler
+  - VRBuilder.Editor.PackageManager.XRInteraction.XRHandsPackageEnabler
+  - VRBuilder.Editor.PackageManager.XRInteraction.XRInteractionPackageEnabler
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: VRBuilder.Editor.PackageManager.Dependency.Package
+  commentId: P:VRBuilder.Editor.PackageManager.Dependency.Package
+  id: Package
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: Package
+  nameWithType: Dependency.Package
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Package
+  type: Property
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Package
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 21
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: A string representing the package to be added.
+  example: []
+  syntax:
+    content: public virtual string Package { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property Package As String
+  overload: VRBuilder.Editor.PackageManager.Dependency.Package*
+- uid: VRBuilder.Editor.PackageManager.Dependency.Version
+  commentId: P:VRBuilder.Editor.PackageManager.Dependency.Version
+  id: Version
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: Dependency.Version
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Version
+  type: Property
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Version
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 26
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: A string representing the version of the package.
+  example: []
+  syntax:
+    content: public virtual string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property Version As String
+  overload: VRBuilder.Editor.PackageManager.Dependency.Version*
+- uid: VRBuilder.Editor.PackageManager.Dependency.Priority
+  commentId: P:VRBuilder.Editor.PackageManager.Dependency.Priority
+  id: Priority
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: Dependency.Priority
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Priority
+  type: Property
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Priority
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 32
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: >-
+    Priority lets you tweak in which order each <xref href="VRBuilder.Editor.PackageManager.Dependency" data-throw-if-not-resolved="false"></xref> will be performed.
+
+    The priority is considered from lowest to highest.
+  example: []
+  syntax:
+    content: public virtual int Priority { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overridable ReadOnly Property Priority As Integer
+  overload: VRBuilder.Editor.PackageManager.Dependency.Priority*
+- uid: VRBuilder.Editor.PackageManager.Dependency.Samples
+  commentId: P:VRBuilder.Editor.PackageManager.Dependency.Samples
+  id: Samples
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: Samples
+  nameWithType: Dependency.Samples
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Samples
+  type: Property
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Samples
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 37
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: Collection of samples to be imported from the Unity Package.
+  example: []
+  syntax:
+    content: public virtual string[] Samples { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Overridable ReadOnly Property Samples As String()
+  overload: VRBuilder.Editor.PackageManager.Dependency.Samples*
+- uid: VRBuilder.Editor.PackageManager.Dependency.Layers
+  commentId: P:VRBuilder.Editor.PackageManager.Dependency.Layers
+  id: Layers
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: Layers
+  nameWithType: Dependency.Layers
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Layers
+  type: Property
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Layers
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 42
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: A list of layers to be added.
+  example: []
+  syntax:
+    content: protected virtual string[] Layers { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Protected Overridable ReadOnly Property Layers As String()
+  overload: VRBuilder.Editor.PackageManager.Dependency.Layers*
+- uid: VRBuilder.Editor.PackageManager.Dependency.OnPackageEnabled
+  commentId: E:VRBuilder.Editor.PackageManager.Dependency.OnPackageEnabled
+  id: OnPackageEnabled
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: OnPackageEnabled
+  nameWithType: Dependency.OnPackageEnabled
+  fullName: VRBuilder.Editor.PackageManager.Dependency.OnPackageEnabled
+  type: Event
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: OnPackageEnabled
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 47
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: Emitted when this <xref href="VRBuilder.Editor.PackageManager.Dependency" data-throw-if-not-resolved="false"></xref> is set as enabled.
+  example: []
+  syntax:
+    content: public event EventHandler<EventArgs> OnPackageEnabled
+    return:
+      type: System.EventHandler{System.EventArgs}
+    content.vb: Public Event OnPackageEnabled As EventHandler(Of EventArgs)
+- uid: VRBuilder.Editor.PackageManager.Dependency.OnPackageDisabled
+  commentId: E:VRBuilder.Editor.PackageManager.Dependency.OnPackageDisabled
+  id: OnPackageDisabled
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: OnPackageDisabled
+  nameWithType: Dependency.OnPackageDisabled
+  fullName: VRBuilder.Editor.PackageManager.Dependency.OnPackageDisabled
+  type: Event
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: OnPackageDisabled
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 52
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  summary: Emitted when this <xref href="VRBuilder.Editor.PackageManager.Dependency" data-throw-if-not-resolved="false"></xref> is set as disabled.
+  example: []
+  syntax:
+    content: public event EventHandler<EventArgs> OnPackageDisabled
+    return:
+      type: System.EventHandler{System.EventArgs}
+    content.vb: Public Event OnPackageDisabled As EventHandler(Of EventArgs)
+- uid: VRBuilder.Editor.PackageManager.Dependency.#ctor
+  commentId: M:VRBuilder.Editor.PackageManager.Dependency.#ctor
+  id: '#ctor'
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: Dependency()
+  nameWithType: Dependency.Dependency()
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Dependency()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 82
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  syntax:
+    content: protected Dependency()
+    content.vb: Protected Sub New()
+  overload: VRBuilder.Editor.PackageManager.Dependency.#ctor*
+  nameWithType.vb: Dependency.New()
+  fullName.vb: VRBuilder.Editor.PackageManager.Dependency.New()
+  name.vb: New()
+- uid: VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled
+  commentId: M:VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled
+  id: EmitOnEnabled
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: EmitOnEnabled()
+  nameWithType: Dependency.EmitOnEnabled()
+  fullName: VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled()
+  type: Method
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: EmitOnEnabled
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 92
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  syntax:
+    content: protected virtual void EmitOnEnabled()
+    content.vb: Protected Overridable Sub EmitOnEnabled()
+  overload: VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled*
+- uid: VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled
+  commentId: M:VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled
+  id: EmitOnDisabled
+  parent: VRBuilder.Editor.PackageManager.Dependency
+  langs:
+  - csharp
+  - vb
+  name: EmitOnDisabled()
+  nameWithType: Dependency.EmitOnDisabled()
+  fullName: VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled()
+  type: Method
+  source:
+    remote:
+      path: Source/Package-Manager/PackageManager/Dependency.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: EmitOnDisabled
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/Dependency.cs
+    startLine: 97
+  assemblies:
+  - VRBuilder.Editor.PackageManager
+  namespace: VRBuilder.Editor.PackageManager
+  syntax:
+    content: protected virtual void EmitOnDisabled()
+    content.vb: Protected Overridable Sub EmitOnDisabled()
+  overload: VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled*
+references:
+- uid: VRBuilder.Editor.PackageManager.DependencyManager
+  commentId: T:VRBuilder.Editor.PackageManager.DependencyManager
+  href: VRBuilder.Editor.PackageManager.DependencyManager.html
+  name: DependencyManager
+  nameWithType: DependencyManager
+  fullName: VRBuilder.Editor.PackageManager.DependencyManager
+- uid: VRBuilder.Editor.PackageManager
+  commentId: N:VRBuilder.Editor.PackageManager
+  href: VRBuilder.html
+  name: VRBuilder.Editor.PackageManager
+  nameWithType: VRBuilder.Editor.PackageManager
+  fullName: VRBuilder.Editor.PackageManager
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.PackageManager
+    name: PackageManager
+    href: VRBuilder.Editor.PackageManager.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.PackageManager
+    name: PackageManager
+    href: VRBuilder.Editor.PackageManager.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Editor.PackageManager.Dependency.Package*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.Package
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_Package
+  name: Package
+  nameWithType: Dependency.Package
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Package
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: VRBuilder.Editor.PackageManager.Dependency.Version*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.Version
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_Version
+  name: Version
+  nameWithType: Dependency.Version
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Version
+- uid: VRBuilder.Editor.PackageManager.Dependency
+  commentId: T:VRBuilder.Editor.PackageManager.Dependency
+  parent: VRBuilder.Editor.PackageManager
+  href: VRBuilder.Editor.PackageManager.Dependency.html
+  name: Dependency
+  nameWithType: Dependency
+  fullName: VRBuilder.Editor.PackageManager.Dependency
+- uid: VRBuilder.Editor.PackageManager.Dependency.Priority*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.Priority
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_Priority
+  name: Priority
+  nameWithType: Dependency.Priority
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Priority
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: VRBuilder.Editor.PackageManager.Dependency.Samples*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.Samples
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_Samples
+  name: Samples
+  nameWithType: Dependency.Samples
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Samples
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: VRBuilder.Editor.PackageManager.Dependency.Layers*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.Layers
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_Layers
+  name: Layers
+  nameWithType: Dependency.Layers
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Layers
+- uid: System.EventHandler{System.EventArgs}
+  commentId: T:System.EventHandler{System.EventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<EventArgs>
+  nameWithType: EventHandler<EventArgs>
+  fullName: System.EventHandler<System.EventArgs>
+  nameWithType.vb: EventHandler(Of EventArgs)
+  fullName.vb: System.EventHandler(Of System.EventArgs)
+  name.vb: EventHandler(Of EventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: System.EventArgs
+    name: EventArgs
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.EventArgs
+    name: EventArgs
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: VRBuilder.Editor.PackageManager.Dependency.#ctor*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.#ctor
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency__ctor
+  name: Dependency
+  nameWithType: Dependency.Dependency
+  fullName: VRBuilder.Editor.PackageManager.Dependency.Dependency
+  nameWithType.vb: Dependency.New
+  fullName.vb: VRBuilder.Editor.PackageManager.Dependency.New
+  name.vb: New
+- uid: VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_EmitOnEnabled
+  name: EmitOnEnabled
+  nameWithType: Dependency.EmitOnEnabled
+  fullName: VRBuilder.Editor.PackageManager.Dependency.EmitOnEnabled
+- uid: VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled*
+  commentId: Overload:VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled
+  href: VRBuilder.Editor.PackageManager.Dependency.html#VRBuilder_Editor_PackageManager_Dependency_EmitOnDisabled
+  name: EmitOnDisabled
+  nameWithType: Dependency.EmitOnDisabled
+  fullName: VRBuilder.Editor.PackageManager.Dependency.EmitOnDisabled

@@ -1,0 +1,1053 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  commentId: T:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  id: CheckStateCondition.EntityData
+  parent: VRBuilder.StatesAndData.Conditions
+  children:
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation
+  - VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty
+  langs:
+  - csharp
+  - vb
+  name: CheckStateCondition.EntityData
+  nameWithType: CheckStateCondition.EntityData
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  type: Class
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: EntityData
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 24
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  summary: The data for a <xref href="VRBuilder.StatesAndData.Conditions.CheckStateCondition" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: >-
+      [DisplayName("Check State")]
+
+      public class CheckStateCondition.EntityData : IConditionData, ICompletableData, INamedData, IData
+    content.vb: >-
+      <DisplayName("Check State")>
+
+      Public Class CheckStateCondition.EntityData Implements IConditionData, ICompletableData, INamedData, IData
+  inheritance:
+  - System.Object
+  implements:
+  - VRBuilder.Core.Conditions.IConditionData
+  - VRBuilder.Core.Conditions.ICompletableData
+  - VRBuilder.Core.INamedData
+  - VRBuilder.Core.IData
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: VRBuilder.Core.Attributes.DisplayNameAttribute
+    ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Check State
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty
+  id: StateDataProperty
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: StateDataProperty
+  nameWithType: CheckStateCondition.EntityData.StateDataProperty
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: StateDataProperty
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 27
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  syntax:
+    content: >-
+      [DataMember]
+
+      public SingleScenePropertyReference<StateDataPropertyBase> StateDataProperty { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.StatesAndData.Properties.StateDataPropertyBase}
+    content.vb: >-
+      <DataMember>
+
+      Public Property StateDataProperty As SingleScenePropertyReference(Of StateDataPropertyBase)
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty
+  id: DataProperty
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: DataProperty
+  nameWithType: CheckStateCondition.EntityData.DataProperty
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: DataProperty
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 31
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  syntax:
+    content: >-
+      [DataMember]
+
+      [Obsolete("Use StateDataProperty instead.")]
+
+      [LegacyProperty("StateDataProperty")]
+
+      public ScenePropertyReference<StateDataPropertyBase> DataProperty { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.StatesAndData.Properties.StateDataPropertyBase}
+    content.vb: >-
+      <DataMember>
+
+      <Obsolete("Use StateDataProperty instead.")>
+
+      <LegacyProperty("StateDataProperty")>
+
+      Public Property DataProperty As ScenePropertyReference(Of StateDataPropertyBase)
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use StateDataProperty instead.
+  - type: VRBuilder.Core.Attributes.LegacyPropertyAttribute
+    ctor: VRBuilder.Core.Attributes.LegacyPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: StateDataProperty
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation
+  id: Operation
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: CheckStateCondition.EntityData.Operation
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: Operation
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 37
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  syntax:
+    content: >-
+      [DataMember]
+
+      public IOperationCommand<int, bool> Operation { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.ProcessUtils.IOperationCommand{System.Int32,System.Boolean}
+    content.vb: >-
+      <DataMember>
+
+      Public Property Operation As IOperationCommand(Of Integer, Boolean)
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue
+  id: CompareValue
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: CompareValue
+  nameWithType: CheckStateCondition.EntityData.CompareValue
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: CompareValue
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 41
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  syntax:
+    content: >-
+      [DataMember]
+
+      public int CompareValue { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <DataMember>
+
+      Public Property CompareValue As Integer
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted
+  id: IsCompleted
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: IsCompleted
+  nameWithType: CheckStateCondition.EntityData.IsCompleted
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: IsCompleted
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 46
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  example: []
+  syntax:
+    content: public bool IsCompleted { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsCompleted As Boolean
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted*
+  implements:
+  - VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name
+  id: Name
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CheckStateCondition.EntityData.Name
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: Name
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 49
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  summary: Name of the entity.
+  example: []
+  syntax:
+    content: >-
+      [IgnoreDataMember]
+
+      public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <IgnoreDataMember>
+
+      Public ReadOnly Property Name As String
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name*
+  implements:
+  - VRBuilder.Core.INamedData.Name
+  attributes:
+  - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
+    ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
+    arguments: []
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata
+  commentId: P:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata
+  id: Metadata
+  parent: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: CheckStateCondition.EntityData.Metadata
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata
+  type: Property
+  source:
+    remote:
+      path: Source/Runtime/Conditions/CheckStateCondition.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
+    id: Metadata
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Conditions/CheckStateCondition.cs
+    startLine: 60
+  assemblies:
+  - VRBuilder.StatesAndData
+  namespace: VRBuilder.StatesAndData.Conditions
+  summary: Reference to this object's <xref href="VRBuilder.Core.IMetadata" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Metadata Metadata { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.Metadata
+    content.vb: Public Property Metadata As Metadata
+  overload: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata*
+  implements:
+  - VRBuilder.Core.IData.Metadata
+references:
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition
+  commentId: T:VRBuilder.StatesAndData.Conditions.CheckStateCondition
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.html
+  name: CheckStateCondition
+  nameWithType: CheckStateCondition
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition
+- uid: VRBuilder.StatesAndData.Conditions
+  commentId: N:VRBuilder.StatesAndData.Conditions
+  href: VRBuilder.html
+  name: VRBuilder.StatesAndData.Conditions
+  nameWithType: VRBuilder.StatesAndData.Conditions
+  fullName: VRBuilder.StatesAndData.Conditions
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.StatesAndData
+    name: StatesAndData
+    href: VRBuilder.StatesAndData.html
+  - name: .
+  - uid: VRBuilder.StatesAndData.Conditions
+    name: Conditions
+    href: VRBuilder.StatesAndData.Conditions.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.StatesAndData
+    name: StatesAndData
+    href: VRBuilder.StatesAndData.html
+  - name: .
+  - uid: VRBuilder.StatesAndData.Conditions
+    name: Conditions
+    href: VRBuilder.StatesAndData.Conditions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.Core.Conditions.IConditionData
+  commentId: T:VRBuilder.Core.Conditions.IConditionData
+  parent: VRBuilder.Core.Conditions
+  href: VRBuilder.Core.Conditions.IConditionData.html
+  name: IConditionData
+  nameWithType: IConditionData
+  fullName: VRBuilder.Core.Conditions.IConditionData
+- uid: VRBuilder.Core.Conditions.ICompletableData
+  commentId: T:VRBuilder.Core.Conditions.ICompletableData
+  parent: VRBuilder.Core.Conditions
+  href: VRBuilder.Core.Conditions.ICompletableData.html
+  name: ICompletableData
+  nameWithType: ICompletableData
+  fullName: VRBuilder.Core.Conditions.ICompletableData
+- uid: VRBuilder.Core.INamedData
+  commentId: T:VRBuilder.Core.INamedData
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.INamedData.html
+  name: INamedData
+  nameWithType: INamedData
+  fullName: VRBuilder.Core.INamedData
+- uid: VRBuilder.Core.IData
+  commentId: T:VRBuilder.Core.IData
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IData.html
+  name: IData
+  nameWithType: IData
+  fullName: VRBuilder.Core.IData
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.Conditions
+  commentId: N:VRBuilder.Core.Conditions
+  href: VRBuilder.html
+  name: VRBuilder.Core.Conditions
+  nameWithType: VRBuilder.Core.Conditions
+  fullName: VRBuilder.Core.Conditions
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Conditions
+    name: Conditions
+    href: VRBuilder.Core.Conditions.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Conditions
+    name: Conditions
+    href: VRBuilder.Core.Conditions.html
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_StateDataProperty
+  name: StateDataProperty
+  nameWithType: CheckStateCondition.EntityData.StateDataProperty
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.StateDataProperty
+- uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.StatesAndData.Properties.StateDataPropertyBase}
+  commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.StatesAndData.Properties.StateDataPropertyBase}
+  parent: VRBuilder.Core.SceneObjects
+  definition: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  href: VRBuilder.StatesAndData.Properties.StateDataPropertyBase.html
+  name: SingleScenePropertyReference<StateDataPropertyBase>
+  nameWithType: SingleScenePropertyReference<StateDataPropertyBase>
+  fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<VRBuilder.StatesAndData.Properties.StateDataPropertyBase>
+  nameWithType.vb: SingleScenePropertyReference(Of StateDataPropertyBase)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleScenePropertyReference(Of VRBuilder.StatesAndData.Properties.StateDataPropertyBase)
+  name.vb: SingleScenePropertyReference(Of StateDataPropertyBase)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+  - name: <
+  - uid: VRBuilder.StatesAndData.Properties.StateDataPropertyBase
+    name: StateDataPropertyBase
+    href: VRBuilder.StatesAndData.Properties.StateDataPropertyBase.html
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.StatesAndData.Properties.StateDataPropertyBase
+    name: StateDataPropertyBase
+    href: VRBuilder.StatesAndData.Properties.StateDataPropertyBase.html
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+  name: SingleScenePropertyReference<T>
+  nameWithType: SingleScenePropertyReference<T>
+  fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<T>
+  nameWithType.vb: SingleScenePropertyReference(Of T)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleScenePropertyReference(Of T)
+  name.vb: SingleScenePropertyReference(Of T)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Core.SceneObjects
+  commentId: N:VRBuilder.Core.SceneObjects
+  href: VRBuilder.html
+  name: VRBuilder.Core.SceneObjects
+  nameWithType: VRBuilder.Core.SceneObjects
+  fullName: VRBuilder.Core.SceneObjects
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_DataProperty
+  name: DataProperty
+  nameWithType: CheckStateCondition.EntityData.DataProperty
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.DataProperty
+- uid: VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.StatesAndData.Properties.StateDataPropertyBase}
+  commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.StatesAndData.Properties.StateDataPropertyBase}
+  parent: VRBuilder.Core.SceneObjects
+  definition: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+  href: VRBuilder.StatesAndData.Properties.StateDataPropertyBase.html
+  name: ScenePropertyReference<StateDataPropertyBase>
+  nameWithType: ScenePropertyReference<StateDataPropertyBase>
+  fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<VRBuilder.StatesAndData.Properties.StateDataPropertyBase>
+  nameWithType.vb: ScenePropertyReference(Of StateDataPropertyBase)
+  fullName.vb: VRBuilder.Core.SceneObjects.ScenePropertyReference(Of VRBuilder.StatesAndData.Properties.StateDataPropertyBase)
+  name.vb: ScenePropertyReference(Of StateDataPropertyBase)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+    name: ScenePropertyReference
+  - name: <
+  - uid: VRBuilder.StatesAndData.Properties.StateDataPropertyBase
+    name: StateDataPropertyBase
+    href: VRBuilder.StatesAndData.Properties.StateDataPropertyBase.html
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+    name: ScenePropertyReference
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.StatesAndData.Properties.StateDataPropertyBase
+    name: StateDataPropertyBase
+    href: VRBuilder.StatesAndData.Properties.StateDataPropertyBase.html
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+  commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+  parent: VRBuilder.Core.SceneObjects
+  href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+  name: ScenePropertyReference<T>
+  nameWithType: ScenePropertyReference<T>
+  fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<T>
+  nameWithType.vb: ScenePropertyReference(Of T)
+  fullName.vb: VRBuilder.Core.SceneObjects.ScenePropertyReference(Of T)
+  name.vb: ScenePropertyReference(Of T)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+    name: ScenePropertyReference
+    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
+    name: ScenePropertyReference
+    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_Operation
+  name: Operation
+  nameWithType: CheckStateCondition.EntityData.Operation
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Operation
+- uid: VRBuilder.Core.ProcessUtils.IOperationCommand{System.Int32,System.Boolean}
+  commentId: T:VRBuilder.Core.ProcessUtils.IOperationCommand{System.Int32,System.Boolean}
+  parent: VRBuilder.Core.ProcessUtils
+  definition: VRBuilder.Core.ProcessUtils.IOperationCommand`2
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: IOperationCommand<int, bool>
+  nameWithType: IOperationCommand<int, bool>
+  fullName: VRBuilder.Core.ProcessUtils.IOperationCommand<int, bool>
+  nameWithType.vb: IOperationCommand(Of Integer, Boolean)
+  fullName.vb: VRBuilder.Core.ProcessUtils.IOperationCommand(Of Integer, Boolean)
+  name.vb: IOperationCommand(Of Integer, Boolean)
+  spec.csharp:
+  - uid: VRBuilder.Core.ProcessUtils.IOperationCommand`2
+    name: IOperationCommand
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.ProcessUtils.IOperationCommand`2
+    name: IOperationCommand
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: VRBuilder.Core.ProcessUtils.IOperationCommand`2
+  commentId: T:VRBuilder.Core.ProcessUtils.IOperationCommand`2
+  href: VRBuilder.Core.ProcessUtils.IOperationCommand-2.html
+  name: IOperationCommand<TOperand, TResult>
+  nameWithType: IOperationCommand<TOperand, TResult>
+  fullName: VRBuilder.Core.ProcessUtils.IOperationCommand<TOperand, TResult>
+  nameWithType.vb: IOperationCommand(Of TOperand, TResult)
+  fullName.vb: VRBuilder.Core.ProcessUtils.IOperationCommand(Of TOperand, TResult)
+  name.vb: IOperationCommand(Of TOperand, TResult)
+  spec.csharp:
+  - uid: VRBuilder.Core.ProcessUtils.IOperationCommand`2
+    name: IOperationCommand
+    href: VRBuilder.Core.ProcessUtils.IOperationCommand-2.html
+  - name: <
+  - name: TOperand
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.ProcessUtils.IOperationCommand`2
+    name: IOperationCommand
+    href: VRBuilder.Core.ProcessUtils.IOperationCommand-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOperand
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: VRBuilder.Core.ProcessUtils
+  commentId: N:VRBuilder.Core.ProcessUtils
+  href: VRBuilder.html
+  name: VRBuilder.Core.ProcessUtils
+  nameWithType: VRBuilder.Core.ProcessUtils
+  fullName: VRBuilder.Core.ProcessUtils
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.ProcessUtils
+    name: ProcessUtils
+    href: VRBuilder.Core.ProcessUtils.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.ProcessUtils
+    name: ProcessUtils
+    href: VRBuilder.Core.ProcessUtils.html
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_CompareValue
+  name: CompareValue
+  nameWithType: CheckStateCondition.EntityData.CompareValue
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.CompareValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_IsCompleted
+  name: IsCompleted
+  nameWithType: CheckStateCondition.EntityData.IsCompleted
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.IsCompleted
+- uid: VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+  commentId: P:VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+  parent: VRBuilder.Core.Conditions.ICompletableData
+  href: VRBuilder.Core.Conditions.ICompletableData.html#VRBuilder_Core_Conditions_ICompletableData_IsCompleted
+  name: IsCompleted
+  nameWithType: ICompletableData.IsCompleted
+  fullName: VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_Name
+  name: Name
+  nameWithType: CheckStateCondition.EntityData.Name
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Name
+- uid: VRBuilder.Core.INamedData.Name
+  commentId: P:VRBuilder.Core.INamedData.Name
+  parent: VRBuilder.Core.INamedData
+  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
+  name: Name
+  nameWithType: INamedData.Name
+  fullName: VRBuilder.Core.INamedData.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: VRBuilder.Core.IMetadata
+  commentId: T:VRBuilder.Core.IMetadata
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IMetadata.html
+  name: IMetadata
+  nameWithType: IMetadata
+  fullName: VRBuilder.Core.IMetadata
+- uid: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata*
+  commentId: Overload:VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata
+  href: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.html#VRBuilder_StatesAndData_Conditions_CheckStateCondition_EntityData_Metadata
+  name: Metadata
+  nameWithType: CheckStateCondition.EntityData.Metadata
+  fullName: VRBuilder.StatesAndData.Conditions.CheckStateCondition.EntityData.Metadata
+- uid: VRBuilder.Core.IData.Metadata
+  commentId: P:VRBuilder.Core.IData.Metadata
+  parent: VRBuilder.Core.IData
+  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
+  name: Metadata
+  nameWithType: IData.Metadata
+  fullName: VRBuilder.Core.IData.Metadata
+- uid: VRBuilder.Core.Metadata
+  commentId: T:VRBuilder.Core.Metadata
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.Metadata.html
+  name: Metadata
+  nameWithType: Metadata
+  fullName: VRBuilder.Core.Metadata
