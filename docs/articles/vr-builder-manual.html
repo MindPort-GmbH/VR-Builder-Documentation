@@ -1,0 +1,885 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>VR Builder Manual | VR Builder Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="VR Builder Manual | VR Builder Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/feature/documentation-page/Documentation/articles/vr-builder-manual.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="VR Builder Documentation">
+            VR Builder Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="vr-builder-manual">VR Builder Manual</h1>
+
+<h2 id="table-of-contents-">Table of Contents <!-- omit in toc --></h2>
+<ul>
+<li><a href="#vr-builder-manual">VR Builder Manual</a>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#guide-through-the-project-setup-wizard">Guide Through the Project Setup Wizard</a>
+<ul>
+<li><a href="#welcome">Welcome</a></li>
+<li><a href="#interaction-settings">Interaction Settings</a></li>
+<li><a href="#xr-hardware-setup">XR Hardware Setup</a></li>
+<li><a href="#unity-localization">Unity Localization</a></li>
+<li><a href="#help--documentation">Help &amp; Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#quick-start">Quick Start</a>
+<ul>
+<li><a href="#demo-scene-overview">Demo Scene Overview</a></li>
+<li><a href="#demo-scene-hierarchy">Demo Scene Hierarchy</a></li>
+<li><a href="#customizing-the-rig">Customizing the Rig</a></li>
+<li><a href="#process-editor">Process Editor</a>
+<ul>
+<li><a href="#chapters-view">Chapters view</a></li>
+<li><a href="#graph-view">Graph view</a></li>
+<li><a href="#step-nodes">Step Nodes</a>
+<ul>
+<li><a href="#step">Step</a></li>
+<li><a href="#step-group">Step Group</a></li>
+<li><a href="#parallel-execution">Parallel Execution</a></li>
+<li><a href="#end-chapter">End Chapter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#process-scene-objects">Process Scene Objects</a></li>
+<li><a href="#locomotion">Locomotion</a>
+<ul>
+<li><a href="#continuous-movement">Continuous Movement</a></li>
+<li><a href="#teleportation">Teleportation</a></li>
+</ul>
+</li>
+<li><a href="#behaviors">Behaviors</a>
+<ul>
+<li><a href="#guidance">Guidance</a>
+<ul>
+<li><a href="#play-audio-file">Play Audio File</a>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#play-texttospeech-audio">Play TextToSpeech Audio</a>
+<ul>
+<li><a href="#description-1">Description</a></li>
+<li><a href="#configuration-1">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#highlight-object">Highlight Object</a>
+<ul>
+<li><a href="#description-2">Description</a></li>
+<li><a href="#configuration-2">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#spawn-confetti">Spawn Confetti</a>
+<ul>
+<li><a href="#description-3">Description</a></li>
+<li><a href="#configuration-3">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#utility">Utility</a>
+<ul>
+<li><a href="#behavior-sequence">Behavior Sequence</a>
+<ul>
+<li><a href="#description-4">Description</a></li>
+<li><a href="#configuration-4">Configuration</a></li>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+<li><a href="#delay">Delay</a>
+<ul>
+<li><a href="#description-5">Description</a></li>
+<li><a href="#configuration-5">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#set-parent">Set Parent</a>
+<ul>
+<li><a href="#description-6">Description</a></li>
+<li><a href="#configuration-6">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#environment">Environment</a>
+<ul>
+<li><a href="#disable-objects">Disable Objects</a>
+<ul>
+<li><a href="#description-7">Description</a></li>
+<li><a href="#configuration-7">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#enable-objects">Enable Objects</a>
+<ul>
+<li><a href="#description-8">Description</a></li>
+<li><a href="#configuration-8">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#disable-components">Disable Components</a>
+<ul>
+<li><a href="#description-9">Description</a></li>
+<li><a href="#configuration-9">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#enable-components">Enable Components</a>
+<ul>
+<li><a href="#description-10">Description</a></li>
+<li><a href="#configuration-10">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#unsnap-object">Unsnap Object</a>
+<ul>
+<li><a href="#description-11">Description</a></li>
+<li><a href="#configuration-11">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#animation">Animation</a>
+<ul>
+<li><a href="#move-object">Move Object</a>
+<ul>
+<li><a href="#description-12">Description</a></li>
+<li><a href="#configuration-12">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#conditions">Conditions</a>
+<ul>
+<li><a href="#environment-1">Environment</a>
+<ul>
+<li><a href="#move-objects-in-collider">Move Objects in Collider</a>
+<ul>
+<li><a href="#description-13">Description</a></li>
+<li><a href="#configuration-13">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#object-nearby">Object Nearby</a>
+<ul>
+<li><a href="#description-14">Description</a></li>
+<li><a href="#configuration-14">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#interaction">Interaction</a>
+<ul>
+<li><a href="#grab-objects">Grab Objects</a>
+<ul>
+<li><a href="#description-15">Description</a></li>
+<li><a href="#configuration-15">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#release-objects">Release Objects</a>
+<ul>
+<li><a href="#description-16">Description</a></li>
+<li><a href="#configuration-16">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#snap-objects">Snap Objects</a>
+<ul>
+<li><a href="#description-17">Description</a></li>
+<li><a href="#configuration-17">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#touch-objects">Touch Objects</a>
+<ul>
+<li><a href="#description-18">Description</a></li>
+<li><a href="#configuration-18">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#use-objects">Use Objects</a>
+<ul>
+<li><a href="#description-19">Description</a></li>
+<li><a href="#configuration-19">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#utility-1">Utility</a>
+<ul>
+<li><a href="#timeout">Timeout</a>
+<ul>
+<li><a href="#description-20">Description</a></li>
+<li><a href="#configuration-20">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#locomotion-1">Locomotion</a>
+<ul>
+<li><a href="#teleport">Teleport</a>
+<ul>
+<li><a href="#description-21">Description</a></li>
+<li><a href="#configuration-21">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#online-documentation">Online Documentation</a></li>
+</ul>
+</li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+<li><a href="#contact-and-support">Contact and Support</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>VR Builder helps you create interactive VR applications better and faster. By setting up a Unity scene for VR Builder, you will pair it with a VR Builder <em>process</em>. Through the VR Builder process, you can define a sequence of actions the user can take in the scene and the resulting consequences.</p>
+<p>You can easily edit a process without coding through VR Builder's process editor. The process editor is a node editor where the user can arrange and connect the <em>steps</em> of the process. Each step is a different node and can include any number of <em>behaviors</em>, which make things happen in the scene. Likewise, a step will have at least one <em>transition</em> leading to another step. Every transition can list several <em>conditions</em> which have to be completed for the transition to trigger. For example, step B can be reached only after the user has grabbed the object specified in step A.</p>
+<p>Behaviors and conditions are the &quot;building blocks&quot; of VR Builder. Several of them are provided in the free version already. Additional behaviors and conditions are available in our paid add-ons. Since VR Builder is open source, you can always write your own behaviors and conditions as well.</p>
+<p>Behaviors and conditions can interact only with <em>process scene objects</em>. These are game objects in the scene which have a <code>Process Scene Object</code> component on them.</p>
+<p>The interaction capabilities of a process scene object can be increased by adding <em>scene object properties</em> to it. For example, adding a <code>Grabbable Property</code> component to a game object will let VR Builder know that the object is grabbable, and when it is grabbed.</p>
+<p>Normally it is not necessary to add properties manually to an object. When an object is dragged in the inspector of a condition or behavior, the user has the option to automatically configure it with a single click.</p>
+<p>Where possible, properties try to add and configure required components by themselves. If you add a <code>Grabbable Property</code> to a game object, this will automatically be made grabbable in VR (it still needs to have a collider and a mesh, of course).</p>
+<p>This makes it very easy to start from some generic assets and build a fully interactive scene.</p>
+<h2 id="requirements">Requirements</h2>
+<p>VR Builder is supported on Unity 2021.3 or later. It uses the built-in render pipeline by default, but URP is supported as well and existing materials can be easily converted.</p>
+<p>VR Builder works out of the box with any headset compatible with Unity's XR Interaction Toolkit.</p>
+<h2 id="installation">Installation</h2>
+<p>You can get VR Builder from the <a href="https://assetstore.unity.com/packages/tools/visual-scripting/vr-builder-201913">Unity Asset Store</a> or from our <a href="https://github.com/MindPort-GmbH/VR-Builder/releases">GitHub</a>. In the first case, you will be able to download and import the VR Builder package from the package manager. If you have downloaded a .unitypackage from GitHub, just import it in the project.</p>
+<p>If you are creating a new project, select the <code>3D</code> or <code>3D (URP)</code> template. Note that it is not necessary to choose the <code>VR</code> template as VR Builder will configure the project for VR automatically.</p>
+<p>After importing, VR Builder will compile and import some dependencies.</p>
+<p>For older Unity versions, a dialog from Unity's XR Interaction Component appears. VR Builder should work with either choice, so select the option that better suits your existing project. Use <code>I Made a Backup, Go Ahead!</code> if you are starting a new project. This will trigger an automated restart.</p>
+<p><img src="images/core/installation-xrit-layermask-update.png" alt="Update Interaction Layermask"></p>
+<p>For newer Unity versions the Samples of the XR Interaction Toolkit might need an update.</p>
+<p><img src="images/core/update-xri-samples.png" alt="Update Interaction Layermask"></p>
+<p>After these notifications the Project Setup Wizard will appear.</p>
+<h3 id="guide-through-the-project-setup-wizard">Guide Through the Project Setup Wizard</h3>
+<p>The Setup Wizard helps to get new or existing Unity scenes set up and ready to be used with VR Builder.</p>
+<h4 id="welcome">Welcome</h4>
+<p>In the following we will guide you through the different tabs of the VR Builder Setup Wizard.
+Click <code>Next</code> to proceed to the interaction settings page setup page.</p>
+<p><img src="images/core/installation-wizard-welcome.png" alt="Wizard Welcome Page"></p>
+<h4 id="interaction-settings">Interaction Settings</h4>
+<p>Here you can configure some default settings related to VR Builder interactions. Right now, the only available setting will determine whether a newly created grabbable object will use physics or not. You can also change these options at any time in <code>Project Settings &gt; VR Builder &gt; Settings</code>.</p>
+<p><img src="images/core/installation-wizard-interaction-settings.png" alt="Wizard Interaction Settings Page"></p>
+<h4 id="xr-hardware-setup">XR Hardware Setup</h4>
+<p>Then, if it's not configured already, you will be able to configure your project to work with your VR hardware. If your hardware is not listed but supports OpenXR, select Other. You might need to finish the configuration under Project Settings -&gt; XR Plug-in Management. If your device is not supported, please reach out to us in the VR Builder Community. The packages for the selected hardware will be imported after closing the wizard.</p>
+<p><img src="images/core/installation-wizard-hardware.png" alt="Wizard Hardware Page"></p>
+<h4 id="unity-localization">Unity Localization</h4>
+<p>Finally you must choose whether to set up localization support or skip it for now. VR Builder supports localization through the Unity Localization package. When setting up localization, the wizard will guide you through the manual steps required for a localized project. It provides a useful checklist and some shortcuts to make the task easier. It also has links that redirect to the relevant Unity documentation. If you decide to skip this setup, VR Builder will work in a single language. You can perform localization setup at any time. We encourage you to use Unity Localization, even if you use just one language. With Unity Localization, you will have all your texts in one place inside the Unity Localization Tables, which in turn will give you the possibility to export and refine them and import them back into Unity. Note that as of January 2024, we do not support asset localization tables. See <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Documentation/vr-builder-manual.md#configuration">Resources path/Key</a> in the Documentation on how to localize audio files.</p>
+<p><img src="images/core/installation-wizard-localization.png" alt="Localization Page"></p>
+<h4 id="help--documentation">Help &amp; Documentation</h4>
+<p>This page lists some useful resources to get you started with VR Builder. There is also a checkbox which lets you choose if the demo scene should be loaded after closing the wizard.After clicking Finish, VR Builder is set up! You will need to wait a few seconds for packages to import if you selected a headset from the hardware list. Then, feel free to try out the demo scene or create your own scene by selecting <code>Tools &gt; VR Builder &gt; Scene Setup Wizard…</code>.</p>
+<p>Note that if you selected the Unity URP template in the beginning, the materials on the avatar hands and demo scene will look solid magenta. That's Unity's way to tell you that the materials are not compatible with the current render pipeline. You can rectify this by selecting all materials (by filtering them in the project window), then click <code>Edit &gt; Rendering &gt; Materials &gt; Convert Selected Built-in</code> Materials to URP. You can of course ignore this step if you don't plan to use the provided hand models or the demo scene.</p>
+<p><img src="images/core/instalation-wizard-help-documentantion.png" alt="Localization Page"></p>
+<h2 id="quick-start">Quick Start</h2>
+<p>You can get a first impression of VR Builder and its features by accessing  the provided demo scene. This sample scene contains a pre-built process that showcases some of the interactions provided in VR Builder.</p>
+<p>You can automatically open the demo scene at the end of the setup wizard, or use the shortcut in <code>Tools &gt; VR Builder &gt; Demo Scenes &gt; Core</code>. Note that, while the scene can be found and opened from disk, it is necessary to use one of the above methods at least once in order to automatically copy the process file to the StreamingAssets folder, where VR Builder processes are saved.</p>
+<h3 id="demo-scene-overview">Demo Scene Overview</h3>
+<p>The demo scene showcases how to assemble a process with the building blocks included in VR Builder. More building blocks and features are available as separate add-ons.</p>
+<p>These building blocks are either conditions or behaviors. Conditions check if the user or the world is in a certain state, and behaviors modify the world state when activated.</p>
+<p>The process in the demo scene is linear, and will guide the user through different steps. To try out the demo scene, ensure audio volume is up, or you won't be able to hear the spoken instructions!</p>
+<p><img src="images/core/demo-scene-panoramic.png" alt="Demo Scene"></p>
+<h3 id="demo-scene-hierarchy">Demo Scene Hierarchy</h3>
+<p>In the hierarchy there are three game objects in parentheses.</p>
+<p><img src="images/core/hierarchy.png" alt="Hierarchy"></p>
+<p>They are automatically added to every VR Builder scene.</p>
+<ul>
+<li><code>[PROCESS_CONFIGURATION]</code> allows to select the process for the current scene from a list of processes saved in the project.</li>
+<li><code>[PROCESS_CONTROLLER]</code> defines some parameters for processes in this scene like the spectator input bindings and camera.</li>
+<li><code>[XR_Setup_Action_Based_Hands]</code> is the VR rig used by the default XR interaction component. If you are using a different interaction component, for example to use VR Builder in conjunction with <a href="https://www.mindport.co/vr-builder/add-ons-integrations">Interhaptics or VRIF</a>, you might see a different rig here.</li>
+</ul>
+<p>By looking at the other objects in the scene, we can see that some have a <code>Process Scene Object</code> component and possibly some &quot;property&quot; component. A <code>Process Scene Object</code> has a unique object ID that can be accessed by the process. Properties define how the process can interact with the object. For example, a <code>Grabbable Property</code> will let VR Builder recognize if an object is being grabbed. Adding a <code>Grabbable Property</code> to an object will automatically make it a <code>Process Scene Object</code> and add a few components so you can interact with the object in VR.</p>
+<p>If these properties are not added manually you will usually be prompted to add them automatically when building the process of your VR application.</p>
+<h3 id="customizing-the-rig">Customizing the Rig</h3>
+<p>Since VR Builder 2.2.0, the rig system has been simplified by removing the <code>[INTERACTION_RIG_LOADER]</code> and dummy rig. The default rig is created directly in the scene and can be edited or replaced like any game object. If you plan to use the same rig in multiple scenes, just create a prefab of it and manually replace the default rig.</p>
+<p>The only requirement every VR Builder rig has, independent of the interaction system, is that it must contain a <code>User Scene Object</code> component. This component identifies the rig as the user, and is usually placed on the root of the rig. It should reference the head and hand transforms, so that VR Builder can access those positions when needed. If left empty, it will attempt to find the head by itself by looking for the camera's transform.</p>
+<p>It is also possible to add other <code>Process Scene Object</code>s on the rig in order to use hands, backpacks, toolbelts and so on in behaviors and conditions, depending on the use case.</p>
+<h3 id="process-editor">Process Editor</h3>
+<p>The process editor lets you design the process of your VR application. You can open the process editor from <code>Tools &gt; VR Builder &gt; Process Editor</code> or <code>Window &gt; VR Builder &gt; Process Editor</code>. The process editor for the demo scene should look like this.</p>
+<p><img src="images/core/workflow-editor.png" alt="Process editor"></p>
+<h4 id="chapters-view">Chapters view</h4>
+<p>On the left, there is a list of chapters. Every chapter is a separate section of the process. They are useful to separate a process in its logical steps and avoid too much clutter in a single graph.</p>
+<p>You can click on the different chapters to visualize the corresponding graphs.</p>
+<p>Next to the chapter name, there are icons that allow you to move the chapter up and down in the list, rename it or delete it.</p>
+<p>Underneath, you can see the <code>Connections breakdown</code> foldout. Expand it to see incoming and outgoing connections for the current chapter. That is, which chapters lead here and to which chapter it is possible to go from this one. The number next to each connection represents the amount of steps that connect to the chapter. When &quot;Next Chapter&quot; or &quot;Previous Chapter&quot; is listed as a connection, it means the connection is implicit: a path ends with an empty transition, which by default ends the current chapter and starts the next one in order.</p>
+<p><img src="images/core/connection-breakdown.png" alt="Connection overview"></p>
+<p>The demo scene is linear, meaning that each chapter will lead directly to the next and the connection overview only contains implicit connections, but it is possible to create more complex processes that don't follow the chapter list linearly.</p>
+<h4 id="graph-view">Graph view</h4>
+<p>On the right, there is a graphical representation of the current chapter. Every node is called a <code>Step</code>. Every step can include a number of <code>Behaviors</code> which can happen when the node is triggered or before leaving it. In the demo scene, those are mostly text to speech instructions. A step can have as many exit points, called <code>Transitions</code>, as needed. Every transition can list a number of <code>Conditions</code> which, if fulfilled, make the transition valid.</p>
+<p>Select the &quot;Welcome&quot; node in the first chapter. This will open the Step Inspector. The window should look like the following.</p>
+<p><img src="images/core/step-inspector-behavior.png" alt="Step inspector behaviors"></p>
+<p>The only behavior is a text to speech instruction that will be triggered when the node is entered. Click on the &quot;Transitions&quot; tab.</p>
+<p><img src="images/core/step-inspector-transitions.png" alt="Step inspector transitions"></p>
+<p>There is a single transition. A step can have multiple transitions, each leading to a different step. In this case, the transition is connected to no other step, so it will end the chapter. The next chapter, &quot;The magic cube&quot;, will then start.</p>
+<p>Transitions can include conditions. If they do, they will trigger only when the attached conditions are completed. This transition has no conditions, so it will trigger immediately after the current step has ended, without any input from the user.</p>
+<p>We encourage you to investigate the other nodes to understand how the demo scene is built.</p>
+<h4 id="step-nodes">Step Nodes</h4>
+<p>You can create a node by right clicking anywhere in the graph and selecting <code>New</code>, then the type of node you want to create. There are four types of node available in VR Builder core:</p>
+<h5 id="step">Step</h5>
+<p>This is the default step node, the main building block for your process. By default, it is empty. This means that nothing will happen, and the execution will immediately proceed to the next node, if present. You will need to add behaviors and conditions to it in the <code>Step Inspector</code> in order to customize it and build your process logic.</p>
+<h5 id="step-group">Step Group</h5>
+<p>This node doesn't let you set conditions and behaviors, but instead can be expanded in a new node graph. It can be populated with other step nodes and act as a &quot;sub-chapter&quot; with some self contained logic. This can help keeping the process tidy.</p>
+<p><img src="images/core/step-group-node.png" alt="Step group node"></p>
+<p>You can access the node's graph by clicking the <code>Expand</code> button or double clicking on the node itself. There are also context menu options for expanding the node or ungrouping it - that is, replacing it in the main graph with the logic it contains.</p>
+<p>This node only has one entry and one exit point. This means that after the contained logic has ended executing, the process will always continue executing from the exit transition of the group node.</p>
+<p>If you are in a step group graph, it will be indicated on the top left of the process editor.</p>
+<p><img src="images/core/node-group-hierarchy.png" alt="Step group UI"></p>
+<p>You can click on a parent to return to it. For example, clicking on &quot;Chapter 1&quot; will get you back to the main chapter graph.</p>
+<p>You can also create a group by selecting a sequence of nodes, right clicking and selecting <code>Make group</code>. Since the step group node only has one input and one output, this works best when selecting linked nodes only. Edge cases are resolved as follows:</p>
+<ul>
+<li>If there are two or more inbound connections in the group, all will lead to the group's input. The first valid node will be chosen as starting step for the group, while the others will have their connection severed.</li>
+<li>All outgoing connections will be deleted, meaning that the process will continue from the output of the group node after the group has processed. This means that if the selected nodes lead to multiple other nodes, now they will all go through the group's output.</li>
+<li>The step group output will be connected to the previous target of the first valid grouped node. Other external targets in grouped nodes are ignored, which means that when the group ends it will always go to the same following node.</li>
+</ul>
+<p>If you encounter one of these edge case, make sure to review your process logic after grouping, as it may have changed.</p>
+<h5 id="parallel-execution">Parallel Execution</h5>
+<p>The parallel execution node lets you execute two or more step sequences at the same time. Execution will continue to the next node once all parallel sequences have completed.</p>
+<p><img src="images/core/parallel-execution.png" alt="Parallel execution node"></p>
+<p>Clicking on a Parallel Path button will open a new graph where the path can be edited. This is very similar to a step group, with the difference that there can be multiple parallel paths and they are all executed at the same time.
+Like with step groups, it is possible to return to the main process by clicking the root chapter on the top left of the process editor.</p>
+<p>The buttons next to a parallel path let you rename or delete it. The &quot;+&quot; button at the bottom lets you add more parallel paths. There is no theoretical limit to the number of paths in a parallel execution node, but performance might suffer.</p>
+<h5 id="end-chapter">End Chapter</h5>
+<p>You can use this node as the last node on a sequence. It will end the current chapter and start a new specified chapter, which can be selected from a drop-down list. This is useful to move through the chapters in a non-linear fashion. Note that you are not required to use this node for linear processes, as a chapter will automatically end when an empty transition is reached. In that case, the process will simply proceed to the following chapter.</p>
+<p><img src="images/core/end-chapter-node.png" alt="End chapter node"></p>
+<pre><code>Note: It is not recommended to use this node inside a step group as it will behave slightly differently (the nodes following the step group will be fast-forwarded before ending the chapter). It is currently not possible to create this node inside a step group.
+</code></pre>
+<h2 id="process-scene-objects">Process Scene Objects</h2>
+<p>The <code>Process Scene Object</code> component acts as a bridge between the VR Builder process and a Unity game object. If the process needs to observe or interact with a game object, it does so through this component. This means that every game object referenced in the process is required to have this component. If a more detailed interaction is needed, property components can be added to provide VR Builder more control on the object. For example, adding a <code>Grabbable Property</code> component will make the object grabbable, and VR Builder will be able to check if the object has been grabbed.</p>
+<p><img src="images/core/process-scene-object.png" alt="Process Scene Object"></p>
+<p>The <code>Process Scene Object</code> generates a hidden object ID which identifies the object internally in the VR Builder process.</p>
+<p>In addition, it is possible to associate an arbitrary number of groups to every scene object. Some behaviors and conditions can interact with unspecified objects within a certain group rather than a specific object with a given object ID.</p>
+<p>You can select and assign an existing group from the list, or create and directly assign a new group. You can unassign a group from an object by clicking the X button next to it. Groups are stored on a per-project basis and can be created, edited or deleted from <code>Project Settings &gt; VR Builder &gt; Scene Object Groups</code>.</p>
+<p>It is possible to edit multiple Process Scene Objects at the same time to add or remove groups in bulk. When multiple objects are selected, all groups on all objects are listed.</p>
+<p>If a group is present only on some of the selected objects, it will be displayed in <em>italics</em>. A default text style means that the group is present on all selected objects.</p>
+<h2 id="locomotion">Locomotion</h2>
+<p>The default rig supports locomotion by teleportation or continuous movement. By default, the rig is set to work with teleportation only, you can change this settings on the <code>Locomotion Scheme Manager</code> component on the XR Rig child object.</p>
+<p><img src="images/core/locomotion-scheme-manager.png" alt="Locomotion Scheme Selection"></p>
+<h3 id="continuous-movement">Continuous Movement</h3>
+<p>Continuous movement is controlled by default with the thumbsticks. Left to move around, right to turn on the spot. In general, we don't recommend this locomotion solution as it can cause motion sickness in inexperienced users, however it can still be useful for specific use cases, precision adjustments or testing.</p>
+<h3 id="teleportation">Teleportation</h3>
+<p>Teleportation requires the user to hold the trigger, then release while pointing at a teleportable surface or anchor. Teleportation requires a little more setup to work properly, but most of it is handled automatically by VR Builder.</p>
+<p>It is recommended for teleportation to work on different layer than normal interactions. By default, VR Builder uses the <code>XR Teleport</code> raycast layer for raycasts from the teleportation controllers, and the <code>XR Teleport</code> XRI interaction layer for teleportation interaction.</p>
+<p>This means that interactors and interactables need to be configured with these layers in order to work. When a new scene is created, the teleport interactors on the default rig are automatically configured to raycast and interact on these layers.</p>
+<p>Likewise, when creating a teleportation anchor or area, you should use the <code>Teleportation Anchor (VR Builder)</code> or <code>Teleportation Area (VR Builder)</code> components instead of the XRI versions. These include a button in the inspector which automatically configures them to settings compatible with the VR Builder rig, including layer settings.
+The teleportation anchor in particular also include two more options: you can create a default anchor complete with graphics and collider, and you can enable proximity detection (see <a href="#vr-userteleport">Teleport condition</a>).</p>
+<p>Given this, teleportation should be easy to setup and just work out of the box. In case something does not, for example when editing an old scene or after changing the position of the XR Teleport layer, it is possible to reset the layers on the rig and all anchors and areas in the scene. To do so, select <code>Tools &gt; VR Builder &gt; Developer &gt; Configure Teleportation Layers</code>. Note that this will overwrite your existing layer masks and select the <code>XR Teleport</code> layer on all of them.</p>
+<h2 id="behaviors">Behaviors</h2>
+<p>Behaviors are used to make something happen in the process. Behaviors can be as simple as giving instructions and hints, making new objects visible, or animating an object in the scene. What they have in common is that something happens without requiring an intervention by the user. This section lists the behaviors included in VR Builder.</p>
+<hr>
+<h3 id="guidance">Guidance</h3>
+<h4 id="play-audio-file">Play Audio File</h4>
+<h5 id="description">Description</h5>
+<p>The Play Audio File behavior plays an audio clip loaded from the <code>Resources</code> folder in your project’s asset folder. VR Builder supports all audio file formats supported by Unity, which are:</p>
+<ul>
+<li>aif</li>
+<li>wav</li>
+<li>mp3</li>
+<li>ogg</li>
+</ul>
+<h5 id="configuration">Configuration</h5>
+<ul>
+<li><p><strong>Resources path/Key</strong></p>
+<p>Insert the relative file path from the Resources folder. Please note that you have to omit the file extension, as shown in the example. You can find more information about this on <a href="https://docs.unity3d.com/ScriptReference/Resources.Load.html">https://docs.unity3d.com/ScriptReference/Resources.Load.html</a>.</p>
+<p>If localization is enabled, this should instead be a key in the localization table associated with the process, which contains the localized resources path.</p>
+<p><strong>Example without localization</strong><br>
+File to be played: <code>Assets/.../Resources/Sounds/click-sound.ogg</code><br>
+Text/Key: <code>Sounds/click-sound</code></p>
+<p><strong>Example with localization</strong><br>
+File to be played: <code>Assets/.../Resources/Sounds/click-sound.ogg</code><br>
+Text/Key: <code>click-sound-key</code><br>
+Localization table translation: <code>Sounds/click-sound</code></p>
+</li>
+<li><p><strong>Volume</strong></p>
+<p>The volume at which the audio should be played.</p>
+</li>
+<li><p><strong>Execution stages</strong></p>
+<p>By default, steps execute behaviors in the beginning, in their activation stage. This can be changed with the <code>Execution stages</code> dropdown menu:</p>
+<ul>
+<li><code>Before Step Execution</code>: The step invokes the behavior during its activation.</li>
+<li><code>After Step Execution</code>: Once a transition to another step has been selected and the current step starts deactivating, the behavior is invoked.</li>
+<li><code>Before and After Step Execution</code>: Execution at activation and deactivation of a step.</li>
+</ul>
+</li>
+<li><p><strong>Wait for completion</strong></p>
+<p>By default, the step waits for the audio file to finish. If you want the step to interrupt the audio in case the step is completed, uncheck this option.</p>
+<p>Note: this might lead to an audio file not even being started, in case the step ends immediately.</p>
+</li>
+</ul>
+<hr>
+<h4 id="play-texttospeech-audio">Play TextToSpeech Audio</h4>
+<h5 id="description-1">Description</h5>
+<p>The Play TextToSpeech Audio behavior uses a synthesized voice to read text. It supports localized text through Unity's Localization package.</p>
+<p>By default, VR Builder works with a single language. In <code>Project Settings &gt; VR Builder &gt; Language</code> you can specify which language will be used by the TTS engine.</p>
+<p>VR Builder can also be configured to use the Localization package from Unity to provide localized text. The Project Setup Wizard can guide you through the steps, which are the same as outlined in the official <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.0/manual/QuickStartGuideWithVariants.html">documentation</a>.</p>
+<p>VR Builder will automatically switch to localized mode when a Localization Settings object has been created.</p>
+<p><img src="images/core/play-tts-behavior.png" alt="Play Text-to-speech Behavior"></p>
+<h5 id="configuration-1">Configuration</h5>
+<ul>
+<li><p><strong>Text/Key</strong></p>
+<p>If the project is not configured for localization, this field can be used to enter the text that will be spoken in the language configured in the Project Settings.</p>
+<p>If localization is configured, meaning that a Localization Settings object has been created, you need instead to enter the key to look for in the localization table associated with the process.</p>
+</li>
+<li><p><strong>Volume</strong></p>
+<p>The volume at which the audio should be played.</p>
+</li>
+<li><p><strong>Execution stages</strong></p>
+<p>By default, steps execute behaviors in the beginning, in their activation stage. This can be changed with the <code>Execution stages</code> dropdown menu:</p>
+<ul>
+<li><code>Before Step Execution</code>: The step invokes the behavior during its activation.</li>
+<li><code>After Step Execution</code>: Once a transition to another step has been selected and the current step starts deactivating, the behavior is invoked.</li>
+<li><code>Before and After Step Execution</code>: Execution at activation and deactivation of a step.</li>
+</ul>
+</li>
+<li><p><strong>Wait for completion</strong></p>
+<p>By default, the step waits for the audio file to finish. If you want the step to interrupt the audio in case the trainee completes the conditions, uncheck this option.</p>
+<p>Note: this might lead to an audio file not even being started, in case the step ends immediately.</p>
+</li>
+</ul>
+<hr>
+<h4 id="highlight-object">Highlight Object</h4>
+<h5 id="description-2">Description</h5>
+<p>The Highlight Object behavior visually highlights the selected object until the end of a step.</p>
+<p>For additional highting features you can replace the <em>Default Highlighter</em> with a <em>Interactable Highlighter Script</em>. Select the highlighted <code>Object</code> in the Unity Hierarchy. In the Unity Inspector replace the <em>DefaultHighlighter</em> with a <em>Interactable Highlighter Script</em>.</p>
+<p><a href="../images/core/default-behaviors/interactable-highlighter-script.png"><img src="images/core/interactable-highlighter-script.png" alt="Interactable Highlighter Script"></a></p>
+<p>You can define the Color and Material for <em>On Touch Highlight</em>, <em>On Grab Highlight</em>, and <em>On Use Highlight</em>. The object will show the highlight color configured in the Highlight behavior by default. As soon as the object is touched it will change to the color configured in <em>On Touch Highlight</em>. The same happens when the object is grabbed or used. It will display the configured color in ‘On Grab Highlight’ or ‘On Use Highlight’.</p>
+<h5 id="configuration-2">Configuration</h5>
+<ul>
+<li><p><strong>Color</strong></p>
+<p>Color in which the target object will be highlighted. Colors are defined in the RGBA or HSV color channel. By configuring the alpha (A) value, highlights can be translucent.</p>
+</li>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Object</code> which should be highlighted.</p>
+</li>
+</ul>
+<hr>
+<h4 id="spawn-confetti">Spawn Confetti</h4>
+<h5 id="description-3">Description</h5>
+<p>The Spawn Confetti behavior causes confetti to fall above the selected <code>Object</code>. It can be useful as visual feedback or celebration for completing a task successfully.</p>
+<h5 id="configuration-3">Configuration</h5>
+<ul>
+<li><p><strong>Spawn Above User</strong></p>
+<p>If checked, the spawn position will be above the user rather than on the specified <code>Process Scene Object</code>.</p>
+</li>
+<li><p><strong>Position Provider</strong></p>
+<p>Specifies where the confetti should spawn if not set to spawn above the user.</p>
+</li>
+<li><p><strong>Confetti Machine Path</strong></p>
+<p>Path to the confetti machine prefab, relative to a <code>Resources</code> folder. Use the default one or point to your custom confetti machine.</p>
+</li>
+<li><p><strong>Area Radius</strong></p>
+<p>Radius around the position provider in which confetti will be spawned.</p>
+</li>
+<li><p><strong>Duration</strong></p>
+<p>Duration of the visual effect in seconds.</p>
+</li>
+<li><p><strong>Execution stages</strong></p>
+<p>By default, steps execute behaviors in the beginning, in their activation stage. This can be changed with the <code>Execution stages</code> dropdown menu:</p>
+<ul>
+<li><code>Before Step Execution</code>: The step invokes the behavior during its activation.</li>
+<li><code>After Step Execution</code>: Once a transition to another step has been selected and the current step starts deactivating, the behavior is invoked.</li>
+<li><code>Before and After Step Execution</code>: Execution at activation and deactivation of a step.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="utility">Utility</h3>
+<h4 id="behavior-sequence">Behavior Sequence</h4>
+<h5 id="description-4">Description</h5>
+<p>The Behavior Sequence contains a list of child behaviors which will be activated one after another. A child behavior in the list will not be activated until the previous child behavior has finished its life cycle.</p>
+<h5 id="configuration-4">Configuration</h5>
+<ul>
+<li><p><strong>Repeat</strong></p>
+<p>If checked, the behavior sequence restarts from the top of the child behavior list as soon as the life cycle of the last child behavior in the list has finished.</p>
+</li>
+<li><p><strong>Child behaviors</strong></p>
+<p>List of all queued behaviors. Add behaviors to the list using the <em>&quot;Add Behavior&quot;</em> button.</p>
+</li>
+<li><p><strong>Wait for completion</strong></p>
+<p>If checked, the behavior sequence will finish the life cycle of each child behavior in the list before it transitions to another step. Even when the <em>&quot;Repeat&quot;</em> option is enabled, the execution will transition to the next step after the child behavior list has been completed.
+Uncheck this option if you want to interrupt the sequence as soon as all conditions of a transition are fulfilled.</p>
+</li>
+</ul>
+<h5 id="example">Example</h5>
+<p>Play an audio file after a set time, for example to give the user some delayed hints.</p>
+<p>This is a sequence combining a Delay and a Play Audio File behavior. Refer to the documentation for the <a href="#utilitydelay">Delay behavior</a> and the <a href="#guidanceplay-audio-file">Play Audio File behavior</a>.</p>
+<hr>
+<h4 id="delay">Delay</h4>
+<h5 id="description-5">Description</h5>
+<p>The Delay behavior completes after the specified amount of time. This step will wait for the duration configured in <code>Delay (in seconds)</code>, even when the user fulfills the required conditions to transition to the next step.</p>
+<h5 id="configuration-5">Configuration</h5>
+<ul>
+<li><p><strong>Delay (in seconds)</strong></p>
+<p>Configure the behavior’s delay duration in seconds.</p>
+<p><strong>Example</strong></p>
+<p>Delay (in seconds) = 1.3</p>
+</li>
+</ul>
+<hr>
+<h4 id="set-parent">Set Parent</h4>
+<h5 id="description-6">Description</h5>
+<p>The Set Parent behavior parents an <code>Object</code> to another one in the Unity hierarchy.</p>
+<h5 id="configuration-6">Configuration</h5>
+<ul>
+<li><p><strong>Target</strong></p>
+<p>The <code>Process Scene Object</code> to be parented.</p>
+</li>
+<li><p><strong>Parent</strong></p>
+<p>The new parent for the target object. Note this can be null, in which case the object will be unparented.</p>
+</li>
+<li><p><strong>Snap to parent transform</strong></p>
+</li>
+</ul>
+<p>If checked, the target object will snap to the same position and rotation as the parent object.</p>
+<hr>
+<h3 id="environment">Environment</h3>
+<h4 id="disable-objects">Disable Objects</h4>
+<h5 id="description-7">Description</h5>
+<p>The Disable Objects behavior makes the selected <code>Objects</code> invisible and non-interactive until they are specifically set back to <em>&quot;enabled&quot;</em> in a future step. Put into Unity terms, it deactivates the selected Game Objects.</p>
+<h5 id="configuration-7">Configuration</h5>
+<ul>
+<li><p><strong>Objects</strong></p>
+<p>The <code>Process Scene Objects</code> to be disabled.</p>
+</li>
+</ul>
+<hr>
+<h4 id="enable-objects">Enable Objects</h4>
+<h5 id="description-8">Description</h5>
+<p>The Enable Objects behavior makes the selected <code>Objects</code> visible and interactive until it is specifically set back to <em>&quot;disabled&quot;</em> in a future step.
+Put into Unity terms, it activates the selected Game Objects.</p>
+<h5 id="configuration-8">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Objects</code> to be enabled.</p>
+</li>
+</ul>
+<hr>
+<h4 id="disable-components">Disable Components</h4>
+<h5 id="description-9">Description</h5>
+<p>The Disable Components behavior disables all components of the specified type on the given <code>Process Scene Objects</code>.</p>
+<h5 id="configuration-9">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Objects</code> the component is on.</p>
+</li>
+<li><p><strong>Component type</strong></p>
+<p>A drop-down list allowing to select the component type that will be disabled.</p>
+</li>
+<li><p><strong>Enable at end of step</strong></p>
+<p>If checked, the components will be enabled again at the end of the step.</p>
+</li>
+</ul>
+<hr>
+<h4 id="enable-components">Enable Components</h4>
+<h5 id="description-10">Description</h5>
+<p>The Enable Components behavior enables all components of a specified type on the given <code>Process Scene Objects</code>.</p>
+<h5 id="configuration-10">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Objects</code> the component is on.</p>
+</li>
+<li><p><strong>Component type</strong></p>
+<p>A drop-down list allowing to select the component type that will be enabled.</p>
+</li>
+<li><p><strong>Disable at end of step</strong></p>
+<p>If checked, the components will be disabled again at the end of the step.</p>
+</li>
+</ul>
+<hr>
+<h4 id="unsnap-object">Unsnap Object</h4>
+<h5 id="description-11">Description</h5>
+<p>The Unsnap Object behavior unsnaps a snapped object from a snap zone. This can be useful in case the object needs to be further manipulated by the process.</p>
+<h5 id="configuration-11">Configuration</h5>
+<p>Either the object or the snap zone can be left null. This will result in either the object unsnapping from any snap zone it is in, or in the unsnapping of whatever object is snapped to the specified snap zone.</p>
+<p>If both are specified, the unsnap will occur only if the specified object is snapped to the specified snap zone.</p>
+<ul>
+<li><p><strong>Object to unsnap</strong></p>
+<p>The <code>Process Scene Object</code> to unsnap.</p>
+</li>
+<li><p><strong>Snap zone to unsnap</strong></p>
+<p>The <code>Snap Zone</code> from which the object will be unsnapped.</p>
+</li>
+</ul>
+<hr>
+<h3 id="animation">Animation</h3>
+<h4 id="move-object">Move Object</h4>
+<h5 id="description-12">Description</h5>
+<p>The Move Object behavior animates the <code>Object</code> to move and rotate (no scaling) to the position and rotation of the <code>Final Position Provider</code> in the time specified in the <code>Duration (in seconds)</code> parameter.</p>
+<p>Note: If <code>Object</code> was affected by gravity before, it will continue to be affected after this behavior.</p>
+<h5 id="configuration-12">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Object</code> to be moved and rotated (no scaling).</p>
+</li>
+<li><p><strong>Final position provider</strong></p>
+<p>The <code>Process Scene Object</code> used as the position provider object. It should be placed at the destination position and rotation.</p>
+</li>
+<li><p><strong>Animation duration (in seconds)</strong></p>
+<p>Time in seconds the animation takes to move and rotate <code>Object</code> to the <code>Final position provider</code>.</p>
+<p><strong>Example</strong></p>
+<p>Duration (in seconds) = 1.3</p>
+</li>
+</ul>
+<hr>
+<h2 id="conditions">Conditions</h2>
+<p>Conditions are used to determine which transition is used to exit a step. Transitions are evaluated top to bottom, and the first valid one will be selected. To be valid means to have only fulfilled conditions or no conditions at all.
+A condition usually requires the user's intervention, for example grabbing an object. However this is not always the case: conditions like the timeout condition will trigger regardless of the user’s activity. There may also be cases in which other factors in the environment determine if a condition is fulfilled.
+Conditions need to be active in order to be fulfilled. As soon as a step is active, all containing Conditions are active as well.
+This section lists the conditions included in VR Builder.</p>
+<hr>
+<h3 id="environment-1">Environment</h3>
+<h4 id="move-objects-in-collider">Move Objects in Collider</h4>
+<h5 id="description-13">Description</h5>
+<p>The Move Objects in Collider condition is fulfilled when the <code>Objects</code> are within the specified <code>Collider</code> for the required amount of time (<code>Required seconds inside</code>) while this condition is active.</p>
+<h5 id="configuration-13">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Objects</code> to move. If the objects need to be grabbed, they need to have the <code>Grabbable Property</code> and a collider component configured. The collider defines the area where the user can grab an object.</p>
+</li>
+<li><p><strong>Collider</strong></p>
+<p>The <code>Process Scene Object</code> with the destination collider. Make sure that a collider is present and that the option <code>Is Trigger</code> is enabled.</p>
+</li>
+<li><p><strong>Required seconds inside</strong></p>
+<p>Set the time in seconds that the <code>Objects</code> should stay inside the <code>Collider</code>.</p>
+</li>
+</ul>
+<hr>
+<h4 id="object-nearby">Object Nearby</h4>
+<h5 id="description-14">Description</h5>
+<p>The Object Nearby condition is fulfilled when the <code>Object</code> is within the specified <code>Range</code> of a <code>Reference object</code>.</p>
+<h5 id="configuration-14">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Object</code> that should be in the radius of the <code>Reference Object</code>.</p>
+</li>
+<li><p><strong>Reference Object</strong></p>
+<p>The <code>Process Scene Object</code> from which you want to measure the distance.</p>
+</li>
+<li><p><strong>Range</strong></p>
+<p>In this field, you can set the maximum distance between the <em>Object</em> and the <em>Reference object</em> required to fulfill this condition.</p>
+</li>
+<li><p><strong>Required seconds inside</strong></p>
+<p>In this field, you can set the time in seconds the <code>Object</code> should stay within the radius <code>Range</code> of the <code>Reference Object</code>.</p>
+</li>
+</ul>
+<hr>
+<h3 id="interaction">Interaction</h3>
+<h4 id="grab-objects">Grab Objects</h4>
+<h5 id="description-15">Description</h5>
+<p>The Grab Object condition is fulfilled when the user grabs any of the <code>Objects</code>.
+The condition is also fulfilled if the user already grabbed any of Objects before the step was activated, that is, if the user is already holding the specified object.</p>
+<h5 id="configuration-15">Configuration</h5>
+<ul>
+<li><p><strong>Objects</strong></p>
+<p>The <code>Process Scene Objects</code> to grab. The objects needs to have the <code>Grabbable Property</code> and a collider component configured. The collider defines the area where the user can grab an object.</p>
+</li>
+</ul>
+<hr>
+<h4 id="release-objects">Release Objects</h4>
+<h5 id="description-16">Description</h5>
+<p>The Release Objects condition is fulfilled when all of the <code>Objects</code> are released by the user's controller. If the user is not already holding any of the specified objects in hand while this condition is active, it is fulfilled immediately.</p>
+<h5 id="configuration-16">Configuration</h5>
+<ul>
+<li><p><strong>Objects</strong></p>
+<p>The <code>Process Scene Objects</code> to release. The objects need to have the <code>Grabbable Property</code> and a collider component configured.</p>
+</li>
+</ul>
+<hr>
+<h4 id="snap-objects">Snap Objects</h4>
+<h5 id="description-17">Description</h5>
+<p>The Snap Object condition is fulfilled when any of the <code>Objects</code> is released into the <code>Zone to snap into</code>, which means the collider of any of the Objects and collider of the Zone overlap. Adapt the collider size of the snap zone to increase or decrease the area where the user can release an <code>Object</code>. Increasing the collider size of the snap zone decreases the required <em>snap</em> precision and simplifies the user's interaction in VR.
+After the user releases an <code>Object</code>, this is moved to the snap zone's <code>SnapPoint</code>. To adjust this position, change the position of the SnapPoint child object of the <code>Zone to snap into</code> object.</p>
+<ul>
+<li><p><strong>Snap Zone Generator</strong></p>
+<p>For any snappable object you can generate a snap zone that can snap this object and can be used as a <code>Zone to snap into</code>. To do so, navigate to the <code>Snappable Property</code> in Unity's Inspector. You will see two buttons. Clicking on the button <code>Create Snap Zone for this object</code>, you will create a snap zone that only accepts this exact object. Clicking on <code>Create Snap Zone for objects in the same groups</code> will instead create a snap zone that accepts every object that shares at least a group with the current object. Note that the current object will still determine the shape of the snap zone's ghost object.</p>
+<p><img src="images/core/snapzonegenerator.png" alt="Snap Zone Generator"></p>
+<p>If you want a specific snap zone behavior, like for example accepting only one group of the source object instead of all of them, you'll have to manually change that. Select the snap zone and find the <code>Has Guid Validation</code> component. If you manually created your snap zone, you might have to add this component manually as well.
+Add to the list the objects you want to be valid for this snap zone. You can reference single objects by object ID, or entire categories of objects via groups.</p>
+<p><img src="images/core/snapzone-validation.png" alt="Snap Zone Validation"></p>
+</li>
+<li><p><strong>Manual Snap Zone Creation</strong></p>
+<p>Instead of the automatic generation as described above, you can do those steps also manually. Please refer to available documentation on the <code>XRSocketInteractor</code> from Unity or related sources. You can also make changes to the automatically created snap zone to adapt it to your needs. Please note that these changes might impact the process logic.</p>
+</li>
+<li><p><strong>Feed Forward for Snap Zones</strong></p>
+<p>Snap zones are restricted to which objects can be snapped. This means every object can be valid (i.e. it can be snapped to this zone) or invalid (it can not be snapped to this zone) for a snap zone. This is achieved with validation components on the snap zone, for example the <code>Has Guid Validation</code> component. You can use this component to configure which specific objects or groups are accepted by the snap zone.
+In case you are moving a valid object into a zone, the snap zone color changes to ‘Validation Color’ (green), providing the user in VR with positive feedback. In case you are moving an invalid object into a zone, the snap zone color changes to ‘Invalid Color’ (red), giving the user the feedback that this is the wrong object for this zone.
+You can modify the colors and materials to be used in the Snap Zones parameters and settings.</p>
+</li>
+<li><p><strong>Snap Zone Parameters and Settings</strong></p>
+<p>To change the highlight color or validation hover material of a dedicated snap zone, navigate to the snap zone object in the Unity Inspector. You will find the Snap Zone Parameters and Settings in the script <code>Snap Zone</code>.</p>
+<p><img src="images/core/snapzoneparameters.png" alt="Snap Zone Parameters"></p>
+<p>To change the colors and materials of all snap zones in the scene, select them in the VR Builder snap zone settings and press 'Apply settings in current scene'.</p>
+<p><img src="images/core/snapzonesettings.png" alt="Snap Zone Settings"></p>
+<p>The snap zone settings can be found in the project settings in tab <code>VR Builder &gt; Settings &gt; Snap Zones</code>.</p>
+</li>
+</ul>
+<h5 id="configuration-17">Configuration</h5>
+<ul>
+<li><p><strong>Objects</strong></p>
+<p>The <code>Process Scene Objects</code> to place (snap). The objects needs to have the <code>Snappable Property</code> and a collider component configured.</p>
+</li>
+<li><p><strong>Zone to snap into</strong></p>
+<p>This field contains the <code>Process Scene Object</code> where any of the <code>Objects</code> are required to be snapped. Make sure the object has a collider component with the <code>Is Trigger</code> property <em>enabled</em>.</p>
+</li>
+</ul>
+<hr>
+<h4 id="touch-objects">Touch Objects</h4>
+<h5 id="description-18">Description</h5>
+<p>The Touch Object condition is fulfilled when any of the <code>Objects</code> is touched by the user's controller.  If a user is already touching the any of the objects while this condition is active, this condition is fulfilled immediately.</p>
+<h5 id="configuration-18">Configuration</h5>
+<ul>
+<li><p><strong>Object</strong></p>
+<p>The <code>Process Scene Objects</code> to be touched. The objects needs to have the <code>Touchable Property</code> and a collider component configured.</p>
+</li>
+</ul>
+<hr>
+<h4 id="use-objects">Use Objects</h4>
+<h5 id="description-19">Description</h5>
+<p>The Use Objects condition is fulfilled when any of the <code>Objects</code> are used by pressing the <em>Use</em> button of the controller while being touched or grabbed.</p>
+<h5 id="configuration-19">Configuration</h5>
+<ul>
+<li><p><strong>Objects</strong></p>
+<p>The <code>Process Scene Objects</code> of which one is required to be used. The <code>Objects</code> need to have the <code>Usable Property</code> and a collider component configured.</p>
+</li>
+</ul>
+<hr>
+<h3 id="utility-1">Utility</h3>
+<h4 id="timeout">Timeout</h4>
+<h5 id="description-20">Description</h5>
+<p>The Timeout condition is fulfilled when the time specified in <code>Wait (in seconds)</code> has elapsed. This can make sense as a &quot;fallback&quot; condition. For example, if the user does not complete condition X in the allotted amount of time, the timeout condition will trigger leading to a different step with different consequences.</p>
+<h5 id="configuration-20">Configuration</h5>
+<ul>
+<li><p><strong>Wait (in seconds)</strong></p>
+<p>Set the time in seconds that should elapse before this condition is fulfilled.</p>
+</li>
+</ul>
+<hr>
+<h3 id="locomotion-1">Locomotion</h3>
+<h4 id="teleport">Teleport</h4>
+<h5 id="description-21">Description</h5>
+<p>The Teleport condition is fulfilled when the user teleports to any of the referenced <code>Teleportation Points</code>. Previous teleportation actions made into a <code>Teleportation Point</code> are not considered.</p>
+<p>If an anchor used as <code>Teleportation Point</code> has proximity detection enabled, the condition will be fulfilled not only if the user teleports to it, but also if they move close to it with continuous movement or by walking in the room. You can activate proximity detection when you need the user to be in a specific location, regardless of whether they teleport or arrive there by other locomotion types.</p>
+<p>The provided <code>Teleportation Property</code> is based on the Unity XR Interaction Toolkit's <code>Teleportation Anchor</code>. For further reference, please check out the XR Interaction Toolkit  <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.0/api/UnityEngine.XR.Interaction.Toolkit.TeleportationProvider.html">documentation</a>.</p>
+<ul>
+<li><p><strong>Configuring a Teleportation Point</strong></p>
+<p>The <code>Teleportation Property</code> can be set as a <strong>Default Teleportation Anchor</strong> by clicking on the <code>Set Default Teleportation Anchor</code> button. You can find it when selecting the <code>Teleportation Point</code> and viewing it in the Unity Inspector.</p>
+<p><img src="images/core/teleportationproperty.PNG" alt="Teleportation Property"></p>
+<p>This will configure the attached <code>Teleportation Anchor</code>. It will provide a visual element in the Unity Editor that helps placing the <code>Teleportation Point</code> in the scene. This visual element will also be shown in the virtual world during training execution to guide the user.</p>
+</li>
+</ul>
+<h5 id="configuration-21">Configuration</h5>
+<ul>
+<li><p><strong>Teleportation Points</strong></p>
+<p>The <code>Teleportation Properties</code> of which one, the user should teleport to.</p>
+</li>
+</ul>
+<h3 id="online-documentation">Online Documentation</h3>
+<p>We offer a constantly expanding list of <a href="https://www.mindport.co/tutorials-unity-vr-development">guides and tutorials</a> on our website. We encourage you to check them out to improve your VR Builder skills.</p>
+<p>If this is your first time with VR Builder, you should start from the <a href="https://www.mindport.co/vr-builder-learning-path/how-to-define-the-process-of-vr-applications-in-unity">Process Editor</a> and <a href="https://www.mindport.co/vr-builder-learning-path/how-to-define-steps-of-vr-applications-in-unity">Step Inspector</a> tutorials, which explain the basics of working with VR Builder.</p>
+<p>In addition,you might also want to check out the guides on how to build standalone VR Builder apps on the <a href="https://www.mindport.co/vr-builder-learning-path/how-to-run-vr-builder-apps-on-oculus-quest-devices">Oculus Quest</a> or <a href="https://www.mindport.co/vr-builder-learning-path/how-to-run-vr-builder-apps-on-pico-neo-devices">Pico Neo 3</a>.</p>
+<p>You can also check out some guides on the more advanced interactions, like the <a href="https://www.mindport.co/vr-builder-learning-path/pick-and-place-introduction-to-snap-zones">series on snap zones</a>.</p>
+<p>Lastly, there are some <a href="https://www.mindport.co/vr-builder-learning-path/how-to-create-a-vr-ball-game-with-track-and-measure-add-on-for-vr-builder">step-by-step tutorials</a> explaining how to work with our latest paid add-ons. Even if you don't intend to buy the relevant content, they can provide a good overview on how to build a functional process with VR Builder from scratch.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>VR Builder is based on the open source edition of the <a href="https://github.com/Innoactive/Creator">Innoactive Creator</a>. While Innoactive helps enterprises to scale VR training, we adopted this tool to provide value for smaller content creators looking to streamline their VR development processes.</p>
+<p>Like Innoactive, we believe in the value of open source and will continue to support this approach together with them and the open source community.
+This means you are welcome to contribute to the <a href="https://github.com/MindPort-GmbH">VR Builder GitHub repositories</a>.</p>
+<h2 id="contact-and-support">Contact and Support</h2>
+<p>Join our official <a href="http://community.mindport.co">Discord server</a> for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder.</p>
+<p>Make sure to review VR Builder on the <a href="https://assetstore.unity.com/packages/tools/visual-scripting/vr-builder-201913">Unity Asset Store</a> if you like it. This will help us sustain the development of VR Builder.</p>
+<p>If you have any issues, please contact <a href="mailto:contact@mindport.co">contact@mindport.co</a>. We'd love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance!
+Let's build something extraordinary!</p>
+<p>You can also visit our website at <a href="http://www.mindport.co">mindport.co</a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/feature/documentation-page/Documentation/articles/vr-builder-manual.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
