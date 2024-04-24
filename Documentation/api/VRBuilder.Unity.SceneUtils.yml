@@ -1,0 +1,722 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Unity.SceneUtils
+  commentId: T:VRBuilder.Unity.SceneUtils
+  id: SceneUtils
+  parent: VRBuilder.Unity
+  children:
+  - VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
+  - VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents``1
+  - VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
+  - VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  - VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(UnityEngine.GameObject)
+  langs:
+  - csharp
+  - vb
+  name: SceneUtils
+  nameWithType: SceneUtils
+  fullName: VRBuilder.Unity.SceneUtils
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/Unity/SceneUtils.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SceneUtils
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
+    startLine: 11
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Unity
+  syntax:
+    content: public static class SceneUtils
+    content.vb: Public Module SceneUtils
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents``1
+  commentId: M:VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents``1
+  id: GetActiveAndInactiveComponents``1
+  parent: VRBuilder.Unity.SceneUtils
+  langs:
+  - csharp
+  - vb
+  name: GetActiveAndInactiveComponents<T>()
+  nameWithType: SceneUtils.GetActiveAndInactiveComponents<T>()
+  fullName: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents<T>()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Unity/SceneUtils.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetActiveAndInactiveComponents
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
+    startLine: 16
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Unity
+  summary: Get all loaded components, both active and inactive.
+  example: []
+  syntax:
+    content: 'public static IEnumerable<T> GetActiveAndInactiveComponents<T>() where T : Component'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function GetActiveAndInactiveComponents(Of T As Component)() As IEnumerable(Of T)
+  overload: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents*
+  nameWithType.vb: SceneUtils.GetActiveAndInactiveComponents(Of T)()
+  fullName.vb: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents(Of T)()
+  name.vb: GetActiveAndInactiveComponents(Of T)()
+- uid: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
+  commentId: M:VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
+  id: GetActiveAndInactiveGameObjects
+  parent: VRBuilder.Unity.SceneUtils
+  langs:
+  - csharp
+  - vb
+  name: GetActiveAndInactiveGameObjects()
+  nameWithType: SceneUtils.GetActiveAndInactiveGameObjects()
+  fullName: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Unity/SceneUtils.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetActiveAndInactiveGameObjects
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
+    startLine: 39
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Unity
+  summary: Get all loaded game objects, both active and inactive.
+  example: []
+  syntax:
+    content: public static IEnumerable<GameObject> GetActiveAndInactiveGameObjects()
+    return:
+      type: System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
+    content.vb: Public Shared Function GetActiveAndInactiveGameObjects() As IEnumerable(Of GameObject)
+  overload: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects*
+- uid: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  id: GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  isExtensionMethod: true
+  parent: VRBuilder.Unity.SceneUtils
+  langs:
+  - csharp
+  - vb
+  name: GetComponentInParentIncludingInactive<T>(GameObject)
+  nameWithType: SceneUtils.GetComponentInParentIncludingInactive<T>(GameObject)
+  fullName: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive<T>(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Unity/SceneUtils.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetComponentInParentIncludingInactive
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
+    startLine: 48
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Unity
+  summary: >-
+    Returns the component of Type <code class="paramref">T</code> in the <code class="paramref">gameObject</code> or any of its parents, null if there isn't one.
+
+    In contrast to <xref href="UnityEngine.GameObject.GetComponentInParent(System.Type%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> this method also includes inactive components.
+  example: []
+  syntax:
+    content: 'public static T GetComponentInParentIncludingInactive<T>(this GameObject gameObject) where T : Component'
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function GetComponentInParentIncludingInactive(Of T As Component)(gameObject As GameObject) As T
+  overload: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive*
+  nameWithType.vb: SceneUtils.GetComponentInParentIncludingInactive(Of T)(GameObject)
+  fullName.vb: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive(Of T)(UnityEngine.GameObject)
+  name.vb: GetComponentInParentIncludingInactive(Of T)(GameObject)
+- uid: VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(UnityEngine.GameObject)
+  id: GetOrAddComponent``1(UnityEngine.GameObject)
+  isExtensionMethod: true
+  parent: VRBuilder.Unity.SceneUtils
+  langs:
+  - csharp
+  - vb
+  name: GetOrAddComponent<T>(GameObject)
+  nameWithType: SceneUtils.GetOrAddComponent<T>(GameObject)
+  fullName: VRBuilder.Unity.SceneUtils.GetOrAddComponent<T>(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Unity/SceneUtils.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetOrAddComponent
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
+    startLine: 71
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Unity
+  summary: >-
+    Returns an instance of the component of type <code class="typeparamref">T</code>.
+
+    If no instance of the component exists on the <code class="paramref">gameObject</code> yet, a new instance will be created.
+
+    Otherwise, the behaviour is identical to that of `GameObject.GetComponent<T>`.
+  example: []
+  syntax:
+    content: 'public static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component'
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function GetOrAddComponent(Of T As Component)(gameObject As GameObject) As T
+  overload: VRBuilder.Unity.SceneUtils.GetOrAddComponent*
+  nameWithType.vb: SceneUtils.GetOrAddComponent(Of T)(GameObject)
+  fullName.vb: VRBuilder.Unity.SceneUtils.GetOrAddComponent(Of T)(UnityEngine.GameObject)
+  name.vb: GetOrAddComponent(Of T)(GameObject)
+- uid: VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
+  id: ContainsMissingScripts(UnityEngine.GameObject)
+  parent: VRBuilder.Unity.SceneUtils
+  langs:
+  - csharp
+  - vb
+  name: ContainsMissingScripts(GameObject)
+  nameWithType: SceneUtils.ContainsMissingScripts(GameObject)
+  fullName: VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Unity/SceneUtils.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ContainsMissingScripts
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
+    startLine: 82
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Unity
+  summary: Checks whether a <code class="paramref">gameObject</code> contains missing scripts.
+  example: []
+  syntax:
+    content: public static bool ContainsMissingScripts(GameObject gameObject)
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+      description: GameObject to check.
+    return:
+      type: System.Boolean
+      description: True, if scripts are missing.
+    content.vb: Public Shared Function ContainsMissingScripts(gameObject As GameObject) As Boolean
+  overload: VRBuilder.Unity.SceneUtils.ContainsMissingScripts*
+references:
+- uid: VRBuilder.Unity
+  commentId: N:VRBuilder.Unity
+  href: VRBuilder.html
+  name: VRBuilder.Unity
+  nameWithType: VRBuilder.Unity
+  fullName: VRBuilder.Unity
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Unity
+    name: Unity
+    href: VRBuilder.Unity.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Unity
+    name: Unity
+    href: VRBuilder.Unity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents*
+  commentId: Overload:VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents
+  href: VRBuilder.Unity.SceneUtils.html#VRBuilder_Unity_SceneUtils_GetActiveAndInactiveComponents__1
+  name: GetActiveAndInactiveComponents
+  nameWithType: SceneUtils.GetActiveAndInactiveComponents
+  fullName: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects*
+  commentId: Overload:VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
+  href: VRBuilder.Unity.SceneUtils.html#VRBuilder_Unity_SceneUtils_GetActiveAndInactiveGameObjects
+  name: GetActiveAndInactiveGameObjects
+  nameWithType: SceneUtils.GetActiveAndInactiveGameObjects
+  fullName: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GameObject>
+  nameWithType: IEnumerable<GameObject>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.GameObject>
+  nameWithType.vb: IEnumerable(Of GameObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.GameObject)
+  name.vb: IEnumerable(Of GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)
+  commentId: M:UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: GetComponentInParent(Type, bool)
+  nameWithType: GameObject.GetComponentInParent(Type, bool)
+  fullName: UnityEngine.GameObject.GetComponentInParent(System.Type, bool)
+  nameWithType.vb: GameObject.GetComponentInParent(Type, Boolean)
+  fullName.vb: UnityEngine.GameObject.GetComponentInParent(System.Type, Boolean)
+  name.vb: GetComponentInParent(Type, Boolean)
+  spec.csharp:
+  - uid: UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)
+    name: GetComponentInParent
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)
+    name: GetComponentInParent
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive*
+  commentId: Overload:VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive
+  href: VRBuilder.Unity.SceneUtils.html#VRBuilder_Unity_SceneUtils_GetComponentInParentIncludingInactive__1_UnityEngine_GameObject_
+  name: GetComponentInParentIncludingInactive
+  nameWithType: SceneUtils.GetComponentInParentIncludingInactive
+  fullName: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: VRBuilder.Unity.SceneUtils.GetOrAddComponent*
+  commentId: Overload:VRBuilder.Unity.SceneUtils.GetOrAddComponent
+  href: VRBuilder.Unity.SceneUtils.html#VRBuilder_Unity_SceneUtils_GetOrAddComponent__1_UnityEngine_GameObject_
+  name: GetOrAddComponent
+  nameWithType: SceneUtils.GetOrAddComponent
+  fullName: VRBuilder.Unity.SceneUtils.GetOrAddComponent
+- uid: VRBuilder.Unity.SceneUtils.ContainsMissingScripts*
+  commentId: Overload:VRBuilder.Unity.SceneUtils.ContainsMissingScripts
+  href: VRBuilder.Unity.SceneUtils.html#VRBuilder_Unity_SceneUtils_ContainsMissingScripts_UnityEngine_GameObject_
+  name: ContainsMissingScripts
+  nameWithType: SceneUtils.ContainsMissingScripts
+  fullName: VRBuilder.Unity.SceneUtils.ContainsMissingScripts
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

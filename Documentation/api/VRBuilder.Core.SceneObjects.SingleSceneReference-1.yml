@@ -1,0 +1,993 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  commentId: T:VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  id: SingleSceneReference`1
+  parent: VRBuilder.Core.SceneObjects
+  children:
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor(System.Collections.Generic.IEnumerable{System.Guid})
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor(System.Guid)
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.DetermineValue(`0)
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.HasValue
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.ToString
+  - VRBuilder.Core.SceneObjects.SingleSceneReference`1.Value
+  langs:
+  - csharp
+  - vb
+  name: SingleSceneReference<T>
+  nameWithType: SingleSceneReference<T>
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SingleSceneReference
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 11
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Step inspector reference to a single object.
+  example: []
+  syntax:
+    content: >-
+      [DataContract(IsReference = true)]
+
+      public abstract class SingleSceneReference<T> : ProcessSceneReference<T>, ICanBeEmpty where T : class
+    typeParameters:
+    - id: T
+    content.vb: >-
+      <DataContract(IsReference:=True)>
+
+      Public MustInherit Class SingleSceneReference(Of T As Class) Inherits ProcessSceneReference(Of T) Implements ICanBeEmpty
+  inheritance:
+  - System.Object
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  - VRBuilder.Core.SceneObjects.ProcessSceneReference{{T}}
+  derivedClasses:
+  - VRBuilder.Core.SceneObjects.SingleSceneObjectReference
+  - VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  implements:
+  - VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  inheritedMembers:
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Guids
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.AddGuid(System.Guid)
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.RemoveGuid(System.Guid)
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable{System.Guid})
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
+  - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: IsReference
+      type: System.Boolean
+      value: true
+  nameWithType.vb: SingleSceneReference(Of T)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T)
+  name.vb: SingleSceneReference(Of T)
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.Value
+  commentId: P:VRBuilder.Core.SceneObjects.SingleSceneReference`1.Value
+  id: Value
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: SingleSceneReference<T>.Value
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.Value
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Value
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: public T Value { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Value As T
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.Value*
+  nameWithType.vb: SingleSceneReference(Of T).Value
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).Value
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.HasValue
+  commentId: M:VRBuilder.Core.SceneObjects.SingleSceneReference`1.HasValue
+  id: HasValue
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: HasValue()
+  nameWithType: SingleSceneReference<T>.HasValue()
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.HasValue()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: HasValue
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 26
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Returns true if the reference contains a non-null value.
+  example: []
+  syntax:
+    content: public override bool HasValue()
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function HasValue() As Boolean
+  overridden: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.HasValue
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.HasValue*
+  nameWithType.vb: SingleSceneReference(Of T).HasValue()
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).HasValue()
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.ToString
+  commentId: M:VRBuilder.Core.SceneObjects.SingleSceneReference`1.ToString
+  id: ToString
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SingleSceneReference<T>.ToString()
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.ToString()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ToString
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 31
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.ToString*
+  nameWithType.vb: SingleSceneReference(Of T).ToString()
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).ToString()
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.DetermineValue(`0)
+  commentId: M:VRBuilder.Core.SceneObjects.SingleSceneReference`1.DetermineValue(`0)
+  id: DetermineValue(`0)
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: DetermineValue(T)
+  nameWithType: SingleSceneReference<T>.DetermineValue(T)
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.DetermineValue(T)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: DetermineValue
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 49
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Determine the object referenced by this scene reference.
+  example: []
+  syntax:
+    content: protected abstract T DetermineValue(T cachedValue)
+    parameters:
+    - id: cachedValue
+      type: '{T}'
+    return:
+      type: '{T}'
+    content.vb: Protected MustOverride Function DetermineValue(cachedValue As T) As T
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.DetermineValue*
+  nameWithType.vb: SingleSceneReference(Of T).DetermineValue(T)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).DetermineValue(T)
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor
+  commentId: M:VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor
+  id: '#ctor'
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: SingleSceneReference()
+  nameWithType: SingleSceneReference<T>.SingleSceneReference()
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.SingleSceneReference()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 51
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: public SingleSceneReference()
+    content.vb: Public Sub New()
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor*
+  nameWithType.vb: SingleSceneReference(Of T).New()
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).New()
+  name.vb: New()
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: SingleSceneReference(Guid)
+  nameWithType: SingleSceneReference<T>.SingleSceneReference(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.SingleSceneReference(System.Guid)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 52
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: public SingleSceneReference(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+    content.vb: Public Sub New(guid As Guid)
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor*
+  nameWithType.vb: SingleSceneReference(Of T).New(Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).New(System.Guid)
+  name.vb: New(Guid)
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor(System.Collections.Generic.IEnumerable{System.Guid})
+  commentId: M:VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor(System.Collections.Generic.IEnumerable{System.Guid})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.Guid})'
+  parent: VRBuilder.Core.SceneObjects.SingleSceneReference`1
+  langs:
+  - csharp
+  - vb
+  name: SingleSceneReference(IEnumerable<Guid>)
+  nameWithType: SingleSceneReference<T>.SingleSceneReference(IEnumerable<Guid>)
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.SingleSceneReference(System.Collections.Generic.IEnumerable<System.Guid>)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SingleSceneReference.cs
+    startLine: 53
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: public SingleSceneReference(IEnumerable<Guid> guids)
+    parameters:
+    - id: guids
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+    content.vb: Public Sub New(guids As IEnumerable(Of Guid))
+  overload: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor*
+  nameWithType.vb: SingleSceneReference(Of T).New(IEnumerable(Of Guid))
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).New(System.Collections.Generic.IEnumerable(Of System.Guid))
+  name.vb: New(IEnumerable(Of Guid))
+references:
+- uid: VRBuilder.Core.SceneObjects
+  commentId: N:VRBuilder.Core.SceneObjects
+  href: VRBuilder.html
+  name: VRBuilder.Core.SceneObjects
+  nameWithType: VRBuilder.Core.SceneObjects
+  fullName: VRBuilder.Core.SceneObjects
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  commentId: T:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  parent: VRBuilder.Core.SceneObjects
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html
+  name: ProcessSceneReferenceBase
+  nameWithType: ProcessSceneReferenceBase
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReference{{T}}
+  commentId: T:VRBuilder.Core.SceneObjects.ProcessSceneReference{`0}
+  parent: VRBuilder.Core.SceneObjects
+  definition: VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReference-1.html
+  name: ProcessSceneReference<T>
+  nameWithType: ProcessSceneReference<T>
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReference<T>
+  nameWithType.vb: ProcessSceneReference(Of T)
+  fullName.vb: VRBuilder.Core.SceneObjects.ProcessSceneReference(Of T)
+  name.vb: ProcessSceneReference(Of T)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+    name: ProcessSceneReference
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReference-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+    name: ProcessSceneReference
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  commentId: T:VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+  parent: VRBuilder.Core.Runtime.Properties
+  href: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.html
+  name: ICanBeEmpty
+  nameWithType: ICanBeEmpty
+  fullName: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Guids
+  commentId: P:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Guids
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_Guids
+  name: Guids
+  nameWithType: ProcessSceneReferenceBase.Guids
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Guids
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.AddGuid(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.AddGuid(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_AddGuid_System_Guid_
+  name: AddGuid(Guid)
+  nameWithType: ProcessSceneReferenceBase.AddGuid(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.AddGuid(System.Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.AddGuid(System.Guid)
+    name: AddGuid
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_AddGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.AddGuid(System.Guid)
+    name: AddGuid
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_AddGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.RemoveGuid(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.RemoveGuid(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_RemoveGuid_System_Guid_
+  name: RemoveGuid(Guid)
+  nameWithType: ProcessSceneReferenceBase.RemoveGuid(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.RemoveGuid(System.Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.RemoveGuid(System.Guid)
+    name: RemoveGuid
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_RemoveGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.RemoveGuid(System.Guid)
+    name: RemoveGuid
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_RemoveGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable{System.Guid})
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable{System.Guid})
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_ResetGuids_System_Collections_Generic_IEnumerable_System_Guid__
+  name: ResetGuids(IEnumerable<Guid>)
+  nameWithType: ProcessSceneReferenceBase.ResetGuids(IEnumerable<Guid>)
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable<System.Guid>)
+  nameWithType.vb: ProcessSceneReferenceBase.ResetGuids(IEnumerable(Of Guid))
+  fullName.vb: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable(Of System.Guid))
+  name.vb: ResetGuids(IEnumerable(Of Guid))
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable{System.Guid})
+    name: ResetGuids
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_ResetGuids_System_Collections_Generic_IEnumerable_System_Guid__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.ResetGuids(System.Collections.Generic.IEnumerable{System.Guid})
+    name: ResetGuids
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_ResetGuids_System_Collections_Generic_IEnumerable_System_Guid__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_IsEmpty
+  name: IsEmpty()
+  nameWithType: ProcessSceneReferenceBase.IsEmpty()
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty()
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty
+    name: IsEmpty
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_IsEmpty
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty
+    name: IsEmpty
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_IsEmpty
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: ProcessSceneReferenceBase.Equals(object)
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(object)
+  nameWithType.vb: ProcessSceneReferenceBase.Equals(Object)
+  fullName.vb: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
+    name: Equals
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
+    name: Equals
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_GetHashCode
+  name: GetHashCode()
+  nameWithType: ProcessSceneReferenceBase.GetHashCode()
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode()
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
+    name: GetHashCode
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
+    name: GetHashCode
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+  commentId: T:VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReference-1.html
+  name: ProcessSceneReference<T>
+  nameWithType: ProcessSceneReference<T>
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReference<T>
+  nameWithType.vb: ProcessSceneReference(Of T)
+  fullName.vb: VRBuilder.Core.SceneObjects.ProcessSceneReference(Of T)
+  name.vb: ProcessSceneReference(Of T)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+    name: ProcessSceneReference
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReference-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReference`1
+    name: ProcessSceneReference
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReference-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Core.Runtime.Properties
+  commentId: N:VRBuilder.Core.Runtime.Properties
+  href: VRBuilder.html
+  name: VRBuilder.Core.Runtime.Properties
+  nameWithType: VRBuilder.Core.Runtime.Properties
+  fullName: VRBuilder.Core.Runtime.Properties
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime
+    name: Runtime
+    href: VRBuilder.Core.Runtime.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime.Properties
+    name: Properties
+    href: VRBuilder.Core.Runtime.Properties.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime
+    name: Runtime
+    href: VRBuilder.Core.Runtime.html
+  - name: .
+  - uid: VRBuilder.Core.Runtime.Properties
+    name: Properties
+    href: VRBuilder.Core.Runtime.Properties.html
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.Value*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SingleSceneReference`1.Value
+  href: VRBuilder.Core.SceneObjects.SingleSceneReference-1.html#VRBuilder_Core_SceneObjects_SingleSceneReference_1_Value
+  name: Value
+  nameWithType: SingleSceneReference<T>.Value
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.Value
+  nameWithType.vb: SingleSceneReference(Of T).Value
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).Value
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.HasValue
+  commentId: M:VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.HasValue
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
+  href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_HasValue
+  name: HasValue()
+  nameWithType: ProcessSceneReferenceBase.HasValue()
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.HasValue()
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.HasValue
+    name: HasValue
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_HasValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.HasValue
+    name: HasValue
+    href: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.html#VRBuilder_Core_SceneObjects_ProcessSceneReferenceBase_HasValue
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.HasValue*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SingleSceneReference`1.HasValue
+  href: VRBuilder.Core.SceneObjects.SingleSceneReference-1.html#VRBuilder_Core_SceneObjects_SingleSceneReference_1_HasValue
+  name: HasValue
+  nameWithType: SingleSceneReference<T>.HasValue
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.HasValue
+  nameWithType.vb: SingleSceneReference(Of T).HasValue
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).HasValue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.ToString*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SingleSceneReference`1.ToString
+  href: VRBuilder.Core.SceneObjects.SingleSceneReference-1.html#VRBuilder_Core_SceneObjects_SingleSceneReference_1_ToString
+  name: ToString
+  nameWithType: SingleSceneReference<T>.ToString
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.ToString
+  nameWithType.vb: SingleSceneReference(Of T).ToString
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.DetermineValue*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SingleSceneReference`1.DetermineValue
+  href: VRBuilder.Core.SceneObjects.SingleSceneReference-1.html#VRBuilder_Core_SceneObjects_SingleSceneReference_1_DetermineValue__0_
+  name: DetermineValue
+  nameWithType: SingleSceneReference<T>.DetermineValue
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.DetermineValue
+  nameWithType.vb: SingleSceneReference(Of T).DetermineValue
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).DetermineValue
+- uid: VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SingleSceneReference`1.#ctor
+  href: VRBuilder.Core.SceneObjects.SingleSceneReference-1.html#VRBuilder_Core_SceneObjects_SingleSceneReference_1__ctor
+  name: SingleSceneReference
+  nameWithType: SingleSceneReference<T>.SingleSceneReference
+  fullName: VRBuilder.Core.SceneObjects.SingleSceneReference<T>.SingleSceneReference
+  nameWithType.vb: SingleSceneReference(Of T).New
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleSceneReference(Of T).New
+  name.vb: New
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Collections.Generic.IEnumerable{System.Guid}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Guid>
+  nameWithType: IEnumerable<Guid>
+  fullName: System.Collections.Generic.IEnumerable<System.Guid>
+  nameWithType.vb: IEnumerable(Of Guid)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Guid)
+  name.vb: IEnumerable(Of Guid)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

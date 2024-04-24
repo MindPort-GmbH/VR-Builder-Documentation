@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.IO.IPlatformFileSystem
+  commentId: T:VRBuilder.Core.IO.IPlatformFileSystem
+  id: IPlatformFileSystem
+  parent: VRBuilder.Core.IO
+  children:
+  - VRBuilder.Core.IO.IPlatformFileSystem.Exists(System.String)
+  - VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt(System.String,System.String)
+  - VRBuilder.Core.IO.IPlatformFileSystem.Read(System.String)
+  - VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText(System.String)
+  - VRBuilder.Core.IO.IPlatformFileSystem.Write(System.String,System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: IPlatformFileSystem
+  nameWithType: IPlatformFileSystem
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem
+  type: Interface
+  source:
+    remote:
+      path: Source/Core/Runtime/IO/IPlatformFileSystem.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IPlatformFileSystem
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IO/IPlatformFileSystem.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.IO
+  summary: Interface with basic platform operations for reading and saving files in Unity.
+  remarks: Operations are done for the StreamingAssets and platform persistent data folders.
+  example: []
+  syntax:
+    content: public interface IPlatformFileSystem
+    content.vb: Public Interface IPlatformFileSystem
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.Read(System.String)
+  commentId: M:VRBuilder.Core.IO.IPlatformFileSystem.Read(System.String)
+  id: Read(System.String)
+  parent: VRBuilder.Core.IO.IPlatformFileSystem
+  langs:
+  - csharp
+  - vb
+  name: Read(string)
+  nameWithType: IPlatformFileSystem.Read(string)
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.Read(string)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IO/IPlatformFileSystem.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Read
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IO/IPlatformFileSystem.cs
+    startLine: 22
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.IO
+  summary: Loads a file stored at <code class="paramref">filePath</code>.
+  remarks: <code class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
+  example: []
+  syntax:
+    content: Task<byte[]> Read(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: The contents of the file into a byte array.
+    content.vb: Function Read(filePath As String) As Task(Of Byte())
+  overload: VRBuilder.Core.IO.IPlatformFileSystem.Read*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: Exception thrown if the file does not exist.
+  nameWithType.vb: IPlatformFileSystem.Read(String)
+  fullName.vb: VRBuilder.Core.IO.IPlatformFileSystem.Read(String)
+  name.vb: Read(String)
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText(System.String)
+  commentId: M:VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText(System.String)
+  id: ReadAllText(System.String)
+  parent: VRBuilder.Core.IO.IPlatformFileSystem
+  langs:
+  - csharp
+  - vb
+  name: ReadAllText(string)
+  nameWithType: IPlatformFileSystem.ReadAllText(string)
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText(string)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IO/IPlatformFileSystem.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ReadAllText
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IO/IPlatformFileSystem.cs
+    startLine: 30
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.IO
+  summary: Loads a file stored at <code class="paramref">filePath</code>.
+  remarks: <code class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
+  example: []
+  syntax:
+    content: Task<string> ReadAllText(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Returns a `string` with the content of the file.
+    content.vb: Function ReadAllText(filePath As String) As Task(Of String)
+  overload: VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: Exception thrown if the file does not exist.
+  nameWithType.vb: IPlatformFileSystem.ReadAllText(String)
+  fullName.vb: VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText(String)
+  name.vb: ReadAllText(String)
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.Write(System.String,System.Byte[])
+  commentId: M:VRBuilder.Core.IO.IPlatformFileSystem.Write(System.String,System.Byte[])
+  id: Write(System.String,System.Byte[])
+  parent: VRBuilder.Core.IO.IPlatformFileSystem
+  langs:
+  - csharp
+  - vb
+  name: Write(string, byte[])
+  nameWithType: IPlatformFileSystem.Write(string, byte[])
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.Write(string, byte[])
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IO/IPlatformFileSystem.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Write
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IO/IPlatformFileSystem.cs
+    startLine: 37
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.IO
+  summary: Saves given <code class="paramref">fileData</code> in provided <code class="paramref">filePath</code>.
+  remarks: <code class="paramref">filePath</code> must be relative to PersistentDataPath.
+  example: []
+  syntax:
+    content: Task<bool> Write(string filePath, byte[] fileData)
+    parameters:
+    - id: filePath
+      type: System.String
+    - id: fileData
+      type: System.Byte[]
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns true if <code class="paramref">fileData</code> could be saved successfully; otherwise, false.
+    content.vb: Function Write(filePath As String, fileData As Byte()) As Task(Of Boolean)
+  overload: VRBuilder.Core.IO.IPlatformFileSystem.Write*
+  nameWithType.vb: IPlatformFileSystem.Write(String, Byte())
+  fullName.vb: VRBuilder.Core.IO.IPlatformFileSystem.Write(String, Byte())
+  name.vb: Write(String, Byte())
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.Exists(System.String)
+  commentId: M:VRBuilder.Core.IO.IPlatformFileSystem.Exists(System.String)
+  id: Exists(System.String)
+  parent: VRBuilder.Core.IO.IPlatformFileSystem
+  langs:
+  - csharp
+  - vb
+  name: Exists(string)
+  nameWithType: IPlatformFileSystem.Exists(string)
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.Exists(string)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IO/IPlatformFileSystem.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Exists
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IO/IPlatformFileSystem.cs
+    startLine: 43
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.IO
+  summary: Returns true if given <code class="paramref">filePath</code> contains the name of an existing file under the StreamingAssets or platform persistent data folder; otherwise, false.
+  remarks: <code class="paramref">filePath</code> must be relative to the StreamingAssets or the platform persistent data folder.
+  example: []
+  syntax:
+    content: Task<bool> Exists(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function Exists(filePath As String) As Task(Of Boolean)
+  overload: VRBuilder.Core.IO.IPlatformFileSystem.Exists*
+  nameWithType.vb: IPlatformFileSystem.Exists(String)
+  fullName.vb: VRBuilder.Core.IO.IPlatformFileSystem.Exists(String)
+  name.vb: Exists(String)
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt(System.String,System.String)
+  commentId: M:VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt(System.String,System.String)
+  id: FetchStreamingAssetsFilesAt(System.String,System.String)
+  parent: VRBuilder.Core.IO.IPlatformFileSystem
+  langs:
+  - csharp
+  - vb
+  name: FetchStreamingAssetsFilesAt(string, string)
+  nameWithType: IPlatformFileSystem.FetchStreamingAssetsFilesAt(string, string)
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt(string, string)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IO/IPlatformFileSystem.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: FetchStreamingAssetsFilesAt
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IO/IPlatformFileSystem.cs
+    startLine: 53
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.IO
+  summary: Returns the names of files (including their paths) that match the specified search pattern in the specified directory relative to the Streaming Assets folder.
+  example: []
+  syntax:
+    content: IEnumerable<string> FetchStreamingAssetsFilesAt(string path, string searchPattern)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to the Streaming Assets folder. This string is not case-sensitive.
+    - id: searchPattern
+      type: System.String
+      description: >-
+        The search string to match against the names of files in <code class="paramref">path</code>.
+
+        Depending on the platform, this parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Function FetchStreamingAssetsFilesAt(path As String, searchPattern As String) As IEnumerable(Of String)
+  overload: VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt*
+  nameWithType.vb: IPlatformFileSystem.FetchStreamingAssetsFilesAt(String, String)
+  fullName.vb: VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt(String, String)
+  name.vb: FetchStreamingAssetsFilesAt(String, String)
+references:
+- uid: VRBuilder.Core.IO
+  commentId: N:VRBuilder.Core.IO
+  href: VRBuilder.html
+  name: VRBuilder.Core.IO
+  nameWithType: VRBuilder.Core.IO
+  fullName: VRBuilder.Core.IO
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.IO
+    name: IO
+    href: VRBuilder.Core.IO.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.IO
+    name: IO
+    href: VRBuilder.Core.IO.html
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.Read*
+  commentId: Overload:VRBuilder.Core.IO.IPlatformFileSystem.Read
+  href: VRBuilder.Core.IO.IPlatformFileSystem.html#VRBuilder_Core_IO_IPlatformFileSystem_Read_System_String_
+  name: Read
+  nameWithType: IPlatformFileSystem.Read
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.Read
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<byte[]>
+  nameWithType: Task<byte[]>
+  fullName: System.Threading.Tasks.Task<byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText*
+  commentId: Overload:VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText
+  href: VRBuilder.Core.IO.IPlatformFileSystem.html#VRBuilder_Core_IO_IPlatformFileSystem_ReadAllText_System_String_
+  name: ReadAllText
+  nameWithType: IPlatformFileSystem.ReadAllText
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.Write*
+  commentId: Overload:VRBuilder.Core.IO.IPlatformFileSystem.Write
+  href: VRBuilder.Core.IO.IPlatformFileSystem.html#VRBuilder_Core_IO_IPlatformFileSystem_Write_System_String_System_Byte___
+  name: Write
+  nameWithType: IPlatformFileSystem.Write
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.Write
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.Exists*
+  commentId: Overload:VRBuilder.Core.IO.IPlatformFileSystem.Exists
+  href: VRBuilder.Core.IO.IPlatformFileSystem.html#VRBuilder_Core_IO_IPlatformFileSystem_Exists_System_String_
+  name: Exists
+  nameWithType: IPlatformFileSystem.Exists
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.Exists
+- uid: VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt*
+  commentId: Overload:VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt
+  href: VRBuilder.Core.IO.IPlatformFileSystem.html#VRBuilder_Core_IO_IPlatformFileSystem_FetchStreamingAssetsFilesAt_System_String_System_String_
+  name: FetchStreamingAssetsFilesAt
+  nameWithType: IPlatformFileSystem.FetchStreamingAssetsFilesAt
+  fullName: VRBuilder.Core.IO.IPlatformFileSystem.FetchStreamingAssetsFilesAt
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

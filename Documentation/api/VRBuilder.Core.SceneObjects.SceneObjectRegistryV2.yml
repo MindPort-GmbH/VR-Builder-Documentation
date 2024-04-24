@@ -1,0 +1,1776 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  commentId: T:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  id: SceneObjectRegistryV2
+  parent: VRBuilder.Core.SceneObjects
+  children:
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.#ctor
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName(System.String)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName(System.String)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties``1(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag``1(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item(System.Guid)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item(System.String)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  - VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.registeredObjects
+  langs:
+  - csharp
+  - vb
+  name: SceneObjectRegistryV2
+  nameWithType: SceneObjectRegistryV2
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SceneObjectRegistryV2
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: >-
+    Implementation of <xref href="VRBuilder.Core.SceneObjects.ISceneObjectRegistry" data-throw-if-not-resolved="false"></xref> that handles <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>s with one
+
+    or more GUID associated to them. The GUIDs don't have to be unique and can represent a group of objects.
+  example: []
+  syntax:
+    content: 'public class SceneObjectRegistryV2 : ISceneObjectRegistry'
+    content.vb: Public Class SceneObjectRegistryV2 Implements ISceneObjectRegistry
+  inheritance:
+  - System.Object
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.registeredObjects
+  commentId: F:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.registeredObjects
+  id: registeredObjects
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: registeredObjects
+  nameWithType: SceneObjectRegistryV2.registeredObjects
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.registeredObjects
+  type: Field
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: registeredObjects
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 16
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: protected readonly Dictionary<Guid, List<ISceneObject>> registeredObjects
+    return:
+      type: System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.List{VRBuilder.Core.SceneObjects.ISceneObject}}
+    content.vb: Protected ReadOnly registeredObjects As Dictionary(Of Guid, List(Of ISceneObject))
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids
+  commentId: P:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids
+  id: RegisteredGuids
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: RegisteredGuids
+  nameWithType: SceneObjectRegistryV2.RegisteredGuids
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: RegisteredGuids
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 18
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: public IEnumerable<Guid> RegisteredGuids { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+    content.vb: Public ReadOnly Property RegisteredGuids As IEnumerable(Of Guid)
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids*
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item(System.String)
+  commentId: P:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item(System.String)
+  id: Item(System.String)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: this[string]
+  nameWithType: SceneObjectRegistryV2.this[string]
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.this[string]
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: this[]
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 21
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Shortcut for GetByName(string name) method.
+  example: []
+  syntax:
+    content: public ISceneObject this[string name] { get; }
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: VRBuilder.Core.SceneObjects.ISceneObject
+    content.vb: Public ReadOnly Default Property this[](name As String) As ISceneObject
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.String)
+  nameWithType.vb: SceneObjectRegistryV2.this[](String)
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.this[](String)
+  name.vb: this[](String)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item(System.Guid)
+  commentId: P:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item(System.Guid)
+  id: Item(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: this[Guid]
+  nameWithType: SceneObjectRegistryV2.this[Guid]
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.this[System.Guid]
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: this[]
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 24
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Shortcut for GetByGuid(Guid guid) method.
+  example: []
+  syntax:
+    content: public ISceneObject this[Guid guid] { get; }
+    parameters:
+    - id: guid
+      type: System.Guid
+    return:
+      type: VRBuilder.Core.SceneObjects.ISceneObject
+    content.vb: Public ReadOnly Default Property this[](guid As Guid) As ISceneObject
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
+  nameWithType.vb: SceneObjectRegistryV2.this[](Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.this[](System.Guid)
+  name.vb: this[](Guid)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.#ctor
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.#ctor
+  id: '#ctor'
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: SceneObjectRegistryV2()
+  nameWithType: SceneObjectRegistryV2.SceneObjectRegistryV2()
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.SceneObjectRegistryV2()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 26
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: public SceneObjectRegistryV2()
+    content.vb: Public Sub New()
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.#ctor*
+  nameWithType.vb: SceneObjectRegistryV2.New()
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.New()
+  name.vb: New()
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid(System.Guid)
+  id: ContainsGuid(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: ContainsGuid(Guid)
+  nameWithType: SceneObjectRegistryV2.ContainsGuid(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ContainsGuid
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 32
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Returns if the Guid is registered in the registry.
+  example: []
+  syntax:
+    content: public bool ContainsGuid(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsGuid(guid As Guid) As Boolean
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName(System.String)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName(System.String)
+  id: ContainsName(System.String)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: ContainsName(string)
+  nameWithType: SceneObjectRegistryV2.ContainsName(string)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName(string)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ContainsName
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 38
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Returns if the name is registered in the registry.
+  example: []
+  syntax:
+    content: public bool ContainsName(string guidString)
+    parameters:
+    - id: guidString
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsName(guidString As String) As Boolean
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(System.String)
+  nameWithType.vb: SceneObjectRegistryV2.ContainsName(String)
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName(String)
+  name.vb: ContainsName(String)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid(System.Guid)
+  id: GetByGuid(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: GetByGuid(Guid)
+  nameWithType: SceneObjectRegistryV2.GetByGuid(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetByGuid
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 51
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: >-
+    Returns the IProcessSceneEntity belonging to the given Guid.
+
+    If there is no fitting Entity found a MissingEntityException will be thrown.
+  example: []
+  syntax:
+    content: public ISceneObject GetByGuid(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+    return:
+      type: VRBuilder.Core.SceneObjects.ISceneObject
+    content.vb: Public Function GetByGuid(guid As Guid) As ISceneObject
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName(System.String)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName(System.String)
+  id: GetByName(System.String)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: GetByName(string)
+  nameWithType: SceneObjectRegistryV2.GetByName(string)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName(string)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetByName
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 62
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: >-
+    Returns the IProcessSceneEntity belonging to the given unique name.
+
+    If there is no fitting Entity found a MissingEntityException will be thrown.
+  example: []
+  syntax:
+    content: public ISceneObject GetByName(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: VRBuilder.Core.SceneObjects.ISceneObject
+    content.vb: Public Function GetByName(name As String) As ISceneObject
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(System.String)
+  nameWithType.vb: SceneObjectRegistryV2.GetByName(String)
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName(String)
+  name.vb: GetByName(String)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects(System.Guid)
+  id: GetObjects(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: GetObjects(Guid)
+  nameWithType: SceneObjectRegistryV2.GetObjects(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetObjects
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 75
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Returns all registered scene objects which have the provided guid assigned to them.
+  example: []
+  syntax:
+    content: public IEnumerable<ISceneObject> GetObjects(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+    return:
+      type: System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject}
+    content.vb: Public Function GetObjects(guid As Guid) As IEnumerable(Of ISceneObject)
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties``1(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties``1(System.Guid)
+  id: GetProperties``1(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: GetProperties<T>(Guid)
+  nameWithType: SceneObjectRegistryV2.GetProperties<T>(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties<T>(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetProperties
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 100
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Returns all registered scene objects with the provided guid and at least one valid property of the specified type.
+  example: []
+  syntax:
+    content: 'public IEnumerable<T> GetProperties<T>(Guid guid) where T : ISceneObjectProperty'
+    parameters:
+    - id: guid
+      type: System.Guid
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Function GetProperties(Of T As ISceneObjectProperty)(guid As Guid) As IEnumerable(Of T)
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties``1(System.Guid)
+  nameWithType.vb: SceneObjectRegistryV2.GetProperties(Of T)(Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties(Of T)(System.Guid)
+  name.vb: GetProperties(Of T)(Guid)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  id: Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: Register(ISceneObject)
+  nameWithType: SceneObjectRegistryV2.Register(ISceneObject)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Register
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 108
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: >-
+    Registers an SceneObject in the registry. If there is an SceneObject with the same name
+
+    already registered, an NameNotUniqueException will be thrown. Also if the Guid
+
+    is already known an SceneObjectAlreadyRegisteredException will be thrown.
+  example: []
+  syntax:
+    content: public void Register(ISceneObject obj)
+    parameters:
+    - id: obj
+      type: VRBuilder.Core.SceneObjects.ISceneObject
+    content.vb: Public Sub Register(obj As ISceneObject)
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll
+  id: RegisterAll
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: RegisterAll()
+  nameWithType: SceneObjectRegistryV2.RegisterAll()
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: RegisterAll
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 190
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Registers all SceneObject in scene, independent of their state.
+  example: []
+  syntax:
+    content: public void RegisterAll()
+    content.vb: Public Sub RegisterAll()
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh
+  id: Refresh
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: Refresh()
+  nameWithType: SceneObjectRegistryV2.Refresh()
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Refresh
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 199
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Updates the registry by removing all <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> which are not in the scene anymore and adding new ones.
+  example: []
+  syntax:
+    content: public void Refresh()
+    content.vb: Public Sub Refresh()
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild
+  id: DebugRebuild
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: DebugRebuild()
+  nameWithType: SceneObjectRegistryV2.DebugRebuild()
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: DebugRebuild
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 220
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Clears the registry and registers all object in the scene again.
+  example: []
+  syntax:
+    content: public void DebugRebuild()
+    content.vb: Public Sub DebugRebuild()
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild*
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  id: Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: Unregister(ISceneObject)
+  nameWithType: SceneObjectRegistryV2.Unregister(ISceneObject)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Unregister
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 227
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  summary: Removes the SceneObject completely from the Registry.
+  example: []
+  syntax:
+    content: public bool Unregister(ISceneObject obj)
+    parameters:
+    - id: obj
+      type: VRBuilder.Core.SceneObjects.ISceneObject
+    return:
+      type: System.Boolean
+    content.vb: Public Function Unregister(obj As ISceneObject) As Boolean
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag(System.Guid)
+  id: GetByTag(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: GetByTag(Guid)
+  nameWithType: SceneObjectRegistryV2.GetByTag(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetByTag
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 261
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use GetObjects instead.")]
+
+      public IEnumerable<ISceneObject> GetByTag(Guid tag)
+    parameters:
+    - id: tag
+      type: System.Guid
+    return:
+      type: System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject}
+    content.vb: >-
+      <Obsolete("Use GetObjects instead.")>
+
+      Public Function GetByTag(tag As Guid) As IEnumerable(Of ISceneObject)
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag(System.Guid)
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use GetObjects instead.
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag``1(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag``1(System.Guid)
+  id: GetPropertyByTag``1(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2
+  langs:
+  - csharp
+  - vb
+  name: GetPropertyByTag<T>(Guid)
+  nameWithType: SceneObjectRegistryV2.GetPropertyByTag<T>(Guid)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag<T>(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetPropertyByTag
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistryV2.cs
+    startLine: 268
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use GetProperties instead.")]
+
+      public IEnumerable<T> GetPropertyByTag<T>(Guid tag) where T : ISceneObjectProperty
+    parameters:
+    - id: tag
+      type: System.Guid
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: >-
+      <Obsolete("Use GetProperties instead.")>
+
+      Public Function GetPropertyByTag(Of T As ISceneObjectProperty)(tag As Guid) As IEnumerable(Of T)
+  overload: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag*
+  implements:
+  - VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag``1(System.Guid)
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use GetProperties instead.
+  nameWithType.vb: SceneObjectRegistryV2.GetPropertyByTag(Of T)(Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag(Of T)(System.Guid)
+  name.vb: GetPropertyByTag(Of T)(Guid)
+references:
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  commentId: T:VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  parent: VRBuilder.Core.SceneObjects
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html
+  name: ISceneObjectRegistry
+  nameWithType: ISceneObjectRegistry
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+- uid: VRBuilder.Core.SceneObjects.ISceneObject
+  commentId: T:VRBuilder.Core.SceneObjects.ISceneObject
+  parent: VRBuilder.Core.SceneObjects
+  href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  name: ISceneObject
+  nameWithType: ISceneObject
+  fullName: VRBuilder.Core.SceneObjects.ISceneObject
+- uid: VRBuilder.Core.SceneObjects
+  commentId: N:VRBuilder.Core.SceneObjects
+  href: VRBuilder.html
+  name: VRBuilder.Core.SceneObjects
+  nameWithType: VRBuilder.Core.SceneObjects
+  fullName: VRBuilder.Core.SceneObjects
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.List{VRBuilder.Core.SceneObjects.ISceneObject}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Guid,System.Collections.Generic.List{VRBuilder.Core.SceneObjects.ISceneObject}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Guid, List<ISceneObject>>
+  nameWithType: Dictionary<Guid, List<ISceneObject>>
+  fullName: System.Collections.Generic.Dictionary<System.Guid, System.Collections.Generic.List<VRBuilder.Core.SceneObjects.ISceneObject>>
+  nameWithType.vb: Dictionary(Of Guid, List(Of ISceneObject))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Guid, System.Collections.Generic.List(Of VRBuilder.Core.SceneObjects.ISceneObject))
+  name.vb: Dictionary(Of Guid, List(Of ISceneObject))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_RegisteredGuids
+  name: RegisteredGuids
+  nameWithType: SceneObjectRegistryV2.RegisteredGuids
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisteredGuids
+- uid: System.Collections.Generic.IEnumerable{System.Guid}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Guid>
+  nameWithType: IEnumerable<Guid>
+  fullName: System.Collections.Generic.IEnumerable<System.Guid>
+  nameWithType.vb: IEnumerable(Of Guid)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Guid)
+  name.vb: IEnumerable(Of Guid)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Item
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_Item_System_String_
+  name: this
+  nameWithType: SceneObjectRegistryV2.this
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.this
+  nameWithType.vb: SceneObjectRegistryV2.this[]
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.this[]
+  name.vb: this[]
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.String)
+  commentId: P:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.String)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: this[string]
+  nameWithType: ISceneObjectRegistry.this[string]
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[string]
+  nameWithType.vb: ISceneObjectRegistry.this[](String)
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[](String)
+  name.vb: this[](String)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ']'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.String)
+    name: this[]
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Item_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
+  commentId: P:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: this[Guid]
+  nameWithType: ISceneObjectRegistry.this[Guid]
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[System.Guid]
+  nameWithType.vb: ISceneObjectRegistry.this[](Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[](System.Guid)
+  name.vb: this[](Guid)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ']'
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
+    name: this[]
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Item_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.#ctor*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.#ctor
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2__ctor
+  name: SceneObjectRegistryV2
+  nameWithType: SceneObjectRegistryV2.SceneObjectRegistryV2
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.SceneObjectRegistryV2
+  nameWithType.vb: SceneObjectRegistryV2.New
+  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.New
+  name.vb: New
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_ContainsGuid_System_Guid_
+  name: ContainsGuid
+  nameWithType: SceneObjectRegistryV2.ContainsGuid
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsGuid
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsGuid_System_Guid_
+  name: ContainsGuid(Guid)
+  nameWithType: ISceneObjectRegistry.ContainsGuid(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
+    name: ContainsGuid
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
+    name: ContainsGuid
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_ContainsName_System_String_
+  name: ContainsName
+  nameWithType: SceneObjectRegistryV2.ContainsName
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.ContainsName
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(System.String)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(System.String)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsName_System_String_
+  name: ContainsName(string)
+  nameWithType: ISceneObjectRegistry.ContainsName(string)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(string)
+  nameWithType.vb: ISceneObjectRegistry.ContainsName(String)
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(String)
+  name.vb: ContainsName(String)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(System.String)
+    name: ContainsName
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(System.String)
+    name: ContainsName
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_GetByGuid_System_Guid_
+  name: GetByGuid
+  nameWithType: SceneObjectRegistryV2.GetByGuid
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByGuid
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByGuid_System_Guid_
+  name: GetByGuid(Guid)
+  nameWithType: ISceneObjectRegistry.GetByGuid(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
+    name: GetByGuid
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
+    name: GetByGuid
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByGuid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_GetByName_System_String_
+  name: GetByName
+  nameWithType: SceneObjectRegistryV2.GetByName
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByName
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(System.String)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(System.String)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByName_System_String_
+  name: GetByName(string)
+  nameWithType: ISceneObjectRegistry.GetByName(string)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(string)
+  nameWithType.vb: ISceneObjectRegistry.GetByName(String)
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(String)
+  name.vb: GetByName(String)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(System.String)
+    name: GetByName
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(System.String)
+    name: GetByName
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_GetObjects_System_Guid_
+  name: GetObjects
+  nameWithType: SceneObjectRegistryV2.GetObjects
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetObjects
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetObjects_System_Guid_
+  name: GetObjects(Guid)
+  nameWithType: ISceneObjectRegistry.GetObjects(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
+    name: GetObjects
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetObjects_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
+    name: GetObjects
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetObjects_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject}
+  commentId: T:System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ISceneObject>
+  nameWithType: IEnumerable<ISceneObject>
+  fullName: System.Collections.Generic.IEnumerable<VRBuilder.Core.SceneObjects.ISceneObject>
+  nameWithType.vb: IEnumerable(Of ISceneObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VRBuilder.Core.SceneObjects.ISceneObject)
+  name.vb: IEnumerable(Of ISceneObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_GetProperties__1_System_Guid_
+  name: GetProperties
+  nameWithType: SceneObjectRegistryV2.GetProperties
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetProperties
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties``1(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties``1(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetProperties__1_System_Guid_
+  name: GetProperties<T>(Guid)
+  nameWithType: ISceneObjectRegistry.GetProperties<T>(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties<T>(System.Guid)
+  nameWithType.vb: ISceneObjectRegistry.GetProperties(Of T)(Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties(Of T)(System.Guid)
+  name.vb: GetProperties(Of T)(Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties``1(System.Guid)
+    name: GetProperties
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetProperties__1_System_Guid_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties``1(System.Guid)
+    name: GetProperties
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetProperties__1_System_Guid_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_Register_VRBuilder_Core_SceneObjects_ISceneObject_
+  name: Register
+  nameWithType: SceneObjectRegistryV2.Register
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Register
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Register_VRBuilder_Core_SceneObjects_ISceneObject_
+  name: Register(ISceneObject)
+  nameWithType: ISceneObjectRegistry.Register(ISceneObject)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+    name: Register
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Register_VRBuilder_Core_SceneObjects_ISceneObject_
+  - name: (
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)
+    name: Register
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Register_VRBuilder_Core_SceneObjects_ISceneObject_
+  - name: (
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_RegisterAll
+  name: RegisterAll
+  nameWithType: SceneObjectRegistryV2.RegisterAll
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.RegisterAll
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_RegisterAll
+  name: RegisterAll()
+  nameWithType: ISceneObjectRegistry.RegisterAll()
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll()
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
+    name: RegisterAll
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_RegisterAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
+    name: RegisterAll
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_RegisterAll
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_Refresh
+  name: Refresh
+  nameWithType: SceneObjectRegistryV2.Refresh
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Refresh
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Refresh
+  name: Refresh()
+  nameWithType: ISceneObjectRegistry.Refresh()
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh()
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
+    name: Refresh
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Refresh
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
+    name: Refresh
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Refresh
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_DebugRebuild
+  name: DebugRebuild
+  nameWithType: SceneObjectRegistryV2.DebugRebuild
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.DebugRebuild
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_Unregister_VRBuilder_Core_SceneObjects_ISceneObject_
+  name: Unregister
+  nameWithType: SceneObjectRegistryV2.Unregister
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.Unregister
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Unregister_VRBuilder_Core_SceneObjects_ISceneObject_
+  name: Unregister(ISceneObject)
+  nameWithType: ISceneObjectRegistry.Unregister(ISceneObject)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+    name: Unregister
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Unregister_VRBuilder_Core_SceneObjects_ISceneObject_
+  - name: (
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)
+    name: Unregister
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Unregister_VRBuilder_Core_SceneObjects_ISceneObject_
+  - name: (
+  - uid: VRBuilder.Core.SceneObjects.ISceneObject
+    name: ISceneObject
+    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_GetByTag_System_Guid_
+  name: GetByTag
+  nameWithType: SceneObjectRegistryV2.GetByTag
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetByTag
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByTag_System_Guid_
+  name: GetByTag(Guid)
+  nameWithType: ISceneObjectRegistry.GetByTag(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag(System.Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag(System.Guid)
+    name: GetByTag
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByTag_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag(System.Guid)
+    name: GetByTag
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByTag_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag*
+  commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag
+  href: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.html#VRBuilder_Core_SceneObjects_SceneObjectRegistryV2_GetPropertyByTag__1_System_Guid_
+  name: GetPropertyByTag
+  nameWithType: SceneObjectRegistryV2.GetPropertyByTag
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectRegistryV2.GetPropertyByTag
+- uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag``1(System.Guid)
+  commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag``1(System.Guid)
+  parent: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetPropertyByTag__1_System_Guid_
+  name: GetPropertyByTag<T>(Guid)
+  nameWithType: ISceneObjectRegistry.GetPropertyByTag<T>(Guid)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag<T>(System.Guid)
+  nameWithType.vb: ISceneObjectRegistry.GetPropertyByTag(Of T)(Guid)
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag(Of T)(System.Guid)
+  name.vb: GetPropertyByTag(Of T)(Guid)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag``1(System.Guid)
+    name: GetPropertyByTag
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetPropertyByTag__1_System_Guid_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag``1(System.Guid)
+    name: GetPropertyByTag
+    href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetPropertyByTag__1_System_Guid_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )

@@ -1,10 +1,13 @@
 apiRules:
 - include: # The namespaces to generate
-    uidRegex: VRBuilder.Core
+    uidRegex: ^VRBuilder\.Core
     type: Namespace
 - include:
-    uidRegex: VRBuilder.Editor
+    uidRegex: ^VRBuilder\.Editor
     type: Namespace
 - exclude:
     uidRegex: .* # Every other namespaces are ignored
+    type: Namespace
+- exclude:
+    uidRegex: ^VRBuilder\.Editor
     type: Namespace

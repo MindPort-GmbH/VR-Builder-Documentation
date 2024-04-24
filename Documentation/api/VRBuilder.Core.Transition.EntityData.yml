@@ -1,0 +1,1251 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.Transition.EntityData
+  commentId: T:VRBuilder.Core.Transition.EntityData
+  id: Transition.EntityData
+  parent: VRBuilder.Core
+  children:
+  - VRBuilder.Core.Transition.EntityData.Conditions
+  - VRBuilder.Core.Transition.EntityData.GetChildren
+  - VRBuilder.Core.Transition.EntityData.IsCompleted
+  - VRBuilder.Core.Transition.EntityData.Mode
+  - VRBuilder.Core.Transition.EntityData.Name
+  - VRBuilder.Core.Transition.EntityData.TargetStep
+  langs:
+  - csharp
+  - vb
+  name: Transition.EntityData
+  nameWithType: Transition.EntityData
+  fullName: VRBuilder.Core.Transition.EntityData
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: EntityData
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 27
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: The transition's data class.
+  example: []
+  syntax:
+    content: >-
+      [DisplayName("Transition")]
+
+      public class Transition.EntityData : EntityCollectionData<ICondition>, ITransitionData, IEntityCollectionDataWithMode<ICondition>, IEntityCollectionData<ICondition>, IEntityCollectionDataWithMode, IEntityCollectionData, IModeData, ICompletableData, INamedData, IData
+    content.vb: >-
+      <DisplayName("Transition")>
+
+      Public Class Transition.EntityData Inherits EntityCollectionData(Of ICondition) Implements ITransitionData, IEntityCollectionDataWithMode(Of ICondition), IEntityCollectionData(Of ICondition), IEntityCollectionDataWithMode, IEntityCollectionData, IModeData, ICompletableData, INamedData, IData
+  inheritance:
+  - System.Object
+  - VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  implements:
+  - VRBuilder.Core.ITransitionData
+  - VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode{VRBuilder.Core.Conditions.ICondition}
+  - VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  - VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode
+  - VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - VRBuilder.Core.Configuration.Modes.IModeData
+  - VRBuilder.Core.Conditions.ICompletableData
+  - VRBuilder.Core.INamedData
+  - VRBuilder.Core.IData
+  inheritedMembers:
+  - VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.Metadata
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: VRBuilder.Core.Attributes.DisplayNameAttribute
+    ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Transition
+- uid: VRBuilder.Core.Transition.EntityData.Conditions
+  commentId: P:VRBuilder.Core.Transition.EntityData.Conditions
+  id: Conditions
+  parent: VRBuilder.Core.Transition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: Conditions
+  nameWithType: Transition.EntityData.Conditions
+  fullName: VRBuilder.Core.Transition.EntityData.Conditions
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Conditions
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 31
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: A list of conditions. When you complete all of them, this transition will trigger.
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      [DisplayName("Conditions")]
+
+      [ReorderableListOf(new Type[] { typeof(FoldableAttribute), typeof(DeletableAttribute), typeof(HelpAttribute) })]
+
+      public IList<ICondition> Conditions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{VRBuilder.Core.Conditions.ICondition}
+    content.vb: >-
+      <DataMember>
+
+      <DisplayName("Conditions")>
+
+      <ReorderableListOf(New Type() { GetType(FoldableAttribute), GetType(DeletableAttribute), GetType(HelpAttribute) })>
+
+      Public Property Conditions As IList(Of ICondition)
+  overload: VRBuilder.Core.Transition.EntityData.Conditions*
+  implements:
+  - VRBuilder.Core.ITransitionData.Conditions
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  - type: VRBuilder.Core.Attributes.DisplayNameAttribute
+    ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Conditions
+- uid: VRBuilder.Core.Transition.EntityData.GetChildren
+  commentId: M:VRBuilder.Core.Transition.EntityData.GetChildren
+  id: GetChildren
+  parent: VRBuilder.Core.Transition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: GetChildren()
+  nameWithType: Transition.EntityData.GetChildren()
+  fullName: VRBuilder.Core.Transition.EntityData.GetChildren()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetChildren
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 36
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  example: []
+  syntax:
+    content: public override IEnumerable<ICondition> GetChildren()
+    return:
+      type: System.Collections.Generic.IEnumerable{VRBuilder.Core.Conditions.ICondition}
+    content.vb: Public Overrides Function GetChildren() As IEnumerable(Of ICondition)
+  overridden: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+  overload: VRBuilder.Core.Transition.EntityData.GetChildren*
+  implements:
+  - VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+- uid: VRBuilder.Core.Transition.EntityData.TargetStep
+  commentId: P:VRBuilder.Core.Transition.EntityData.TargetStep
+  id: TargetStep
+  parent: VRBuilder.Core.Transition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: TargetStep
+  nameWithType: Transition.EntityData.TargetStep
+  fullName: VRBuilder.Core.Transition.EntityData.TargetStep
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: TargetStep
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 42
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: The next step to take after this transition triggers.
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      public IStep TargetStep { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.IStep
+    content.vb: >-
+      <DataMember>
+
+      Public Property TargetStep As IStep
+  overload: VRBuilder.Core.Transition.EntityData.TargetStep*
+  implements:
+  - VRBuilder.Core.ITransitionData.TargetStep
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+- uid: VRBuilder.Core.Transition.EntityData.Mode
+  commentId: P:VRBuilder.Core.Transition.EntityData.Mode
+  id: Mode
+  parent: VRBuilder.Core.Transition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: Transition.EntityData.Mode
+  fullName: VRBuilder.Core.Transition.EntityData.Mode
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Mode
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 47
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  example: []
+  syntax:
+    content: public IMode Mode { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.Configuration.Modes.IMode
+    content.vb: Public Property Mode As IMode
+  overload: VRBuilder.Core.Transition.EntityData.Mode*
+  implements:
+  - VRBuilder.Core.Configuration.Modes.IModeData.Mode
+- uid: VRBuilder.Core.Transition.EntityData.IsCompleted
+  commentId: P:VRBuilder.Core.Transition.EntityData.IsCompleted
+  id: IsCompleted
+  parent: VRBuilder.Core.Transition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: IsCompleted
+  nameWithType: Transition.EntityData.IsCompleted
+  fullName: VRBuilder.Core.Transition.EntityData.IsCompleted
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IsCompleted
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 50
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  example: []
+  syntax:
+    content: public bool IsCompleted { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsCompleted As Boolean
+  overload: VRBuilder.Core.Transition.EntityData.IsCompleted*
+  implements:
+  - VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+- uid: VRBuilder.Core.Transition.EntityData.Name
+  commentId: P:VRBuilder.Core.Transition.EntityData.Name
+  id: Name
+  parent: VRBuilder.Core.Transition.EntityData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Transition.EntityData.Name
+  fullName: VRBuilder.Core.Transition.EntityData.Name
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/Transition.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Name
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Transition.cs
+    startLine: 52
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Name of the entity.
+  example: []
+  syntax:
+    content: >-
+      [IgnoreDataMember]
+
+      public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <IgnoreDataMember>
+
+      Public ReadOnly Property Name As String
+  overload: VRBuilder.Core.Transition.EntityData.Name*
+  implements:
+  - VRBuilder.Core.INamedData.Name
+  attributes:
+  - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
+    ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
+    arguments: []
+references:
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  commentId: T:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  parent: VRBuilder.Core.EntityOwners
+  definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1
+  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+  name: EntityCollectionData<ICondition>
+  nameWithType: EntityCollectionData<ICondition>
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.Conditions.ICondition>
+  nameWithType.vb: EntityCollectionData(Of ICondition)
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.Conditions.ICondition)
+  name.vb: EntityCollectionData(Of ICondition)
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
+    name: EntityCollectionData
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+  - name: <
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
+    name: EntityCollectionData
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: )
+- uid: VRBuilder.Core.ITransitionData
+  commentId: T:VRBuilder.Core.ITransitionData
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.ITransitionData.html
+  name: ITransitionData
+  nameWithType: ITransitionData
+  fullName: VRBuilder.Core.ITransitionData
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode{VRBuilder.Core.Conditions.ICondition}
+  commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode{VRBuilder.Core.Conditions.ICondition}
+  parent: VRBuilder.Core.EntityOwners
+  definition: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode-1.html
+  name: IEntityCollectionDataWithMode<ICondition>
+  nameWithType: IEntityCollectionDataWithMode<ICondition>
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode<VRBuilder.Core.Conditions.ICondition>
+  nameWithType.vb: IEntityCollectionDataWithMode(Of ICondition)
+  fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode(Of VRBuilder.Core.Conditions.ICondition)
+  name.vb: IEntityCollectionDataWithMode(Of ICondition)
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+    name: IEntityCollectionDataWithMode
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode-1.html
+  - name: <
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+    name: IEntityCollectionDataWithMode
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: )
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  parent: VRBuilder.Core.EntityOwners
+  definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+  name: IEntityCollectionData<ICondition>
+  nameWithType: IEntityCollectionData<ICondition>
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.Conditions.ICondition>
+  nameWithType.vb: IEntityCollectionData(Of ICondition)
+  fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.Conditions.ICondition)
+  name.vb: IEntityCollectionData(Of ICondition)
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+    name: IEntityCollectionData
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+  - name: <
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+    name: IEntityCollectionData
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: )
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode
+  commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode
+  parent: VRBuilder.Core.EntityOwners
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode.html
+  name: IEntityCollectionDataWithMode
+  nameWithType: IEntityCollectionDataWithMode
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData
+  parent: VRBuilder.Core.EntityOwners
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionData.html
+  name: IEntityCollectionData
+  nameWithType: IEntityCollectionData
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+- uid: VRBuilder.Core.Configuration.Modes.IModeData
+  commentId: T:VRBuilder.Core.Configuration.Modes.IModeData
+  parent: VRBuilder.Core.Configuration.Modes
+  href: VRBuilder.Core.Configuration.Modes.IModeData.html
+  name: IModeData
+  nameWithType: IModeData
+  fullName: VRBuilder.Core.Configuration.Modes.IModeData
+- uid: VRBuilder.Core.Conditions.ICompletableData
+  commentId: T:VRBuilder.Core.Conditions.ICompletableData
+  parent: VRBuilder.Core.Conditions
+  href: VRBuilder.Core.Conditions.ICompletableData.html
+  name: ICompletableData
+  nameWithType: ICompletableData
+  fullName: VRBuilder.Core.Conditions.ICompletableData
+- uid: VRBuilder.Core.INamedData
+  commentId: T:VRBuilder.Core.INamedData
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.INamedData.html
+  name: INamedData
+  nameWithType: INamedData
+  fullName: VRBuilder.Core.INamedData
+- uid: VRBuilder.Core.IData
+  commentId: T:VRBuilder.Core.IData
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IData.html
+  name: IData
+  nameWithType: IData
+  fullName: VRBuilder.Core.IData
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.Metadata
+  commentId: P:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.Metadata
+  parent: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1.Metadata
+  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_Metadata
+  name: Metadata
+  nameWithType: EntityCollectionData<ICondition>.Metadata
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.Conditions.ICondition>.Metadata
+  nameWithType.vb: EntityCollectionData(Of ICondition).Metadata
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.Conditions.ICondition).Metadata
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
+  commentId: T:VRBuilder.Core.EntityOwners.EntityCollectionData`1
+  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+  name: EntityCollectionData<TEntity>
+  nameWithType: EntityCollectionData<TEntity>
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>
+  nameWithType.vb: EntityCollectionData(Of TEntity)
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity)
+  name.vb: EntityCollectionData(Of TEntity)
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
+    name: EntityCollectionData
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
+    name: EntityCollectionData
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: VRBuilder.Core.EntityOwners
+  commentId: N:VRBuilder.Core.EntityOwners
+  href: VRBuilder.html
+  name: VRBuilder.Core.EntityOwners
+  nameWithType: VRBuilder.Core.EntityOwners
+  fullName: VRBuilder.Core.EntityOwners
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.EntityOwners
+    name: EntityOwners
+    href: VRBuilder.Core.EntityOwners.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.EntityOwners
+    name: EntityOwners
+    href: VRBuilder.Core.EntityOwners.html
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+  commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode-1.html
+  name: IEntityCollectionDataWithMode<TEntity>
+  nameWithType: IEntityCollectionDataWithMode<TEntity>
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode<TEntity>
+  nameWithType.vb: IEntityCollectionDataWithMode(Of TEntity)
+  fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode(Of TEntity)
+  name.vb: IEntityCollectionDataWithMode(Of TEntity)
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+    name: IEntityCollectionDataWithMode
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode`1
+    name: IEntityCollectionDataWithMode
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionDataWithMode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+  commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+  name: IEntityCollectionData<TEntity>
+  nameWithType: IEntityCollectionData<TEntity>
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>
+  nameWithType.vb: IEntityCollectionData(Of TEntity)
+  fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity)
+  name.vb: IEntityCollectionData(Of TEntity)
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+    name: IEntityCollectionData
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
+    name: IEntityCollectionData
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: VRBuilder.Core.Configuration.Modes
+  commentId: N:VRBuilder.Core.Configuration.Modes
+  href: VRBuilder.html
+  name: VRBuilder.Core.Configuration.Modes
+  nameWithType: VRBuilder.Core.Configuration.Modes
+  fullName: VRBuilder.Core.Configuration.Modes
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration
+    name: Configuration
+    href: VRBuilder.Core.Configuration.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration.Modes
+    name: Modes
+    href: VRBuilder.Core.Configuration.Modes.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration
+    name: Configuration
+    href: VRBuilder.Core.Configuration.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration.Modes
+    name: Modes
+    href: VRBuilder.Core.Configuration.Modes.html
+- uid: VRBuilder.Core.Conditions
+  commentId: N:VRBuilder.Core.Conditions
+  href: VRBuilder.html
+  name: VRBuilder.Core.Conditions
+  nameWithType: VRBuilder.Core.Conditions
+  fullName: VRBuilder.Core.Conditions
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Conditions
+    name: Conditions
+    href: VRBuilder.Core.Conditions.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Conditions
+    name: Conditions
+    href: VRBuilder.Core.Conditions.html
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.Metadata
+  commentId: P:VRBuilder.Core.EntityOwners.EntityCollectionData`1.Metadata
+  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_Metadata
+  name: Metadata
+  nameWithType: EntityCollectionData<TEntity>.Metadata
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.Metadata
+  nameWithType.vb: EntityCollectionData(Of TEntity).Metadata
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity).Metadata
+- uid: VRBuilder.Core.Transition.EntityData.Conditions*
+  commentId: Overload:VRBuilder.Core.Transition.EntityData.Conditions
+  href: VRBuilder.Core.Transition.EntityData.html#VRBuilder_Core_Transition_EntityData_Conditions
+  name: Conditions
+  nameWithType: Transition.EntityData.Conditions
+  fullName: VRBuilder.Core.Transition.EntityData.Conditions
+- uid: VRBuilder.Core.ITransitionData.Conditions
+  commentId: P:VRBuilder.Core.ITransitionData.Conditions
+  parent: VRBuilder.Core.ITransitionData
+  href: VRBuilder.Core.ITransitionData.html#VRBuilder_Core_ITransitionData_Conditions
+  name: Conditions
+  nameWithType: ITransitionData.Conditions
+  fullName: VRBuilder.Core.ITransitionData.Conditions
+- uid: System.Collections.Generic.IList{VRBuilder.Core.Conditions.ICondition}
+  commentId: T:System.Collections.Generic.IList{VRBuilder.Core.Conditions.ICondition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<ICondition>
+  nameWithType: IList<ICondition>
+  fullName: System.Collections.Generic.IList<VRBuilder.Core.Conditions.ICondition>
+  nameWithType.vb: IList(Of ICondition)
+  fullName.vb: System.Collections.Generic.IList(Of VRBuilder.Core.Conditions.ICondition)
+  name.vb: IList(Of ICondition)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+  commentId: M:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+  parent: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
+  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+  name: GetChildren()
+  nameWithType: EntityCollectionData<ICondition>.GetChildren()
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.Conditions.ICondition>.GetChildren()
+  nameWithType.vb: EntityCollectionData(Of ICondition).GetChildren()
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.Conditions.ICondition).GetChildren()
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Transition.EntityData.GetChildren*
+  commentId: Overload:VRBuilder.Core.Transition.EntityData.GetChildren
+  href: VRBuilder.Core.Transition.EntityData.html#VRBuilder_Core_Transition_EntityData_GetChildren
+  name: GetChildren
+  nameWithType: Transition.EntityData.GetChildren
+  fullName: VRBuilder.Core.Transition.EntityData.GetChildren
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+  commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+  parent: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}
+  definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+  name: GetChildren()
+  nameWithType: IEntityCollectionData<ICondition>.GetChildren()
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.Conditions.ICondition>.GetChildren()
+  nameWithType.vb: IEntityCollectionData(Of ICondition).GetChildren()
+  fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.Conditions.ICondition).GetChildren()
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.Conditions.ICondition}.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{VRBuilder.Core.Conditions.ICondition}
+  commentId: T:System.Collections.Generic.IEnumerable{VRBuilder.Core.Conditions.ICondition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ICondition>
+  nameWithType: IEnumerable<ICondition>
+  fullName: System.Collections.Generic.IEnumerable<VRBuilder.Core.Conditions.ICondition>
+  nameWithType.vb: IEnumerable(Of ICondition)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VRBuilder.Core.Conditions.ICondition)
+  name.vb: IEnumerable(Of ICondition)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.Conditions.ICondition
+    name: ICondition
+    href: VRBuilder.Core.Conditions.ICondition.html
+  - name: )
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
+  commentId: M:VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
+  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+  name: GetChildren()
+  nameWithType: EntityCollectionData<TEntity>.GetChildren()
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.GetChildren()
+  nameWithType.vb: EntityCollectionData(Of TEntity).GetChildren()
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity).GetChildren()
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
+  commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
+  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+  name: GetChildren()
+  nameWithType: IEntityCollectionData<TEntity>.GetChildren()
+  fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren()
+  nameWithType.vb: IEntityCollectionData(Of TEntity).GetChildren()
+  fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity).GetChildren()
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
+    name: GetChildren
+    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Core.Transition.EntityData.TargetStep*
+  commentId: Overload:VRBuilder.Core.Transition.EntityData.TargetStep
+  href: VRBuilder.Core.Transition.EntityData.html#VRBuilder_Core_Transition_EntityData_TargetStep
+  name: TargetStep
+  nameWithType: Transition.EntityData.TargetStep
+  fullName: VRBuilder.Core.Transition.EntityData.TargetStep
+- uid: VRBuilder.Core.ITransitionData.TargetStep
+  commentId: P:VRBuilder.Core.ITransitionData.TargetStep
+  parent: VRBuilder.Core.ITransitionData
+  href: VRBuilder.Core.ITransitionData.html#VRBuilder_Core_ITransitionData_TargetStep
+  name: TargetStep
+  nameWithType: ITransitionData.TargetStep
+  fullName: VRBuilder.Core.ITransitionData.TargetStep
+- uid: VRBuilder.Core.IStep
+  commentId: T:VRBuilder.Core.IStep
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IStep.html
+  name: IStep
+  nameWithType: IStep
+  fullName: VRBuilder.Core.IStep
+- uid: VRBuilder.Core.Transition.EntityData.Mode*
+  commentId: Overload:VRBuilder.Core.Transition.EntityData.Mode
+  href: VRBuilder.Core.Transition.EntityData.html#VRBuilder_Core_Transition_EntityData_Mode
+  name: Mode
+  nameWithType: Transition.EntityData.Mode
+  fullName: VRBuilder.Core.Transition.EntityData.Mode
+- uid: VRBuilder.Core.Configuration.Modes.IModeData.Mode
+  commentId: P:VRBuilder.Core.Configuration.Modes.IModeData.Mode
+  parent: VRBuilder.Core.Configuration.Modes.IModeData
+  href: VRBuilder.Core.Configuration.Modes.IModeData.html#VRBuilder_Core_Configuration_Modes_IModeData_Mode
+  name: Mode
+  nameWithType: IModeData.Mode
+  fullName: VRBuilder.Core.Configuration.Modes.IModeData.Mode
+- uid: VRBuilder.Core.Configuration.Modes.IMode
+  commentId: T:VRBuilder.Core.Configuration.Modes.IMode
+  parent: VRBuilder.Core.Configuration.Modes
+  href: VRBuilder.Core.Configuration.Modes.IMode.html
+  name: IMode
+  nameWithType: IMode
+  fullName: VRBuilder.Core.Configuration.Modes.IMode
+- uid: VRBuilder.Core.Transition.EntityData.IsCompleted*
+  commentId: Overload:VRBuilder.Core.Transition.EntityData.IsCompleted
+  href: VRBuilder.Core.Transition.EntityData.html#VRBuilder_Core_Transition_EntityData_IsCompleted
+  name: IsCompleted
+  nameWithType: Transition.EntityData.IsCompleted
+  fullName: VRBuilder.Core.Transition.EntityData.IsCompleted
+- uid: VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+  commentId: P:VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+  parent: VRBuilder.Core.Conditions.ICompletableData
+  href: VRBuilder.Core.Conditions.ICompletableData.html#VRBuilder_Core_Conditions_ICompletableData_IsCompleted
+  name: IsCompleted
+  nameWithType: ICompletableData.IsCompleted
+  fullName: VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: VRBuilder.Core.Transition.EntityData.Name*
+  commentId: Overload:VRBuilder.Core.Transition.EntityData.Name
+  href: VRBuilder.Core.Transition.EntityData.html#VRBuilder_Core_Transition_EntityData_Name
+  name: Name
+  nameWithType: Transition.EntityData.Name
+  fullName: VRBuilder.Core.Transition.EntityData.Name
+- uid: VRBuilder.Core.INamedData.Name
+  commentId: P:VRBuilder.Core.INamedData.Name
+  parent: VRBuilder.Core.INamedData
+  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
+  name: Name
+  nameWithType: INamedData.Name
+  fullName: VRBuilder.Core.INamedData.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

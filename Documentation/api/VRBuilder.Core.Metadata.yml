@@ -1,0 +1,681 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.Metadata
+  commentId: T:VRBuilder.Core.Metadata
+  id: Metadata
+  parent: VRBuilder.Core
+  children:
+  - VRBuilder.Core.Metadata.Clear
+  - VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo)
+  - VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo,VRBuilder.Core.Attributes.MetadataAttribute)
+  - VRBuilder.Core.Metadata.SetMetadata(System.Reflection.MemberInfo,System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: Metadata
+  fullName: VRBuilder.Core.Metadata
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/Metadata.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Metadata
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Metadata.cs
+    startLine: 15
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: General implementation of <xref href="VRBuilder.Core.IMetadata" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataContract(IsReference = true)]
+
+      public class Metadata : IMetadata
+    content.vb: >-
+      <DataContract(IsReference:=True)>
+
+      Public Class Metadata Implements IMetadata
+  inheritance:
+  - System.Object
+  implements:
+  - VRBuilder.Core.IMetadata
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: IsReference
+      type: System.Boolean
+      value: true
+- uid: VRBuilder.Core.Metadata.SetMetadata(System.Reflection.MemberInfo,System.String,System.Object)
+  commentId: M:VRBuilder.Core.Metadata.SetMetadata(System.Reflection.MemberInfo,System.String,System.Object)
+  id: SetMetadata(System.Reflection.MemberInfo,System.String,System.Object)
+  parent: VRBuilder.Core.Metadata
+  langs:
+  - csharp
+  - vb
+  name: SetMetadata(MemberInfo, string, object)
+  nameWithType: Metadata.SetMetadata(MemberInfo, string, object)
+  fullName: VRBuilder.Core.Metadata.SetMetadata(System.Reflection.MemberInfo, string, object)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Metadata.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SetMetadata
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Metadata.cs
+    startLine: 27
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Sets a set of data in to specified <code class="paramref">member</code>.
+  example: []
+  syntax:
+    content: public void SetMetadata(MemberInfo member, string attributeName, object data)
+    parameters:
+    - id: member
+      type: System.Reflection.MemberInfo
+      description: Member data.
+    - id: attributeName
+      type: System.String
+      description: Key name of provided data.
+    - id: data
+      type: System.Object
+      description: Data to be saved as metadata for <code class="paramref">member</code>.
+    content.vb: Public Sub SetMetadata(member As MemberInfo, attributeName As String, data As Object)
+  overload: VRBuilder.Core.Metadata.SetMetadata*
+  nameWithType.vb: Metadata.SetMetadata(MemberInfo, String, Object)
+  fullName.vb: VRBuilder.Core.Metadata.SetMetadata(System.Reflection.MemberInfo, String, Object)
+  name.vb: SetMetadata(MemberInfo, String, Object)
+- uid: VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo,VRBuilder.Core.Attributes.MetadataAttribute)
+  commentId: M:VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo,VRBuilder.Core.Attributes.MetadataAttribute)
+  id: GetMetadata(System.Reflection.MemberInfo,VRBuilder.Core.Attributes.MetadataAttribute)
+  parent: VRBuilder.Core.Metadata
+  langs:
+  - csharp
+  - vb
+  name: GetMetadata(MemberInfo, MetadataAttribute)
+  nameWithType: Metadata.GetMetadata(MemberInfo, MetadataAttribute)
+  fullName: VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo, VRBuilder.Core.Attributes.MetadataAttribute)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Metadata.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetMetadata
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Metadata.cs
+    startLine: 40
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Returns a set of data extracted from specified <code class="paramref">attribute</code> of given <code class="paramref">member</code>.
+  example: []
+  syntax:
+    content: public object GetMetadata(MemberInfo member, MetadataAttribute attribute)
+    parameters:
+    - id: member
+      type: System.Reflection.MemberInfo
+    - id: attribute
+      type: VRBuilder.Core.Attributes.MetadataAttribute
+    return:
+      type: System.Object
+    content.vb: Public Function GetMetadata(member As MemberInfo, attribute As MetadataAttribute) As Object
+  overload: VRBuilder.Core.Metadata.GetMetadata*
+- uid: VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo)
+  commentId: M:VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo)
+  id: GetMetadata(System.Reflection.MemberInfo)
+  parent: VRBuilder.Core.Metadata
+  langs:
+  - csharp
+  - vb
+  name: GetMetadata(MemberInfo)
+  nameWithType: Metadata.GetMetadata(MemberInfo)
+  fullName: VRBuilder.Core.Metadata.GetMetadata(System.Reflection.MemberInfo)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Metadata.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetMetadata
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Metadata.cs
+    startLine: 53
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Returns a set of data extracted from given <code class="paramref">member</code>.
+  example: []
+  syntax:
+    content: public Dictionary<string, object> GetMetadata(MemberInfo member)
+    parameters:
+    - id: member
+      type: System.Reflection.MemberInfo
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Function GetMetadata(member As MemberInfo) As Dictionary(Of String, Object)
+  overload: VRBuilder.Core.Metadata.GetMetadata*
+- uid: VRBuilder.Core.Metadata.Clear
+  commentId: M:VRBuilder.Core.Metadata.Clear
+  id: Clear
+  parent: VRBuilder.Core.Metadata
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: Metadata.Clear()
+  fullName: VRBuilder.Core.Metadata.Clear()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Metadata.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Clear
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Metadata.cs
+    startLine: 63
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: VRBuilder.Core.Metadata.Clear*
+references:
+- uid: VRBuilder.Core.IMetadata
+  commentId: T:VRBuilder.Core.IMetadata
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IMetadata.html
+  name: IMetadata
+  nameWithType: IMetadata
+  fullName: VRBuilder.Core.IMetadata
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.Metadata.SetMetadata*
+  commentId: Overload:VRBuilder.Core.Metadata.SetMetadata
+  href: VRBuilder.Core.Metadata.html#VRBuilder_Core_Metadata_SetMetadata_System_Reflection_MemberInfo_System_String_System_Object_
+  name: SetMetadata
+  nameWithType: Metadata.SetMetadata
+  fullName: VRBuilder.Core.Metadata.SetMetadata
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: VRBuilder.Core.Metadata.GetMetadata*
+  commentId: Overload:VRBuilder.Core.Metadata.GetMetadata
+  href: VRBuilder.Core.Metadata.html#VRBuilder_Core_Metadata_GetMetadata_System_Reflection_MemberInfo_VRBuilder_Core_Attributes_MetadataAttribute_
+  name: GetMetadata
+  nameWithType: Metadata.GetMetadata
+  fullName: VRBuilder.Core.Metadata.GetMetadata
+- uid: VRBuilder.Core.Attributes.MetadataAttribute
+  commentId: T:VRBuilder.Core.Attributes.MetadataAttribute
+  parent: VRBuilder.Core.Attributes
+  href: VRBuilder.Core.Attributes.MetadataAttribute.html
+  name: MetadataAttribute
+  nameWithType: MetadataAttribute
+  fullName: VRBuilder.Core.Attributes.MetadataAttribute
+- uid: VRBuilder.Core.Attributes
+  commentId: N:VRBuilder.Core.Attributes
+  href: VRBuilder.html
+  name: VRBuilder.Core.Attributes
+  nameWithType: VRBuilder.Core.Attributes
+  fullName: VRBuilder.Core.Attributes
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Attributes
+    name: Attributes
+    href: VRBuilder.Core.Attributes.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Attributes
+    name: Attributes
+    href: VRBuilder.Core.Attributes.html
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: VRBuilder.Core.Metadata.Clear*
+  commentId: Overload:VRBuilder.Core.Metadata.Clear
+  href: VRBuilder.Core.Metadata.html#VRBuilder_Core_Metadata_Clear
+  name: Clear
+  nameWithType: Metadata.Clear
+  fullName: VRBuilder.Core.Metadata.Clear

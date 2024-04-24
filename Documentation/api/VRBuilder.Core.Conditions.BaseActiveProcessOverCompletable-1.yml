@@ -1,0 +1,979 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  commentId: T:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  id: BaseActiveProcessOverCompletable`1
+  parent: VRBuilder.Core.Conditions
+  children:
+  - VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.#ctor(`0,VRBuilder.Core.IEntity)
+  - VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.CheckIfCompleted
+  - VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.End
+  - VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.FastForward
+  - VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Start
+  - VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Update
+  langs:
+  - csharp
+  - vb
+  name: BaseActiveProcessOverCompletable<TData>
+  nameWithType: BaseActiveProcessOverCompletable<TData>
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: BaseActiveProcessOverCompletable
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 11
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  summary: An abstract class for processes for Active <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref> of <xref href="VRBuilder.Core.ICompletableEntity" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public abstract class BaseActiveProcessOverCompletable<TData> : StageProcess<TData>, IStageProcess where TData : class, ICompletableData'
+    typeParameters:
+    - id: TData
+    content.vb: Public MustInherit Class BaseActiveProcessOverCompletable(Of TData As {Class, ICompletableData}) Inherits StageProcess(Of TData) Implements IStageProcess
+  inheritance:
+  - System.Object
+  - VRBuilder.Core.StageProcess{{TData}}
+  implements:
+  - VRBuilder.Core.IStageProcess
+  inheritedMembers:
+  - VRBuilder.Core.StageProcess{{TData}}.Data
+  - VRBuilder.Core.StageProcess{{TData}}.Outer
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData)
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData)
+  name.vb: BaseActiveProcessOverCompletable(Of TData)
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.#ctor(`0,VRBuilder.Core.IEntity)
+  commentId: M:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.#ctor(`0,VRBuilder.Core.IEntity)
+  id: '#ctor(`0,VRBuilder.Core.IEntity)'
+  parent: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  langs:
+  - csharp
+  - vb
+  name: BaseActiveProcessOverCompletable(TData, IEntity)
+  nameWithType: BaseActiveProcessOverCompletable<TData>.BaseActiveProcessOverCompletable(TData, IEntity)
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.BaseActiveProcessOverCompletable(TData, VRBuilder.Core.IEntity)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 13
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  syntax:
+    content: protected BaseActiveProcessOverCompletable(TData data, IEntity outer = null)
+    parameters:
+    - id: data
+      type: '{TData}'
+    - id: outer
+      type: VRBuilder.Core.IEntity
+    content.vb: Protected Sub New(data As TData, outer As IEntity = Nothing)
+  overload: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.#ctor*
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).New(TData, IEntity)
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).New(TData, VRBuilder.Core.IEntity)
+  name.vb: New(TData, IEntity)
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Start
+  commentId: M:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Start
+  id: Start
+  parent: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: BaseActiveProcessOverCompletable<TData>.Start()
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Start
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 18
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  summary: >-
+    This method is invoked immediately when entity enters the stage.
+
+    The invocation is guaranteed.
+
+    Use it for initialization.
+  example: []
+  syntax:
+    content: public override void Start()
+    content.vb: Public Overrides Sub Start()
+  overridden: VRBuilder.Core.StageProcess{{TData}}.Start
+  overload: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Start*
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).Start()
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).Start()
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Update
+  commentId: M:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Update
+  id: Update
+  parent: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: BaseActiveProcessOverCompletable<TData>.Update()
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.Update()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Update
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 24
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  summary: This method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.
+  example: []
+  syntax:
+    content: public override IEnumerator Update()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Overrides Function Update() As IEnumerator
+  overridden: VRBuilder.Core.StageProcess{{TData}}.Update
+  overload: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Update*
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).Update()
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).Update()
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.End
+  commentId: M:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.End
+  id: End
+  parent: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  langs:
+  - csharp
+  - vb
+  name: End()
+  nameWithType: BaseActiveProcessOverCompletable<TData>.End()
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.End()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: End
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 35
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  summary: >-
+    This method is invoked immediately after the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> was iterated over completely, or after the <xref href="VRBuilder.Core.IStageProcess.FastForward" data-throw-if-not-resolved="false"></xref> was called.
+
+    The invocation is guaranteed.
+
+    Use it for deinitialization.
+  example: []
+  syntax:
+    content: public override void End()
+    content.vb: Public Overrides Sub [End]()
+  overridden: VRBuilder.Core.StageProcess{{TData}}.End
+  overload: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.End*
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).End()
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).End()
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.FastForward
+  commentId: M:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.FastForward
+  id: FastForward
+  parent: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  langs:
+  - csharp
+  - vb
+  name: FastForward()
+  nameWithType: BaseActiveProcessOverCompletable<TData>.FastForward()
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.FastForward()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: FastForward
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 40
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  summary: >-
+    This method is called when the process was not completed yet.
+
+    It must "fake" normal execution of the process and handle the cases when the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> is not iterated over completely.
+  example: []
+  syntax:
+    content: public override void FastForward()
+    content.vb: Public Overrides Sub FastForward()
+  overridden: VRBuilder.Core.StageProcess{{TData}}.FastForward
+  overload: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.FastForward*
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).FastForward()
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).FastForward()
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.CheckIfCompleted
+  commentId: M:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.CheckIfCompleted
+  id: CheckIfCompleted
+  parent: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1
+  langs:
+  - csharp
+  - vb
+  name: CheckIfCompleted()
+  nameWithType: BaseActiveProcessOverCompletable<TData>.CheckIfCompleted()
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.CheckIfCompleted()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+      branch: feature/docs
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: CheckIfCompleted
+    path: ../../VR-Builder-UAS-2020/Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/BaseActiveProcessOverCompletable.cs
+    startLine: 47
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Conditions
+  summary: Implement your custom check in this method. The process will not complete until this method returns true.
+  example: []
+  syntax:
+    content: protected abstract bool CheckIfCompleted()
+    return:
+      type: System.Boolean
+    content.vb: Protected MustOverride Function CheckIfCompleted() As Boolean
+  overload: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.CheckIfCompleted*
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).CheckIfCompleted()
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).CheckIfCompleted()
+references:
+- uid: VRBuilder.Core.Stage
+  commentId: T:VRBuilder.Core.Stage
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: VRBuilder.Core.Stage
+- uid: VRBuilder.Core.ICompletableEntity
+  commentId: T:VRBuilder.Core.ICompletableEntity
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.ICompletableEntity.html
+  name: ICompletableEntity
+  nameWithType: ICompletableEntity
+  fullName: VRBuilder.Core.ICompletableEntity
+- uid: VRBuilder.Core.Conditions
+  commentId: N:VRBuilder.Core.Conditions
+  href: VRBuilder.html
+  name: VRBuilder.Core.Conditions
+  nameWithType: VRBuilder.Core.Conditions
+  fullName: VRBuilder.Core.Conditions
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Conditions
+    name: Conditions
+    href: VRBuilder.Core.Conditions.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Conditions
+    name: Conditions
+    href: VRBuilder.Core.Conditions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.Core.StageProcess{{TData}}
+  commentId: T:VRBuilder.Core.StageProcess{`0}
+  parent: VRBuilder.Core
+  definition: VRBuilder.Core.StageProcess`1
+  href: VRBuilder.Core.StageProcess-1.html
+  name: StageProcess<TData>
+  nameWithType: StageProcess<TData>
+  fullName: VRBuilder.Core.StageProcess<TData>
+  nameWithType.vb: StageProcess(Of TData)
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData)
+  name.vb: StageProcess(Of TData)
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess`1
+    name: StageProcess
+    href: VRBuilder.Core.StageProcess-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess`1
+    name: StageProcess
+    href: VRBuilder.Core.StageProcess-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+- uid: VRBuilder.Core.IStageProcess
+  commentId: T:VRBuilder.Core.IStageProcess
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IStageProcess.html
+  name: IStageProcess
+  nameWithType: IStageProcess
+  fullName: VRBuilder.Core.IStageProcess
+- uid: VRBuilder.Core.StageProcess{{TData}}.Data
+  commentId: P:VRBuilder.Core.StageProcess{`0}.Data
+  parent: VRBuilder.Core.StageProcess{{TData}}
+  definition: VRBuilder.Core.StageProcess`1.Data
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Data
+  name: Data
+  nameWithType: StageProcess<TData>.Data
+  fullName: VRBuilder.Core.StageProcess<TData>.Data
+  nameWithType.vb: StageProcess(Of TData).Data
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Data
+- uid: VRBuilder.Core.StageProcess{{TData}}.Outer
+  commentId: P:VRBuilder.Core.StageProcess{`0}.Outer
+  parent: VRBuilder.Core.StageProcess{{TData}}
+  definition: VRBuilder.Core.StageProcess`1.Outer
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Outer
+  name: Outer
+  nameWithType: StageProcess<TData>.Outer
+  fullName: VRBuilder.Core.StageProcess<TData>.Outer
+  nameWithType.vb: StageProcess(Of TData).Outer
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Outer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.StageProcess`1
+  commentId: T:VRBuilder.Core.StageProcess`1
+  href: VRBuilder.Core.StageProcess-1.html
+  name: StageProcess<TData>
+  nameWithType: StageProcess<TData>
+  fullName: VRBuilder.Core.StageProcess<TData>
+  nameWithType.vb: StageProcess(Of TData)
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData)
+  name.vb: StageProcess(Of TData)
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess`1
+    name: StageProcess
+    href: VRBuilder.Core.StageProcess-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess`1
+    name: StageProcess
+    href: VRBuilder.Core.StageProcess-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+- uid: VRBuilder.Core.StageProcess`1.Data
+  commentId: P:VRBuilder.Core.StageProcess`1.Data
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Data
+  name: Data
+  nameWithType: StageProcess<TData>.Data
+  fullName: VRBuilder.Core.StageProcess<TData>.Data
+  nameWithType.vb: StageProcess(Of TData).Data
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Data
+- uid: VRBuilder.Core.StageProcess`1.Outer
+  commentId: P:VRBuilder.Core.StageProcess`1.Outer
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Outer
+  name: Outer
+  nameWithType: StageProcess<TData>.Outer
+  fullName: VRBuilder.Core.StageProcess<TData>.Outer
+  nameWithType.vb: StageProcess(Of TData).Outer
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Outer
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.#ctor*
+  commentId: Overload:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.#ctor
+  href: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable-1.html#VRBuilder_Core_Conditions_BaseActiveProcessOverCompletable_1__ctor__0_VRBuilder_Core_IEntity_
+  name: BaseActiveProcessOverCompletable
+  nameWithType: BaseActiveProcessOverCompletable<TData>.BaseActiveProcessOverCompletable
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.BaseActiveProcessOverCompletable
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).New
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).New
+  name.vb: New
+- uid: '{TData}'
+  commentId: '!:TData'
+  definition: TData
+  name: TData
+  nameWithType: TData
+  fullName: TData
+- uid: VRBuilder.Core.IEntity
+  commentId: T:VRBuilder.Core.IEntity
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: VRBuilder.Core.IEntity
+- uid: TData
+  name: TData
+  nameWithType: TData
+  fullName: TData
+- uid: VRBuilder.Core.StageProcess{{TData}}.Start
+  commentId: M:VRBuilder.Core.StageProcess{`0}.Start
+  parent: VRBuilder.Core.StageProcess{{TData}}
+  definition: VRBuilder.Core.StageProcess`1.Start
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+  name: Start()
+  nameWithType: StageProcess<TData>.Start()
+  fullName: VRBuilder.Core.StageProcess<TData>.Start()
+  nameWithType.vb: StageProcess(Of TData).Start()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Start()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess{`0}.Start
+    name: Start
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess{`0}.Start
+    name: Start
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Start*
+  commentId: Overload:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Start
+  href: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable-1.html#VRBuilder_Core_Conditions_BaseActiveProcessOverCompletable_1_Start
+  name: Start
+  nameWithType: BaseActiveProcessOverCompletable<TData>.Start
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.Start
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).Start
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).Start
+- uid: VRBuilder.Core.StageProcess`1.Start
+  commentId: M:VRBuilder.Core.StageProcess`1.Start
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+  name: Start()
+  nameWithType: StageProcess<TData>.Start()
+  fullName: VRBuilder.Core.StageProcess<TData>.Start()
+  nameWithType.vb: StageProcess(Of TData).Start()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Start()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess`1.Start
+    name: Start
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess`1.Start
+    name: Start
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.StageProcess{{TData}}.Update
+  commentId: M:VRBuilder.Core.StageProcess{`0}.Update
+  parent: VRBuilder.Core.StageProcess{{TData}}
+  definition: VRBuilder.Core.StageProcess`1.Update
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+  name: Update()
+  nameWithType: StageProcess<TData>.Update()
+  fullName: VRBuilder.Core.StageProcess<TData>.Update()
+  nameWithType.vb: StageProcess(Of TData).Update()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Update()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess{`0}.Update
+    name: Update
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess{`0}.Update
+    name: Update
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Update*
+  commentId: Overload:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.Update
+  href: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable-1.html#VRBuilder_Core_Conditions_BaseActiveProcessOverCompletable_1_Update
+  name: Update
+  nameWithType: BaseActiveProcessOverCompletable<TData>.Update
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.Update
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).Update
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).Update
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: VRBuilder.Core.StageProcess`1.Update
+  commentId: M:VRBuilder.Core.StageProcess`1.Update
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+  name: Update()
+  nameWithType: StageProcess<TData>.Update()
+  fullName: VRBuilder.Core.StageProcess<TData>.Update()
+  nameWithType.vb: StageProcess(Of TData).Update()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).Update()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess`1.Update
+    name: Update
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess`1.Update
+    name: Update
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+  - name: (
+  - name: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: VRBuilder.Core.IStageProcess.Update
+  commentId: M:VRBuilder.Core.IStageProcess.Update
+  parent: VRBuilder.Core.IStageProcess
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  name: Update()
+  nameWithType: IStageProcess.Update()
+  fullName: VRBuilder.Core.IStageProcess.Update()
+  spec.csharp:
+  - uid: VRBuilder.Core.IStageProcess.Update
+    name: Update
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.IStageProcess.Update
+    name: Update
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.IStageProcess.FastForward
+  commentId: M:VRBuilder.Core.IStageProcess.FastForward
+  parent: VRBuilder.Core.IStageProcess
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  name: FastForward()
+  nameWithType: IStageProcess.FastForward()
+  fullName: VRBuilder.Core.IStageProcess.FastForward()
+  spec.csharp:
+  - uid: VRBuilder.Core.IStageProcess.FastForward
+    name: FastForward
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.IStageProcess.FastForward
+    name: FastForward
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.StageProcess{{TData}}.End
+  commentId: M:VRBuilder.Core.StageProcess{`0}.End
+  parent: VRBuilder.Core.StageProcess{{TData}}
+  definition: VRBuilder.Core.StageProcess`1.End
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+  name: End()
+  nameWithType: StageProcess<TData>.End()
+  fullName: VRBuilder.Core.StageProcess<TData>.End()
+  nameWithType.vb: StageProcess(Of TData).End()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).End()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess{`0}.End
+    name: End
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess{`0}.End
+    name: End
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.End*
+  commentId: Overload:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.End
+  href: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable-1.html#VRBuilder_Core_Conditions_BaseActiveProcessOverCompletable_1_End
+  name: End
+  nameWithType: BaseActiveProcessOverCompletable<TData>.End
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.End
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).End
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).End
+- uid: VRBuilder.Core.StageProcess`1.End
+  commentId: M:VRBuilder.Core.StageProcess`1.End
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+  name: End()
+  nameWithType: StageProcess<TData>.End()
+  fullName: VRBuilder.Core.StageProcess<TData>.End()
+  nameWithType.vb: StageProcess(Of TData).End()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).End()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess`1.End
+    name: End
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess`1.End
+    name: End
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.StageProcess{{TData}}.FastForward
+  commentId: M:VRBuilder.Core.StageProcess{`0}.FastForward
+  parent: VRBuilder.Core.StageProcess{{TData}}
+  definition: VRBuilder.Core.StageProcess`1.FastForward
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+  name: FastForward()
+  nameWithType: StageProcess<TData>.FastForward()
+  fullName: VRBuilder.Core.StageProcess<TData>.FastForward()
+  nameWithType.vb: StageProcess(Of TData).FastForward()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).FastForward()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess{`0}.FastForward
+    name: FastForward
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess{`0}.FastForward
+    name: FastForward
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.FastForward*
+  commentId: Overload:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.FastForward
+  href: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable-1.html#VRBuilder_Core_Conditions_BaseActiveProcessOverCompletable_1_FastForward
+  name: FastForward
+  nameWithType: BaseActiveProcessOverCompletable<TData>.FastForward
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.FastForward
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).FastForward
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).FastForward
+- uid: VRBuilder.Core.StageProcess`1.FastForward
+  commentId: M:VRBuilder.Core.StageProcess`1.FastForward
+  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+  name: FastForward()
+  nameWithType: StageProcess<TData>.FastForward()
+  fullName: VRBuilder.Core.StageProcess<TData>.FastForward()
+  nameWithType.vb: StageProcess(Of TData).FastForward()
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).FastForward()
+  spec.csharp:
+  - uid: VRBuilder.Core.StageProcess`1.FastForward
+    name: FastForward
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.StageProcess`1.FastForward
+    name: FastForward
+    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.CheckIfCompleted*
+  commentId: Overload:VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable`1.CheckIfCompleted
+  href: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable-1.html#VRBuilder_Core_Conditions_BaseActiveProcessOverCompletable_1_CheckIfCompleted
+  name: CheckIfCompleted
+  nameWithType: BaseActiveProcessOverCompletable<TData>.CheckIfCompleted
+  fullName: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable<TData>.CheckIfCompleted
+  nameWithType.vb: BaseActiveProcessOverCompletable(Of TData).CheckIfCompleted
+  fullName.vb: VRBuilder.Core.Conditions.BaseActiveProcessOverCompletable(Of TData).CheckIfCompleted
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
