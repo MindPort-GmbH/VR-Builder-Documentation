@@ -1,0 +1,59 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../",
+          "files": [
+            "VRBuilder*.csproj"
+          ],
+          "exclude": [
+            "*Tests*.csproj",
+            "*DemoScene*.csproj",
+            "VRBuilder.Community.csproj"
+        ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "articles/images/**",
+          "images/**"
+        ]
+      }
+    ],
+    "output": "../docs",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "VR Builder Documentation",
+      "_appTitle": "VR Builder Documentation",
+      "_appLogoPath": "images/logo.svg",
+      "_appFaviconPath": "images/favicon.ico",
+      "_enableNewTab": true,
+      "_enableSearch": true,
+      "_disableBreadcrumb": true,
+      "pdf": false,
+      "_gitContribute": {
+        "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
+        "branch": "develop"
+    }
+    }
+  }
+}

@@ -1,0 +1,1559 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  commentId: T:VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  id: ObjectDrawer
+  parent: VRBuilder.Editor.UI.Drawers
+  children:
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation(UnityEngine.GUIContent,System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry})
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue(System.Object,System.Reflection.MemberInfo,UnityEngine.GUIContent)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Object,System.Type)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw(System.Object)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel(System.Object,System.Type)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports(System.Object)
+  - VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor(VRBuilder.Core.IData,System.Reflection.MemberInfo)
+  langs:
+  - csharp
+  - vb
+  name: ObjectDrawer
+  nameWithType: ObjectDrawer
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ObjectDrawer
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 23
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: Process drawer for object properties. Used when everything else does not fit.
+  example: []
+  syntax:
+    content: >-
+      [DefaultProcessDrawer(typeof(object))]
+
+      public class ObjectDrawer : AbstractDrawer, IProcessDrawer
+    content.vb: >-
+      <DefaultProcessDrawer(GetType(Object))>
+
+      Public Class ObjectDrawer Inherits AbstractDrawer Implements IProcessDrawer
+  inheritance:
+  - System.Object
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  derivedClasses:
+  - VRBuilder.Editor.Core.UI.Drawers.LocalizationTableDrawer
+  - VRBuilder.Editor.UI.Drawers.NameableDrawer
+  implements:
+  - VRBuilder.Editor.UI.Drawers.IProcessDrawer
+  inheritedMembers:
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: VRBuilder.Editor.UI.Drawers.DefaultProcessDrawerAttribute
+    ctor: VRBuilder.Editor.UI.Drawers.DefaultProcessDrawerAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Object
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  id: Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: Draw(Rect, object, Action<object>, GUIContent)
+  nameWithType: ObjectDrawer.Draw(Rect, object, Action<object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw(UnityEngine.Rect, object, System.Action<object>, UnityEngine.GUIContent)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Draw
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 27
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: Draw editor view in given Rect.
+  example: []
+  syntax:
+    content: public override Rect Draw(Rect rect, object currentValue, Action<object> changeValueCallback, GUIContent label)
+    parameters:
+    - id: rect
+      type: UnityEngine.Rect
+      description: A rectangle in which editor view should fit. The height value is ignored.
+    - id: currentValue
+      type: System.Object
+      description: Current value of a member.
+    - id: changeValueCallback
+      type: System.Action{System.Object}
+      description: >-
+        Delegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).
+
+        Invoke only when child member's value has changed;
+
+        Otherwise, if the value itself has changed, call <xref href="VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func%7bSystem.Object%7d%2cSystem.Func%7bSystem.Object%7d%2cSystem.Action%7bSystem.Object%7d)" data-throw-if-not-resolved="false"></xref> so it could manage Do/Undo stack in a proper way.
+    - id: label
+      type: UnityEngine.GUIContent
+      description: Label content to display.
+    return:
+      type: UnityEngine.Rect
+      description: The area that was taken by the property.
+    content.vb: Public Overrides Function Draw(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As GUIContent) As Rect
+  overridden: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw*
+  nameWithType.vb: ObjectDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw(UnityEngine.Rect, Object, System.Action(Of Object), UnityEngine.GUIContent)
+  name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue(System.Object,System.Reflection.MemberInfo,UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue(System.Object,System.Reflection.MemberInfo,UnityEngine.GUIContent)
+  id: CheckValidationForValue(System.Object,System.Reflection.MemberInfo,UnityEngine.GUIContent)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: CheckValidationForValue(object, MemberInfo, GUIContent)
+  nameWithType: ObjectDrawer.CheckValidationForValue(object, MemberInfo, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue(object, System.Reflection.MemberInfo, UnityEngine.GUIContent)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: CheckValidationForValue
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 78
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: protected virtual void CheckValidationForValue(object currentValue, MemberInfo info, GUIContent label)
+    parameters:
+    - id: currentValue
+      type: System.Object
+    - id: info
+      type: System.Reflection.MemberInfo
+    - id: label
+      type: UnityEngine.GUIContent
+    content.vb: Protected Overridable Sub CheckValidationForValue(currentValue As Object, info As MemberInfo, label As GUIContent)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue*
+  nameWithType.vb: ObjectDrawer.CheckValidationForValue(Object, MemberInfo, GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue(Object, System.Reflection.MemberInfo, UnityEngine.GUIContent)
+  name.vb: CheckValidationForValue(Object, MemberInfo, GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation(UnityEngine.GUIContent,System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry})
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation(UnityEngine.GUIContent,System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry})
+  id: AddValidationInformation(UnityEngine.GUIContent,System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry})
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: AddValidationInformation(GUIContent, List<EditorReportEntry>)
+  nameWithType: ObjectDrawer.AddValidationInformation(GUIContent, List<EditorReportEntry>)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation(UnityEngine.GUIContent, System.Collections.Generic.List<VRBuilder.Editor.ProcessValidation.EditorReportEntry>)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: AddValidationInformation
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 90
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: protected virtual GUIContent AddValidationInformation(GUIContent guiContent, List<EditorReportEntry> entries)
+    parameters:
+    - id: guiContent
+      type: UnityEngine.GUIContent
+    - id: entries
+      type: System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry}
+    return:
+      type: UnityEngine.GUIContent
+    content.vb: Protected Overridable Function AddValidationInformation(guiContent As GUIContent, entries As List(Of EditorReportEntry)) As GUIContent
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation*
+  nameWithType.vb: ObjectDrawer.AddValidationInformation(GUIContent, List(Of EditorReportEntry))
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation(UnityEngine.GUIContent, System.Collections.Generic.List(Of VRBuilder.Editor.ProcessValidation.EditorReportEntry))
+  name.vb: AddValidationInformation(GUIContent, List(Of EditorReportEntry))
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports(System.Object)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports(System.Object)
+  id: GetValidationReports(System.Object)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: GetValidationReports(object)
+  nameWithType: ObjectDrawer.GetValidationReports(object)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports(object)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetValidationReports
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 97
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: protected virtual List<EditorReportEntry> GetValidationReports(object value)
+    parameters:
+    - id: value
+      type: System.Object
+    return:
+      type: System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry}
+    content.vb: Protected Overridable Function GetValidationReports(value As Object) As List(Of EditorReportEntry)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports*
+  nameWithType.vb: ObjectDrawer.GetValidationReports(Object)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports(Object)
+  name.vb: GetValidationReports(Object)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor(VRBuilder.Core.IData,System.Reflection.MemberInfo)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor(VRBuilder.Core.IData,System.Reflection.MemberInfo)
+  id: GetValidationReportsFor(VRBuilder.Core.IData,System.Reflection.MemberInfo)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: GetValidationReportsFor(IData, MemberInfo)
+  nameWithType: ObjectDrawer.GetValidationReportsFor(IData, MemberInfo)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor(VRBuilder.Core.IData, System.Reflection.MemberInfo)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetValidationReportsFor
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 115
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: protected virtual List<EditorReportEntry> GetValidationReportsFor(IData data, MemberInfo memberInfo)
+    parameters:
+    - id: data
+      type: VRBuilder.Core.IData
+    - id: memberInfo
+      type: System.Reflection.MemberInfo
+    return:
+      type: System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry}
+    content.vb: Protected Overridable Function GetValidationReportsFor(data As IData, memberInfo As MemberInfo) As List(Of EditorReportEntry)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor*
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  id: DrawLabel(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: DrawLabel(Rect, object, Action<object>, GUIContent)
+  nameWithType: ObjectDrawer.DrawLabel(Rect, object, Action<object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel(UnityEngine.Rect, object, System.Action<object>, UnityEngine.GUIContent)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: DrawLabel
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 127
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: Draw a label for an object.
+  example: []
+  syntax:
+    content: protected virtual float DrawLabel(Rect rect, object currentValue, Action<object> changeValueCallback, GUIContent label)
+    parameters:
+    - id: rect
+      type: UnityEngine.Rect
+    - id: currentValue
+      type: System.Object
+    - id: changeValueCallback
+      type: System.Action{System.Object}
+    - id: label
+      type: UnityEngine.GUIContent
+    return:
+      type: System.Single
+    content.vb: Protected Overridable Function DrawLabel(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As GUIContent) As Single
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel*
+  nameWithType.vb: ObjectDrawer.DrawLabel(Rect, Object, Action(Of Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel(UnityEngine.Rect, Object, System.Action(Of Object), UnityEngine.GUIContent)
+  name.vb: DrawLabel(Rect, Object, Action(Of Object), GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+  id: GetLabel(System.Reflection.MemberInfo,System.Object)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: GetLabel(MemberInfo, object)
+  nameWithType: ObjectDrawer.GetLabel(MemberInfo, object)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Reflection.MemberInfo, object)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetLabel
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 242
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: Return a label for a property/field <code class="paramref">memberInfo</code> of an object <code class="paramref">memberOwner</code>.
+  example: []
+  syntax:
+    content: public override GUIContent GetLabel(MemberInfo memberInfo, object memberOwner)
+    parameters:
+    - id: memberInfo
+      type: System.Reflection.MemberInfo
+    - id: memberOwner
+      type: System.Object
+    return:
+      type: UnityEngine.GUIContent
+    content.vb: Public Overrides Function GetLabel(memberInfo As MemberInfo, memberOwner As Object) As GUIContent
+  overridden: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel*
+  nameWithType.vb: ObjectDrawer.GetLabel(MemberInfo, Object)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Reflection.MemberInfo, Object)
+  name.vb: GetLabel(MemberInfo, Object)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Object,System.Type)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(System.Object,System.Type)
+  id: GetLabel(System.Object,System.Type)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: GetLabel(object, Type)
+  nameWithType: ObjectDrawer.GetLabel(object, Type)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(object, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetLabel
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 248
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  summary: Return a label for a <code class="paramref">value</code> of <code class="paramref">declaredType</code>.
+  example: []
+  syntax:
+    content: public override GUIContent GetLabel(object value, Type declaredType)
+    parameters:
+    - id: value
+      type: System.Object
+    - id: declaredType
+      type: System.Type
+    return:
+      type: UnityEngine.GUIContent
+    content.vb: Public Overrides Function GetLabel(value As Object, declaredType As Type) As GUIContent
+  overridden: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel*
+  nameWithType.vb: ObjectDrawer.GetLabel(Object, Type)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel(Object, System.Type)
+  name.vb: GetLabel(Object, Type)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw(System.Object)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw(System.Object)
+  id: GetMembersToDraw(System.Object)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: GetMembersToDraw(object)
+  nameWithType: ObjectDrawer.GetMembersToDraw(object)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw(object)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetMembersToDraw
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 253
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: protected virtual IEnumerable<MemberInfo> GetMembersToDraw(object value)
+    parameters:
+    - id: value
+      type: System.Object
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+    content.vb: Protected Overridable Function GetMembersToDraw(value As Object) As IEnumerable(Of MemberInfo)
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw*
+  nameWithType.vb: ObjectDrawer.GetMembersToDraw(Object)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw(Object)
+  name.vb: GetMembersToDraw(Object)
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel(System.Object,System.Type)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel(System.Object,System.Type)
+  id: GetTypeNameLabel(System.Object,System.Type)
+  parent: VRBuilder.Editor.UI.Drawers.ObjectDrawer
+  langs:
+  - csharp
+  - vb
+  name: GetTypeNameLabel(object, Type)
+  nameWithType: ObjectDrawer.GetTypeNameLabel(object, Type)
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel(object, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: GetTypeNameLabel
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ObjectDrawer.cs
+    startLine: 287
+  assemblies:
+  - VRBuilder.Editor
+  namespace: VRBuilder.Editor.UI.Drawers
+  syntax:
+    content: protected virtual GUIContent GetTypeNameLabel(object value, Type declaredType)
+    parameters:
+    - id: value
+      type: System.Object
+    - id: declaredType
+      type: System.Type
+    return:
+      type: UnityEngine.GUIContent
+    content.vb: Protected Overridable Function GetTypeNameLabel(value As Object, declaredType As Type) As GUIContent
+  overload: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel*
+  nameWithType.vb: ObjectDrawer.GetTypeNameLabel(Object, Type)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel(Object, System.Type)
+  name.vb: GetTypeNameLabel(Object, Type)
+references:
+- uid: VRBuilder.Editor.UI.Drawers
+  commentId: N:VRBuilder.Editor.UI.Drawers
+  href: VRBuilder.html
+  name: VRBuilder.Editor.UI.Drawers
+  nameWithType: VRBuilder.Editor.UI.Drawers
+  fullName: VRBuilder.Editor.UI.Drawers
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.UI
+    name: UI
+    href: VRBuilder.Editor.UI.html
+  - name: .
+  - uid: VRBuilder.Editor.UI.Drawers
+    name: Drawers
+    href: VRBuilder.Editor.UI.Drawers.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Editor
+    name: Editor
+    href: VRBuilder.Editor.html
+  - name: .
+  - uid: VRBuilder.Editor.UI
+    name: UI
+    href: VRBuilder.Editor.UI.html
+  - name: .
+  - uid: VRBuilder.Editor.UI.Drawers
+    name: Drawers
+    href: VRBuilder.Editor.UI.Drawers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  commentId: T:VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  parent: VRBuilder.Editor.UI.Drawers
+  href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html
+  name: AbstractDrawer
+  nameWithType: AbstractDrawer
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+  commentId: T:VRBuilder.Editor.UI.Drawers.IProcessDrawer
+  parent: VRBuilder.Editor.UI.Drawers
+  href: VRBuilder.Editor.UI.Drawers.IProcessDrawer.html
+  name: IProcessDrawer
+  nameWithType: IProcessDrawer
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  isExternal: true
+  href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__System_String_
+  name: Draw(Rect, object, Action<object>, string)
+  nameWithType: AbstractDrawer.Draw(Rect, object, Action<object>, string)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, object, System.Action<object>, string)
+  nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, Object, System.Action(Of Object), String)
+  name.vb: Draw(Rect, Object, Action(Of Object), String)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+    name: Draw
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__System_String_
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+    name: Draw
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__System_String_
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+  parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  isExternal: true
+  href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__
+  name: ChangeValue(Func<object>, Func<object>, Action<object>)
+  nameWithType: AbstractDrawer.ChangeValue(Func<object>, Func<object>, Action<object>)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func<object>, System.Func<object>, System.Action<object>)
+  nameWithType.vb: AbstractDrawer.ChangeValue(Func(Of Object), Func(Of Object), Action(Of Object))
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func(Of Object), System.Func(Of Object), System.Action(Of Object))
+  name.vb: ChangeValue(Func(Of Object), Func(Of Object), Action(Of Object))
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+    name: ChangeValue
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+    name: ChangeValue
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+  parent: VRBuilder.Editor.UI.Drawers.IProcessDrawer
+  isExternal: true
+  href: VRBuilder.Editor.UI.Drawers.IProcessDrawer.html#VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__
+  name: ChangeValue(Func<object>, Func<object>, Action<object>)
+  nameWithType: IProcessDrawer.ChangeValue(Func<object>, Func<object>, Action<object>)
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func<object>, System.Func<object>, System.Action<object>)
+  nameWithType.vb: IProcessDrawer.ChangeValue(Func(Of Object), Func(Of Object), Action(Of Object))
+  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func(Of Object), System.Func(Of Object), System.Action(Of Object))
+  name.vb: ChangeValue(Func(Of Object), Func(Of Object), Action(Of Object))
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+    name: ChangeValue
+    href: VRBuilder.Editor.UI.Drawers.IProcessDrawer.html#VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
+    name: ChangeValue
+    href: VRBuilder.Editor.UI.Drawers.IProcessDrawer.html#VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  isExternal: true
+  href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__UnityEngine_GUIContent_
+  name: Draw(Rect, object, Action<object>, GUIContent)
+  nameWithType: AbstractDrawer.Draw(Rect, object, Action<object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, object, System.Action<object>, UnityEngine.GUIContent)
+  nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, Object, System.Action(Of Object), UnityEngine.GUIContent)
+  name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+    name: Draw
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__UnityEngine_GUIContent_
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GUIContent
+    name: GUIContent
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+    name: Draw
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__UnityEngine_GUIContent_
+  - name: (
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GUIContent
+    name: GUIContent
+    isExternal: true
+  - name: )
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__UnityEngine_GUIContent_
+  name: Draw
+  nameWithType: ObjectDrawer.Draw
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.Draw
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: System.Action{System.Object}
+  commentId: T:System.Action{System.Object}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<object>
+  nameWithType: Action<object>
+  fullName: System.Action<object>
+  nameWithType.vb: Action(Of Object)
+  fullName.vb: System.Action(Of Object)
+  name.vb: Action(Of Object)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: UnityEngine.GUIContent
+  commentId: T:UnityEngine.GUIContent
+  parent: UnityEngine
+  isExternal: true
+  name: GUIContent
+  nameWithType: GUIContent
+  fullName: UnityEngine.GUIContent
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_CheckValidationForValue_System_Object_System_Reflection_MemberInfo_UnityEngine_GUIContent_
+  name: CheckValidationForValue
+  nameWithType: ObjectDrawer.CheckValidationForValue
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.CheckValidationForValue
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_AddValidationInformation_UnityEngine_GUIContent_System_Collections_Generic_List_VRBuilder_Editor_ProcessValidation_EditorReportEntry__
+  name: AddValidationInformation
+  nameWithType: ObjectDrawer.AddValidationInformation
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.AddValidationInformation
+- uid: System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry}
+  commentId: T:System.Collections.Generic.List{VRBuilder.Editor.ProcessValidation.EditorReportEntry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EditorReportEntry>
+  nameWithType: List<EditorReportEntry>
+  fullName: System.Collections.Generic.List<VRBuilder.Editor.ProcessValidation.EditorReportEntry>
+  nameWithType.vb: List(Of EditorReportEntry)
+  fullName.vb: System.Collections.Generic.List(Of VRBuilder.Editor.ProcessValidation.EditorReportEntry)
+  name.vb: List(Of EditorReportEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: VRBuilder.Editor.ProcessValidation.EditorReportEntry
+    name: EditorReportEntry
+    href: VRBuilder.Editor.ProcessValidation.EditorReportEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Editor.ProcessValidation.EditorReportEntry
+    name: EditorReportEntry
+    href: VRBuilder.Editor.ProcessValidation.EditorReportEntry.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_GetValidationReports_System_Object_
+  name: GetValidationReports
+  nameWithType: ObjectDrawer.GetValidationReports
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReports
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_GetValidationReportsFor_VRBuilder_Core_IData_System_Reflection_MemberInfo_
+  name: GetValidationReportsFor
+  nameWithType: ObjectDrawer.GetValidationReportsFor
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetValidationReportsFor
+- uid: VRBuilder.Core.IData
+  commentId: T:VRBuilder.Core.IData
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IData.html
+  name: IData
+  nameWithType: IData
+  fullName: VRBuilder.Core.IData
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_DrawLabel_UnityEngine_Rect_System_Object_System_Action_System_Object__UnityEngine_GUIContent_
+  name: DrawLabel
+  nameWithType: ObjectDrawer.DrawLabel
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.DrawLabel
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+  parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  isExternal: true
+  href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_GetLabel_System_Reflection_MemberInfo_System_Object_
+  name: GetLabel(MemberInfo, object)
+  nameWithType: AbstractDrawer.GetLabel(MemberInfo, object)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo, object)
+  nameWithType.vb: AbstractDrawer.GetLabel(MemberInfo, Object)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo, Object)
+  name.vb: GetLabel(MemberInfo, Object)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+    name: GetLabel
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_GetLabel_System_Reflection_MemberInfo_System_Object_
+  - name: (
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
+    name: GetLabel
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_GetLabel_System_Reflection_MemberInfo_System_Object_
+  - name: (
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_GetLabel_System_Reflection_MemberInfo_System_Object_
+  name: GetLabel
+  nameWithType: ObjectDrawer.GetLabel
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetLabel
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
+  parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
+  isExternal: true
+  href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_GetLabel_System_Object_System_Type_
+  name: GetLabel(object, Type)
+  nameWithType: AbstractDrawer.GetLabel(object, Type)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(object, System.Type)
+  nameWithType.vb: AbstractDrawer.GetLabel(Object, Type)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(Object, System.Type)
+  name.vb: GetLabel(Object, Type)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
+    name: GetLabel
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_GetLabel_System_Object_System_Type_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
+    name: GetLabel
+    href: VRBuilder.Editor.UI.Drawers.AbstractDrawer.html#VRBuilder_Editor_UI_Drawers_AbstractDrawer_GetLabel_System_Object_System_Type_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_GetMembersToDraw_System_Object_
+  name: GetMembersToDraw
+  nameWithType: ObjectDrawer.GetMembersToDraw
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetMembersToDraw
+- uid: System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<MemberInfo>
+  nameWithType: IEnumerable<MemberInfo>
+  fullName: System.Collections.Generic.IEnumerable<System.Reflection.MemberInfo>
+  nameWithType.vb: IEnumerable(Of MemberInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.MemberInfo)
+  name.vb: IEnumerable(Of MemberInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Reflection.MemberInfo
+    name: MemberInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel*
+  commentId: Overload:VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel
+  href: VRBuilder.Editor.UI.Drawers.ObjectDrawer.html#VRBuilder_Editor_UI_Drawers_ObjectDrawer_GetTypeNameLabel_System_Object_System_Type_
+  name: GetTypeNameLabel
+  nameWithType: ObjectDrawer.GetTypeNameLabel
+  fullName: VRBuilder.Editor.UI.Drawers.ObjectDrawer.GetTypeNameLabel

@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.ILifeCycle
+  commentId: T:VRBuilder.Core.ILifeCycle
+  id: ILifeCycle
+  parent: VRBuilder.Core
+  children:
+  - VRBuilder.Core.ILifeCycle.Activate
+  - VRBuilder.Core.ILifeCycle.Deactivate
+  - VRBuilder.Core.ILifeCycle.MarkToFastForward
+  - VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
+  - VRBuilder.Core.ILifeCycle.Stage
+  - VRBuilder.Core.ILifeCycle.StageChanged
+  - VRBuilder.Core.ILifeCycle.Update
+  langs:
+  - csharp
+  - vb
+  name: ILifeCycle
+  nameWithType: ILifeCycle
+  fullName: VRBuilder.Core.ILifeCycle
+  type: Interface
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ILifeCycle
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 11
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: 'A life cycle of an entity. It handles transition between four stages: Inactive, Activating, Active, and Deactivating.'
+  example: []
+  syntax:
+    content: public interface ILifeCycle
+    content.vb: Public Interface ILifeCycle
+- uid: VRBuilder.Core.ILifeCycle.StageChanged
+  commentId: E:VRBuilder.Core.ILifeCycle.StageChanged
+  id: StageChanged
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: StageChanged
+  nameWithType: ILifeCycle.StageChanged
+  fullName: VRBuilder.Core.ILifeCycle.StageChanged
+  type: Event
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: StageChanged
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 16
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: An event which is fired when the current stage changes.
+  example: []
+  syntax:
+    content: event EventHandler<ActivationStateChangedEventArgs> StageChanged
+    return:
+      type: System.EventHandler{VRBuilder.Core.ActivationStateChangedEventArgs}
+    content.vb: Event StageChanged As EventHandler(Of ActivationStateChangedEventArgs)
+- uid: VRBuilder.Core.ILifeCycle.Stage
+  commentId: P:VRBuilder.Core.ILifeCycle.Stage
+  id: Stage
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: Stage
+  nameWithType: ILifeCycle.Stage
+  fullName: VRBuilder.Core.ILifeCycle.Stage
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Stage
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 21
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: The current stage.
+  example: []
+  syntax:
+    content: Stage Stage { get; }
+    parameters: []
+    return:
+      type: VRBuilder.Core.Stage
+    content.vb: ReadOnly Property Stage As Stage
+  overload: VRBuilder.Core.ILifeCycle.Stage*
+- uid: VRBuilder.Core.ILifeCycle.Activate
+  commentId: M:VRBuilder.Core.ILifeCycle.Activate
+  id: Activate
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: Activate()
+  nameWithType: ILifeCycle.Activate()
+  fullName: VRBuilder.Core.ILifeCycle.Activate()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Activate
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 26
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Enters Activating stage if was deactivating.
+  example: []
+  syntax:
+    content: void Activate()
+    content.vb: Sub Activate()
+  overload: VRBuilder.Core.ILifeCycle.Activate*
+- uid: VRBuilder.Core.ILifeCycle.Deactivate
+  commentId: M:VRBuilder.Core.ILifeCycle.Deactivate
+  id: Deactivate
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: Deactivate()
+  nameWithType: ILifeCycle.Deactivate()
+  fullName: VRBuilder.Core.ILifeCycle.Deactivate()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Deactivate
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 31
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Enters Deactivating stage if was Active. If was Activating, will start deactivating as soon as it enters Active stage.
+  example: []
+  syntax:
+    content: void Deactivate()
+    content.vb: Sub Deactivate()
+  overload: VRBuilder.Core.ILifeCycle.Deactivate*
+- uid: VRBuilder.Core.ILifeCycle.MarkToFastForward
+  commentId: M:VRBuilder.Core.ILifeCycle.MarkToFastForward
+  id: MarkToFastForward
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: MarkToFastForward()
+  nameWithType: ILifeCycle.MarkToFastForward()
+  fullName: VRBuilder.Core.ILifeCycle.MarkToFastForward()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: MarkToFastForward
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 36
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Marks all stages to fast-forward until it reaches Inactive stage.
+  example: []
+  syntax:
+    content: void MarkToFastForward()
+    content.vb: Sub MarkToFastForward()
+  overload: VRBuilder.Core.ILifeCycle.MarkToFastForward*
+- uid: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
+  commentId: M:VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
+  id: MarkToFastForwardStage(VRBuilder.Core.Stage)
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: MarkToFastForwardStage(Stage)
+  nameWithType: ILifeCycle.MarkToFastForwardStage(Stage)
+  fullName: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: MarkToFastForwardStage
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 41
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: Marks the given <code class="paramref">stage</code> to fast-forward.
+  example: []
+  syntax:
+    content: void MarkToFastForwardStage(Stage stage)
+    parameters:
+    - id: stage
+      type: VRBuilder.Core.Stage
+    content.vb: Sub MarkToFastForwardStage(stage As Stage)
+  overload: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage*
+- uid: VRBuilder.Core.ILifeCycle.Update
+  commentId: M:VRBuilder.Core.ILifeCycle.Update
+  id: Update
+  parent: VRBuilder.Core.ILifeCycle
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: ILifeCycle.Update()
+  fullName: VRBuilder.Core.ILifeCycle.Update()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ILifeCycle.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Update
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ILifeCycle.cs
+    startLine: 46
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: This method should be called every frame.
+  example: []
+  syntax:
+    content: void Update()
+    content.vb: Sub Update()
+  overload: VRBuilder.Core.ILifeCycle.Update*
+references:
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: System.EventHandler{VRBuilder.Core.ActivationStateChangedEventArgs}
+  commentId: T:System.EventHandler{VRBuilder.Core.ActivationStateChangedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<ActivationStateChangedEventArgs>
+  nameWithType: EventHandler<ActivationStateChangedEventArgs>
+  fullName: System.EventHandler<VRBuilder.Core.ActivationStateChangedEventArgs>
+  nameWithType.vb: EventHandler(Of ActivationStateChangedEventArgs)
+  fullName.vb: System.EventHandler(Of VRBuilder.Core.ActivationStateChangedEventArgs)
+  name.vb: EventHandler(Of ActivationStateChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: VRBuilder.Core.ActivationStateChangedEventArgs
+    name: ActivationStateChangedEventArgs
+    href: VRBuilder.Core.ActivationStateChangedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.Core.ActivationStateChangedEventArgs
+    name: ActivationStateChangedEventArgs
+    href: VRBuilder.Core.ActivationStateChangedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.ILifeCycle.Stage*
+  commentId: Overload:VRBuilder.Core.ILifeCycle.Stage
+  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Stage
+  name: Stage
+  nameWithType: ILifeCycle.Stage
+  fullName: VRBuilder.Core.ILifeCycle.Stage
+- uid: VRBuilder.Core.Stage
+  commentId: T:VRBuilder.Core.Stage
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: VRBuilder.Core.Stage
+- uid: VRBuilder.Core.ILifeCycle.Activate*
+  commentId: Overload:VRBuilder.Core.ILifeCycle.Activate
+  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Activate
+  name: Activate
+  nameWithType: ILifeCycle.Activate
+  fullName: VRBuilder.Core.ILifeCycle.Activate
+- uid: VRBuilder.Core.ILifeCycle.Deactivate*
+  commentId: Overload:VRBuilder.Core.ILifeCycle.Deactivate
+  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Deactivate
+  name: Deactivate
+  nameWithType: ILifeCycle.Deactivate
+  fullName: VRBuilder.Core.ILifeCycle.Deactivate
+- uid: VRBuilder.Core.ILifeCycle.MarkToFastForward*
+  commentId: Overload:VRBuilder.Core.ILifeCycle.MarkToFastForward
+  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForward
+  name: MarkToFastForward
+  nameWithType: ILifeCycle.MarkToFastForward
+  fullName: VRBuilder.Core.ILifeCycle.MarkToFastForward
+- uid: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage*
+  commentId: Overload:VRBuilder.Core.ILifeCycle.MarkToFastForwardStage
+  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForwardStage_VRBuilder_Core_Stage_
+  name: MarkToFastForwardStage
+  nameWithType: ILifeCycle.MarkToFastForwardStage
+  fullName: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage
+- uid: VRBuilder.Core.ILifeCycle.Update*
+  commentId: Overload:VRBuilder.Core.ILifeCycle.Update
+  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Update
+  name: Update
+  nameWithType: ILifeCycle.Update
+  fullName: VRBuilder.Core.ILifeCycle.Update
