@@ -1,0 +1,1794 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SnapZone | VR Builder Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SnapZone | VR Builder Documentation ">
+      
+      <meta name="description" content="Interactor used for holding interactables via a socket.  This component is not designed to be attached to a controller (thus does not derive from XRBaseControllerInteractor) and instead will always attempt to select an interactable that it is hovering (though will not perform exclusive selection of that interactable).">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_SnapZone.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.SnapZone%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+            VR Builder Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="VRBuilder.XRInteraction.SnapZone">
+
+
+
+  <h1 id="VRBuilder_XRInteraction_SnapZone" data-uid="VRBuilder.XRInteraction.SnapZone" class="text-break">
+Class SnapZone  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.html">VRBuilder</a>.<a class="xref" href="VRBuilder.XRInteraction.html">XRInteraction</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VRBuilder.XRInteraction.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interactor used for holding interactables via a socket.  This component is not designed to be attached to a controller
+(thus does not derive from XRBaseControllerInteractor) and instead will always attempt to select an interactable that it is
+hovering (though will not perform exclusive selection of that interactable).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SnapZone : XRSocketInteractor, IXRHoverInteractor, IXRSelectInteractor, IXRTargetPriorityInteractor, IXRGroupMember, IXRInteractionStrengthInteractor, IXRInteractor, ISnapZone</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">XRBaseInteractor</span></div>
+      <div><span class="xref">XRSocketInteractor</span></div>
+      <div><span class="xref">SnapZone</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IXRHoverInteractor</span></div>
+      <div><span class="xref">IXRSelectInteractor</span></div>
+      <div><span class="xref">IXRTargetPriorityInteractor</span></div>
+      <div><span class="xref">IXRGroupMember</span></div>
+      <div><span class="xref">IXRInteractionStrengthInteractor</span></div>
+      <div><span class="xref">IXRInteractor</span></div>
+      <div><a class="xref" href="VRBuilder.BasicInteraction.ISnapZone.html">ISnapZone</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">XRSocketInteractor.CanHover(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.CanSelect(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.showInteractableHoverMeshes</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.interactableHoverMeshMaterial</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.interactableCantHoverMeshMaterial</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.socketActive</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.interactableHoverScale</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.recycleDelayTime</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.hoverSocketSnapping</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.socketSnappingRadius</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.socketScaleMode</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.fixedScale</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.targetBoundsSize</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.unsortedValidTargets</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.socketSnappingLimit</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.ejectExistingSocketsWhenSnapping</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnValidate()</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnTriggerEnter(Collider)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnTriggerStay(Collider)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnTriggerExit(Collider)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.CreateDefaultHoverMaterials()</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnHoverEntering(HoverEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnHoverEntered(HoverEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.CanHoverSnap(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnHoverExiting(HoverExitEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnSelectEntered(SelectEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnSelectExiting(SelectExitEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnSelectExited(SelectExitEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.DrawHoveredInteractables()</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.GetHoveredInteractableMaterial(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRSocketInteractor.GetValidTargets(List&lt;IXRInteractable&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.isHoverActive</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.isSelectActive</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.selectedInteractableMovementTypeOverride</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.CanHover(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.ShouldDrawHoverMesh(MeshFilter, Renderer, Camera)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnRegistered(InteractorRegisteredEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.OnUnregistered(InteractorUnregisteredEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.StartSocketSnapping(XRGrabInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRSocketInteractor.EndSocketSnapping(XRGrabInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.registered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.unregistered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactionManager</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.containingGroup</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactionLayers</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.attachTransform</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.keepSelectedTargetValid</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.disableVisualsWhenBlockedInGroup</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingSelectedInteractable</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingTargetFilter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.targetFilter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.allowHover</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.allowSelect</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.isPerformingManualInteraction</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactablesHovered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hasHover</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactablesSelected</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.firstInteractableSelected</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hasSelection</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingHoverFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingSelectFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.largestInteractionStrength</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.Reset()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.Start()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnDestroy()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetAttachTransform(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetAttachPoseOnSelect(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetLocalAttachPoseOnSelect(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.targetPriorityMode</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.targetsForSelection</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsHovering(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsSelecting(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsHovering(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsSelecting(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.CaptureAttachPose(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.CreateAttachTransform()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.PreprocessInteractor(XRInteractionUpdateOrder.UpdatePhase)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetInteractionStrength(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverExited(HoverExitEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectEntering(SelectEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.ProcessInteractionStrength(XRInteractionUpdateOrder.UpdatePhase)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.StartManualInteraction(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.EndManualInteraction()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.ProcessHoverFilters(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.ProcessSelectFilters(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactionLayerMask</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.enableInteractions</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverEntering(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverEntered(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverExiting(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverExited(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectEntering(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectEntered(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectExiting(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectExited(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectTarget</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverTargets</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRBaseInteractor.GetHoverTargets(List&lt;XRBaseInteractable&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRBaseInteractor.GetValidTargets(List&lt;XRBaseInteractable&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.requireSelectExclusive</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.StartManualInteraction(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="VRBuilder_XRInteraction_SnapZone_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Adds the functionality to force the selection and unselection of specific interactables.
+It also adds a highlighter to emphasize the position of the socket.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ShowHighlightInEditor" data-uid="VRBuilder.XRInteraction.SnapZone.ShowHighlightInEditor">
+  ShowHighlightInEditor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shows the highlight</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowHighlightInEditor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_Anchor_" data-uid="VRBuilder.XRInteraction.SnapZone.Anchor*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_Anchor" data-uid="VRBuilder.XRInteraction.SnapZone.Anchor">
+  Anchor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position where the object is snapped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Anchor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ForceSelectInteractable_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceSelectInteractable*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ForceSelectInteractable" data-uid="VRBuilder.XRInteraction.SnapZone.ForceSelectInteractable">
+  ForceSelectInteractable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces the socket interactor to unselect the given target, if it is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IXRSelectInteractable ForceSelectInteractable { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IXRSelectInteractable</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ForceUnselectInteractable_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceUnselectInteractable*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ForceUnselectInteractable" data-uid="VRBuilder.XRInteraction.SnapZone.ForceUnselectInteractable">
+  ForceUnselectInteractable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces the socket interactor to unselect the given target, if it is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IXRSelectInteractable ForceUnselectInteractable { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IXRSelectInteractable</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_HighlightMeshMaterial_" data-uid="VRBuilder.XRInteraction.SnapZone.HighlightMeshMaterial*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_HighlightMeshMaterial" data-uid="VRBuilder.XRInteraction.SnapZone.HighlightMeshMaterial">
+  HighlightMeshMaterial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The material used for drawing the mesh of the <a class="xref" href="VRBuilder.XRInteraction.SnapZone.html#VRBuilder_XRInteraction_SnapZone_ShownHighlightObject">ShownHighlightObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material HighlightMeshMaterial { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_InvalidMaterial_" data-uid="VRBuilder.XRInteraction.SnapZone.InvalidMaterial*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_InvalidMaterial" data-uid="VRBuilder.XRInteraction.SnapZone.InvalidMaterial">
+  InvalidMaterial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The material used for drawing when an invalid <a class="xref" href="VRBuilder.XRInteraction.InteractableObject.html">InteractableObject</a> is hovering this <a class="xref" href="VRBuilder.XRInteraction.SnapZone.html">SnapZone</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material InvalidMaterial { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_IsEmpty_" data-uid="VRBuilder.XRInteraction.SnapZone.IsEmpty*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_IsEmpty" data-uid="VRBuilder.XRInteraction.SnapZone.IsEmpty">
+  IsEmpty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns if the SnapZone is empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_IsSnapping_" data-uid="VRBuilder.XRInteraction.SnapZone.IsSnapping*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_IsSnapping" data-uid="VRBuilder.XRInteraction.SnapZone.IsSnapping">
+  IsSnapping
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when an object is about to be snapped to the snapzone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSnapping { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_IsUnsnapping_" data-uid="VRBuilder.XRInteraction.SnapZone.IsUnsnapping*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_IsUnsnapping" data-uid="VRBuilder.XRInteraction.SnapZone.IsUnsnapping">
+  IsUnsnapping
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when an object is about to be unsnapped from the snapzone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnsnapping { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_PreviewMesh_" data-uid="VRBuilder.XRInteraction.SnapZone.PreviewMesh*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_PreviewMesh" data-uid="VRBuilder.XRInteraction.SnapZone.PreviewMesh">
+  PreviewMesh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the preview mesh used for this SnapZone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh PreviewMesh { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Mesh</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ShowHighlightObject_" data-uid="VRBuilder.XRInteraction.SnapZone.ShowHighlightObject*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ShowHighlightObject" data-uid="VRBuilder.XRInteraction.SnapZone.ShowHighlightObject">
+  ShowHighlightObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether <a class="xref" href="VRBuilder.XRInteraction.SnapZone.html#VRBuilder_XRInteraction_SnapZone_ShownHighlightObject">ShownHighlightObject</a> is shown or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowHighlightObject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ShownHighlightObject_" data-uid="VRBuilder.XRInteraction.SnapZone.ShownHighlightObject*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ShownHighlightObject" data-uid="VRBuilder.XRInteraction.SnapZone.ShownHighlightObject">
+  ShownHighlightObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The 'GameObject' whose mesh is drawn to emphasize the position of the snap zone.
+If none is supplied, no highlight object is shown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject ShownHighlightObject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_SnappedObject_" data-uid="VRBuilder.XRInteraction.SnapZone.SnappedObject*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_SnappedObject" data-uid="VRBuilder.XRInteraction.SnapZone.SnappedObject">
+  SnappedObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the snapped object, can be null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISnappableProperty SnappedObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.BasicInteraction.Properties.ISnappableProperty.html">ISnappableProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ValidationMaterial_" data-uid="VRBuilder.XRInteraction.SnapZone.ValidationMaterial*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ValidationMaterial" data-uid="VRBuilder.XRInteraction.SnapZone.ValidationMaterial">
+  ValidationMaterial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The material used for drawing when an <a class="xref" href="VRBuilder.XRInteraction.InteractableObject.html">InteractableObject</a> is hovering this <a class="xref" href="VRBuilder.XRInteraction.SnapZone.html">SnapZone</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material ValidationMaterial { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_Awake_" data-uid="VRBuilder.XRInteraction.SnapZone.Awake*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_Awake" data-uid="VRBuilder.XRInteraction.SnapZone.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>See <span class="xref">UnityEngine.MonoBehaviour</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_CanSelect_" data-uid="VRBuilder.XRInteraction.SnapZone.CanSelect*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_CanSelect_UnityEngine_XR_Interaction_Toolkit_IXRSelectInteractable_" data-uid="VRBuilder.XRInteraction.SnapZone.CanSelect(UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable)">
+  CanSelect(IXRSelectInteractable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if the interactable is valid for selection this frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanSelect(IXRSelectInteractable interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <span class="xref">IXRSelectInteractable</span></dt>
+    <dd><p>Interactable to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the interactable can be selected this frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="VRBuilder_XRInteraction_SnapZone_CanSelect_UnityEngine_XR_Interaction_Toolkit_IXRSelectInteractable__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Adds the functionality of selecting and unselecting specific interactables.</p>
+</div>
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_CanSnap_" data-uid="VRBuilder.XRInteraction.SnapZone.CanSnap*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_CanSnap_VRBuilder_BasicInteraction_Properties_ISnappableProperty_" data-uid="VRBuilder.XRInteraction.SnapZone.CanSnap(VRBuilder.BasicInteraction.Properties.ISnappableProperty)">
+  CanSnap(ISnappableProperty)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns if the object can be snapped at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSnap(ISnappableProperty target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="VRBuilder.BasicInteraction.Properties.ISnappableProperty.html">ISnappableProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_CreateFallbackMaterial_" data-uid="VRBuilder.XRInteraction.SnapZone.CreateFallbackMaterial*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_CreateFallbackMaterial" data-uid="VRBuilder.XRInteraction.SnapZone.CreateFallbackMaterial">
+  CreateFallbackMaterial()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L436"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a transparent <span class="xref">UnityEngine.Material</span> using Unity's &quot;Standard&quot; shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Material CreateFallbackMaterial()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd><p>A transparent <span class="xref">UnityEngine.Material</span>. Null, otherwise, if Unity's &quot;Standard&quot; shader cannot be found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_DrawHighlightMesh_" data-uid="VRBuilder.XRInteraction.SnapZone.DrawHighlightMesh*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_DrawHighlightMesh" data-uid="VRBuilder.XRInteraction.SnapZone.DrawHighlightMesh">
+  DrawHighlightMesh()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a highlight mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DrawHighlightMesh()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ForceRelease_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceRelease*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ForceRelease" data-uid="VRBuilder.XRInteraction.SnapZone.ForceRelease">
+  ForceRelease()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces release the snapped object, will return false when there is no object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForceRelease()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ForceSelect_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceSelect*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ForceSelect_UnityEngine_XR_Interaction_Toolkit_IXRSelectInteractable_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceSelect(UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable)">
+  ForceSelect(IXRSelectInteractable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unselects any selected interactable object and forces the provided interactable object to be selected if it is selectable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ForceSelect(IXRSelectInteractable interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <span class="xref">IXRSelectInteractable</span></dt>
+    <dd><p>Interactable object to be selected.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ForceSnap_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceSnap*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ForceSnap_VRBuilder_BasicInteraction_Properties_ISnappableProperty_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceSnap(VRBuilder.BasicInteraction.Properties.ISnappableProperty)">
+  ForceSnap(ISnappableProperty)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces the object to be snapped, returns true when it was snapped successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForceSnap(ISnappableProperty target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="VRBuilder.BasicInteraction.Properties.ISnappableProperty.html">ISnappableProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ForceUnselect_" data-uid="VRBuilder.XRInteraction.SnapZone.ForceUnselect*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ForceUnselect" data-uid="VRBuilder.XRInteraction.SnapZone.ForceUnselect">
+  ForceUnselect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L487"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces to unselect any selected interactable object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ForceUnselect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_IsValidSnapTarget_" data-uid="VRBuilder.XRInteraction.SnapZone.IsValidSnapTarget*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_IsValidSnapTarget_UnityEngine_XR_Interaction_Toolkit_IXRSelectInteractable_" data-uid="VRBuilder.XRInteraction.SnapZone.IsValidSnapTarget(UnityEngine.XR.Interaction.Toolkit.IXRSelectInteractable)">
+  IsValidSnapTarget(IXRSelectInteractable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsValidSnapTarget(IXRSelectInteractable interactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>interactable</code> <span class="xref">IXRSelectInteractable</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_OnDisable_" data-uid="VRBuilder.XRInteraction.SnapZone.OnDisable*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_OnDisable" data-uid="VRBuilder.XRInteraction.SnapZone.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>See <span class="xref">UnityEngine.MonoBehaviour</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_OnEnable_" data-uid="VRBuilder.XRInteraction.SnapZone.OnEnable*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_OnEnable" data-uid="VRBuilder.XRInteraction.SnapZone.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>See <span class="xref">UnityEngine.MonoBehaviour</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_ProcessInteractor_" data-uid="VRBuilder.XRInteraction.SnapZone.ProcessInteractor*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_ProcessInteractor_UnityEngine_XR_Interaction_Toolkit_XRInteractionUpdateOrder_UpdatePhase_" data-uid="VRBuilder.XRInteraction.SnapZone.ProcessInteractor(UnityEngine.XR.Interaction.Toolkit.XRInteractionUpdateOrder.UpdatePhase)">
+  ProcessInteractor(UpdatePhase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the interaction manager to update the interactor.
+Please see the interaction manager documentation for more details on update order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ProcessInteractor(XRInteractionUpdateOrder.UpdatePhase updatePhase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>updatePhase</code> <span class="xref">XRInteractionUpdateOrder</span>.<span class="xref">UpdatePhase</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_Update_" data-uid="VRBuilder.XRInteraction.SnapZone.Update*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_Update" data-uid="VRBuilder.XRInteraction.SnapZone.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_SnapZone_UpdateHighlightMeshFilterCache_" data-uid="VRBuilder.XRInteraction.SnapZone.UpdateHighlightMeshFilterCache*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_SnapZone_UpdateHighlightMeshFilterCache" data-uid="VRBuilder.XRInteraction.SnapZone.UpdateHighlightMeshFilterCache">
+  UpdateHighlightMeshFilterCache()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the <a class="xref" href="VRBuilder.XRInteraction.SnapZone.html#VRBuilder_XRInteraction_SnapZone_previewMesh">previewMesh</a> property using the current <a class="xref" href="VRBuilder.XRInteraction.SnapZone.html#VRBuilder_XRInteraction_SnapZone_ShownHighlightObject">ShownHighlightObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateHighlightMeshFilterCache()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/SnapZone.cs/#L22" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

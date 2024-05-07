@@ -1,0 +1,303 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.IStageProcess
+  commentId: T:VRBuilder.Core.IStageProcess
+  id: IStageProcess
+  parent: VRBuilder.Core
+  children:
+  - VRBuilder.Core.IStageProcess.End
+  - VRBuilder.Core.IStageProcess.FastForward
+  - VRBuilder.Core.IStageProcess.Start
+  - VRBuilder.Core.IStageProcess.Update
+  langs:
+  - csharp
+  - vb
+  name: IStageProcess
+  nameWithType: IStageProcess
+  fullName: VRBuilder.Core.IStageProcess
+  type: Interface
+  source:
+    remote:
+      path: Source/Core/Runtime/IStageProcess.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IStageProcess
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStageProcess.cs
+    startLine: 11
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: A process for an <xref href="VRBuilder.Core.IEntity" data-throw-if-not-resolved="false"></xref>'s <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public interface IStageProcess
+    content.vb: Public Interface IStageProcess
+- uid: VRBuilder.Core.IStageProcess.Start
+  commentId: M:VRBuilder.Core.IStageProcess.Start
+  id: Start
+  parent: VRBuilder.Core.IStageProcess
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: IStageProcess.Start()
+  fullName: VRBuilder.Core.IStageProcess.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IStageProcess.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Start
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStageProcess.cs
+    startLine: 18
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: >-
+    This method is invoked immediately when entity enters the stage.
+
+    The invocation is guaranteed.
+
+    Use it for initialization.
+  example: []
+  syntax:
+    content: void Start()
+    content.vb: Sub Start()
+  overload: VRBuilder.Core.IStageProcess.Start*
+- uid: VRBuilder.Core.IStageProcess.Update
+  commentId: M:VRBuilder.Core.IStageProcess.Update
+  id: Update
+  parent: VRBuilder.Core.IStageProcess
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: IStageProcess.Update()
+  fullName: VRBuilder.Core.IStageProcess.Update()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IStageProcess.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Update
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStageProcess.cs
+    startLine: 24
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: This method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.
+  example: []
+  syntax:
+    content: IEnumerator Update()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Function Update() As IEnumerator
+  overload: VRBuilder.Core.IStageProcess.Update*
+- uid: VRBuilder.Core.IStageProcess.End
+  commentId: M:VRBuilder.Core.IStageProcess.End
+  id: End
+  parent: VRBuilder.Core.IStageProcess
+  langs:
+  - csharp
+  - vb
+  name: End()
+  nameWithType: IStageProcess.End()
+  fullName: VRBuilder.Core.IStageProcess.End()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IStageProcess.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: End
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStageProcess.cs
+    startLine: 31
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: >-
+    This method is invoked immediately after the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> was iterated over completely, or after the <xref href="VRBuilder.Core.IStageProcess.FastForward" data-throw-if-not-resolved="false"></xref> was called.
+
+    The invocation is guaranteed.
+
+    Use it for deinitialization.
+  example: []
+  syntax:
+    content: void End()
+    content.vb: Sub [End]()
+  overload: VRBuilder.Core.IStageProcess.End*
+- uid: VRBuilder.Core.IStageProcess.FastForward
+  commentId: M:VRBuilder.Core.IStageProcess.FastForward
+  id: FastForward
+  parent: VRBuilder.Core.IStageProcess
+  langs:
+  - csharp
+  - vb
+  name: FastForward()
+  nameWithType: IStageProcess.FastForward()
+  fullName: VRBuilder.Core.IStageProcess.FastForward()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/IStageProcess.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: FastForward
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStageProcess.cs
+    startLine: 37
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core
+  summary: >-
+    This method is called when the process was not completed yet.
+
+    It must "fake" normal execution of the process and handle the cases when the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> is not iterated over completely.
+  example: []
+  syntax:
+    content: void FastForward()
+    content.vb: Sub FastForward()
+  overload: VRBuilder.Core.IStageProcess.FastForward*
+references:
+- uid: VRBuilder.Core.IEntity
+  commentId: T:VRBuilder.Core.IEntity
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: VRBuilder.Core.IEntity
+- uid: VRBuilder.Core.Stage
+  commentId: T:VRBuilder.Core.Stage
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.Stage.html
+  name: Stage
+  nameWithType: Stage
+  fullName: VRBuilder.Core.Stage
+- uid: VRBuilder.Core
+  commentId: N:VRBuilder.Core
+  href: VRBuilder.html
+  name: VRBuilder.Core
+  nameWithType: VRBuilder.Core
+  fullName: VRBuilder.Core
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+- uid: VRBuilder.Core.IStageProcess.Start*
+  commentId: Overload:VRBuilder.Core.IStageProcess.Start
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Start
+  name: Start
+  nameWithType: IStageProcess.Start
+  fullName: VRBuilder.Core.IStageProcess.Start
+- uid: VRBuilder.Core.IStageProcess.Update*
+  commentId: Overload:VRBuilder.Core.IStageProcess.Update
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  name: Update
+  nameWithType: IStageProcess.Update
+  fullName: VRBuilder.Core.IStageProcess.Update
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: VRBuilder.Core.IStageProcess.Update
+  commentId: M:VRBuilder.Core.IStageProcess.Update
+  parent: VRBuilder.Core.IStageProcess
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  name: Update()
+  nameWithType: IStageProcess.Update()
+  fullName: VRBuilder.Core.IStageProcess.Update()
+  spec.csharp:
+  - uid: VRBuilder.Core.IStageProcess.Update
+    name: Update
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.IStageProcess.Update
+    name: Update
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.IStageProcess.FastForward
+  commentId: M:VRBuilder.Core.IStageProcess.FastForward
+  parent: VRBuilder.Core.IStageProcess
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  name: FastForward()
+  nameWithType: IStageProcess.FastForward()
+  fullName: VRBuilder.Core.IStageProcess.FastForward()
+  spec.csharp:
+  - uid: VRBuilder.Core.IStageProcess.FastForward
+    name: FastForward
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.IStageProcess.FastForward
+    name: FastForward
+    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.IStageProcess.End*
+  commentId: Overload:VRBuilder.Core.IStageProcess.End
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_End
+  name: End
+  nameWithType: IStageProcess.End
+  fullName: VRBuilder.Core.IStageProcess.End
+- uid: VRBuilder.Core.IStageProcess
+  commentId: T:VRBuilder.Core.IStageProcess
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IStageProcess.html
+  name: IStageProcess
+  nameWithType: IStageProcess
+  fullName: VRBuilder.Core.IStageProcess
+- uid: VRBuilder.Core.IStageProcess.FastForward*
+  commentId: Overload:VRBuilder.Core.IStageProcess.FastForward
+  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
+  name: FastForward
+  nameWithType: IStageProcess.FastForward
+  fullName: VRBuilder.Core.IStageProcess.FastForward

@@ -1,0 +1,653 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  commentId: T:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  id: ISnapZoneProperty
+  parent: VRBuilder.BasicInteraction.Properties
+  children:
+  - VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped
+  - VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
+  - VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
+  - VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
+  - VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject
+  langs:
+  - csharp
+  - vb
+  name: ISnapZoneProperty
+  nameWithType: ISnapZoneProperty
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  type: Interface
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ISnapZoneProperty
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 9
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  syntax:
+    content: 'public interface ISnapZoneProperty : ISceneObjectProperty, ILockable'
+    content.vb: Public Interface ISnapZoneProperty Inherits ISceneObjectProperty, ILockable
+  inheritedMembers:
+  - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
+  - VRBuilder.Core.SceneObjects.ILockable.Locked
+  - VRBuilder.Core.SceneObjects.ILockable.Unlocked
+  - VRBuilder.Core.SceneObjects.ILockable.IsLocked
+  - VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
+  - VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
+  - VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
+  commentId: P:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
+  id: ObjectAttached
+  parent: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  langs:
+  - csharp
+  - vb
+  name: ObjectAttached
+  nameWithType: ISnapZoneProperty.ObjectAttached
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
+  type: Property
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ObjectAttached
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 14
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  summary: Called when an object is snapped to the snap zone.
+  example: []
+  syntax:
+    content: UnityEvent<SnapZonePropertyEventArgs> ObjectAttached { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+    content.vb: ReadOnly Property ObjectAttached As UnityEvent(Of SnapZonePropertyEventArgs)
+  overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached*
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
+  commentId: P:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
+  id: ObjectDetached
+  parent: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  langs:
+  - csharp
+  - vb
+  name: ObjectDetached
+  nameWithType: ISnapZoneProperty.ObjectDetached
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
+  type: Property
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ObjectDetached
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 19
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  summary: Called when an object is unsnapped from the snap zone.
+  example: []
+  syntax:
+    content: UnityEvent<SnapZonePropertyEventArgs> ObjectDetached { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+    content.vb: ReadOnly Property ObjectDetached As UnityEvent(Of SnapZonePropertyEventArgs)
+  overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached*
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped
+  commentId: P:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped
+  id: IsObjectSnapped
+  parent: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  langs:
+  - csharp
+  - vb
+  name: IsObjectSnapped
+  nameWithType: ISnapZoneProperty.IsObjectSnapped
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped
+  type: Property
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IsObjectSnapped
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 24
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  summary: Currently has an object snapped into this snap zone.
+  example: []
+  syntax:
+    content: bool IsObjectSnapped { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsObjectSnapped As Boolean
+  overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped*
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject
+  commentId: P:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject
+  id: SnappedObject
+  parent: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  langs:
+  - csharp
+  - vb
+  name: SnappedObject
+  nameWithType: ISnapZoneProperty.SnappedObject
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject
+  type: Property
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SnappedObject
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 29
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  summary: Object which is snapped into this snap zone.
+  example: []
+  syntax:
+    content: ISnappableProperty SnappedObject { get; set; }
+    parameters: []
+    return:
+      type: VRBuilder.BasicInteraction.Properties.ISnappableProperty
+    content.vb: Property SnappedObject As ISnappableProperty
+  overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject*
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
+  commentId: P:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
+  id: SnapZoneObject
+  parent: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  langs:
+  - csharp
+  - vb
+  name: SnapZoneObject
+  nameWithType: ISnapZoneProperty.SnapZoneObject
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
+  type: Property
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: SnapZoneObject
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 34
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  summary: Snap zone object.
+  example: []
+  syntax:
+    content: GameObject SnapZoneObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: ReadOnly Property SnapZoneObject As GameObject
+  overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject*
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  commentId: M:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  id: Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  parent: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
+  langs:
+  - csharp
+  - vb
+  name: Configure(IMode)
+  nameWithType: ISnapZoneProperty.Configure(IMode)
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  type: Method
+  source:
+    remote:
+      path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Configure
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
+    startLine: 37
+  assemblies:
+  - VRBuilder.BasicInteraction
+  namespace: VRBuilder.BasicInteraction.Properties
+  syntax:
+    content: void Configure(IMode mode)
+    parameters:
+    - id: mode
+      type: VRBuilder.Core.Configuration.Modes.IMode
+    content.vb: Sub Configure(mode As IMode)
+  overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure*
+references:
+- uid: VRBuilder.BasicInteraction.Properties
+  commentId: N:VRBuilder.BasicInteraction.Properties
+  href: VRBuilder.html
+  name: VRBuilder.BasicInteraction.Properties
+  nameWithType: VRBuilder.BasicInteraction.Properties
+  fullName: VRBuilder.BasicInteraction.Properties
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.BasicInteraction
+    name: BasicInteraction
+    href: VRBuilder.BasicInteraction.html
+  - name: .
+  - uid: VRBuilder.BasicInteraction.Properties
+    name: Properties
+    href: VRBuilder.BasicInteraction.Properties.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.BasicInteraction
+    name: BasicInteraction
+    href: VRBuilder.BasicInteraction.html
+  - name: .
+  - uid: VRBuilder.BasicInteraction.Properties
+    name: Properties
+    href: VRBuilder.BasicInteraction.Properties.html
+- uid: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
+  commentId: P:VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
+  parent: VRBuilder.Core.Properties.ISceneObjectProperty
+  href: VRBuilder.Core.Properties.ISceneObjectProperty.html#VRBuilder_Core_Properties_ISceneObjectProperty_SceneObject
+  name: SceneObject
+  nameWithType: ISceneObjectProperty.SceneObject
+  fullName: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
+- uid: VRBuilder.Core.SceneObjects.ILockable.Locked
+  commentId: E:VRBuilder.Core.SceneObjects.ILockable.Locked
+  parent: VRBuilder.Core.SceneObjects.ILockable
+  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_Locked
+  name: Locked
+  nameWithType: ILockable.Locked
+  fullName: VRBuilder.Core.SceneObjects.ILockable.Locked
+- uid: VRBuilder.Core.SceneObjects.ILockable.Unlocked
+  commentId: E:VRBuilder.Core.SceneObjects.ILockable.Unlocked
+  parent: VRBuilder.Core.SceneObjects.ILockable
+  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_Unlocked
+  name: Unlocked
+  nameWithType: ILockable.Unlocked
+  fullName: VRBuilder.Core.SceneObjects.ILockable.Unlocked
+- uid: VRBuilder.Core.SceneObjects.ILockable.IsLocked
+  commentId: P:VRBuilder.Core.SceneObjects.ILockable.IsLocked
+  parent: VRBuilder.Core.SceneObjects.ILockable
+  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_IsLocked
+  name: IsLocked
+  nameWithType: ILockable.IsLocked
+  fullName: VRBuilder.Core.SceneObjects.ILockable.IsLocked
+- uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
+  commentId: M:VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
+  parent: VRBuilder.Core.SceneObjects.ILockable
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
+  name: SetLocked(bool)
+  nameWithType: ILockable.SetLocked(bool)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked(bool)
+  nameWithType.vb: ILockable.SetLocked(Boolean)
+  fullName.vb: VRBuilder.Core.SceneObjects.ILockable.SetLocked(Boolean)
+  name.vb: SetLocked(Boolean)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
+    name: SetLocked
+    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
+    name: SetLocked
+    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
+  commentId: M:VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
+  parent: VRBuilder.Core.SceneObjects.ILockable
+  isExternal: true
+  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
+  name: RequestLocked(bool, IStepData)
+  nameWithType: ILockable.RequestLocked(bool, IStepData)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(bool, VRBuilder.Core.IStepData)
+  nameWithType.vb: ILockable.RequestLocked(Boolean, IStepData)
+  fullName.vb: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(Boolean, VRBuilder.Core.IStepData)
+  name.vb: RequestLocked(Boolean, IStepData)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
+    name: RequestLocked
+    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: VRBuilder.Core.IStepData
+    name: IStepData
+    href: VRBuilder.Core.IStepData.html
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
+    name: RequestLocked
+    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: VRBuilder.Core.IStepData
+    name: IStepData
+    href: VRBuilder.Core.IStepData.html
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+  commentId: M:VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+  parent: VRBuilder.Core.SceneObjects.ILockable
+  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
+  name: RemoveUnlocker(IStepData)
+  nameWithType: ILockable.RemoveUnlocker(IStepData)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+  spec.csharp:
+  - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+    name: RemoveUnlocker
+    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
+  - name: (
+  - uid: VRBuilder.Core.IStepData
+    name: IStepData
+    href: VRBuilder.Core.IStepData.html
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+    name: RemoveUnlocker
+    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
+  - name: (
+  - uid: VRBuilder.Core.IStepData
+    name: IStepData
+    href: VRBuilder.Core.IStepData.html
+  - name: )
+- uid: VRBuilder.Core.Properties.ISceneObjectProperty
+  commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
+  parent: VRBuilder.Core.Properties
+  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+  name: ISceneObjectProperty
+  nameWithType: ISceneObjectProperty
+  fullName: VRBuilder.Core.Properties.ISceneObjectProperty
+- uid: VRBuilder.Core.SceneObjects.ILockable
+  commentId: T:VRBuilder.Core.SceneObjects.ILockable
+  parent: VRBuilder.Core.SceneObjects
+  href: VRBuilder.Core.SceneObjects.ILockable.html
+  name: ILockable
+  nameWithType: ILockable
+  fullName: VRBuilder.Core.SceneObjects.ILockable
+- uid: VRBuilder.Core.Properties
+  commentId: N:VRBuilder.Core.Properties
+  href: VRBuilder.html
+  name: VRBuilder.Core.Properties
+  nameWithType: VRBuilder.Core.Properties
+  fullName: VRBuilder.Core.Properties
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Properties
+    name: Properties
+    href: VRBuilder.Core.Properties.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Properties
+    name: Properties
+    href: VRBuilder.Core.Properties.html
+- uid: VRBuilder.Core.SceneObjects
+  commentId: N:VRBuilder.Core.SceneObjects
+  href: VRBuilder.html
+  name: VRBuilder.Core.SceneObjects
+  nameWithType: VRBuilder.Core.SceneObjects
+  fullName: VRBuilder.Core.SceneObjects
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.SceneObjects
+    name: SceneObjects
+    href: VRBuilder.Core.SceneObjects.html
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached*
+  commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
+  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html#VRBuilder_BasicInteraction_Properties_ISnapZoneProperty_ObjectAttached
+  name: ObjectAttached
+  nameWithType: ISnapZoneProperty.ObjectAttached
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
+- uid: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+  commentId: T:UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
+  href: VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html
+  name: UnityEvent<SnapZonePropertyEventArgs>
+  nameWithType: UnityEvent<SnapZonePropertyEventArgs>
+  fullName: UnityEngine.Events.UnityEvent<VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs>
+  nameWithType.vb: UnityEvent(Of SnapZonePropertyEventArgs)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs)
+  name.vb: UnityEvent(Of SnapZonePropertyEventArgs)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - uid: VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs
+    name: SnapZonePropertyEventArgs
+    href: VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs
+    name: SnapZonePropertyEventArgs
+    href: VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html
+  - name: )
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
+  isExternal: true
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached*
+  commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
+  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html#VRBuilder_BasicInteraction_Properties_ISnapZoneProperty_ObjectDetached
+  name: ObjectDetached
+  nameWithType: ISnapZoneProperty.ObjectDetached
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped*
+  commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped
+  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html#VRBuilder_BasicInteraction_Properties_ISnapZoneProperty_IsObjectSnapped
+  name: IsObjectSnapped
+  nameWithType: ISnapZoneProperty.IsObjectSnapped
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.IsObjectSnapped
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject*
+  commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject
+  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html#VRBuilder_BasicInteraction_Properties_ISnapZoneProperty_SnappedObject
+  name: SnappedObject
+  nameWithType: ISnapZoneProperty.SnappedObject
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnappedObject
+- uid: VRBuilder.BasicInteraction.Properties.ISnappableProperty
+  commentId: T:VRBuilder.BasicInteraction.Properties.ISnappableProperty
+  parent: VRBuilder.BasicInteraction.Properties
+  href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
+  name: ISnappableProperty
+  nameWithType: ISnappableProperty
+  fullName: VRBuilder.BasicInteraction.Properties.ISnappableProperty
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject*
+  commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
+  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html#VRBuilder_BasicInteraction_Properties_ISnapZoneProperty_SnapZoneObject
+  name: SnapZoneObject
+  nameWithType: ISnapZoneProperty.SnapZoneObject
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure*
+  commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure
+  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html#VRBuilder_BasicInteraction_Properties_ISnapZoneProperty_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+  name: Configure
+  nameWithType: ISnapZoneProperty.Configure
+  fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure
+- uid: VRBuilder.Core.Configuration.Modes.IMode
+  commentId: T:VRBuilder.Core.Configuration.Modes.IMode
+  parent: VRBuilder.Core.Configuration.Modes
+  href: VRBuilder.Core.Configuration.Modes.IMode.html
+  name: IMode
+  nameWithType: IMode
+  fullName: VRBuilder.Core.Configuration.Modes.IMode
+- uid: VRBuilder.Core.Configuration.Modes
+  commentId: N:VRBuilder.Core.Configuration.Modes
+  href: VRBuilder.html
+  name: VRBuilder.Core.Configuration.Modes
+  nameWithType: VRBuilder.Core.Configuration.Modes
+  fullName: VRBuilder.Core.Configuration.Modes
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration
+    name: Configuration
+    href: VRBuilder.Core.Configuration.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration.Modes
+    name: Modes
+    href: VRBuilder.Core.Configuration.Modes.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration
+    name: Configuration
+    href: VRBuilder.Core.Configuration.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration.Modes
+    name: Modes
+    href: VRBuilder.Core.Configuration.Modes.html

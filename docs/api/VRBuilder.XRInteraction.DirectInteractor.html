@@ -1,0 +1,1198 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DirectInteractor | VR Builder Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DirectInteractor | VR Builder Documentation ">
+      
+      <meta name="description" content="Interactor used for directly interacting with interactables that are touching. This is handled via trigger volumes that update the current set of valid targets for this interactor. This component must have a collision volume that is set to be a trigger to work.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_DirectInteractor.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.DirectInteractor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+            VR Builder Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="VRBuilder.XRInteraction.DirectInteractor">
+
+
+
+  <h1 id="VRBuilder_XRInteraction_DirectInteractor" data-uid="VRBuilder.XRInteraction.DirectInteractor" class="text-break">
+Class DirectInteractor  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.html">VRBuilder</a>.<a class="xref" href="VRBuilder.XRInteraction.html">XRInteraction</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VRBuilder.XRInteraction.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interactor used for directly interacting with interactables that are touching. This is handled via trigger volumes
+that update the current set of valid targets for this interactor. This component must have a collision volume that is
+set to be a trigger to work.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DirectInteractor : XRDirectInteractor, IXRHoverInteractor, IXRSelectInteractor, IXRTargetPriorityInteractor, IXRGroupMember, IXRInteractionStrengthInteractor, IXRActivateInteractor, IXRInteractor</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">XRBaseInteractor</span></div>
+      <div><span class="xref">XRBaseControllerInteractor</span></div>
+      <div><span class="xref">XRDirectInteractor</span></div>
+      <div><span class="xref">DirectInteractor</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IXRHoverInteractor</span></div>
+      <div><span class="xref">IXRSelectInteractor</span></div>
+      <div><span class="xref">IXRTargetPriorityInteractor</span></div>
+      <div><span class="xref">IXRGroupMember</span></div>
+      <div><span class="xref">IXRInteractionStrengthInteractor</span></div>
+      <div><span class="xref">IXRActivateInteractor</span></div>
+      <div><span class="xref">IXRInteractor</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">XRDirectInteractor.CanHover(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.CanSelect(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.improveAccuracyWithSphereCollider</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.usingSphereColliderAccuracyImprovement</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.physicsLayerMask</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.physicsTriggerInteraction</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.unsortedValidTargets</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnEnable()</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnDisable()</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnTriggerEnter(Collider)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnTriggerStay(Collider)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnTriggerExit(Collider)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.PreprocessInteractor(XRInteractionUpdateOrder.UpdatePhase)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.ProcessInteractor(XRInteractionUpdateOrder.UpdatePhase)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRDirectInteractor.GetValidTargets(List&lt;IXRInteractable&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.CanHover(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.CanSelect(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnRegistered(InteractorRegisteredEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRDirectInteractor.OnUnregistered(InteractorUnregisteredEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.selectActionTrigger</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hideControllerOnSelect</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.allowHoveredActivate</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.targetPriorityMode</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnSelectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnSelectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnSelectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnSelectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnSelectCanceled</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnSelectCanceled</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnHoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnHoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnHoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnHoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnHoverCanceled</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnHoverCanceled</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.allowHoverAudioWhileSelecting</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnSelectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticSelectEnterIntensity</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticSelectEnterDuration</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnSelectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticSelectExitIntensity</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticSelectExitDuration</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnSelectCanceled</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticSelectCancelIntensity</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticSelectCancelDuration</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnHoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticHoverEnterIntensity</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticHoverEnterDuration</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnHoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticHoverExitIntensity</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticHoverExitDuration</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnHoverCanceled</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticHoverCancelIntensity</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.hapticHoverCancelDuration</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.allowHoverHapticsWhileSelecting</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.allowActivate</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.xrController</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.isUISelectActive</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.uiScrollValue</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.shouldActivate</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.shouldDeactivate</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRBaseControllerInteractor.GetActivateTargets(List&lt;IXRActivateInteractable&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.OnHoverEntering(HoverEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.OnHoverExiting(HoverExitEventArgs)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">XRBaseControllerInteractor.SendHapticImpulse(float, float)</a>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.PlayAudio(AudioClip)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnSelectEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnSelectEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.AudioClipForOnSelectEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnSelectExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnSelectExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.AudioClipForOnSelectExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnHoverEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnHoverEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.AudioClipForOnHoverEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playAudioClipOnHoverExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.audioClipForOnHoverExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.AudioClipForOnHoverExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnSelectEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnSelectExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.playHapticsOnHoverEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseControllerInteractor.validTargets</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.registered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.unregistered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactionManager</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.containingGroup</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactionLayers</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.attachTransform</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.keepSelectedTargetValid</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.disableVisualsWhenBlockedInGroup</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingSelectedInteractable</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingTargetFilter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.targetFilter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.allowHover</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.allowSelect</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.isPerformingManualInteraction</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactablesHovered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hasHover</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactablesSelected</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.firstInteractableSelected</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hasSelection</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingHoverFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.startingSelectFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectFilters</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.largestInteractionStrength</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.Reset()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.Start()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnDestroy()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetAttachTransform(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetAttachPoseOnSelect(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetLocalAttachPoseOnSelect(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.isHoverActive</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.targetsForSelection</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsHovering(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsSelecting(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsHovering(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.IsSelecting(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectedInteractableMovementTypeOverride</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.CaptureAttachPose(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.CreateAttachTransform()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.GetInteractionStrength(IXRInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverEntered(HoverEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverExited(HoverExitEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectEntered(SelectEnterEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectExited(SelectExitEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.ProcessInteractionStrength(XRInteractionUpdateOrder.UpdatePhase)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.StartManualInteraction(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.EndManualInteraction()</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.ProcessHoverFilters(IXRHoverInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.ProcessSelectFilters(IXRSelectInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.interactionLayerMask</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.enableInteractions</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectEntered</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectExited</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onHoverExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectEnter</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.onSelectExit</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverEntering(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverEntered(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverExiting(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnHoverExited(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectEntering(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectEntered(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectExiting(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.OnSelectExited(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.selectTarget</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.hoverTargets</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRBaseInteractor.GetHoverTargets(List&lt;XRBaseInteractable&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">XRBaseInteractor.GetValidTargets(List&lt;XRBaseInteractable&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.requireSelectExclusive</span>
+    </div>
+    <div>
+      <span class="xref">XRBaseInteractor.StartManualInteraction(XRBaseInteractable)</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="VRBuilder_XRInteraction_DirectInteractor_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Adds extra control over applicable interactions.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="VRBuilder_XRInteraction_DirectInteractor_PrecisionGrab_" data-uid="VRBuilder.XRInteraction.DirectInteractor.PrecisionGrab*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_DirectInteractor_PrecisionGrab" data-uid="VRBuilder.XRInteraction.DirectInteractor.PrecisionGrab">
+  PrecisionGrab
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggles precision grab on this interactor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PrecisionGrab { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_DirectInteractor_isSelectActive_" data-uid="VRBuilder.XRInteraction.DirectInteractor.isSelectActive*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_DirectInteractor_isSelectActive" data-uid="VRBuilder.XRInteraction.DirectInteractor.isSelectActive">
+  isSelectActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the selection state is active for this interactor. This will check if the controller has a valid selection
+state or whether toggle selection is currently on and active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool isSelectActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="VRBuilder_XRInteraction_DirectInteractor_AttemptGrab_" data-uid="VRBuilder.XRInteraction.DirectInteractor.AttemptGrab*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_DirectInteractor_AttemptGrab" data-uid="VRBuilder.XRInteraction.DirectInteractor.AttemptGrab">
+  AttemptGrab()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to grab an interactable hovering this interactor without needing to press the grab button on the controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AttemptGrab()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_DirectInteractor_Awake_" data-uid="VRBuilder.XRInteraction.DirectInteractor.Awake*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_DirectInteractor_Awake" data-uid="VRBuilder.XRInteraction.DirectInteractor.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>See <span class="xref">UnityEngine.MonoBehaviour</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_XRInteraction_DirectInteractor_OnSelectEntering_" data-uid="VRBuilder.XRInteraction.DirectInteractor.OnSelectEntering*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_DirectInteractor_OnSelectEntering_UnityEngine_XR_Interaction_Toolkit_SelectEnterEventArgs_" data-uid="VRBuilder.XRInteraction.DirectInteractor.OnSelectEntering(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs)">
+  OnSelectEntering(SelectEnterEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the Interaction Manager
+right before the Interactor first initiates selection of an Interactable
+in a first pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnSelectEntering(SelectEnterEventArgs arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arguments</code> <span class="xref">SelectEnterEventArgs</span></dt>
+    <dd><p>Event data containing the Interactable that is being selected.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="VRBuilder_XRInteraction_DirectInteractor_OnSelectEntering_UnityEngine_XR_Interaction_Toolkit_SelectEnterEventArgs__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><code class="paramref">arguments</code> is only valid during this method call, do not hold a reference to it.</p>
+</div>
+
+
+
+
+  <a id="VRBuilder_XRInteraction_DirectInteractor_OnSelectExiting_" data-uid="VRBuilder.XRInteraction.DirectInteractor.OnSelectExiting*"></a>
+
+  <h3 id="VRBuilder_XRInteraction_DirectInteractor_OnSelectExiting_UnityEngine_XR_Interaction_Toolkit_SelectExitEventArgs_" data-uid="VRBuilder.XRInteraction.DirectInteractor.OnSelectExiting(UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs)">
+  OnSelectExiting(SelectExitEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the Interaction Manager
+right before the Interactor ends selection of an Interactable
+in a first pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnSelectExiting(SelectExitEventArgs arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arguments</code> <span class="xref">SelectExitEventArgs</span></dt>
+    <dd><p>Event data containing the Interactable that is no longer selected.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="VRBuilder_XRInteraction_DirectInteractor_OnSelectExiting_UnityEngine_XR_Interaction_Toolkit_SelectExitEventArgs__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><code class="paramref">arguments</code> is only valid during this method call, do not hold a reference to it.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Interactors/DirectInteractor.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

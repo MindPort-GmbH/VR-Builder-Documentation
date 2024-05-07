@@ -1,0 +1,767 @@
+### YamlMime:ManagedReference
+items:
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  commentId: T:VRBuilder.Core.Configuration.DefaultAudioPlayer
+  id: DefaultAudioPlayer
+  parent: VRBuilder.Core.Configuration
+  children:
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(UnityEngine.AudioSource)
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop
+  langs:
+  - csharp
+  - vb
+  name: DefaultAudioPlayer
+  nameWithType: DefaultAudioPlayer
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  type: Class
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: DefaultAudioPlayer
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 8
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: Default process audio player.
+  example: []
+  syntax:
+    content: 'public class DefaultAudioPlayer : IProcessAudioPlayer'
+    content.vb: Public Class DefaultAudioPlayer Implements IProcessAudioPlayer
+  inheritance:
+  - System.Object
+  implements:
+  - VRBuilder.Core.Configuration.IProcessAudioPlayer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor
+  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor
+  id: '#ctor'
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: DefaultAudioPlayer()
+  nameWithType: DefaultAudioPlayer.DefaultAudioPlayer()
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.DefaultAudioPlayer()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 12
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  syntax:
+    content: public DefaultAudioPlayer()
+    content.vb: Public Sub New()
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor*
+  nameWithType.vb: DefaultAudioPlayer.New()
+  fullName.vb: VRBuilder.Core.Configuration.DefaultAudioPlayer.New()
+  name.vb: New()
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(UnityEngine.AudioSource)
+  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(UnityEngine.AudioSource)
+  id: '#ctor(UnityEngine.AudioSource)'
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: DefaultAudioPlayer(AudioSource)
+  nameWithType: DefaultAudioPlayer.DefaultAudioPlayer(AudioSource)
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.DefaultAudioPlayer(UnityEngine.AudioSource)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: .ctor
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 24
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  syntax:
+    content: public DefaultAudioPlayer(AudioSource audioSource)
+    parameters:
+    - id: audioSource
+      type: UnityEngine.AudioSource
+    content.vb: Public Sub New(audioSource As AudioSource)
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor*
+  nameWithType.vb: DefaultAudioPlayer.New(AudioSource)
+  fullName.vb: VRBuilder.Core.Configuration.DefaultAudioPlayer.New(UnityEngine.AudioSource)
+  name.vb: New(AudioSource)
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
+  commentId: P:VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
+  id: FallbackAudioSource
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: FallbackAudioSource
+  nameWithType: DefaultAudioPlayer.FallbackAudioSource
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: FallbackAudioSource
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 30
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: Gets a fallback audio source. Used only for backwards compatibility.
+  example: []
+  syntax:
+    content: public AudioSource FallbackAudioSource { get; }
+    parameters: []
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public ReadOnly Property FallbackAudioSource As AudioSource
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource*
+  implements:
+  - VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
+  commentId: P:VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
+  id: IsPlaying
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: IsPlaying
+  nameWithType: DefaultAudioPlayer.IsPlaying
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IsPlaying
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 33
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: True if currently playing audio.
+  example: []
+  syntax:
+    content: public bool IsPlaying { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPlaying As Boolean
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying*
+  implements:
+  - VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  id: PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: PlayAudio(IAudioData, float, float)
+  nameWithType: DefaultAudioPlayer.PlayAudio(IAudioData, float, float)
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, float, float)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: PlayAudio
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 36
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: Play the specified audio immediately with the set parameters.
+  example: []
+  syntax:
+    content: public void PlayAudio(IAudioData audioData, float volume = 1, float pitch = 1)
+    parameters:
+    - id: audioData
+      type: VRBuilder.Core.Audio.IAudioData
+    - id: volume
+      type: System.Single
+    - id: pitch
+      type: System.Single
+    content.vb: Public Sub PlayAudio(audioData As IAudioData, volume As Single = 1, pitch As Single = 1)
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio*
+  implements:
+  - VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  nameWithType.vb: DefaultAudioPlayer.PlayAudio(IAudioData, Single, Single)
+  fullName.vb: VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, Single, Single)
+  name.vb: PlayAudio(IAudioData, Single, Single)
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset
+  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset
+  id: Reset
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: DefaultAudioPlayer.Reset()
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Reset
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 45
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: Resets the player to its default settings.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset*
+  implements:
+  - VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop
+  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop
+  id: Stop
+  parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: DefaultAudioPlayer.Stop()
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop()
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+      branch: develop
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Stop
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
+    startLine: 51
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: Stops playing audio.
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop*
+  implements:
+  - VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
+references:
+- uid: VRBuilder.Core.Configuration
+  commentId: N:VRBuilder.Core.Configuration
+  href: VRBuilder.html
+  name: VRBuilder.Core.Configuration
+  nameWithType: VRBuilder.Core.Configuration
+  fullName: VRBuilder.Core.Configuration
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration
+    name: Configuration
+    href: VRBuilder.Core.Configuration.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Configuration
+    name: Configuration
+    href: VRBuilder.Core.Configuration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: VRBuilder.Core.Configuration.IProcessAudioPlayer
+  commentId: T:VRBuilder.Core.Configuration.IProcessAudioPlayer
+  parent: VRBuilder.Core.Configuration
+  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html
+  name: IProcessAudioPlayer
+  nameWithType: IProcessAudioPlayer
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor*
+  commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor
+  href: VRBuilder.Core.Configuration.DefaultAudioPlayer.html#VRBuilder_Core_Configuration_DefaultAudioPlayer__ctor
+  name: DefaultAudioPlayer
+  nameWithType: DefaultAudioPlayer.DefaultAudioPlayer
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.DefaultAudioPlayer
+  nameWithType.vb: DefaultAudioPlayer.New
+  fullName.vb: VRBuilder.Core.Configuration.DefaultAudioPlayer.New
+  name.vb: New
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource*
+  commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
+  href: VRBuilder.Core.Configuration.DefaultAudioPlayer.html#VRBuilder_Core_Configuration_DefaultAudioPlayer_FallbackAudioSource
+  name: FallbackAudioSource
+  nameWithType: DefaultAudioPlayer.FallbackAudioSource
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
+- uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
+  commentId: P:VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
+  parent: VRBuilder.Core.Configuration.IProcessAudioPlayer
+  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_FallbackAudioSource
+  name: FallbackAudioSource
+  nameWithType: IProcessAudioPlayer.FallbackAudioSource
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying*
+  commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
+  href: VRBuilder.Core.Configuration.DefaultAudioPlayer.html#VRBuilder_Core_Configuration_DefaultAudioPlayer_IsPlaying
+  name: IsPlaying
+  nameWithType: DefaultAudioPlayer.IsPlaying
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
+- uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
+  commentId: P:VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
+  parent: VRBuilder.Core.Configuration.IProcessAudioPlayer
+  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_IsPlaying
+  name: IsPlaying
+  nameWithType: IProcessAudioPlayer.IsPlaying
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio*
+  commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio
+  href: VRBuilder.Core.Configuration.DefaultAudioPlayer.html#VRBuilder_Core_Configuration_DefaultAudioPlayer_PlayAudio_VRBuilder_Core_Audio_IAudioData_System_Single_System_Single_
+  name: PlayAudio
+  nameWithType: DefaultAudioPlayer.PlayAudio
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio
+- uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  commentId: M:VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+  parent: VRBuilder.Core.Configuration.IProcessAudioPlayer
+  isExternal: true
+  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_PlayAudio_VRBuilder_Core_Audio_IAudioData_System_Single_System_Single_
+  name: PlayAudio(IAudioData, float, float)
+  nameWithType: IProcessAudioPlayer.PlayAudio(IAudioData, float, float)
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, float, float)
+  nameWithType.vb: IProcessAudioPlayer.PlayAudio(IAudioData, Single, Single)
+  fullName.vb: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, Single, Single)
+  name.vb: PlayAudio(IAudioData, Single, Single)
+  spec.csharp:
+  - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+    name: PlayAudio
+    href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_PlayAudio_VRBuilder_Core_Audio_IAudioData_System_Single_System_Single_
+  - name: (
+  - uid: VRBuilder.Core.Audio.IAudioData
+    name: IAudioData
+    href: VRBuilder.Core.Audio.IAudioData.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
+    name: PlayAudio
+    href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_PlayAudio_VRBuilder_Core_Audio_IAudioData_System_Single_System_Single_
+  - name: (
+  - uid: VRBuilder.Core.Audio.IAudioData
+    name: IAudioData
+    href: VRBuilder.Core.Audio.IAudioData.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: VRBuilder.Core.Audio.IAudioData
+  commentId: T:VRBuilder.Core.Audio.IAudioData
+  parent: VRBuilder.Core.Audio
+  href: VRBuilder.Core.Audio.IAudioData.html
+  name: IAudioData
+  nameWithType: IAudioData
+  fullName: VRBuilder.Core.Audio.IAudioData
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: VRBuilder.Core.Audio
+  commentId: N:VRBuilder.Core.Audio
+  href: VRBuilder.html
+  name: VRBuilder.Core.Audio
+  nameWithType: VRBuilder.Core.Audio
+  fullName: VRBuilder.Core.Audio
+  spec.csharp:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Audio
+    name: Audio
+    href: VRBuilder.Core.Audio.html
+  spec.vb:
+  - uid: VRBuilder
+    name: VRBuilder
+    href: VRBuilder.html
+  - name: .
+  - uid: VRBuilder.Core
+    name: Core
+    href: VRBuilder.Core.html
+  - name: .
+  - uid: VRBuilder.Core.Audio
+    name: Audio
+    href: VRBuilder.Core.Audio.html
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset*
+  commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset
+  href: VRBuilder.Core.Configuration.DefaultAudioPlayer.html#VRBuilder_Core_Configuration_DefaultAudioPlayer_Reset
+  name: Reset
+  nameWithType: DefaultAudioPlayer.Reset
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.Reset
+- uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
+  commentId: M:VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
+  parent: VRBuilder.Core.Configuration.IProcessAudioPlayer
+  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Reset
+  name: Reset()
+  nameWithType: IProcessAudioPlayer.Reset()
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset()
+  spec.csharp:
+  - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
+    name: Reset
+    href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
+    name: Reset
+    href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Reset
+  - name: (
+  - name: )
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop*
+  commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop
+  href: VRBuilder.Core.Configuration.DefaultAudioPlayer.html#VRBuilder_Core_Configuration_DefaultAudioPlayer_Stop
+  name: Stop
+  nameWithType: DefaultAudioPlayer.Stop
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.Stop
+- uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
+  commentId: M:VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
+  parent: VRBuilder.Core.Configuration.IProcessAudioPlayer
+  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Stop
+  name: Stop()
+  nameWithType: IProcessAudioPlayer.Stop()
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop()
+  spec.csharp:
+  - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
+    name: Stop
+    href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Stop
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
+    name: Stop
+    href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Stop
+  - name: (
+  - name: )
