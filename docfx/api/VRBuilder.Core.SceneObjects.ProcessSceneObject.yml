@@ -30,6 +30,7 @@ items:
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.ResetUniqueId
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.SetLocked(System.Boolean)
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.SetObjectId(System.Guid)
+  - VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.ToString
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.UniqueName
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.UniqueNameChanged
@@ -37,6 +38,7 @@ items:
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.ValidateProperties(System.Collections.Generic.IEnumerable{System.Type})
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.guid
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.guids
+  - VRBuilder.Core.SceneObjects.ProcessSceneObject.tags
   - VRBuilder.Core.SceneObjects.ProcessSceneObject.uniqueName
   langs:
   - csharp
@@ -48,7 +50,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessSceneObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -80,8 +82,6 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
-  derivedClasses:
-  - VRBuilder.Core.Properties.UserSceneObject
   implements:
   - UnityEngine.ISerializationCallbackReceiver
   - VRBuilder.Core.SceneObjects.ISceneObject
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: guid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: uniqueName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Guid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UniqueName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -393,7 +393,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: guids
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Guids
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
@@ -449,6 +449,94 @@ items:
   overload: VRBuilder.Core.SceneObjects.ProcessSceneObject.Guids*
   implements:
   - VRBuilder.Core.SceneObjects.IGuidContainer.Guids
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneObject.tags
+  commentId: F:VRBuilder.Core.SceneObjects.ProcessSceneObject.tags
+  id: tags
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneObject
+  langs:
+  - csharp
+  - vb
+  name: tags
+  nameWithType: ProcessSceneObject.tags
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneObject.tags
+  type: Field
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
+      branch: release/v4.1.1
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: tags
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
+    startLine: 86
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  syntax:
+    content: >-
+      [SerializeField]
+
+      [Obsolete("This field will be removed in a future major version.")]
+
+      protected List<string> tags
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <SerializeField>
+
+      <Obsolete("This field will be removed in a future major version.")>
+
+      Protected tags As List(Of String)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This field will be removed in a future major version.
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags
+  commentId: P:VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags
+  id: Tags
+  parent: VRBuilder.Core.SceneObjects.ProcessSceneObject
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: ProcessSceneObject.Tags
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags
+  type: Property
+  source:
+    remote:
+      path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
+      branch: release/v4.1.1
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: Tags
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
+    startLine: 89
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.SceneObjects
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This property will be removed in a future major version.")]
+
+      public IEnumerable<Guid> Tags { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+    content.vb: >-
+      <Obsolete("This property will be removed in a future major version.")>
+
+      Public ReadOnly Property Tags As IEnumerable(Of Guid)
+  overload: VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This property will be removed in a future major version.
 - uid: VRBuilder.Core.SceneObjects.ProcessSceneObject.GameObject
   commentId: P:VRBuilder.Core.SceneObjects.ProcessSceneObject.GameObject
   id: GameObject
@@ -463,11 +551,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GameObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 85
+    startLine: 93
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -496,11 +584,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Properties
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 90
+    startLine: 98
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -529,11 +617,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsLocked
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 98
+    startLine: 106
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -562,11 +650,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UniqueNameChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 110
+    startLine: 118
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -604,11 +692,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Locked
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 112
+    startLine: 120
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -635,11 +723,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Unlocked
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 113
+    startLine: 121
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -666,11 +754,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GuidAdded
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 114
+    startLine: 122
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -697,11 +785,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GuidRemoved
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 115
+    startLine: 123
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -728,11 +816,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ObjectIdChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 116
+    startLine: 124
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -759,11 +847,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnBeforeSerialize
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 163
+    startLine: 171
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -797,11 +885,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnAfterDeserialize
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 191
+    startLine: 199
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -825,11 +913,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ResetUniqueId
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 246
+    startLine: 254
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -851,11 +939,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetObjectId
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 266
+    startLine: 274
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -884,11 +972,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ChangeUniqueName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 278
+    startLine: 286
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -932,11 +1020,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsGuidAssigned
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 285
+    startLine: 293
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -963,11 +1051,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Init
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 294
+    startLine: 302
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -994,11 +1082,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CheckHasProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 373
+    startLine: 381
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1031,11 +1119,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CheckHasProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 379
+    startLine: 387
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1066,11 +1154,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 385
+    startLine: 393
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1103,11 +1191,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ValidateProperties
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 397
+    startLine: 405
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1139,11 +1227,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetLocked
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 417
+    startLine: 425
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1175,11 +1263,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RequestLocked
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 443
+    startLine: 451
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1213,11 +1301,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RemoveUnlocker
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 478
+    startLine: 486
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1248,11 +1336,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AddGuid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 493
+    startLine: 501
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1281,11 +1369,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HasGuid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 504
+    startLine: 512
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1316,11 +1404,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RemoveGuid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 510
+    startLine: 518
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -1351,11 +1439,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ToString
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneObject.cs
-    startLine: 523
+    startLine: 531
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
@@ -6542,6 +6630,47 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags*
+  commentId: Overload:VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags
+  href: VRBuilder.Core.SceneObjects.ProcessSceneObject.html#VRBuilder_Core_SceneObjects_ProcessSceneObject_Tags
+  name: Tags
+  nameWithType: ProcessSceneObject.Tags
+  fullName: VRBuilder.Core.SceneObjects.ProcessSceneObject.Tags
 - uid: VRBuilder.Core.SceneObjects.ProcessSceneObject.GameObject*
   commentId: Overload:VRBuilder.Core.SceneObjects.ProcessSceneObject.GameObject
   href: VRBuilder.Core.SceneObjects.ProcessSceneObject.html#VRBuilder_Core_SceneObjects_ProcessSceneObject_GameObject

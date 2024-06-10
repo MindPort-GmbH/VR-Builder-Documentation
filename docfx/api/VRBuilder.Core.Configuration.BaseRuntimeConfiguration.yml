@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: BaseRuntimeConfiguration
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ManifestFileName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SceneObjectRegistry
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Serializer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DefaultInputActionAssetPath
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CustomInputActionAssetPath
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Modes
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: User
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
@@ -270,12 +270,26 @@ items:
   namespace: VRBuilder.Core.Configuration
   example: []
   syntax:
-    content: public abstract ProcessSceneObject User { get; }
+    content: >-
+      [Obsolete("This property is obsolete and no longer returns a valid value. Use LocalUser instead.", true)]
+
+      public abstract ProcessSceneObject User { get; }
     parameters: []
     return:
       type: VRBuilder.Core.SceneObjects.ProcessSceneObject
-    content.vb: Public MustOverride ReadOnly Property User As ProcessSceneObject
+    content.vb: >-
+      <Obsolete("This property is obsolete and no longer returns a valid value. Use LocalUser instead.", True)>
+
+      Public MustOverride ReadOnly Property User As ProcessSceneObject
   overload: VRBuilder.Core.Configuration.BaseRuntimeConfiguration.User*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This property is obsolete and no longer returns a valid value. Use LocalUser instead.
+    - type: System.Boolean
+      value: true
 - uid: VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser
   commentId: P:VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser
   id: LocalUser
@@ -290,11 +304,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: LocalUser
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 96
+    startLine: 97
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -320,11 +334,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: InstructionPlayer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 99
+    startLine: 100
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -350,11 +364,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StepLockHandling
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -381,11 +395,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Users
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 107
+    startLine: 108
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -411,11 +425,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessAudioPlayer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 110
+    startLine: 111
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -441,11 +455,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SceneObjectManager
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 113
+    startLine: 114
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -471,11 +485,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SceneConfiguration
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 116
+    startLine: 117
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -501,11 +515,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 136
+    startLine: 137
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -530,11 +544,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 140
+    startLine: 141
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -562,11 +576,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: LoadProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs
-    startLine: 146
+    startLine: 147
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/EntityOwners/Sequence/IEntitySequenceData.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IEntitySequenceData
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/EntityOwners/Sequence/IEntitySequenceData.cs
@@ -25,10 +25,10 @@ items:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
   syntax:
-    content: 'public interface IEntitySequenceData<TEntity> : IEntityCollectionData<TEntity>, IEntityCollectionData, IData where TEntity : IEntity'
+    content: 'public interface IEntitySequenceData<TEntity> : IEntityCollectionData<TEntity>, IEntityCollectionData, IEntitySequenceData, IData where TEntity : IEntity'
     typeParameters:
     - id: TEntity
-    content.vb: Public Interface IEntitySequenceData(Of TEntity As IEntity) Inherits IEntityCollectionData(Of TEntity), IEntityCollectionData, IData
+    content.vb: Public Interface IEntitySequenceData(Of TEntity As IEntity) Inherits IEntityCollectionData(Of TEntity), IEntityCollectionData, IEntitySequenceData, IData
   inheritedMembers:
   - VRBuilder.Core.EntityOwners.IEntityCollectionData{{TEntity}}.GetChildren
   - VRBuilder.Core.IData.Metadata
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/EntityOwners/Sequence/IEntitySequenceData.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Current
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/EntityOwners/Sequence/IEntitySequenceData.cs

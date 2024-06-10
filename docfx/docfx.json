@@ -7,6 +7,7 @@
           "files": [
             "VRBuilder*.csproj"
           ],
+          "cwd": "../../",
           "exclude": [
             "*Tests*.csproj",
             "*DemoScene*.csproj",
@@ -14,7 +15,14 @@
         ]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "references": [
+        {
+          "uid": "*",
+          "name": "*",
+          "href": "../../Library/ScriptAssemblies/*.dll"        
+        }
+      ]    
     }
   ],
   "build": {

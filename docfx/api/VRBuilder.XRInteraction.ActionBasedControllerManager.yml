@@ -6,6 +6,7 @@ items:
   parent: VRBuilder.XRInteraction
   children:
   - VRBuilder.XRInteraction.ActionBasedControllerManager.BaseController
+  - VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState(VRBuilder.XRInteraction.ActionBasedControllerManager.StateID)
   - VRBuilder.XRInteraction.ActionBasedControllerManager.InteractState
   - VRBuilder.XRInteraction.ActionBasedControllerManager.Move
   - VRBuilder.XRInteraction.ActionBasedControllerManager.OnDisable
@@ -22,6 +23,7 @@ items:
   - VRBuilder.XRInteraction.ActionBasedControllerManager.UIController
   - VRBuilder.XRInteraction.ActionBasedControllerManager.UIModeActivate
   - VRBuilder.XRInteraction.ActionBasedControllerManager.UIState
+  - VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState
   - VRBuilder.XRInteraction.ActionBasedControllerManager.Update
   langs:
   - csharp
@@ -33,7 +35,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ActionBasedControllerManager
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -204,7 +206,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: BaseController
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -235,7 +237,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TeleportController
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -266,7 +268,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UIController
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -297,7 +299,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TeleportModeActivate
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -328,7 +330,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TeleportModeCancel
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -359,7 +361,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UIModeActivate
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -390,7 +392,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Turn
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -421,7 +423,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Move
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -452,7 +454,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TranslateAnchor
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -483,7 +485,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RotateAnchor
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -514,7 +516,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SelectState
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -545,7 +547,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TeleportState
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -576,7 +578,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: InteractState
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -607,7 +609,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UIState
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -638,7 +640,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnEnable
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -664,7 +666,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnDisable
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
@@ -676,6 +678,69 @@ items:
     content: protected void OnDisable()
     content.vb: Protected Sub OnDisable()
   overload: VRBuilder.XRInteraction.ActionBasedControllerManager.OnDisable*
+- uid: VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState(VRBuilder.XRInteraction.ActionBasedControllerManager.StateID)
+  commentId: M:VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState(VRBuilder.XRInteraction.ActionBasedControllerManager.StateID)
+  id: ForceLockControllerState(VRBuilder.XRInteraction.ActionBasedControllerManager.StateID)
+  parent: VRBuilder.XRInteraction.ActionBasedControllerManager
+  langs:
+  - csharp
+  - vb
+  name: ForceLockControllerState(StateID)
+  nameWithType: ActionBasedControllerManager.ForceLockControllerState(ActionBasedControllerManager.StateID)
+  fullName: VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState(VRBuilder.XRInteraction.ActionBasedControllerManager.StateID)
+  type: Method
+  source:
+    remote:
+      path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
+      branch: release/v4.1.1
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: ForceLockControllerState
+    path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
+    startLine: 365
+  assemblies:
+  - VRBuilder.XRInteraction
+  namespace: VRBuilder.XRInteraction
+  summary: >-
+    Forces a transition to the desired state, bypassing the provided input actions.
+
+    The controller will be locked in the specified state until manually unlocked.
+  example: []
+  syntax:
+    content: public void ForceLockControllerState(ActionBasedControllerManager.StateID stateID)
+    parameters:
+    - id: stateID
+      type: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID
+      description: ID of the state to switch to.
+    content.vb: Public Sub ForceLockControllerState(stateID As ActionBasedControllerManager.StateID)
+  overload: VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState*
+- uid: VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState
+  commentId: M:VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState
+  id: UnlockControllerState
+  parent: VRBuilder.XRInteraction.ActionBasedControllerManager
+  langs:
+  - csharp
+  - vb
+  name: UnlockControllerState()
+  nameWithType: ActionBasedControllerManager.UnlockControllerState()
+  fullName: VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState()
+  type: Method
+  source:
+    remote:
+      path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
+      branch: release/v4.1.1
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: UnlockControllerState
+    path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
+    startLine: 377
+  assemblies:
+  - VRBuilder.XRInteraction
+  namespace: VRBuilder.XRInteraction
+  summary: Transitions to the default state and allows regular state switching via input actions.
+  example: []
+  syntax:
+    content: public void UnlockControllerState()
+    content.vb: Public Sub UnlockControllerState()
+  overload: VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState*
 - uid: VRBuilder.XRInteraction.ActionBasedControllerManager.Start
   commentId: M:VRBuilder.XRInteraction.ActionBasedControllerManager.Start
   id: Start
@@ -690,11 +755,11 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Start
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-    startLine: 360
+    startLine: 386
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
@@ -716,11 +781,11 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Update
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/ActionBasedControllerManager.cs
-    startLine: 372
+    startLine: 398
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
@@ -5241,6 +5306,41 @@ references:
   name: OnDisable
   nameWithType: ActionBasedControllerManager.OnDisable
   fullName: VRBuilder.XRInteraction.ActionBasedControllerManager.OnDisable
+- uid: VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState*
+  commentId: Overload:VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState
+  href: VRBuilder.XRInteraction.ActionBasedControllerManager.html#VRBuilder_XRInteraction_ActionBasedControllerManager_ForceLockControllerState_VRBuilder_XRInteraction_ActionBasedControllerManager_StateID_
+  name: ForceLockControllerState
+  nameWithType: ActionBasedControllerManager.ForceLockControllerState
+  fullName: VRBuilder.XRInteraction.ActionBasedControllerManager.ForceLockControllerState
+- uid: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID
+  commentId: T:VRBuilder.XRInteraction.ActionBasedControllerManager.StateID
+  parent: VRBuilder.XRInteraction
+  href: VRBuilder.XRInteraction.ActionBasedControllerManager.html
+  name: ActionBasedControllerManager.StateID
+  nameWithType: ActionBasedControllerManager.StateID
+  fullName: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID
+  spec.csharp:
+  - uid: VRBuilder.XRInteraction.ActionBasedControllerManager
+    name: ActionBasedControllerManager
+    href: VRBuilder.XRInteraction.ActionBasedControllerManager.html
+  - name: .
+  - uid: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID
+    name: StateID
+    href: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID.html
+  spec.vb:
+  - uid: VRBuilder.XRInteraction.ActionBasedControllerManager
+    name: ActionBasedControllerManager
+    href: VRBuilder.XRInteraction.ActionBasedControllerManager.html
+  - name: .
+  - uid: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID
+    name: StateID
+    href: VRBuilder.XRInteraction.ActionBasedControllerManager.StateID.html
+- uid: VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState*
+  commentId: Overload:VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState
+  href: VRBuilder.XRInteraction.ActionBasedControllerManager.html#VRBuilder_XRInteraction_ActionBasedControllerManager_UnlockControllerState
+  name: UnlockControllerState
+  nameWithType: ActionBasedControllerManager.UnlockControllerState
+  fullName: VRBuilder.XRInteraction.ActionBasedControllerManager.UnlockControllerState
 - uid: VRBuilder.XRInteraction.ActionBasedControllerManager.Start*
   commentId: Overload:VRBuilder.XRInteraction.ActionBasedControllerManager.Start
   href: VRBuilder.XRInteraction.ActionBasedControllerManager.html#VRBuilder_XRInteraction_ActionBasedControllerManager_Start

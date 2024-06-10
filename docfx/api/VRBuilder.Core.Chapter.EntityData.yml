@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: EntityData
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -36,11 +36,11 @@ items:
     content: >-
       [DataContract(IsReference = true)]
 
-      public class Chapter.EntityData : EntityCollectionData<IStep>, IChapterData, IEntitySequenceDataWithMode<IStep>, IEntitySequenceData<IStep>, IEntityCollectionData<IStep>, IEntityCollectionData, IModeData, IRenameableData, INamedData, IData
+      public class Chapter.EntityData : EntityCollectionData<IStep>, IChapterData, IEntitySequenceDataWithMode<IStep>, IEntitySequenceData<IStep>, IEntityCollectionData<IStep>, IEntityCollectionData, IEntitySequenceData, IModeData, IRenameableData, INamedData, IData
     content.vb: >-
       <DataContract(IsReference:=True)>
 
-      Public Class Chapter.EntityData Inherits EntityCollectionData(Of IStep) Implements IChapterData, IEntitySequenceDataWithMode(Of IStep), IEntitySequenceData(Of IStep), IEntityCollectionData(Of IStep), IEntityCollectionData, IModeData, IRenameableData, INamedData, IData
+      Public Class Chapter.EntityData Inherits EntityCollectionData(Of IStep) Implements IChapterData, IEntitySequenceDataWithMode(Of IStep), IEntitySequenceData(Of IStep), IEntityCollectionData(Of IStep), IEntityCollectionData, IEntitySequenceData, IModeData, IRenameableData, INamedData, IData
   inheritance:
   - System.Object
   - VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IStep}
@@ -50,6 +50,7 @@ items:
   - VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IStep}
   - VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStep}
   - VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - VRBuilder.Core.EntityOwners.IEntitySequenceData
   - VRBuilder.Core.Configuration.Modes.IModeData
   - VRBuilder.Core.IRenameableData
   - VRBuilder.Core.INamedData
@@ -85,7 +86,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -128,7 +129,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: FirstStep
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -171,7 +172,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Steps
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -214,7 +215,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetChildren
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -246,7 +247,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -282,7 +283,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Mode
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -314,7 +315,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Chapter.cs
-      branch: develop
+      branch: release/v4.1.1
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Current
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Chapter.cs
@@ -515,6 +516,13 @@ references:
   name: IEntityCollectionData
   nameWithType: IEntityCollectionData
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+- uid: VRBuilder.Core.EntityOwners.IEntitySequenceData
+  commentId: T:VRBuilder.Core.EntityOwners.IEntitySequenceData
+  parent: VRBuilder.Core.EntityOwners
+  href: VRBuilder.Core.EntityOwners.IEntitySequenceData.html
+  name: IEntitySequenceData
+  nameWithType: IEntitySequenceData
+  fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
 - uid: VRBuilder.Core.Configuration.Modes.IModeData
   commentId: T:VRBuilder.Core.Configuration.Modes.IModeData
   parent: VRBuilder.Core.Configuration.Modes
