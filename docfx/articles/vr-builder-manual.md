@@ -53,58 +53,61 @@
       - [Set Parent](#set-parent)
         - [Description](#description-6)
         - [Configuration](#configuration-6)
-    - [Environment](#environment)
-      - [Disable Objects](#disable-objects)
+      - [Load Scene](#load-scene)
         - [Description](#description-7)
         - [Configuration](#configuration-7)
-      - [Enable Objects](#enable-objects)
+    - [Environment](#environment)
+      - [Disable Objects](#disable-objects)
         - [Description](#description-8)
         - [Configuration](#configuration-8)
-      - [Disable Components](#disable-components)
+      - [Enable Objects](#enable-objects)
         - [Description](#description-9)
         - [Configuration](#configuration-9)
-      - [Enable Components](#enable-components)
+      - [Disable Components](#disable-components)
         - [Description](#description-10)
         - [Configuration](#configuration-10)
-      - [Unsnap Object](#unsnap-object)
+      - [Enable Components](#enable-components)
         - [Description](#description-11)
         - [Configuration](#configuration-11)
-    - [Animation](#animation)
-      - [Move Object](#move-object)
+      - [Unsnap Object](#unsnap-object)
         - [Description](#description-12)
         - [Configuration](#configuration-12)
+    - [Animation](#animation)
+      - [Move Object](#move-object)
+        - [Description](#description-13)
+        - [Configuration](#configuration-13)
   - [Conditions](#conditions)
     - [Environment](#environment-1)
       - [Move Objects in Collider](#move-objects-in-collider)
-        - [Description](#description-13)
-        - [Configuration](#configuration-13)
-      - [Object Nearby](#object-nearby)
         - [Description](#description-14)
         - [Configuration](#configuration-14)
-    - [Interaction](#interaction)
-      - [Grab Objects](#grab-objects)
+      - [Object Nearby](#object-nearby)
         - [Description](#description-15)
         - [Configuration](#configuration-15)
-      - [Release Objects](#release-objects)
+    - [Interaction](#interaction)
+      - [Grab Objects](#grab-objects)
         - [Description](#description-16)
         - [Configuration](#configuration-16)
-      - [Snap Objects](#snap-objects)
+      - [Release Objects](#release-objects)
         - [Description](#description-17)
         - [Configuration](#configuration-17)
-      - [Touch Objects](#touch-objects)
+      - [Snap Objects](#snap-objects)
         - [Description](#description-18)
         - [Configuration](#configuration-18)
-      - [Use Objects](#use-objects)
+      - [Touch Objects](#touch-objects)
         - [Description](#description-19)
         - [Configuration](#configuration-19)
-    - [Utility](#utility-1)
-      - [Timeout](#timeout)
+      - [Use Objects](#use-objects)
         - [Description](#description-20)
         - [Configuration](#configuration-20)
-    - [Locomotion](#locomotion-1)
-      - [Teleport](#teleport)
+    - [Utility](#utility-1)
+      - [Timeout](#timeout)
         - [Description](#description-21)
         - [Configuration](#configuration-21)
+    - [Locomotion](#locomotion-1)
+      - [Teleport](#teleport)
+        - [Description](#description-22)
+        - [Configuration](#configuration-22)
     - [Online Documentation](#online-documentation)
   - [Acknowledgements](#acknowledgements)
   - [Contact and Support](#contact-and-support)
@@ -144,11 +147,11 @@ After importing, VR Builder will compile and import some dependencies.
 
 For older Unity versions, a dialog from Unity's XR Interaction Component appears. VR Builder should work with either choice, so select the option that better suits your existing project. Use `I Made a Backup, Go Ahead!` if you are starting a new project. This will trigger an automated restart.
 
-![Update Interaction Layermask](images/core/installation-xrit-layermask-update.png)
+![Update Interaction Layermask](images/installation-xrit-layermask-update.png)
 
 For newer Unity versions the Samples of the XR Interaction Toolkit might need an update.
 
-![Update Interaction Layermask](images/core/update-xri-samples.png)
+![Update Interaction Layermask](images/update-xri-samples.png)
 
 After these notifications the Project Setup Wizard will appear. 
 
@@ -159,23 +162,23 @@ The Setup Wizard helps to get new or existing Unity scenes set up and ready to b
 In the following we will guide you through the different tabs of the VR Builder Setup Wizard.
 Click `Next` to proceed to the interaction settings page setup page.
 
-![Wizard Welcome Page](images/core/installation-wizard-welcome.png)
+![Wizard Welcome Page](images/installation-wizard-welcome.png)
 
 #### Interaction Settings
 Here you can configure some default settings related to VR Builder interactions. Right now, the only available setting will determine whether a newly created grabbable object will use physics or not. You can also change these options at any time in `Project Settings > VR Builder > Settings`.
 
-![Wizard Interaction Settings Page](images/core/installation-wizard-interaction-settings.png)
+![Wizard Interaction Settings Page](images/installation-wizard-interaction-settings.png)
 
 #### XR Hardware Setup
 Then, if it's not configured already, you will be able to configure your project to work with your VR hardware. If your hardware is not listed but supports OpenXR, select Other. You might need to finish the configuration under Project Settings -> XR Plug-in Management. If your device is not supported, please reach out to us in the VR Builder Community. The packages for the selected hardware will be imported after closing the wizard.
 
-![Wizard Hardware Page](images/core/installation-wizard-hardware.png)
+![Wizard Hardware Page](images/installation-wizard-hardware.png)
 
 #### Unity Localization
 
 Finally you must choose whether to set up localization support or skip it for now. VR Builder supports localization through the Unity Localization package. When setting up localization, the wizard will guide you through the manual steps required for a localized project. It provides a useful checklist and some shortcuts to make the task easier. It also has links that redirect to the relevant Unity documentation. If you decide to skip this setup, VR Builder will work in a single language. You can perform localization setup at any time. We encourage you to use Unity Localization, even if you use just one language. With Unity Localization, you will have all your texts in one place inside the Unity Localization Tables, which in turn will give you the possibility to export and refine them and import them back into Unity. Note that as of January 2024, we do not support asset localization tables. See [Resources path/Key](https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Documentation/vr-builder-manual.md#configuration) in the Documentation on how to localize audio files.
 
-![Localization Page](images/core/installation-wizard-localization.png)
+![Localization Page](images/installation-wizard-localization.png)
 
 #### Help & Documentation
 
@@ -183,7 +186,7 @@ This page lists some useful resources to get you started with VR Builder. There 
 
 Note that if you selected the Unity URP template in the beginning, the materials on the avatar hands and demo scene will look solid magenta. That's Unity's way to tell you that the materials are not compatible with the current render pipeline. You can rectify this by selecting all materials (by filtering them in the project window), then click `Edit > Rendering > Materials > Convert Selected Built-in` Materials to URP. You can of course ignore this step if you don't plan to use the provided hand models or the demo scene.
 
-![Localization Page](images/core/instalation-wizard-help-documentantion.png)
+![Localization Page](images/instalation-wizard-help-documentantion.png)
 
 ## Quick Start
 
@@ -199,13 +202,13 @@ These building blocks are either conditions or behaviors. Conditions check if th
 
 The process in the demo scene is linear, and will guide the user through different steps. To try out the demo scene, ensure audio volume is up, or you won't be able to hear the spoken instructions!
 
-![Demo Scene](images/core/demo-scene-panoramic.png)
+![Demo Scene](images/demo-scene-panoramic.png)
 
 ### Demo Scene Hierarchy
 
 In the hierarchy there are three game objects in parentheses.
 
-![Hierarchy](images/core/hierarchy.png)
+![Hierarchy](images/hierarchy.png)
 
 They are automatically added to every VR Builder scene.
 
@@ -229,7 +232,7 @@ It is also possible to add other `Process Scene Object`s on the rig in order to 
 
 The process editor lets you design the process of your VR application. You can open the process editor from `Tools > VR Builder > Process Editor` or `Window > VR Builder > Process Editor`. The process editor for the demo scene should look like this.
 
-![Process editor](images/core/workflow-editor.png)
+![Process editor](images/workflow-editor.png)
 
 #### Chapters view
 On the left, there is a list of chapters. Every chapter is a separate section of the process. They are useful to separate a process in its logical steps and avoid too much clutter in a single graph. 
@@ -240,7 +243,7 @@ Next to the chapter name, there are icons that allow you to move the chapter up 
 
 Underneath, you can see the `Connections breakdown` foldout. Expand it to see incoming and outgoing connections for the current chapter. That is, which chapters lead here and to which chapter it is possible to go from this one. The number next to each connection represents the amount of steps that connect to the chapter. When "Next Chapter" or "Previous Chapter" is listed as a connection, it means the connection is implicit: a path ends with an empty transition, which by default ends the current chapter and starts the next one in order.
 
-![Connection overview](images/core/connection-breakdown.png)
+![Connection overview](images/connection-breakdown.png)
 
 The demo scene is linear, meaning that each chapter will lead directly to the next and the connection overview only contains implicit connections, but it is possible to create more complex processes that don't follow the chapter list linearly.
 
@@ -249,11 +252,11 @@ On the right, there is a graphical representation of the current chapter. Every 
 
 Select the "Welcome" node in the first chapter. This will open the Step Inspector. The window should look like the following.
 
-![Step inspector behaviors](images/core/step-inspector-behavior.png)
+![Step inspector behaviors](images/step-inspector-behavior.png)
 
 The only behavior is a text to speech instruction that will be triggered when the node is entered. Click on the "Transitions" tab.
 
-![Step inspector transitions](images/core/step-inspector-transitions.png)
+![Step inspector transitions](images/step-inspector-transitions.png)
 
 There is a single transition. A step can have multiple transitions, each leading to a different step. In this case, the transition is connected to no other step, so it will end the chapter. The next chapter, "The magic cube", will then start.
 
@@ -272,7 +275,7 @@ This is the default step node, the main building block for your process. By defa
 
 This node doesn't let you set conditions and behaviors, but instead can be expanded in a new node graph. It can be populated with other step nodes and act as a "sub-chapter" with some self contained logic. This can help keeping the process tidy.
 
-![Step group node](images/core/step-group-node.png)
+![Step group node](images/step-group-node.png)
 
 You can access the node's graph by clicking the `Expand` button or double clicking on the node itself. There are also context menu options for expanding the node or ungrouping it - that is, replacing it in the main graph with the logic it contains.
 
@@ -280,7 +283,7 @@ This node only has one entry and one exit point. This means that after the conta
 
 If you are in a step group graph, it will be indicated on the top left of the process editor.
 
-![Step group UI](images/core/node-group-hierarchy.png)
+![Step group UI](images/node-group-hierarchy.png)
 
 You can click on a parent to return to it. For example, clicking on "Chapter 1" will get you back to the main chapter graph.
 
@@ -295,7 +298,7 @@ If you encounter one of these edge case, make sure to review your process logic 
 
 The parallel execution node lets you execute two or more step sequences at the same time. Execution will continue to the next node once all parallel sequences have completed.
 
-![Parallel execution node](images/core/parallel-execution.png)
+![Parallel execution node](images/parallel-execution.png)
 
 Clicking on a Parallel Path button will open a new graph where the path can be edited. This is very similar to a step group, with the difference that there can be multiple parallel paths and they are all executed at the same time.
 Like with step groups, it is possible to return to the main process by clicking the root chapter on the top left of the process editor.
@@ -306,7 +309,7 @@ The buttons next to a parallel path let you rename or delete it. The "+" button 
 
 You can use this node as the last node on a sequence. It will end the current chapter and start a new specified chapter, which can be selected from a drop-down list. This is useful to move through the chapters in a non-linear fashion. Note that you are not required to use this node for linear processes, as a chapter will automatically end when an empty transition is reached. In that case, the process will simply proceed to the following chapter.
 
-![End chapter node](images/core/end-chapter-node.png)
+![End chapter node](images/end-chapter-node.png)
 
     Note: It is not recommended to use this node inside a step group as it will behave slightly differently (the nodes following the step group will be fast-forwarded before ending the chapter). It is currently not possible to create this node inside a step group.
 
@@ -314,7 +317,7 @@ You can use this node as the last node on a sequence. It will end the current ch
 
 The `Process Scene Object` component acts as a bridge between the VR Builder process and a Unity game object. If the process needs to observe or interact with a game object, it does so through this component. This means that every game object referenced in the process is required to have this component. If a more detailed interaction is needed, property components can be added to provide VR Builder more control on the object. For example, adding a `Grabbable Property` component will make the object grabbable, and VR Builder will be able to check if the object has been grabbed.
 
-![Process Scene Object](images/core/process-scene-object.png)
+![Process Scene Object](images/process-scene-object.png)
 
 The `Process Scene Object` generates a hidden object ID which identifies the object internally in the VR Builder process.
 
@@ -330,7 +333,7 @@ If a group is present only on some of the selected objects, it will be displayed
 
 The default rig supports locomotion by teleportation or continuous movement. By default, the rig is set to work with teleportation only, you can change this settings on the `Locomotion Scheme Manager` component on the XR Rig child object.
 
-![Locomotion Scheme Selection](images/core/locomotion-scheme-manager.png)
+![Locomotion Scheme Selection](images/locomotion-scheme-manager.png)
 
 ### Continuous Movement
 
@@ -417,7 +420,7 @@ VR Builder can also be configured to use the Localization package from Unity to 
 
 VR Builder will automatically switch to localized mode when a Localization Settings object has been created.
 
-![Play Text-to-speech Behavior](images/core/play-tts-behavior.png)
+![Play Text-to-speech Behavior](images/play-tts-behavior.png)
 
 ##### Configuration
 
@@ -455,7 +458,7 @@ The Highlight Object behavior visually highlights the selected object until the 
 
 For additional highting features you can replace the *Default Highlighter* with a *Interactable Highlighter Script*. Select the highlighted `Object` in the Unity Hierarchy. In the Unity Inspector replace the *DefaultHighlighter* with a *Interactable Highlighter Script*.
 
-[![Interactable Highlighter Script](images/core/interactable-highlighter-script.png)](../images/core/default-behaviors/interactable-highlighter-script.png)
+[![Interactable Highlighter Script](images/interactable-highlighter-script.png)](../images/default-behaviors/interactable-highlighter-script.png)
 
 You can define the Color and Material for *On Touch Highlight*, *On Grab Highlight*, and *On Use Highlight*. The object will show the highlight color configured in the Highlight behavior by default. As soon as the object is touched it will change to the color configured in *On Touch Highlight*. The same happens when the object is grabbed or used. It will display the configured color in ‘On Grab Highlight’ or ‘On Use Highlight’. 
 
@@ -577,6 +580,30 @@ The Set Parent behavior parents an `Object` to another one in the Unity hierarch
 
 If checked, the target object will snap to the same position and rotation as the parent object.
 
+------
+
+#### Load Scene
+
+##### Description
+
+The Load Scene behavior loads a new scene, either additively or not. 
+If a scene is loaded additively, it should not contain a VR Builder process as that could interfere with the process running in the main scene. It still can contain process scene objects which can be interacted with.
+If a scene is loaded non-additively, this behavior will effectively interrupt the process as the current scene is unloaded and a new one is loaded.
+
+##### Configuration
+
+- **Scene to load**
+    
+    Select the scene to be loaded from this dropdown. Note that the scene needs to be added to the Build Settings in order to show in the dropdown. The scene is serialized by path in the process JSON, so moving or renaming it might break this parameter.
+
+- **Load additively**
+  
+    If checked, the scene will be loaded additively and the process will keep running. If unchecked, the current scene will be unloaded and thus interrupt the current process.
+
+- **Load asynchronously**
+  
+    If checked, the scene will be loaded asynchronously. This can result in smoother performance while loading. A scene is loaded synchronously in the Start phase of the activating process, while asynchronous loading will happen in the Update phase.
+    
 ------
 
 ### Environment
@@ -806,12 +833,12 @@ After the user releases an `Object`, this is moved to the snap zone's `SnapPoint
 
     For any snappable object you can generate a snap zone that can snap this object and can be used as a `Zone to snap into`. To do so, navigate to the `Snappable Property` in Unity's Inspector. You will see two buttons. Clicking on the button `Create Snap Zone for this object`, you will create a snap zone that only accepts this exact object. Clicking on `Create Snap Zone for objects in the same groups` will instead create a snap zone that accepts every object that shares at least a group with the current object. Note that the current object will still determine the shape of the snap zone's ghost object.
     
-    ![Snap Zone Generator](images/core/snapzonegenerator.png)
+    ![Snap Zone Generator](images/snapzonegenerator.png)
 
     If you want a specific snap zone behavior, like for example accepting only one group of the source object instead of all of them, you'll have to manually change that. Select the snap zone and find the `Has Guid Validation` component. If you manually created your snap zone, you might have to add this component manually as well.
     Add to the list the objects you want to be valid for this snap zone. You can reference single objects by object ID, or entire categories of objects via groups.
 
-    ![Snap Zone Validation](images/core/snapzone-validation.png)
+    ![Snap Zone Validation](images/snapzone-validation.png)
 
 - **Manual Snap Zone Creation**
   
@@ -827,11 +854,11 @@ After the user releases an `Object`, this is moved to the snap zone's `SnapPoint
 
     To change the highlight color or validation hover material of a dedicated snap zone, navigate to the snap zone object in the Unity Inspector. You will find the Snap Zone Parameters and Settings in the script `Snap Zone`.
 
-    ![Snap Zone Parameters](images/core/snapzoneparameters.png)
+    ![Snap Zone Parameters](images/snapzoneparameters.png)
 
     To change the colors and materials of all snap zones in the scene, select them in the VR Builder snap zone settings and press 'Apply settings in current scene'.
 
-    ![Snap Zone Settings](images/core/snapzonesettings.png)
+    ![Snap Zone Settings](images/snapzonesettings.png)
 
     The snap zone settings can be found in the project settings in tab `VR Builder > Settings > Snap Zones`.
 
@@ -907,7 +934,7 @@ The provided `Teleportation Property` is based on the Unity XR Interaction Toolk
 
     The `Teleportation Property` can be set as a **Default Teleportation Anchor** by clicking on the `Set Default Teleportation Anchor` button. You can find it when selecting the `Teleportation Point` and viewing it in the Unity Inspector.
 
-    ![Teleportation Property](images/core/teleportationproperty.PNG)
+    ![Teleportation Property](images/teleportationproperty.PNG)
 
     This will configure the attached `Teleportation Anchor`. It will provide a visual element in the Unity Editor that helps placing the `Teleportation Point` in the scene. This visual element will also be shown in the virtual world during training execution to guide the user.
 
