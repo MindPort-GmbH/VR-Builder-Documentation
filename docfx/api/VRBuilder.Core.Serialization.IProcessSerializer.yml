@@ -7,6 +7,8 @@ items:
   children:
   - VRBuilder.Core.Serialization.IProcessSerializer.ChapterFromByteArray(System.Byte[])
   - VRBuilder.Core.Serialization.IProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
+  - VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray(System.Byte[])
+  - VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
   - VRBuilder.Core.Serialization.IProcessSerializer.FileFormat
   - VRBuilder.Core.Serialization.IProcessSerializer.ManifestFromByteArray(System.Byte[])
   - VRBuilder.Core.Serialization.IProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)
@@ -25,7 +27,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IProcessSerializer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
@@ -52,7 +54,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
@@ -83,7 +85,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: FileFormat
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
@@ -100,6 +102,75 @@ items:
       type: System.String
     content.vb: ReadOnly Property FileFormat As String
   overload: VRBuilder.Core.Serialization.IProcessSerializer.FileFormat*
+- uid: VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
+  commentId: M:VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
+  id: EntityToByteArray(VRBuilder.Core.IEntity)
+  parent: VRBuilder.Core.Serialization.IProcessSerializer
+  langs:
+  - csharp
+  - vb
+  name: EntityToByteArray(IEntity)
+  nameWithType: IProcessSerializer.EntityToByteArray(IEntity)
+  fullName: VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
+      branch: release/v4.2.0
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: EntityToByteArray
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
+    startLine: 26
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Serialization
+  summary: Serializes a given entity into a byte array.
+  example: []
+  syntax:
+    content: byte[] EntityToByteArray(IEntity entity)
+    parameters:
+    - id: entity
+      type: VRBuilder.Core.IEntity
+    return:
+      type: System.Byte[]
+    content.vb: Function EntityToByteArray(entity As IEntity) As Byte()
+  overload: VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray*
+- uid: VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray(System.Byte[])
+  commentId: M:VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray(System.Byte[])
+  id: EntityFromByteArray(System.Byte[])
+  parent: VRBuilder.Core.Serialization.IProcessSerializer
+  langs:
+  - csharp
+  - vb
+  name: EntityFromByteArray(byte[])
+  nameWithType: IProcessSerializer.EntityFromByteArray(byte[])
+  fullName: VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray(byte[])
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
+      branch: release/v4.2.0
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: EntityFromByteArray
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
+    startLine: 31
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Serialization
+  summary: Deserializes a given entity to a usable object.
+  example: []
+  syntax:
+    content: IEntity EntityFromByteArray(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: VRBuilder.Core.IEntity
+    content.vb: Function EntityFromByteArray(data As Byte()) As IEntity
+  overload: VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray*
+  nameWithType.vb: IProcessSerializer.EntityFromByteArray(Byte())
+  fullName.vb: VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray(Byte())
+  name.vb: EntityFromByteArray(Byte())
 - uid: VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
   commentId: M:VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
   id: ProcessToByteArray(VRBuilder.Core.IProcess)
@@ -114,11 +185,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessToByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 26
+    startLine: 36
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -147,11 +218,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessFromByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 31
+    startLine: 41
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -183,11 +254,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ChapterToByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 36
+    startLine: 46
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -216,11 +287,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ChapterFromByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 41
+    startLine: 51
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -252,11 +323,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StepToByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 46
+    startLine: 56
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -285,11 +356,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StepFromByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 51
+    startLine: 61
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -321,11 +392,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ManifestToByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 56
+    startLine: 66
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -354,11 +425,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Serialization/IProcessSerializer.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ManifestFromByteArray
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Serialization/IProcessSerializer.cs
-    startLine: 61
+    startLine: 71
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
@@ -437,19 +508,19 @@ references:
   name: FileFormat
   nameWithType: IProcessSerializer.FileFormat
   fullName: VRBuilder.Core.Serialization.IProcessSerializer.FileFormat
-- uid: VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray*
-  commentId: Overload:VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray
-  href: VRBuilder.Core.Serialization.IProcessSerializer.html#VRBuilder_Core_Serialization_IProcessSerializer_ProcessToByteArray_VRBuilder_Core_IProcess_
-  name: ProcessToByteArray
-  nameWithType: IProcessSerializer.ProcessToByteArray
-  fullName: VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray
-- uid: VRBuilder.Core.IProcess
-  commentId: T:VRBuilder.Core.IProcess
+- uid: VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray*
+  commentId: Overload:VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray
+  href: VRBuilder.Core.Serialization.IProcessSerializer.html#VRBuilder_Core_Serialization_IProcessSerializer_EntityToByteArray_VRBuilder_Core_IEntity_
+  name: EntityToByteArray
+  nameWithType: IProcessSerializer.EntityToByteArray
+  fullName: VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray
+- uid: VRBuilder.Core.IEntity
+  commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IProcess.html
-  name: IProcess
-  nameWithType: IProcess
-  fullName: VRBuilder.Core.IProcess
+  href: VRBuilder.Core.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: VRBuilder.Core.IEntity
 - uid: System.Byte[]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
@@ -495,6 +566,25 @@ references:
   - uid: VRBuilder.Core
     name: Core
     href: VRBuilder.Core.html
+- uid: VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray*
+  commentId: Overload:VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray
+  href: VRBuilder.Core.Serialization.IProcessSerializer.html#VRBuilder_Core_Serialization_IProcessSerializer_EntityFromByteArray_System_Byte___
+  name: EntityFromByteArray
+  nameWithType: IProcessSerializer.EntityFromByteArray
+  fullName: VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray
+- uid: VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray*
+  commentId: Overload:VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray
+  href: VRBuilder.Core.Serialization.IProcessSerializer.html#VRBuilder_Core_Serialization_IProcessSerializer_ProcessToByteArray_VRBuilder_Core_IProcess_
+  name: ProcessToByteArray
+  nameWithType: IProcessSerializer.ProcessToByteArray
+  fullName: VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray
+- uid: VRBuilder.Core.IProcess
+  commentId: T:VRBuilder.Core.IProcess
+  parent: VRBuilder.Core
+  href: VRBuilder.Core.IProcess.html
+  name: IProcess
+  nameWithType: IProcess
+  fullName: VRBuilder.Core.IProcess
 - uid: VRBuilder.Core.Serialization.IProcessSerializer.ProcessFromByteArray*
   commentId: Overload:VRBuilder.Core.Serialization.IProcessSerializer.ProcessFromByteArray
   href: VRBuilder.Core.Serialization.IProcessSerializer.html#VRBuilder_Core_Serialization_IProcessSerializer_ProcessFromByteArray_System_Byte___

@@ -11,6 +11,7 @@ items:
   - VRBuilder.Core.Configuration.RuntimeConfigurator.GetRuntimeConfigurationName
   - VRBuilder.Core.Configuration.RuntimeConfigurator.GetSelectedProcess
   - VRBuilder.Core.Configuration.RuntimeConfigurator.Instance
+  - VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting(System.Boolean)
   - VRBuilder.Core.Configuration.RuntimeConfigurator.ModeChanged
   - VRBuilder.Core.Configuration.RuntimeConfigurator.RuntimeConfigurationChanged
   - VRBuilder.Core.Configuration.RuntimeConfigurator.SetRuntimeConfigurationName(System.String)
@@ -25,7 +26,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RuntimeConfigurator
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
@@ -174,7 +175,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ModeChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
@@ -203,7 +204,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RuntimeConfigurationChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
@@ -232,23 +233,65 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Exists
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 71
+    startLine: 104
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Checks if a process runtime configurator instance exists in scene.
+  summary: Checks if a process runtime configurator exists in the scene.
   example: []
   syntax:
     content: public static bool Exists { get; }
     parameters: []
     return:
       type: System.Boolean
+      description: <code>true</code> if an instance of the runtime configurator exists; otherwise, <code>false</code>.
     content.vb: Public Shared ReadOnly Property Exists As Boolean
   overload: VRBuilder.Core.Configuration.RuntimeConfigurator.Exists*
+- uid: VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting(System.Boolean)
+  commentId: M:VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting(System.Boolean)
+  id: IsExisting(System.Boolean)
+  parent: VRBuilder.Core.Configuration.RuntimeConfigurator
+  langs:
+  - csharp
+  - vb
+  name: IsExisting(bool)
+  nameWithType: RuntimeConfigurator.IsExisting(bool)
+  fullName: VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting(bool)
+  type: Method
+  source:
+    remote:
+      path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
+      branch: release/v4.2.0
+      repo: git@github.com:MindPort-GmbH/VR-Builder.git
+    id: IsExisting
+    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
+    startLine: 118
+  assemblies:
+  - VRBuilder.Core
+  namespace: VRBuilder.Core.Configuration
+  summary: >-
+    Checks if an instance of the runtime configurator exists.
+
+    If <xref href="VRBuilder.Core.Configuration.RuntimeConfigurator.instance" data-throw-if-not-resolved="false"></xref> is not set it tries to set it by calling LookUpRuntimeConfiguratorGameObject.
+  example: []
+  syntax:
+    content: public static bool IsExisting(bool forceNewLookup = false)
+    parameters:
+    - id: forceNewLookup
+      type: System.Boolean
+      description: If set to <code>true</code>, forces a new lookup for the instance.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an instance of the runtime configurator exists; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsExisting(forceNewLookup As Boolean = False) As Boolean
+  overload: VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting*
+  nameWithType.vb: RuntimeConfigurator.IsExisting(Boolean)
+  fullName.vb: VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting(Boolean)
+  name.vb: IsExisting(Boolean)
 - uid: VRBuilder.Core.Configuration.RuntimeConfigurator.Configuration
   commentId: P:VRBuilder.Core.Configuration.RuntimeConfigurator.Configuration
   id: Configuration
@@ -263,11 +306,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Configuration
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 87
+    startLine: 131
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -294,15 +337,15 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Instance
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 139
+    startLine: 183
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Current instance of the RuntimeConfigurator.
+  summary: Gets the current instance of the RuntimeConfigurator.
   example: []
   syntax:
     content: public static RuntimeConfigurator Instance { get; }
@@ -314,7 +357,7 @@ items:
   exceptions:
   - type: System.NullReferenceException
     commentId: T:System.NullReferenceException
-    description: Will throw a NPE if there is no RuntimeConfigurator added to the scene.
+    description: Thrown if there is no RuntimeConfigurator added to the scene.
 - uid: VRBuilder.Core.Configuration.RuntimeConfigurator.GetRuntimeConfigurationName
   commentId: M:VRBuilder.Core.Configuration.RuntimeConfigurator.GetRuntimeConfigurationName
   id: GetRuntimeConfigurationName
@@ -329,11 +372,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetRuntimeConfigurationName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 155
+    startLine: 200
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -343,6 +386,7 @@ items:
     content: public string GetRuntimeConfigurationName()
     return:
       type: System.String
+      description: The assembly qualified name of the runtime configuration.
     content.vb: Public Function GetRuntimeConfigurationName() As String
   overload: VRBuilder.Core.Configuration.RuntimeConfigurator.GetRuntimeConfigurationName*
 - uid: VRBuilder.Core.Configuration.RuntimeConfigurator.SetRuntimeConfigurationName(System.String)
@@ -359,11 +403,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetRuntimeConfigurationName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 163
+    startLine: 209
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -374,6 +418,7 @@ items:
     parameters:
     - id: configurationName
       type: System.String
+      description: The assembly qualified name of the runtime configuration.
     content.vb: Public Sub SetRuntimeConfigurationName(configurationName As String)
   overload: VRBuilder.Core.Configuration.RuntimeConfigurator.SetRuntimeConfigurationName*
   nameWithType.vb: RuntimeConfigurator.SetRuntimeConfigurationName(String)
@@ -393,11 +438,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetSelectedProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 171
+    startLine: 218
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -407,6 +452,7 @@ items:
     content: public string GetSelectedProcess()
     return:
       type: System.String
+      description: The path to the selected process.
     content.vb: Public Function GetSelectedProcess() As String
   overload: VRBuilder.Core.Configuration.RuntimeConfigurator.GetSelectedProcess*
 - uid: VRBuilder.Core.Configuration.RuntimeConfigurator.SetSelectedProcess(System.String)
@@ -423,11 +469,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetSelectedProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 179
+    startLine: 227
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -438,6 +484,7 @@ items:
     parameters:
     - id: path
       type: System.String
+      description: The path to the selected process.
     content.vb: Public Sub SetSelectedProcess(path As String)
   overload: VRBuilder.Core.Configuration.RuntimeConfigurator.SetSelectedProcess*
   nameWithType.vb: RuntimeConfigurator.SetSelectedProcess(String)
@@ -457,11 +504,11 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-      branch: release/v4.1.1
+      branch: release/v4.2.0
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetProcessStringLocalizationTable
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/RuntimeConfigurator.cs
-    startLine: 187
+    startLine: 236
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
@@ -471,6 +518,7 @@ items:
     content: public string GetProcessStringLocalizationTable()
     return:
       type: System.String
+      description: The string localization table for the selected process.
     content.vb: Public Function GetProcessStringLocalizationTable() As String
   overload: VRBuilder.Core.Configuration.RuntimeConfigurator.GetProcessStringLocalizationTable*
 references:
@@ -4934,6 +4982,18 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: VRBuilder.Core.Configuration.RuntimeConfigurator.instance
+  commentId: F:VRBuilder.Core.Configuration.RuntimeConfigurator.instance
+  href: VRBuilder.Core.Configuration.RuntimeConfigurator.html#VRBuilder_Core_Configuration_RuntimeConfigurator_instance
+  name: instance
+  nameWithType: RuntimeConfigurator.instance
+  fullName: VRBuilder.Core.Configuration.RuntimeConfigurator.instance
+- uid: VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting*
+  commentId: Overload:VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting
+  href: VRBuilder.Core.Configuration.RuntimeConfigurator.html#VRBuilder_Core_Configuration_RuntimeConfigurator_IsExisting_System_Boolean_
+  name: IsExisting
+  nameWithType: RuntimeConfigurator.IsExisting
+  fullName: VRBuilder.Core.Configuration.RuntimeConfigurator.IsExisting
 - uid: VRBuilder.Core.Configuration.RuntimeConfigurator.Configuration*
   commentId: Overload:VRBuilder.Core.Configuration.RuntimeConfigurator.Configuration
   href: VRBuilder.Core.Configuration.RuntimeConfigurator.html#VRBuilder_Core_Configuration_RuntimeConfigurator_Configuration

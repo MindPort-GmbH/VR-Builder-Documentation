@@ -88,7 +88,7 @@
 
 
   <h1 id="VRBuilder_Core_Serialization_IProcessSerializer" data-uid="VRBuilder.Core.Serialization.IProcessSerializer" class="text-break">
-Interface IProcessSerializer  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Interface IProcessSerializer  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -124,7 +124,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_FileFormat" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.FileFormat">
   FileFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>File format used for this serializer. For example, 'json'.</p>
@@ -156,7 +156,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_Name" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Display name.</p>
@@ -192,7 +192,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_ChapterFromByteArray_System_Byte___" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ChapterFromByteArray(System.Byte[])">
   ChapterFromByteArray(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a given chapter to a usable object.</p>
@@ -229,7 +229,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_ChapterToByteArray_VRBuilder_Core_IChapter_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)">
   ChapterToByteArray(IChapter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes a given chapter into a byte array.</p>
@@ -262,11 +262,85 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
 
 
+  <a id="VRBuilder_Core_Serialization_IProcessSerializer_EntityFromByteArray_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray*"></a>
+
+  <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_EntityFromByteArray_System_Byte___" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.EntityFromByteArray(System.Byte[])">
+  EntityFromByteArray(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deserializes a given entity to a usable object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEntity EntityFromByteArray(byte[] data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="VRBuilder.Core.IEntity.html">IEntity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="VRBuilder_Core_Serialization_IProcessSerializer_EntityToByteArray_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray*"></a>
+
+  <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_EntityToByteArray_VRBuilder_Core_IEntity_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)">
+  EntityToByteArray(IEntity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serializes a given entity into a byte array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte[] EntityToByteArray(IEntity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="VRBuilder.Core.IEntity.html">IEntity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="VRBuilder_Core_Serialization_IProcessSerializer_ManifestFromByteArray_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ManifestFromByteArray*"></a>
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_ManifestFromByteArray_System_Byte___" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ManifestFromByteArray(System.Byte[])">
   ManifestFromByteArray(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a process asset manifest to a usable object.</p>
@@ -303,7 +377,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_ManifestToByteArray_VRBuilder_Core_IO_IProcessAssetManifest_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)">
   ManifestToByteArray(IProcessAssetManifest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes a process asset manifest into a byte array.</p>
@@ -340,7 +414,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_ProcessFromByteArray_System_Byte___" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ProcessFromByteArray(System.Byte[])">
   ProcessFromByteArray(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a given process to a usable object.</p>
@@ -377,7 +451,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_ProcessToByteArray_VRBuilder_Core_IProcess_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)">
   ProcessToByteArray(IProcess)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes a given process into a byte array.</p>
@@ -414,7 +488,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_StepFromByteArray_System_Byte___" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.StepFromByteArray(System.Byte[])">
   StepFromByteArray(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a given step to a usable object.</p>
@@ -451,7 +525,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 
   <h3 id="VRBuilder_Core_Serialization_IProcessSerializer_StepToByteArray_VRBuilder_Core_IStep_" data-uid="VRBuilder.Core.Serialization.IProcessSerializer.StepToByteArray(VRBuilder.Core.IStep)">
   StepToByteArray(IStep)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Serializes a given step into a byte array. The implementation should trim target steps of the step.</p>
@@ -488,7 +562,7 @@ Interface IProcessSerializer  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.1.1/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.2.0/Source/Core/Runtime/Serialization/IProcessSerializer.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 
