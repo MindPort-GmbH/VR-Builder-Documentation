@@ -1,29 +1,17 @@
 # Animations for VR Builder
 ## Table of Contents
 
-- [Animations for VR Builder](#animations-for-vr-builder)
-	- [Table of Contents](#table-of-contents)
-	- [Introduction](#introduction)
-	- [Quick Start](#quick-start)
-	- [Behaviors](#behaviors)
-		- [Animation](#animation)
-			- [Animate Transform](#animate-transform)
-				- [Introduction](#introduction-1)
-				- [Inspector](#inspector)
-			- [Follow Path](#follow-path)
-				- [Introduction](#introduction-2)
-				- [Inspector](#inspector-1)
-				- [The Bezier Spline Path Property](#the-bezier-spline-path-property)
-			- [Rotate Around Axis](#rotate-around-axis)
-				- [Introduction](#introduction-3)
-				- [Inspector](#inspector-2)
-			- [Set Animator Parameter](#set-animator-parameter)
-				- [Introduction](#introduction-4)
-				- [Inspector](#inspector-3)
-			- [Show Exploded View](#show-exploded-view)
-				- [Introduction](#introduction-5)
-				- [Inspector](#inspector-4)
-	- [Contact](#contact)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Quick Start](#quick-start)
+- [Behaviors](#behaviors)
+	- [Animation](#animation)
+		- [Animate Transform](#animate-transform)
+		- [Follow Path](#follow-path)
+		- [Rotate Around Axis](#rotate-around-axis)
+		- [Set Animator Parameter](#set-animator-parameter)
+		- [Show Exploded View](#show-exploded-view)
+- [Contact](#contact)
 
 ## Introduction
 This add-on contains a collection of animation behaviors that allow VR Builder to display more complex animations than what is possible with the built-in tools.
@@ -44,10 +32,10 @@ Press Play to try out the behaviors included in this add-on. The demo scene incl
 This behavior animates a game object by changing its position, rotation and scale over time until it matches those of a "transform provider" game object. It is possible to set how position, rotation and scale are animated over time through separate animation curves.
 The behavior can be found under `Animation > Animate Transform`.
 
-![Demo Image](images/animations/animate-transform-demo.gif "Animate Transform Demo")
+![Demo Image](images/animate-transform-demo.gif "Animate Transform Demo")
 
 ##### Inspector
-![Inspector Layout](images/animations/animate-transform-inspector.png "Animate Transform Inspector")
+![Inspector Layout](images/animate-transform-inspector.png "Animate Transform Inspector")
 
 The **Animate Transform** behavior accepts the following parameters.
 
@@ -68,10 +56,10 @@ The **Animate Transform** behavior accepts the following parameters.
 This behavior animates a game object so that it follows a path, for example a spline. It is possible to set a curve determining how fast the object moves along the path, plus a number of options described below.
 The behavior can be found under `Animation > Follow Path`.
 
-![Demo Image](images/animations/follow-path-demo.png "Animate Transform Demo")
+![Demo Image](images/follow-path-demo.png "Animate Transform Demo")
 
 ##### Inspector
-![Inspector Layout](images/animations/follow-path-inspector.png "Follow Path Inspector")
+![Inspector Layout](images/follow-path-inspector.png "Follow Path Inspector")
 
 The **Follow Path** behavior accepts the following parameters.
 
@@ -100,23 +88,23 @@ If enabled, the object will not rotate while following the path and the settings
 The `BezierSplinePathProperty` is an implementation of the `IPathProperty` interface included in VR Builder core, and can thus be used to create paths for the **Follow Path** behavior.
 It's recommended to add it to an empty game object. It will automatically add a `BezierSpline` component, which will display a default 4 point Bezier curve in the scene.
 
-![Bezier Curve](images/animations/default-curve-scene.png "Default Bezier Curve")
+![Bezier Curve](images/default-curve-scene.png "Default Bezier Curve")
 
 It is possible to select and move the points in 3D space to manipulate the curve.
 
-![Bezier Curve](images/animations/bezier-curve-scene.png "Edited Bezier Curve")
+![Bezier Curve](images/bezier-curve-scene.png "Edited Bezier Curve")
 
 We can see the position of the currently selected point in the inspector.
 
-![Bezier Spline Inspector](images/animations/bezier-spline-inspector.png "Bezier Spline Inspector")
+![Bezier Spline Inspector](images/bezier-spline-inspector.png "Bezier Spline Inspector")
 
 By clicking **Add Curve** in the `BezierSpline` inspector, we can add a second bezier curve connected to the current one.
 
-![Bezier Spline](images/animations/bezier-spline-added-curve.png "Added a Second Curve")
+![Bezier Spline](images/bezier-spline-added-curve.png "Added a Second Curve")
 
 With a point selected in the inspector, it is possible to change the point mode.
 
-![Point Modes Inspector](images/animations/bezier-spline-point-mode.png "Point Modes Inspector")
+![Point Modes Inspector](images/bezier-spline-point-mode.png "Point Modes Inspector")
 
 The color of the point changes depending on the mode selected. The following modes are available.
 
@@ -134,7 +122,7 @@ Other options are:
 
 **Granularity of Approximation**: This parameter is only exposed if `Approximate Linear Velocity` is selected. It determines the number of segments each curve will be subdivided in, a higher value will result in a more constant speed along the path, very low values (less than 10) can cause the object to change speed in a strange way. Lowering the value can increase performance.
 
-![Point Modes](images/animations/point-modes.png "Point Modes")
+![Point Modes](images/point-modes.png "Point Modes")
 
 #### Rotate Around Axis
 ##### Introduction
@@ -142,7 +130,7 @@ This behavior rotates an object around a given axis. The object rotates a specif
 
 ##### Inspector
 
-![Rotate Around Axis Inspector](images/animations/rotate-around-axis-inspector.png)
+![Rotate Around Axis Inspector](images/rotate-around-axis-inspector.png)
 
 It is possible to configure the following parameters.
 
@@ -170,7 +158,7 @@ These behaviors set the specified parameter to the desired value immediately. Th
 
 ##### Inspector
 
-![Set Animator Float Inspector](images/animations/set-animator-float-inspector.png)
+![Set Animator Float Inspector](images/set-animator-float-inspector.png)
 
 The inspector for these behaviors works similarly for all variants, although not all variants have all options. The behavior makes use of the following parameters.
 
@@ -189,7 +177,7 @@ The inspector for these behaviors works similarly for all variants, although not
 ##### Introduction
 This behavior lets you easily create an exploded view of an object with a number of child objects. By default, all immediate children of the specified game objects will be displaced by the specified factor relative to their current local position. This means that children with a local position of zero will not be displaced. Note that you can create empty objects with the desired relative positions in order to achieve the desired effect.
 
-![Show Exploded View Inspector](images/animations/explode-object-inspector.png)
+![Show Exploded View Inspector](images/explode-object-inspector.png)
 
 It is also possible to manually set which child objects will be displaced. You can do so by adding them to the `Explodable Child Objects` list on the `Explodable Property` of the target object. If the list is not empty, only the objects in the list will be exploded, otherwise all first-level children will be selected.
 

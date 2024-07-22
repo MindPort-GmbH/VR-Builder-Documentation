@@ -22,7 +22,7 @@ The other displays the menu in VR, floating in front of the user. This can be us
 
 Drag one of the prefabs in the `Prefabs` folder in your process scene. The menu will appear when pressing Play. Feel free to try it out with the demo scene included in VR Builder!
 
-![Demo Scene](images/process-menu/demo-scene.png)
+![Demo Scene](images/demo-scene.png)
 
 The process starts automatically in VR Builder. If you want the process to be started from the menu, you will have to provide a custom `[PROCESS_CONTROLLER]`. You can find more information on how to do so [here](#customizing-the-process-controller).
 
@@ -32,7 +32,7 @@ The process starts automatically in VR Builder. If you want the process to be st
 
 The desktop process menu is laid out as follows.
 
-![Desktop process menu](images/process-menu/desktop-menu.png)
+![Desktop process menu](images/desktop-menu.png)
 
 1. VR Builder logo. Feel free to replace it with your own!
 2. Current chapter. You can use the drop-down to skip to a later chapter.
@@ -49,7 +49,7 @@ The desktop menu can be used by clicking with the mouse on the desired option.
 
 The standalone process menu is laid out as follows.
 
-![Standalone process menu](images/process-menu/standalone-menu.png)
+![Standalone process menu](images/standalone-menu.png)
 
 1. VR Builder logo. Feel free to replace it with your own!
 2. Current chapter. You can use the drop-down to skip to a later chapter.
@@ -62,18 +62,18 @@ The standalone process menu is laid out as follows.
 
 The standalone menu is designed to be opened through user input. By default, the primary button on the right controller opens the menu. This can be changed on the `Standalone Menu Handler` component on the menu prefab. In case you want the menu to be permanently present in the scene, remove the `Standalone Menu Handler` component from the prefab.
 
-![Standalone Menu Handler](images/process-menu/standalone-menu-handler.png)
+![Standalone Menu Handler](images/standalone-menu-handler.png)
 
 In the inspector, it is possible to select which button can be used to open and close the menu.
 The `Standalone Menu Handler` also takes care of repositioning the menu in front of the user every time it is opened.
 
-The standalone menu can be interacted with by pointing at it with a ray and pressing the trigger button.
+To interact with the standalone menu, press the grip button on a controller to enter UI mode with that controller. This will change the hand to a pointing animation and visualize a ray originating from it. Point the ray to interactable elements on the menu and press the trigger button to activate them.
 
 ## Customizing the Process Controller
 
 The process controller can be configured on the `[PROCESS_CONTROLLER]` game object in a VR Builder scene. This object handles running the process and a few configuration parameters. The `Process Controller Setup` script lets you choose which process controller prefab is spawned when the scene runs.
 
-![Process Controller Setup](images/process-menu/process-controller-setup.png)
+![Process Controller Setup](images/process-controller-setup.png)
 
 It is possible to select one of the default process controller prefabs, or use a custom one by ticking the `Use custom prefab` box. It is also possible to select whether to auto start the process, or start it manually, for example through one of the menus provided in this add-on.
 

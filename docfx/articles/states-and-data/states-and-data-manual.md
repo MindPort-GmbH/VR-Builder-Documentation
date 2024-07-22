@@ -1,27 +1,26 @@
 # States and Data for VR Builder
 ## Table of Contents
 
-- [States and Data for VR Builder](#states-and-data-for-vr-builder)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Quick Start](#quick-start)
-  - [Data Properties](#data-properties)
-    - [Creating Data Properties](#creating-data-properties)
-  - [Working with Data Properties](#working-with-data-properties)
-    - [Set Value Behaviors](#set-value-behaviors)
-    - [Reset Value Behavior](#reset-value-behavior)
-    - [Compare Values Conditions](#compare-values-conditions)
-    - [Utilities](#utilities)
-    - [Logging Data Properties](#logging-data-properties)
-  - [Math Operation Behavior](#math-operation-behavior)
-  - [Trigger Event Behaviors](#trigger-event-behaviors)
-    - [Trigger Event Behavior Parameters](#trigger-event-behavior-parameters)
-  - [State Data Properties](#state-data-properties)
-    - [Creating a State Data Property](#creating-a-state-data-property)
-    - [Handling States in Code](#handling-states-in-code)
-    - [Set State Behavior](#set-state-behavior)
-    - [Check State Condition](#check-state-condition)
-  - [Contact](#contact)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Quick Start](#quick-start)
+- [Data Properties](#data-properties)
+  - [Creating Data Properties](#creating-data-properties)
+- [Working with Data Properties](#working-with-data-properties)
+  - [Set Value Behaviors](#set-value-behaviors)
+  - [Reset Value Behavior](#reset-value-behavior)
+  - [Compare Values Conditions](#compare-values-conditions)
+  - [Utilities](#utilities)
+  - [Logging Data Properties](#logging-data-properties)
+- [Math Operation Behavior](#math-operation-behavior)
+- [Trigger Event Behaviors](#trigger-event-behaviors)
+  - [Trigger Event Behavior Parameters](#trigger-event-behavior-parameters)
+- [State Data Properties](#state-data-properties)
+  - [Creating a State Data Property](#creating-a-state-data-property)
+  - [Handling States in Code](#handling-states-in-code)
+  - [Set State Behavior](#set-state-behavior)
+  - [Check State Condition](#check-state-condition)
+- [Contact](#contact)
 
 ## Introduction
 
@@ -41,7 +40,7 @@ You can press Play to try out the scene, or open the Process Editor to check out
 
 Additionally, you can find a tutorial on how this demo scene was created on our [website](https://www.mindport.co/vr-builder-learning-path/how-to-create-a-color-mixing-machine-in-vr).
 
-![Demo Scene](images/states-and-data/demo-scene.png)
+![Demo Scene](images/demo-scene.png)
 
 ## Data Properties
 
@@ -62,7 +61,7 @@ To create the property itself, just add a `Data Property` component of the requi
 
 In the inspector, it is possible to type a default value for the data property. The property will have that value at the start of the process, and the `Reset Value` behavior will reset the property to its default. Additionally, it is possible to subscribe to the property events.
 
-![Number Data Property](images/states-and-data/number-data-property.png)
+![Number Data Property](images/number-data-property.png)
 
 ## Working with Data Properties
 
@@ -77,19 +76,19 @@ These behaviors set the value of a data property to a value specified in the ste
 - Set Text
 - Set State
 
-![Set Number Behavior](images/states-and-data/set-number-behavior.png)
+![Set Number Behavior](images/set-number-behavior.png)
 
 ### Reset Value Behavior
 
 This behavior resets a data property's value to its default. This is zero for numerical values, false for booleans and an empty string for text, but a different default can be specified in the inspector of the data property. The property needs to be referenced in the step inspector, and will reset when the behavior is triggered.
 
-![Reset Value Behavior](images/states-and-data/reset-value-behavior.png)
+![Reset Value Behavior](images/reset-value-behavior.png)
 
 ### Compare Values Conditions
 
 In States and Data it is possible to use a `Compare Numbers`, `Compare Text` or `Compare Booleans` condition. They work in a similar way, but the comparison operators differ. You'll need to select two values and the operation between them. Use the radio buttons to select if a value comes from a data property or is a constant entered in the step inspector. In the example below, the condition will be fulfilled when the Score Tracker value is equal or greater than the Point Threshold value.
 
-![Compare Values Condition](images/states-and-data/compare-values-condition.png)
+![Compare Values Condition](images/compare-values-condition.png)
 
 ### Utilities
 
@@ -102,17 +101,17 @@ Some data properties can have utility functions to make them handier to use with
 
 It can be useful to log value changes to data properties in the console for debugging purposes. This can be enabled globally by ticking the relevant box in `Project Settings -> VR Builder -> Settings`.
 
-![Logging Settings](images/states-and-data/logging-settings.png)]
+![Logging Settings](images/logging-settings.png)]
 
 If the `Log Data Property changes` checkbox is enabled, changes to the value of the data property will be logged in the console like the following example. Note that the name provided is the game object's name.
 
-![Data Property Log Entry](images/states-and-data/data-property-log-entry.png)
+![Data Property Log Entry](images/data-property-log-entry.png)
 
 ## Math Operation Behavior
 
 The `Math Operation` behavior performs an operation on a data property and updates it with the result of the operation. It takes three parameters, `Left Operand`, `Right Operand` and `Operator`.
 
-![Math Operation Behavior](images/states-and-data/math-operation-behavior.png)
+![Math Operation Behavior](images/math-operation-behavior.png)
 
 `Left operand` is the data property that will be changed by the operation. `Right Operand` can either be another data property or a constant value entered in the inspector.
 `Operator` defines the type of operation to perform.
@@ -133,7 +132,7 @@ This collection of behaviors let VR Builder trigger a Unity event on multiple sc
 
 This is achieved through an event property which is added to the desired process scene object.
 
-![Text Event Property](images/states-and-data/trigger-event-property.png)
+![Text Event Property](images/trigger-event-property.png)
 
 There are various permutations available for this behavior. It is possible to pass the following data to the event.
 - No data
@@ -143,7 +142,7 @@ There are various permutations available for this behavior. It is possible to pa
 
 These value can be set in the behavior itself and can either be constant or data properties.
 
-![Trigger Event (float)](images/states-and-data/trigger-event-float-payload.png)
+![Trigger Event (float)](images/trigger-event-float-payload.png)
 
 ### Trigger Event Behavior Parameters
 
@@ -185,7 +184,7 @@ public class MachineStateDataProperty : StateDataProperty<MachineState>
 ```
 We'll now be able to add this as a component to a game object. As it can be seen from the drop-down for the default value, it makes use of the `MachineState` enum.
 
-![State Data Property](images/states-and-data/state-data-property.png)
+![State Data Property](images/state-data-property.png)
 
 ### Handling States in Code
 
@@ -219,7 +218,7 @@ private void OnValueChanged(object sender, EventArgs e)
 
 The `Set State` behavior can be used to change the property's state from the VR Builder process. It works very similarly to the `Set Value` behavior, the only difference being that the state drop-down will not be visible until a `State Data Property` is dragged in the inspector, as it depends on the provided enum.
 
-![Set State Behavior](images/states-and-data/set-state-behavior.png)
+![Set State Behavior](images/set-state-behavior.png)
 
 It is also possible to use the `Reset Value` behavior on a `State Data Property`, it will work like any other data property.
 
@@ -227,7 +226,7 @@ It is also possible to use the `Reset Value` behavior on a `State Data Property`
 
 It is possible for a process to read a state and react accordingly using the `Check State` condition. This condition compares a `State Data Property` to a specified value, in a way similar to other conditions comparing values.
 
-![Check State Condition](images/states-and-data/check-state-condition.png)
+![Check State Condition](images/check-state-condition.png)
 
 A number of operations are available. Since enum values can be ordered, it is also possible to check if the state precedes or follows the specified one.
 

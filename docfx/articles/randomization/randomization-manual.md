@@ -1,24 +1,23 @@
 # Randomization for VR Builder
 ## Table of Contents
 
-- [Randomization for VR Builder](#randomization-for-vr-builder)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Quick Start](#quick-start)
-  - [The Random Branch Node](#the-random-branch-node)
-    - [Logging the Random Branch node](#logging-the-random-branch-node)
-  - [Data Properties](#data-properties)
-    - [Creating Data Properties](#creating-data-properties)
-  - [Working with Data Properties](#working-with-data-properties)
-    - [Set Value Behaviors](#set-value-behaviors)
-    - [Reset Value Behavior](#reset-value-behavior)
-    - [Compare Values Conditions](#compare-values-conditions)
-    - [Logging Data Properties](#logging-data-properties)
-  - [Set Random Boolean Behavior](#set-random-boolean-behavior)
-    - [Configuration](#configuration)
-  - [Set Random Number Behavior](#set-random-number-behavior)
-    - [Configuration](#configuration-1)
-  - [Contact](#contact)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Quick Start](#quick-start)
+- [The Random Branch Node](#the-random-branch-node)
+  - [Logging the Random Branch node](#logging-the-random-branch-node)
+- [Data Properties](#data-properties)
+  - [Creating Data Properties](#creating-data-properties)
+- [Working with Data Properties](#working-with-data-properties)
+  - [Set Value Behaviors](#set-value-behaviors)
+  - [Reset Value Behavior](#reset-value-behavior)
+  - [Compare Values Conditions](#compare-values-conditions)
+  - [Logging Data Properties](#logging-data-properties)
+- [Set Random Boolean Behavior](#set-random-boolean-behavior)
+  - [Configuration](#configuration)
+- [Set Random Number Behavior](#set-random-number-behavior)
+  - [Configuration](#configuration-1)
+- [Contact](#contact)
 
 ## Introduction
 
@@ -37,7 +36,7 @@ You can press Play to try out the scene, or open the Process Editor to check out
 
 Additionally, you can find a tutorial on how this demo scene was created on our [website](https://www.mindport.co/vr-builder-learning-path/randomization-tutorial).
 
-![Demo Scene](images/randomization/demo-scene.png)
+![Demo Scene](images/demo-scene.png)
 
 ## The Random Branch Node
 
@@ -45,11 +44,11 @@ The Randomization add-on introduces a new type of node in addition to the standa
 
 To create it, select the new `Create Random Branch` option in the context menu.
 
-![Random Branch Creation](images/randomization/random-branch-creation.png)
+![Random Branch Creation](images/random-branch-creation.png)
 
 The Random Branch node is designed so it can be configured directly in the Process Editor window. You can add and remove transitions at will, like any step. The fields to the left of the output port can be used to specify a weight, so it is possible for some transitions to be more probable than others.
 
-![Random Branch Node](images/randomization/random-branch.png)
+![Random Branch Node](images/random-branch.png)
 
 By default, all weights are 1 and all transitions have equal chance to trigger. The weight can be any arbitrary number above or equal to zero. In the example above, the weights have a total of 5. This means that the `Very Probable Step` has a a 50% chance to be selected, while the `Improbable Step` only has one chance in ten.
 
@@ -76,7 +75,7 @@ To create the property itself, just add a `Data Property` component of the requi
 
 In the inspector, it is possible to type a default value for the data property. The property will have that value at the start of the process, and the `Reset Value` behavior will reset the property to its default.
 
-![Boolean Data Property](images/randomization/boolean-data-property.png)
+![Boolean Data Property](images/boolean-data-property.png)
 
 ## Working with Data Properties
 
@@ -86,34 +85,34 @@ There are some standard tools to work with data properties. These are the Set/Re
 
 These behaviors set the value of a data property to a value specified in the step inspector. There is one behavior for each data property type. In the Randomization add-on, it is possible to set data properties of type Boolean and Number.
 
-![Set Number Behavior](images/randomization/set-number-behavior.png)
+![Set Number Behavior](images/set-number-behavior.png)
 
 ### Reset Value Behavior
 
 This behavior resets a data property's value to its default. This is zero for numerical values and false for booleans, but a different default can be specified in the inspector of the data property. The property needs to be referenced in the step inspector, and will reset when the behavior is triggered.
 
-![Reset Value Behavior](images/randomization/reset-value-behavior.png)
+![Reset Value Behavior](images/reset-value-behavior.png)
 
 ### Compare Values Conditions
 
 In the Randomization add-on it is possible to use a `Compare Numbers` or `Compare Booleans` condition. These can for example compare a random value to a constant in order to branch a process a certain way. They work in a similar way, but the comparison operators differ. You'll need to select two values and the operation between them. Use the radio buttons to select if a value comes from a data property or is a constant entered in the step inspector. In the example below, the condition will be fulfilled when the `RandomNumber` property is greater than 5.
 
-![Compare Values Condition](images/randomization/compare-values-condition.png)
+![Compare Values Condition](images/compare-values-condition.png)
 
 ### Logging Data Properties
 
 It can be useful to log value changes to data properties in the console for debugging purposes. This can be enabled globally by ticking the relevant box in `Project Settings -> VR Builder -> Settings`.
 
-![Logging Settings](images/randomization/logging-settings.png)]
+![Logging Settings](images/logging-settings.png)]
 
 If the `Log Data Property changes` checkbox is enabled, changes to the value of the data property will be logged in the console like the following example. Note that the name provided is the game object's name.
 
-![Data Property Log Entry](images/randomization/data-property-log-entry.png)
+![Data Property Log Entry](images/data-property-log-entry.png)
 
 ## Set Random Boolean Behavior
 This behavior works similarly to the *Set Boolean* behavior, except the property is not set to a specific value. Instead, it will be randomly set to *true* or *false* at runtime. It is possible to specify the probability of it to be true by moving the slider from 0 (always false) to 1 (always true).
 
-![Set Random Boolean](images/randomization/set-random-boolean.png)
+![Set Random Boolean](images/set-random-boolean.png)
 
 ### Configuration
 * **Data Property**: The boolean data property to set to a random value.
@@ -122,7 +121,7 @@ This behavior works similarly to the *Set Boolean* behavior, except the property
 ## Set Random Number Behavior
 This behavior sets a number data property to a random value within a range.
 
-![Set Random Number](images/randomization/set-random-number.png)
+![Set Random Number](images/set-random-number.png)
 
 ### Configuration
 
