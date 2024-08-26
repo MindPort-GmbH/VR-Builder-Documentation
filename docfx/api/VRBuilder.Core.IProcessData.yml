@@ -25,11 +25,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The data class for a <xref href="VRBuilder.Core.IProcess" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nThe data class for a <xref href=\"VRBuilder.Core.IProcess\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: 'public interface IProcessData : IEntityNonLinearSequenceDataWithMode<IChapter>, IEntitySequenceDataWithMode<IChapter>, IEntitySequenceData<IChapter>, IEntityCollectionData<IChapter>, IEntityCollectionData, IEntitySequenceData, IModeData, IRenameableData, INamedData, IData'
-    content.vb: Public Interface IProcessData Inherits IEntityNonLinearSequenceDataWithMode(Of IChapter), IEntitySequenceDataWithMode(Of IChapter), IEntitySequenceData(Of IChapter), IEntityCollectionData(Of IChapter), IEntityCollectionData, IEntitySequenceData, IModeData, IRenameableData, INamedData, IData
+    content.vb: >-
+      Public Interface IProcessData
+
+          Inherits IEntityNonLinearSequenceDataWithMode(Of IChapter), IRenameableData
   inheritedMembers:
   - VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode{VRBuilder.Core.IChapter}.OverrideNext
   - VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IChapter}.Current
@@ -38,6 +41,12 @@ items:
   - VRBuilder.Core.IRenameableData.SetName(System.String)
   - VRBuilder.Core.INamedData.Name
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.IProcessData.Chapters
   commentId: P:VRBuilder.Core.IProcessData.Chapters
   id: Chapters
@@ -60,7 +69,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The list of the <xref href="VRBuilder.Core.IChapter" data-throw-if-not-resolved="false"></xref>s.
+  summary: "\nThe list of the <xref href=\"VRBuilder.Core.IChapter\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
   example: []
   syntax:
     content: IList<IChapter> Chapters { get; set; }
@@ -69,6 +78,9 @@ items:
       type: System.Collections.Generic.IList{VRBuilder.Core.IChapter}
     content.vb: Property Chapters As IList(Of IChapter)
   overload: VRBuilder.Core.IProcessData.Chapters*
+  modifiers.csharp:
+  - get
+  - set
 - uid: VRBuilder.Core.IProcessData.FirstChapter
   commentId: P:VRBuilder.Core.IProcessData.FirstChapter
   id: FirstChapter
@@ -91,7 +103,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The <xref href="VRBuilder.Core.IChapter" data-throw-if-not-resolved="false"></xref> to start execution from.
+  summary: "\nThe <xref href=\"VRBuilder.Core.IChapter\" data-throw-if-not-resolved=\"false\"></xref> to start execution from.\n"
   example: []
   syntax:
     content: IChapter FirstChapter { get; }
@@ -100,41 +112,26 @@ items:
       type: VRBuilder.Core.IChapter
     content.vb: ReadOnly Property FirstChapter As IChapter
   overload: VRBuilder.Core.IProcessData.FirstChapter*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 references:
 - uid: VRBuilder.Core.IProcess
   commentId: T:VRBuilder.Core.IProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IProcess.html
   name: IProcess
   nameWithType: IProcess
   fullName: VRBuilder.Core.IProcess
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode{VRBuilder.Core.IChapter}.OverrideNext
   commentId: P:VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode{VRBuilder.Core.IChapter}.OverrideNext
   parent: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode{VRBuilder.Core.IChapter}
   definition: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1.OverrideNext
-  href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html#VRBuilder_Core_EntityOwners_IEntityNonLinearSequenceDataWithMode_1_OverrideNext
   name: OverrideNext
   nameWithType: IEntityNonLinearSequenceDataWithMode<IChapter>.OverrideNext
   fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode<VRBuilder.Core.IChapter>.OverrideNext
@@ -144,7 +141,6 @@ references:
   commentId: P:VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IChapter}.Current
   parent: VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IChapter}
   definition: VRBuilder.Core.EntityOwners.IEntitySequenceData`1.Current
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html#VRBuilder_Core_EntityOwners_IEntitySequenceData_1_Current
   name: Current
   nameWithType: IEntitySequenceData<IChapter>.Current
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<VRBuilder.Core.IChapter>.Current
@@ -154,28 +150,36 @@ references:
   commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
   parent: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: IEntityCollectionData<IChapter>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IChapter>.GetChildren()
   nameWithType.vb: IEntityCollectionData(Of IChapter).GetChildren()
   fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.IChapter).GetChildren()
   spec.csharp:
-  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData<IChapter>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IChapter>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData(Of IChapter).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.IChapter).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeData.Mode
   commentId: P:VRBuilder.Core.Configuration.Modes.IModeData.Mode
   parent: VRBuilder.Core.Configuration.Modes.IModeData
-  href: VRBuilder.Core.Configuration.Modes.IModeData.html#VRBuilder_Core_Configuration_Modes_IModeData_Mode
   name: Mode
   nameWithType: IModeData.Mode
   fullName: VRBuilder.Core.Configuration.Modes.IModeData.Mode
@@ -183,50 +187,55 @@ references:
   commentId: M:VRBuilder.Core.IRenameableData.SetName(System.String)
   parent: VRBuilder.Core.IRenameableData
   isExternal: true
-  href: VRBuilder.Core.IRenameableData.html#VRBuilder_Core_IRenameableData_SetName_System_String_
-  name: SetName(string)
-  nameWithType: IRenameableData.SetName(string)
-  fullName: VRBuilder.Core.IRenameableData.SetName(string)
-  nameWithType.vb: IRenameableData.SetName(String)
-  fullName.vb: VRBuilder.Core.IRenameableData.SetName(String)
-  name.vb: SetName(String)
+  name: SetName(String)
+  nameWithType: IRenameableData.SetName(String)
+  fullName: VRBuilder.Core.IRenameableData.SetName(System.String)
   spec.csharp:
   - uid: VRBuilder.Core.IRenameableData.SetName(System.String)
     name: SetName
-    href: VRBuilder.Core.IRenameableData.html#VRBuilder_Core_IRenameableData_SetName_System_String_
+    nameWithType: IRenameableData.SetName
+    fullName: VRBuilder.Core.IRenameableData.SetName
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
-    name: string
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IRenameableData.SetName(System.String)
     name: SetName
-    href: VRBuilder.Core.IRenameableData.html#VRBuilder_Core_IRenameableData_SetName_System_String_
+    nameWithType: IRenameableData.SetName
+    fullName: VRBuilder.Core.IRenameableData.SetName
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1.OverrideNext
   commentId: P:VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1.OverrideNext
-  href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html#VRBuilder_Core_EntityOwners_IEntityNonLinearSequenceDataWithMode_1_OverrideNext
   name: OverrideNext
   nameWithType: IEntityNonLinearSequenceDataWithMode<TEntity>.OverrideNext
   fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode<TEntity>.OverrideNext
@@ -236,7 +245,6 @@ references:
   commentId: T:VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode{VRBuilder.Core.IChapter}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
-  href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html
   name: IEntityNonLinearSequenceDataWithMode<IChapter>
   nameWithType: IEntityNonLinearSequenceDataWithMode<IChapter>
   fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode<VRBuilder.Core.IChapter>
@@ -246,26 +254,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
     name: IEntityNonLinearSequenceDataWithMode
-    href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html
+    nameWithType: IEntityNonLinearSequenceDataWithMode
+    fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
     name: IEntityNonLinearSequenceDataWithMode
-    href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityNonLinearSequenceDataWithMode
+    fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1.Current
   commentId: P:VRBuilder.Core.EntityOwners.IEntitySequenceData`1.Current
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html#VRBuilder_Core_EntityOwners_IEntitySequenceData_1_Current
   name: Current
   nameWithType: IEntitySequenceData<TEntity>.Current
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<TEntity>.Current
@@ -275,7 +292,6 @@ references:
   commentId: T:VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IChapter}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
   name: IEntitySequenceData<IChapter>
   nameWithType: IEntitySequenceData<IChapter>
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<VRBuilder.Core.IChapter>
@@ -285,26 +301,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
   commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: IEntityCollectionData<TEntity>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren()
@@ -313,20 +338,29 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData<TEntity>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData(Of TEntity).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<IChapter>
   nameWithType: IEntityCollectionData<IChapter>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IChapter>
@@ -336,54 +370,59 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeData
   commentId: T:VRBuilder.Core.Configuration.Modes.IModeData
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IModeData.html
   name: IModeData
   nameWithType: IModeData
   fullName: VRBuilder.Core.Configuration.Modes.IModeData
 - uid: VRBuilder.Core.IRenameableData
   commentId: T:VRBuilder.Core.IRenameableData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IRenameableData.html
   name: IRenameableData
   nameWithType: IRenameableData
   fullName: VRBuilder.Core.IRenameableData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
-  href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html
   name: IEntityNonLinearSequenceDataWithMode<TEntity>
   nameWithType: IEntityNonLinearSequenceDataWithMode<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode<TEntity>
@@ -393,52 +432,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
     name: IEntityNonLinearSequenceDataWithMode
-    href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html
+    nameWithType: IEntityNonLinearSequenceDataWithMode
+    fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode`1
     name: IEntityNonLinearSequenceDataWithMode
-    href: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityNonLinearSequenceDataWithMode
+    fullName: VRBuilder.Core.EntityOwners.IEntityNonLinearSequenceDataWithMode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntitySequenceData`1
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
   name: IEntitySequenceData<TEntity>
   nameWithType: IEntitySequenceData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<TEntity>
@@ -448,22 +473,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<TEntity>
   nameWithType: IEntityCollectionData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>
@@ -473,67 +509,44 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: VRBuilder.Core.IChapter
   commentId: T:VRBuilder.Core.IChapter
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IChapter.html
   name: IChapter
   nameWithType: IChapter
   fullName: VRBuilder.Core.IChapter
 - uid: VRBuilder.Core.IProcessData.Chapters*
   commentId: Overload:VRBuilder.Core.IProcessData.Chapters
-  href: VRBuilder.Core.IProcessData.html#VRBuilder_Core_IProcessData_Chapters
   name: Chapters
   nameWithType: IProcessData.Chapters
   fullName: VRBuilder.Core.IProcessData.Chapters
@@ -541,7 +554,6 @@ references:
   commentId: T:System.Collections.Generic.IList{VRBuilder.Core.IChapter}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   name: IList<IChapter>
   nameWithType: IList<IChapter>
   fullName: System.Collections.Generic.IList<VRBuilder.Core.IChapter>
@@ -551,29 +563,38 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IList`1
   commentId: T:System.Collections.Generic.IList`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   name: IList<T>
   nameWithType: IList<T>
   fullName: System.Collections.Generic.IList<T>
@@ -583,61 +604,41 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.IProcessData.FirstChapter*
   commentId: Overload:VRBuilder.Core.IProcessData.FirstChapter
-  href: VRBuilder.Core.IProcessData.html#VRBuilder_Core_IProcessData_FirstChapter
   name: FirstChapter
   nameWithType: IProcessData.FirstChapter
   fullName: VRBuilder.Core.IProcessData.FirstChapter

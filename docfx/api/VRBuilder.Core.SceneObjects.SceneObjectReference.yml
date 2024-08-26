@@ -26,7 +26,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Weak reference by a unique name to a process object in a scene.
+  summary: "\nWeak reference by a unique name to a process object in a scene.\n"
   example: []
   syntax:
     content: >-
@@ -40,7 +40,11 @@ items:
 
       <Obsolete("Use ProcessSceneReferenceBase and derived classes to store references to objects in the scene.")>
 
-      Public NotInheritable Class SceneObjectReference Inherits ObjectReference(Of ISceneObject) Implements ICanBeEmpty
+      Public NotInheritable Class SceneObjectReference
+
+          Inherits ObjectReference(Of ISceneObject)
+
+          Implements ICanBeEmpty
   inheritance:
   - System.Object
   - VRBuilder.Core.SceneObjects.UniqueNameReference
@@ -51,12 +55,13 @@ items:
   - VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.UniqueName
   - VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.Value
   - VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.IsEmpty
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  - System.Object.MemberwiseClone
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -70,6 +75,14 @@ items:
     arguments:
     - type: System.String
       value: Use ProcessSceneReferenceBase and derived classes to store references to objects in the scene.
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor
   commentId: M:VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor
   id: '#ctor'
@@ -94,11 +107,12 @@ items:
   namespace: VRBuilder.Core.SceneObjects
   syntax:
     content: public SceneObjectReference()
-    content.vb: Public Sub New()
+    content.vb: Public Sub New
   overload: VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor*
-  nameWithType.vb: SceneObjectReference.New()
-  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectReference.New()
-  name.vb: New()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor(System.String)
   commentId: M:VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor(System.String)
   id: '#ctor(System.String)'
@@ -106,9 +120,9 @@ items:
   langs:
   - csharp
   - vb
-  name: SceneObjectReference(string)
-  nameWithType: SceneObjectReference.SceneObjectReference(string)
-  fullName: VRBuilder.Core.SceneObjects.SceneObjectReference.SceneObjectReference(string)
+  name: SceneObjectReference(String)
+  nameWithType: SceneObjectReference.SceneObjectReference(String)
+  fullName: VRBuilder.Core.SceneObjects.SceneObjectReference.SceneObjectReference(System.String)
   type: Constructor
   source:
     remote:
@@ -128,9 +142,10 @@ items:
       type: System.String
     content.vb: Public Sub New(uniqueName As String)
   overload: VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor*
-  nameWithType.vb: SceneObjectReference.New(String)
-  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectReference.New(String)
-  name.vb: New(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   commentId: M:VRBuilder.Core.SceneObjects.SceneObjectReference.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   id: DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
@@ -153,7 +168,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  example: []
   syntax:
     content: protected override ISceneObject DetermineValue(ISceneObject cached)
     parameters:
@@ -164,52 +178,28 @@ items:
     content.vb: Protected Overrides Function DetermineValue(cached As ISceneObject) As ISceneObject
   overridden: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   overload: VRBuilder.Core.SceneObjects.SceneObjectReference.DetermineValue*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.SceneObjects.UniqueNameReference
   commentId: T:VRBuilder.Core.SceneObjects.UniqueNameReference
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.UniqueNameReference.html
   name: UniqueNameReference
   nameWithType: UniqueNameReference
   fullName: VRBuilder.Core.SceneObjects.UniqueNameReference
@@ -217,7 +207,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.ObjectReference`1
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html
   name: ObjectReference<ISceneObject>
   nameWithType: ObjectReference<ISceneObject>
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>
@@ -227,27 +216,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1
     name: ObjectReference
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html
+    nameWithType: ObjectReference
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.SceneObjects.ISceneObject
     name: ISceneObject
-    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+    nameWithType: ISceneObject
+    fullName: VRBuilder.Core.SceneObjects.ISceneObject
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1
     name: ObjectReference
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ObjectReference
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.SceneObjects.ISceneObject
     name: ISceneObject
-    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+    nameWithType: ISceneObject
+    fullName: VRBuilder.Core.SceneObjects.ISceneObject
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
   commentId: T:VRBuilder.Core.Runtime.Properties.ICanBeEmpty
   parent: VRBuilder.Core.Runtime.Properties
-  href: VRBuilder.Core.Runtime.Properties.ICanBeEmpty.html
   name: ICanBeEmpty
   nameWithType: ICanBeEmpty
   fullName: VRBuilder.Core.Runtime.Properties.ICanBeEmpty
@@ -255,7 +253,6 @@ references:
   commentId: P:VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.UniqueName
   parent: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}
   definition: VRBuilder.Core.SceneObjects.ObjectReference`1.UniqueName
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_UniqueName
   name: UniqueName
   nameWithType: ObjectReference<ISceneObject>.UniqueName
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>.UniqueName
@@ -265,7 +262,6 @@ references:
   commentId: P:VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.Value
   parent: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}
   definition: VRBuilder.Core.SceneObjects.ObjectReference`1.Value
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_Value
   name: Value
   nameWithType: ObjectReference<ISceneObject>.Value
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>.Value
@@ -275,230 +271,321 @@ references:
   commentId: M:VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.IsEmpty
   parent: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}
   definition: VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_IsEmpty
   name: IsEmpty()
   nameWithType: ObjectReference<ISceneObject>.IsEmpty()
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>.IsEmpty()
   nameWithType.vb: ObjectReference(Of ISceneObject).IsEmpty()
   fullName.vb: VRBuilder.Core.SceneObjects.ObjectReference(Of VRBuilder.Core.SceneObjects.ISceneObject).IsEmpty()
   spec.csharp:
-  - uid: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.IsEmpty
+  - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
     name: IsEmpty
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_IsEmpty
+    nameWithType: ObjectReference<ISceneObject>.IsEmpty
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>.IsEmpty
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.IsEmpty
+  - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
     name: IsEmpty
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_IsEmpty
+    nameWithType: ObjectReference(Of ISceneObject).IsEmpty
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference(Of VRBuilder.Core.SceneObjects.ISceneObject).IsEmpty
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.SceneObjects.ObjectReference`1
   commentId: T:VRBuilder.Core.SceneObjects.ObjectReference`1
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html
   name: ObjectReference<T>
   nameWithType: ObjectReference<T>
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>
@@ -508,60 +595,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1
     name: ObjectReference
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html
+    nameWithType: ObjectReference
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1
     name: ObjectReference
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ObjectReference
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Runtime.Properties
   commentId: N:VRBuilder.Core.Runtime.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Runtime.Properties
   nameWithType: VRBuilder.Core.Runtime.Properties
   fullName: VRBuilder.Core.Runtime.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Runtime
-    name: Runtime
-    href: VRBuilder.Core.Runtime.html
-  - name: .
-  - uid: VRBuilder.Core.Runtime.Properties
-    name: Properties
-    href: VRBuilder.Core.Runtime.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Runtime
-    name: Runtime
-    href: VRBuilder.Core.Runtime.html
-  - name: .
-  - uid: VRBuilder.Core.Runtime.Properties
-    name: Properties
-    href: VRBuilder.Core.Runtime.Properties.html
 - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.UniqueName
   commentId: P:VRBuilder.Core.SceneObjects.ObjectReference`1.UniqueName
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_UniqueName
   name: UniqueName
   nameWithType: ObjectReference<T>.UniqueName
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>.UniqueName
@@ -569,7 +634,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.ObjectReference(Of T).UniqueName
 - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.Value
   commentId: P:VRBuilder.Core.SceneObjects.ObjectReference`1.Value
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_Value
   name: Value
   nameWithType: ObjectReference<T>.Value
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>.Value
@@ -577,7 +641,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.ObjectReference(Of T).Value
 - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
   commentId: M:VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_IsEmpty
   name: IsEmpty()
   nameWithType: ObjectReference<T>.IsEmpty()
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>.IsEmpty()
@@ -586,79 +649,89 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
     name: IsEmpty
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_IsEmpty
+    nameWithType: ObjectReference<T>.IsEmpty
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>.IsEmpty
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.IsEmpty
     name: IsEmpty
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_IsEmpty
+    nameWithType: ObjectReference(Of T).IsEmpty
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference(Of T).IsEmpty
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor*
   commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectReference.#ctor
-  href: VRBuilder.Core.SceneObjects.SceneObjectReference.html#VRBuilder_Core_SceneObjects_SceneObjectReference__ctor
   name: SceneObjectReference
   nameWithType: SceneObjectReference.SceneObjectReference
   fullName: VRBuilder.Core.SceneObjects.SceneObjectReference.SceneObjectReference
-  nameWithType.vb: SceneObjectReference.New
-  fullName.vb: VRBuilder.Core.SceneObjects.SceneObjectReference.New
-  name.vb: New
 - uid: System.String
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   commentId: M:VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   parent: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}
   definition: VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_DetermineValue__0_
   name: DetermineValue(ISceneObject)
   nameWithType: ObjectReference<ISceneObject>.DetermineValue(ISceneObject)
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   nameWithType.vb: ObjectReference(Of ISceneObject).DetermineValue(ISceneObject)
   fullName.vb: VRBuilder.Core.SceneObjects.ObjectReference(Of VRBuilder.Core.SceneObjects.ISceneObject).DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
   spec.csharp:
-  - uid: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
+  - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
     name: DetermineValue
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_DetermineValue__0_
+    nameWithType: ObjectReference<ISceneObject>.DetermineValue
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference<VRBuilder.Core.SceneObjects.ISceneObject>.DetermineValue
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.SceneObjects.ISceneObject
     name: ISceneObject
-    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+    nameWithType: ISceneObject
+    fullName: VRBuilder.Core.SceneObjects.ISceneObject
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.SceneObjects.ObjectReference{VRBuilder.Core.SceneObjects.ISceneObject}.DetermineValue(VRBuilder.Core.SceneObjects.ISceneObject)
+  - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
     name: DetermineValue
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_DetermineValue__0_
+    nameWithType: ObjectReference(Of ISceneObject).DetermineValue
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference(Of VRBuilder.Core.SceneObjects.ISceneObject).DetermineValue
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.SceneObjects.ISceneObject
     name: ISceneObject
-    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+    nameWithType: ISceneObject
+    fullName: VRBuilder.Core.SceneObjects.ISceneObject
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference.DetermineValue*
   commentId: Overload:VRBuilder.Core.SceneObjects.SceneObjectReference.DetermineValue
-  href: VRBuilder.Core.SceneObjects.SceneObjectReference.html#VRBuilder_Core_SceneObjects_SceneObjectReference_DetermineValue_VRBuilder_Core_SceneObjects_ISceneObject_
   name: DetermineValue
   nameWithType: SceneObjectReference.DetermineValue
   fullName: VRBuilder.Core.SceneObjects.SceneObjectReference.DetermineValue
 - uid: VRBuilder.Core.SceneObjects.ISceneObject
   commentId: T:VRBuilder.Core.SceneObjects.ISceneObject
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ISceneObject.html
   name: ISceneObject
   nameWithType: ISceneObject
   fullName: VRBuilder.Core.SceneObjects.ISceneObject
 - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
   commentId: M:VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
-  href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_DetermineValue__0_
   name: DetermineValue(T)
   nameWithType: ObjectReference<T>.DetermineValue(T)
   fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>.DetermineValue(T)
@@ -667,14 +740,28 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
     name: DetermineValue
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_DetermineValue__0_
+    nameWithType: ObjectReference<T>.DetermineValue
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference<T>.DetermineValue
   - name: (
+    nameWithType: (
+    fullName: (
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ObjectReference`1.DetermineValue(`0)
     name: DetermineValue
-    href: VRBuilder.Core.SceneObjects.ObjectReference-1.html#VRBuilder_Core_SceneObjects_ObjectReference_1_DetermineValue__0_
+    nameWithType: ObjectReference(Of T).DetermineValue
+    fullName: VRBuilder.Core.SceneObjects.ObjectReference(Of T).DetermineValue
   - name: (
+    nameWithType: (
+    fullName: (
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )

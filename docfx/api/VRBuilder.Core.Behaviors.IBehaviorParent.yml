@@ -32,6 +32,12 @@ items:
   syntax:
     content: public interface IBehaviorParent
     content.vb: Public Interface IBehaviorParent
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.BehaviorCollectionChanged
   commentId: E:VRBuilder.Core.Behaviors.IBehaviorParent.BehaviorCollectionChanged
   id: BehaviorCollectionChanged
@@ -54,7 +60,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Invoked when behavior is added or removed from this object.
+  summary: "\nInvoked when behavior is added or removed from this object.\n"
   example: []
   syntax:
     content: event EventHandler<BehaviorCollectionChangedEventArgs> BehaviorCollectionChanged
@@ -83,7 +89,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: List of behaviors associated with this object.
+  summary: "\nList of behaviors associated with this object.\n"
   example: []
   syntax:
     content: ReadOnlyCollection<IBehavior> Behaviors { get; }
@@ -92,6 +98,10 @@ items:
       type: System.Collections.ObjectModel.ReadOnlyCollection{VRBuilder.Core.Behaviors.IBehavior}
     content.vb: ReadOnly Property Behaviors As ReadOnlyCollection(Of IBehavior)
   overload: VRBuilder.Core.Behaviors.IBehaviorParent.Behaviors*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.CheckHasBehavior(VRBuilder.Core.Behaviors.IBehavior)
   commentId: M:VRBuilder.Core.Behaviors.IBehaviorParent.CheckHasBehavior(VRBuilder.Core.Behaviors.IBehavior)
   id: CheckHasBehavior(VRBuilder.Core.Behaviors.IBehavior)
@@ -114,7 +124,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Returns true if this object has given behavior.
+  summary: "\nReturns true if this object has given behavior.\n"
   example: []
   syntax:
     content: bool CheckHasBehavior(IBehavior behavior)
@@ -147,7 +157,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Add behavior to this object. Implementation of this method should invoke BehaviorCollectionChanged event.
+  summary: "\nAdd behavior to this object. Implementation of this method should invoke BehaviorCollectionChanged event.\n"
   example: []
   syntax:
     content: void AddBehavior(IBehavior behavior)
@@ -164,9 +174,9 @@ items:
   langs:
   - csharp
   - vb
-  name: InsertBehavior(int, IBehavior)
-  nameWithType: IBehaviorParent.InsertBehavior(int, IBehavior)
-  fullName: VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior(int, VRBuilder.Core.Behaviors.IBehavior)
+  name: InsertBehavior(Int32, IBehavior)
+  nameWithType: IBehaviorParent.InsertBehavior(Int32, IBehavior)
+  fullName: VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior(System.Int32, VRBuilder.Core.Behaviors.IBehavior)
   type: Method
   source:
     remote:
@@ -179,7 +189,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Insert the <code class="paramref">behavior</code> into the collection of behaviors at <code class="paramref">index</code>.
+  summary: "\nInsert the <code data-dev-comment-type=\"paramref\" class=\"paramref\">behavior</code> into the collection of behaviors at <code data-dev-comment-type=\"paramref\" class=\"paramref\">index</code>.\n"
   example: []
   syntax:
     content: void InsertBehavior(int index, IBehavior behavior)
@@ -192,9 +202,6 @@ items:
       description: ''
     content.vb: Sub InsertBehavior(index As Integer, behavior As IBehavior)
   overload: VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior*
-  nameWithType.vb: IBehaviorParent.InsertBehavior(Integer, IBehavior)
-  fullName.vb: VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior(Integer, VRBuilder.Core.Behaviors.IBehavior)
-  name.vb: InsertBehavior(Integer, IBehavior)
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.RemoveBehavior(VRBuilder.Core.Behaviors.IBehavior)
   commentId: M:VRBuilder.Core.Behaviors.IBehaviorParent.RemoveBehavior(VRBuilder.Core.Behaviors.IBehavior)
   id: RemoveBehavior(VRBuilder.Core.Behaviors.IBehavior)
@@ -217,7 +224,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Remove behavior from this object. Implementation of this method should invoke BehaviorCollectionChanged event.
+  summary: "\nRemove behavior from this object. Implementation of this method should invoke BehaviorCollectionChanged event.\n"
   example: []
   syntax:
     content: bool RemoveBehavior(IBehavior behavior)
@@ -231,39 +238,13 @@ items:
 references:
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: System.EventHandler{VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs}
   commentId: T:System.EventHandler{VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs}
   parent: System
   definition: System.EventHandler`1
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<BehaviorCollectionChangedEventArgs>
   nameWithType: EventHandler<BehaviorCollectionChangedEventArgs>
   fullName: System.EventHandler<VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs>
@@ -273,29 +254,38 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs
     name: BehaviorCollectionChangedEventArgs
-    href: VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs.html
+    nameWithType: BehaviorCollectionChangedEventArgs
+    fullName: VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs
     name: BehaviorCollectionChangedEventArgs
-    href: VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs.html
+    nameWithType: BehaviorCollectionChangedEventArgs
+    fullName: VRBuilder.Core.Behaviors.BehaviorCollectionChangedEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.EventHandler`1
   commentId: T:System.EventHandler`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<TEventArgs>
   nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
@@ -305,31 +295,41 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.Behaviors*
   commentId: Overload:VRBuilder.Core.Behaviors.IBehaviorParent.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehaviorParent.html#VRBuilder_Core_Behaviors_IBehaviorParent_Behaviors
   name: Behaviors
   nameWithType: IBehaviorParent.Behaviors
   fullName: VRBuilder.Core.Behaviors.IBehaviorParent.Behaviors
@@ -337,7 +337,6 @@ references:
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{VRBuilder.Core.Behaviors.IBehavior}
   parent: System.Collections.ObjectModel
   definition: System.Collections.ObjectModel.ReadOnlyCollection`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<IBehavior>
   nameWithType: ReadOnlyCollection<IBehavior>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<VRBuilder.Core.Behaviors.IBehavior>
@@ -347,29 +346,38 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
-    href: VRBuilder.Core.Behaviors.IBehavior.html
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
-    href: VRBuilder.Core.Behaviors.IBehavior.html
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<T>
   nameWithType: ReadOnlyCollection<T>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
@@ -379,68 +387,47 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.ObjectModel
-    name: ObjectModel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.ObjectModel
-    name: ObjectModel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.CheckHasBehavior*
   commentId: Overload:VRBuilder.Core.Behaviors.IBehaviorParent.CheckHasBehavior
-  href: VRBuilder.Core.Behaviors.IBehaviorParent.html#VRBuilder_Core_Behaviors_IBehaviorParent_CheckHasBehavior_VRBuilder_Core_Behaviors_IBehavior_
   name: CheckHasBehavior
   nameWithType: IBehaviorParent.CheckHasBehavior
   fullName: VRBuilder.Core.Behaviors.IBehaviorParent.CheckHasBehavior
 - uid: VRBuilder.Core.Behaviors.IBehavior
   commentId: T:VRBuilder.Core.Behaviors.IBehavior
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehavior.html
   name: IBehavior
   nameWithType: IBehavior
   fullName: VRBuilder.Core.Behaviors.IBehavior
@@ -448,22 +435,16 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.AddBehavior*
   commentId: Overload:VRBuilder.Core.Behaviors.IBehaviorParent.AddBehavior
-  href: VRBuilder.Core.Behaviors.IBehaviorParent.html#VRBuilder_Core_Behaviors_IBehaviorParent_AddBehavior_VRBuilder_Core_Behaviors_IBehavior_
   name: AddBehavior
   nameWithType: IBehaviorParent.AddBehavior
   fullName: VRBuilder.Core.Behaviors.IBehaviorParent.AddBehavior
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior*
   commentId: Overload:VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior
-  href: VRBuilder.Core.Behaviors.IBehaviorParent.html#VRBuilder_Core_Behaviors_IBehaviorParent_InsertBehavior_System_Int32_VRBuilder_Core_Behaviors_IBehavior_
   name: InsertBehavior
   nameWithType: IBehaviorParent.InsertBehavior
   fullName: VRBuilder.Core.Behaviors.IBehaviorParent.InsertBehavior
@@ -471,16 +452,11 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Core.Behaviors.IBehaviorParent.RemoveBehavior*
   commentId: Overload:VRBuilder.Core.Behaviors.IBehaviorParent.RemoveBehavior
-  href: VRBuilder.Core.Behaviors.IBehaviorParent.html#VRBuilder_Core_Behaviors_IBehaviorParent_RemoveBehavior_VRBuilder_Core_Behaviors_IBehavior_
   name: RemoveBehavior
   nameWithType: IBehaviorParent.RemoveBehavior
   fullName: VRBuilder.Core.Behaviors.IBehaviorParent.RemoveBehavior

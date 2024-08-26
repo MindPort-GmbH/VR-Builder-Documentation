@@ -24,11 +24,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Interface for a process step.
+  summary: "\nInterface for a process step.\n"
   example: []
   syntax:
     content: 'public interface IStep : IDataOwner<IStepData>, IDataOwner, IEntity, IClonable<IStep>'
-    content.vb: Public Interface IStep Inherits IDataOwner(Of IStepData), IDataOwner, IEntity, IClonable(Of IStep)
+    content.vb: >-
+      Public Interface IStep
+
+          Inherits IDataOwner(Of IStepData), IEntity, IClonable(Of IStep)
   inheritedMembers:
   - VRBuilder.Core.IDataOwner{VRBuilder.Core.IStepData}.Data
   - VRBuilder.Core.IEntity.LifeCycle
@@ -39,6 +42,12 @@ items:
   - VRBuilder.Core.IEntity.Update
   - VRBuilder.Core.IEntity.Parent
   - VRBuilder.Core.IClonable{VRBuilder.Core.IStep}.Clone
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.IStep.StepMetadata
   commentId: P:VRBuilder.Core.IStep.StepMetadata
   id: StepMetadata
@@ -61,7 +70,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Step's metadata.
+  summary: "\nStep&apos;s metadata.\n"
   example: []
   syntax:
     content: StepMetadata StepMetadata { get; set; }
@@ -70,34 +79,19 @@ items:
       type: VRBuilder.Core.StepMetadata
     content.vb: Property StepMetadata As StepMetadata
   overload: VRBuilder.Core.IStep.StepMetadata*
+  modifiers.csharp:
+  - get
+  - set
 references:
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.IDataOwner{VRBuilder.Core.IStepData}.Data
   commentId: P:VRBuilder.Core.IDataOwner{VRBuilder.Core.IStepData}.Data
   parent: VRBuilder.Core.IDataOwner{VRBuilder.Core.IStepData}
   definition: VRBuilder.Core.IDataOwner`1.Data
-  href: VRBuilder.Core.IDataOwner-1.html#VRBuilder_Core_IDataOwner_1_Data
   name: Data
   nameWithType: IDataOwner<IStepData>.Data
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.IStepData>.Data
@@ -106,115 +100,160 @@ references:
 - uid: VRBuilder.Core.IEntity.LifeCycle
   commentId: P:VRBuilder.Core.IEntity.LifeCycle
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_LifeCycle
   name: LifeCycle
   nameWithType: IEntity.LifeCycle
   fullName: VRBuilder.Core.IEntity.LifeCycle
 - uid: VRBuilder.Core.IEntity.GetActivatingProcess
   commentId: M:VRBuilder.Core.IEntity.GetActivatingProcess
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActivatingProcess
   name: GetActivatingProcess()
   nameWithType: IEntity.GetActivatingProcess()
   fullName: VRBuilder.Core.IEntity.GetActivatingProcess()
   spec.csharp:
   - uid: VRBuilder.Core.IEntity.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActivatingProcess
+    nameWithType: IEntity.GetActivatingProcess
+    fullName: VRBuilder.Core.IEntity.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IEntity.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActivatingProcess
+    nameWithType: IEntity.GetActivatingProcess
+    fullName: VRBuilder.Core.IEntity.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IEntity.GetActiveProcess
   commentId: M:VRBuilder.Core.IEntity.GetActiveProcess
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActiveProcess
   name: GetActiveProcess()
   nameWithType: IEntity.GetActiveProcess()
   fullName: VRBuilder.Core.IEntity.GetActiveProcess()
   spec.csharp:
   - uid: VRBuilder.Core.IEntity.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActiveProcess
+    nameWithType: IEntity.GetActiveProcess
+    fullName: VRBuilder.Core.IEntity.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IEntity.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActiveProcess
+    nameWithType: IEntity.GetActiveProcess
+    fullName: VRBuilder.Core.IEntity.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IEntity.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.IEntity.GetDeactivatingProcess
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetDeactivatingProcess
   name: GetDeactivatingProcess()
   nameWithType: IEntity.GetDeactivatingProcess()
   fullName: VRBuilder.Core.IEntity.GetDeactivatingProcess()
   spec.csharp:
   - uid: VRBuilder.Core.IEntity.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetDeactivatingProcess
+    nameWithType: IEntity.GetDeactivatingProcess
+    fullName: VRBuilder.Core.IEntity.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IEntity.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetDeactivatingProcess
+    nameWithType: IEntity.GetDeactivatingProcess
+    fullName: VRBuilder.Core.IEntity.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure(IMode)
   nameWithType: IEntity.Configure(IMode)
   fullName: VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   spec.csharp:
   - uid: VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: IEntity.Configure
+    fullName: VRBuilder.Core.IEntity.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: IEntity.Configure
+    fullName: VRBuilder.Core.IEntity.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IEntity.Update
   commentId: M:VRBuilder.Core.IEntity.Update
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Update
   name: Update()
   nameWithType: IEntity.Update()
   fullName: VRBuilder.Core.IEntity.Update()
   spec.csharp:
   - uid: VRBuilder.Core.IEntity.Update
     name: Update
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Update
+    nameWithType: IEntity.Update
+    fullName: VRBuilder.Core.IEntity.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IEntity.Update
     name: Update
-    href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Update
+    nameWithType: IEntity.Update
+    fullName: VRBuilder.Core.IEntity.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IEntity.Parent
   commentId: P:VRBuilder.Core.IEntity.Parent
   parent: VRBuilder.Core.IEntity
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Parent
   name: Parent
   nameWithType: IEntity.Parent
   fullName: VRBuilder.Core.IEntity.Parent
@@ -222,27 +261,35 @@ references:
   commentId: M:VRBuilder.Core.IClonable{VRBuilder.Core.IStep}.Clone
   parent: VRBuilder.Core.IClonable{VRBuilder.Core.IStep}
   definition: VRBuilder.Core.IClonable`1.Clone
-  href: VRBuilder.Core.IClonable-1.html#VRBuilder_Core_IClonable_1_Clone
   name: Clone()
   nameWithType: IClonable<IStep>.Clone()
   fullName: VRBuilder.Core.IClonable<VRBuilder.Core.IStep>.Clone()
   nameWithType.vb: IClonable(Of IStep).Clone()
   fullName.vb: VRBuilder.Core.IClonable(Of VRBuilder.Core.IStep).Clone()
   spec.csharp:
-  - uid: VRBuilder.Core.IClonable{VRBuilder.Core.IStep}.Clone
+  - uid: VRBuilder.Core.IClonable`1.Clone
     name: Clone
-    href: VRBuilder.Core.IClonable-1.html#VRBuilder_Core_IClonable_1_Clone
+    nameWithType: IClonable<IStep>.Clone
+    fullName: VRBuilder.Core.IClonable<VRBuilder.Core.IStep>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.IClonable{VRBuilder.Core.IStep}.Clone
+  - uid: VRBuilder.Core.IClonable`1.Clone
     name: Clone
-    href: VRBuilder.Core.IClonable-1.html#VRBuilder_Core_IClonable_1_Clone
+    nameWithType: IClonable(Of IStep).Clone
+    fullName: VRBuilder.Core.IClonable(Of VRBuilder.Core.IStep).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner`1.Data
   commentId: P:VRBuilder.Core.IDataOwner`1.Data
-  href: VRBuilder.Core.IDataOwner-1.html#VRBuilder_Core_IDataOwner_1_Data
   name: Data
   nameWithType: IDataOwner<TData>.Data
   fullName: VRBuilder.Core.IDataOwner<TData>.Data
@@ -252,7 +299,6 @@ references:
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Core.IStepData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<IStepData>
   nameWithType: IDataOwner<IStepData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.IStepData>
@@ -262,33 +308,41 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IStepData
     name: IStepData
-    href: VRBuilder.Core.IStepData.html
+    nameWithType: IStepData
+    fullName: VRBuilder.Core.IStepData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IStepData
     name: IStepData
-    href: VRBuilder.Core.IStepData.html
+    nameWithType: IStepData
+    fullName: VRBuilder.Core.IStepData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity
 - uid: VRBuilder.Core.IClonable`1.Clone
   commentId: M:VRBuilder.Core.IClonable`1.Clone
-  href: VRBuilder.Core.IClonable-1.html#VRBuilder_Core_IClonable_1_Clone
   name: Clone()
   nameWithType: IClonable<T>.Clone()
   fullName: VRBuilder.Core.IClonable<T>.Clone()
@@ -297,20 +351,29 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1.Clone
     name: Clone
-    href: VRBuilder.Core.IClonable-1.html#VRBuilder_Core_IClonable_1_Clone
+    nameWithType: IClonable<T>.Clone
+    fullName: VRBuilder.Core.IClonable<T>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1.Clone
     name: Clone
-    href: VRBuilder.Core.IClonable-1.html#VRBuilder_Core_IClonable_1_Clone
+    nameWithType: IClonable(Of T).Clone
+    fullName: VRBuilder.Core.IClonable(Of T).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IClonable{VRBuilder.Core.IStep}
   commentId: T:VRBuilder.Core.IClonable{VRBuilder.Core.IStep}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<IStep>
   nameWithType: IClonable<IStep>
   fullName: VRBuilder.Core.IClonable<VRBuilder.Core.IStep>
@@ -320,26 +383,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IStep
     name: IStep
-    href: VRBuilder.Core.IStep.html
+    nameWithType: IStep
+    fullName: VRBuilder.Core.IStep
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IStep
     name: IStep
-    href: VRBuilder.Core.IStep.html
+    nameWithType: IStep
+    fullName: VRBuilder.Core.IStep
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner`1
   commentId: T:VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<TData>
   nameWithType: IDataOwner<TData>
   fullName: VRBuilder.Core.IDataOwner<TData>
@@ -349,22 +421,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IClonable`1
   commentId: T:VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<T>
   nameWithType: IClonable<T>
   fullName: VRBuilder.Core.IClonable<T>
@@ -374,29 +457,39 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IStep.StepMetadata*
   commentId: Overload:VRBuilder.Core.IStep.StepMetadata
-  href: VRBuilder.Core.IStep.html#VRBuilder_Core_IStep_StepMetadata
   name: StepMetadata
   nameWithType: IStep.StepMetadata
   fullName: VRBuilder.Core.IStep.StepMetadata
 - uid: VRBuilder.Core.StepMetadata
   commentId: T:VRBuilder.Core.StepMetadata
   parent: VRBuilder.Core
-  href: VRBuilder.Core.StepMetadata.html
   name: StepMetadata
   nameWithType: StepMetadata
   fullName: VRBuilder.Core.StepMetadata

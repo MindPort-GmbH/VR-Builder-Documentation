@@ -29,11 +29,17 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Base interface for SnapZone, if you add an custom interaction framework add this interface to your SnapZone implementation.
+  summary: "\nBase interface for SnapZone, if you add an custom interaction framework add this interface to your SnapZone implementation. \n"
   example: []
   syntax:
     content: public interface ISnapZone
     content.vb: Public Interface ISnapZone
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.BasicInteraction.ISnapZone.IsEmpty
   commentId: P:VRBuilder.BasicInteraction.ISnapZone.IsEmpty
   id: IsEmpty
@@ -56,7 +62,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Returns if the SnapZone is empty.
+  summary: "\nReturns if the SnapZone is empty.\n"
   example: []
   syntax:
     content: bool IsEmpty { get; }
@@ -65,6 +71,10 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsEmpty As Boolean
   overload: VRBuilder.BasicInteraction.ISnapZone.IsEmpty*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.ISnapZone.SnappedObject
   commentId: P:VRBuilder.BasicInteraction.ISnapZone.SnappedObject
   id: SnappedObject
@@ -87,7 +97,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Returns the snapped object, can be null.
+  summary: "\nReturns the snapped object, can be null.\n"
   example: []
   syntax:
     content: ISnappableProperty SnappedObject { get; }
@@ -96,6 +106,10 @@ items:
       type: VRBuilder.BasicInteraction.Properties.ISnappableProperty
     content.vb: ReadOnly Property SnappedObject As ISnappableProperty
   overload: VRBuilder.BasicInteraction.ISnapZone.SnappedObject*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.ISnapZone.Anchor
   commentId: P:VRBuilder.BasicInteraction.ISnapZone.Anchor
   id: Anchor
@@ -118,15 +132,19 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Position where the object is snapped.
+  summary: "\nPosition where the object is snapped.\n"
   example: []
   syntax:
     content: Transform Anchor { get; }
     parameters: []
     return:
-      type: UnityEngine.Transform
+      type: Transform
     content.vb: ReadOnly Property Anchor As Transform
   overload: VRBuilder.BasicInteraction.ISnapZone.Anchor*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.ISnapZone.CanSnap(VRBuilder.BasicInteraction.Properties.ISnappableProperty)
   commentId: M:VRBuilder.BasicInteraction.ISnapZone.CanSnap(VRBuilder.BasicInteraction.Properties.ISnappableProperty)
   id: CanSnap(VRBuilder.BasicInteraction.Properties.ISnappableProperty)
@@ -149,7 +167,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Returns if the object can be snapped at all.
+  summary: "\nReturns if the object can be snapped at all.\n"
   example: []
   syntax:
     content: bool CanSnap(ISnappableProperty target)
@@ -182,7 +200,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Forces the object to be snapped, returns true when it was snapped successfully.
+  summary: "\nForces the object to be snapped, returns true when it was snapped successfully.\n"
   example: []
   syntax:
     content: bool ForceSnap(ISnappableProperty target)
@@ -215,40 +233,22 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Forces release the snapped object, will return false when there is no object.
+  summary: "\nForces release the snapped object, will return false when there is no object.\n"
   example: []
   syntax:
     content: bool ForceRelease()
     return:
       type: System.Boolean
-    content.vb: Function ForceRelease() As Boolean
+    content.vb: Function ForceRelease As Boolean
   overload: VRBuilder.BasicInteraction.ISnapZone.ForceRelease*
 references:
 - uid: VRBuilder.BasicInteraction
   commentId: N:VRBuilder.BasicInteraction
-  href: VRBuilder.html
   name: VRBuilder.BasicInteraction
   nameWithType: VRBuilder.BasicInteraction
   fullName: VRBuilder.BasicInteraction
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
 - uid: VRBuilder.BasicInteraction.ISnapZone.IsEmpty*
   commentId: Overload:VRBuilder.BasicInteraction.ISnapZone.IsEmpty
-  href: VRBuilder.BasicInteraction.ISnapZone.html#VRBuilder_BasicInteraction_ISnapZone_IsEmpty
   name: IsEmpty
   nameWithType: ISnapZone.IsEmpty
   fullName: VRBuilder.BasicInteraction.ISnapZone.IsEmpty
@@ -256,97 +256,53 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.BasicInteraction.ISnapZone.SnappedObject*
   commentId: Overload:VRBuilder.BasicInteraction.ISnapZone.SnappedObject
-  href: VRBuilder.BasicInteraction.ISnapZone.html#VRBuilder_BasicInteraction_ISnapZone_SnappedObject
   name: SnappedObject
   nameWithType: ISnapZone.SnappedObject
   fullName: VRBuilder.BasicInteraction.ISnapZone.SnappedObject
 - uid: VRBuilder.BasicInteraction.Properties.ISnappableProperty
   commentId: T:VRBuilder.BasicInteraction.Properties.ISnappableProperty
   parent: VRBuilder.BasicInteraction.Properties
-  href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
   name: ISnappableProperty
   nameWithType: ISnappableProperty
   fullName: VRBuilder.BasicInteraction.Properties.ISnappableProperty
 - uid: VRBuilder.BasicInteraction.Properties
   commentId: N:VRBuilder.BasicInteraction.Properties
-  href: VRBuilder.html
   name: VRBuilder.BasicInteraction.Properties
   nameWithType: VRBuilder.BasicInteraction.Properties
   fullName: VRBuilder.BasicInteraction.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction.Properties
-    name: Properties
-    href: VRBuilder.BasicInteraction.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction.Properties
-    name: Properties
-    href: VRBuilder.BasicInteraction.Properties.html
 - uid: VRBuilder.BasicInteraction.ISnapZone.Anchor*
   commentId: Overload:VRBuilder.BasicInteraction.ISnapZone.Anchor
-  href: VRBuilder.BasicInteraction.ISnapZone.html#VRBuilder_BasicInteraction_ISnapZone_Anchor
   name: Anchor
   nameWithType: ISnapZone.Anchor
   fullName: VRBuilder.BasicInteraction.ISnapZone.Anchor
-- uid: UnityEngine.Transform
-  commentId: T:UnityEngine.Transform
-  parent: UnityEngine
+- uid: Transform
   isExternal: true
   name: Transform
   nameWithType: Transform
-  fullName: UnityEngine.Transform
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: Transform
 - uid: VRBuilder.BasicInteraction.ISnapZone.CanSnap*
   commentId: Overload:VRBuilder.BasicInteraction.ISnapZone.CanSnap
-  href: VRBuilder.BasicInteraction.ISnapZone.html#VRBuilder_BasicInteraction_ISnapZone_CanSnap_VRBuilder_BasicInteraction_Properties_ISnappableProperty_
   name: CanSnap
   nameWithType: ISnapZone.CanSnap
   fullName: VRBuilder.BasicInteraction.ISnapZone.CanSnap
 - uid: VRBuilder.BasicInteraction.ISnapZone.ForceSnap*
   commentId: Overload:VRBuilder.BasicInteraction.ISnapZone.ForceSnap
-  href: VRBuilder.BasicInteraction.ISnapZone.html#VRBuilder_BasicInteraction_ISnapZone_ForceSnap_VRBuilder_BasicInteraction_Properties_ISnappableProperty_
   name: ForceSnap
   nameWithType: ISnapZone.ForceSnap
   fullName: VRBuilder.BasicInteraction.ISnapZone.ForceSnap
 - uid: VRBuilder.BasicInteraction.ISnapZone.ForceRelease*
   commentId: Overload:VRBuilder.BasicInteraction.ISnapZone.ForceRelease
-  href: VRBuilder.BasicInteraction.ISnapZone.html#VRBuilder_BasicInteraction_ISnapZone_ForceRelease
   name: ForceRelease
   nameWithType: ISnapZone.ForceRelease
   fullName: VRBuilder.BasicInteraction.ISnapZone.ForceRelease

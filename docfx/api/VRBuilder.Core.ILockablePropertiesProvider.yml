@@ -24,14 +24,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: >-
-    This interface is used to allow entities, for example <xref href="VRBuilder.Core.Transition" data-throw-if-not-resolved="false"></xref> or <xref href="VRBuilder.Core.Conditions" data-throw-if-not-resolved="false"></xref>
-
-    to provide properties which should be locked.
+  summary: "\nThis interface is used to allow entities, for example <xref href=\"VRBuilder.Core.Transition\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"VRBuilder.Core.Conditions\" data-throw-if-not-resolved=\"false\"></xref>\nto provide properties which should be locked.\n"
   example: []
   syntax:
     content: public interface ILockablePropertiesProvider
     content.vb: Public Interface ILockablePropertiesProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.ILockablePropertiesProvider.GetLockableProperties
   commentId: M:VRBuilder.Core.ILockablePropertiesProvider.GetLockableProperties
   id: GetLockableProperties
@@ -54,77 +57,33 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Returns all LockableProperties this provider requires.
+  summary: "\nReturns all LockableProperties this provider requires.\n"
   example: []
   syntax:
     content: IEnumerable<LockablePropertyData> GetLockableProperties()
     return:
       type: System.Collections.Generic.IEnumerable{VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData}
-    content.vb: Function GetLockableProperties() As IEnumerable(Of LockablePropertyData)
+    content.vb: Function GetLockableProperties As IEnumerable(Of LockablePropertyData)
   overload: VRBuilder.Core.ILockablePropertiesProvider.GetLockableProperties*
 references:
 - uid: VRBuilder.Core.Transition
   commentId: T:VRBuilder.Core.Transition
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Transition.html
   name: Transition
   nameWithType: Transition
   fullName: VRBuilder.Core.Transition
 - uid: VRBuilder.Core.Conditions
   commentId: N:VRBuilder.Core.Conditions
-  href: VRBuilder.html
   name: VRBuilder.Core.Conditions
   nameWithType: VRBuilder.Core.Conditions
   fullName: VRBuilder.Core.Conditions
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Conditions
-    name: Conditions
-    href: VRBuilder.Core.Conditions.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Conditions
-    name: Conditions
-    href: VRBuilder.Core.Conditions.html
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.ILockablePropertiesProvider.GetLockableProperties*
   commentId: Overload:VRBuilder.Core.ILockablePropertiesProvider.GetLockableProperties
-  href: VRBuilder.Core.ILockablePropertiesProvider.html#VRBuilder_Core_ILockablePropertiesProvider_GetLockableProperties
   name: GetLockableProperties
   nameWithType: ILockablePropertiesProvider.GetLockableProperties
   fullName: VRBuilder.Core.ILockablePropertiesProvider.GetLockableProperties
@@ -132,7 +91,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<LockablePropertyData>
   nameWithType: IEnumerable<LockablePropertyData>
   fullName: System.Collections.Generic.IEnumerable<VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData>
@@ -142,29 +100,38 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData
     name: LockablePropertyData
-    href: VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData.html
+    nameWithType: LockablePropertyData
+    fullName: VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData
     name: LockablePropertyData
-    href: VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData.html
+    nameWithType: LockablePropertyData
+    fullName: VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -174,55 +141,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

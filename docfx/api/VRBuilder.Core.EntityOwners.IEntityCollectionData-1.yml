@@ -24,16 +24,25 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: A generic version of <xref href="VRBuilder.Core.EntityOwners.IEntityCollectionData" data-throw-if-not-resolved="false"></xref>
+  summary: "\nA generic version of <xref href=\"VRBuilder.Core.EntityOwners.IEntityCollectionData\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
     content: 'public interface IEntityCollectionData<out TEntity> : IEntityCollectionData, IData where TEntity : IEntity'
     typeParameters:
     - id: TEntity
-    content.vb: Public Interface IEntityCollectionData(Of Out TEntity As IEntity) Inherits IEntityCollectionData, IData
+    content.vb: >-
+      Public Interface IEntityCollectionData(Of Out TEntity As IEntity)
+
+          Inherits IEntityCollectionData
   inheritedMembers:
   - VRBuilder.Core.IData.Metadata
   nameWithType.vb: IEntityCollectionData(Of TEntity)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
   fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity)
   name.vb: IEntityCollectionData(Of TEntity)
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
@@ -59,10 +68,10 @@ items:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
   syntax:
-    content: IEnumerable<out TEntity> GetChildren()
+    content: IEnumerable<TEntity> GetChildren()
     return:
       type: System.Collections.Generic.IEnumerable{{TEntity}}
-    content.vb: Function GetChildren() As IEnumerable(Of Out TEntity)
+    content.vb: Function GetChildren As IEnumerable(Of TEntity)
   overload: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren*
   nameWithType.vb: IEntityCollectionData(Of TEntity).GetChildren()
   fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity).GetChildren()
@@ -70,79 +79,33 @@ references:
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData
   parent: VRBuilder.Core.EntityOwners
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData.html
   name: IEntityCollectionData
   nameWithType: IEntityCollectionData
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren*
   commentId: Overload:VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren
   nameWithType: IEntityCollectionData<TEntity>.GetChildren
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren
@@ -152,7 +115,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{`0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<TEntity>
   nameWithType: IEnumerable<TEntity>
   fullName: System.Collections.Generic.IEnumerable<TEntity>
@@ -162,25 +124,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -190,55 +163,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

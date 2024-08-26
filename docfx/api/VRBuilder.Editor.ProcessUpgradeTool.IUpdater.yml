@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Updates the value in a field or property according to a newer standard.
+  summary: "\nUpdates the value in a field or property according to a newer standard.\n"
   example: []
   syntax:
     content: public interface IUpdater
     content.vb: Public Interface IUpdater
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.UpdatedType
   commentId: P:VRBuilder.Editor.ProcessUpgradeTool.IUpdater.UpdatedType
   id: UpdatedType
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Base type compatible with this updater.
+  summary: "\nBase type compatible with this updater.\n"
   example: []
   syntax:
     content: Type UpdatedType { get; }
@@ -61,6 +67,10 @@ items:
       type: System.Type
     content.vb: ReadOnly Property UpdatedType As Type
   overload: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.UpdatedType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update(System.Reflection.MemberInfo,System.Object)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update(System.Reflection.MemberInfo,System.Object)
   id: Update(System.Reflection.MemberInfo,System.Object)
@@ -68,9 +78,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Update(MemberInfo, object)
-  nameWithType: IUpdater.Update(MemberInfo, object)
-  fullName: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update(System.Reflection.MemberInfo, object)
+  name: Update(MemberInfo, Object)
+  nameWithType: IUpdater.Update(MemberInfo, Object)
+  fullName: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update(System.Reflection.MemberInfo, System.Object)
   type: Method
   source:
     remote:
@@ -83,7 +93,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Updates the provided field or property.
+  summary: "\nUpdates the provided field or property.\n"
   example: []
   syntax:
     content: void Update(MemberInfo memberInfo, object owner)
@@ -94,43 +104,14 @@ items:
       type: System.Object
     content.vb: Sub Update(memberInfo As MemberInfo, owner As Object)
   overload: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update*
-  nameWithType.vb: IUpdater.Update(MemberInfo, Object)
-  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update(System.Reflection.MemberInfo, Object)
-  name.vb: Update(MemberInfo, Object)
 references:
 - uid: VRBuilder.Editor.ProcessUpgradeTool
   commentId: N:VRBuilder.Editor.ProcessUpgradeTool
-  href: VRBuilder.html
   name: VRBuilder.Editor.ProcessUpgradeTool
   nameWithType: VRBuilder.Editor.ProcessUpgradeTool
   fullName: VRBuilder.Editor.ProcessUpgradeTool
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.UpdatedType*
   commentId: Overload:VRBuilder.Editor.ProcessUpgradeTool.IUpdater.UpdatedType
-  href: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.html#VRBuilder_Editor_ProcessUpgradeTool_IUpdater_UpdatedType
   name: UpdatedType
   nameWithType: IUpdater.UpdatedType
   fullName: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.UpdatedType
@@ -138,20 +119,17 @@ references:
   commentId: T:System.Type
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type
   nameWithType: Type
   fullName: System.Type
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update*
   commentId: Overload:VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update
-  href: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.html#VRBuilder_Editor_ProcessUpgradeTool_IUpdater_Update_System_Reflection_MemberInfo_System_Object_
   name: Update
   nameWithType: IUpdater.Update
   fullName: VRBuilder.Editor.ProcessUpgradeTool.IUpdater.Update
@@ -159,7 +137,6 @@ references:
   commentId: T:System.Reflection.MemberInfo
   parent: System.Reflection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
   name: MemberInfo
   nameWithType: MemberInfo
   fullName: System.Reflection.MemberInfo
@@ -167,37 +144,12 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Reflection
   commentId: N:System.Reflection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Reflection
   nameWithType: System.Reflection
   fullName: System.Reflection
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Reflection
-    name: Reflection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.reflection
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Reflection
-    name: Reflection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.reflection

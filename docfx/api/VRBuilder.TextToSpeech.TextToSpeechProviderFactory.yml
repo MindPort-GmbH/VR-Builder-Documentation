@@ -27,32 +27,32 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech
-  summary: >-
-    This factory creates and provides <xref href="VRBuilder.TextToSpeech.ITextToSpeechProvider" data-throw-if-not-resolved="false"></xref>s.
-
-    They are chosen by name, the following providers are registered by default:
-
-    - MicrosoftSapiTextToSpeechProvider
-
-    - WatsonTextToSpeechProvider
-
-    - GoogleTextToSpeechProvider
+  summary: "\nThis factory creates and provides <xref href=\"VRBuilder.TextToSpeech.ITextToSpeechProvider\" data-throw-if-not-resolved=\"false\"></xref>s.\nThey are chosen by name, the following providers are registered by default:\n- MicrosoftSapiTextToSpeechProvider\n- WatsonTextToSpeechProvider\n- GoogleTextToSpeechProvider\n"
   example: []
   syntax:
     content: 'public class TextToSpeechProviderFactory : Singleton<TextToSpeechProviderFactory>'
-    content.vb: Public Class TextToSpeechProviderFactory Inherits Singleton(Of TextToSpeechProviderFactory)
+    content.vb: >-
+      Public Class TextToSpeechProviderFactory
+
+          Inherits Singleton(Of TextToSpeechProviderFactory)
   inheritance:
   - System.Object
   - VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}
   inheritedMembers:
   - VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}.Instance
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.#ctor
   commentId: M:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.#ctor
   id: '#ctor'
@@ -77,11 +77,12 @@ items:
   namespace: VRBuilder.TextToSpeech
   syntax:
     content: public TextToSpeechProviderFactory()
-    content.vb: Public Sub New()
+    content.vb: Public Sub New
   overload: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.#ctor*
-  nameWithType.vb: TextToSpeechProviderFactory.New()
-  fullName.vb: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.New()
-  name.vb: New()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.RegisterProvider(System.Type)
   commentId: M:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.RegisterProvider(System.Type)
   id: RegisterProvider(System.Type)
@@ -104,7 +105,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech
-  summary: Add a provider of the specified type.
+  summary: "\nAdd a provider of the specified type.\n"
   example: []
   syntax:
     content: public void RegisterProvider(Type textToSpeechProviderType)
@@ -113,6 +114,10 @@ items:
       type: System.Type
     content.vb: Public Sub RegisterProvider(textToSpeechProviderType As Type)
   overload: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.RegisterProvider*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider
   commentId: M:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider
   id: CreateProvider
@@ -135,14 +140,18 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech
-  summary: Creates a provider, always loads the actual text to speech config to set it up.
+  summary: "\nCreates a provider, always loads the actual text to speech config to set it up.\n"
   example: []
   syntax:
     content: public ITextToSpeechProvider CreateProvider()
     return:
       type: VRBuilder.TextToSpeech.ITextToSpeechProvider
-    content.vb: Public Function CreateProvider() As ITextToSpeechProvider
+    content.vb: Public Function CreateProvider As ITextToSpeechProvider
   overload: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider(VRBuilder.TextToSpeech.TextToSpeechConfiguration)
   commentId: M:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider(VRBuilder.TextToSpeech.TextToSpeechConfiguration)
   id: CreateProvider(VRBuilder.TextToSpeech.TextToSpeechConfiguration)
@@ -165,7 +174,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech
-  summary: Creates a provider with given config.
+  summary: "\nCreates a provider with given config.\n"
   example: []
   syntax:
     content: public ITextToSpeechProvider CreateProvider(TextToSpeechConfiguration configuration)
@@ -176,52 +185,33 @@ items:
       type: VRBuilder.TextToSpeech.ITextToSpeechProvider
     content.vb: Public Function CreateProvider(configuration As TextToSpeechConfiguration) As ITextToSpeechProvider
   overload: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.TextToSpeech.ITextToSpeechProvider
   commentId: T:VRBuilder.TextToSpeech.ITextToSpeechProvider
   parent: VRBuilder.TextToSpeech
-  href: VRBuilder.TextToSpeech.ITextToSpeechProvider.html
   name: ITextToSpeechProvider
   nameWithType: ITextToSpeechProvider
   fullName: VRBuilder.TextToSpeech.ITextToSpeechProvider
 - uid: VRBuilder.TextToSpeech
   commentId: N:VRBuilder.TextToSpeech
-  href: VRBuilder.html
   name: VRBuilder.TextToSpeech
   nameWithType: VRBuilder.TextToSpeech
   fullName: VRBuilder.TextToSpeech
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.TextToSpeech.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.TextToSpeech.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}
   commentId: T:VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}
   parent: VRBuilder.Unity
   definition: VRBuilder.Unity.Singleton`1
-  href: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.html
   name: Singleton<TextToSpeechProviderFactory>
   nameWithType: Singleton<TextToSpeechProviderFactory>
   fullName: VRBuilder.Unity.Singleton<VRBuilder.TextToSpeech.TextToSpeechProviderFactory>
@@ -231,21 +221,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Unity.Singleton`1
     name: Singleton
+    nameWithType: Singleton
+    fullName: VRBuilder.Unity.Singleton
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory
     name: TextToSpeechProviderFactory
-    href: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.html
+    nameWithType: TextToSpeechProviderFactory
+    fullName: VRBuilder.TextToSpeech.TextToSpeechProviderFactory
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Unity.Singleton`1
     name: Singleton
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Singleton
+    fullName: VRBuilder.Unity.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory
     name: TextToSpeechProviderFactory
-    href: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.html
+    nameWithType: TextToSpeechProviderFactory
+    fullName: VRBuilder.TextToSpeech.TextToSpeechProviderFactory
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}.Instance
   commentId: P:VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}.Instance
   parent: VRBuilder.Unity.Singleton{VRBuilder.TextToSpeech.TextToSpeechProviderFactory}
@@ -255,235 +257,293 @@ references:
   fullName: VRBuilder.Unity.Singleton<VRBuilder.TextToSpeech.TextToSpeechProviderFactory>.Instance
   nameWithType.vb: Singleton(Of TextToSpeechProviderFactory).Instance
   fullName.vb: VRBuilder.Unity.Singleton(Of VRBuilder.TextToSpeech.TextToSpeechProviderFactory).Instance
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Unity.Singleton`1
   commentId: T:VRBuilder.Unity.Singleton`1
-  href: VRBuilder.Unity.Singleton-1.html
   name: Singleton<T>
   nameWithType: Singleton<T>
   fullName: VRBuilder.Unity.Singleton<T>
@@ -493,41 +553,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Unity.Singleton`1
     name: Singleton
-    href: VRBuilder.Unity.Singleton-1.html
+    nameWithType: Singleton
+    fullName: VRBuilder.Unity.Singleton
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Unity.Singleton`1
     name: Singleton
-    href: VRBuilder.Unity.Singleton-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Singleton
+    fullName: VRBuilder.Unity.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Unity
   commentId: N:VRBuilder.Unity
-  href: VRBuilder.html
   name: VRBuilder.Unity
   nameWithType: VRBuilder.Unity
   fullName: VRBuilder.Unity
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Unity
-    name: Unity
-    href: VRBuilder.Unity.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Unity
-    name: Unity
-    href: VRBuilder.Unity.html
 - uid: VRBuilder.Unity.Singleton`1.Instance
   commentId: P:VRBuilder.Unity.Singleton`1.Instance
   name: Instance
@@ -537,16 +592,11 @@ references:
   fullName.vb: VRBuilder.Unity.Singleton(Of T).Instance
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.#ctor*
   commentId: Overload:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.#ctor
-  href: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.html#VRBuilder_TextToSpeech_TextToSpeechProviderFactory__ctor
   name: TextToSpeechProviderFactory
   nameWithType: TextToSpeechProviderFactory.TextToSpeechProviderFactory
   fullName: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.TextToSpeechProviderFactory
-  nameWithType.vb: TextToSpeechProviderFactory.New
-  fullName.vb: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.New
-  name.vb: New
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.RegisterProvider*
   commentId: Overload:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.RegisterProvider
-  href: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.html#VRBuilder_TextToSpeech_TextToSpeechProviderFactory_RegisterProvider_System_Type_
   name: RegisterProvider
   nameWithType: TextToSpeechProviderFactory.RegisterProvider
   fullName: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.RegisterProvider
@@ -554,20 +604,17 @@ references:
   commentId: T:System.Type
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type
   nameWithType: Type
   fullName: System.Type
 - uid: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider*
   commentId: Overload:VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider
-  href: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.html#VRBuilder_TextToSpeech_TextToSpeechProviderFactory_CreateProvider
   name: CreateProvider
   nameWithType: TextToSpeechProviderFactory.CreateProvider
   fullName: VRBuilder.TextToSpeech.TextToSpeechProviderFactory.CreateProvider
 - uid: VRBuilder.TextToSpeech.TextToSpeechConfiguration
   commentId: T:VRBuilder.TextToSpeech.TextToSpeechConfiguration
   parent: VRBuilder.TextToSpeech
-  href: VRBuilder.TextToSpeech.TextToSpeechConfiguration.html
   name: TextToSpeechConfiguration
   nameWithType: TextToSpeechConfiguration
   fullName: VRBuilder.TextToSpeech.TextToSpeechConfiguration

@@ -30,17 +30,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: The "play audio" behavior's data.
+  summary: "\nThe &quot;play audio&quot; behavior&apos;s data.\n"
   example: []
   syntax:
     content: >-
       [DataContract(IsReference = true)]
 
-      public class PlayAudioBehavior.EntityData : IBackgroundBehaviorData, IBehaviorData, INamedData, IData, IBehaviorExecutionStages
+      public class EntityData : IBackgroundBehaviorData, IBehaviorData, INamedData, IData, IBehaviorExecutionStages
     content.vb: >-
       <DataContract(IsReference:=True)>
 
-      Public Class PlayAudioBehavior.EntityData Implements IBackgroundBehaviorData, IBehaviorData, INamedData, IData, IBehaviorExecutionStages
+      Public Class EntityData
+
+          Implements IBackgroundBehaviorData, IBehaviorData, INamedData, IData, IBehaviorExecutionStages
   inheritance:
   - System.Object
   implements:
@@ -50,13 +52,13 @@ items:
   - VRBuilder.Core.IData
   - VRBuilder.Core.Behaviors.IBehaviorExecutionStages
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -65,6 +67,12 @@ items:
     - name: IsReference
       type: System.Boolean
       value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioData
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioData
   id: AudioData
@@ -87,7 +95,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: An audio data that contains an audio clip to play.
+  summary: "\nAn audio data that contains an audio clip to play.\n"
   example: []
   syntax:
     content: >-
@@ -106,6 +114,12 @@ items:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.ExecutionStages
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.ExecutionStages
   id: ExecutionStages
@@ -128,7 +142,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: A property that determines if the Behavior should be run at activation or deactivation (or both).
   example: []
   syntax:
     content: >-
@@ -149,6 +162,12 @@ items:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Volume
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Volume
   id: Volume
@@ -171,7 +190,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Audio volume this audio file should be played with.
+  summary: "\nAudio volume this audio file should be played with.\n"
   example: []
   syntax:
     content: >-
@@ -208,6 +227,12 @@ items:
     arguments:
     - type: System.String
       value: NormalizedFloatDrawer
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioPlayer
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioPlayer
   id: AudioPlayer
@@ -230,15 +255,21 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: The Unity's audio source to play the sound. If not set, it will use RuntimeConfigurator.Configuration.InstructionPlayer.
+  summary: "\nThe Unity&apos;s audio source to play the sound. If not set, it will use <seealso cref=\"!:RuntimeConfigurator.Configuration.InstructionPlayer\"></seealso>.\n"
   example: []
   syntax:
     content: public AudioSource AudioPlayer { get; set; }
     parameters: []
     return:
-      type: UnityEngine.AudioSource
+      type: AudioSource
     content.vb: Public Property AudioPlayer As AudioSource
   overload: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioPlayer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Metadata
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Metadata
   id: Metadata
@@ -261,7 +292,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Reference to this object's <xref href="VRBuilder.Core.IMetadata" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public Metadata Metadata { get; set; }
@@ -272,6 +302,12 @@ items:
   overload: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Metadata*
   implements:
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Name
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Name
   id: Name
@@ -294,7 +330,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Name of the entity.
   example: []
   syntax:
     content: >-
@@ -315,6 +350,12 @@ items:
   - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
     ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.IsBlocking
   commentId: P:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.IsBlocking
   id: IsBlocking
@@ -337,10 +378,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: >-
-    If true, the behavior prevents the completion of a step until it is completed itself.
-
-    If false, the behavior does not hinder the completion of a step.
   example: []
   syntax:
     content: public bool IsBlocking { get; set; }
@@ -351,397 +388,380 @@ items:
   overload: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.IsBlocking*
   implements:
   - VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Behaviors.IBackgroundBehaviorData
   commentId: T:VRBuilder.Core.Behaviors.IBackgroundBehaviorData
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.html
   name: IBackgroundBehaviorData
   nameWithType: IBackgroundBehaviorData
   fullName: VRBuilder.Core.Behaviors.IBackgroundBehaviorData
 - uid: VRBuilder.Core.Behaviors.IBehaviorData
   commentId: T:VRBuilder.Core.Behaviors.IBehaviorData
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehaviorData.html
   name: IBehaviorData
   nameWithType: IBehaviorData
   fullName: VRBuilder.Core.Behaviors.IBehaviorData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core.Behaviors.IBehaviorExecutionStages
   commentId: T:VRBuilder.Core.Behaviors.IBehaviorExecutionStages
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehaviorExecutionStages.html
   name: IBehaviorExecutionStages
   nameWithType: IBehaviorExecutionStages
   fullName: VRBuilder.Core.Behaviors.IBehaviorExecutionStages
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioData*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioData
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_AudioData
   name: AudioData
   nameWithType: PlayAudioBehavior.EntityData.AudioData
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioData
 - uid: VRBuilder.Core.Audio.IAudioData
   commentId: T:VRBuilder.Core.Audio.IAudioData
   parent: VRBuilder.Core.Audio
-  href: VRBuilder.Core.Audio.IAudioData.html
   name: IAudioData
   nameWithType: IAudioData
   fullName: VRBuilder.Core.Audio.IAudioData
 - uid: VRBuilder.Core.Audio
   commentId: N:VRBuilder.Core.Audio
-  href: VRBuilder.html
   name: VRBuilder.Core.Audio
   nameWithType: VRBuilder.Core.Audio
   fullName: VRBuilder.Core.Audio
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Audio
-    name: Audio
-    href: VRBuilder.Core.Audio.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Audio
-    name: Audio
-    href: VRBuilder.Core.Audio.html
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.ExecutionStages*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.ExecutionStages
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_ExecutionStages
   name: ExecutionStages
   nameWithType: PlayAudioBehavior.EntityData.ExecutionStages
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.ExecutionStages
 - uid: VRBuilder.Core.Behaviors.IBehaviorExecutionStages.ExecutionStages
   commentId: P:VRBuilder.Core.Behaviors.IBehaviorExecutionStages.ExecutionStages
   parent: VRBuilder.Core.Behaviors.IBehaviorExecutionStages
-  href: VRBuilder.Core.Behaviors.IBehaviorExecutionStages.html#VRBuilder_Core_Behaviors_IBehaviorExecutionStages_ExecutionStages
   name: ExecutionStages
   nameWithType: IBehaviorExecutionStages.ExecutionStages
   fullName: VRBuilder.Core.Behaviors.IBehaviorExecutionStages.ExecutionStages
 - uid: VRBuilder.Core.Behaviors.BehaviorExecutionStages
   commentId: T:VRBuilder.Core.Behaviors.BehaviorExecutionStages
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.BehaviorExecutionStages.html
   name: BehaviorExecutionStages
   nameWithType: BehaviorExecutionStages
   fullName: VRBuilder.Core.Behaviors.BehaviorExecutionStages
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Volume*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Volume
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_Volume
   name: Volume
   nameWithType: PlayAudioBehavior.EntityData.Volume
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Volume
@@ -749,69 +769,44 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioPlayer*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioPlayer
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_AudioPlayer
   name: AudioPlayer
   nameWithType: PlayAudioBehavior.EntityData.AudioPlayer
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.AudioPlayer
-- uid: UnityEngine.AudioSource
-  commentId: T:UnityEngine.AudioSource
-  parent: UnityEngine
+- uid: AudioSource
   isExternal: true
   name: AudioSource
   nameWithType: AudioSource
-  fullName: UnityEngine.AudioSource
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: VRBuilder.Core.IMetadata
-  commentId: T:VRBuilder.Core.IMetadata
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.IMetadata.html
-  name: IMetadata
-  nameWithType: IMetadata
-  fullName: VRBuilder.Core.IMetadata
+  fullName: AudioSource
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Metadata*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Metadata
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_Metadata
   name: Metadata
   nameWithType: PlayAudioBehavior.EntityData.Metadata
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Metadata
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.Metadata
   commentId: T:VRBuilder.Core.Metadata
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Metadata.html
   name: Metadata
   nameWithType: Metadata
   fullName: VRBuilder.Core.Metadata
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Name*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Name
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_Name
   name: Name
   nameWithType: PlayAudioBehavior.EntityData.Name
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.Name
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
@@ -819,23 +814,17 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.IsBlocking*
   commentId: Overload:VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.IsBlocking
-  href: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.html#VRBuilder_Core_Behaviors_PlayAudioBehavior_EntityData_IsBlocking
   name: IsBlocking
   nameWithType: PlayAudioBehavior.EntityData.IsBlocking
   fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData.IsBlocking
 - uid: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
   commentId: P:VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
   parent: VRBuilder.Core.Behaviors.IBackgroundBehaviorData
-  href: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.html#VRBuilder_Core_Behaviors_IBackgroundBehaviorData_IsBlocking
   name: IsBlocking
   nameWithType: IBackgroundBehaviorData.IsBlocking
   fullName: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
@@ -843,10 +832,6 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Setup
-  summary: Can configure layer masks on an interactor or interactable.
+  summary: "\nCan configure layer masks on an interactor or interactable.\n"
   example: []
   syntax:
     content: public interface ILayerConfigurator
     content.vb: Public Interface ILayerConfigurator
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Setup.ILayerConfigurator.LayerSet
   commentId: P:VRBuilder.Core.Setup.ILayerConfigurator.LayerSet
   id: LayerSet
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Setup
-  summary: The layer set to be used on this configurator.
+  summary: "\nThe layer set to be used on this configurator.\n"
   example: []
   syntax:
     content: LayerSet LayerSet { get; }
@@ -61,6 +67,10 @@ items:
       type: VRBuilder.Core.Setup.LayerSet
     content.vb: ReadOnly Property LayerSet As LayerSet
   overload: VRBuilder.Core.Setup.ILayerConfigurator.LayerSet*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers(System.String,System.String)
   commentId: M:VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers(System.String,System.String)
   id: ConfigureLayers(System.String,System.String)
@@ -68,9 +78,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ConfigureLayers(string, string)
-  nameWithType: ILayerConfigurator.ConfigureLayers(string, string)
-  fullName: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers(string, string)
+  name: ConfigureLayers(String, String)
+  nameWithType: ILayerConfigurator.ConfigureLayers(String, String)
+  fullName: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers(System.String, System.String)
   type: Method
   source:
     remote:
@@ -83,7 +93,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Setup
-  summary: Set up the layer masks to the specified layer names.
+  summary: "\nSet up the layer masks to the specified layer names.\n"
   example: []
   syntax:
     content: void ConfigureLayers(string interactionLayerName, string raycastLayerName)
@@ -94,56 +104,25 @@ items:
       type: System.String
     content.vb: Sub ConfigureLayers(interactionLayerName As String, raycastLayerName As String)
   overload: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers*
-  nameWithType.vb: ILayerConfigurator.ConfigureLayers(String, String)
-  fullName.vb: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers(String, String)
-  name.vb: ConfigureLayers(String, String)
 references:
 - uid: VRBuilder.Core.Setup
   commentId: N:VRBuilder.Core.Setup
-  href: VRBuilder.html
   name: VRBuilder.Core.Setup
   nameWithType: VRBuilder.Core.Setup
   fullName: VRBuilder.Core.Setup
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Setup
-    name: Setup
-    href: VRBuilder.Core.Setup.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Setup
-    name: Setup
-    href: VRBuilder.Core.Setup.html
 - uid: VRBuilder.Core.Setup.ILayerConfigurator.LayerSet*
   commentId: Overload:VRBuilder.Core.Setup.ILayerConfigurator.LayerSet
-  href: VRBuilder.Core.Setup.ILayerConfigurator.html#VRBuilder_Core_Setup_ILayerConfigurator_LayerSet
   name: LayerSet
   nameWithType: ILayerConfigurator.LayerSet
   fullName: VRBuilder.Core.Setup.ILayerConfigurator.LayerSet
 - uid: VRBuilder.Core.Setup.LayerSet
   commentId: T:VRBuilder.Core.Setup.LayerSet
   parent: VRBuilder.Core.Setup
-  href: VRBuilder.Core.Setup.LayerSet.html
   name: LayerSet
   nameWithType: LayerSet
   fullName: VRBuilder.Core.Setup.LayerSet
 - uid: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers*
   commentId: Overload:VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers
-  href: VRBuilder.Core.Setup.ILayerConfigurator.html#VRBuilder_Core_Setup_ILayerConfigurator_ConfigureLayers_System_String_System_String_
   name: ConfigureLayers
   nameWithType: ILayerConfigurator.ConfigureLayers
   fullName: VRBuilder.Core.Setup.ILayerConfigurator.ConfigureLayers
@@ -151,17 +130,12 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System

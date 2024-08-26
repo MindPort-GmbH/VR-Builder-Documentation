@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Animations.Behaviors
   children:
   - VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor
-  - VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(System.Guid,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)
-  - VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)
+  - VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(System.Guid,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)
+  - VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)
   - VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess
   langs:
   - csharp
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: ChildExplosionViewBehavior
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
@@ -27,7 +27,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Animates an object's transform over time to a new position, rotation and/or scale.
+  summary: "\nAnimates an object&apos;s transform over time to a new position, rotation and/or scale.\n"
   example: []
   syntax:
     content: >-
@@ -41,7 +41,11 @@ items:
 
       <HelpLink("https://www.mindport.co/vr-builder-tutorials/animations-add-on")>
 
-      Public Class ChildExplosionViewBehavior Inherits Behavior(Of ChildExplosionViewBehavior.EntityData) Implements IDataOwner(Of ChildExplosionViewBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
+      Public Class ChildExplosionViewBehavior
+
+          Inherits Behavior(Of ChildExplosionViewBehavior.EntityData)
+
+          Implements IDataOwner(Of ChildExplosionViewBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -54,8 +58,10 @@ items:
   - VRBuilder.Core.IDataOwner
   - VRBuilder.Core.IClonable{VRBuilder.Core.Behaviors.IBehavior}
   inheritedMembers:
+  - VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
   - VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Clone
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Data
+  - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.VRBuilder#Core#IDataOwner#Data
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.LifeCycle
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Parent
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActiveProcess
@@ -63,13 +69,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Update
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -83,6 +89,12 @@ items:
     arguments:
     - type: System.String
       value: https://www.mindport.co/vr-builder-tutorials/animations-add-on
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor
   commentId: M:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor
   id: '#ctor'
@@ -97,11 +109,11 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-    startLine: 191
+    startLine: 197
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
@@ -109,45 +121,39 @@ items:
     content: >-
       [JsonConstructor]
 
-      [Preserve]
-
       public ChildExplosionViewBehavior()
     content.vb: >-
       <JsonConstructor>
 
-      <Preserve>
-
-      Public Sub New()
+      Public Sub New
   overload: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
-  - type: UnityEngine.Scripting.PreserveAttribute
-    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
-    arguments: []
-  nameWithType.vb: ChildExplosionViewBehavior.New()
-  fullName.vb: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.New()
-  name.vb: New()
-- uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)
-  commentId: M:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)
-  id: '#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)
+  commentId: M:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)
+  id: '#ctor(VRBuilder.Animations.Properties.IExplodableProperty,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)'
   parent: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
   langs:
   - csharp
   - vb
-  name: ChildExplosionViewBehavior(IExplodableProperty, float, float, AnimationCurve, bool, int)
-  nameWithType: ChildExplosionViewBehavior.ChildExplosionViewBehavior(IExplodableProperty, float, float, AnimationCurve, bool, int)
-  fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.ChildExplosionViewBehavior(VRBuilder.Animations.Properties.IExplodableProperty, float, float, UnityEngine.AnimationCurve, bool, int)
+  name: ChildExplosionViewBehavior(IExplodableProperty, Single, Single, AnimationCurve, Boolean, Int32)
+  nameWithType: ChildExplosionViewBehavior.ChildExplosionViewBehavior(IExplodableProperty, Single, Single, AnimationCurve, Boolean, Int32)
+  fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.ChildExplosionViewBehavior(VRBuilder.Animations.Properties.IExplodableProperty, System.Single, System.Single, AnimationCurve, System.Boolean, System.Int32)
   type: Constructor
   source:
     remote:
       path: Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-    startLine: 197
+    startLine: 203
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
@@ -161,35 +167,36 @@ items:
     - id: duration
       type: System.Single
     - id: explosionCurve
-      type: UnityEngine.AnimationCurve
+      type: AnimationCurve
     - id: pingPong
       type: System.Boolean
     - id: repeats
       type: System.Int32
     content.vb: Public Sub New(target As IExplodableProperty, scale As Single, duration As Single, explosionCurve As AnimationCurve, pingPong As Boolean = False, repeats As Integer = 1)
   overload: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor*
-  nameWithType.vb: ChildExplosionViewBehavior.New(IExplodableProperty, Single, Single, AnimationCurve, Boolean, Integer)
-  fullName.vb: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.New(VRBuilder.Animations.Properties.IExplodableProperty, Single, Single, UnityEngine.AnimationCurve, Boolean, Integer)
-  name.vb: New(IExplodableProperty, Single, Single, AnimationCurve, Boolean, Integer)
-- uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(System.Guid,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)
-  commentId: M:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(System.Guid,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)
-  id: '#ctor(System.Guid,System.Single,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Int32)'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(System.Guid,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)
+  commentId: M:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor(System.Guid,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)
+  id: '#ctor(System.Guid,System.Single,System.Single,AnimationCurve,System.Boolean,System.Int32)'
   parent: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
   langs:
   - csharp
   - vb
-  name: ChildExplosionViewBehavior(Guid, float, float, AnimationCurve, bool, int)
-  nameWithType: ChildExplosionViewBehavior.ChildExplosionViewBehavior(Guid, float, float, AnimationCurve, bool, int)
-  fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.ChildExplosionViewBehavior(System.Guid, float, float, UnityEngine.AnimationCurve, bool, int)
+  name: ChildExplosionViewBehavior(Guid, Single, Single, AnimationCurve, Boolean, Int32)
+  nameWithType: ChildExplosionViewBehavior.ChildExplosionViewBehavior(Guid, Single, Single, AnimationCurve, Boolean, Int32)
+  fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.ChildExplosionViewBehavior(System.Guid, System.Single, System.Single, AnimationCurve, System.Boolean, System.Int32)
   type: Constructor
   source:
     remote:
       path: Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-    startLine: 201
+    startLine: 207
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
@@ -203,16 +210,17 @@ items:
     - id: duration
       type: System.Single
     - id: explosionCurve
-      type: UnityEngine.AnimationCurve
+      type: AnimationCurve
     - id: pingPong
       type: System.Boolean
     - id: repeats
       type: System.Int32
     content.vb: Public Sub New(targetGuid As Guid, scale As Single, duration As Single, explosionCurve As AnimationCurve, pingPong As Boolean = False, repeats As Integer = 1)
   overload: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor*
-  nameWithType.vb: ChildExplosionViewBehavior.New(Guid, Single, Single, AnimationCurve, Boolean, Integer)
-  fullName.vb: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.New(System.Guid, Single, Single, UnityEngine.AnimationCurve, Boolean, Integer)
-  name.vb: New(Guid, Single, Single, AnimationCurve, Boolean, Integer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess
   commentId: M:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess
   id: GetActivatingProcess
@@ -227,70 +235,45 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: GetActivatingProcess
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/ChildExplosionViewBehavior.cs
-    startLine: 212
+    startLine: 218
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Returns a new instance of a process for the Activating <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Public Overrides Function GetActivatingProcess() As IStageProcess
+    content.vb: Public Overrides Function GetActivatingProcess As IStageProcess
   overridden: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActivatingProcess
   overload: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: VRBuilder.Animations.Behaviors
   commentId: N:VRBuilder.Animations.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Animations.Behaviors
   nameWithType: VRBuilder.Animations.Behaviors
   fullName: VRBuilder.Animations.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Behaviors
-    name: Behaviors
-    href: VRBuilder.Animations.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Behaviors
-    name: Behaviors
-    href: VRBuilder.Animations.Behaviors.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
   commentId: T:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.Entity`1
-  href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
   name: Entity<ChildExplosionViewBehavior.EntityData>
   nameWithType: Entity<ChildExplosionViewBehavior.EntityData>
   fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>
@@ -300,34 +283,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
   - name: <
-  - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
-    name: ChildExplosionViewBehavior
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData.html
+    name: ChildExplosionViewBehavior.EntityData
+    nameWithType: ChildExplosionViewBehavior.EntityData
+    fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
-    name: ChildExplosionViewBehavior
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
-  - name: .
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData.html
+    name: ChildExplosionViewBehavior.EntityData
+    nameWithType: ChildExplosionViewBehavior.EntityData
+    fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
   commentId: T:VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
   parent: VRBuilder.Core.Behaviors
   definition: VRBuilder.Core.Behaviors.Behavior`1
-  href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
   name: Behavior<ChildExplosionViewBehavior.EntityData>
   nameWithType: Behavior<ChildExplosionViewBehavior.EntityData>
   fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>
@@ -337,34 +323,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
   - name: <
-  - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
-    name: ChildExplosionViewBehavior
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData.html
+    name: ChildExplosionViewBehavior.EntityData
+    nameWithType: ChildExplosionViewBehavior.EntityData
+    fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
-    name: ChildExplosionViewBehavior
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
-  - name: .
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData.html
+    name: ChildExplosionViewBehavior.EntityData
+    nameWithType: ChildExplosionViewBehavior.EntityData
+    fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
   name: IDataOwner<ChildExplosionViewBehavior.EntityData>
   nameWithType: IDataOwner<ChildExplosionViewBehavior.EntityData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>
@@ -374,40 +363,42 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
-  - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
-    name: ChildExplosionViewBehavior
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData.html
+    name: ChildExplosionViewBehavior.EntityData
+    nameWithType: ChildExplosionViewBehavior.EntityData
+    fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior
-    name: ChildExplosionViewBehavior
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html
-  - name: .
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData.html
+    name: ChildExplosionViewBehavior.EntityData
+    nameWithType: ChildExplosionViewBehavior.EntityData
+    fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.IBehavior
   commentId: T:VRBuilder.Core.Behaviors.IBehavior
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehavior.html
   name: IBehavior
   nameWithType: IBehavior
   fullName: VRBuilder.Core.Behaviors.IBehavior
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity
@@ -415,7 +406,6 @@ references:
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Core.Behaviors.IBehaviorData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<IBehaviorData>
   nameWithType: IDataOwner<IBehaviorData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>
@@ -425,27 +415,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.IBehaviorData
     name: IBehaviorData
-    href: VRBuilder.Core.Behaviors.IBehaviorData.html
+    nameWithType: IBehaviorData
+    fullName: VRBuilder.Core.Behaviors.IBehaviorData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.IBehaviorData
     name: IBehaviorData
-    href: VRBuilder.Core.Behaviors.IBehaviorData.html
+    nameWithType: IBehaviorData
+    fullName: VRBuilder.Core.Behaviors.IBehaviorData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner
   commentId: T:VRBuilder.Core.IDataOwner
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IDataOwner.html
   name: IDataOwner
   nameWithType: IDataOwner
   fullName: VRBuilder.Core.IDataOwner
@@ -453,7 +452,6 @@ references:
   commentId: T:VRBuilder.Core.IClonable{VRBuilder.Core.Behaviors.IBehavior}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<IBehavior>
   nameWithType: IClonable<IBehavior>
   fullName: VRBuilder.Core.IClonable<VRBuilder.Core.Behaviors.IBehavior>
@@ -463,23 +461,43 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
-    href: VRBuilder.Core.Behaviors.IBehavior.html
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
-    href: VRBuilder.Core.Behaviors.IBehavior.html
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  commentId: P:VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  parent: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
+  definition: VRBuilder.Core.Behaviors.Behavior`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  name: IDataOwner<IBehaviorData>.Data
+  nameWithType: Behavior<ChildExplosionViewBehavior.EntityData>.IDataOwner<IBehaviorData>.Data
+  fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  nameWithType.vb: Behavior(Of ChildExplosionViewBehavior.EntityData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  fullName.vb: VRBuilder.Core.Behaviors.Behavior(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  name.vb: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
 - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Clone
   commentId: M:VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Clone
   parent: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -490,15 +508,27 @@ references:
   nameWithType.vb: Behavior(Of ChildExplosionViewBehavior.EntityData).Clone()
   fullName.vb: VRBuilder.Core.Behaviors.Behavior(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Clone()
   spec.csharp:
-  - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Clone
+  - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
+    nameWithType: Behavior<ChildExplosionViewBehavior.EntityData>.Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Clone
+  - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
+    nameWithType: Behavior(Of ChildExplosionViewBehavior.EntityData).Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Data
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Data
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -508,6 +538,16 @@ references:
   fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.Data
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).Data
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Data
+- uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.VRBuilder#Core#IDataOwner#Data
+  commentId: P:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.VRBuilder#Core#IDataOwner#Data
+  parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
+  definition: VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  name: IDataOwner.Data
+  nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.IDataOwner.Data
+  fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.VRBuilder.Core.IDataOwner.Data
+  nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).VRBuilder.Core.IDataOwner.Data
+  fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).VRBuilder.Core.IDataOwner.Data
+  name.vb: VRBuilder.Core.IDataOwner.Data
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.LifeCycle
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.LifeCycle
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -536,15 +576,27 @@ references:
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).GetActiveProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetActiveProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActiveProcess
+  - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
+    nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.GetActiveProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActiveProcess
+  - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
+    nameWithType: Entity(Of ChildExplosionViewBehavior.EntityData).GetActiveProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetDeactivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -555,15 +607,27 @@ references:
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).GetDeactivatingProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetDeactivatingProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetDeactivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
+    nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetDeactivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
+    nameWithType: Entity(Of ChildExplosionViewBehavior.EntityData).GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetConfigurator
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetConfigurator
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -574,15 +638,27 @@ references:
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).GetConfigurator()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetConfigurator()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetConfigurator
+  - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
+    nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.GetConfigurator
+    fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetConfigurator
+  - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
+    nameWithType: Entity(Of ChildExplosionViewBehavior.EntityData).GetConfigurator
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -593,19 +669,35 @@ references:
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).Configure(IMode)
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Configure(VRBuilder.Core.Configuration.Modes.IMode)
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
+    nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.Configure
+    fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
+    nameWithType: Entity(Of ChildExplosionViewBehavior.EntityData).Configure
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Update
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Update
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -616,244 +708,314 @@ references:
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).Update()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Update()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Update
+  - uid: VRBuilder.Core.Entity`1.Update
     name: Update
+    nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.Update
+    fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.Update
+  - uid: VRBuilder.Core.Entity`1.Update
     name: Update
+    nameWithType: Entity(Of ChildExplosionViewBehavior.EntityData).Update
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Entity`1
   commentId: T:VRBuilder.Core.Entity`1
-  href: VRBuilder.Core.Entity-1.html
   name: Entity<TData>
   nameWithType: Entity<TData>
   fullName: VRBuilder.Core.Entity<TData>
@@ -863,44 +1025,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.Behaviors.Behavior`1
   commentId: T:VRBuilder.Core.Behaviors.Behavior`1
-  href: VRBuilder.Core.Behaviors.Behavior-1.html
   name: Behavior<TData>
   nameWithType: Behavior<TData>
   fullName: VRBuilder.Core.Behaviors.Behavior<TData>
@@ -910,52 +1066,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-    href: VRBuilder.Core.Behaviors.Behavior-1.html
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-    href: VRBuilder.Core.Behaviors.Behavior-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: VRBuilder.Core.IDataOwner`1
   commentId: T:VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<TData>
   nameWithType: IDataOwner<TData>
   fullName: VRBuilder.Core.IDataOwner<TData>
@@ -965,22 +1107,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IClonable`1
   commentId: T:VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<T>
   nameWithType: IClonable<T>
   fullName: VRBuilder.Core.IClonable<T>
@@ -990,22 +1143,41 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: VRBuilder.Core.Behaviors.Behavior`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  commentId: P:VRBuilder.Core.Behaviors.Behavior`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  name: IDataOwner<IBehaviorData>.Data
+  nameWithType: Behavior<TData>.IDataOwner<IBehaviorData>.Data
+  fullName: VRBuilder.Core.Behaviors.Behavior<TData>.VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  nameWithType.vb: Behavior(Of TData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  fullName.vb: VRBuilder.Core.Behaviors.Behavior(Of TData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  name.vb: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
 - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
   commentId: M:VRBuilder.Core.Behaviors.Behavior`1.Clone
-  href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
   name: Clone()
   nameWithType: Behavior<TData>.Clone()
   fullName: VRBuilder.Core.Behaviors.Behavior<TData>.Clone()
@@ -1014,26 +1186,42 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
-    href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
+    nameWithType: Behavior<TData>.Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior<TData>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
-    href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
+    nameWithType: Behavior(Of TData).Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior(Of TData).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Data
   commentId: P:VRBuilder.Core.Entity`1.Data
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Data
   name: Data
   nameWithType: Entity<TData>.Data
   fullName: VRBuilder.Core.Entity<TData>.Data
   nameWithType.vb: Entity(Of TData).Data
   fullName.vb: VRBuilder.Core.Entity(Of TData).Data
+- uid: VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  commentId: P:VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  name: IDataOwner.Data
+  nameWithType: Entity<TData>.IDataOwner.Data
+  fullName: VRBuilder.Core.Entity<TData>.VRBuilder.Core.IDataOwner.Data
+  nameWithType.vb: Entity(Of TData).VRBuilder.Core.IDataOwner.Data
+  fullName.vb: VRBuilder.Core.Entity(Of TData).VRBuilder.Core.IDataOwner.Data
+  name.vb: VRBuilder.Core.IDataOwner.Data
 - uid: VRBuilder.Core.Entity`1.LifeCycle
   commentId: P:VRBuilder.Core.Entity`1.LifeCycle
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_LifeCycle
   name: LifeCycle
   nameWithType: Entity<TData>.LifeCycle
   fullName: VRBuilder.Core.Entity<TData>.LifeCycle
@@ -1041,7 +1229,6 @@ references:
   fullName.vb: VRBuilder.Core.Entity(Of TData).LifeCycle
 - uid: VRBuilder.Core.Entity`1.Parent
   commentId: P:VRBuilder.Core.Entity`1.Parent
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Parent
   name: Parent
   nameWithType: Entity<TData>.Parent
   fullName: VRBuilder.Core.Entity<TData>.Parent
@@ -1049,7 +1236,6 @@ references:
   fullName.vb: VRBuilder.Core.Entity(Of TData).Parent
 - uid: VRBuilder.Core.Entity`1.GetActiveProcess
   commentId: M:VRBuilder.Core.Entity`1.GetActiveProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
   name: GetActiveProcess()
   nameWithType: Entity<TData>.GetActiveProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetActiveProcess()
@@ -1058,18 +1244,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity<TData>.GetActiveProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity(Of TData).GetActiveProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Entity`1.GetDeactivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
   name: GetDeactivatingProcess()
   nameWithType: Entity<TData>.GetDeactivatingProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetDeactivatingProcess()
@@ -1078,18 +1273,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity<TData>.GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity(Of TData).GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.GetConfigurator
   commentId: M:VRBuilder.Core.Entity`1.GetConfigurator
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
   name: GetConfigurator()
   nameWithType: Entity<TData>.GetConfigurator()
   fullName: VRBuilder.Core.Entity<TData>.GetConfigurator()
@@ -1098,18 +1302,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity<TData>.GetConfigurator
+    fullName: VRBuilder.Core.Entity<TData>.GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity(Of TData).GetConfigurator
+    fullName: VRBuilder.Core.Entity(Of TData).GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure(IMode)
   nameWithType: Entity<TData>.Configure(IMode)
   fullName: VRBuilder.Core.Entity<TData>.Configure(VRBuilder.Core.Configuration.Modes.IMode)
@@ -1118,24 +1331,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity<TData>.Configure
+    fullName: VRBuilder.Core.Entity<TData>.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity(Of TData).Configure
+    fullName: VRBuilder.Core.Entity(Of TData).Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Update
   commentId: M:VRBuilder.Core.Entity`1.Update
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
   name: Update()
   nameWithType: Entity<TData>.Update()
   fullName: VRBuilder.Core.Entity<TData>.Update()
@@ -1144,28 +1368,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity<TData>.Update
+    fullName: VRBuilder.Core.Entity<TData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity(Of TData).Update
+    fullName: VRBuilder.Core.Entity(Of TData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor*
   commentId: Overload:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.#ctor
-  href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html#VRBuilder_Animations_Behaviors_ChildExplosionViewBehavior__ctor
   name: ChildExplosionViewBehavior
   nameWithType: ChildExplosionViewBehavior.ChildExplosionViewBehavior
   fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.ChildExplosionViewBehavior
-  nameWithType.vb: ChildExplosionViewBehavior.New
-  fullName.vb: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.New
-  name.vb: New
 - uid: VRBuilder.Animations.Properties.IExplodableProperty
   commentId: T:VRBuilder.Animations.Properties.IExplodableProperty
   parent: VRBuilder.Animations.Properties
-  href: VRBuilder.Animations.Properties.IExplodableProperty.html
   name: IExplodableProperty
   nameWithType: IExplodableProperty
   fullName: VRBuilder.Animations.Properties.IExplodableProperty
@@ -1173,93 +1402,40 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: UnityEngine.AnimationCurve
-  commentId: T:UnityEngine.AnimationCurve
-  parent: UnityEngine
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: AnimationCurve
   isExternal: true
   name: AnimationCurve
   nameWithType: AnimationCurve
-  fullName: UnityEngine.AnimationCurve
+  fullName: AnimationCurve
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Animations.Properties
   commentId: N:VRBuilder.Animations.Properties
-  href: VRBuilder.html
   name: VRBuilder.Animations.Properties
   nameWithType: VRBuilder.Animations.Properties
   fullName: VRBuilder.Animations.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Properties
-    name: Properties
-    href: VRBuilder.Animations.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Properties
-    name: Properties
-    href: VRBuilder.Animations.Properties.html
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
-- uid: VRBuilder.Core.Stage
-  commentId: T:VRBuilder.Core.Stage
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.Stage.html
-  name: Stage
-  nameWithType: Stage
-  fullName: VRBuilder.Core.Stage
 - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActivatingProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}
@@ -1270,31 +1446,40 @@ references:
   nameWithType.vb: Entity(Of ChildExplosionViewBehavior.EntityData).GetActivatingProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetActivatingProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
+    nameWithType: Entity<ChildExplosionViewBehavior.EntityData>.GetActivatingProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData>.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData}.GetActivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
+    nameWithType: Entity(Of ChildExplosionViewBehavior.EntityData).GetActivatingProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.EntityData).GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess*
   commentId: Overload:VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess
-  href: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.html#VRBuilder_Animations_Behaviors_ChildExplosionViewBehavior_GetActivatingProcess
   name: GetActivatingProcess
   nameWithType: ChildExplosionViewBehavior.GetActivatingProcess
   fullName: VRBuilder.Animations.Behaviors.ChildExplosionViewBehavior.GetActivatingProcess
 - uid: VRBuilder.Core.IStageProcess
   commentId: T:VRBuilder.Core.IStageProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStageProcess.html
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
 - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
   commentId: M:VRBuilder.Core.Entity`1.GetActivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
   name: GetActivatingProcess()
   nameWithType: Entity<TData>.GetActivatingProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetActivatingProcess()
@@ -1303,12 +1488,22 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity<TData>.GetActivatingProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity(Of TData).GetActivatingProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )

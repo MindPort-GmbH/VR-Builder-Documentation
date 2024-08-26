@@ -27,8 +27,13 @@ items:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Exceptions
   syntax:
-    content: 'public class ProcessException : Exception, _Exception, ISerializable'
-    content.vb: Public Class ProcessException Inherits Exception Implements _Exception, ISerializable
+    content: 'public class ProcessException : Exception, ISerializable, _Exception'
+    content.vb: >-
+      Public Class ProcessException
+
+          Inherits Exception
+
+          Implements ISerializable, _Exception
   inheritance:
   - System.Object
   - System.Exception
@@ -40,27 +45,33 @@ items:
   - VRBuilder.Core.Exceptions.NameNotUniqueException
   - VRBuilder.Core.Exceptions.PropertyNotFoundException
   implements:
-  - System.Runtime.InteropServices._Exception
   - System.Runtime.Serialization.ISerializable
+  - System.Runtime.InteropServices._Exception
   inheritedMembers:
   - System.Exception.GetBaseException
+  - System.Exception.ToString
   - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   - System.Exception.GetType
-  - System.Exception.ToString
-  - System.Exception.Data
-  - System.Exception.HelpLink
-  - System.Exception.HResult
-  - System.Exception.InnerException
   - System.Exception.Message
-  - System.Exception.Source
-  - System.Exception.StackTrace
+  - System.Exception.Data
+  - System.Exception.InnerException
   - System.Exception.TargetSite
+  - System.Exception.StackTrace
+  - System.Exception.HelpLink
+  - System.Exception.Source
+  - System.Exception.HResult
   - System.Exception.SerializeObjectState
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Core.Exceptions.ProcessException.#ctor
   commentId: M:VRBuilder.Core.Exceptions.ProcessException.#ctor
   id: '#ctor'
@@ -85,11 +96,12 @@ items:
   namespace: VRBuilder.Core.Exceptions
   syntax:
     content: public ProcessException()
-    content.vb: Public Sub New()
+    content.vb: Public Sub New
   overload: VRBuilder.Core.Exceptions.ProcessException.#ctor*
-  nameWithType.vb: ProcessException.New()
-  fullName.vb: VRBuilder.Core.Exceptions.ProcessException.New()
-  name.vb: New()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Exceptions.ProcessException.#ctor(System.String)
   commentId: M:VRBuilder.Core.Exceptions.ProcessException.#ctor(System.String)
   id: '#ctor(System.String)'
@@ -97,9 +109,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ProcessException(string)
-  nameWithType: ProcessException.ProcessException(string)
-  fullName: VRBuilder.Core.Exceptions.ProcessException.ProcessException(string)
+  name: ProcessException(String)
+  nameWithType: ProcessException.ProcessException(String)
+  fullName: VRBuilder.Core.Exceptions.ProcessException.ProcessException(System.String)
   type: Constructor
   source:
     remote:
@@ -119,9 +131,10 @@ items:
       type: System.String
     content.vb: Public Sub New(message As String)
   overload: VRBuilder.Core.Exceptions.ProcessException.#ctor*
-  nameWithType.vb: ProcessException.New(String)
-  fullName.vb: VRBuilder.Core.Exceptions.ProcessException.New(String)
-  name.vb: New(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Exceptions.ProcessException.#ctor(System.String,System.Exception)
   commentId: M:VRBuilder.Core.Exceptions.ProcessException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
@@ -129,9 +142,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ProcessException(string, Exception)
-  nameWithType: ProcessException.ProcessException(string, Exception)
-  fullName: VRBuilder.Core.Exceptions.ProcessException.ProcessException(string, System.Exception)
+  name: ProcessException(String, Exception)
+  nameWithType: ProcessException.ProcessException(String, Exception)
+  fullName: VRBuilder.Core.Exceptions.ProcessException.ProcessException(System.String, System.Exception)
   type: Constructor
   source:
     remote:
@@ -153,252 +166,254 @@ items:
       type: System.Exception
     content.vb: Public Sub New(message As String, inner As Exception)
   overload: VRBuilder.Core.Exceptions.ProcessException.#ctor*
-  nameWithType.vb: ProcessException.New(String, Exception)
-  fullName.vb: VRBuilder.Core.Exceptions.ProcessException.New(String, System.Exception)
-  name.vb: New(String, Exception)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.Core.Exceptions
   commentId: N:VRBuilder.Core.Exceptions
-  href: VRBuilder.html
   name: VRBuilder.Core.Exceptions
   nameWithType: VRBuilder.Core.Exceptions
   fullName: VRBuilder.Core.Exceptions
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Exceptions
-    name: Exceptions
-    href: VRBuilder.Core.Exceptions.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Exceptions
-    name: Exceptions
-    href: VRBuilder.Core.Exceptions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Exception
   commentId: T:System.Exception
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
-- uid: System.Runtime.InteropServices._Exception
-  commentId: T:System.Runtime.InteropServices._Exception
-  parent: System.Runtime.InteropServices
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices._exception
-  name: _Exception
-  nameWithType: _Exception
-  fullName: System.Runtime.InteropServices._Exception
 - uid: System.Runtime.Serialization.ISerializable
   commentId: T:System.Runtime.Serialization.ISerializable
   parent: System.Runtime.Serialization
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable
   name: ISerializable
   nameWithType: ISerializable
   fullName: System.Runtime.Serialization.ISerializable
+- uid: System.Runtime.InteropServices._Exception
+  commentId: T:System.Runtime.InteropServices._Exception
+  parent: System.Runtime.InteropServices
+  isExternal: true
+  name: _Exception
+  nameWithType: _Exception
+  fullName: System.Runtime.InteropServices._Exception
 - uid: System.Exception.GetBaseException
   commentId: M:System.Exception.GetBaseException
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
   name: GetBaseException()
   nameWithType: Exception.GetBaseException()
   fullName: System.Exception.GetBaseException()
   spec.csharp:
   - uid: System.Exception.GetBaseException
     name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Exception.GetBaseException
     name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
-  name: GetObjectData(SerializationInfo, StreamingContext)
-  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
-  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  spec.csharp:
-  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-    name: GetObjectData
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
-  - name: (
-  - uid: System.Runtime.Serialization.SerializationInfo
-    name: SerializationInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
-  - name: ','
-  - name: " "
-  - uid: System.Runtime.Serialization.StreamingContext
-    name: StreamingContext
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
-  - name: )
-  spec.vb:
-  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-    name: GetObjectData
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
-  - name: (
-  - uid: System.Runtime.Serialization.SerializationInfo
-    name: SerializationInfo
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
-  - name: ','
-  - name: " "
-  - uid: System.Runtime.Serialization.StreamingContext
-    name: StreamingContext
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
-  - name: )
-- uid: System.Exception.GetType
-  commentId: M:System.Exception.GetType
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
-  name: GetType()
-  nameWithType: Exception.GetType()
-  fullName: System.Exception.GetType()
-  spec.csharp:
-  - uid: System.Exception.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Exception.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Exception.ToString
   commentId: M:System.Exception.ToString
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
   name: ToString()
   nameWithType: Exception.ToString()
   fullName: System.Exception.ToString()
   spec.csharp:
   - uid: System.Exception.ToString
     name: ToString
+    nameWithType: Exception.ToString
+    fullName: System.Exception.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Exception.ToString
     name: ToString
+    nameWithType: Exception.ToString
+    fullName: System.Exception.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Exception.Data
-  commentId: P:System.Exception.Data
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.data
-  name: Data
-  nameWithType: Exception.Data
-  fullName: System.Exception.Data
-- uid: System.Exception.HelpLink
-  commentId: P:System.Exception.HelpLink
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.helplink
-  name: HelpLink
-  nameWithType: Exception.HelpLink
-  fullName: System.Exception.HelpLink
-- uid: System.Exception.HResult
-  commentId: P:System.Exception.HResult
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.hresult
-  name: HResult
-  nameWithType: Exception.HResult
-  fullName: System.Exception.HResult
-- uid: System.Exception.InnerException
-  commentId: P:System.Exception.InnerException
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.innerexception
-  name: InnerException
-  nameWithType: Exception.InnerException
-  fullName: System.Exception.InnerException
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Exception.Message
   commentId: P:System.Exception.Message
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.message
   name: Message
   nameWithType: Exception.Message
   fullName: System.Exception.Message
-- uid: System.Exception.Source
-  commentId: P:System.Exception.Source
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.source
-  name: Source
-  nameWithType: Exception.Source
-  fullName: System.Exception.Source
-- uid: System.Exception.StackTrace
-  commentId: P:System.Exception.StackTrace
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.stacktrace
-  name: StackTrace
-  nameWithType: Exception.StackTrace
-  fullName: System.Exception.StackTrace
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
 - uid: System.Exception.TargetSite
   commentId: P:System.Exception.TargetSite
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.targetsite
   name: TargetSite
   nameWithType: Exception.TargetSite
   fullName: System.Exception.TargetSite
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
 - uid: System.Exception.SerializeObjectState
   commentId: E:System.Exception.SerializeObjectState
   parent: System.Exception
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.serializeobjectstate
   name: SerializeObjectState
   nameWithType: Exception.SerializeObjectState
   fullName: System.Exception.SerializeObjectState
@@ -406,271 +421,246 @@ references:
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Runtime.InteropServices
-  commentId: N:System.Runtime.InteropServices
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Runtime.InteropServices
-  nameWithType: System.Runtime.InteropServices
-  fullName: System.Runtime.InteropServices
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Runtime
-    name: Runtime
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime
-  - name: .
-  - uid: System.Runtime.InteropServices
-    name: InteropServices
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Runtime
-    name: Runtime
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime
-  - name: .
-  - uid: System.Runtime.InteropServices
-    name: InteropServices
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices
 - uid: System.Runtime.Serialization
   commentId: N:System.Runtime.Serialization
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Runtime
-    name: Runtime
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime
-  - name: .
-  - uid: System.Runtime.Serialization
-    name: Serialization
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Runtime
-    name: Runtime
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime
-  - name: .
-  - uid: System.Runtime.Serialization
-    name: Serialization
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
+  isExternal: true
+  name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices
 - uid: VRBuilder.Core.Exceptions.ProcessException.#ctor*
   commentId: Overload:VRBuilder.Core.Exceptions.ProcessException.#ctor
-  href: VRBuilder.Core.Exceptions.ProcessException.html#VRBuilder_Core_Exceptions_ProcessException__ctor
   name: ProcessException
   nameWithType: ProcessException.ProcessException
   fullName: VRBuilder.Core.Exceptions.ProcessException.ProcessException
-  nameWithType.vb: ProcessException.New
-  fullName.vb: VRBuilder.Core.Exceptions.ProcessException.New
-  name.vb: New
 - uid: System.String
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String

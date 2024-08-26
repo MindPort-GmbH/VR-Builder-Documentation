@@ -26,7 +26,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Lets the user choose between a scene property reference or a tag.
+  summary: "\nLets the user choose between a scene property reference or a tag.\n"
   example: []
   syntax:
     content: >-
@@ -42,7 +42,9 @@ items:
 
       <Obsolete("This class is not used anymore and will be removed in the next major release.")>
 
-      Public Class PropertyReferenceOrTagSelectableValue(Of T As {Class, ISceneObjectProperty}) Inherits SelectableValue(Of ScenePropertyReference(Of T), SceneObjectTag(Of T))
+      Public Class PropertyReferenceOrTagSelectableValue(Of T As {Class, ISceneObjectProperty})
+
+          Inherits SelectableValue(Of ScenePropertyReference(Of T), SceneObjectTag(Of T))
   inheritance:
   - System.Object
   - VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
@@ -52,13 +54,13 @@ items:
   - VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}.FirstValue
   - VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}.SecondValue
   - VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}.IsFirstValueSelected
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -73,6 +75,12 @@ items:
     - type: System.String
       value: This class is not used anymore and will be removed in the next major release.
   nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
   fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T)
   name.vb: PropertyReferenceOrTagSelectableValue(Of T)
 - uid: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.FirstValueLabel
@@ -97,7 +105,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Label for the first value.
   example: []
   syntax:
     content: public override string FirstValueLabel { get; }
@@ -108,6 +115,14 @@ items:
   overridden: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}.FirstValueLabel
   overload: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.FirstValueLabel*
   nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T).FirstValueLabel
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
   fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).FirstValueLabel
 - uid: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.SecondValueLabel
   commentId: P:VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.SecondValueLabel
@@ -131,7 +146,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Label for the second value.
   example: []
   syntax:
     content: public override string SecondValueLabel { get; }
@@ -142,6 +156,14 @@ items:
   overridden: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}.SecondValueLabel
   overload: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.SecondValueLabel*
   nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T).SecondValueLabel
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
   fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).SecondValueLabel
 - uid: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.#ctor
   commentId: M:VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.#ctor
@@ -167,58 +189,31 @@ items:
   namespace: VRBuilder.Core.SceneObjects
   syntax:
     content: public PropertyReferenceOrTagSelectableValue()
-    content.vb: Public Sub New()
+    content.vb: Public Sub New
   overload: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.#ctor*
-  nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T).New()
-  fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).New()
-  name.vb: New()
+  nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T).PropertyReferenceOrTagSelectableValue()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).PropertyReferenceOrTagSelectableValue()
 references:
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
   commentId: T:VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{`0},VRBuilder.Core.SceneObjects.SceneObjectTag{`0}}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.SelectableValue`2
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html
   name: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>
   nameWithType: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<VRBuilder.Core.SceneObjects.ScenePropertyReference<T>, VRBuilder.Core.SceneObjects.SceneObjectTag<T>>
@@ -228,54 +223,87 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SelectableValue`2
     name: SelectableValue
-    href: VRBuilder.Core.SceneObjects.SelectableValue-2.html
+    nameWithType: SelectableValue
+    fullName: VRBuilder.Core.SceneObjects.SelectableValue
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
-  - name: ','
-  - name: " "
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.SceneObjects.SceneObjectTag`1
     name: SceneObjectTag
-    href: VRBuilder.Core.SceneObjects.SceneObjectTag-1.html
+    nameWithType: SceneObjectTag
+    fullName: VRBuilder.Core.SceneObjects.SceneObjectTag
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SelectableValue`2
     name: SelectableValue
-    href: VRBuilder.Core.SceneObjects.SelectableValue-2.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SelectableValue
+    fullName: VRBuilder.Core.SceneObjects.SelectableValue
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
-  - name: ','
-  - name: " "
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.SceneObjects.SceneObjectTag`1
     name: SceneObjectTag
-    href: VRBuilder.Core.SceneObjects.SceneObjectTag-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SceneObjectTag
+    fullName: VRBuilder.Core.SceneObjects.SceneObjectTag
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}.FirstValueLabel
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{`0},VRBuilder.Core.SceneObjects.SceneObjectTag{`0}}.FirstValueLabel
   parent: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
   definition: VRBuilder.Core.SceneObjects.SelectableValue`2.FirstValueLabel
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_FirstValueLabel
   name: FirstValueLabel
   nameWithType: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>.FirstValueLabel
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<VRBuilder.Core.SceneObjects.ScenePropertyReference<T>, VRBuilder.Core.SceneObjects.SceneObjectTag<T>>.FirstValueLabel
@@ -285,7 +313,6 @@ references:
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{`0},VRBuilder.Core.SceneObjects.SceneObjectTag{`0}}.SecondValueLabel
   parent: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
   definition: VRBuilder.Core.SceneObjects.SelectableValue`2.SecondValueLabel
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_SecondValueLabel
   name: SecondValueLabel
   nameWithType: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>.SecondValueLabel
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<VRBuilder.Core.SceneObjects.ScenePropertyReference<T>, VRBuilder.Core.SceneObjects.SceneObjectTag<T>>.SecondValueLabel
@@ -295,7 +322,6 @@ references:
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{`0},VRBuilder.Core.SceneObjects.SceneObjectTag{`0}}.FirstValue
   parent: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
   definition: VRBuilder.Core.SceneObjects.SelectableValue`2.FirstValue
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_FirstValue
   name: FirstValue
   nameWithType: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>.FirstValue
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<VRBuilder.Core.SceneObjects.ScenePropertyReference<T>, VRBuilder.Core.SceneObjects.SceneObjectTag<T>>.FirstValue
@@ -305,7 +331,6 @@ references:
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{`0},VRBuilder.Core.SceneObjects.SceneObjectTag{`0}}.SecondValue
   parent: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
   definition: VRBuilder.Core.SceneObjects.SelectableValue`2.SecondValue
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_SecondValue
   name: SecondValue
   nameWithType: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>.SecondValue
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<VRBuilder.Core.SceneObjects.ScenePropertyReference<T>, VRBuilder.Core.SceneObjects.SceneObjectTag<T>>.SecondValue
@@ -315,241 +340,298 @@ references:
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{`0},VRBuilder.Core.SceneObjects.SceneObjectTag{`0}}.IsFirstValueSelected
   parent: VRBuilder.Core.SceneObjects.SelectableValue{VRBuilder.Core.SceneObjects.ScenePropertyReference{{T}},VRBuilder.Core.SceneObjects.SceneObjectTag{{T}}}
   definition: VRBuilder.Core.SceneObjects.SelectableValue`2.IsFirstValueSelected
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_IsFirstValueSelected
   name: IsFirstValueSelected
   nameWithType: SelectableValue<ScenePropertyReference<T>, SceneObjectTag<T>>.IsFirstValueSelected
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<VRBuilder.Core.SceneObjects.ScenePropertyReference<T>, VRBuilder.Core.SceneObjects.SceneObjectTag<T>>.IsFirstValueSelected
   nameWithType.vb: SelectableValue(Of ScenePropertyReference(Of T), SceneObjectTag(Of T)).IsFirstValueSelected
   fullName.vb: VRBuilder.Core.SceneObjects.SelectableValue(Of VRBuilder.Core.SceneObjects.ScenePropertyReference(Of T), VRBuilder.Core.SceneObjects.SceneObjectTag(Of T)).IsFirstValueSelected
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.SceneObjects.SelectableValue`2
   commentId: T:VRBuilder.Core.SceneObjects.SelectableValue`2
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html
   name: SelectableValue<TFirst, TSecond>
   nameWithType: SelectableValue<TFirst, TSecond>
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<TFirst, TSecond>
@@ -559,28 +641,45 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SelectableValue`2
     name: SelectableValue
-    href: VRBuilder.Core.SceneObjects.SelectableValue-2.html
+    nameWithType: SelectableValue
+    fullName: VRBuilder.Core.SceneObjects.SelectableValue
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TFirst
-  - name: ','
-  - name: " "
+    nameWithType: TFirst
+    fullName: TFirst
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - name: TSecond
+    nameWithType: TSecond
+    fullName: TSecond
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SelectableValue`2
     name: SelectableValue
-    href: VRBuilder.Core.SceneObjects.SelectableValue-2.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SelectableValue
+    fullName: VRBuilder.Core.SceneObjects.SelectableValue
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TFirst
-  - name: ','
-  - name: " "
+    nameWithType: TFirst
+    fullName: TFirst
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - name: TSecond
+    nameWithType: TSecond
+    fullName: TSecond
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SelectableValue`2.FirstValueLabel
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue`2.FirstValueLabel
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_FirstValueLabel
   name: FirstValueLabel
   nameWithType: SelectableValue<TFirst, TSecond>.FirstValueLabel
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<TFirst, TSecond>.FirstValueLabel
@@ -588,7 +687,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.SelectableValue(Of TFirst, TSecond).FirstValueLabel
 - uid: VRBuilder.Core.SceneObjects.SelectableValue`2.SecondValueLabel
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue`2.SecondValueLabel
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_SecondValueLabel
   name: SecondValueLabel
   nameWithType: SelectableValue<TFirst, TSecond>.SecondValueLabel
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<TFirst, TSecond>.SecondValueLabel
@@ -596,7 +694,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.SelectableValue(Of TFirst, TSecond).SecondValueLabel
 - uid: VRBuilder.Core.SceneObjects.SelectableValue`2.FirstValue
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue`2.FirstValue
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_FirstValue
   name: FirstValue
   nameWithType: SelectableValue<TFirst, TSecond>.FirstValue
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<TFirst, TSecond>.FirstValue
@@ -604,7 +701,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.SelectableValue(Of TFirst, TSecond).FirstValue
 - uid: VRBuilder.Core.SceneObjects.SelectableValue`2.SecondValue
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue`2.SecondValue
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_SecondValue
   name: SecondValue
   nameWithType: SelectableValue<TFirst, TSecond>.SecondValue
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<TFirst, TSecond>.SecondValue
@@ -612,7 +708,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.SelectableValue(Of TFirst, TSecond).SecondValue
 - uid: VRBuilder.Core.SceneObjects.SelectableValue`2.IsFirstValueSelected
   commentId: P:VRBuilder.Core.SceneObjects.SelectableValue`2.IsFirstValueSelected
-  href: VRBuilder.Core.SceneObjects.SelectableValue-2.html#VRBuilder_Core_SceneObjects_SelectableValue_2_IsFirstValueSelected
   name: IsFirstValueSelected
   nameWithType: SelectableValue<TFirst, TSecond>.IsFirstValueSelected
   fullName: VRBuilder.Core.SceneObjects.SelectableValue<TFirst, TSecond>.IsFirstValueSelected
@@ -620,7 +715,6 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.SelectableValue(Of TFirst, TSecond).IsFirstValueSelected
 - uid: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.FirstValueLabel*
   commentId: Overload:VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.FirstValueLabel
-  href: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue-1.html#VRBuilder_Core_SceneObjects_PropertyReferenceOrTagSelectableValue_1_FirstValueLabel
   name: FirstValueLabel
   nameWithType: PropertyReferenceOrTagSelectableValue<T>.FirstValueLabel
   fullName: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue<T>.FirstValueLabel
@@ -630,16 +724,11 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.SecondValueLabel*
   commentId: Overload:VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.SecondValueLabel
-  href: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue-1.html#VRBuilder_Core_SceneObjects_PropertyReferenceOrTagSelectableValue_1_SecondValueLabel
   name: SecondValueLabel
   nameWithType: PropertyReferenceOrTagSelectableValue<T>.SecondValueLabel
   fullName: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue<T>.SecondValueLabel
@@ -647,10 +736,8 @@ references:
   fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).SecondValueLabel
 - uid: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.#ctor*
   commentId: Overload:VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue`1.#ctor
-  href: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue-1.html#VRBuilder_Core_SceneObjects_PropertyReferenceOrTagSelectableValue_1__ctor
   name: PropertyReferenceOrTagSelectableValue
   nameWithType: PropertyReferenceOrTagSelectableValue<T>.PropertyReferenceOrTagSelectableValue
   fullName: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue<T>.PropertyReferenceOrTagSelectableValue
-  nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T).New
-  fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).New
-  name.vb: New
+  nameWithType.vb: PropertyReferenceOrTagSelectableValue(Of T).PropertyReferenceOrTagSelectableValue
+  fullName.vb: VRBuilder.Core.SceneObjects.PropertyReferenceOrTagSelectableValue(Of T).PropertyReferenceOrTagSelectableValue

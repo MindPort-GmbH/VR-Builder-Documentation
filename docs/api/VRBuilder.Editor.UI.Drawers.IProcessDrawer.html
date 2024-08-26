@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IProcessDrawer
+   | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IProcessDrawer
+   | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer">
+  
+  
+  <h1 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer" class="text-break">Interface IProcessDrawer
+  </h1>
+  <div class="markdown level0 summary"><p>Interface of a drawer for process members.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Editor.UI.Drawers.html">VRBuilder.Editor.UI.Drawers</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.Editor.dll</h6>
+  <h5 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IProcessDrawer</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func%7BSystem.Object%7D%2CSystem.Func%7BSystem.Object%7D%2CSystem.Action%7BSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs/#L60">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue*"></a>
+  <h4 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})">ChangeValue(Func&lt;Object&gt;, Func&lt;Object&gt;, Action&lt;Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Call when the value has changed; it will create proper <see cref="!:ProcessCommand"></see> to handle Do/Undo logic.
+<a class="xref" href="VRBuilder.Editor.UI.Drawers.AbstractDrawer.html">AbstractDrawer</a> for a proper implementation.
+<param name="getNewValueCallback">A delegate that returns a new value for the drawn entity. Invoked during the <see cref="!:ProcessCommand.Do"></see> call. The result is passed to the <code data-dev-comment-type="paramref" class="paramref">assignValueCallback</code>.
+<param name="getOldValueCallback">A delegate that returns an old value for the drawn entity. Invoked during the <see cref="!:ProcessCommand.Undo"></see> call. The result is passed to the <code data-dev-comment-type="paramref" class="paramref">assignValueCallback</code>.
+<param name="assignValueCallback">A delegate that actually assigns a value to the property/field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ChangeValue(Func&lt;object&gt; getNewValueCallback, Func&lt;object&gt; getOldValueCallback, Action&lt;object&gt; assignValueCallback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">getNewValueCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">getOldValueCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">assignValueCallback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Drawers_IProcessDrawer_Draw_Rect_System_Object_System_Action_System_Object__GUIContent_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect%2CSystem.Object%2CSystem.Action%7BSystem.Object%7D%2CGUIContent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs/#L41">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_Draw_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw*"></a>
+  <h4 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_Draw_Rect_System_Object_System_Action_System_Object__GUIContent_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)">Draw(Rect, Object, Action&lt;Object&gt;, GUIContent)</h4>
+  <div class="markdown level1 summary"><p>Draw editor view in given Rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Rect Draw(Rect rect, object currentValue, Action&lt;object&gt; changeValueCallback, GUIContent label)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>A rectangle in which editor view should fit. The height value is ignored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">currentValue</span></td>
+        <td><p>Current value of a member.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">changeValueCallback</span></td>
+        <td><p>Delegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).
+Invoke only when child member&apos;s value has changed;
+Otherwise, if the value itself has changed, call <a class="xref" href="VRBuilder.Editor.UI.Drawers.IProcessDrawer.html#VRBuilder_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__">ChangeValue(Func&lt;Object&gt;, Func&lt;Object&gt;, Action&lt;Object&gt;)</a> so it could manage Do/Undo stack in a proper way.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
+        <td><p>Label content to display.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><p>The area that was taken by the property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Drawers_IProcessDrawer_Draw_Rect_System_Object_System_Action_System_Object__System_String_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect%2CSystem.Object%2CSystem.Action%7BSystem.Object%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs/#L27">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_Draw_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw*"></a>
+  <h4 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_Draw_Rect_System_Object_System_Action_System_Object__System_String_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)">Draw(Rect, Object, Action&lt;Object&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Draw editor view in given Rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Rect Draw(Rect rect, object currentValue, Action&lt;object&gt; changeValueCallback, string label)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>A rectangle in which editor view should fit. The height value is ignored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">currentValue</span></td>
+        <td><p>Current value of a member.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">changeValueCallback</span></td>
+        <td><p>Delegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).
+Invoke only when the value (or values of child members) has actually changed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">label</span></td>
+        <td><p>Label text to display.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><p>The area that was taken by the property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Drawers_IProcessDrawer_GetLabel_System_Object_System_Type_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Object%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs/#L51">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_GetLabel_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel*"></a>
+  <h4 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_GetLabel_System_Object_System_Type_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Object,System.Type)">GetLabel(Object, Type)</h4>
+  <div class="markdown level1 summary"><p>Return a label for a <code data-dev-comment-type="paramref" class="paramref">value</code> of <code data-dev-comment-type="paramref" class="paramref">declaredType</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GUIContent GetLabel(object value, Type declaredType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">declaredType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Drawers_IProcessDrawer_GetLabel_System_Reflection_MemberInfo_System_Object_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Reflection.MemberInfo%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs/#L46">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_GetLabel_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel*"></a>
+  <h4 id="VRBuilder_Editor_UI_Drawers_IProcessDrawer_GetLabel_System_Reflection_MemberInfo_System_Object_" data-uid="VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)">GetLabel(MemberInfo, Object)</h4>
+  <div class="markdown level1 summary"><p>Return a label for a property/field <code data-dev-comment-type="paramref" class="paramref">memberInfo</code> of an object <code data-dev-comment-type="paramref" class="paramref">memberOwner</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GUIContent GetLabel(MemberInfo memberInfo, object memberOwner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.MemberInfo</span></td>
+        <td><span class="parametername">memberInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">memberOwner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Drawers_IProcessDrawer.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Drawers.IProcessDrawer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

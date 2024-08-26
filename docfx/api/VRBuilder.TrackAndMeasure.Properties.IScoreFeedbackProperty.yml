@@ -5,7 +5,7 @@ items:
   id: IScoreFeedbackProperty
   parent: VRBuilder.TrackAndMeasure.Properties
   children:
-  - VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
+  - VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,Transform)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IScoreFeedbackProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Track-and-Measure-for-VR-Builder.git
     id: IScoreFeedbackProperty
     path: ../../Assets/MindPort/VR Builder/Add-ons/TrackAndMeasure/Source/Runtime/Properties/IScoreFeedbackProperty.cs
@@ -24,28 +24,37 @@ items:
   assemblies:
   - VRBuilder.TrackAndMeasure
   namespace: VRBuilder.TrackAndMeasure.Properties
-  summary: Property for an object providing feedback over a numerical score.
+  summary: "\nProperty for an object providing feedback over a numerical score.\n"
   example: []
   syntax:
     content: 'public interface IScoreFeedbackProperty : ISceneObjectProperty'
-    content.vb: Public Interface IScoreFeedbackProperty Inherits ISceneObjectProperty
+    content.vb: >-
+      Public Interface IScoreFeedbackProperty
+
+          Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
-- uid: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
-  commentId: M:VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
-  id: TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,Transform)
+  commentId: M:VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,Transform)
+  id: TriggerFeedback(System.Single,System.Single,Transform)
   parent: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty
   langs:
   - csharp
   - vb
-  name: TriggerFeedback(float, float, Transform)
-  nameWithType: IScoreFeedbackProperty.TriggerFeedback(float, float, Transform)
-  fullName: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(float, float, UnityEngine.Transform)
+  name: TriggerFeedback(Single, Single, Transform)
+  nameWithType: IScoreFeedbackProperty.TriggerFeedback(Single, Single, Transform)
+  fullName: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single, System.Single, Transform)
   type: Method
   source:
     remote:
       path: Source/Runtime/Properties/IScoreFeedbackProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Track-and-Measure-for-VR-Builder.git
     id: TriggerFeedback
     path: ../../Assets/MindPort/VR Builder/Add-ons/TrackAndMeasure/Source/Runtime/Properties/IScoreFeedbackProperty.cs
@@ -53,7 +62,7 @@ items:
   assemblies:
   - VRBuilder.TrackAndMeasure
   namespace: VRBuilder.TrackAndMeasure.Properties
-  summary: Triggers the feedback.
+  summary: "\nTriggers the feedback.\n"
   example: []
   syntax:
     content: void TriggerFeedback(float scoreDelta, float finalScore, Transform position)
@@ -63,90 +72,34 @@ items:
     - id: finalScore
       type: System.Single
     - id: position
-      type: UnityEngine.Transform
+      type: Transform
     content.vb: Sub TriggerFeedback(scoreDelta As Single, finalScore As Single, position As Transform)
   overload: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback*
-  nameWithType.vb: IScoreFeedbackProperty.TriggerFeedback(Single, Single, Transform)
-  fullName.vb: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(Single, Single, UnityEngine.Transform)
-  name.vb: TriggerFeedback(Single, Single, Transform)
 references:
 - uid: VRBuilder.TrackAndMeasure.Properties
   commentId: N:VRBuilder.TrackAndMeasure.Properties
-  href: VRBuilder.html
   name: VRBuilder.TrackAndMeasure.Properties
   nameWithType: VRBuilder.TrackAndMeasure.Properties
   fullName: VRBuilder.TrackAndMeasure.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure
-    name: TrackAndMeasure
-    href: VRBuilder.TrackAndMeasure.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure.Properties
-    name: Properties
-    href: VRBuilder.TrackAndMeasure.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure
-    name: TrackAndMeasure
-    href: VRBuilder.TrackAndMeasure.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure.Properties
-    name: Properties
-    href: VRBuilder.TrackAndMeasure.Properties.html
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   commentId: P:VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   parent: VRBuilder.Core.Properties.ISceneObjectProperty
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html#VRBuilder_Core_Properties_ISceneObjectProperty_SceneObject
   name: SceneObject
   nameWithType: ISceneObjectProperty.SceneObject
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty
   commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
   name: ISceneObjectProperty
   nameWithType: ISceneObjectProperty
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback*
   commentId: Overload:VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback
-  href: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.html#VRBuilder_TrackAndMeasure_Properties_IScoreFeedbackProperty_TriggerFeedback_System_Single_System_Single_UnityEngine_Transform_
   name: TriggerFeedback
   nameWithType: IScoreFeedbackProperty.TriggerFeedback
   fullName: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback
@@ -154,30 +107,17 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: UnityEngine.Transform
-  commentId: T:UnityEngine.Transform
-  parent: UnityEngine
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Transform
   isExternal: true
   name: Transform
   nameWithType: Transform
-  fullName: UnityEngine.Transform
+  fullName: Transform
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine

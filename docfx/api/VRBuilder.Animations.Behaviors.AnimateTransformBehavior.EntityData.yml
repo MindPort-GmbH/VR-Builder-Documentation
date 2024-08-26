@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: EntityData
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -35,7 +35,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: The "follow path" behavior's data.
+  summary: "\nThe &quot;follow path&quot; behavior&apos;s data.\n"
   example: []
   syntax:
     content: >-
@@ -43,13 +43,15 @@ items:
 
       [DataContract(IsReference = true)]
 
-      public class AnimateTransformBehavior.EntityData : IBehaviorData, INamedData, IData
+      public class EntityData : IBehaviorData, INamedData, IData
     content.vb: >-
       <DisplayName("Animate Transform")>
 
       <DataContract(IsReference:=True)>
 
-      Public Class AnimateTransformBehavior.EntityData Implements IBehaviorData, INamedData, IData
+      Public Class EntityData
+
+          Implements IBehaviorData, INamedData, IData
   inheritance:
   - System.Object
   implements:
@@ -57,13 +59,13 @@ items:
   - VRBuilder.Core.INamedData
   - VRBuilder.Core.IData
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: VRBuilder.Core.Attributes.DisplayNameAttribute
     ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
@@ -77,6 +79,12 @@ items:
     - name: IsReference
       type: System.Boolean
       value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetObject
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetObject
   id: TargetObject
@@ -91,7 +99,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: TargetObject
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -99,7 +107,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Target scene object to be transformed.
+  summary: "\nTarget scene object to be transformed.\n"
   example: []
   syntax:
     content: >-
@@ -127,6 +135,12 @@ items:
     arguments:
     - type: System.String
       value: Object
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Target
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Target
   id: Target
@@ -141,7 +155,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Target
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -184,6 +198,12 @@ items:
     arguments:
     - type: System.String
       value: TargetObject
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransformProvider
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransformProvider
   id: TargetTransformProvider
@@ -198,7 +218,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: TargetTransformProvider
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -206,7 +226,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Object defining the target transform values.
+  summary: "\nObject defining the target transform values.\n"
   example: []
   syntax:
     content: >-
@@ -234,6 +254,12 @@ items:
     arguments:
     - type: System.String
       value: Final transform provider
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransform
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransform
   id: TargetTransform
@@ -248,7 +274,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: TargetTransform
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -291,6 +317,12 @@ items:
     arguments:
     - type: System.String
       value: TargetTransformProvider
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
   id: Duration
@@ -305,7 +337,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Duration
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -313,7 +345,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Duration of the transition. If duration is equal or less than zero, the new transform will be applied immediately.
+  summary: "\nDuration of the transition. If duration is equal or less than zero, the new transform will be applied immediately.\n"
   example: []
   syntax:
     content: >-
@@ -341,6 +373,12 @@ items:
     arguments:
     - type: System.String
       value: Duration (in seconds)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PositionCurve
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PositionCurve
   id: PositionCurve
@@ -355,7 +393,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: PositionCurve
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -363,7 +401,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Determines the position of the object at a given time. The curve is normalized, the duration of the animation can be set in the <xref href="VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration" data-throw-if-not-resolved="false"></xref> field.
+  summary: "\nDetermines the position of the object at a given time. The curve is normalized, the duration of the animation can be set in the <xref href=\"VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration\" data-throw-if-not-resolved=\"false\"></xref> field.\n"
   example: []
   syntax:
     content: >-
@@ -374,7 +412,7 @@ items:
       public AnimationCurve PositionCurve { get; set; }
     parameters: []
     return:
-      type: UnityEngine.AnimationCurve
+      type: AnimationCurve
     content.vb: >-
       <DataMember>
 
@@ -391,6 +429,12 @@ items:
     arguments:
     - type: System.String
       value: Position curve
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.RotationCurve
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.RotationCurve
   id: RotationCurve
@@ -405,7 +449,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: RotationCurve
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -413,7 +457,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Determines the rotation of the object at a given time. The curve is normalized, the duration of the animation can be set in the <xref href="VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration" data-throw-if-not-resolved="false"></xref> field.
+  summary: "\nDetermines the rotation of the object at a given time. The curve is normalized, the duration of the animation can be set in the <xref href=\"VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration\" data-throw-if-not-resolved=\"false\"></xref> field.\n"
   example: []
   syntax:
     content: >-
@@ -424,7 +468,7 @@ items:
       public AnimationCurve RotationCurve { get; set; }
     parameters: []
     return:
-      type: UnityEngine.AnimationCurve
+      type: AnimationCurve
     content.vb: >-
       <DataMember>
 
@@ -441,6 +485,12 @@ items:
     arguments:
     - type: System.String
       value: Rotation curve
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.ScaleCurve
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.ScaleCurve
   id: ScaleCurve
@@ -455,7 +505,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: ScaleCurve
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -463,7 +513,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Determines the scale of the object at a given time. The curve is normalized, the duration of the animation can be set in the <xref href="VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration" data-throw-if-not-resolved="false"></xref> field.
+  summary: "\nDetermines the scale of the object at a given time. The curve is normalized, the duration of the animation can be set in the <xref href=\"VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration\" data-throw-if-not-resolved=\"false\"></xref> field.\n"
   example: []
   syntax:
     content: >-
@@ -474,7 +524,7 @@ items:
       public AnimationCurve ScaleCurve { get; set; }
     parameters: []
     return:
-      type: UnityEngine.AnimationCurve
+      type: AnimationCurve
     content.vb: >-
       <DataMember>
 
@@ -491,6 +541,12 @@ items:
     arguments:
     - type: System.String
       value: Scale curve
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PingPong
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PingPong
   id: PingPong
@@ -505,7 +561,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: PingPong
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -513,7 +569,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: If enabled, the animation will repeat in reverse, returning the object to the starting position.
+  summary: "\nIf enabled, the animation will repeat in reverse, returning the object to the starting position.\n"
   example: []
   syntax:
     content: >-
@@ -541,6 +597,12 @@ items:
     arguments:
     - type: System.String
       value: Ping pong
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Repeats
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Repeats
   id: Repeats
@@ -555,7 +617,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Repeats
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -563,7 +625,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Number of times the animation should be repeated.
+  summary: "\nNumber of times the animation should be repeated.\n"
   example: []
   syntax:
     content: >-
@@ -591,6 +653,12 @@ items:
     arguments:
     - type: System.String
       value: Repeats
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Metadata
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Metadata
   id: Metadata
@@ -605,7 +673,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Metadata
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -613,7 +681,6 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Reference to this object's <xref href="VRBuilder.Core.IMetadata" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public Metadata Metadata { get; set; }
@@ -624,6 +691,12 @@ items:
   overload: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Metadata*
   implements:
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Name
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Name
   id: Name
@@ -638,7 +711,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/AnimateTransformBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/AnimateTransformBehavior.cs
@@ -646,7 +719,6 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Name of the entity.
   example: []
   syntax:
     content: >-
@@ -667,418 +739,377 @@ items:
   - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
     ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: VRBuilder.Animations.Behaviors
   commentId: N:VRBuilder.Animations.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Animations.Behaviors
   nameWithType: VRBuilder.Animations.Behaviors
   fullName: VRBuilder.Animations.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Behaviors
-    name: Behaviors
-    href: VRBuilder.Animations.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Behaviors
-    name: Behaviors
-    href: VRBuilder.Animations.Behaviors.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Behaviors.IBehaviorData
   commentId: T:VRBuilder.Core.Behaviors.IBehaviorData
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehaviorData.html
   name: IBehaviorData
   nameWithType: IBehaviorData
   fullName: VRBuilder.Core.Behaviors.IBehaviorData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetObject*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetObject
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_TargetObject
   name: TargetObject
   nameWithType: AnimateTransformBehavior.EntityData.TargetObject
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetObject
 - uid: VRBuilder.Core.SceneObjects.SingleSceneObjectReference
   commentId: T:VRBuilder.Core.SceneObjects.SingleSceneObjectReference
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.SingleSceneObjectReference.html
   name: SingleSceneObjectReference
   nameWithType: SingleSceneObjectReference
   fullName: VRBuilder.Core.SceneObjects.SingleSceneObjectReference
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Target*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Target
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_Target
   name: Target
   nameWithType: AnimateTransformBehavior.EntityData.Target
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Target
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference
   commentId: T:VRBuilder.Core.SceneObjects.SceneObjectReference
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.SceneObjectReference.html
   name: SceneObjectReference
   nameWithType: SceneObjectReference
   fullName: VRBuilder.Core.SceneObjects.SceneObjectReference
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransformProvider*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransformProvider
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_TargetTransformProvider
   name: TargetTransformProvider
   nameWithType: AnimateTransformBehavior.EntityData.TargetTransformProvider
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransformProvider
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransform*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransform
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_TargetTransform
   name: TargetTransform
   nameWithType: AnimateTransformBehavior.EntityData.TargetTransform
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.TargetTransform
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_Duration
   name: Duration
   nameWithType: AnimateTransformBehavior.EntityData.Duration
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
@@ -1086,53 +1117,34 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
   commentId: P:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_Duration
-  name: Duration
-  nameWithType: AnimateTransformBehavior.EntityData.Duration
-  fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Duration
+  isExternal: true
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PositionCurve*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PositionCurve
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_PositionCurve
   name: PositionCurve
   nameWithType: AnimateTransformBehavior.EntityData.PositionCurve
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PositionCurve
-- uid: UnityEngine.AnimationCurve
-  commentId: T:UnityEngine.AnimationCurve
-  parent: UnityEngine
+- uid: AnimationCurve
   isExternal: true
   name: AnimationCurve
   nameWithType: AnimationCurve
-  fullName: UnityEngine.AnimationCurve
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: AnimationCurve
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.RotationCurve*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.RotationCurve
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_RotationCurve
   name: RotationCurve
   nameWithType: AnimateTransformBehavior.EntityData.RotationCurve
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.RotationCurve
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.ScaleCurve*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.ScaleCurve
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_ScaleCurve
   name: ScaleCurve
   nameWithType: AnimateTransformBehavior.EntityData.ScaleCurve
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.ScaleCurve
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PingPong*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PingPong
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_PingPong
   name: PingPong
   nameWithType: AnimateTransformBehavior.EntityData.PingPong
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.PingPong
@@ -1140,16 +1152,11 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Repeats*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Repeats
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_Repeats
   name: Repeats
   nameWithType: AnimateTransformBehavior.EntityData.Repeats
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Repeats
@@ -1157,50 +1164,34 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: VRBuilder.Core.IMetadata
-  commentId: T:VRBuilder.Core.IMetadata
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.IMetadata.html
-  name: IMetadata
-  nameWithType: IMetadata
-  fullName: VRBuilder.Core.IMetadata
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Metadata*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Metadata
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_Metadata
   name: Metadata
   nameWithType: AnimateTransformBehavior.EntityData.Metadata
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Metadata
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.Metadata
   commentId: T:VRBuilder.Core.Metadata
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Metadata.html
   name: Metadata
   nameWithType: Metadata
   fullName: VRBuilder.Core.Metadata
 - uid: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Name*
   commentId: Overload:VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Name
-  href: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.html#VRBuilder_Animations_Behaviors_AnimateTransformBehavior_EntityData_Name
   name: Name
   nameWithType: AnimateTransformBehavior.EntityData.Name
   fullName: VRBuilder.Animations.Behaviors.AnimateTransformBehavior.EntityData.Name
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
@@ -1208,10 +1199,6 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String

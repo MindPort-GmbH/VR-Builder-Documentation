@@ -31,7 +31,10 @@ items:
   namespace: VRBuilder.BasicInteraction.Properties
   syntax:
     content: 'public interface IGrabbableProperty : ISceneObjectProperty, ILockable'
-    content.vb: Public Interface IGrabbableProperty Inherits ISceneObjectProperty, ILockable
+    content.vb: >-
+      Public Interface IGrabbableProperty
+
+          Inherits ISceneObjectProperty, ILockable
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   - VRBuilder.Core.SceneObjects.ILockable.Locked
@@ -40,6 +43,12 @@ items:
   - VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
   - VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
   - VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabStarted
   commentId: P:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabStarted
   id: GrabStarted
@@ -62,15 +71,19 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Properties
-  summary: Called when grabbed.
+  summary: "\nCalled when grabbed.\n"
   example: []
   syntax:
     content: UnityEvent<GrabbablePropertyEventArgs> GrabStarted { get; }
     parameters: []
     return:
-      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
+      type: UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
     content.vb: ReadOnly Property GrabStarted As UnityEvent(Of GrabbablePropertyEventArgs)
   overload: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabStarted*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabEnded
   commentId: P:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabEnded
   id: GrabEnded
@@ -93,15 +106,19 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Properties
-  summary: Called when ungrabbed.
+  summary: "\nCalled when ungrabbed.\n"
   example: []
   syntax:
     content: UnityEvent<GrabbablePropertyEventArgs> GrabEnded { get; }
     parameters: []
     return:
-      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
+      type: UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
     content.vb: ReadOnly Property GrabEnded As UnityEvent(Of GrabbablePropertyEventArgs)
   overload: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabEnded*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.IsGrabbed
   commentId: P:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.IsGrabbed
   id: IsGrabbed
@@ -124,7 +141,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Properties
-  summary: Is object currently grabbed.
+  summary: "\nIs object currently grabbed.\n"
   example: []
   syntax:
     content: bool IsGrabbed { get; }
@@ -133,6 +150,10 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsGrabbed As Boolean
   overload: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.IsGrabbed*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardGrab
   commentId: M:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardGrab
   id: FastForwardGrab
@@ -155,11 +176,11 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Properties
-  summary: Instantaneously simulate that the object was grabbed.
+  summary: "\nInstantaneously simulate that the object was grabbed.\n"
   example: []
   syntax:
     content: void FastForwardGrab()
-    content.vb: Sub FastForwardGrab()
+    content.vb: Sub FastForwardGrab
   overload: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardGrab*
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardUngrab
   commentId: M:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardUngrab
@@ -183,11 +204,11 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Properties
-  summary: Instantaneously simulate that the object was ungrabbed.
+  summary: "\nInstantaneously simulate that the object was ungrabbed.\n"
   example: []
   syntax:
     content: void FastForwardUngrab()
-    content.vb: Sub FastForwardUngrab()
+    content.vb: Sub FastForwardUngrab
   overload: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardUngrab*
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed(System.Boolean)
   commentId: M:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed(System.Boolean)
@@ -196,9 +217,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ForceSetGrabbed(bool)
-  nameWithType: IGrabbableProperty.ForceSetGrabbed(bool)
-  fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed(bool)
+  name: ForceSetGrabbed(Boolean)
+  nameWithType: IGrabbableProperty.ForceSetGrabbed(Boolean)
+  fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed(System.Boolean)
   type: Method
   source:
     remote:
@@ -211,7 +232,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Properties
-  summary: Force this property to a specified grabbed state.
+  summary: "\nForce this property to a specified grabbed state.\n"
   example: []
   syntax:
     content: void ForceSetGrabbed(bool isGrabbed)
@@ -220,65 +241,33 @@ items:
       type: System.Boolean
     content.vb: Sub ForceSetGrabbed(isGrabbed As Boolean)
   overload: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed*
-  nameWithType.vb: IGrabbableProperty.ForceSetGrabbed(Boolean)
-  fullName.vb: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed(Boolean)
-  name.vb: ForceSetGrabbed(Boolean)
 references:
 - uid: VRBuilder.BasicInteraction.Properties
   commentId: N:VRBuilder.BasicInteraction.Properties
-  href: VRBuilder.html
   name: VRBuilder.BasicInteraction.Properties
   nameWithType: VRBuilder.BasicInteraction.Properties
   fullName: VRBuilder.BasicInteraction.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction.Properties
-    name: Properties
-    href: VRBuilder.BasicInteraction.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction.Properties
-    name: Properties
-    href: VRBuilder.BasicInteraction.Properties.html
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   commentId: P:VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   parent: VRBuilder.Core.Properties.ISceneObjectProperty
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html#VRBuilder_Core_Properties_ISceneObjectProperty_SceneObject
   name: SceneObject
   nameWithType: ISceneObjectProperty.SceneObject
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
 - uid: VRBuilder.Core.SceneObjects.ILockable.Locked
   commentId: E:VRBuilder.Core.SceneObjects.ILockable.Locked
   parent: VRBuilder.Core.SceneObjects.ILockable
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_Locked
   name: Locked
   nameWithType: ILockable.Locked
   fullName: VRBuilder.Core.SceneObjects.ILockable.Locked
 - uid: VRBuilder.Core.SceneObjects.ILockable.Unlocked
   commentId: E:VRBuilder.Core.SceneObjects.ILockable.Unlocked
   parent: VRBuilder.Core.SceneObjects.ILockable
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_Unlocked
   name: Unlocked
   nameWithType: ILockable.Unlocked
   fullName: VRBuilder.Core.SceneObjects.ILockable.Unlocked
 - uid: VRBuilder.Core.SceneObjects.ILockable.IsLocked
   commentId: P:VRBuilder.Core.SceneObjects.ILockable.IsLocked
   parent: VRBuilder.Core.SceneObjects.ILockable
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_IsLocked
   name: IsLocked
   nameWithType: ILockable.IsLocked
   fullName: VRBuilder.Core.SceneObjects.ILockable.IsLocked
@@ -286,266 +275,243 @@ references:
   commentId: M:VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
   parent: VRBuilder.Core.SceneObjects.ILockable
   isExternal: true
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
-  name: SetLocked(bool)
-  nameWithType: ILockable.SetLocked(bool)
-  fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked(bool)
-  nameWithType.vb: ILockable.SetLocked(Boolean)
-  fullName.vb: VRBuilder.Core.SceneObjects.ILockable.SetLocked(Boolean)
-  name.vb: SetLocked(Boolean)
+  name: SetLocked(Boolean)
+  nameWithType: ILockable.SetLocked(Boolean)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
     name: SetLocked
-    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
+    nameWithType: ILockable.SetLocked
+    fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Boolean
-    name: bool
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
     name: SetLocked
-    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
+    nameWithType: ILockable.SetLocked
+    fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
   commentId: M:VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
   parent: VRBuilder.Core.SceneObjects.ILockable
   isExternal: true
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
-  name: RequestLocked(bool, IStepData)
-  nameWithType: ILockable.RequestLocked(bool, IStepData)
-  fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(bool, VRBuilder.Core.IStepData)
-  nameWithType.vb: ILockable.RequestLocked(Boolean, IStepData)
-  fullName.vb: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(Boolean, VRBuilder.Core.IStepData)
-  name.vb: RequestLocked(Boolean, IStepData)
+  name: RequestLocked(Boolean, IStepData)
+  nameWithType: ILockable.RequestLocked(Boolean, IStepData)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean, VRBuilder.Core.IStepData)
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
     name: RequestLocked
-    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
+    nameWithType: ILockable.RequestLocked
+    fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Boolean
-    name: bool
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.IStepData
     name: IStepData
-    href: VRBuilder.Core.IStepData.html
+    nameWithType: IStepData
+    fullName: VRBuilder.Core.IStepData
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
     name: RequestLocked
-    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
+    nameWithType: ILockable.RequestLocked
+    fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.IStepData
     name: IStepData
-    href: VRBuilder.Core.IStepData.html
+    nameWithType: IStepData
+    fullName: VRBuilder.Core.IStepData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
   commentId: M:VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
   parent: VRBuilder.Core.SceneObjects.ILockable
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
   name: RemoveUnlocker(IStepData)
   nameWithType: ILockable.RemoveUnlocker(IStepData)
   fullName: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
     name: RemoveUnlocker
-    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
+    nameWithType: ILockable.RemoveUnlocker
+    fullName: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IStepData
     name: IStepData
-    href: VRBuilder.Core.IStepData.html
+    nameWithType: IStepData
+    fullName: VRBuilder.Core.IStepData
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
     name: RemoveUnlocker
-    href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
+    nameWithType: ILockable.RemoveUnlocker
+    fullName: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IStepData
     name: IStepData
-    href: VRBuilder.Core.IStepData.html
+    nameWithType: IStepData
+    fullName: VRBuilder.Core.IStepData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty
   commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
   name: ISceneObjectProperty
   nameWithType: ISceneObjectProperty
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty
 - uid: VRBuilder.Core.SceneObjects.ILockable
   commentId: T:VRBuilder.Core.SceneObjects.ILockable
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ILockable.html
   name: ILockable
   nameWithType: ILockable
   fullName: VRBuilder.Core.SceneObjects.ILockable
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabStarted*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabStarted
-  href: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.html#VRBuilder_BasicInteraction_Properties_IGrabbableProperty_GrabStarted
   name: GrabStarted
   nameWithType: IGrabbableProperty.GrabStarted
   fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabStarted
-- uid: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
-  commentId: T:UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
-  parent: UnityEngine.Events
-  definition: UnityEngine.Events.UnityEvent`1
-  href: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html
+- uid: UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}
+  commentId: '!:UnityEvent{VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs}'
+  definition: UnityEvent`1
   name: UnityEvent<GrabbablePropertyEventArgs>
   nameWithType: UnityEvent<GrabbablePropertyEventArgs>
-  fullName: UnityEngine.Events.UnityEvent<VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs>
+  fullName: UnityEvent<VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs>
   nameWithType.vb: UnityEvent(Of GrabbablePropertyEventArgs)
-  fullName.vb: UnityEngine.Events.UnityEvent(Of VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs)
+  fullName.vb: UnityEvent(Of VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs)
   name.vb: UnityEvent(Of GrabbablePropertyEventArgs)
   spec.csharp:
-  - uid: UnityEngine.Events.UnityEvent`1
+  - uid: UnityEvent`1
     name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEvent
     isExternal: true
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs
     name: GrabbablePropertyEventArgs
-    href: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html
+    nameWithType: GrabbablePropertyEventArgs
+    fullName: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
-  - uid: UnityEngine.Events.UnityEvent`1
+  - uid: UnityEvent`1
     name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEvent
     isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs
     name: GrabbablePropertyEventArgs
-    href: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html
+    nameWithType: GrabbablePropertyEventArgs
+    fullName: VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs
   - name: )
-- uid: UnityEngine.Events.UnityEvent`1
-  commentId: T:UnityEngine.Events.UnityEvent`1
+    nameWithType: )
+    fullName: )
+- uid: UnityEvent`1
   isExternal: true
-  name: UnityEvent<T0>
-  nameWithType: UnityEvent<T0>
-  fullName: UnityEngine.Events.UnityEvent<T0>
-  nameWithType.vb: UnityEvent(Of T0)
-  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
-  name.vb: UnityEvent(Of T0)
+  name: UnityEvent<>
+  nameWithType: UnityEvent<>
+  fullName: UnityEvent<>
+  nameWithType.vb: UnityEvent(Of )
+  fullName.vb: UnityEvent(Of )
+  name.vb: UnityEvent(Of )
   spec.csharp:
-  - uid: UnityEngine.Events.UnityEvent`1
+  - uid: UnityEvent`1
     name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEvent
     isExternal: true
   - name: <
-  - name: T0
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
-  - uid: UnityEngine.Events.UnityEvent`1
+  - uid: UnityEvent`1
     name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEvent
     isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T0
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
-- uid: UnityEngine.Events
-  commentId: N:UnityEngine.Events
-  isExternal: true
-  name: UnityEngine.Events
-  nameWithType: UnityEngine.Events
-  fullName: UnityEngine.Events
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.Events
-    name: Events
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.Events
-    name: Events
-    isExternal: true
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabEnded*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabEnded
-  href: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.html#VRBuilder_BasicInteraction_Properties_IGrabbableProperty_GrabEnded
   name: GrabEnded
   nameWithType: IGrabbableProperty.GrabEnded
   fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.GrabEnded
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.IsGrabbed*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.IsGrabbed
-  href: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.html#VRBuilder_BasicInteraction_Properties_IGrabbableProperty_IsGrabbed
   name: IsGrabbed
   nameWithType: IGrabbableProperty.IsGrabbed
   fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.IsGrabbed
@@ -553,35 +519,27 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardGrab*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardGrab
-  href: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.html#VRBuilder_BasicInteraction_Properties_IGrabbableProperty_FastForwardGrab
   name: FastForwardGrab
   nameWithType: IGrabbableProperty.FastForwardGrab
   fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardGrab
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardUngrab*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardUngrab
-  href: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.html#VRBuilder_BasicInteraction_Properties_IGrabbableProperty_FastForwardUngrab
   name: FastForwardUngrab
   nameWithType: IGrabbableProperty.FastForwardUngrab
   fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.FastForwardUngrab
 - uid: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed
-  href: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.html#VRBuilder_BasicInteraction_Properties_IGrabbableProperty_ForceSetGrabbed_System_Boolean_
   name: ForceSetGrabbed
   nameWithType: IGrabbableProperty.ForceSetGrabbed
   fullName: VRBuilder.BasicInteraction.Properties.IGrabbableProperty.ForceSetGrabbed

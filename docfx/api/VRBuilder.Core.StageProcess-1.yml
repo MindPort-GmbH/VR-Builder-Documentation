@@ -30,13 +30,16 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: A base implementation of a <xref href="VRBuilder.Core.IStageProcess" data-throw-if-not-resolved="false"></xref> which provides access to its entity's data.
+  summary: "\nA base implementation of a <xref href=\"VRBuilder.Core.IStageProcess\" data-throw-if-not-resolved=\"false\"></xref> which provides access to its entity&apos;s data.\n"
   example: []
   syntax:
     content: 'public abstract class StageProcess<TData> : IStageProcess where TData : class, IData'
     typeParameters:
     - id: TData
-    content.vb: Public MustInherit Class StageProcess(Of TData As {Class, IData}) Implements IStageProcess
+    content.vb: >-
+      Public MustInherit Class StageProcess(Of TData As {Class, IData})
+
+          Implements IStageProcess
   inheritance:
   - System.Object
   derivedClasses:
@@ -45,18 +48,27 @@ items:
   - VRBuilder.Core.EntityOwners.EntityIteratingProcess`2
   - VRBuilder.Core.EntityOwners.StopEntityIteratingProcess`1
   - VRBuilder.Core.InstantProcess`1
+  - VRBuilder.VideoTools.Behaviors.PlayAnimationClipBehavior.ActivatingProcess
   - VRBuilder.VideoTools.Behaviors.PlayVideoBehavior.ActivatingProcess
   implements:
   - VRBuilder.Core.IStageProcess
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   nameWithType.vb: StageProcess(Of TData)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
   fullName.vb: VRBuilder.Core.StageProcess(Of TData)
   name.vb: StageProcess(Of TData)
 - uid: VRBuilder.Core.StageProcess`1.Data
@@ -81,7 +93,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The entity's data.
+  summary: "\nThe entity&apos;s data.\n"
   example: []
   syntax:
     content: protected TData Data { get; }
@@ -91,6 +103,12 @@ items:
     content.vb: Protected ReadOnly Property Data As TData
   overload: VRBuilder.Core.StageProcess`1.Data*
   nameWithType.vb: StageProcess(Of TData).Data
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).Data
 - uid: VRBuilder.Core.StageProcess`1.Outer
   commentId: P:VRBuilder.Core.StageProcess`1.Outer
@@ -114,7 +132,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The entity owning the data.
+  summary: "\nThe entity owning the data.\n"
   example: []
   syntax:
     content: protected IEntity Outer { get; }
@@ -124,6 +142,12 @@ items:
     content.vb: Protected ReadOnly Property Outer As IEntity
   overload: VRBuilder.Core.StageProcess`1.Outer*
   nameWithType.vb: StageProcess(Of TData).Outer
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).Outer
 - uid: VRBuilder.Core.StageProcess`1.#ctor(`0,VRBuilder.Core.IEntity)
   commentId: M:VRBuilder.Core.StageProcess`1.#ctor(`0,VRBuilder.Core.IEntity)
@@ -156,9 +180,12 @@ items:
       type: VRBuilder.Core.IEntity
     content.vb: Protected Sub New(data As TData, outer As IEntity = Nothing)
   overload: VRBuilder.Core.StageProcess`1.#ctor*
-  nameWithType.vb: StageProcess(Of TData).New(TData, IEntity)
-  fullName.vb: VRBuilder.Core.StageProcess(Of TData).New(TData, VRBuilder.Core.IEntity)
-  name.vb: New(TData, IEntity)
+  nameWithType.vb: StageProcess(Of TData).StageProcess(TData, IEntity)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).StageProcess(TData, VRBuilder.Core.IEntity)
 - uid: VRBuilder.Core.StageProcess`1.Start
   commentId: M:VRBuilder.Core.StageProcess`1.Start
   id: Start
@@ -181,20 +208,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: >-
-    This method is invoked immediately when entity enters the stage.
-
-    The invocation is guaranteed.
-
-    Use it for initialization.
   example: []
   syntax:
     content: public abstract void Start()
-    content.vb: Public MustOverride Sub Start()
+    content.vb: Public MustOverride Sub Start
   overload: VRBuilder.Core.StageProcess`1.Start*
   implements:
   - VRBuilder.Core.IStageProcess.Start
   nameWithType.vb: StageProcess(Of TData).Start()
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).Start()
 - uid: VRBuilder.Core.StageProcess`1.Update
   commentId: M:VRBuilder.Core.StageProcess`1.Update
@@ -218,18 +245,22 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: This method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.
   example: []
   syntax:
     content: public abstract IEnumerator Update()
     return:
       type: System.Collections.IEnumerator
-      description: ''
-    content.vb: Public MustOverride Function Update() As IEnumerator
+    content.vb: Public MustOverride Function Update As IEnumerator
   overload: VRBuilder.Core.StageProcess`1.Update*
   implements:
   - VRBuilder.Core.IStageProcess.Update
   nameWithType.vb: StageProcess(Of TData).Update()
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).Update()
 - uid: VRBuilder.Core.StageProcess`1.End
   commentId: M:VRBuilder.Core.StageProcess`1.End
@@ -253,20 +284,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: >-
-    This method is invoked immediately after the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> was iterated over completely, or after the <xref href="VRBuilder.Core.IStageProcess.FastForward" data-throw-if-not-resolved="false"></xref> was called.
-
-    The invocation is guaranteed.
-
-    Use it for deinitialization.
   example: []
   syntax:
     content: public abstract void End()
-    content.vb: Public MustOverride Sub [End]()
+    content.vb: Public MustOverride Sub
   overload: VRBuilder.Core.StageProcess`1.End*
   implements:
   - VRBuilder.Core.IStageProcess.End
   nameWithType.vb: StageProcess(Of TData).End()
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).End()
 - uid: VRBuilder.Core.StageProcess`1.FastForward
   commentId: M:VRBuilder.Core.StageProcess`1.FastForward
@@ -290,289 +321,327 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: >-
-    This method is called when the process was not completed yet.
-
-    It must "fake" normal execution of the process and handle the cases when the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> is not iterated over completely.
   example: []
   syntax:
     content: public abstract void FastForward()
-    content.vb: Public MustOverride Sub FastForward()
+    content.vb: Public MustOverride Sub FastForward
   overload: VRBuilder.Core.StageProcess`1.FastForward*
   implements:
   - VRBuilder.Core.IStageProcess.FastForward
   nameWithType.vb: StageProcess(Of TData).FastForward()
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).FastForward()
 references:
 - uid: VRBuilder.Core.IStageProcess
   commentId: T:VRBuilder.Core.IStageProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStageProcess.html
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.StageProcess`1.Data*
   commentId: Overload:VRBuilder.Core.StageProcess`1.Data
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Data
   name: Data
   nameWithType: StageProcess<TData>.Data
   fullName: VRBuilder.Core.StageProcess<TData>.Data
@@ -590,7 +659,6 @@ references:
   fullName: TData
 - uid: VRBuilder.Core.StageProcess`1.Outer*
   commentId: Overload:VRBuilder.Core.StageProcess`1.Outer
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Outer
   name: Outer
   nameWithType: StageProcess<TData>.Outer
   fullName: VRBuilder.Core.StageProcess<TData>.Outer
@@ -599,22 +667,18 @@ references:
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity
 - uid: VRBuilder.Core.StageProcess`1.#ctor*
   commentId: Overload:VRBuilder.Core.StageProcess`1.#ctor
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1__ctor__0_VRBuilder_Core_IEntity_
   name: StageProcess
   nameWithType: StageProcess<TData>.StageProcess
   fullName: VRBuilder.Core.StageProcess<TData>.StageProcess
-  nameWithType.vb: StageProcess(Of TData).New
-  fullName.vb: VRBuilder.Core.StageProcess(Of TData).New
-  name.vb: New
+  nameWithType.vb: StageProcess(Of TData).StageProcess
+  fullName.vb: VRBuilder.Core.StageProcess(Of TData).StageProcess
 - uid: VRBuilder.Core.StageProcess`1.Start*
   commentId: Overload:VRBuilder.Core.StageProcess`1.Start
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
   name: Start
   nameWithType: StageProcess<TData>.Start
   fullName: VRBuilder.Core.StageProcess<TData>.Start
@@ -623,25 +687,33 @@ references:
 - uid: VRBuilder.Core.IStageProcess.Start
   commentId: M:VRBuilder.Core.IStageProcess.Start
   parent: VRBuilder.Core.IStageProcess
-  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Start
   name: Start()
   nameWithType: IStageProcess.Start()
   fullName: VRBuilder.Core.IStageProcess.Start()
   spec.csharp:
   - uid: VRBuilder.Core.IStageProcess.Start
     name: Start
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Start
+    nameWithType: IStageProcess.Start
+    fullName: VRBuilder.Core.IStageProcess.Start
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IStageProcess.Start
     name: Start
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Start
+    nameWithType: IStageProcess.Start
+    fullName: VRBuilder.Core.IStageProcess.Start
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.StageProcess`1.Update*
   commentId: Overload:VRBuilder.Core.StageProcess`1.Update
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
   name: Update
   nameWithType: StageProcess<TData>.Update
   fullName: VRBuilder.Core.StageProcess<TData>.Update
@@ -650,79 +722,46 @@ references:
 - uid: VRBuilder.Core.IStageProcess.Update
   commentId: M:VRBuilder.Core.IStageProcess.Update
   parent: VRBuilder.Core.IStageProcess
-  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
   name: Update()
   nameWithType: IStageProcess.Update()
   fullName: VRBuilder.Core.IStageProcess.Update()
   spec.csharp:
   - uid: VRBuilder.Core.IStageProcess.Update
     name: Update
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+    nameWithType: IStageProcess.Update
+    fullName: VRBuilder.Core.IStageProcess.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IStageProcess.Update
     name: Update
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
+    nameWithType: IStageProcess.Update
+    fullName: VRBuilder.Core.IStageProcess.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.IEnumerator
   commentId: T:System.Collections.IEnumerator
   parent: System.Collections
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
   name: IEnumerator
   nameWithType: IEnumerator
   fullName: System.Collections.IEnumerator
 - uid: System.Collections
   commentId: N:System.Collections
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections
   nameWithType: System.Collections
   fullName: System.Collections
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-- uid: VRBuilder.Core.IStageProcess.FastForward
-  commentId: M:VRBuilder.Core.IStageProcess.FastForward
-  parent: VRBuilder.Core.IStageProcess
-  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
-  name: FastForward()
-  nameWithType: IStageProcess.FastForward()
-  fullName: VRBuilder.Core.IStageProcess.FastForward()
-  spec.csharp:
-  - uid: VRBuilder.Core.IStageProcess.FastForward
-    name: FastForward
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: VRBuilder.Core.IStageProcess.FastForward
-    name: FastForward
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
-  - name: (
-  - name: )
 - uid: VRBuilder.Core.StageProcess`1.End*
   commentId: Overload:VRBuilder.Core.StageProcess`1.End
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
   name: End
   nameWithType: StageProcess<TData>.End
   fullName: VRBuilder.Core.StageProcess<TData>.End
@@ -731,27 +770,63 @@ references:
 - uid: VRBuilder.Core.IStageProcess.End
   commentId: M:VRBuilder.Core.IStageProcess.End
   parent: VRBuilder.Core.IStageProcess
-  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_End
   name: End()
   nameWithType: IStageProcess.End()
   fullName: VRBuilder.Core.IStageProcess.End()
   spec.csharp:
   - uid: VRBuilder.Core.IStageProcess.End
     name: End
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_End
+    nameWithType: IStageProcess.End
+    fullName: VRBuilder.Core.IStageProcess.End
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IStageProcess.End
     name: End
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_End
+    nameWithType: IStageProcess.End
+    fullName: VRBuilder.Core.IStageProcess.End
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.StageProcess`1.FastForward*
   commentId: Overload:VRBuilder.Core.StageProcess`1.FastForward
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
   name: FastForward
   nameWithType: StageProcess<TData>.FastForward
   fullName: VRBuilder.Core.StageProcess<TData>.FastForward
   nameWithType.vb: StageProcess(Of TData).FastForward
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).FastForward
+- uid: VRBuilder.Core.IStageProcess.FastForward
+  commentId: M:VRBuilder.Core.IStageProcess.FastForward
+  parent: VRBuilder.Core.IStageProcess
+  name: FastForward()
+  nameWithType: IStageProcess.FastForward()
+  fullName: VRBuilder.Core.IStageProcess.FastForward()
+  spec.csharp:
+  - uid: VRBuilder.Core.IStageProcess.FastForward
+    name: FastForward
+    nameWithType: IStageProcess.FastForward
+    fullName: VRBuilder.Core.IStageProcess.FastForward
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.Core.IStageProcess.FastForward
+    name: FastForward
+    nameWithType: IStageProcess.FastForward
+    fullName: VRBuilder.Core.IStageProcess.FastForward
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

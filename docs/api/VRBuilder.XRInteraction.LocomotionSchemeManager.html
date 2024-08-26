@@ -1,0 +1,669 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LocomotionSchemeManager
+   | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LocomotionSchemeManager
+   | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager">
+  
+  
+  <h1 id="VRBuilder_XRInteraction_LocomotionSchemeManager" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager" class="text-break">Class LocomotionSchemeManager
+  </h1>
+  <div class="markdown level0 summary"><p>Use this class as a central manager to configure locomotion control schemes and configuration preferences.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LocomotionSchemeManager</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.XRInteraction.html">VRBuilder.XRInteraction</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.XRInteraction.dll</h6>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LocomotionSchemeManager : MonoBehaviour</code></pre>
+  </div>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Input bindings will often overlap between different locomotion methods, and this class can be used to
+set binding masks which are used to determine which bindings of an action to enable and which to ignore.</p>
+<example>
+Teleport  (Input Action)
+(1) Binding &lt;XRController&gt;{LeftHand}/PrimaryButton (Use in control scheme &quot;Generic XR&quot;)
+(2) Binding &lt;XRController&gt;{LeftHand}/Primary2DAxis (Use in control scheme &quot;Noncontinuous Move&quot;)
+Move (Input Action)
+(3) Binding &lt;XRController&gt;{LeftHand}/Primary2DAxis (Use in control scheme &quot;Continuous Move&quot;)
+
+Set <span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.baseControlScheme</span>=&quot;Generic XR&quot;
+Set <span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.noncontinuousControlScheme</span>=&quot;Noncontinuous Move&quot;
+Set <span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.continuousControlScheme</span>=&quot;Continuous Move&quot;
+Set <span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.actions</span> to be both input actions (Teleport and Move).
+
+When <span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.moveScheme</span>=<a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveSchemeType.html#VRBuilder_XRInteraction_LocomotionSchemeManager_MoveSchemeType_Noncontinuous">Noncontinuous</a>,
+bindings (1) and (2) will be enabled, but binding (3) will be disabled.
+
+When <span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.moveScheme</span>=<a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveSchemeType.html#VRBuilder_XRInteraction_LocomotionSchemeManager_MoveSchemeType_Continuous">Continuous</a>,
+bindings (1) and (3) will be enabled, but binding (2) will be disabled.
+</example>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_ActionAssets.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.ActionAssets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L160">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_ActionAssets_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ActionAssets*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ActionAssets" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ActionAssets">ActionAssets</h4>
+  <div class="markdown level1 summary"><p>Input action assets associated with locomotion to affect when the active movement control scheme is set.
+Can use this list by itself or together with the Action Maps list to set control scheme masks by Asset or Map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;InputActionAsset&gt; ActionAssets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">UnityEngine.InputSystem.InputActionAsset</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ActionAssets_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.actionMaps</span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_ActionMaps.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.ActionMaps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L176">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_ActionMaps_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ActionMaps*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ActionMaps" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ActionMaps">ActionMaps</h4>
+  <div class="markdown level1 summary"><p>Input action maps associated with locomotion to affect when the active movement control scheme is set.
+Can use this list together with the Action Assets list to set control scheme masks by Map instead of the whole Asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; ActionMaps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ActionMaps_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.actionAssets</span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_Actions.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.Actions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L193">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_Actions_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.Actions*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_Actions" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.Actions">Actions</h4>
+  <div class="markdown level1 summary"><p>Input actions associated with locomotion that are affected by the active movement control scheme.
+Can use this list to select exactly the actions to affect instead of setting control scheme masks by Asset or Map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;InputActionReference&gt; Actions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">UnityEngine.InputSystem.InputActionReference</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_Actions_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.actionAssets</span></div>
+      <div><span class="xref">VRBuilder.XRInteraction.LocomotionSchemeManager.actionMaps</span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_BaseControlScheme.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.BaseControlScheme%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L210">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_BaseControlScheme_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.BaseControlScheme*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_BaseControlScheme" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.BaseControlScheme">BaseControlScheme</h4>
+  <div class="markdown level1 summary"><p>Name of an input control scheme that defines the grouping of bindings that should remain enabled when applying any movement control scheme.
+Control schemes are created and named in the Input Actions window. The other movement control schemes are applied additively to this scheme.
+Can be an empty string, which means only bindings that match the specified movement control scheme will be enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseControlScheme { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousControlScheme.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousControlScheme%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L244">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousControlScheme_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousControlScheme*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousControlScheme" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousControlScheme">ContinuousControlScheme</h4>
+  <div class="markdown level1 summary"><p>Name of an input control scheme that defines the grouping of bindings that should remain enabled when applying the continuous movement control scheme.
+Control schemes are created and named in the Input Actions window. Can be an empty string, which means only bindings that match the
+base control scheme will be enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ContinuousControlScheme { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousMoveProvider.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousMoveProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L258">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousMoveProvider_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousMoveProvider*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousMoveProvider" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousMoveProvider">ContinuousMoveProvider</h4>
+  <div class="markdown level1 summary"><p>Stores the locomotion provider for continuous movement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContinuousMoveProviderBase ContinuousMoveProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.ContinuousMoveProviderBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousMoveProvider_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.ContinuousMoveProviderBase</span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousTurnProvider.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousTurnProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L272">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousTurnProvider_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousTurnProvider*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousTurnProvider" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.ContinuousTurnProvider">ContinuousTurnProvider</h4>
+  <div class="markdown level1 summary"><p>Stores the locomotion provider for continuous turning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContinuousTurnProviderBase ContinuousTurnProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.ContinuousTurnProviderBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_ContinuousTurnProvider_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.ContinuousTurnProviderBase</span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_HeadForwardSource.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.HeadForwardSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L299">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_HeadForwardSource_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.HeadForwardSource*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_HeadForwardSource" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.HeadForwardSource">HeadForwardSource</h4>
+  <div class="markdown level1 summary"><p>Stores the &quot;Head&quot; <see cref="!:Transform"></see> used with continuous movement when inputs should be relative to head orientation (usually the main camera).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform HeadForwardSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_LeftHandForwardSource.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.LeftHandForwardSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L312">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_LeftHandForwardSource_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.LeftHandForwardSource*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_LeftHandForwardSource" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.LeftHandForwardSource">LeftHandForwardSource</h4>
+  <div class="markdown level1 summary"><p>Stores the &quot;Left Hand&quot; <see cref="!:Transform"></see> used with continuous movement when inputs should be relative to the left hand&apos;s orientation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform LeftHandForwardSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_MoveForwardSource.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.MoveForwardSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L140">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_MoveForwardSource_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveForwardSource*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_MoveForwardSource" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveForwardSource">MoveForwardSource</h4>
+  <div class="markdown level1 summary"><p>Controls which orientation the forward direction of continuous movement is relative to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocomotionSchemeManager.MoveForwardSourceType MoveForwardSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveForwardSourceType.html">LocomotionSchemeManager.MoveForwardSourceType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_MoveForwardSource_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveForwardSourceType.html">LocomotionSchemeManager.MoveForwardSourceType</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_MoveScheme.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.MoveScheme%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L104">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_MoveScheme_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveScheme*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_MoveScheme" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveScheme">MoveScheme</h4>
+  <div class="markdown level1 summary"><p>Controls which movement control scheme to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocomotionSchemeManager.MoveSchemeType MoveScheme { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveSchemeType.html">LocomotionSchemeManager.MoveSchemeType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_MoveScheme_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.MoveSchemeType.html">LocomotionSchemeManager.MoveSchemeType</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_NoncontinuousControlScheme.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.NoncontinuousControlScheme%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L227">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_NoncontinuousControlScheme_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.NoncontinuousControlScheme*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_NoncontinuousControlScheme" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.NoncontinuousControlScheme">NoncontinuousControlScheme</h4>
+  <div class="markdown level1 summary"><p>Name of an input control scheme that defines the grouping of bindings that should remain enabled when applying the noncontinuous movement control scheme.
+Control schemes are created and named in the Input Actions window. Can be an empty string, which means only bindings that match the
+base control scheme will be enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NoncontinuousControlScheme { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_RightHandForwardSource.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.RightHandForwardSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L325">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_RightHandForwardSource_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.RightHandForwardSource*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_RightHandForwardSource" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.RightHandForwardSource">RightHandForwardSource</h4>
+  <div class="markdown level1 summary"><p>Stores the &quot;Right Hand&quot; <see cref="!:Transform"></see> used with continuous movement when inputs should be relative to the right hand&apos;s orientation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform RightHandForwardSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_SnapTurnProvider.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.SnapTurnProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L286">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_SnapTurnProvider_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.SnapTurnProvider*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_SnapTurnProvider" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.SnapTurnProvider">SnapTurnProvider</h4>
+  <div class="markdown level1 summary"><p>Stores the locomotion provider for snap turning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SnapTurnProviderBase SnapTurnProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.SnapTurnProviderBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_SnapTurnProvider_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.SnapTurnProviderBase</span></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager_TurnStyle.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager.TurnStyle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L122">View Source</a>
+  </span>
+  <a id="VRBuilder_XRInteraction_LocomotionSchemeManager_TurnStyle_" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.TurnStyle*"></a>
+  <h4 id="VRBuilder_XRInteraction_LocomotionSchemeManager_TurnStyle" data-uid="VRBuilder.XRInteraction.LocomotionSchemeManager.TurnStyle">TurnStyle</h4>
+  <div class="markdown level1 summary"><p>Controls which turn style of locomotion to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocomotionSchemeManager.TurnStyleType TurnStyle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.TurnStyleType.html">LocomotionSchemeManager.TurnStyleType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_XRInteraction_LocomotionSchemeManager_TurnStyle_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="VRBuilder.XRInteraction.LocomotionSchemeManager.TurnStyleType.html">LocomotionSchemeManager.TurnStyleType</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_LocomotionSchemeManager.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.LocomotionSchemeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XR-Interaction-Component/Source/Runtime/Interaction/Action-based/LocomotionSchemeManager.cs/#L37" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

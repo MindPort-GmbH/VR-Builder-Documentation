@@ -26,7 +26,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Execute chapters behavior data.
+  summary: "\nExecute chapters behavior data.\n"
   example: []
   syntax:
     content: >-
@@ -34,13 +34,17 @@ items:
 
       [DataContract(IsReference = true)]
 
-      public class ExecuteChaptersBehavior.EntityData : EntityCollectionData<IChapter>, IEntityCollectionData<IChapter>, IEntityCollectionData, IBehaviorData, INamedData, IData
+      public class EntityData : EntityCollectionData<IChapter>, IEntityCollectionData<IChapter>, IEntityCollectionData, IBehaviorData, INamedData, IData
     content.vb: >-
       <DisplayName("Execute Chapters")>
 
       <DataContract(IsReference:=True)>
 
-      Public Class ExecuteChaptersBehavior.EntityData Inherits EntityCollectionData(Of IChapter) Implements IEntityCollectionData(Of IChapter), IEntityCollectionData, IBehaviorData, INamedData, IData
+      Public Class EntityData
+
+          Inherits EntityCollectionData(Of IChapter)
+
+          Implements IEntityCollectionData(Of IChapter), IEntityCollectionData, IBehaviorData, INamedData, IData
   inheritance:
   - System.Object
   - VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}
@@ -52,13 +56,14 @@ items:
   - VRBuilder.Core.IData
   inheritedMembers:
   - VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.Metadata
+  - VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: VRBuilder.Core.Attributes.DisplayNameAttribute
     ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
@@ -72,6 +77,12 @@ items:
     - name: IsReference
       type: System.Boolean
       value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Chapters
   commentId: P:VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Chapters
   id: Chapters
@@ -111,6 +122,12 @@ items:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Name
   commentId: P:VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Name
   id: Name
@@ -133,8 +150,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Name of the entity.
-  example: []
   syntax:
     content: >-
       [IgnoreDataMember]
@@ -154,6 +169,12 @@ items:
   - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
     ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.GetChildren
   commentId: M:VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.GetChildren
   id: GetChildren
@@ -176,61 +197,36 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  example: []
   syntax:
     content: public override IEnumerable<IChapter> GetChildren()
     return:
       type: System.Collections.Generic.IEnumerable{VRBuilder.Core.IChapter}
-    content.vb: Public Overrides Function GetChildren() As IEnumerable(Of IChapter)
+    content.vb: Public Overrides Function GetChildren As IEnumerable(Of IChapter)
   overridden: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
   overload: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.GetChildren*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}
   commentId: T:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
   name: EntityCollectionData<IChapter>
   nameWithType: EntityCollectionData<IChapter>
   fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.IChapter>
@@ -240,28 +236,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
     name: EntityCollectionData
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+    nameWithType: EntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
     name: EntityCollectionData
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: EntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IChapter}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<IChapter>
   nameWithType: IEntityCollectionData<IChapter>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IChapter>
@@ -271,48 +276,54 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData
   parent: VRBuilder.Core.EntityOwners
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData.html
   name: IEntityCollectionData
   nameWithType: IEntityCollectionData
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
 - uid: VRBuilder.Core.Behaviors.IBehaviorData
   commentId: T:VRBuilder.Core.Behaviors.IBehaviorData
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehaviorData.html
   name: IBehaviorData
   nameWithType: IBehaviorData
   fullName: VRBuilder.Core.Behaviors.IBehaviorData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
@@ -320,241 +331,330 @@ references:
   commentId: P:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.Metadata
   parent: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}
   definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1.Metadata
-  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_Metadata
   name: Metadata
   nameWithType: EntityCollectionData<IChapter>.Metadata
   fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.IChapter>.Metadata
   nameWithType.vb: EntityCollectionData(Of IChapter).Metadata
   fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.IChapter).Metadata
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+  commentId: M:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+  parent: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}
+  definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+  name: IEntityCollectionData.GetChildren()
+  nameWithType: EntityCollectionData<IChapter>.IEntityCollectionData.GetChildren()
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.IChapter>.VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  nameWithType.vb: EntityCollectionData(Of IChapter).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.IChapter).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  name.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+    name: IEntityCollectionData.GetChildren
+    nameWithType: EntityCollectionData<IChapter>.IEntityCollectionData.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.IChapter>.VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
   - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+    name: VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
+    nameWithType: EntityCollectionData(Of IChapter).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.IChapter).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
   - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
   commentId: T:VRBuilder.Core.EntityOwners.EntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
   name: EntityCollectionData<TEntity>
   nameWithType: EntityCollectionData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>
@@ -564,52 +664,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
     name: EntityCollectionData
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
+    nameWithType: EntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1
     name: EntityCollectionData
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: EntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<TEntity>
   nameWithType: IEntityCollectionData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>
@@ -619,52 +705,75 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.Metadata
   commentId: P:VRBuilder.Core.EntityOwners.EntityCollectionData`1.Metadata
-  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_Metadata
   name: Metadata
   nameWithType: EntityCollectionData<TEntity>.Metadata
   fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.Metadata
   nameWithType.vb: EntityCollectionData(Of TEntity).Metadata
   fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity).Metadata
+- uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+  commentId: M:VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+  name: IEntityCollectionData.GetChildren()
+  nameWithType: EntityCollectionData<TEntity>.IEntityCollectionData.GetChildren()
+  fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  nameWithType.vb: EntityCollectionData(Of TEntity).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  name.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren()
+  spec.csharp:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+    name: IEntityCollectionData.GetChildren
+    nameWithType: EntityCollectionData<TEntity>.IEntityCollectionData.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.VRBuilder#Core#EntityOwners#IEntityCollectionData#GetChildren
+    name: VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
+    nameWithType: EntityCollectionData(Of TEntity).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity).VRBuilder.Core.EntityOwners.IEntityCollectionData.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Chapters*
   commentId: Overload:VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Chapters
-  href: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.html#VRBuilder_Core_Behaviors_ExecuteChaptersBehavior_EntityData_Chapters
   name: Chapters
   nameWithType: ExecuteChaptersBehavior.EntityData.Chapters
   fullName: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Chapters
@@ -672,7 +781,6 @@ references:
   commentId: T:System.Collections.Generic.List{VRBuilder.Core.IChapter}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<IChapter>
   nameWithType: List<IChapter>
   fullName: System.Collections.Generic.List<VRBuilder.Core.IChapter>
@@ -682,29 +790,38 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<T>
   nameWithType: List<T>
   fullName: System.Collections.Generic.List<T>
@@ -714,68 +831,47 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Name*
   commentId: Overload:VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Name
-  href: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.html#VRBuilder_Core_Behaviors_ExecuteChaptersBehavior_EntityData_Name
   name: Name
   nameWithType: ExecuteChaptersBehavior.EntityData.Name
   fullName: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.Name
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
@@ -783,38 +879,42 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
   commentId: M:VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
   parent: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}
   definition: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: EntityCollectionData<IChapter>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.IChapter>.GetChildren()
   nameWithType.vb: EntityCollectionData(Of IChapter).GetChildren()
   fullName.vb: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.IChapter).GetChildren()
   spec.csharp:
-  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+    nameWithType: EntityCollectionData<IChapter>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<VRBuilder.Core.IChapter>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData{VRBuilder.Core.IChapter}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+    nameWithType: EntityCollectionData(Of IChapter).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData(Of VRBuilder.Core.IChapter).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.GetChildren*
   commentId: Overload:VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.GetChildren
-  href: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.html#VRBuilder_Core_Behaviors_ExecuteChaptersBehavior_EntityData_GetChildren
   name: GetChildren
   nameWithType: ExecuteChaptersBehavior.EntityData.GetChildren
   fullName: VRBuilder.Core.Behaviors.ExecuteChaptersBehavior.EntityData.GetChildren
@@ -822,7 +922,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{VRBuilder.Core.IChapter}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<IChapter>
   nameWithType: IEnumerable<IChapter>
   fullName: System.Collections.Generic.IEnumerable<VRBuilder.Core.IChapter>
@@ -832,28 +931,37 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
   commentId: M:VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: EntityCollectionData<TEntity>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.GetChildren()
@@ -862,19 +970,28 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+    nameWithType: EntityCollectionData<TEntity>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData<TEntity>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.EntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_GetChildren
+    nameWithType: EntityCollectionData(Of TEntity).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.EntityCollectionData(Of TEntity).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -884,18 +1001,30 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )

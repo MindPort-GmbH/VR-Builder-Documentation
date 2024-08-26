@@ -8,7 +8,7 @@ items:
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
-  - VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
+  - VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   langs:
   - csharp
@@ -28,21 +28,24 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
-  summary: >-
-    Current status of a controller. there will be two instances of this (for left/right). and this allows
-
-    the system to change between different states on each controller independently.
+  summary: "\nCurrent status of a controller. there will be two instances of this (for left/right). and this allows\nthe system to change between different states on each controller independently.\n"
   example: []
   syntax:
-    content: public struct ControllerManager.ControllerState
-    content.vb: Public Structure ControllerManager.ControllerState
+    content: public struct ControllerState
+    content.vb: Public Structure ControllerState
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
   - System.ValueType.ToString
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize
   commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize
   id: Initialize
@@ -65,12 +68,16 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
-  summary: Sets up the controller
+  summary: "\nSets up the controller\n"
   example: []
   syntax:
     content: public void Initialize()
-    content.vb: Public Sub Initialize()
+    content.vb: Public Sub Initialize
   overload: VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll
   commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll
   id: ClearAll
@@ -93,22 +100,26 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
-  summary: Exits from all states that are in the list, basically a reset.
+  summary: "\nExits from all states that are in the list, basically a reset.\n"
   example: []
   syntax:
     content: public void ClearAll()
-    content.vb: Public Sub ClearAll()
+    content.vb: Public Sub ClearAll
   overload: VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll*
-- uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
-  commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
-  id: SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
+  commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
+  id: SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
   parent: VRBuilder.XRInteraction.ControllerManager.ControllerState
   langs:
   - csharp
   - vb
-  name: SetGameObject(ControllerStates, GameObject)
+  name: SetGameObject(ControllerManager.ControllerStates, GameObject)
   nameWithType: ControllerManager.ControllerState.SetGameObject(ControllerManager.ControllerStates, GameObject)
-  fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates, UnityEngine.GameObject)
+  fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates, GameObject)
   type: Method
   source:
     remote:
@@ -121,19 +132,23 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
-  summary: Attaches a game object that represents an interactor for a state, to a state.
+  summary: "\nAttaches a game object that represents an interactor for a state, to a state.\n"
   example: []
   syntax:
     content: public void SetGameObject(ControllerManager.ControllerStates state, GameObject parentGamObject)
     parameters:
     - id: state
       type: VRBuilder.XRInteraction.ControllerManager.ControllerStates
-      description: The state that we're attaching the game object to
+      description: The state that we&apos;re attaching the game object to
     - id: parentGamObject
-      type: UnityEngine.GameObject
+      type: GameObject
       description: The game object that represents the interactor for that state.
     content.vb: Public Sub SetGameObject(state As ControllerManager.ControllerStates, parentGamObject As GameObject)
   overload: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   id: SetState(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
@@ -141,7 +156,7 @@ items:
   langs:
   - csharp
   - vb
-  name: SetState(ControllerStates)
+  name: SetState(ControllerManager.ControllerStates)
   nameWithType: ControllerManager.ControllerState.SetState(ControllerManager.ControllerStates)
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   type: Method
@@ -156,7 +171,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
-  summary: Attempts to set the current state of a controller.
+  summary: "\nAttempts to set the current state of a controller.\n"
   example: []
   syntax:
     content: public void SetState(ControllerManager.ControllerStates nextState)
@@ -166,6 +181,10 @@ items:
       description: The state that we wish to transition to
     content.vb: Public Sub SetState(nextState As ControllerManager.ControllerStates)
   overload: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   id: IsControllerInteracting(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
@@ -173,7 +192,7 @@ items:
   langs:
   - csharp
   - vb
-  name: IsControllerInteracting(ControllerStates)
+  name: IsControllerInteracting(ControllerManager.ControllerStates)
   nameWithType: ControllerManager.ControllerState.IsControllerInteracting(ControllerManager.ControllerStates)
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   type: Method
@@ -188,7 +207,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
-  summary: True if the interactor from given <code class="paramref">controller</code> is either touching or grabbing an interactable.
+  summary: "\nTrue if the interactor from given <code data-dev-comment-type=\"paramref\" class=\"paramref\">controller</code> is either touching or grabbing an interactable.\n"
   example: []
   syntax:
     content: public bool IsControllerInteracting(ControllerManager.ControllerStates controller)
@@ -200,225 +219,268 @@ items:
       description: ''
     content.vb: Public Function IsControllerInteracting(controller As ControllerManager.ControllerStates) As Boolean
   overload: VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.XRInteraction
   commentId: N:VRBuilder.XRInteraction
-  href: VRBuilder.html
   name: VRBuilder.XRInteraction
   nameWithType: VRBuilder.XRInteraction
   fullName: VRBuilder.XRInteraction
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.XRInteraction
-    name: XRInteraction
-    href: VRBuilder.XRInteraction.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.XRInteraction
-    name: XRInteraction
-    href: VRBuilder.XRInteraction.html
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  name: Equals(object)
-  nameWithType: ValueType.Equals(object)
-  fullName: System.ValueType.Equals(object)
-  nameWithType.vb: ValueType.Equals(Object)
-  fullName.vb: System.ValueType.Equals(Object)
-  name.vb: Equals(Object)
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.GetHashCode
   commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   name: GetHashCode()
   nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.ToString
   commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   name: ToString()
   nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype
   name: ValueType
   nameWithType: ValueType
   fullName: System.ValueType
@@ -426,83 +488,48 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize
-  href: VRBuilder.XRInteraction.ControllerManager.ControllerState.html#VRBuilder_XRInteraction_ControllerManager_ControllerState_Initialize
   name: Initialize
   nameWithType: ControllerManager.ControllerState.Initialize
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll
-  href: VRBuilder.XRInteraction.ControllerManager.ControllerState.html#VRBuilder_XRInteraction_ControllerManager_ControllerState_ClearAll
   name: ClearAll
   nameWithType: ControllerManager.ControllerState.ClearAll
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject
-  href: VRBuilder.XRInteraction.ControllerManager.ControllerState.html#VRBuilder_XRInteraction_ControllerManager_ControllerState_SetGameObject_VRBuilder_XRInteraction_ControllerManager_ControllerStates_UnityEngine_GameObject_
   name: SetGameObject
   nameWithType: ControllerManager.ControllerState.SetGameObject
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerStates
   commentId: T:VRBuilder.XRInteraction.ControllerManager.ControllerStates
   parent: VRBuilder.XRInteraction
-  href: VRBuilder.XRInteraction.ControllerManager.html
   name: ControllerManager.ControllerStates
   nameWithType: ControllerManager.ControllerStates
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerStates
-  spec.csharp:
-  - uid: VRBuilder.XRInteraction.ControllerManager
-    name: ControllerManager
-    href: VRBuilder.XRInteraction.ControllerManager.html
-  - name: .
-  - uid: VRBuilder.XRInteraction.ControllerManager.ControllerStates
-    name: ControllerStates
-    href: VRBuilder.XRInteraction.ControllerManager.ControllerStates.html
-  spec.vb:
-  - uid: VRBuilder.XRInteraction.ControllerManager
-    name: ControllerManager
-    href: VRBuilder.XRInteraction.ControllerManager.html
-  - name: .
-  - uid: VRBuilder.XRInteraction.ControllerManager.ControllerStates
-    name: ControllerStates
-    href: VRBuilder.XRInteraction.ControllerManager.ControllerStates.html
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
+- uid: GameObject
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: UnityEngine.GameObject
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: GameObject
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState
-  href: VRBuilder.XRInteraction.ControllerManager.ControllerState.html#VRBuilder_XRInteraction_ControllerManager_ControllerState_SetState_VRBuilder_XRInteraction_ControllerManager_ControllerStates_
   name: SetState
   nameWithType: ControllerManager.ControllerState.SetState
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting
-  href: VRBuilder.XRInteraction.ControllerManager.ControllerState.html#VRBuilder_XRInteraction_ControllerManager_ControllerState_IsControllerInteracting_VRBuilder_XRInteraction_ControllerManager_ControllerStates_
   name: IsControllerInteracting
   nameWithType: ControllerManager.ControllerState.IsControllerInteracting
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting
@@ -510,10 +537,6 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

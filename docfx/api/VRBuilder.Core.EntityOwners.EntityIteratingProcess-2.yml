@@ -31,14 +31,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: A process that activates and deactivates entities one after another.
+  summary: "\nA process that activates and deactivates entities one after another.\n"
   example: []
   syntax:
     content: 'public abstract class EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity> : StageProcess<TEntitySequenceDataWithMode>, IStageProcess where TEntitySequenceDataWithMode : class, IEntitySequenceDataWithMode<TEntity> where TEntity : IEntity'
     typeParameters:
     - id: TEntitySequenceDataWithMode
     - id: TEntity
-    content.vb: Public MustInherit Class EntityIteratingProcess(Of TEntitySequenceDataWithMode As {Class, IEntitySequenceDataWithMode(Of TEntity)}, TEntity As IEntity) Inherits StageProcess(Of TEntitySequenceDataWithMode) Implements IStageProcess
+    content.vb: >-
+      Public MustInherit Class EntityIteratingProcess(Of TEntitySequenceDataWithMode As {Class, IEntitySequenceDataWithMode(Of TEntity)}, TEntity As IEntity)
+
+          Inherits StageProcess(Of TEntitySequenceDataWithMode)
+
+          Implements IStageProcess
   inheritance:
   - System.Object
   - VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
@@ -47,14 +52,22 @@ items:
   inheritedMembers:
   - VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.Data
   - VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.Outer
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity)
   name.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity)
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.#ctor(`0)
@@ -86,9 +99,12 @@ items:
       type: '{TEntitySequenceDataWithMode}'
     content.vb: Protected Sub New(data As TEntitySequenceDataWithMode)
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.#ctor*
-  nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).New(TEntitySequenceDataWithMode)
-  fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).New(TEntitySequenceDataWithMode)
-  name.vb: New(TEntitySequenceDataWithMode)
+  nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).EntityIteratingProcess(TEntitySequenceDataWithMode)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).EntityIteratingProcess(TEntitySequenceDataWithMode)
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start
   id: Start
@@ -111,19 +127,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: >-
-    This method is invoked immediately when entity enters the stage.
-
-    The invocation is guaranteed.
-
-    Use it for initialization.
   example: []
   syntax:
     content: public override void Start()
-    content.vb: Public Overrides Sub Start()
+    content.vb: Public Overrides Sub Start
   overridden: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.Start
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start*
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).Start()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).Start()
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update
@@ -147,17 +163,21 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: This method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.
   example: []
   syntax:
     content: public override IEnumerator Update()
     return:
       type: System.Collections.IEnumerator
-      description: ''
-    content.vb: Public Overrides Function Update() As IEnumerator
+    content.vb: Public Overrides Function Update As IEnumerator
   overridden: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.Update
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update*
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).Update()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).Update()
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End
@@ -181,19 +201,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: >-
-    This method is invoked immediately after the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> was iterated over completely, or after the <xref href="VRBuilder.Core.IStageProcess.FastForward" data-throw-if-not-resolved="false"></xref> was called.
-
-    The invocation is guaranteed.
-
-    Use it for deinitialization.
   example: []
   syntax:
     content: public override void End()
-    content.vb: Public Overrides Sub [End]()
+    content.vb: Public Overrides Sub
   overridden: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.End
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End*
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).End()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).End()
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward
@@ -217,17 +237,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: >-
-    This method is called when the process was not completed yet.
-
-    It must "fake" normal execution of the process and handle the cases when the <xref href="VRBuilder.Core.IStageProcess.Update" data-throw-if-not-resolved="false"></xref> is not iterated over completely.
   example: []
   syntax:
     content: public override void FastForward()
-    content.vb: Public Overrides Sub FastForward()
+    content.vb: Public Overrides Sub FastForward
   overridden: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.FastForward
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward*
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).FastForward()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).FastForward()
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent
@@ -251,15 +273,21 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: Returns true if the current entity has to be activated.
+  summary: "\nReturns true if the current entity has to be activated.\n"
   example: []
   syntax:
     content: protected abstract bool ShouldActivateCurrent()
     return:
       type: System.Boolean
-    content.vb: Protected MustOverride Function ShouldActivateCurrent() As Boolean
+    content.vb: Protected MustOverride Function ShouldActivateCurrent As Boolean
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent*
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).ShouldActivateCurrent()
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).ShouldActivateCurrent()
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent
@@ -283,15 +311,21 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: Returns true if the current entity has to be deactivated.
+  summary: "\nReturns true if the current entity has to be deactivated.\n"
   example: []
   syntax:
     content: protected abstract bool ShouldDeactivateCurrent()
     return:
       type: System.Boolean
-    content.vb: Protected MustOverride Function ShouldDeactivateCurrent() As Boolean
+    content.vb: Protected MustOverride Function ShouldDeactivateCurrent As Boolean
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent*
   nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).ShouldDeactivateCurrent()
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).ShouldDeactivateCurrent()
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext(`1@)
   commentId: M:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext(`1@)
@@ -315,7 +349,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: Try to get next child entity.
+  summary: "\nTry to get next child entity.\n"
   example: []
   syntax:
     content: protected abstract bool TryNext(out TEntity entity)
@@ -324,58 +358,34 @@ items:
       type: '{TEntity}'
     return:
       type: System.Boolean
-    content.vb: Protected MustOverride Function TryNext(entity As TEntity) As Boolean
+    content.vb: Protected MustOverride Function TryNext(ByRef entity As TEntity) As Boolean
   overload: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext*
-  nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).TryNext(TEntity)
-  fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).TryNext(TEntity)
-  name.vb: TryNext(TEntity)
+  nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).TryNext(ByRef TEntity)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).TryNext(ByRef TEntity)
+  name.vb: TryNext(ByRef TEntity)
 references:
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   commentId: T:VRBuilder.Core.StageProcess{`0}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.StageProcess`1
-  href: VRBuilder.Core.StageProcess-1.html
   name: StageProcess<TEntitySequenceDataWithMode>
   nameWithType: StageProcess<TEntitySequenceDataWithMode>
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>
@@ -385,23 +395,34 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.StageProcess`1
     name: StageProcess
-    href: VRBuilder.Core.StageProcess-1.html
+    nameWithType: StageProcess
+    fullName: VRBuilder.Core.StageProcess
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntitySequenceDataWithMode
+    nameWithType: TEntitySequenceDataWithMode
+    fullName: TEntitySequenceDataWithMode
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.StageProcess`1
     name: StageProcess
-    href: VRBuilder.Core.StageProcess-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: StageProcess
+    fullName: VRBuilder.Core.StageProcess
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntitySequenceDataWithMode
+    nameWithType: TEntitySequenceDataWithMode
+    fullName: TEntitySequenceDataWithMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IStageProcess
   commentId: T:VRBuilder.Core.IStageProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStageProcess.html
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
@@ -409,7 +430,6 @@ references:
   commentId: P:VRBuilder.Core.StageProcess{`0}.Data
   parent: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   definition: VRBuilder.Core.StageProcess`1.Data
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Data
   name: Data
   nameWithType: StageProcess<TEntitySequenceDataWithMode>.Data
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.Data
@@ -419,241 +439,298 @@ references:
   commentId: P:VRBuilder.Core.StageProcess{`0}.Outer
   parent: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   definition: VRBuilder.Core.StageProcess`1.Outer
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Outer
   name: Outer
   nameWithType: StageProcess<TEntitySequenceDataWithMode>.Outer
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.Outer
   nameWithType.vb: StageProcess(Of TEntitySequenceDataWithMode).Outer
   fullName.vb: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).Outer
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.StageProcess`1
   commentId: T:VRBuilder.Core.StageProcess`1
-  href: VRBuilder.Core.StageProcess-1.html
   name: StageProcess<TData>
   nameWithType: StageProcess<TData>
   fullName: VRBuilder.Core.StageProcess<TData>
@@ -663,44 +740,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.StageProcess`1
     name: StageProcess
-    href: VRBuilder.Core.StageProcess-1.html
+    nameWithType: StageProcess
+    fullName: VRBuilder.Core.StageProcess
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.StageProcess`1
     name: StageProcess
-    href: VRBuilder.Core.StageProcess-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: StageProcess
+    fullName: VRBuilder.Core.StageProcess
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.StageProcess`1.Data
   commentId: P:VRBuilder.Core.StageProcess`1.Data
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Data
   name: Data
   nameWithType: StageProcess<TData>.Data
   fullName: VRBuilder.Core.StageProcess<TData>.Data
@@ -708,7 +779,6 @@ references:
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).Data
 - uid: VRBuilder.Core.StageProcess`1.Outer
   commentId: P:VRBuilder.Core.StageProcess`1.Outer
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Outer
   name: Outer
   nameWithType: StageProcess<TData>.Outer
   fullName: VRBuilder.Core.StageProcess<TData>.Outer
@@ -716,13 +786,11 @@ references:
   fullName.vb: VRBuilder.Core.StageProcess(Of TData).Outer
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.#ctor*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.#ctor
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2__ctor__0_
   name: EntityIteratingProcess
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.EntityIteratingProcess
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.EntityIteratingProcess
-  nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).New
-  fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).New
-  name.vb: New
+  nameWithType.vb: EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).EntityIteratingProcess
+  fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).EntityIteratingProcess
 - uid: '{TEntitySequenceDataWithMode}'
   commentId: '!:TEntitySequenceDataWithMode'
   definition: TEntitySequenceDataWithMode
@@ -738,27 +806,35 @@ references:
   commentId: M:VRBuilder.Core.StageProcess{`0}.Start
   parent: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   definition: VRBuilder.Core.StageProcess`1.Start
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
   name: Start()
   nameWithType: StageProcess<TEntitySequenceDataWithMode>.Start()
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.Start()
   nameWithType.vb: StageProcess(Of TEntitySequenceDataWithMode).Start()
   fullName.vb: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).Start()
   spec.csharp:
-  - uid: VRBuilder.Core.StageProcess{`0}.Start
+  - uid: VRBuilder.Core.StageProcess`1.Start
     name: Start
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+    nameWithType: StageProcess<TEntitySequenceDataWithMode>.Start
+    fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.Start
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.StageProcess{`0}.Start
+  - uid: VRBuilder.Core.StageProcess`1.Start
     name: Start
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+    nameWithType: StageProcess(Of TEntitySequenceDataWithMode).Start
+    fullName: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).Start
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_Start
   name: Start
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.Start
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.Start
@@ -766,7 +842,6 @@ references:
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).Start
 - uid: VRBuilder.Core.StageProcess`1.Start
   commentId: M:VRBuilder.Core.StageProcess`1.Start
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
   name: Start()
   nameWithType: StageProcess<TData>.Start()
   fullName: VRBuilder.Core.StageProcess<TData>.Start()
@@ -775,40 +850,58 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.StageProcess`1.Start
     name: Start
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+    nameWithType: StageProcess<TData>.Start
+    fullName: VRBuilder.Core.StageProcess<TData>.Start
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.StageProcess`1.Start
     name: Start
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Start
+    nameWithType: StageProcess(Of TData).Start
+    fullName: VRBuilder.Core.StageProcess(Of TData).Start
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.Update
   commentId: M:VRBuilder.Core.StageProcess{`0}.Update
   parent: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   definition: VRBuilder.Core.StageProcess`1.Update
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
   name: Update()
   nameWithType: StageProcess<TEntitySequenceDataWithMode>.Update()
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.Update()
   nameWithType.vb: StageProcess(Of TEntitySequenceDataWithMode).Update()
   fullName.vb: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).Update()
   spec.csharp:
-  - uid: VRBuilder.Core.StageProcess{`0}.Update
+  - uid: VRBuilder.Core.StageProcess`1.Update
     name: Update
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+    nameWithType: StageProcess<TEntitySequenceDataWithMode>.Update
+    fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.StageProcess{`0}.Update
+  - uid: VRBuilder.Core.StageProcess`1.Update
     name: Update
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+    nameWithType: StageProcess(Of TEntitySequenceDataWithMode).Update
+    fullName: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_Update
   name: Update
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.Update
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.Update
@@ -818,13 +911,11 @@ references:
   commentId: T:System.Collections.IEnumerator
   parent: System.Collections
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
   name: IEnumerator
   nameWithType: IEnumerator
   fullName: System.Collections.IEnumerator
 - uid: VRBuilder.Core.StageProcess`1.Update
   commentId: M:VRBuilder.Core.StageProcess`1.Update
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
   name: Update()
   nameWithType: StageProcess<TData>.Update()
   fullName: VRBuilder.Core.StageProcess<TData>.Update()
@@ -833,105 +924,64 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.StageProcess`1.Update
     name: Update
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+    nameWithType: StageProcess<TData>.Update
+    fullName: VRBuilder.Core.StageProcess<TData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.StageProcess`1.Update
     name: Update
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_Update
+    nameWithType: StageProcess(Of TData).Update
+    fullName: VRBuilder.Core.StageProcess(Of TData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections
   commentId: N:System.Collections
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections
   nameWithType: System.Collections
   fullName: System.Collections
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-- uid: VRBuilder.Core.IStageProcess.Update
-  commentId: M:VRBuilder.Core.IStageProcess.Update
-  parent: VRBuilder.Core.IStageProcess
-  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
-  name: Update()
-  nameWithType: IStageProcess.Update()
-  fullName: VRBuilder.Core.IStageProcess.Update()
-  spec.csharp:
-  - uid: VRBuilder.Core.IStageProcess.Update
-    name: Update
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: VRBuilder.Core.IStageProcess.Update
-    name: Update
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update
-  - name: (
-  - name: )
-- uid: VRBuilder.Core.IStageProcess.FastForward
-  commentId: M:VRBuilder.Core.IStageProcess.FastForward
-  parent: VRBuilder.Core.IStageProcess
-  href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
-  name: FastForward()
-  nameWithType: IStageProcess.FastForward()
-  fullName: VRBuilder.Core.IStageProcess.FastForward()
-  spec.csharp:
-  - uid: VRBuilder.Core.IStageProcess.FastForward
-    name: FastForward
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: VRBuilder.Core.IStageProcess.FastForward
-    name: FastForward
-    href: VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward
-  - name: (
-  - name: )
 - uid: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.End
   commentId: M:VRBuilder.Core.StageProcess{`0}.End
   parent: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   definition: VRBuilder.Core.StageProcess`1.End
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
   name: End()
   nameWithType: StageProcess<TEntitySequenceDataWithMode>.End()
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.End()
   nameWithType.vb: StageProcess(Of TEntitySequenceDataWithMode).End()
   fullName.vb: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).End()
   spec.csharp:
-  - uid: VRBuilder.Core.StageProcess{`0}.End
+  - uid: VRBuilder.Core.StageProcess`1.End
     name: End
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+    nameWithType: StageProcess<TEntitySequenceDataWithMode>.End
+    fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.End
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.StageProcess{`0}.End
+  - uid: VRBuilder.Core.StageProcess`1.End
     name: End
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+    nameWithType: StageProcess(Of TEntitySequenceDataWithMode).End
+    fullName: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).End
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_End
   name: End
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.End
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.End
@@ -939,7 +989,6 @@ references:
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).End
 - uid: VRBuilder.Core.StageProcess`1.End
   commentId: M:VRBuilder.Core.StageProcess`1.End
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
   name: End()
   nameWithType: StageProcess<TData>.End()
   fullName: VRBuilder.Core.StageProcess<TData>.End()
@@ -948,40 +997,58 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.StageProcess`1.End
     name: End
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+    nameWithType: StageProcess<TData>.End
+    fullName: VRBuilder.Core.StageProcess<TData>.End
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.StageProcess`1.End
     name: End
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_End
+    nameWithType: StageProcess(Of TData).End
+    fullName: VRBuilder.Core.StageProcess(Of TData).End
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}.FastForward
   commentId: M:VRBuilder.Core.StageProcess{`0}.FastForward
   parent: VRBuilder.Core.StageProcess{{TEntitySequenceDataWithMode}}
   definition: VRBuilder.Core.StageProcess`1.FastForward
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
   name: FastForward()
   nameWithType: StageProcess<TEntitySequenceDataWithMode>.FastForward()
   fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.FastForward()
   nameWithType.vb: StageProcess(Of TEntitySequenceDataWithMode).FastForward()
   fullName.vb: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).FastForward()
   spec.csharp:
-  - uid: VRBuilder.Core.StageProcess{`0}.FastForward
+  - uid: VRBuilder.Core.StageProcess`1.FastForward
     name: FastForward
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+    nameWithType: StageProcess<TEntitySequenceDataWithMode>.FastForward
+    fullName: VRBuilder.Core.StageProcess<TEntitySequenceDataWithMode>.FastForward
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.StageProcess{`0}.FastForward
+  - uid: VRBuilder.Core.StageProcess`1.FastForward
     name: FastForward
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+    nameWithType: StageProcess(Of TEntitySequenceDataWithMode).FastForward
+    fullName: VRBuilder.Core.StageProcess(Of TEntitySequenceDataWithMode).FastForward
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_FastForward
   name: FastForward
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.FastForward
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.FastForward
@@ -989,7 +1056,6 @@ references:
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).FastForward
 - uid: VRBuilder.Core.StageProcess`1.FastForward
   commentId: M:VRBuilder.Core.StageProcess`1.FastForward
-  href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
   name: FastForward()
   nameWithType: StageProcess<TData>.FastForward()
   fullName: VRBuilder.Core.StageProcess<TData>.FastForward()
@@ -998,18 +1064,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.StageProcess`1.FastForward
     name: FastForward
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+    nameWithType: StageProcess<TData>.FastForward
+    fullName: VRBuilder.Core.StageProcess<TData>.FastForward
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.StageProcess`1.FastForward
     name: FastForward
-    href: VRBuilder.Core.StageProcess-1.html#VRBuilder_Core_StageProcess_1_FastForward
+    nameWithType: StageProcess(Of TData).FastForward
+    fullName: VRBuilder.Core.StageProcess(Of TData).FastForward
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_ShouldActivateCurrent
   name: ShouldActivateCurrent
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.ShouldActivateCurrent
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.ShouldActivateCurrent
@@ -1019,16 +1094,11 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_ShouldDeactivateCurrent
   name: ShouldDeactivateCurrent
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.ShouldDeactivateCurrent
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.ShouldDeactivateCurrent
@@ -1036,7 +1106,6 @@ references:
   fullName.vb: VRBuilder.Core.EntityOwners.EntityIteratingProcess(Of TEntitySequenceDataWithMode, TEntity).ShouldDeactivateCurrent
 - uid: VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext*
   commentId: Overload:VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext
-  href: VRBuilder.Core.EntityOwners.EntityIteratingProcess-2.html#VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_TryNext__1__
   name: TryNext
   nameWithType: EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.TryNext
   fullName: VRBuilder.Core.EntityOwners.EntityIteratingProcess<TEntitySequenceDataWithMode, TEntity>.TryNext

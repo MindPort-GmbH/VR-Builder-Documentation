@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Editor.UI.Drawers
   children:
   - VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0)
+  - VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,GUIContent)
   - VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,System.String)
-  - VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,UnityEngine.GUIContent)
   - VRBuilder.Editor.UI.Drawers.DropDownElement`1.Label
   - VRBuilder.Editor.UI.Drawers.DropDownElement`1.Value
   langs:
@@ -28,10 +28,12 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: An element in a dropdown.
+  summary: "\nAn element in a dropdown.\n"
   example: []
   syntax:
-    content: 'public struct DropDownElement<T> where T : IEquatable<T>'
+    content: >-
+      public struct DropDownElement<T>
+          where T : IEquatable<T>
     typeParameters:
     - id: T
       description: Type of value returned by the dropdown.
@@ -41,9 +43,15 @@ items:
   - System.ValueType.GetHashCode
   - System.ValueType.ToString
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
   nameWithType.vb: DropDownElement(Of T)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
   fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T)
   name.vb: DropDownElement(Of T)
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.Label
@@ -68,16 +76,22 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: Display name of the element.
+  summary: "\nDisplay name of the element.\n"
   example: []
   syntax:
     content: public GUIContent Label { readonly get; set; }
     parameters: []
     return:
-      type: UnityEngine.GUIContent
+      type: GUIContent
     content.vb: Public Property Label As GUIContent
   overload: VRBuilder.Editor.UI.Drawers.DropDownElement`1.Label*
   nameWithType.vb: DropDownElement(Of T).Label
+  modifiers.csharp:
+  - public
+  - readonly get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).Label
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.Value
   commentId: P:VRBuilder.Editor.UI.Drawers.DropDownElement`1.Value
@@ -101,7 +115,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: Selectable value.
+  summary: "\nSelectable value.\n"
   example: []
   syntax:
     content: public T Value { readonly get; set; }
@@ -111,17 +125,23 @@ items:
     content.vb: Public Property Value As T
   overload: VRBuilder.Editor.UI.Drawers.DropDownElement`1.Value*
   nameWithType.vb: DropDownElement(Of T).Value
+  modifiers.csharp:
+  - public
+  - readonly get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).Value
-- uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,UnityEngine.GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,UnityEngine.GUIContent)
-  id: '#ctor(`0,UnityEngine.GUIContent)'
+- uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,GUIContent)
+  id: '#ctor(`0,GUIContent)'
   parent: VRBuilder.Editor.UI.Drawers.DropDownElement`1
   langs:
   - csharp
   - vb
   name: DropDownElement(T, GUIContent)
   nameWithType: DropDownElement<T>.DropDownElement(T, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.DropDownElement(T, UnityEngine.GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.DropDownElement(T, GUIContent)
   type: Constructor
   source:
     remote:
@@ -140,12 +160,15 @@ items:
     - id: value
       type: '{T}'
     - id: label
-      type: UnityEngine.GUIContent
+      type: GUIContent
     content.vb: Public Sub New(value As T, label As GUIContent)
   overload: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor*
-  nameWithType.vb: DropDownElement(Of T).New(T, GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).New(T, UnityEngine.GUIContent)
-  name.vb: New(T, GUIContent)
+  nameWithType.vb: DropDownElement(Of T).DropDownElement(T, GUIContent)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).DropDownElement(T, GUIContent)
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,System.String)
   commentId: M:VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0,System.String)
   id: '#ctor(`0,System.String)'
@@ -153,9 +176,9 @@ items:
   langs:
   - csharp
   - vb
-  name: DropDownElement(T, string)
-  nameWithType: DropDownElement<T>.DropDownElement(T, string)
-  fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.DropDownElement(T, string)
+  name: DropDownElement(T, String)
+  nameWithType: DropDownElement<T>.DropDownElement(T, String)
+  fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.DropDownElement(T, System.String)
   type: Constructor
   source:
     remote:
@@ -177,9 +200,12 @@ items:
       type: System.String
     content.vb: Public Sub New(value As T, label As String)
   overload: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor*
-  nameWithType.vb: DropDownElement(Of T).New(T, String)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).New(T, String)
-  name.vb: New(T, String)
+  nameWithType.vb: DropDownElement(Of T).DropDownElement(T, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).DropDownElement(T, System.String)
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0)
   commentId: M:VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor(`0)
   id: '#ctor(`0)'
@@ -209,244 +235,270 @@ items:
       type: '{T}'
     content.vb: Public Sub New(value As T)
   overload: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor*
-  nameWithType.vb: DropDownElement(Of T).New(T)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).New(T)
-  name.vb: New(T)
+  nameWithType.vb: DropDownElement(Of T).DropDownElement(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).DropDownElement(T)
 references:
 - uid: VRBuilder.Editor.UI.Drawers
   commentId: N:VRBuilder.Editor.UI.Drawers
-  href: VRBuilder.html
   name: VRBuilder.Editor.UI.Drawers
   nameWithType: VRBuilder.Editor.UI.Drawers
   fullName: VRBuilder.Editor.UI.Drawers
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.UI
-    name: UI
-    href: VRBuilder.Editor.UI.html
-  - name: .
-  - uid: VRBuilder.Editor.UI.Drawers
-    name: Drawers
-    href: VRBuilder.Editor.UI.Drawers.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.UI
-    name: UI
-    href: VRBuilder.Editor.UI.html
-  - name: .
-  - uid: VRBuilder.Editor.UI.Drawers
-    name: Drawers
-    href: VRBuilder.Editor.UI.Drawers.html
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  name: Equals(object)
-  nameWithType: ValueType.Equals(object)
-  fullName: System.ValueType.Equals(object)
-  nameWithType.vb: ValueType.Equals(Object)
-  fullName.vb: System.ValueType.Equals(Object)
-  name.vb: Equals(Object)
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.GetHashCode
   commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   name: GetHashCode()
   nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.ToString
   commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   name: ToString()
   nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype
   name: ValueType
   nameWithType: ValueType
   fullName: System.ValueType
@@ -454,44 +506,29 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.Label*
   commentId: Overload:VRBuilder.Editor.UI.Drawers.DropDownElement`1.Label
-  href: VRBuilder.Editor.UI.Drawers.DropDownElement-1.html#VRBuilder_Editor_UI_Drawers_DropDownElement_1_Label
   name: Label
   nameWithType: DropDownElement<T>.Label
   fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.Label
   nameWithType.vb: DropDownElement(Of T).Label
   fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).Label
-- uid: UnityEngine.GUIContent
-  commentId: T:UnityEngine.GUIContent
-  parent: UnityEngine
+- uid: GUIContent
   isExternal: true
   name: GUIContent
   nameWithType: GUIContent
-  fullName: UnityEngine.GUIContent
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: GUIContent
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.Value*
   commentId: Overload:VRBuilder.Editor.UI.Drawers.DropDownElement`1.Value
-  href: VRBuilder.Editor.UI.Drawers.DropDownElement-1.html#VRBuilder_Editor_UI_Drawers_DropDownElement_1_Value
   name: Value
   nameWithType: DropDownElement<T>.Value
   fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.Value
@@ -509,21 +546,15 @@ references:
   fullName: T
 - uid: VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor*
   commentId: Overload:VRBuilder.Editor.UI.Drawers.DropDownElement`1.#ctor
-  href: VRBuilder.Editor.UI.Drawers.DropDownElement-1.html#VRBuilder_Editor_UI_Drawers_DropDownElement_1__ctor__0_UnityEngine_GUIContent_
   name: DropDownElement
   nameWithType: DropDownElement<T>.DropDownElement
   fullName: VRBuilder.Editor.UI.Drawers.DropDownElement<T>.DropDownElement
-  nameWithType.vb: DropDownElement(Of T).New
-  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).New
-  name.vb: New
+  nameWithType.vb: DropDownElement(Of T).DropDownElement
+  fullName.vb: VRBuilder.Editor.UI.Drawers.DropDownElement(Of T).DropDownElement
 - uid: System.String
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String

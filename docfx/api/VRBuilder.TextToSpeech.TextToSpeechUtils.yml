@@ -31,13 +31,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
 - uid: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.TextToSpeech.TextToSpeechConfiguration,System.String,UnityEngine.Localization.Locale,System.String)
   commentId: M:VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.TextToSpeech.TextToSpeechConfiguration,System.String,UnityEngine.Localization.Locale,System.String)
   id: GetUniqueTextToSpeechFilename(VRBuilder.TextToSpeech.TextToSpeechConfiguration,System.String,UnityEngine.Localization.Locale,System.String)
@@ -46,9 +53,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetUniqueTextToSpeechFilename(TextToSpeechConfiguration, string, Locale, string)
-  nameWithType: TextToSpeechUtils.GetUniqueTextToSpeechFilename(TextToSpeechConfiguration, string, Locale, string)
-  fullName: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.TextToSpeech.TextToSpeechConfiguration, string, UnityEngine.Localization.Locale, string)
+  name: GetUniqueTextToSpeechFilename(TextToSpeechConfiguration, String, Locale, String)
+  nameWithType: TextToSpeechUtils.GetUniqueTextToSpeechFilename(TextToSpeechConfiguration, String, Locale, String)
+  fullName: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.TextToSpeech.TextToSpeechConfiguration, System.String, UnityEngine.Localization.Locale, System.String)
   type: Method
   source:
     remote:
@@ -61,7 +68,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech
-  summary: Returns filename which uniquly identifies the audio by Backend, Language, Voice and also the text.
+  summary: "\nReturns filename which uniquly identifies the audio by Backend, Language, Voice and also the text.\n"
   example: []
   syntax:
     content: public static string GetUniqueTextToSpeechFilename(this TextToSpeechConfiguration configuration, string text, Locale locale, string format = "wav")
@@ -76,11 +83,17 @@ items:
       type: System.String
     return:
       type: System.String
-    content.vb: Public Shared Function GetUniqueTextToSpeechFilename(configuration As TextToSpeechConfiguration, text As String, locale As Locale, format As String = "wav") As String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetUniqueTextToSpeechFilename(configuration As TextToSpeechConfiguration, text As String, locale As Locale, format As String = "wav") As String
   overload: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename*
-  nameWithType.vb: TextToSpeechUtils.GetUniqueTextToSpeechFilename(TextToSpeechConfiguration, String, Locale, String)
-  fullName.vb: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.TextToSpeech.TextToSpeechConfiguration, String, UnityEngine.Localization.Locale, String)
-  name.vb: GetUniqueTextToSpeechFilename(TextToSpeechConfiguration, String, Locale, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats(System.Byte[])
   commentId: M:VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats(System.Byte[])
   id: ShortsInByteArrayToFloats(System.Byte[])
@@ -88,9 +101,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ShortsInByteArrayToFloats(byte[])
-  nameWithType: TextToSpeechUtils.ShortsInByteArrayToFloats(byte[])
-  fullName: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats(byte[])
+  name: ShortsInByteArrayToFloats(Byte[])
+  nameWithType: TextToSpeechUtils.ShortsInByteArrayToFloats(Byte[])
+  fullName: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats(System.Byte[])
   type: Method
   source:
     remote:
@@ -103,7 +116,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech
-  summary: The result comes in byte array, but there are actually short values inside (ranged from short.Min to short.Max).
+  summary: "\nThe result comes in byte array, but there are actually short values inside (ranged from short.Min to short.Max).\n"
   example: []
   syntax:
     content: public static float[] ShortsInByteArrayToFloats(byte[] shorts)
@@ -115,278 +128,320 @@ items:
     content.vb: Public Shared Function ShortsInByteArrayToFloats(shorts As Byte()) As Single()
   overload: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats*
   nameWithType.vb: TextToSpeechUtils.ShortsInByteArrayToFloats(Byte())
-  fullName.vb: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats(System.Byte())
   name.vb: ShortsInByteArrayToFloats(Byte())
 references:
 - uid: VRBuilder.TextToSpeech
   commentId: N:VRBuilder.TextToSpeech
-  href: VRBuilder.html
   name: VRBuilder.TextToSpeech
   nameWithType: VRBuilder.TextToSpeech
   fullName: VRBuilder.TextToSpeech
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.TextToSpeech.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.TextToSpeech.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename*
   commentId: Overload:VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename
-  href: VRBuilder.TextToSpeech.TextToSpeechUtils.html#VRBuilder_TextToSpeech_TextToSpeechUtils_GetUniqueTextToSpeechFilename_VRBuilder_TextToSpeech_TextToSpeechConfiguration_System_String_UnityEngine_Localization_Locale_System_String_
   name: GetUniqueTextToSpeechFilename
   nameWithType: TextToSpeechUtils.GetUniqueTextToSpeechFilename
   fullName: VRBuilder.TextToSpeech.TextToSpeechUtils.GetUniqueTextToSpeechFilename
 - uid: VRBuilder.TextToSpeech.TextToSpeechConfiguration
   commentId: T:VRBuilder.TextToSpeech.TextToSpeechConfiguration
   parent: VRBuilder.TextToSpeech
-  href: VRBuilder.TextToSpeech.TextToSpeechConfiguration.html
   name: TextToSpeechConfiguration
   nameWithType: TextToSpeechConfiguration
   fullName: VRBuilder.TextToSpeech.TextToSpeechConfiguration
@@ -394,13 +449,9 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: UnityEngine.Localization.Locale
   commentId: T:UnityEngine.Localization.Locale
   parent: UnityEngine.Localization
@@ -412,67 +463,60 @@ references:
   name: UnityEngine.Localization
   nameWithType: UnityEngine.Localization
   fullName: UnityEngine.Localization
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-  - name: .
-  - uid: UnityEngine.Localization
-    name: Localization
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-  - name: .
-  - uid: UnityEngine.Localization
-    name: Localization
 - uid: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats*
   commentId: Overload:VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats
-  href: VRBuilder.TextToSpeech.TextToSpeechUtils.html#VRBuilder_TextToSpeech_TextToSpeechUtils_ShortsInByteArrayToFloats_System_Byte___
   name: ShortsInByteArrayToFloats
   nameWithType: TextToSpeechUtils.ShortsInByteArrayToFloats
   fullName: VRBuilder.TextToSpeech.TextToSpeechUtils.ShortsInByteArrayToFloats
 - uid: System.Byte[]
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
   nameWithType.vb: Byte()
-  fullName.vb: Byte()
+  fullName.vb: System.Byte()
   name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: System.Single[]
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float[]
-  nameWithType: float[]
-  fullName: float[]
+  name: Single[]
+  nameWithType: Single[]
+  fullName: System.Single[]
   nameWithType.vb: Single()
-  fullName.vb: Single()
+  fullName.vb: System.Single()
   name.vb: Single()
   spec.csharp:
   - uid: System.Single
-    name: float
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
   - uid: System.Single
     name: Single
+    nameWithType: Single
+    fullName: System.Single
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: (
-  - name: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()

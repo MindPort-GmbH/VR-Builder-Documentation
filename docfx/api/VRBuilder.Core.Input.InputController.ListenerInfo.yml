@@ -26,18 +26,24 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Input
-  summary: Information of the listener registered.
+  summary: "\nInformation of the listener registered.\n"
   example: []
   syntax:
-    content: protected struct InputController.ListenerInfo
-    content.vb: Protected Structure InputController.ListenerInfo
+    content: protected struct ListenerInfo
+    content.vb: Protected Structure ListenerInfo
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
   - System.ValueType.ToString
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  modifiers.csharp:
+  - protected
+  - struct
+  modifiers.vb:
+  - Protected
+  - Structure
 - uid: VRBuilder.Core.Input.InputController.ListenerInfo.ActionListener
   commentId: F:VRBuilder.Core.Input.InputController.ListenerInfo.ActionListener
   id: ActionListener
@@ -65,6 +71,12 @@ items:
     return:
       type: VRBuilder.Core.Input.IInputActionListener
     content.vb: Public ReadOnly ActionListener As IInputActionListener
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Core.Input.InputController.ListenerInfo.Action
   commentId: F:VRBuilder.Core.Input.InputController.ListenerInfo.Action
   id: Action
@@ -92,6 +104,12 @@ items:
     return:
       type: System.Action{VRBuilder.Core.Input.InputController.InputEventArgs}
     content.vb: Public ReadOnly Action As Action(Of InputController.InputEventArgs)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Core.Input.InputController.ListenerInfo.#ctor(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})
   commentId: M:VRBuilder.Core.Input.InputController.ListenerInfo.#ctor(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})
   id: '#ctor(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})'
@@ -99,7 +117,7 @@ items:
   langs:
   - csharp
   - vb
-  name: ListenerInfo(IInputActionListener, Action<InputEventArgs>)
+  name: ListenerInfo(IInputActionListener, Action<InputController.InputEventArgs>)
   nameWithType: InputController.ListenerInfo.ListenerInfo(IInputActionListener, Action<InputController.InputEventArgs>)
   fullName: VRBuilder.Core.Input.InputController.ListenerInfo.ListenerInfo(VRBuilder.Core.Input.IInputActionListener, System.Action<VRBuilder.Core.Input.InputController.InputEventArgs>)
   type: Constructor
@@ -123,236 +141,271 @@ items:
       type: System.Action{VRBuilder.Core.Input.InputController.InputEventArgs}
     content.vb: Public Sub New(actionListener As IInputActionListener, action As Action(Of InputController.InputEventArgs))
   overload: VRBuilder.Core.Input.InputController.ListenerInfo.#ctor*
-  nameWithType.vb: InputController.ListenerInfo.New(IInputActionListener, Action(Of InputController.InputEventArgs))
-  fullName.vb: VRBuilder.Core.Input.InputController.ListenerInfo.New(VRBuilder.Core.Input.IInputActionListener, System.Action(Of VRBuilder.Core.Input.InputController.InputEventArgs))
-  name.vb: New(IInputActionListener, Action(Of InputEventArgs))
+  nameWithType.vb: InputController.ListenerInfo.ListenerInfo(IInputActionListener, Action(Of InputController.InputEventArgs))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Core.Input.InputController.ListenerInfo.ListenerInfo(VRBuilder.Core.Input.IInputActionListener, System.Action(Of VRBuilder.Core.Input.InputController.InputEventArgs))
+  name.vb: ListenerInfo(IInputActionListener, Action(Of InputController.InputEventArgs))
 references:
 - uid: VRBuilder.Core.Input
   commentId: N:VRBuilder.Core.Input
-  href: VRBuilder.html
   name: VRBuilder.Core.Input
   nameWithType: VRBuilder.Core.Input
   fullName: VRBuilder.Core.Input
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Input
-    name: Input
-    href: VRBuilder.Core.Input.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Input
-    name: Input
-    href: VRBuilder.Core.Input.html
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  name: Equals(object)
-  nameWithType: ValueType.Equals(object)
-  fullName: System.ValueType.Equals(object)
-  nameWithType.vb: ValueType.Equals(Object)
-  fullName.vb: System.ValueType.Equals(Object)
-  name.vb: Equals(Object)
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.GetHashCode
   commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   name: GetHashCode()
   nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.ToString
   commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   name: ToString()
   nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype
   name: ValueType
   nameWithType: ValueType
   fullName: System.ValueType
@@ -360,24 +413,18 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Input.IInputActionListener
   commentId: T:VRBuilder.Core.Input.IInputActionListener
   parent: VRBuilder.Core.Input
-  href: VRBuilder.Core.Input.IInputActionListener.html
   name: IInputActionListener
   nameWithType: IInputActionListener
   fullName: VRBuilder.Core.Input.IInputActionListener
@@ -385,7 +432,6 @@ references:
   commentId: T:System.Action{VRBuilder.Core.Input.InputController.InputEventArgs}
   parent: System
   definition: System.Action`1
-  href: https://learn.microsoft.com/dotnet/api/system.action-1
   name: Action<InputController.InputEventArgs>
   nameWithType: Action<InputController.InputEventArgs>
   fullName: System.Action<VRBuilder.Core.Input.InputController.InputEventArgs>
@@ -395,37 +441,38 @@ references:
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
-  - uid: VRBuilder.Core.Input.InputController
-    name: InputController
-    href: VRBuilder.Core.Input.InputController.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Input.InputController.InputEventArgs
-    name: InputEventArgs
-    href: VRBuilder.Core.Input.InputController.InputEventArgs.html
+    name: InputController.InputEventArgs
+    nameWithType: InputController.InputEventArgs
+    fullName: VRBuilder.Core.Input.InputController.InputEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Input.InputController
-    name: InputController
-    href: VRBuilder.Core.Input.InputController.html
-  - name: .
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Input.InputController.InputEventArgs
-    name: InputEventArgs
-    href: VRBuilder.Core.Input.InputController.InputEventArgs.html
+    name: InputController.InputEventArgs
+    nameWithType: InputController.InputEventArgs
+    fullName: VRBuilder.Core.Input.InputController.InputEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.action-1
   name: Action<T>
   nameWithType: Action<T>
   fullName: System.Action<T>
@@ -435,27 +482,35 @@ references:
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Input.InputController.ListenerInfo.#ctor*
   commentId: Overload:VRBuilder.Core.Input.InputController.ListenerInfo.#ctor
-  href: VRBuilder.Core.Input.InputController.ListenerInfo.html#VRBuilder_Core_Input_InputController_ListenerInfo__ctor_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__
   name: ListenerInfo
   nameWithType: InputController.ListenerInfo.ListenerInfo
   fullName: VRBuilder.Core.Input.InputController.ListenerInfo.ListenerInfo
-  nameWithType.vb: InputController.ListenerInfo.New
-  fullName.vb: VRBuilder.Core.Input.InputController.ListenerInfo.New
-  name.vb: New

@@ -27,11 +27,17 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI
-  summary: Allows to inject a settings section into a setting provider.
+  summary: "\nAllows to inject a settings section into a setting provider.\n"
   example: []
   syntax:
     content: public interface IProjectSettingsSection
     content.vb: Public Interface IProjectSettingsSection
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.Title
   commentId: P:VRBuilder.Editor.UI.IProjectSettingsSection.Title
   id: Title
@@ -54,7 +60,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI
-  summary: Title of this section.
+  summary: "\nTitle of this section.\n"
   example: []
   syntax:
     content: string Title { get; }
@@ -63,6 +69,10 @@ items:
       type: System.String
     content.vb: ReadOnly Property Title As String
   overload: VRBuilder.Editor.UI.IProjectSettingsSection.Title*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.TargetPageProvider
   commentId: P:VRBuilder.Editor.UI.IProjectSettingsSection.TargetPageProvider
   id: TargetPageProvider
@@ -85,7 +95,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI
-  summary: Type of the target setting provider.
+  summary: "\nType of the target setting provider.\n"
   example: []
   syntax:
     content: Type TargetPageProvider { get; }
@@ -94,6 +104,10 @@ items:
       type: System.Type
     content.vb: ReadOnly Property TargetPageProvider As Type
   overload: VRBuilder.Editor.UI.IProjectSettingsSection.TargetPageProvider*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.Priority
   commentId: P:VRBuilder.Editor.UI.IProjectSettingsSection.Priority
   id: Priority
@@ -116,7 +130,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI
-  summary: Determines the draw order, lower priority will be drawn first.
+  summary: "\nDetermines the draw order, lower priority will be drawn first.\n"
   example: []
   syntax:
     content: int Priority { get; }
@@ -125,6 +139,10 @@ items:
       type: System.Int32
     content.vb: ReadOnly Property Priority As Integer
   overload: VRBuilder.Editor.UI.IProjectSettingsSection.Priority*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI(System.String)
   commentId: M:VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI(System.String)
   id: OnGUI(System.String)
@@ -132,9 +150,9 @@ items:
   langs:
   - csharp
   - vb
-  name: OnGUI(string)
-  nameWithType: IProjectSettingsSection.OnGUI(string)
-  fullName: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI(string)
+  name: OnGUI(String)
+  nameWithType: IProjectSettingsSection.OnGUI(String)
+  fullName: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI(System.String)
   type: Method
   source:
     remote:
@@ -147,7 +165,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI
-  summary: Your draw call.
+  summary: "\nYour draw call.\n"
   example: []
   syntax:
     content: void OnGUI(string searchContext)
@@ -156,43 +174,14 @@ items:
       type: System.String
     content.vb: Sub OnGUI(searchContext As String)
   overload: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI*
-  nameWithType.vb: IProjectSettingsSection.OnGUI(String)
-  fullName.vb: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI(String)
-  name.vb: OnGUI(String)
 references:
 - uid: VRBuilder.Editor.UI
   commentId: N:VRBuilder.Editor.UI
-  href: VRBuilder.html
   name: VRBuilder.Editor.UI
   nameWithType: VRBuilder.Editor.UI
   fullName: VRBuilder.Editor.UI
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.UI
-    name: UI
-    href: VRBuilder.Editor.UI.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.UI
-    name: UI
-    href: VRBuilder.Editor.UI.html
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.Title*
   commentId: Overload:VRBuilder.Editor.UI.IProjectSettingsSection.Title
-  href: VRBuilder.Editor.UI.IProjectSettingsSection.html#VRBuilder_Editor_UI_IProjectSettingsSection_Title
   name: Title
   nameWithType: IProjectSettingsSection.Title
   fullName: VRBuilder.Editor.UI.IProjectSettingsSection.Title
@@ -200,23 +189,17 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.TargetPageProvider*
   commentId: Overload:VRBuilder.Editor.UI.IProjectSettingsSection.TargetPageProvider
-  href: VRBuilder.Editor.UI.IProjectSettingsSection.html#VRBuilder_Editor_UI_IProjectSettingsSection_TargetPageProvider
   name: TargetPageProvider
   nameWithType: IProjectSettingsSection.TargetPageProvider
   fullName: VRBuilder.Editor.UI.IProjectSettingsSection.TargetPageProvider
@@ -224,13 +207,11 @@ references:
   commentId: T:System.Type
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type
   nameWithType: Type
   fullName: System.Type
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.Priority*
   commentId: Overload:VRBuilder.Editor.UI.IProjectSettingsSection.Priority
-  href: VRBuilder.Editor.UI.IProjectSettingsSection.html#VRBuilder_Editor_UI_IProjectSettingsSection_Priority
   name: Priority
   nameWithType: IProjectSettingsSection.Priority
   fullName: VRBuilder.Editor.UI.IProjectSettingsSection.Priority
@@ -238,16 +219,11 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI*
   commentId: Overload:VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI
-  href: VRBuilder.Editor.UI.IProjectSettingsSection.html#VRBuilder_Editor_UI_IProjectSettingsSection_OnGUI_System_String_
   name: OnGUI
   nameWithType: IProjectSettingsSection.OnGUI
   fullName: VRBuilder.Editor.UI.IProjectSettingsSection.OnGUI

@@ -29,11 +29,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Interface for the ModeHandler used to configure modes during runtime.
+  summary: "\nInterface for the ModeHandler used to configure modes during runtime.\n"
   example: []
   syntax:
     content: public interface IModeHandler
     content.vb: Public Interface IModeHandler
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.ModeChanged
   commentId: E:VRBuilder.Core.Configuration.Modes.IModeHandler.ModeChanged
   id: ModeChanged
@@ -56,7 +62,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: The event that has to be invoked when the current mode changes, for example in <xref href="VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)" data-throw-if-not-resolved="false"></xref> method.
+  summary: "\nThe event that has to be invoked when the current mode changes, for example in <xref href=\"VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
   example: []
   syntax:
     content: event EventHandler<ModeChangedEventArgs> ModeChanged
@@ -85,7 +91,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: The ordered collection of all available process modes.
+  summary: "\nThe ordered collection of all available process modes.\n"
   example: []
   syntax:
     content: ReadOnlyCollection<IMode> AvailableModes { get; }
@@ -94,6 +100,10 @@ items:
       type: System.Collections.ObjectModel.ReadOnlyCollection{VRBuilder.Core.Configuration.Modes.IMode}
     content.vb: ReadOnly Property AvailableModes As ReadOnlyCollection(Of IMode)
   overload: VRBuilder.Core.Configuration.Modes.IModeHandler.AvailableModes*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentModeIndex
   commentId: P:VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentModeIndex
   id: CurrentModeIndex
@@ -116,7 +126,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: The index of the current process mode.
+  summary: "\nThe index of the current process mode.\n"
   example: []
   syntax:
     content: int CurrentModeIndex { get; }
@@ -125,6 +135,10 @@ items:
       type: System.Int32
     content.vb: ReadOnly Property CurrentModeIndex As Integer
   overload: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentModeIndex*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentMode
   commentId: P:VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentMode
   id: CurrentMode
@@ -147,7 +161,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: The current process mode.
+  summary: "\nThe current process mode.\n"
   example: []
   syntax:
     content: IMode CurrentMode { get; }
@@ -156,6 +170,10 @@ items:
       type: VRBuilder.Core.Configuration.Modes.IMode
     content.vb: ReadOnly Property CurrentMode As IMode
   overload: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentMode*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
   commentId: M:VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
   id: SetMode(System.Int32)
@@ -163,9 +181,9 @@ items:
   langs:
   - csharp
   - vb
-  name: SetMode(int)
-  nameWithType: IModeHandler.SetMode(int)
-  fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(int)
+  name: SetMode(Int32)
+  nameWithType: IModeHandler.SetMode(Int32)
+  fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
   type: Method
   source:
     remote:
@@ -178,7 +196,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Set the current process mode.
+  summary: "\nSet the current process mode.\n"
   example: []
   syntax:
     content: void SetMode(int index)
@@ -188,9 +206,6 @@ items:
       description: The index of the desired process mode.
     content.vb: Sub SetMode(index As Integer)
   overload: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode*
-  nameWithType.vb: IModeHandler.SetMode(Integer)
-  fullName.vb: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(Integer)
-  name.vb: SetMode(Integer)
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(VRBuilder.Core.Configuration.Modes.IMode)
   id: SetMode(VRBuilder.Core.Configuration.Modes.IMode)
@@ -213,7 +228,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Set the current process mode, this process mode has to be one of the available modes.
+  summary: "\nSet the current process mode, this process mode has to be one of the available modes.\n"
   example: []
   syntax:
     content: void SetMode(IMode mode)
@@ -226,78 +241,52 @@ items:
 references:
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
   commentId: M:VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
   parent: VRBuilder.Core.Configuration.Modes.IModeHandler
   isExternal: true
-  href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_SetMode_System_Int32_
-  name: SetMode(int)
-  nameWithType: IModeHandler.SetMode(int)
-  fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(int)
-  nameWithType.vb: IModeHandler.SetMode(Integer)
-  fullName.vb: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(Integer)
-  name.vb: SetMode(Integer)
+  name: SetMode(Int32)
+  nameWithType: IModeHandler.SetMode(Int32)
+  fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
     name: SetMode
-    href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_SetMode_System_Int32_
+    nameWithType: IModeHandler.SetMode
+    fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Int32
-    name: int
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)
     name: SetMode
-    href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_SetMode_System_Int32_
+    nameWithType: IModeHandler.SetMode
+    fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.EventHandler{VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs}
   commentId: T:System.EventHandler{VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs}
   parent: System
   definition: System.EventHandler`1
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<ModeChangedEventArgs>
   nameWithType: EventHandler<ModeChangedEventArgs>
   fullName: System.EventHandler<VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs>
@@ -307,36 +296,44 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs
     name: ModeChangedEventArgs
-    href: VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs.html
+    nameWithType: ModeChangedEventArgs
+    fullName: VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs
     name: ModeChangedEventArgs
-    href: VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs.html
+    nameWithType: ModeChangedEventArgs
+    fullName: VRBuilder.Core.Configuration.Modes.ModeChangedEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler
   commentId: T:VRBuilder.Core.Configuration.Modes.IModeHandler
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IModeHandler.html
   name: IModeHandler
   nameWithType: IModeHandler
   fullName: VRBuilder.Core.Configuration.Modes.IModeHandler
 - uid: System.EventHandler`1
   commentId: T:System.EventHandler`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<TEventArgs>
   nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
@@ -346,31 +343,41 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.AvailableModes*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.IModeHandler.AvailableModes
-  href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_AvailableModes
   name: AvailableModes
   nameWithType: IModeHandler.AvailableModes
   fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.AvailableModes
@@ -378,7 +385,6 @@ references:
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{VRBuilder.Core.Configuration.Modes.IMode}
   parent: System.Collections.ObjectModel
   definition: System.Collections.ObjectModel.ReadOnlyCollection`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<IMode>
   nameWithType: ReadOnlyCollection<IMode>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<VRBuilder.Core.Configuration.Modes.IMode>
@@ -388,29 +394,38 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<T>
   nameWithType: ReadOnlyCollection<T>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
@@ -420,61 +435,41 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.ObjectModel
-    name: ObjectModel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.ObjectModel
-    name: ObjectModel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentModeIndex*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentModeIndex
-  href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_CurrentModeIndex
   name: CurrentModeIndex
   nameWithType: IModeHandler.CurrentModeIndex
   fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentModeIndex
@@ -482,29 +477,22 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentMode*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentMode
-  href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_CurrentMode
   name: CurrentMode
   nameWithType: IModeHandler.CurrentMode
   fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.CurrentMode
 - uid: VRBuilder.Core.Configuration.Modes.IMode
   commentId: T:VRBuilder.Core.Configuration.Modes.IMode
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IMode.html
   name: IMode
   nameWithType: IMode
   fullName: VRBuilder.Core.Configuration.Modes.IMode
 - uid: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode
-  href: VRBuilder.Core.Configuration.Modes.IModeHandler.html#VRBuilder_Core_Configuration_Modes_IModeHandler_SetMode_System_Int32_
   name: SetMode
   nameWithType: IModeHandler.SetMode
   fullName: VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode

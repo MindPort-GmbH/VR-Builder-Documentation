@@ -34,13 +34,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip(System.String,UnityEngine.Localization.Locale,VRBuilder.TextToSpeech.TextToSpeechConfiguration)
   commentId: M:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip(System.String,UnityEngine.Localization.Locale,VRBuilder.TextToSpeech.TextToSpeechConfiguration)
   id: CacheAudioClip(System.String,UnityEngine.Localization.Locale,VRBuilder.TextToSpeech.TextToSpeechConfiguration)
@@ -48,9 +55,9 @@ items:
   langs:
   - csharp
   - vb
-  name: CacheAudioClip(string, Locale, TextToSpeechConfiguration)
-  nameWithType: TextToSpeechEditorUtils.CacheAudioClip(string, Locale, TextToSpeechConfiguration)
-  fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip(string, UnityEngine.Localization.Locale, VRBuilder.TextToSpeech.TextToSpeechConfiguration)
+  name: CacheAudioClip(String, Locale, TextToSpeechConfiguration)
+  nameWithType: TextToSpeechEditorUtils.CacheAudioClip(String, Locale, TextToSpeechConfiguration)
+  fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip(System.String, UnityEngine.Localization.Locale, VRBuilder.TextToSpeech.TextToSpeechConfiguration)
   type: Method
   source:
     remote:
@@ -63,10 +70,10 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech
-  summary: Generates TTS audio and creates a file.
+  summary: "\nGenerates TTS audio and creates a file.\n"
   example: []
   syntax:
-    content: public static Task CacheAudioClip(string text, Locale locale, TextToSpeechConfiguration configuration)
+    content: public static async Task CacheAudioClip(string text, Locale locale, TextToSpeechConfiguration configuration)
     parameters:
     - id: text
       type: System.String
@@ -78,9 +85,13 @@ items:
       type: System.Threading.Tasks.Task
     content.vb: Public Shared Function CacheAudioClip(text As String, locale As Locale, configuration As TextToSpeechConfiguration) As Task
   overload: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip*
-  nameWithType.vb: TextToSpeechEditorUtils.CacheAudioClip(String, Locale, TextToSpeechConfiguration)
-  fullName.vb: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip(String, UnityEngine.Localization.Locale, VRBuilder.TextToSpeech.TextToSpeechConfiguration)
-  name.vb: CacheAudioClip(String, Locale, TextToSpeechConfiguration)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable{VRBuilder.TextToSpeech.Audio.ITextToSpeechContent},UnityEngine.Localization.Locale,System.String)
   commentId: M:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable{VRBuilder.TextToSpeech.Audio.ITextToSpeechContent},UnityEngine.Localization.Locale,System.String)
   id: CacheTextToSpeechClips(System.Collections.Generic.IEnumerable{VRBuilder.TextToSpeech.Audio.ITextToSpeechContent},UnityEngine.Localization.Locale,System.String)
@@ -88,9 +99,9 @@ items:
   langs:
   - csharp
   - vb
-  name: CacheTextToSpeechClips(IEnumerable<ITextToSpeechContent>, Locale, string)
-  nameWithType: TextToSpeechEditorUtils.CacheTextToSpeechClips(IEnumerable<ITextToSpeechContent>, Locale, string)
-  fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable<VRBuilder.TextToSpeech.Audio.ITextToSpeechContent>, UnityEngine.Localization.Locale, string)
+  name: CacheTextToSpeechClips(IEnumerable<ITextToSpeechContent>, Locale, String)
+  nameWithType: TextToSpeechEditorUtils.CacheTextToSpeechClips(IEnumerable<ITextToSpeechContent>, Locale, String)
+  fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable<VRBuilder.TextToSpeech.Audio.ITextToSpeechContent>, UnityEngine.Localization.Locale, System.String)
   type: Method
   source:
     remote:
@@ -103,10 +114,10 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech
-  summary: Generates files for all <xref href="VRBuilder.TextToSpeech.Audio.TextToSpeechAudio" data-throw-if-not-resolved="false"></xref> passed.
+  summary: "\nGenerates files for all <xref href=\"VRBuilder.TextToSpeech.Audio.TextToSpeechAudio\" data-throw-if-not-resolved=\"false\"></xref> passed.\n"
   example: []
   syntax:
-    content: public static Task<int> CacheTextToSpeechClips(IEnumerable<ITextToSpeechContent> clips, Locale locale, string localizationTable)
+    content: public static async Task<int> CacheTextToSpeechClips(IEnumerable<ITextToSpeechContent> clips, Locale locale, string localizationTable)
     parameters:
     - id: clips
       type: System.Collections.Generic.IEnumerable{VRBuilder.TextToSpeech.Audio.ITextToSpeechContent}
@@ -119,7 +130,14 @@ items:
     content.vb: Public Shared Function CacheTextToSpeechClips(clips As IEnumerable(Of ITextToSpeechContent), locale As Locale, localizationTable As String) As Task(Of Integer)
   overload: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips*
   nameWithType.vb: TextToSpeechEditorUtils.CacheTextToSpeechClips(IEnumerable(Of ITextToSpeechContent), Locale, String)
-  fullName.vb: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable(Of VRBuilder.TextToSpeech.Audio.ITextToSpeechContent), UnityEngine.Localization.Locale, String)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable(Of VRBuilder.TextToSpeech.Audio.ITextToSpeechContent), UnityEngine.Localization.Locale, System.String)
   name.vb: CacheTextToSpeechClips(IEnumerable(Of ITextToSpeechContent), Locale, String)
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses(UnityEngine.Localization.Locale)
   commentId: M:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses(UnityEngine.Localization.Locale)
@@ -143,10 +161,10 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech
-  summary: Generates TTS audio files for all available processes for the specified <code class="paramref">locale</code>.
+  summary: "\nGenerates TTS audio files for all available processes for the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">locale</code>.\n"
   example: []
   syntax:
-    content: public static Task GenerateTextToSpeechForAllProcesses(Locale locale)
+    content: public static async Task GenerateTextToSpeechForAllProcesses(Locale locale)
     parameters:
     - id: locale
       type: UnityEngine.Localization.Locale
@@ -155,6 +173,13 @@ items:
       type: System.Threading.Tasks.Task
     content.vb: Public Shared Function GenerateTextToSpeechForAllProcesses(locale As Locale) As Task
   overload: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
   commentId: M:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
   id: GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
@@ -177,12 +202,19 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech
-  summary: Generates TTS audio files for the the active or default locale for all processes.
+  summary: "\nGenerates TTS audio files for the the active or default locale for all processes.\n"
   example: []
   syntax:
-    content: public static void GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale()
-    content.vb: Public Shared Sub GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale()
+    content: public static async void GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale()
+    content.vb: Public Shared Sub GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
   overload: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses
   commentId: M:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses
   id: GenerateTextToSpeechForAllProcesses
@@ -205,283 +237,319 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech
-  summary: Generates TTS audio files for all project locales for all processes.
+  summary: "\nGenerates TTS audio files for all project locales for all processes.\n"
   example: []
   syntax:
-    content: public static void GenerateTextToSpeechForAllProcesses()
-    content.vb: Public Shared Sub GenerateTextToSpeechForAllProcesses()
+    content: public static async void GenerateTextToSpeechForAllProcesses()
+    content.vb: Public Shared Sub GenerateTextToSpeechForAllProcesses
   overload: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: VRBuilder.Editor.TextToSpeech
   commentId: N:VRBuilder.Editor.TextToSpeech
-  href: VRBuilder.html
   name: VRBuilder.Editor.TextToSpeech
   nameWithType: VRBuilder.Editor.TextToSpeech
   fullName: VRBuilder.Editor.TextToSpeech
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.Editor.TextToSpeech.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.Editor.TextToSpeech.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip
-  href: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.html#VRBuilder_Editor_TextToSpeech_TextToSpeechEditorUtils_CacheAudioClip_System_String_UnityEngine_Localization_Locale_VRBuilder_TextToSpeech_TextToSpeechConfiguration_
   name: CacheAudioClip
   nameWithType: TextToSpeechEditorUtils.CacheAudioClip
   fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheAudioClip
@@ -489,13 +557,9 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: UnityEngine.Localization.Locale
   commentId: T:UnityEngine.Localization.Locale
   parent: UnityEngine.Localization
@@ -505,7 +569,6 @@ references:
 - uid: VRBuilder.TextToSpeech.TextToSpeechConfiguration
   commentId: T:VRBuilder.TextToSpeech.TextToSpeechConfiguration
   parent: VRBuilder.TextToSpeech
-  href: VRBuilder.TextToSpeech.TextToSpeechConfiguration.html
   name: TextToSpeechConfiguration
   nameWithType: TextToSpeechConfiguration
   fullName: VRBuilder.TextToSpeech.TextToSpeechConfiguration
@@ -513,7 +576,6 @@ references:
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
   name: Task
   nameWithType: Task
   fullName: System.Threading.Tasks.Task
@@ -522,86 +584,24 @@ references:
   name: UnityEngine.Localization
   nameWithType: UnityEngine.Localization
   fullName: UnityEngine.Localization
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-  - name: .
-  - uid: UnityEngine.Localization
-    name: Localization
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-  - name: .
-  - uid: UnityEngine.Localization
-    name: Localization
 - uid: VRBuilder.TextToSpeech
   commentId: N:VRBuilder.TextToSpeech
-  href: VRBuilder.html
   name: VRBuilder.TextToSpeech
   nameWithType: VRBuilder.TextToSpeech
   fullName: VRBuilder.TextToSpeech
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.TextToSpeech.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TextToSpeech
-    name: TextToSpeech
-    href: VRBuilder.TextToSpeech.html
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Threading.Tasks
   nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
   commentId: T:VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
-  href: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio.html
   name: TextToSpeechAudio
   nameWithType: TextToSpeechAudio
   fullName: VRBuilder.TextToSpeech.Audio.TextToSpeechAudio
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips
-  href: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.html#VRBuilder_Editor_TextToSpeech_TextToSpeechEditorUtils_CacheTextToSpeechClips_System_Collections_Generic_IEnumerable_VRBuilder_TextToSpeech_Audio_ITextToSpeechContent__UnityEngine_Localization_Locale_System_String_
   name: CacheTextToSpeechClips
   nameWithType: TextToSpeechEditorUtils.CacheTextToSpeechClips
   fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.CacheTextToSpeechClips
@@ -609,7 +609,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{VRBuilder.TextToSpeech.Audio.ITextToSpeechContent}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<ITextToSpeechContent>
   nameWithType: IEnumerable<ITextToSpeechContent>
   fullName: System.Collections.Generic.IEnumerable<VRBuilder.TextToSpeech.Audio.ITextToSpeechContent>
@@ -619,62 +618,82 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
     name: ITextToSpeechContent
+    nameWithType: ITextToSpeechContent
+    fullName: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
     name: ITextToSpeechContent
+    nameWithType: ITextToSpeechContent
+    fullName: VRBuilder.TextToSpeech.Audio.ITextToSpeechContent
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Threading.Tasks.Task{System.Int32}
   commentId: T:System.Threading.Tasks.Task{System.Int32}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<int>
-  nameWithType: Task<int>
-  fullName: System.Threading.Tasks.Task<int>
-  nameWithType.vb: Task(Of Integer)
-  fullName.vb: System.Threading.Tasks.Task(Of Integer)
-  name.vb: Task(Of Integer)
+  name: Task<Int32>
+  nameWithType: Task<Int32>
+  fullName: System.Threading.Tasks.Task<System.Int32>
+  nameWithType.vb: Task(Of Int32)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Int32)
+  name.vb: Task(Of Int32)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Int32
-    name: int
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -684,62 +703,42 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: System.Threading.Tasks.Task`1
   commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   name: Task<TResult>
   nameWithType: Task<TResult>
   fullName: System.Threading.Tasks.Task<TResult>
@@ -749,30 +748,40 @@ references:
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses
-  href: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.html#VRBuilder_Editor_TextToSpeech_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses_UnityEngine_Localization_Locale_
   name: GenerateTextToSpeechForAllProcesses
   nameWithType: TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses
   fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses
 - uid: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
-  href: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.html#VRBuilder_Editor_TextToSpeech_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
   name: GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
   nameWithType: TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale
   fullName: VRBuilder.Editor.TextToSpeech.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale

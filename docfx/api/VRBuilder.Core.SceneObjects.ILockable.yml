@@ -29,11 +29,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Basic interface for everything which is lockable.
+  summary: "\nBasic interface for everything which is lockable.\n"
   example: []
   syntax:
     content: public interface ILockable
     content.vb: Public Interface ILockable
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.SceneObjects.ILockable.Locked
   commentId: E:VRBuilder.Core.SceneObjects.ILockable.Locked
   id: Locked
@@ -56,7 +62,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Will be called when the object containing this interface is locked.
+  summary: "\nWill be called when the object containing this interface is locked.\n"
   example: []
   syntax:
     content: event EventHandler<LockStateChangedEventArgs> Locked
@@ -85,7 +91,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Will be called when the object containing this interface is unlocked.
+  summary: "\nWill be called when the object containing this interface is unlocked.\n"
   example: []
   syntax:
     content: event EventHandler<LockStateChangedEventArgs> Unlocked
@@ -114,7 +120,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Returns if the object is locked.
+  summary: "\nReturns if the object is locked.\n"
   example: []
   syntax:
     content: bool IsLocked { get; }
@@ -123,6 +129,10 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsLocked As Boolean
   overload: VRBuilder.Core.SceneObjects.ILockable.IsLocked*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
   commentId: M:VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
   id: SetLocked(System.Boolean)
@@ -130,9 +140,9 @@ items:
   langs:
   - csharp
   - vb
-  name: SetLocked(bool)
-  nameWithType: ILockable.SetLocked(bool)
-  fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked(bool)
+  name: SetLocked(Boolean)
+  nameWithType: ILockable.SetLocked(Boolean)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked(System.Boolean)
   type: Method
   source:
     remote:
@@ -145,7 +155,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Changes the lock state of the object.
+  summary: "\nChanges the lock state of the object.\n"
   example: []
   syntax:
     content: void SetLocked(bool lockState)
@@ -154,9 +164,6 @@ items:
       type: System.Boolean
     content.vb: Sub SetLocked(lockState As Boolean)
   overload: VRBuilder.Core.SceneObjects.ILockable.SetLocked*
-  nameWithType.vb: ILockable.SetLocked(Boolean)
-  fullName.vb: VRBuilder.Core.SceneObjects.ILockable.SetLocked(Boolean)
-  name.vb: SetLocked(Boolean)
 - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
   commentId: M:VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
   id: RequestLocked(System.Boolean,VRBuilder.Core.IStepData)
@@ -164,9 +171,9 @@ items:
   langs:
   - csharp
   - vb
-  name: RequestLocked(bool, IStepData)
-  nameWithType: ILockable.RequestLocked(bool, IStepData)
-  fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(bool, VRBuilder.Core.IStepData)
+  name: RequestLocked(Boolean, IStepData)
+  nameWithType: ILockable.RequestLocked(Boolean, IStepData)
+  fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(System.Boolean, VRBuilder.Core.IStepData)
   type: Method
   source:
     remote:
@@ -179,7 +186,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Requests a change on the lock state of the object.
+  summary: "\nRequests a change on the lock state of the object.\n"
   example: []
   syntax:
     content: void RequestLocked(bool lockState, IStepData stepData = null)
@@ -190,9 +197,6 @@ items:
       type: VRBuilder.Core.IStepData
     content.vb: Sub RequestLocked(lockState As Boolean, stepData As IStepData = Nothing)
   overload: VRBuilder.Core.SceneObjects.ILockable.RequestLocked*
-  nameWithType.vb: ILockable.RequestLocked(Boolean, IStepData)
-  fullName.vb: VRBuilder.Core.SceneObjects.ILockable.RequestLocked(Boolean, VRBuilder.Core.IStepData)
-  name.vb: RequestLocked(Boolean, IStepData)
 - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
   commentId: M:VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker(VRBuilder.Core.IStepData)
   id: RemoveUnlocker(VRBuilder.Core.IStepData)
@@ -215,7 +219,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Manually removes a step data keeping the object unlocked.
+  summary: "\nManually removes a step data keeping the object unlocked.\n"
   example: []
   syntax:
     content: bool RemoveUnlocker(IStepData data)
@@ -229,39 +233,13 @@ items:
 references:
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System.EventHandler{VRBuilder.Core.SceneObjects.LockStateChangedEventArgs}
   commentId: T:System.EventHandler{VRBuilder.Core.SceneObjects.LockStateChangedEventArgs}
   parent: System
   definition: System.EventHandler`1
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<LockStateChangedEventArgs>
   nameWithType: EventHandler<LockStateChangedEventArgs>
   fullName: System.EventHandler<VRBuilder.Core.SceneObjects.LockStateChangedEventArgs>
@@ -271,29 +249,38 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.SceneObjects.LockStateChangedEventArgs
     name: LockStateChangedEventArgs
-    href: VRBuilder.Core.SceneObjects.LockStateChangedEventArgs.html
+    nameWithType: LockStateChangedEventArgs
+    fullName: VRBuilder.Core.SceneObjects.LockStateChangedEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.SceneObjects.LockStateChangedEventArgs
     name: LockStateChangedEventArgs
-    href: VRBuilder.Core.SceneObjects.LockStateChangedEventArgs.html
+    nameWithType: LockStateChangedEventArgs
+    fullName: VRBuilder.Core.SceneObjects.LockStateChangedEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.EventHandler`1
   commentId: T:System.EventHandler`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<TEventArgs>
   nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
@@ -303,31 +290,41 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.SceneObjects.ILockable.IsLocked*
   commentId: Overload:VRBuilder.Core.SceneObjects.ILockable.IsLocked
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_IsLocked
   name: IsLocked
   nameWithType: ILockable.IsLocked
   fullName: VRBuilder.Core.SceneObjects.ILockable.IsLocked
@@ -335,57 +332,32 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.SceneObjects.ILockable.SetLocked*
   commentId: Overload:VRBuilder.Core.SceneObjects.ILockable.SetLocked
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_SetLocked_System_Boolean_
   name: SetLocked
   nameWithType: ILockable.SetLocked
   fullName: VRBuilder.Core.SceneObjects.ILockable.SetLocked
 - uid: VRBuilder.Core.SceneObjects.ILockable.RequestLocked*
   commentId: Overload:VRBuilder.Core.SceneObjects.ILockable.RequestLocked
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_
   name: RequestLocked
   nameWithType: ILockable.RequestLocked
   fullName: VRBuilder.Core.SceneObjects.ILockable.RequestLocked
 - uid: VRBuilder.Core.IStepData
   commentId: T:VRBuilder.Core.IStepData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStepData.html
   name: IStepData
   nameWithType: IStepData
   fullName: VRBuilder.Core.IStepData
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker*
   commentId: Overload:VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker
-  href: VRBuilder.Core.SceneObjects.ILockable.html#VRBuilder_Core_SceneObjects_ILockable_RemoveUnlocker_VRBuilder_Core_IStepData_
   name: RemoveUnlocker
   nameWithType: ILockable.RemoveUnlocker
   fullName: VRBuilder.Core.SceneObjects.ILockable.RemoveUnlocker

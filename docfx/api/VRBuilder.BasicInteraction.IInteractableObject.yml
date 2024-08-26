@@ -27,11 +27,17 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Base interface to determine that the given class is an interactable object.
+  summary: "\nBase interface to determine that the given class is an interactable object.\n"
   example: []
   syntax:
     content: public interface IInteractableObject
     content.vb: Public Interface IInteractableObject
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.BasicInteraction.IInteractableObject.GameObject
   commentId: P:VRBuilder.BasicInteraction.IInteractableObject.GameObject
   id: GameObject
@@ -54,15 +60,19 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: GameObject this interactable object is attached to.
+  summary: "\nGameObject this interactable object is attached to.\n"
   example: []
   syntax:
     content: GameObject GameObject { get; }
     parameters: []
     return:
-      type: UnityEngine.GameObject
+      type: GameObject
     content.vb: ReadOnly Property GameObject As GameObject
   overload: VRBuilder.BasicInteraction.IInteractableObject.GameObject*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.IInteractableObject.IsTouchable
   commentId: P:VRBuilder.BasicInteraction.IInteractableObject.IsTouchable
   id: IsTouchable
@@ -85,7 +95,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Determines if this interactable object can be touched.
+  summary: "\nDetermines if this interactable object can be touched.\n"
   example: []
   syntax:
     content: bool IsTouchable { set; }
@@ -94,6 +104,10 @@ items:
       type: System.Boolean
     content.vb: WriteOnly Property IsTouchable As Boolean
   overload: VRBuilder.BasicInteraction.IInteractableObject.IsTouchable*
+  modifiers.csharp:
+  - set
+  modifiers.vb:
+  - WriteOnly
 - uid: VRBuilder.BasicInteraction.IInteractableObject.IsGrabbable
   commentId: P:VRBuilder.BasicInteraction.IInteractableObject.IsGrabbable
   id: IsGrabbable
@@ -116,7 +130,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Determines if this interactable object can be grabbed.
+  summary: "\nDetermines if this interactable object can be grabbed.\n"
   example: []
   syntax:
     content: bool IsGrabbable { set; }
@@ -125,6 +139,10 @@ items:
       type: System.Boolean
     content.vb: WriteOnly Property IsGrabbable As Boolean
   overload: VRBuilder.BasicInteraction.IInteractableObject.IsGrabbable*
+  modifiers.csharp:
+  - set
+  modifiers.vb:
+  - WriteOnly
 - uid: VRBuilder.BasicInteraction.IInteractableObject.IsUsable
   commentId: P:VRBuilder.BasicInteraction.IInteractableObject.IsUsable
   id: IsUsable
@@ -147,7 +165,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Determines if this interactable object can be used.
+  summary: "\nDetermines if this interactable object can be used.\n"
   example: []
   syntax:
     content: bool IsUsable { set; }
@@ -156,51 +174,28 @@ items:
       type: System.Boolean
     content.vb: WriteOnly Property IsUsable As Boolean
   overload: VRBuilder.BasicInteraction.IInteractableObject.IsUsable*
+  modifiers.csharp:
+  - set
+  modifiers.vb:
+  - WriteOnly
 references:
 - uid: VRBuilder.BasicInteraction
   commentId: N:VRBuilder.BasicInteraction
-  href: VRBuilder.html
   name: VRBuilder.BasicInteraction
   nameWithType: VRBuilder.BasicInteraction
   fullName: VRBuilder.BasicInteraction
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
 - uid: VRBuilder.BasicInteraction.IInteractableObject.GameObject*
   commentId: Overload:VRBuilder.BasicInteraction.IInteractableObject.GameObject
-  href: VRBuilder.BasicInteraction.IInteractableObject.html#VRBuilder_BasicInteraction_IInteractableObject_GameObject
   name: GameObject
   nameWithType: IInteractableObject.GameObject
   fullName: VRBuilder.BasicInteraction.IInteractableObject.GameObject
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
+- uid: GameObject
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: UnityEngine.GameObject
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: GameObject
 - uid: VRBuilder.BasicInteraction.IInteractableObject.IsTouchable*
   commentId: Overload:VRBuilder.BasicInteraction.IInteractableObject.IsTouchable
-  href: VRBuilder.BasicInteraction.IInteractableObject.html#VRBuilder_BasicInteraction_IInteractableObject_IsTouchable
   name: IsTouchable
   nameWithType: IInteractableObject.IsTouchable
   fullName: VRBuilder.BasicInteraction.IInteractableObject.IsTouchable
@@ -208,29 +203,22 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.BasicInteraction.IInteractableObject.IsGrabbable*
   commentId: Overload:VRBuilder.BasicInteraction.IInteractableObject.IsGrabbable
-  href: VRBuilder.BasicInteraction.IInteractableObject.html#VRBuilder_BasicInteraction_IInteractableObject_IsGrabbable
   name: IsGrabbable
   nameWithType: IInteractableObject.IsGrabbable
   fullName: VRBuilder.BasicInteraction.IInteractableObject.IsGrabbable
 - uid: VRBuilder.BasicInteraction.IInteractableObject.IsUsable*
   commentId: Overload:VRBuilder.BasicInteraction.IInteractableObject.IsUsable
-  href: VRBuilder.BasicInteraction.IInteractableObject.html#VRBuilder_BasicInteraction_IInteractableObject_IsUsable
   name: IsUsable
   nameWithType: IInteractableObject.IsUsable
   fullName: VRBuilder.BasicInteraction.IInteractableObject.IsUsable

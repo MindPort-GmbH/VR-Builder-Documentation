@@ -29,7 +29,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: A container for a list of guids that are associated to an object as tags.
+  summary: "\nA container for a list of guids that are associated to an object as tags.\n"
   example: []
   syntax:
     content: >-
@@ -46,6 +46,12 @@ items:
     arguments:
     - type: System.String
       value: Use IGuidContainer instead.
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.SceneObjects.ITagContainer.TagAdded
   commentId: E:VRBuilder.Core.SceneObjects.ITagContainer.TagAdded
   id: TagAdded
@@ -68,7 +74,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Raised when a tag is added.
+  summary: "\nRaised when a tag is added.\n"
   example: []
   syntax:
     content: event EventHandler<GuidContainerEventArgs> TagAdded
@@ -97,7 +103,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Raised when a tag is removed.
+  summary: "\nRaised when a tag is removed.\n"
   example: []
   syntax:
     content: event EventHandler<GuidContainerEventArgs> TagRemoved
@@ -126,7 +132,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: All tags on the object.
+  summary: "\nAll tags on the object.\n"
   example: []
   syntax:
     content: IEnumerable<Guid> Tags { get; }
@@ -135,6 +141,10 @@ items:
       type: System.Collections.Generic.IEnumerable{System.Guid}
     content.vb: ReadOnly Property Tags As IEnumerable(Of Guid)
   overload: VRBuilder.Core.SceneObjects.ITagContainer.Tags*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.SceneObjects.ITagContainer.HasTag(System.Guid)
   commentId: M:VRBuilder.Core.SceneObjects.ITagContainer.HasTag(System.Guid)
   id: HasTag(System.Guid)
@@ -157,7 +167,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: True if the object has the specified tag.
+  summary: "\nTrue if the object has the specified tag.\n"
   example: []
   syntax:
     content: bool HasTag(Guid tag)
@@ -190,7 +200,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Add the specified tag.
+  summary: "\nAdd the specified tag.\n"
   example: []
   syntax:
     content: void AddTag(Guid tag)
@@ -221,7 +231,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Remove the specified tag.
+  summary: "\nRemove the specified tag.\n"
   example: []
   syntax:
     content: bool RemoveTag(Guid tag)
@@ -235,39 +245,13 @@ items:
 references:
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System.EventHandler{VRBuilder.Core.SceneObjects.GuidContainerEventArgs}
   commentId: T:System.EventHandler{VRBuilder.Core.SceneObjects.GuidContainerEventArgs}
   parent: System
   definition: System.EventHandler`1
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<GuidContainerEventArgs>
   nameWithType: EventHandler<GuidContainerEventArgs>
   fullName: System.EventHandler<VRBuilder.Core.SceneObjects.GuidContainerEventArgs>
@@ -277,29 +261,38 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.SceneObjects.GuidContainerEventArgs
     name: GuidContainerEventArgs
-    href: VRBuilder.Core.SceneObjects.GuidContainerEventArgs.html
+    nameWithType: GuidContainerEventArgs
+    fullName: VRBuilder.Core.SceneObjects.GuidContainerEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.SceneObjects.GuidContainerEventArgs
     name: GuidContainerEventArgs
-    href: VRBuilder.Core.SceneObjects.GuidContainerEventArgs.html
+    nameWithType: GuidContainerEventArgs
+    fullName: VRBuilder.Core.SceneObjects.GuidContainerEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.EventHandler`1
   commentId: T:System.EventHandler`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<TEventArgs>
   nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
@@ -309,31 +302,41 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.SceneObjects.ITagContainer.Tags*
   commentId: Overload:VRBuilder.Core.SceneObjects.ITagContainer.Tags
-  href: VRBuilder.Core.SceneObjects.ITagContainer.html#VRBuilder_Core_SceneObjects_ITagContainer_Tags
   name: Tags
   nameWithType: ITagContainer.Tags
   fullName: VRBuilder.Core.SceneObjects.ITagContainer.Tags
@@ -341,7 +344,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<Guid>
   nameWithType: IEnumerable<Guid>
   fullName: System.Collections.Generic.IEnumerable<System.Guid>
@@ -351,31 +353,40 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Guid
     name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.guid
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Guid
     name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.guid
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -385,61 +396,41 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.SceneObjects.ITagContainer.HasTag*
   commentId: Overload:VRBuilder.Core.SceneObjects.ITagContainer.HasTag
-  href: VRBuilder.Core.SceneObjects.ITagContainer.html#VRBuilder_Core_SceneObjects_ITagContainer_HasTag_System_Guid_
   name: HasTag
   nameWithType: ITagContainer.HasTag
   fullName: VRBuilder.Core.SceneObjects.ITagContainer.HasTag
@@ -447,7 +438,6 @@ references:
   commentId: T:System.Guid
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
@@ -455,22 +445,16 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.SceneObjects.ITagContainer.AddTag*
   commentId: Overload:VRBuilder.Core.SceneObjects.ITagContainer.AddTag
-  href: VRBuilder.Core.SceneObjects.ITagContainer.html#VRBuilder_Core_SceneObjects_ITagContainer_AddTag_System_Guid_
   name: AddTag
   nameWithType: ITagContainer.AddTag
   fullName: VRBuilder.Core.SceneObjects.ITagContainer.AddTag
 - uid: VRBuilder.Core.SceneObjects.ITagContainer.RemoveTag*
   commentId: Overload:VRBuilder.Core.SceneObjects.ITagContainer.RemoveTag
-  href: VRBuilder.Core.SceneObjects.ITagContainer.html#VRBuilder_Core_SceneObjects_ITagContainer_RemoveTag_System_Guid_
   name: RemoveTag
   nameWithType: ITagContainer.RemoveTag
   fullName: VRBuilder.Core.SceneObjects.ITagContainer.RemoveTag

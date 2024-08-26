@@ -26,14 +26,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Base class for list-based implementations of the <xref href="VRBuilder.Core.Configuration.Modes.TypeRule%601" data-throw-if-not-resolved="false"></xref> class.
+  summary: "\nBase class for list-based implementations of the <xref href=\"VRBuilder.Core.Configuration.Modes.TypeRule%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
     content: 'public abstract class ListTypeRule<TRecursive, TValueBase> : TypeRule<TValueBase>, IRule<Type> where TRecursive : ListTypeRule<TRecursive, TValueBase>, new()'
     typeParameters:
     - id: TRecursive
     - id: TValueBase
-    content.vb: Public MustInherit Class ListTypeRule(Of TRecursive As {ListTypeRule(Of TRecursive, TValueBase), New}, TValueBase) Inherits TypeRule(Of TValueBase) Implements IRule(Of Type)
+    content.vb: >-
+      Public MustInherit Class ListTypeRule(Of TRecursive As {ListTypeRule(Of TRecursive, TValueBase), New}, TValueBase)
+
+          Inherits TypeRule(Of TValueBase)
+
+          Implements IRule(Of Type)
   inheritance:
   - System.Object
   - VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}
@@ -46,14 +51,22 @@ items:
   - VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}.IsQualifiedBy``1
   - VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}.IsQualifiedBy(System.Type)
   - VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}.IsQualifiedByPredicate(System.Type)
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   nameWithType.vb: ListTypeRule(Of TRecursive, TValueBase)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
   fullName.vb: VRBuilder.Core.Configuration.Modes.ListTypeRule(Of TRecursive, TValueBase)
   name.vb: ListTypeRule(Of TRecursive, TValueBase)
 - uid: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.StoredTypes
@@ -86,6 +99,12 @@ items:
     content.vb: Protected ReadOnly Property StoredTypes As HashSet(Of Type)
   overload: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.StoredTypes*
   nameWithType.vb: ListTypeRule(Of TRecursive, TValueBase).StoredTypes
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
   fullName.vb: VRBuilder.Core.Configuration.Modes.ListTypeRule(Of TRecursive, TValueBase).StoredTypes
 - uid: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Add``1
   commentId: M:VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Add``1
@@ -109,18 +128,25 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Adds an additional Type to the list and returns a changed instance of this rule.
+  summary: "\nAdds an additional Type to the list and returns a changed instance of this rule.\n"
   example: []
   syntax:
-    content: 'public TRecursive Add<T>() where T : TValueBase'
+    content: >-
+      public TRecursive Add<T>()
+
+          where T : TValueBase
     typeParameters:
     - id: T
       description: Type which is added.
     return:
       type: '{TRecursive}'
-    content.vb: Public Function Add(Of T As TValueBase)() As TRecursive
+    content.vb: Public Function Add(Of T As TValueBase) As TRecursive
   overload: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Add*
   nameWithType.vb: ListTypeRule(Of TRecursive, TValueBase).Add(Of T)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.Configuration.Modes.ListTypeRule(Of TRecursive, TValueBase).Add(Of T)()
   name.vb: Add(Of T)()
 - uid: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Clone
@@ -149,14 +175,19 @@ items:
     content: protected virtual TRecursive Clone()
     return:
       type: '{TRecursive}'
-    content.vb: Protected Overridable Function Clone() As TRecursive
+    content.vb: Protected Overridable Function Clone As TRecursive
   overload: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Clone*
   nameWithType.vb: ListTypeRule(Of TRecursive, TValueBase).Clone()
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
   fullName.vb: VRBuilder.Core.Configuration.Modes.ListTypeRule(Of TRecursive, TValueBase).Clone()
 references:
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1
   commentId: T:VRBuilder.Core.Configuration.Modes.TypeRule`1
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html
   name: TypeRule<TValueBase>
   nameWithType: TypeRule<TValueBase>
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>
@@ -166,73 +197,47 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1
     name: TypeRule
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html
+    nameWithType: TypeRule
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TValueBase
+    nameWithType: TValueBase
+    fullName: TValueBase
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1
     name: TypeRule
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: TypeRule
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TValueBase
+    nameWithType: TValueBase
+    fullName: TValueBase
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}
   commentId: T:VRBuilder.Core.Configuration.Modes.TypeRule{`1}
   parent: VRBuilder.Core.Configuration.Modes
   definition: VRBuilder.Core.Configuration.Modes.TypeRule`1
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html
   name: TypeRule<TValueBase>
   nameWithType: TypeRule<TValueBase>
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>
@@ -242,24 +247,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1
     name: TypeRule
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html
+    nameWithType: TypeRule
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TValueBase
+    nameWithType: TValueBase
+    fullName: TValueBase
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1
     name: TypeRule
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: TypeRule
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TValueBase
+    nameWithType: TValueBase
+    fullName: TValueBase
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IRule{System.Type}
   commentId: T:VRBuilder.Core.Configuration.Modes.IRule{System.Type}
   parent: VRBuilder.Core.Configuration.Modes
   definition: VRBuilder.Core.Configuration.Modes.IRule`1
-  href: VRBuilder.Core.Configuration.Modes.IRule-1.html
   name: IRule<Type>
   nameWithType: IRule<Type>
   fullName: VRBuilder.Core.Configuration.Modes.IRule<System.Type>
@@ -269,30 +285,39 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.IRule`1
     name: IRule
-    href: VRBuilder.Core.Configuration.Modes.IRule-1.html
+    nameWithType: IRule
+    fullName: VRBuilder.Core.Configuration.Modes.IRule
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.IRule`1
     name: IRule
-    href: VRBuilder.Core.Configuration.Modes.IRule-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IRule
+    fullName: VRBuilder.Core.Configuration.Modes.IRule
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}.IsQualifiedBy``1
   commentId: M:VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedBy``1
   parent: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}
   definition: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy__1
   name: IsQualifiedBy<T>()
   nameWithType: TypeRule<TValueBase>.IsQualifiedBy<T>()
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy<T>()
@@ -300,314 +325,396 @@ references:
   fullName.vb: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedBy(Of T)()
   name.vb: IsQualifiedBy(Of T)()
   spec.csharp:
-  - uid: VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedBy``1
-    name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy__1
-  - name: <
-  - name: T
-  - name: '>'
+  - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
+    name: IsQualifiedBy<T>
+    nameWithType: TypeRule<TValueBase>.IsQualifiedBy<T>
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy<T>
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedBy``1
-    name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy__1
+  - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
+    name: IsQualifiedBy(Of T)
+    nameWithType: TypeRule(Of TValueBase).IsQualifiedBy(Of T)
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedBy(Of T)
   - name: (
-  - name: Of
-  - name: " "
-  - name: T
+    nameWithType: (
+    fullName: (
   - name: )
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}.IsQualifiedBy(System.Type)
   commentId: M:VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedBy(System.Type)
   parent: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}
   definition: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy_System_Type_
   name: IsQualifiedBy(Type)
   nameWithType: TypeRule<TValueBase>.IsQualifiedBy(Type)
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy(System.Type)
   nameWithType.vb: TypeRule(Of TValueBase).IsQualifiedBy(Type)
   fullName.vb: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedBy(System.Type)
   spec.csharp:
-  - uid: VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedBy(System.Type)
+  - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
     name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy_System_Type_
+    nameWithType: TypeRule<TValueBase>.IsQualifiedBy
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedBy(System.Type)
+  - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
     name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy_System_Type_
+    nameWithType: TypeRule(Of TValueBase).IsQualifiedBy
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedBy
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}.IsQualifiedByPredicate(System.Type)
   commentId: M:VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedByPredicate(System.Type)
   parent: VRBuilder.Core.Configuration.Modes.TypeRule{{TValueBase}}
   definition: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedByPredicate_System_Type_
   name: IsQualifiedByPredicate(Type)
   nameWithType: TypeRule<TValueBase>.IsQualifiedByPredicate(Type)
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedByPredicate(System.Type)
   nameWithType.vb: TypeRule(Of TValueBase).IsQualifiedByPredicate(Type)
   fullName.vb: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedByPredicate(System.Type)
   spec.csharp:
-  - uid: VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedByPredicate(System.Type)
+  - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
     name: IsQualifiedByPredicate
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedByPredicate_System_Type_
+    nameWithType: TypeRule<TValueBase>.IsQualifiedByPredicate
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedByPredicate
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Configuration.Modes.TypeRule{`1}.IsQualifiedByPredicate(System.Type)
+  - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
     name: IsQualifiedByPredicate
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedByPredicate_System_Type_
+    nameWithType: TypeRule(Of TValueBase).IsQualifiedByPredicate
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedByPredicate
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Configuration.Modes.IRule`1
   commentId: T:VRBuilder.Core.Configuration.Modes.IRule`1
-  href: VRBuilder.Core.Configuration.Modes.IRule-1.html
   name: IRule<T>
   nameWithType: IRule<T>
   fullName: VRBuilder.Core.Configuration.Modes.IRule<T>
@@ -617,22 +724,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.IRule`1
     name: IRule
-    href: VRBuilder.Core.Configuration.Modes.IRule-1.html
+    nameWithType: IRule
+    fullName: VRBuilder.Core.Configuration.Modes.IRule
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.IRule`1
     name: IRule
-    href: VRBuilder.Core.Configuration.Modes.IRule-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IRule
+    fullName: VRBuilder.Core.Configuration.Modes.IRule
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
   commentId: M:VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy__1
   name: IsQualifiedBy<T>()
   nameWithType: TypeRule<TValueBase>.IsQualifiedBy<T>()
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy<T>()
@@ -641,28 +759,29 @@ references:
   name.vb: IsQualifiedBy(Of T)()
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
-    name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy__1
-  - name: <
-  - name: T
-  - name: '>'
+    name: IsQualifiedBy<T>
+    nameWithType: TypeRule<TValueBase>.IsQualifiedBy<T>
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy<T>
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy``1
-    name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy__1
+    name: IsQualifiedBy(Of T)
+    nameWithType: TypeRule(Of TValueBase).IsQualifiedBy(Of T)
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedBy(Of T)
   - name: (
-  - name: Of
-  - name: " "
-  - name: T
+    nameWithType: (
+    fullName: (
   - name: )
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
   commentId: M:VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
   isExternal: true
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy_System_Type_
   name: IsQualifiedBy(Type)
   nameWithType: TypeRule<TValueBase>.IsQualifiedBy(Type)
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy(System.Type)
@@ -671,27 +790,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
     name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy_System_Type_
+    nameWithType: TypeRule<TValueBase>.IsQualifiedBy
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedBy
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedBy(System.Type)
     name: IsQualifiedBy
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedBy_System_Type_
+    nameWithType: TypeRule(Of TValueBase).IsQualifiedBy
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedBy
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
   commentId: M:VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
   isExternal: true
-  href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedByPredicate_System_Type_
   name: IsQualifiedByPredicate(Type)
   nameWithType: TypeRule<TValueBase>.IsQualifiedByPredicate(Type)
   fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedByPredicate(System.Type)
@@ -700,26 +830,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
     name: IsQualifiedByPredicate
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedByPredicate_System_Type_
+    nameWithType: TypeRule<TValueBase>.IsQualifiedByPredicate
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule<TValueBase>.IsQualifiedByPredicate
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Configuration.Modes.TypeRule`1.IsQualifiedByPredicate(System.Type)
     name: IsQualifiedByPredicate
-    href: VRBuilder.Core.Configuration.Modes.TypeRule-1.html#VRBuilder_Core_Configuration_Modes_TypeRule_1_IsQualifiedByPredicate_System_Type_
+    nameWithType: TypeRule(Of TValueBase).IsQualifiedByPredicate
+    fullName: VRBuilder.Core.Configuration.Modes.TypeRule(Of TValueBase).IsQualifiedByPredicate
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.StoredTypes*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ListTypeRule`2.StoredTypes
-  href: VRBuilder.Core.Configuration.Modes.ListTypeRule-2.html#VRBuilder_Core_Configuration_Modes_ListTypeRule_2_StoredTypes
   name: StoredTypes
   nameWithType: ListTypeRule<TRecursive, TValueBase>.StoredTypes
   fullName: VRBuilder.Core.Configuration.Modes.ListTypeRule<TRecursive, TValueBase>.StoredTypes
@@ -729,7 +870,6 @@ references:
   commentId: T:System.Collections.Generic.HashSet{System.Type}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.HashSet`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
   name: HashSet<Type>
   nameWithType: HashSet<Type>
   fullName: System.Collections.Generic.HashSet<System.Type>
@@ -739,31 +879,40 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.HashSet`1
     name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.HashSet`1
     name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.HashSet`1
   commentId: T:System.Collections.Generic.HashSet`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
   name: HashSet<T>
   nameWithType: HashSet<T>
   fullName: System.Collections.Generic.HashSet<T>
@@ -773,61 +922,41 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.HashSet`1
     name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.HashSet`1
     name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Add*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Add
-  href: VRBuilder.Core.Configuration.Modes.ListTypeRule-2.html#VRBuilder_Core_Configuration_Modes_ListTypeRule_2_Add__1
   name: Add
   nameWithType: ListTypeRule<TRecursive, TValueBase>.Add
   fullName: VRBuilder.Core.Configuration.Modes.ListTypeRule<TRecursive, TValueBase>.Add
@@ -845,7 +974,6 @@ references:
   fullName: TRecursive
 - uid: VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Clone*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ListTypeRule`2.Clone
-  href: VRBuilder.Core.Configuration.Modes.ListTypeRule-2.html#VRBuilder_Core_Configuration_Modes_ListTypeRule_2_Clone
   name: Clone
   nameWithType: ListTypeRule<TRecursive, TValueBase>.Clone
   fullName: VRBuilder.Core.Configuration.Modes.ListTypeRule<TRecursive, TValueBase>.Clone

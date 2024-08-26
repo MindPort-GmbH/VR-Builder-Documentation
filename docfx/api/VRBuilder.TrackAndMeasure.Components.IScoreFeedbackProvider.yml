@@ -5,7 +5,7 @@ items:
   id: IScoreFeedbackProvider
   parent: VRBuilder.TrackAndMeasure.Components
   children:
-  - VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
+  - VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single,System.Single,Transform)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Components/Abstract/IScoreFeedbackProvider.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Track-and-Measure-for-VR-Builder.git
     id: IScoreFeedbackProvider
     path: ../../Assets/MindPort/VR Builder/Add-ons/TrackAndMeasure/Source/Runtime/Components/Abstract/IScoreFeedbackProvider.cs
@@ -24,26 +24,32 @@ items:
   assemblies:
   - VRBuilder.TrackAndMeasure
   namespace: VRBuilder.TrackAndMeasure.Components
-  summary: An object implementing this interface can provide feedback when a numerical score is updated.
+  summary: "\nAn object implementing this interface can provide feedback when a numerical score is updated.\n"
   example: []
   syntax:
     content: public interface IScoreFeedbackProvider
     content.vb: Public Interface IScoreFeedbackProvider
-- uid: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
-  commentId: M:VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
-  id: TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single,System.Single,Transform)
+  commentId: M:VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single,System.Single,Transform)
+  id: TriggerFeedback(System.Single,System.Single,Transform)
   parent: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider
   langs:
   - csharp
   - vb
-  name: TriggerFeedback(float, float, Transform)
-  nameWithType: IScoreFeedbackProvider.TriggerFeedback(float, float, Transform)
-  fullName: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(float, float, UnityEngine.Transform)
+  name: TriggerFeedback(Single, Single, Transform)
+  nameWithType: IScoreFeedbackProvider.TriggerFeedback(Single, Single, Transform)
+  fullName: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(System.Single, System.Single, Transform)
   type: Method
   source:
     remote:
       path: Source/Runtime/Components/Abstract/IScoreFeedbackProvider.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Track-and-Measure-for-VR-Builder.git
     id: TriggerFeedback
     path: ../../Assets/MindPort/VR Builder/Add-ons/TrackAndMeasure/Source/Runtime/Components/Abstract/IScoreFeedbackProvider.cs
@@ -51,7 +57,7 @@ items:
   assemblies:
   - VRBuilder.TrackAndMeasure
   namespace: VRBuilder.TrackAndMeasure.Components
-  summary: Triggers the implemented feedback.
+  summary: "\nTriggers the implemented feedback.\n"
   example: []
   syntax:
     content: void TriggerFeedback(float scoreDelta, float finalScore, Transform positionProvider)
@@ -61,46 +67,17 @@ items:
     - id: finalScore
       type: System.Single
     - id: positionProvider
-      type: UnityEngine.Transform
+      type: Transform
     content.vb: Sub TriggerFeedback(scoreDelta As Single, finalScore As Single, positionProvider As Transform)
   overload: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback*
-  nameWithType.vb: IScoreFeedbackProvider.TriggerFeedback(Single, Single, Transform)
-  fullName.vb: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback(Single, Single, UnityEngine.Transform)
-  name.vb: TriggerFeedback(Single, Single, Transform)
 references:
 - uid: VRBuilder.TrackAndMeasure.Components
   commentId: N:VRBuilder.TrackAndMeasure.Components
-  href: VRBuilder.html
   name: VRBuilder.TrackAndMeasure.Components
   nameWithType: VRBuilder.TrackAndMeasure.Components
   fullName: VRBuilder.TrackAndMeasure.Components
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure
-    name: TrackAndMeasure
-    href: VRBuilder.TrackAndMeasure.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure.Components
-    name: Components
-    href: VRBuilder.TrackAndMeasure.Components.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure
-    name: TrackAndMeasure
-    href: VRBuilder.TrackAndMeasure.html
-  - name: .
-  - uid: VRBuilder.TrackAndMeasure.Components
-    name: Components
-    href: VRBuilder.TrackAndMeasure.Components.html
 - uid: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback*
   commentId: Overload:VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback
-  href: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.html#VRBuilder_TrackAndMeasure_Components_IScoreFeedbackProvider_TriggerFeedback_System_Single_System_Single_UnityEngine_Transform_
   name: TriggerFeedback
   nameWithType: IScoreFeedbackProvider.TriggerFeedback
   fullName: VRBuilder.TrackAndMeasure.Components.IScoreFeedbackProvider.TriggerFeedback
@@ -108,30 +85,17 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: UnityEngine.Transform
-  commentId: T:UnityEngine.Transform
-  parent: UnityEngine
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Transform
   isExternal: true
   name: Transform
   nameWithType: Transform
-  fullName: UnityEngine.Transform
+  fullName: Transform
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine

@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: EntityData
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -37,7 +37,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: The "follow path" behavior's data.
+  summary: "\nThe &quot;follow path&quot; behavior&apos;s data.\n"
   example: []
   syntax:
     content: >-
@@ -45,13 +45,15 @@ items:
 
       [DataContract(IsReference = true)]
 
-      public class FollowPathBehavior.EntityData : IBehaviorData, INamedData, IData
+      public class EntityData : IBehaviorData, INamedData, IData
     content.vb: >-
       <DisplayName("Follow Path")>
 
       <DataContract(IsReference:=True)>
 
-      Public Class FollowPathBehavior.EntityData Implements IBehaviorData, INamedData, IData
+      Public Class EntityData
+
+          Implements IBehaviorData, INamedData, IData
   inheritance:
   - System.Object
   implements:
@@ -59,13 +61,13 @@ items:
   - VRBuilder.Core.INamedData
   - VRBuilder.Core.IData
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: VRBuilder.Core.Attributes.DisplayNameAttribute
     ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
@@ -79,6 +81,12 @@ items:
     - name: IsReference
       type: System.Boolean
       value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.TargetObject
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.TargetObject
   id: TargetObject
@@ -93,7 +101,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: TargetObject
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -101,7 +109,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Target scene object to be moved.
+  summary: "\nTarget scene object to be moved.\n"
   example: []
   syntax:
     content: >-
@@ -129,6 +137,12 @@ items:
     arguments:
     - type: System.String
       value: Object
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Target
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Target
   id: Target
@@ -143,7 +157,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Target
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -186,6 +200,12 @@ items:
     arguments:
     - type: System.String
       value: TargetObject
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PathProperty
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PathProperty
   id: PathProperty
@@ -200,7 +220,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: PathProperty
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -208,7 +228,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Path the target is meant to follow.
+  summary: "\nPath the target is meant to follow.\n"
   example: []
   syntax:
     content: >-
@@ -236,6 +256,12 @@ items:
     arguments:
     - type: System.String
       value: Path
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Path
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Path
   id: Path
@@ -250,7 +276,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Path
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -293,6 +319,12 @@ items:
     arguments:
     - type: System.String
       value: PathProperty
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativePosition
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativePosition
   id: KeepRelativePosition
@@ -307,7 +339,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: KeepRelativePosition
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -315,7 +347,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: If enabled, the object will keep its relative position to the path instead of being teleported on it when the animation starts.
+  summary: "\nIf enabled, the object will keep its relative position to the path instead of being teleported on it when the animation starts.\n"
   example: []
   syntax:
     content: >-
@@ -343,6 +375,12 @@ items:
     arguments:
     - type: System.String
       value: Keep relative position
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
   id: KeepRelativeRotation
@@ -357,7 +395,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: KeepRelativeRotation
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -365,7 +403,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: If enabled, the object will keep its relative rotation to the path instead of having its forward vector pointing forward along the path.
+  summary: "\nIf enabled, the object will keep its relative rotation to the path instead of having its forward vector pointing forward along the path.\n"
   example: []
   syntax:
     content: >-
@@ -393,6 +431,12 @@ items:
     arguments:
     - type: System.String
       value: Keep relative rotation
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
   id: Duration
@@ -407,7 +451,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Duration
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -415,7 +459,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Duration of the transition. If duration is equal or less than zero, the object will be instantaneously moved at the end of the path.
+  summary: "\nDuration of the transition. If duration is equal or less than zero, the object will be instantaneously moved at the end of the path.\n"
   example: []
   syntax:
     content: >-
@@ -443,6 +487,12 @@ items:
     arguments:
     - type: System.String
       value: Duration (in seconds)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Velocity
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Velocity
   id: Velocity
@@ -457,7 +507,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Velocity
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -465,7 +515,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Determines how fast the object moves at a given time. The curve is normalized, the duration of the animation can be set in the <xref href="VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration" data-throw-if-not-resolved="false"></xref> field.
+  summary: "\nDetermines how fast the object moves at a given time. The curve is normalized, the duration of the animation can be set in the <xref href=\"VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration\" data-throw-if-not-resolved=\"false\"></xref> field.\n"
   example: []
   syntax:
     content: >-
@@ -476,7 +526,7 @@ items:
       public AnimationCurve Velocity { get; set; }
     parameters: []
     return:
-      type: UnityEngine.AnimationCurve
+      type: AnimationCurve
     content.vb: >-
       <DataMember>
 
@@ -493,6 +543,12 @@ items:
     arguments:
     - type: System.String
       value: Velocity curve
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.DisableRotation
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.DisableRotation
   id: DisableRotation
@@ -507,7 +563,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: DisableRotation
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -515,7 +571,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: If enabled, the object will not rotate while following the path. Settings on <xref href="VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation" data-throw-if-not-resolved="false"></xref> will be ignored.
+  summary: "\nIf enabled, the object will not rotate while following the path. Settings on <xref href=\"VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation\" data-throw-if-not-resolved=\"false\"></xref> will be ignored.\n"
   example: []
   syntax:
     content: >-
@@ -543,6 +599,12 @@ items:
     arguments:
     - type: System.String
       value: Disable Rotation
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Reverse
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Reverse
   id: Reverse
@@ -557,7 +619,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Reverse
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -565,7 +627,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: If enabled, the animation will play backwards.
+  summary: "\nIf enabled, the animation will play backwards.\n"
   example: []
   syntax:
     content: >-
@@ -593,6 +655,12 @@ items:
     arguments:
     - type: System.String
       value: Reverse
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PingPong
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PingPong
   id: PingPong
@@ -607,7 +675,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: PingPong
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -615,7 +683,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: If enabled, the animation will repeat in reverse, returning the object to the starting position.
+  summary: "\nIf enabled, the animation will repeat in reverse, returning the object to the starting position.\n"
   example: []
   syntax:
     content: >-
@@ -643,6 +711,12 @@ items:
     arguments:
     - type: System.String
       value: Ping pong
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Repeats
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Repeats
   id: Repeats
@@ -657,7 +731,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Repeats
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -665,7 +739,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Number of times the animation should be repeated.
+  summary: "\nNumber of times the animation should be repeated.\n"
   example: []
   syntax:
     content: >-
@@ -693,6 +767,12 @@ items:
     arguments:
     - type: System.String
       value: Repeats
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Metadata
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Metadata
   id: Metadata
@@ -707,7 +787,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Metadata
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -715,7 +795,6 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Reference to this object's <xref href="VRBuilder.Core.IMetadata" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public Metadata Metadata { get; set; }
@@ -726,6 +805,12 @@ items:
   overload: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Metadata*
   implements:
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Name
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Name
   id: Name
@@ -740,7 +825,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -748,7 +833,6 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: Name of the entity.
   example: []
   syntax:
     content: >-
@@ -769,406 +853,367 @@ items:
   - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
     ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: VRBuilder.Animations.Behaviors
   commentId: N:VRBuilder.Animations.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Animations.Behaviors
   nameWithType: VRBuilder.Animations.Behaviors
   fullName: VRBuilder.Animations.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Behaviors
-    name: Behaviors
-    href: VRBuilder.Animations.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Animations
-    name: Animations
-    href: VRBuilder.Animations.html
-  - name: .
-  - uid: VRBuilder.Animations.Behaviors
-    name: Behaviors
-    href: VRBuilder.Animations.Behaviors.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Behaviors.IBehaviorData
   commentId: T:VRBuilder.Core.Behaviors.IBehaviorData
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehaviorData.html
   name: IBehaviorData
   nameWithType: IBehaviorData
   fullName: VRBuilder.Core.Behaviors.IBehaviorData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.TargetObject*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.TargetObject
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_TargetObject
   name: TargetObject
   nameWithType: FollowPathBehavior.EntityData.TargetObject
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.TargetObject
 - uid: VRBuilder.Core.SceneObjects.SingleSceneObjectReference
   commentId: T:VRBuilder.Core.SceneObjects.SingleSceneObjectReference
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.SingleSceneObjectReference.html
   name: SingleSceneObjectReference
   nameWithType: SingleSceneObjectReference
   fullName: VRBuilder.Core.SceneObjects.SingleSceneObjectReference
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Target*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Target
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Target
   name: Target
   nameWithType: FollowPathBehavior.EntityData.Target
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Target
 - uid: VRBuilder.Core.SceneObjects.SceneObjectReference
   commentId: T:VRBuilder.Core.SceneObjects.SceneObjectReference
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.SceneObjectReference.html
   name: SceneObjectReference
   nameWithType: SceneObjectReference
   fullName: VRBuilder.Core.SceneObjects.SceneObjectReference
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PathProperty*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PathProperty
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_PathProperty
   name: PathProperty
   nameWithType: FollowPathBehavior.EntityData.PathProperty
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PathProperty
@@ -1185,22 +1230,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Properties.IPathProperty
     name: IPathProperty
+    nameWithType: IPathProperty
+    fullName: VRBuilder.Core.Properties.IPathProperty
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Properties.IPathProperty
     name: IPathProperty
+    nameWithType: IPathProperty
+    fullName: VRBuilder.Core.Properties.IPathProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
-  href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
   name: SingleScenePropertyReference<T>
   nameWithType: SingleScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<T>
@@ -1210,22 +1268,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Path*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Path
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Path
   name: Path
   nameWithType: FollowPathBehavior.EntityData.Path
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Path
@@ -1242,23 +1311,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Properties.IPathProperty
     name: IPathProperty
+    nameWithType: IPathProperty
+    fullName: VRBuilder.Core.Properties.IPathProperty
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Properties.IPathProperty
     name: IPathProperty
+    nameWithType: IPathProperty
+    fullName: VRBuilder.Core.Properties.IPathProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference`1
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
   name: ScenePropertyReference<T>
   nameWithType: ScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<T>
@@ -1268,22 +1350,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativePosition*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativePosition
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_KeepRelativePosition
   name: KeepRelativePosition
   nameWithType: FollowPathBehavior.EntityData.KeepRelativePosition
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativePosition
@@ -1291,22 +1384,16 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_KeepRelativeRotation
   name: KeepRelativeRotation
   nameWithType: FollowPathBehavior.EntityData.KeepRelativeRotation
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Duration
   name: Duration
   nameWithType: FollowPathBehavior.EntityData.Duration
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
@@ -1314,65 +1401,42 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Duration
-  name: Duration
-  nameWithType: FollowPathBehavior.EntityData.Duration
-  fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Duration
+  isExternal: true
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Velocity*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Velocity
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Velocity
   name: Velocity
   nameWithType: FollowPathBehavior.EntityData.Velocity
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Velocity
-- uid: UnityEngine.AnimationCurve
-  commentId: T:UnityEngine.AnimationCurve
-  parent: UnityEngine
+- uid: AnimationCurve
   isExternal: true
   name: AnimationCurve
   nameWithType: AnimationCurve
-  fullName: UnityEngine.AnimationCurve
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: AnimationCurve
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
   commentId: P:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_KeepRelativeRotation
-  name: KeepRelativeRotation
-  nameWithType: FollowPathBehavior.EntityData.KeepRelativeRotation
-  fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.KeepRelativeRotation
+  isExternal: true
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.DisableRotation*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.DisableRotation
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_DisableRotation
   name: DisableRotation
   nameWithType: FollowPathBehavior.EntityData.DisableRotation
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.DisableRotation
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Reverse*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Reverse
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Reverse
   name: Reverse
   nameWithType: FollowPathBehavior.EntityData.Reverse
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Reverse
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PingPong*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PingPong
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_PingPong
   name: PingPong
   nameWithType: FollowPathBehavior.EntityData.PingPong
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.PingPong
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Repeats*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Repeats
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Repeats
   name: Repeats
   nameWithType: FollowPathBehavior.EntityData.Repeats
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Repeats
@@ -1380,50 +1444,34 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: VRBuilder.Core.IMetadata
-  commentId: T:VRBuilder.Core.IMetadata
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.IMetadata.html
-  name: IMetadata
-  nameWithType: IMetadata
-  fullName: VRBuilder.Core.IMetadata
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Metadata*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Metadata
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Metadata
   name: Metadata
   nameWithType: FollowPathBehavior.EntityData.Metadata
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Metadata
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.Metadata
   commentId: T:VRBuilder.Core.Metadata
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Metadata.html
   name: Metadata
   nameWithType: Metadata
   fullName: VRBuilder.Core.Metadata
 - uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Name*
   commentId: Overload:VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Name
-  href: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.html#VRBuilder_Animations_Behaviors_FollowPathBehavior_EntityData_Name
   name: Name
   nameWithType: FollowPathBehavior.EntityData.Name
   fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData.Name
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
@@ -1431,10 +1479,6 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String

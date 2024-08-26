@@ -27,11 +27,16 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: Process controller for standalone devices like the Oculus Quest.
+  summary: "\nProcess controller for standalone devices like the Oculus Quest.\n"
   example: []
   syntax:
     content: 'public class StandardProcessController : BaseProcessController, IProcessController'
-    content.vb: Public Class StandardProcessController Inherits BaseProcessController Implements IProcessController
+    content.vb: >-
+      Public Class StandardProcessController
+
+          Inherits BaseProcessController
+
+          Implements IProcessController
   inheritance:
   - System.Object
   - VRBuilder.UX.BaseProcessController
@@ -39,14 +44,20 @@ items:
   - VRBuilder.UX.IProcessController
   inheritedMembers:
   - VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
-  - VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
+  - VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.UX.StandardProcessController.Name
   commentId: P:VRBuilder.UX.StandardProcessController.Name
   id: Name
@@ -69,7 +80,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: Prettified name.
   example: []
   syntax:
     content: public override string Name { get; }
@@ -79,6 +89,14 @@ items:
     content.vb: Public Overrides ReadOnly Property Name As String
   overridden: VRBuilder.UX.BaseProcessController.Name
   overload: VRBuilder.UX.StandardProcessController.Name*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: VRBuilder.UX.StandardProcessController.Priority
   commentId: P:VRBuilder.UX.StandardProcessController.Priority
   id: Priority
@@ -101,7 +119,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: Priority of the controller.
   example: []
   syntax:
     content: public override int Priority { get; }
@@ -111,6 +128,14 @@ items:
     content.vb: Public Overrides ReadOnly Property Priority As Integer
   overridden: VRBuilder.UX.BaseProcessController.Priority
   overload: VRBuilder.UX.StandardProcessController.Priority*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: VRBuilder.UX.StandardProcessController.PrefabName
   commentId: P:VRBuilder.UX.StandardProcessController.PrefabName
   id: PrefabName
@@ -133,7 +158,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: Name of the process controller prefab.
   example: []
   syntax:
     content: protected override string PrefabName { get; }
@@ -143,6 +167,14 @@ items:
     content.vb: Protected Overrides ReadOnly Property PrefabName As String
   overridden: VRBuilder.UX.BaseProcessController.PrefabName
   overload: VRBuilder.UX.StandardProcessController.PrefabName*
+  modifiers.csharp:
+  - protected
+  - override
+  - get
+  modifiers.vb:
+  - Protected
+  - Overrides
+  - ReadOnly
 - uid: VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents
   commentId: M:VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents
   id: GetRequiredSetupComponents
@@ -165,345 +197,405 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: List of component types which are required on the setup object.
   example: []
   syntax:
     content: public override List<Type> GetRequiredSetupComponents()
     return:
       type: System.Collections.Generic.List{System.Type}
-      description: List of component types.
-    content.vb: Public Overrides Function GetRequiredSetupComponents() As List(Of Type)
+    content.vb: Public Overrides Function GetRequiredSetupComponents As List(Of Type)
   overridden: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   overload: VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: VRBuilder.UX
   commentId: N:VRBuilder.UX
-  href: VRBuilder.html
   name: VRBuilder.UX
   nameWithType: VRBuilder.UX
   fullName: VRBuilder.UX
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.UX
-    name: UX
-    href: VRBuilder.UX.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.UX
-    name: UX
-    href: VRBuilder.UX.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.UX.BaseProcessController
   commentId: T:VRBuilder.UX.BaseProcessController
   parent: VRBuilder.UX
-  href: VRBuilder.UX.BaseProcessController.html
   name: BaseProcessController
   nameWithType: BaseProcessController
   fullName: VRBuilder.UX.BaseProcessController
 - uid: VRBuilder.UX.IProcessController
   commentId: T:VRBuilder.UX.IProcessController
   parent: VRBuilder.UX
-  href: VRBuilder.UX.IProcessController.html
   name: IProcessController
   nameWithType: IProcessController
   fullName: VRBuilder.UX.IProcessController
 - uid: VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
   commentId: M:VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
   parent: VRBuilder.UX.BaseProcessController
-  href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_GetProcessControllerPrefab
   name: GetProcessControllerPrefab()
   nameWithType: BaseProcessController.GetProcessControllerPrefab()
   fullName: VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab()
   spec.csharp:
   - uid: VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
     name: GetProcessControllerPrefab
-    href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_GetProcessControllerPrefab
+    nameWithType: BaseProcessController.GetProcessControllerPrefab
+    fullName: VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
     name: GetProcessControllerPrefab
-    href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_GetProcessControllerPrefab
+    nameWithType: BaseProcessController.GetProcessControllerPrefab
+    fullName: VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
-  commentId: M:VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
+    nameWithType: )
+    fullName: )
+- uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
+  commentId: M:VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
   parent: VRBuilder.UX.BaseProcessController
   isExternal: true
-  href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_HandlePostSetup_UnityEngine_GameObject_
   name: HandlePostSetup(GameObject)
   nameWithType: BaseProcessController.HandlePostSetup(GameObject)
-  fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
+  fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
   spec.csharp:
-  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
+  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
     name: HandlePostSetup
-    href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_HandlePostSetup_UnityEngine_GameObject_
+    nameWithType: BaseProcessController.HandlePostSetup
+    fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup
   - name: (
-  - uid: UnityEngine.GameObject
+    nameWithType: (
+    fullName: (
+  - uid: GameObject
     name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
+  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
     name: HandlePostSetup
-    href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_HandlePostSetup_UnityEngine_GameObject_
+    nameWithType: BaseProcessController.HandlePostSetup
+    fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup
   - name: (
-  - uid: UnityEngine.GameObject
+    nameWithType: (
+    fullName: (
+  - uid: GameObject
     name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
     isExternal: true
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.UX.BaseProcessController.Name
   commentId: P:VRBuilder.UX.BaseProcessController.Name
   parent: VRBuilder.UX.BaseProcessController
-  href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_Name
   name: Name
   nameWithType: BaseProcessController.Name
   fullName: VRBuilder.UX.BaseProcessController.Name
 - uid: VRBuilder.UX.StandardProcessController.Name*
   commentId: Overload:VRBuilder.UX.StandardProcessController.Name
-  href: VRBuilder.UX.StandardProcessController.html#VRBuilder_UX_StandardProcessController_Name
   name: Name
   nameWithType: StandardProcessController.Name
   fullName: VRBuilder.UX.StandardProcessController.Name
@@ -511,23 +603,17 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.UX.BaseProcessController.Priority
   commentId: P:VRBuilder.UX.BaseProcessController.Priority
   parent: VRBuilder.UX.BaseProcessController
-  href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_Priority
   name: Priority
   nameWithType: BaseProcessController.Priority
   fullName: VRBuilder.UX.BaseProcessController.Priority
 - uid: VRBuilder.UX.StandardProcessController.Priority*
   commentId: Overload:VRBuilder.UX.StandardProcessController.Priority
-  href: VRBuilder.UX.StandardProcessController.html#VRBuilder_UX_StandardProcessController_Priority
   name: Priority
   nameWithType: StandardProcessController.Priority
   fullName: VRBuilder.UX.StandardProcessController.Priority
@@ -535,48 +621,50 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.UX.BaseProcessController.PrefabName
   commentId: P:VRBuilder.UX.BaseProcessController.PrefabName
   parent: VRBuilder.UX.BaseProcessController
-  href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_PrefabName
   name: PrefabName
   nameWithType: BaseProcessController.PrefabName
   fullName: VRBuilder.UX.BaseProcessController.PrefabName
 - uid: VRBuilder.UX.StandardProcessController.PrefabName*
   commentId: Overload:VRBuilder.UX.StandardProcessController.PrefabName
-  href: VRBuilder.UX.StandardProcessController.html#VRBuilder_UX_StandardProcessController_PrefabName
   name: PrefabName
   nameWithType: StandardProcessController.PrefabName
   fullName: VRBuilder.UX.StandardProcessController.PrefabName
 - uid: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   commentId: M:VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   parent: VRBuilder.UX.BaseProcessController
-  href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_GetRequiredSetupComponents
   name: GetRequiredSetupComponents()
   nameWithType: BaseProcessController.GetRequiredSetupComponents()
   fullName: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents()
   spec.csharp:
   - uid: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
     name: GetRequiredSetupComponents
-    href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_GetRequiredSetupComponents
+    nameWithType: BaseProcessController.GetRequiredSetupComponents
+    fullName: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
     name: GetRequiredSetupComponents
-    href: VRBuilder.UX.BaseProcessController.html#VRBuilder_UX_BaseProcessController_GetRequiredSetupComponents
+    nameWithType: BaseProcessController.GetRequiredSetupComponents
+    fullName: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents*
   commentId: Overload:VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents
-  href: VRBuilder.UX.StandardProcessController.html#VRBuilder_UX_StandardProcessController_GetRequiredSetupComponents
   name: GetRequiredSetupComponents
   nameWithType: StandardProcessController.GetRequiredSetupComponents
   fullName: VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents
@@ -584,7 +672,6 @@ references:
   commentId: T:System.Collections.Generic.List{System.Type}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<Type>
   nameWithType: List<Type>
   fullName: System.Collections.Generic.List<System.Type>
@@ -594,31 +681,40 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<T>
   nameWithType: List<T>
   fullName: System.Collections.Generic.List<T>
@@ -628,55 +724,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

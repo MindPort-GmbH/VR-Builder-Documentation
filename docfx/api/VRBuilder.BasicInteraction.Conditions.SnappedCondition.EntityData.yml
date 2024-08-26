@@ -36,13 +36,15 @@ items:
 
       [DataContract(IsReference = true)]
 
-      public class SnappedCondition.EntityData : IConditionData, ICompletableData, INamedData, IData
+      public class EntityData : IConditionData, ICompletableData, INamedData, IData
     content.vb: >-
       <DisplayName("Snap Object")>
 
       <DataContract(IsReference:=True)>
 
-      Public Class SnappedCondition.EntityData Implements IConditionData, ICompletableData, INamedData, IData
+      Public Class EntityData
+
+          Implements IConditionData, ICompletableData, INamedData, IData
   inheritance:
   - System.Object
   implements:
@@ -51,13 +53,13 @@ items:
   - VRBuilder.Core.INamedData
   - VRBuilder.Core.IData
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: VRBuilder.Core.Attributes.DisplayNameAttribute
     ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
@@ -71,6 +73,12 @@ items:
     - name: IsReference
       type: System.Boolean
       value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetObjects
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetObjects
   id: TargetObjects
@@ -119,6 +127,12 @@ items:
     arguments:
     - type: System.String
       value: Snappable Objects
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Target
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Target
   id: Target
@@ -176,6 +190,12 @@ items:
     arguments:
     - type: System.String
       value: TargetObjects
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetSnapZone
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetSnapZone
   id: TargetSnapZone
@@ -224,6 +244,12 @@ items:
     arguments:
     - type: System.String
       value: Zone to snap into
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.ZoneToSnapInto
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.ZoneToSnapInto
   id: ZoneToSnapInto
@@ -281,6 +307,12 @@ items:
     arguments:
     - type: System.String
       value: TargetSnapZone
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.IsCompleted
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.IsCompleted
   id: IsCompleted
@@ -303,7 +335,6 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Conditions
-  example: []
   syntax:
     content: public bool IsCompleted { get; set; }
     parameters: []
@@ -313,6 +344,12 @@ items:
   overload: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.IsCompleted*
   implements:
   - VRBuilder.Core.Conditions.ICompletableData.IsCompleted
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Name
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Name
   id: Name
@@ -335,8 +372,6 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Conditions
-  summary: Name of the entity.
-  example: []
   syntax:
     content: >-
       [IgnoreDataMember]
@@ -356,6 +391,12 @@ items:
   - type: System.Runtime.Serialization.IgnoreDataMemberAttribute
     ctor: System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Metadata
   commentId: P:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Metadata
   id: Metadata
@@ -378,8 +419,6 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Conditions
-  summary: Reference to this object's <xref href="VRBuilder.Core.IMetadata" data-throw-if-not-resolved="false"></xref>.
-  example: []
   syntax:
     content: public Metadata Metadata { get; set; }
     parameters: []
@@ -389,357 +428,346 @@ items:
   overload: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Metadata*
   implements:
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.BasicInteraction.Conditions
   commentId: N:VRBuilder.BasicInteraction.Conditions
-  href: VRBuilder.html
   name: VRBuilder.BasicInteraction.Conditions
   nameWithType: VRBuilder.BasicInteraction.Conditions
   fullName: VRBuilder.BasicInteraction.Conditions
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction.Conditions
-    name: Conditions
-    href: VRBuilder.BasicInteraction.Conditions.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction.Conditions
-    name: Conditions
-    href: VRBuilder.BasicInteraction.Conditions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Conditions.IConditionData
   commentId: T:VRBuilder.Core.Conditions.IConditionData
   parent: VRBuilder.Core.Conditions
-  href: VRBuilder.Core.Conditions.IConditionData.html
   name: IConditionData
   nameWithType: IConditionData
   fullName: VRBuilder.Core.Conditions.IConditionData
 - uid: VRBuilder.Core.Conditions.ICompletableData
   commentId: T:VRBuilder.Core.Conditions.ICompletableData
   parent: VRBuilder.Core.Conditions
-  href: VRBuilder.Core.Conditions.ICompletableData.html
   name: ICompletableData
   nameWithType: ICompletableData
   fullName: VRBuilder.Core.Conditions.ICompletableData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Conditions
   commentId: N:VRBuilder.Core.Conditions
-  href: VRBuilder.html
   name: VRBuilder.Core.Conditions
   nameWithType: VRBuilder.Core.Conditions
   fullName: VRBuilder.Core.Conditions
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Conditions
-    name: Conditions
-    href: VRBuilder.Core.Conditions.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Conditions
-    name: Conditions
-    href: VRBuilder.Core.Conditions.html
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetObjects*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetObjects
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_TargetObjects
   name: TargetObjects
   nameWithType: SnappedCondition.EntityData.TargetObjects
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetObjects
@@ -747,7 +775,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.MultipleScenePropertyReference{VRBuilder.BasicInteraction.Properties.ISnappableProperty}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
-  href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
   name: MultipleScenePropertyReference<ISnappableProperty>
   nameWithType: MultipleScenePropertyReference<ISnappableProperty>
   fullName: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference<VRBuilder.BasicInteraction.Properties.ISnappableProperty>
@@ -757,24 +784,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
     name: MultipleScenePropertyReference
+    nameWithType: MultipleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.BasicInteraction.Properties.ISnappableProperty
     name: ISnappableProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
+    nameWithType: ISnappableProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnappableProperty
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
     name: MultipleScenePropertyReference
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: MultipleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.BasicInteraction.Properties.ISnappableProperty
     name: ISnappableProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
+    nameWithType: ISnappableProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnappableProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
-  href: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference-1.html
   name: MultipleScenePropertyReference<T>
   nameWithType: MultipleScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference<T>
@@ -784,52 +822,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
     name: MultipleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference-1.html
+    nameWithType: MultipleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference`1
     name: MultipleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: MultipleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Target*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Target
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_Target
   name: Target
   nameWithType: SnappedCondition.EntityData.Target
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Target
@@ -837,7 +861,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.BasicInteraction.Properties.ISnappableProperty}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-  href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
   name: ScenePropertyReference<ISnappableProperty>
   nameWithType: ScenePropertyReference<ISnappableProperty>
   fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<VRBuilder.BasicInteraction.Properties.ISnappableProperty>
@@ -847,25 +870,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.BasicInteraction.Properties.ISnappableProperty
     name: ISnappableProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
+    nameWithType: ISnappableProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnappableProperty
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.BasicInteraction.Properties.ISnappableProperty
     name: ISnappableProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnappableProperty.html
+    nameWithType: ISnappableProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnappableProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference`1
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
   name: ScenePropertyReference<T>
   nameWithType: ScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<T>
@@ -875,22 +909,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetSnapZone*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetSnapZone
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_TargetSnapZone
   name: TargetSnapZone
   nameWithType: SnappedCondition.EntityData.TargetSnapZone
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.TargetSnapZone
@@ -898,7 +943,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.BasicInteraction.Properties.ISnapZoneProperty}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
-  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html
   name: SingleScenePropertyReference<ISnapZoneProperty>
   nameWithType: SingleScenePropertyReference<ISnapZoneProperty>
   fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<VRBuilder.BasicInteraction.Properties.ISnapZoneProperty>
@@ -908,24 +952,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
     name: ISnapZoneProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html
+    nameWithType: ISnapZoneProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
     name: ISnapZoneProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html
+    nameWithType: ISnapZoneProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
-  href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
   name: SingleScenePropertyReference<T>
   nameWithType: SingleScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<T>
@@ -935,22 +990,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.ZoneToSnapInto*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.ZoneToSnapInto
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_ZoneToSnapInto
   name: ZoneToSnapInto
   nameWithType: SnappedCondition.EntityData.ZoneToSnapInto
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.ZoneToSnapInto
@@ -958,7 +1024,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.BasicInteraction.Properties.ISnapZoneProperty}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-  href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html
   name: ScenePropertyReference<ISnapZoneProperty>
   nameWithType: ScenePropertyReference<ISnapZoneProperty>
   fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<VRBuilder.BasicInteraction.Properties.ISnapZoneProperty>
@@ -968,31 +1033,41 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
     name: ISnapZoneProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html
+    nameWithType: ISnapZoneProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
     name: ISnapZoneProperty
-    href: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html
+    nameWithType: ISnapZoneProperty
+    fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.IsCompleted*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.IsCompleted
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_IsCompleted
   name: IsCompleted
   nameWithType: SnappedCondition.EntityData.IsCompleted
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.IsCompleted
 - uid: VRBuilder.Core.Conditions.ICompletableData.IsCompleted
   commentId: P:VRBuilder.Core.Conditions.ICompletableData.IsCompleted
   parent: VRBuilder.Core.Conditions.ICompletableData
-  href: VRBuilder.Core.Conditions.ICompletableData.html#VRBuilder_Core_Conditions_ICompletableData_IsCompleted
   name: IsCompleted
   nameWithType: ICompletableData.IsCompleted
   fullName: VRBuilder.Core.Conditions.ICompletableData.IsCompleted
@@ -1000,23 +1075,17 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Name*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Name
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_Name
   name: Name
   nameWithType: SnappedCondition.EntityData.Name
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Name
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
@@ -1024,37 +1093,23 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: VRBuilder.Core.IMetadata
-  commentId: T:VRBuilder.Core.IMetadata
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.IMetadata.html
-  name: IMetadata
-  nameWithType: IMetadata
-  fullName: VRBuilder.Core.IMetadata
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Metadata*
   commentId: Overload:VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Metadata
-  href: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.html#VRBuilder_BasicInteraction_Conditions_SnappedCondition_EntityData_Metadata
   name: Metadata
   nameWithType: SnappedCondition.EntityData.Metadata
   fullName: VRBuilder.BasicInteraction.Conditions.SnappedCondition.EntityData.Metadata
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.Metadata
   commentId: T:VRBuilder.Core.Metadata
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Metadata.html
   name: Metadata
   nameWithType: Metadata
   fullName: VRBuilder.Core.Metadata

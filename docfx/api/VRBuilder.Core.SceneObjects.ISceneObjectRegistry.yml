@@ -40,6 +40,12 @@ items:
   syntax:
     content: public interface ISceneObjectRegistry
     content.vb: Public Interface ISceneObjectRegistry
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
   commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid(System.Guid)
   id: ContainsGuid(System.Guid)
@@ -62,7 +68,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Returns if the Guid is registered in the registry.
+  summary: "\nReturns if the Guid is registered in the registry.\n"
   example: []
   syntax:
     content: bool ContainsGuid(Guid guid)
@@ -80,9 +86,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ContainsName(string)
-  nameWithType: ISceneObjectRegistry.ContainsName(string)
-  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(string)
+  name: ContainsName(String)
+  nameWithType: ISceneObjectRegistry.ContainsName(String)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(System.String)
   type: Method
   source:
     remote:
@@ -95,7 +101,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Returns if the name is registered in the registry.
+  summary: "\nReturns if the name is registered in the registry.\n"
   example: []
   syntax:
     content: >-
@@ -118,9 +124,6 @@ items:
     arguments:
     - type: System.String
       value: Use ContainsGuid instead.
-  nameWithType.vb: ISceneObjectRegistry.ContainsName(String)
-  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName(String)
-  name.vb: ContainsName(String)
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
   commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid(System.Guid)
   id: GetByGuid(System.Guid)
@@ -143,10 +146,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: >-
-    Returns the IProcessSceneEntity belonging to the given Guid.
-
-    If there is no fitting Entity found a MissingEntityException will be thrown.
+  summary: "\nReturns the IProcessSceneEntity belonging to the given Guid.\nIf there is no fitting Entity found a MissingEntityException will be thrown.\n"
   example: []
   syntax:
     content: >-
@@ -176,9 +176,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetByName(string)
-  nameWithType: ISceneObjectRegistry.GetByName(string)
-  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(string)
+  name: GetByName(String)
+  nameWithType: ISceneObjectRegistry.GetByName(String)
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(System.String)
   type: Method
   source:
     remote:
@@ -191,10 +191,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: >-
-    Returns the IProcessSceneEntity belonging to the given unique name.
-
-    If there is no fitting Entity found a MissingEntityException will be thrown.
+  summary: "\nReturns the IProcessSceneEntity belonging to the given unique name.\nIf there is no fitting Entity found a MissingEntityException will be thrown.\n"
   example: []
   syntax:
     content: >-
@@ -217,9 +214,6 @@ items:
     arguments:
     - type: System.String
       value: Use GetObjects instead.
-  nameWithType.vb: ISceneObjectRegistry.GetByName(String)
-  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName(String)
-  name.vb: GetByName(String)
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
   commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects(System.Guid)
   id: GetObjects(System.Guid)
@@ -242,7 +236,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Returns all registered scene objects which have the provided guid assigned to them.
+  summary: "\nReturns all registered scene objects which have the provided guid assigned to them.\n"
   example: []
   syntax:
     content: IEnumerable<ISceneObject> GetObjects(Guid guid)
@@ -318,10 +312,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Returns all registered scene objects with the provided guid and at least one valid property of the specified type.
+  summary: "\nReturns all registered scene objects with the provided guid and at least one valid property of the specified type.\n"
   example: []
   syntax:
-    content: 'IEnumerable<T> GetProperties<T>(Guid guid) where T : ISceneObjectProperty'
+    content: >-
+      IEnumerable<T> GetProperties<T>(Guid guid)
+
+          where T : ISceneObjectProperty
     parameters:
     - id: guid
       type: System.Guid
@@ -360,7 +357,9 @@ items:
     content: >-
       [Obsolete("Use GetProperties instead.")]
 
-      IEnumerable<T> GetPropertyByTag<T>(Guid tag) where T : ISceneObjectProperty
+      IEnumerable<T> GetPropertyByTag<T>(Guid tag)
+
+          where T : ISceneObjectProperty
     parameters:
     - id: tag
       type: System.Guid
@@ -404,12 +403,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: >-
-    Registers an SceneObject in the registry. If there is an SceneObject with the same name
-
-    already registered, an NameNotUniqueException will be thrown. Also if the Guid
-
-    is already known an SceneObjectAlreadyRegisteredException will be thrown.
+  summary: "\nRegisters an SceneObject in the registry. If there is an SceneObject with the same name\nalready registered, an NameNotUniqueException will be thrown. Also if the Guid\nis already known an SceneObjectAlreadyRegisteredException will be thrown.\n"
   example: []
   syntax:
     content: void Register(ISceneObject obj)
@@ -440,7 +434,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Removes the SceneObject completely from the Registry.
+  summary: "\nRemoves the SceneObject completely from the Registry.\n"
   example: []
   syntax:
     content: bool Unregister(ISceneObject obj)
@@ -458,9 +452,9 @@ items:
   langs:
   - csharp
   - vb
-  name: this[string]
-  nameWithType: ISceneObjectRegistry.this[string]
-  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[string]
+  name: Item[String]
+  nameWithType: ISceneObjectRegistry.Item[String]
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item[System.String]
   type: Property
   source:
     remote:
@@ -473,7 +467,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Shortcut for GetByName(string name) method.
+  summary: "\nShortcut for GetByName(string name) method.\n"
   example: []
   syntax:
     content: >-
@@ -488,7 +482,7 @@ items:
     content.vb: >-
       <Obsolete("Use GetObjects instead")>
 
-      ReadOnly Default Property this[](name As String) As ISceneObject
+      ReadOnly Property Item(name As String) As ISceneObject
   overload: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item*
   attributes:
   - type: System.ObsoleteAttribute
@@ -496,9 +490,13 @@ items:
     arguments:
     - type: System.String
       value: Use GetObjects instead
-  nameWithType.vb: ISceneObjectRegistry.this[](String)
-  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[](String)
-  name.vb: this[](String)
+  nameWithType.vb: ISceneObjectRegistry.Item(String)
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.String)
+  name.vb: Item(String)
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
   commentId: P:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
   id: Item(System.Guid)
@@ -506,9 +504,9 @@ items:
   langs:
   - csharp
   - vb
-  name: this[Guid]
-  nameWithType: ISceneObjectRegistry.this[Guid]
-  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[System.Guid]
+  name: Item[Guid]
+  nameWithType: ISceneObjectRegistry.Item[Guid]
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item[System.Guid]
   type: Property
   source:
     remote:
@@ -521,7 +519,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Shortcut for GetByGuid(Guid guid) method.
+  summary: "\nShortcut for GetByGuid(Guid guid) method.\n"
   example: []
   syntax:
     content: >-
@@ -536,7 +534,7 @@ items:
     content.vb: >-
       <Obsolete("Use GetObjects instead")>
 
-      ReadOnly Default Property this[](guid As Guid) As ISceneObject
+      ReadOnly Property Item(guid As Guid) As ISceneObject
   overload: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item*
   attributes:
   - type: System.ObsoleteAttribute
@@ -544,9 +542,13 @@ items:
     arguments:
     - type: System.String
       value: Use GetObjects instead
-  nameWithType.vb: ISceneObjectRegistry.this[](Guid)
-  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[](System.Guid)
-  name.vb: this[](Guid)
+  nameWithType.vb: ISceneObjectRegistry.Item(Guid)
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item(System.Guid)
+  name.vb: Item(Guid)
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
   commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
   id: RegisterAll
@@ -569,11 +571,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Registers all SceneObject in scene, independent of their state.
+  summary: "\nRegisters all SceneObject in scene, independent of their state.\n"
   example: []
   syntax:
     content: void RegisterAll()
-    content.vb: Sub RegisterAll()
+    content.vb: Sub RegisterAll
   overload: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll*
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
   commentId: M:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
@@ -597,46 +599,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: Updates the registry by removing all <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> which are not in the scene anymore and adding new ones.
+  summary: "\nUpdates the registry by removing all <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref> which are not in the scene anymore and adding new ones.\n"
   example: []
   syntax:
     content: void Refresh()
-    content.vb: Sub Refresh()
+    content.vb: Sub Refresh
   overload: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh*
 references:
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsGuid_System_Guid_
   name: ContainsGuid
   nameWithType: ISceneObjectRegistry.ContainsGuid
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsGuid
@@ -644,7 +620,6 @@ references:
   commentId: T:System.Guid
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
@@ -652,23 +627,17 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_ContainsName_System_String_
   name: ContainsName
   nameWithType: ISceneObjectRegistry.ContainsName
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.ContainsName
@@ -676,35 +645,27 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByGuid_System_Guid_
   name: GetByGuid
   nameWithType: ISceneObjectRegistry.GetByGuid
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByGuid
 - uid: VRBuilder.Core.SceneObjects.ISceneObject
   commentId: T:VRBuilder.Core.SceneObjects.ISceneObject
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ISceneObject.html
   name: ISceneObject
   nameWithType: ISceneObject
   fullName: VRBuilder.Core.SceneObjects.ISceneObject
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByName_System_String_
   name: GetByName
   nameWithType: ISceneObjectRegistry.GetByName
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByName
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetObjects_System_Guid_
   name: GetObjects
   nameWithType: ISceneObjectRegistry.GetObjects
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetObjects
@@ -712,7 +673,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<ISceneObject>
   nameWithType: IEnumerable<ISceneObject>
   fullName: System.Collections.Generic.IEnumerable<VRBuilder.Core.SceneObjects.ISceneObject>
@@ -722,29 +682,38 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.SceneObjects.ISceneObject
     name: ISceneObject
-    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+    nameWithType: ISceneObject
+    fullName: VRBuilder.Core.SceneObjects.ISceneObject
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.SceneObjects.ISceneObject
     name: ISceneObject
-    href: VRBuilder.Core.SceneObjects.ISceneObject.html
+    nameWithType: ISceneObject
+    fullName: VRBuilder.Core.SceneObjects.ISceneObject
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -754,67 +723,46 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetByTag_System_Guid_
   name: GetByTag
   nameWithType: ISceneObjectRegistry.GetByTag
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetByTag
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetProperties__1_System_Guid_
   name: GetProperties
   nameWithType: ISceneObjectRegistry.GetProperties
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetProperties
@@ -822,7 +770,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{`0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -832,57 +779,60 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_GetPropertyByTag__1_System_Guid_
   name: GetPropertyByTag
   nameWithType: ISceneObjectRegistry.GetPropertyByTag
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.GetPropertyByTag
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Register_VRBuilder_Core_SceneObjects_ISceneObject_
   name: Register
   nameWithType: ISceneObjectRegistry.Register
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Register
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Unregister_VRBuilder_Core_SceneObjects_ISceneObject_
   name: Unregister
   nameWithType: ISceneObjectRegistry.Unregister
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Unregister
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Item_System_String_
-  name: this
-  nameWithType: ISceneObjectRegistry.this
-  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this
-  nameWithType.vb: ISceneObjectRegistry.this[]
-  fullName.vb: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.this[]
-  name.vb: this[]
+  name: Item
+  nameWithType: ISceneObjectRegistry.Item
+  fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Item
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_RegisterAll
   name: RegisterAll
   nameWithType: ISceneObjectRegistry.RegisterAll
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.RegisterAll
 - uid: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh
-  href: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html#VRBuilder_Core_SceneObjects_ISceneObjectRegistry_Refresh
   name: Refresh
   nameWithType: ISceneObjectRegistry.Refresh
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry.Refresh

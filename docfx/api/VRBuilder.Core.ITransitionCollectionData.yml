@@ -24,15 +24,24 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The interface of a data with a list of <xref href="VRBuilder.Core.ITransition" data-throw-if-not-resolved="false"></xref>s.
+  summary: "\nThe interface of a data with a list of <xref href=\"VRBuilder.Core.ITransition\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
   example: []
   syntax:
     content: 'public interface ITransitionCollectionData : IEntityCollectionDataWithMode<ITransition>, IEntityCollectionData<ITransition>, IEntityCollectionDataWithMode, IEntityCollectionData, IModeData, IData'
-    content.vb: Public Interface ITransitionCollectionData Inherits IEntityCollectionDataWithMode(Of ITransition), IEntityCollectionData(Of ITransition), IEntityCollectionDataWithMode, IEntityCollectionData, IModeData, IData
+    content.vb: >-
+      Public Interface ITransitionCollectionData
+
+          Inherits IEntityCollectionDataWithMode(Of ITransition)
   inheritedMembers:
   - VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}.GetChildren
   - VRBuilder.Core.Configuration.Modes.IModeData.Mode
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.ITransitionCollectionData.Transitions
   commentId: P:VRBuilder.Core.ITransitionCollectionData.Transitions
   id: Transitions
@@ -55,7 +64,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: A list of <xref href="VRBuilder.Core.ITransition" data-throw-if-not-resolved="false"></xref>s.
+  summary: "\nA list of <xref href=\"VRBuilder.Core.ITransition\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
   example: []
   syntax:
     content: IList<ITransition> Transitions { get; set; }
@@ -64,75 +73,66 @@ items:
       type: System.Collections.Generic.IList{VRBuilder.Core.ITransition}
     content.vb: Property Transitions As IList(Of ITransition)
   overload: VRBuilder.Core.ITransitionCollectionData.Transitions*
+  modifiers.csharp:
+  - get
+  - set
 references:
 - uid: VRBuilder.Core.ITransition
   commentId: T:VRBuilder.Core.ITransition
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ITransition.html
   name: ITransition
   nameWithType: ITransition
   fullName: VRBuilder.Core.ITransition
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}.GetChildren
   commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}.GetChildren
   parent: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: IEntityCollectionData<ITransition>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.ITransition>.GetChildren()
   nameWithType.vb: IEntityCollectionData(Of ITransition).GetChildren()
   fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.ITransition).GetChildren()
   spec.csharp:
-  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData<ITransition>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.ITransition>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData(Of ITransition).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.ITransition).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeData.Mode
   commentId: P:VRBuilder.Core.Configuration.Modes.IModeData.Mode
   parent: VRBuilder.Core.Configuration.Modes.IModeData
-  href: VRBuilder.Core.Configuration.Modes.IModeData.html#VRBuilder_Core_Configuration_Modes_IModeData_Mode
   name: Mode
   nameWithType: IModeData.Mode
   fullName: VRBuilder.Core.Configuration.Modes.IModeData.Mode
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
   commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: IEntityCollectionData<TEntity>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren()
@@ -141,20 +141,29 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData<TEntity>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData(Of TEntity).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.ITransition}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<ITransition>
   nameWithType: IEntityCollectionData<ITransition>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.ITransition>
@@ -164,40 +173,47 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.ITransition
     name: ITransition
-    href: VRBuilder.Core.ITransition.html
+    nameWithType: ITransition
+    fullName: VRBuilder.Core.ITransition
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.ITransition
     name: ITransition
-    href: VRBuilder.Core.ITransition.html
+    nameWithType: ITransition
+    fullName: VRBuilder.Core.ITransition
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeData
   commentId: T:VRBuilder.Core.Configuration.Modes.IModeData
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IModeData.html
   name: IModeData
   nameWithType: IModeData
   fullName: VRBuilder.Core.Configuration.Modes.IModeData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<TEntity>
   nameWithType: IEntityCollectionData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>
@@ -207,90 +223,43 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: VRBuilder.Core.ITransitionCollectionData.Transitions*
   commentId: Overload:VRBuilder.Core.ITransitionCollectionData.Transitions
-  href: VRBuilder.Core.ITransitionCollectionData.html#VRBuilder_Core_ITransitionCollectionData_Transitions
   name: Transitions
   nameWithType: ITransitionCollectionData.Transitions
   fullName: VRBuilder.Core.ITransitionCollectionData.Transitions
@@ -298,7 +267,6 @@ references:
   commentId: T:System.Collections.Generic.IList{VRBuilder.Core.ITransition}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   name: IList<ITransition>
   nameWithType: IList<ITransition>
   fullName: System.Collections.Generic.IList<VRBuilder.Core.ITransition>
@@ -308,29 +276,38 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.ITransition
     name: ITransition
-    href: VRBuilder.Core.ITransition.html
+    nameWithType: ITransition
+    fullName: VRBuilder.Core.ITransition
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.ITransition
     name: ITransition
-    href: VRBuilder.Core.ITransition.html
+    nameWithType: ITransition
+    fullName: VRBuilder.Core.ITransition
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IList`1
   commentId: T:System.Collections.Generic.IList`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   name: IList<T>
   nameWithType: IList<T>
   fullName: System.Collections.Generic.IList<T>
@@ -340,55 +317,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IList`1
     name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Replaces an object with another up to date object with comparable functionality.
+  summary: "\nReplaces an object with another up to date object with comparable functionality.\n"
   example: []
   syntax:
     content: public interface IConverter
     content.vb: Public Interface IConverter
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IConverter.ConvertedType
   commentId: P:VRBuilder.Editor.ProcessUpgradeTool.IConverter.ConvertedType
   id: ConvertedType
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Type supported by this converter.
+  summary: "\nType supported by this converter.\n"
   example: []
   syntax:
     content: Type ConvertedType { get; }
@@ -61,6 +67,10 @@ items:
       type: System.Type
     content.vb: ReadOnly Property ConvertedType As Type
   overload: VRBuilder.Editor.ProcessUpgradeTool.IConverter.ConvertedType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert(System.Object)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert(System.Object)
   id: Convert(System.Object)
@@ -68,9 +78,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Convert(object)
-  nameWithType: IConverter.Convert(object)
-  fullName: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert(object)
+  name: Convert(Object)
+  nameWithType: IConverter.Convert(Object)
+  fullName: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert(System.Object)
   type: Method
   source:
     remote:
@@ -83,7 +93,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Returns an object which is an up to date version of the provided object.
+  summary: "\nReturns an object which is an up to date version of the provided object.\n"
   example: []
   syntax:
     content: object Convert(object oldEntity)
@@ -94,43 +104,14 @@ items:
       type: System.Object
     content.vb: Function Convert(oldEntity As Object) As Object
   overload: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert*
-  nameWithType.vb: IConverter.Convert(Object)
-  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert(Object)
-  name.vb: Convert(Object)
 references:
 - uid: VRBuilder.Editor.ProcessUpgradeTool
   commentId: N:VRBuilder.Editor.ProcessUpgradeTool
-  href: VRBuilder.html
   name: VRBuilder.Editor.ProcessUpgradeTool
   nameWithType: VRBuilder.Editor.ProcessUpgradeTool
   fullName: VRBuilder.Editor.ProcessUpgradeTool
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IConverter.ConvertedType*
   commentId: Overload:VRBuilder.Editor.ProcessUpgradeTool.IConverter.ConvertedType
-  href: VRBuilder.Editor.ProcessUpgradeTool.IConverter.html#VRBuilder_Editor_ProcessUpgradeTool_IConverter_ConvertedType
   name: ConvertedType
   nameWithType: IConverter.ConvertedType
   fullName: VRBuilder.Editor.ProcessUpgradeTool.IConverter.ConvertedType
@@ -138,20 +119,17 @@ references:
   commentId: T:System.Type
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type
   nameWithType: Type
   fullName: System.Type
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert*
   commentId: Overload:VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert
-  href: VRBuilder.Editor.ProcessUpgradeTool.IConverter.html#VRBuilder_Editor_ProcessUpgradeTool_IConverter_Convert_System_Object_
   name: Convert
   nameWithType: IConverter.Convert
   fullName: VRBuilder.Editor.ProcessUpgradeTool.IConverter.Convert
@@ -159,10 +137,6 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object

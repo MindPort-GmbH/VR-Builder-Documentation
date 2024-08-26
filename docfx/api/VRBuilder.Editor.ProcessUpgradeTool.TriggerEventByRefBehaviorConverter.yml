@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Editor/Converters/TriggerEventByRefBehaviorConverter.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: TriggerEventByRefBehaviorConverter
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Editor/Converters/TriggerEventByRefBehaviorConverter.cs
@@ -24,14 +24,14 @@ items:
   assemblies:
   - VRBuilder.Editor.StatesAndData
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: >-
-    Replaces an obsolete <xref href="VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior" data-throw-if-not-resolved="false"></xref> with a <xref href="VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior" data-throw-if-not-resolved="false"></xref>
-
-    with the same configuration.
+  summary: "\nReplaces an obsolete <xref href=\"VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior\" data-throw-if-not-resolved=\"false\"></xref> with a <xref href=\"VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior\" data-throw-if-not-resolved=\"false\"></xref>\nwith the same configuration.\n"
   example: []
   syntax:
     content: 'public class TriggerEventByRefBehaviorConverter : Converter<TriggerEventByRefBehavior, TriggerEventBehavior>, IConverter'
-    content.vb: Public Class TriggerEventByRefBehaviorConverter Inherits Converter(Of TriggerEventByRefBehavior, TriggerEventBehavior) Implements IConverter
+    content.vb: >-
+      Public Class TriggerEventByRefBehaviorConverter
+          Inherits Converter(Of TriggerEventByRefBehavior, TriggerEventBehavior)
+          Implements IConverter
   inheritance:
   - System.Object
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}
@@ -41,13 +41,19 @@ items:
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.ConvertedType
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.Convert(System.Object)
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
   id: PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
@@ -62,7 +68,7 @@ items:
   source:
     remote:
       path: Source/Editor/Converters/TriggerEventByRefBehaviorConverter.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: PerformConversion
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Editor/Converters/TriggerEventByRefBehaviorConverter.cs
@@ -70,7 +76,7 @@ items:
   assemblies:
   - VRBuilder.Editor.StatesAndData
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Returns an object which can replace the provided object.
+  summary: "\nReturns an object which can replace the provided object.\n"
   example: []
   syntax:
     content: protected override TriggerEventBehavior PerformConversion(TriggerEventByRefBehavior oldBehavior)
@@ -82,62 +88,37 @@ items:
     content.vb: Protected Overrides Function PerformConversion(oldBehavior As TriggerEventByRefBehavior) As TriggerEventBehavior
   overridden: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
   overload: VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.PerformConversion*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
   commentId: T:VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
   parent: VRBuilder.StatesAndData.Behaviors
-  href: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior.html
   name: TriggerEventByRefBehavior
   nameWithType: TriggerEventByRefBehavior
   fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
 - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
   commentId: T:VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
   parent: VRBuilder.StatesAndData.Behaviors
-  href: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior.html
   name: TriggerEventBehavior
   nameWithType: TriggerEventBehavior
   fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
 - uid: VRBuilder.Editor.ProcessUpgradeTool
   commentId: N:VRBuilder.Editor.ProcessUpgradeTool
-  href: VRBuilder.html
   name: VRBuilder.Editor.ProcessUpgradeTool
   nameWithType: VRBuilder.Editor.ProcessUpgradeTool
   fullName: VRBuilder.Editor.ProcessUpgradeTool
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}
   commentId: T:VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}
   parent: VRBuilder.Editor.ProcessUpgradeTool
@@ -151,31 +132,50 @@ references:
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
     name: TriggerEventByRefBehavior
-  - name: ','
-  - name: " "
+    nameWithType: TriggerEventByRefBehavior
+    fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
     name: TriggerEventBehavior
+    nameWithType: TriggerEventBehavior
+    fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
     name: TriggerEventByRefBehavior
-  - name: ','
-  - name: " "
+    nameWithType: TriggerEventByRefBehavior
+    fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
     name: TriggerEventBehavior
+    nameWithType: TriggerEventBehavior
+    fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IConverter
   commentId: T:VRBuilder.Editor.ProcessUpgradeTool.IConverter
   parent: VRBuilder.Editor.ProcessUpgradeTool
-  href: VRBuilder.Editor.ProcessUpgradeTool.IConverter.html
   name: IConverter
   nameWithType: IConverter
   fullName: VRBuilder.Editor.ProcessUpgradeTool.IConverter
@@ -198,307 +198,368 @@ references:
   nameWithType.vb: Converter(Of TriggerEventByRefBehavior, TriggerEventBehavior).PerformConversion(TriggerEventByRefBehavior)
   fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior).PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
   spec.csharp:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
+    nameWithType: Converter<TriggerEventByRefBehavior, TriggerEventBehavior>.PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior>.PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
     name: TriggerEventByRefBehavior
+    nameWithType: TriggerEventByRefBehavior
+    fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
+    nameWithType: Converter(Of TriggerEventByRefBehavior, TriggerEventBehavior).PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior).PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
     name: TriggerEventByRefBehavior
+    nameWithType: TriggerEventByRefBehavior
+    fullName: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.Convert(System.Object)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.Convert(System.Object)
   parent: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}
   definition: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: Convert(object)
-  nameWithType: Converter<TriggerEventByRefBehavior, TriggerEventBehavior>.Convert(object)
-  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior>.Convert(object)
+  name: Convert(Object)
+  nameWithType: Converter<TriggerEventByRefBehavior, TriggerEventBehavior>.Convert(Object)
+  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior>.Convert(System.Object)
   nameWithType.vb: Converter(Of TriggerEventByRefBehavior, TriggerEventBehavior).Convert(Object)
-  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior).Convert(Object)
-  name.vb: Convert(Object)
+  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior).Convert(System.Object)
   spec.csharp:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.Convert(System.Object)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
+    nameWithType: Converter<TriggerEventByRefBehavior, TriggerEventBehavior>.Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior>.Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior,VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior}.Convert(System.Object)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
+    nameWithType: Converter(Of TriggerEventByRefBehavior, TriggerEventBehavior).Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior, VRBuilder.StatesAndData.Behaviors.TriggerEventBehavior).Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.StatesAndData.Behaviors
   commentId: N:VRBuilder.StatesAndData.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.StatesAndData.Behaviors
   nameWithType: VRBuilder.StatesAndData.Behaviors
   fullName: VRBuilder.StatesAndData.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.StatesAndData
-    name: StatesAndData
-    href: VRBuilder.StatesAndData.html
-  - name: .
-  - uid: VRBuilder.StatesAndData.Behaviors
-    name: Behaviors
-    href: VRBuilder.StatesAndData.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.StatesAndData
-    name: StatesAndData
-    href: VRBuilder.StatesAndData.html
-  - name: .
-  - uid: VRBuilder.StatesAndData.Behaviors
-    name: Behaviors
-    href: VRBuilder.StatesAndData.Behaviors.html
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
   commentId: T:VRBuilder.Editor.ProcessUpgradeTool.Converter`2
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
   name: Converter<TIn, TOut>
   nameWithType: Converter<TIn, TOut>
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>
@@ -508,28 +569,45 @@ references:
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TIn
-  - name: ','
-  - name: " "
+    nameWithType: TIn
+    fullName: TIn
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - name: TOut
+    nameWithType: TOut
+    fullName: TOut
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TIn
-  - name: ','
-  - name: " "
+    nameWithType: TIn
+    fullName: TIn
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - name: TOut
+    nameWithType: TOut
+    fullName: TOut
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.ConvertedType
   commentId: P:VRBuilder.Editor.ProcessUpgradeTool.Converter`2.ConvertedType
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_ConvertedType
   name: ConvertedType
   nameWithType: Converter<TIn, TOut>.ConvertedType
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.ConvertedType
@@ -537,7 +615,6 @@ references:
   fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).ConvertedType
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
   name: PerformConversion(TIn)
   nameWithType: Converter<TIn, TOut>.PerformConversion(TIn)
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.PerformConversion(TIn)
@@ -546,50 +623,73 @@ references:
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
+    nameWithType: Converter<TIn, TOut>.PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - name: TIn
+    nameWithType: TIn
+    fullName: TIn
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
+    nameWithType: Converter(Of TIn, TOut).PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - name: TIn
+    nameWithType: TIn
+    fullName: TIn
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
   isExternal: true
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
-  name: Convert(object)
-  nameWithType: Converter<TIn, TOut>.Convert(object)
-  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.Convert(object)
+  name: Convert(Object)
+  nameWithType: Converter<TIn, TOut>.Convert(Object)
+  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.Convert(System.Object)
   nameWithType.vb: Converter(Of TIn, TOut).Convert(Object)
-  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).Convert(Object)
-  name.vb: Convert(Object)
+  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).Convert(System.Object)
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
+    nameWithType: Converter<TIn, TOut>.Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
+    nameWithType: Converter(Of TIn, TOut).Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.PerformConversion*
   commentId: Overload:VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.PerformConversion
-  href: VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.html#VRBuilder_Editor_ProcessUpgradeTool_TriggerEventByRefBehaviorConverter_PerformConversion_VRBuilder_StatesAndData_Behaviors_TriggerEventByRefBehavior_
   name: PerformConversion
   nameWithType: TriggerEventByRefBehaviorConverter.PerformConversion
   fullName: VRBuilder.Editor.ProcessUpgradeTool.TriggerEventByRefBehaviorConverter.PerformConversion

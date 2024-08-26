@@ -29,7 +29,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: This behavior causes confetti to rain.
+  summary: "\nThis behavior causes confetti to rain.\n"
   example: []
   syntax:
     content: >-
@@ -39,7 +39,11 @@ items:
     content.vb: >-
       <DataContract(IsReference:=True)>
 
-      Public Class ConfettiBehavior Inherits Behavior(Of ConfettiBehavior.EntityData) Implements IDataOwner(Of ConfettiBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
+      Public Class ConfettiBehavior
+
+          Inherits Behavior(Of ConfettiBehavior.EntityData)
+
+          Implements IDataOwner(Of ConfettiBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
@@ -52,21 +56,23 @@ items:
   - VRBuilder.Core.IDataOwner
   - VRBuilder.Core.IClonable{VRBuilder.Core.Behaviors.IBehavior}
   inheritedMembers:
+  - VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
   - VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Clone
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Data
+  - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.VRBuilder#Core#IDataOwner#Data
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.LifeCycle
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Parent
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActiveProcess
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Update
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -75,6 +81,12 @@ items:
     - name: IsReference
       type: System.Boolean
       value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor
   commentId: M:VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor
   id: '#ctor'
@@ -101,26 +113,20 @@ items:
     content: >-
       [JsonConstructor]
 
-      [Preserve]
-
       public ConfettiBehavior()
     content.vb: >-
       <JsonConstructor>
 
-      <Preserve>
-
-      Public Sub New()
+      Public Sub New
   overload: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
-  - type: UnityEngine.Scripting.PreserveAttribute
-    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
-    arguments: []
-  nameWithType.vb: ConfettiBehavior.New()
-  fullName.vb: VRBuilder.Core.Behaviors.ConfettiBehavior.New()
-  name.vb: New()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor(System.Boolean,VRBuilder.Core.SceneObjects.ISceneObject,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   commentId: M:VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor(System.Boolean,VRBuilder.Core.SceneObjects.ISceneObject,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   id: '#ctor(System.Boolean,VRBuilder.Core.SceneObjects.ISceneObject,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)'
@@ -128,9 +134,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ConfettiBehavior(bool, ISceneObject, string, float, float, BehaviorExecutionStages)
-  nameWithType: ConfettiBehavior.ConfettiBehavior(bool, ISceneObject, string, float, float, BehaviorExecutionStages)
-  fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior(bool, VRBuilder.Core.SceneObjects.ISceneObject, string, float, float, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
+  name: ConfettiBehavior(Boolean, ISceneObject, String, Single, Single, BehaviorExecutionStages)
+  nameWithType: ConfettiBehavior.ConfettiBehavior(Boolean, ISceneObject, String, Single, Single, BehaviorExecutionStages)
+  fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior(System.Boolean, VRBuilder.Core.SceneObjects.ISceneObject, System.String, System.Single, System.Single, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   type: Constructor
   source:
     remote:
@@ -160,9 +166,10 @@ items:
       type: VRBuilder.Core.Behaviors.BehaviorExecutionStages
     content.vb: Public Sub New(isAboveUser As Boolean, positionProvider As ISceneObject, confettiMachinePrefabPath As String, radius As Single, duration As Single, executionStages As BehaviorExecutionStages)
   overload: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor*
-  nameWithType.vb: ConfettiBehavior.New(Boolean, ISceneObject, String, Single, Single, BehaviorExecutionStages)
-  fullName.vb: VRBuilder.Core.Behaviors.ConfettiBehavior.New(Boolean, VRBuilder.Core.SceneObjects.ISceneObject, String, Single, Single, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
-  name.vb: New(Boolean, ISceneObject, String, Single, Single, BehaviorExecutionStages)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor(System.Boolean,System.String,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   commentId: M:VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor(System.Boolean,System.String,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   id: '#ctor(System.Boolean,System.String,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)'
@@ -170,9 +177,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ConfettiBehavior(bool, string, string, float, float, BehaviorExecutionStages)
-  nameWithType: ConfettiBehavior.ConfettiBehavior(bool, string, string, float, float, BehaviorExecutionStages)
-  fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior(bool, string, string, float, float, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
+  name: ConfettiBehavior(Boolean, String, String, Single, Single, BehaviorExecutionStages)
+  nameWithType: ConfettiBehavior.ConfettiBehavior(Boolean, String, String, Single, Single, BehaviorExecutionStages)
+  fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior(System.Boolean, System.String, System.String, System.Single, System.Single, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   type: Constructor
   source:
     remote:
@@ -214,9 +221,10 @@ items:
     arguments:
     - type: System.String
       value: This constructor is obsolete and will be removed in the next major version.
-  nameWithType.vb: ConfettiBehavior.New(Boolean, String, String, Single, Single, BehaviorExecutionStages)
-  fullName.vb: VRBuilder.Core.Behaviors.ConfettiBehavior.New(Boolean, String, String, Single, Single, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
-  name.vb: New(Boolean, String, String, Single, Single, BehaviorExecutionStages)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor(System.Boolean,System.Guid,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   commentId: M:VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor(System.Boolean,System.Guid,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   id: '#ctor(System.Boolean,System.Guid,System.String,System.Single,System.Single,VRBuilder.Core.Behaviors.BehaviorExecutionStages)'
@@ -224,9 +232,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ConfettiBehavior(bool, Guid, string, float, float, BehaviorExecutionStages)
-  nameWithType: ConfettiBehavior.ConfettiBehavior(bool, Guid, string, float, float, BehaviorExecutionStages)
-  fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior(bool, System.Guid, string, float, float, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
+  name: ConfettiBehavior(Boolean, Guid, String, Single, Single, BehaviorExecutionStages)
+  nameWithType: ConfettiBehavior.ConfettiBehavior(Boolean, Guid, String, Single, Single, BehaviorExecutionStages)
+  fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior(System.Boolean, System.Guid, System.String, System.Single, System.Single, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
   type: Constructor
   source:
     remote:
@@ -256,9 +264,10 @@ items:
       type: VRBuilder.Core.Behaviors.BehaviorExecutionStages
     content.vb: Public Sub New(isAboveUser As Boolean, positionProviderId As Guid, confettiMachinePrefabPath As String, radius As Single, duration As Single, executionStages As BehaviorExecutionStages)
   overload: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor*
-  nameWithType.vb: ConfettiBehavior.New(Boolean, Guid, String, Single, Single, BehaviorExecutionStages)
-  fullName.vb: VRBuilder.Core.Behaviors.ConfettiBehavior.New(Boolean, System.Guid, String, Single, Single, VRBuilder.Core.Behaviors.BehaviorExecutionStages)
-  name.vb: New(Boolean, Guid, String, Single, Single, BehaviorExecutionStages)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.GetActivatingProcess
   commentId: M:VRBuilder.Core.Behaviors.ConfettiBehavior.GetActivatingProcess
   id: GetActivatingProcess
@@ -281,15 +290,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Returns a new instance of a process for the Activating <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Public Overrides Function GetActivatingProcess() As IStageProcess
+    content.vb: Public Overrides Function GetActivatingProcess As IStageProcess
   overridden: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActivatingProcess
   overload: VRBuilder.Core.Behaviors.ConfettiBehavior.GetActivatingProcess*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Behaviors.ConfettiBehavior.GetDeactivatingProcess
   id: GetDeactivatingProcess
@@ -312,62 +326,37 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: Returns a new instance of a process for the Deactivating <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Public Overrides Function GetDeactivatingProcess() As IStageProcess
+    content.vb: Public Overrides Function GetDeactivatingProcess As IStageProcess
   overridden: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetDeactivatingProcess
   overload: VRBuilder.Core.Behaviors.ConfettiBehavior.GetDeactivatingProcess*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   commentId: T:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.Entity`1
-  href: VRBuilder.Core.Entity-1.html
   name: Entity<ConfettiBehavior.EntityData>
   nameWithType: Entity<ConfettiBehavior.EntityData>
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>
@@ -377,36 +366,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
   - name: <
-  - uid: VRBuilder.Core.Behaviors.ConfettiBehavior
-    name: ConfettiBehavior
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData.html
+    name: ConfettiBehavior.EntityData
+    nameWithType: ConfettiBehavior.EntityData
+    fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Behaviors.ConfettiBehavior
-    name: ConfettiBehavior
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.html
-  - name: .
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData.html
+    name: ConfettiBehavior.EntityData
+    nameWithType: ConfettiBehavior.EntityData
+    fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   commentId: T:VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   parent: VRBuilder.Core.Behaviors
   definition: VRBuilder.Core.Behaviors.Behavior`1
-  href: VRBuilder.Core.Behaviors.Behavior-1.html
   name: Behavior<ConfettiBehavior.EntityData>
   nameWithType: Behavior<ConfettiBehavior.EntityData>
   fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>
@@ -416,36 +406,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-    href: VRBuilder.Core.Behaviors.Behavior-1.html
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
   - name: <
-  - uid: VRBuilder.Core.Behaviors.ConfettiBehavior
-    name: ConfettiBehavior
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData.html
+    name: ConfettiBehavior.EntityData
+    nameWithType: ConfettiBehavior.EntityData
+    fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-    href: VRBuilder.Core.Behaviors.Behavior-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Behaviors.ConfettiBehavior
-    name: ConfettiBehavior
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.html
-  - name: .
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData.html
+    name: ConfettiBehavior.EntityData
+    nameWithType: ConfettiBehavior.EntityData
+    fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<ConfettiBehavior.EntityData>
   nameWithType: IDataOwner<ConfettiBehavior.EntityData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>
@@ -455,42 +446,42 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
-  - uid: VRBuilder.Core.Behaviors.ConfettiBehavior
-    name: ConfettiBehavior
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData.html
+    name: ConfettiBehavior.EntityData
+    nameWithType: ConfettiBehavior.EntityData
+    fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Behaviors.ConfettiBehavior
-    name: ConfettiBehavior
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.html
-  - name: .
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData.html
+    name: ConfettiBehavior.EntityData
+    nameWithType: ConfettiBehavior.EntityData
+    fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.IBehavior
   commentId: T:VRBuilder.Core.Behaviors.IBehavior
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.IBehavior.html
   name: IBehavior
   nameWithType: IBehavior
   fullName: VRBuilder.Core.Behaviors.IBehavior
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity
@@ -498,7 +489,6 @@ references:
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Core.Behaviors.IBehaviorData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<IBehaviorData>
   nameWithType: IDataOwner<IBehaviorData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>
@@ -508,27 +498,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.IBehaviorData
     name: IBehaviorData
-    href: VRBuilder.Core.Behaviors.IBehaviorData.html
+    nameWithType: IBehaviorData
+    fullName: VRBuilder.Core.Behaviors.IBehaviorData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.IBehaviorData
     name: IBehaviorData
-    href: VRBuilder.Core.Behaviors.IBehaviorData.html
+    nameWithType: IBehaviorData
+    fullName: VRBuilder.Core.Behaviors.IBehaviorData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner
   commentId: T:VRBuilder.Core.IDataOwner
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IDataOwner.html
   name: IDataOwner
   nameWithType: IDataOwner
   fullName: VRBuilder.Core.IDataOwner
@@ -536,7 +535,6 @@ references:
   commentId: T:VRBuilder.Core.IClonable{VRBuilder.Core.Behaviors.IBehavior}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<IBehavior>
   nameWithType: IClonable<IBehavior>
   fullName: VRBuilder.Core.IClonable<VRBuilder.Core.Behaviors.IBehavior>
@@ -546,60 +544,97 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
-    href: VRBuilder.Core.Behaviors.IBehavior.html
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
-    href: VRBuilder.Core.Behaviors.IBehavior.html
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  commentId: P:VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  parent: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
+  definition: VRBuilder.Core.Behaviors.Behavior`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  name: IDataOwner<IBehaviorData>.Data
+  nameWithType: Behavior<ConfettiBehavior.EntityData>.IDataOwner<IBehaviorData>.Data
+  fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  nameWithType.vb: Behavior(Of ConfettiBehavior.EntityData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  fullName.vb: VRBuilder.Core.Behaviors.Behavior(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  name.vb: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
 - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Clone
   commentId: M:VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Clone
   parent: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Behaviors.Behavior`1.Clone
-  href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
   name: Clone()
   nameWithType: Behavior<ConfettiBehavior.EntityData>.Clone()
   fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Clone()
   nameWithType.vb: Behavior(Of ConfettiBehavior.EntityData).Clone()
   fullName.vb: VRBuilder.Core.Behaviors.Behavior(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Clone()
   spec.csharp:
-  - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Clone
+  - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
-    href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
+    nameWithType: Behavior<ConfettiBehavior.EntityData>.Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Behaviors.Behavior{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Clone
+  - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
-    href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
+    nameWithType: Behavior(Of ConfettiBehavior.EntityData).Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Data
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Data
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.Data
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Data
   name: Data
   nameWithType: Entity<ConfettiBehavior.EntityData>.Data
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Data
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).Data
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Data
+- uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.VRBuilder#Core#IDataOwner#Data
+  commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.VRBuilder#Core#IDataOwner#Data
+  parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
+  definition: VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  name: IDataOwner.Data
+  nameWithType: Entity<ConfettiBehavior.EntityData>.IDataOwner.Data
+  fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.VRBuilder.Core.IDataOwner.Data
+  nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).VRBuilder.Core.IDataOwner.Data
+  fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).VRBuilder.Core.IDataOwner.Data
+  name.vb: VRBuilder.Core.IDataOwner.Data
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.LifeCycle
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.LifeCycle
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.LifeCycle
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_LifeCycle
   name: LifeCycle
   nameWithType: Entity<ConfettiBehavior.EntityData>.LifeCycle
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.LifeCycle
@@ -609,7 +644,6 @@ references:
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Parent
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.Parent
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Parent
   name: Parent
   nameWithType: Entity<ConfettiBehavior.EntityData>.Parent
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Parent
@@ -619,325 +653,421 @@ references:
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActiveProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.GetActiveProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
   name: GetActiveProcess()
   nameWithType: Entity<ConfettiBehavior.EntityData>.GetActiveProcess()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetActiveProcess()
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).GetActiveProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetActiveProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActiveProcess
+  - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity<ConfettiBehavior.EntityData>.GetActiveProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActiveProcess
+  - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity(Of ConfettiBehavior.EntityData).GetActiveProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetConfigurator
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetConfigurator
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.GetConfigurator
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
   name: GetConfigurator()
   nameWithType: Entity<ConfettiBehavior.EntityData>.GetConfigurator()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetConfigurator()
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).GetConfigurator()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetConfigurator()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetConfigurator
+  - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity<ConfettiBehavior.EntityData>.GetConfigurator
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetConfigurator
+  - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity(Of ConfettiBehavior.EntityData).GetConfigurator
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure(IMode)
   nameWithType: Entity<ConfettiBehavior.EntityData>.Configure(IMode)
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).Configure(IMode)
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Configure(VRBuilder.Core.Configuration.Modes.IMode)
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity<ConfettiBehavior.EntityData>.Configure
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity(Of ConfettiBehavior.EntityData).Configure
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Update
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Update
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.Update
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
   name: Update()
   nameWithType: Entity<ConfettiBehavior.EntityData>.Update()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Update()
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).Update()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Update()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Update
+  - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity<ConfettiBehavior.EntityData>.Update
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.Update
+  - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity(Of ConfettiBehavior.EntityData).Update
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Entity`1
   commentId: T:VRBuilder.Core.Entity`1
-  href: VRBuilder.Core.Entity-1.html
   name: Entity<TData>
   nameWithType: Entity<TData>
   fullName: VRBuilder.Core.Entity<TData>
@@ -947,44 +1077,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.Behaviors.Behavior`1
   commentId: T:VRBuilder.Core.Behaviors.Behavior`1
-  href: VRBuilder.Core.Behaviors.Behavior-1.html
   name: Behavior<TData>
   nameWithType: Behavior<TData>
   fullName: VRBuilder.Core.Behaviors.Behavior<TData>
@@ -994,22 +1118,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-    href: VRBuilder.Core.Behaviors.Behavior-1.html
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Behaviors.Behavior`1
     name: Behavior
-    href: VRBuilder.Core.Behaviors.Behavior-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Behavior
+    fullName: VRBuilder.Core.Behaviors.Behavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner`1
   commentId: T:VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<TData>
   nameWithType: IDataOwner<TData>
   fullName: VRBuilder.Core.IDataOwner<TData>
@@ -1019,22 +1154,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IClonable`1
   commentId: T:VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<T>
   nameWithType: IClonable<T>
   fullName: VRBuilder.Core.IClonable<T>
@@ -1044,22 +1190,41 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: VRBuilder.Core.Behaviors.Behavior`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  commentId: P:VRBuilder.Core.Behaviors.Behavior`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Behaviors#IBehaviorData}#Data
+  name: IDataOwner<IBehaviorData>.Data
+  nameWithType: Behavior<TData>.IDataOwner<IBehaviorData>.Data
+  fullName: VRBuilder.Core.Behaviors.Behavior<TData>.VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  nameWithType.vb: Behavior(Of TData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  fullName.vb: VRBuilder.Core.Behaviors.Behavior(Of TData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
+  name.vb: VRBuilder.Core.IDataOwner<VRBuilder.Core.Behaviors.IBehaviorData>.Data
 - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
   commentId: M:VRBuilder.Core.Behaviors.Behavior`1.Clone
-  href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
   name: Clone()
   nameWithType: Behavior<TData>.Clone()
   fullName: VRBuilder.Core.Behaviors.Behavior<TData>.Clone()
@@ -1068,26 +1233,42 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
-    href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
+    nameWithType: Behavior<TData>.Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior<TData>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Behaviors.Behavior`1.Clone
     name: Clone
-    href: VRBuilder.Core.Behaviors.Behavior-1.html#VRBuilder_Core_Behaviors_Behavior_1_Clone
+    nameWithType: Behavior(Of TData).Clone
+    fullName: VRBuilder.Core.Behaviors.Behavior(Of TData).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Data
   commentId: P:VRBuilder.Core.Entity`1.Data
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Data
   name: Data
   nameWithType: Entity<TData>.Data
   fullName: VRBuilder.Core.Entity<TData>.Data
   nameWithType.vb: Entity(Of TData).Data
   fullName.vb: VRBuilder.Core.Entity(Of TData).Data
+- uid: VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  commentId: P:VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  name: IDataOwner.Data
+  nameWithType: Entity<TData>.IDataOwner.Data
+  fullName: VRBuilder.Core.Entity<TData>.VRBuilder.Core.IDataOwner.Data
+  nameWithType.vb: Entity(Of TData).VRBuilder.Core.IDataOwner.Data
+  fullName.vb: VRBuilder.Core.Entity(Of TData).VRBuilder.Core.IDataOwner.Data
+  name.vb: VRBuilder.Core.IDataOwner.Data
 - uid: VRBuilder.Core.Entity`1.LifeCycle
   commentId: P:VRBuilder.Core.Entity`1.LifeCycle
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_LifeCycle
   name: LifeCycle
   nameWithType: Entity<TData>.LifeCycle
   fullName: VRBuilder.Core.Entity<TData>.LifeCycle
@@ -1095,7 +1276,6 @@ references:
   fullName.vb: VRBuilder.Core.Entity(Of TData).LifeCycle
 - uid: VRBuilder.Core.Entity`1.Parent
   commentId: P:VRBuilder.Core.Entity`1.Parent
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Parent
   name: Parent
   nameWithType: Entity<TData>.Parent
   fullName: VRBuilder.Core.Entity<TData>.Parent
@@ -1103,7 +1283,6 @@ references:
   fullName.vb: VRBuilder.Core.Entity(Of TData).Parent
 - uid: VRBuilder.Core.Entity`1.GetActiveProcess
   commentId: M:VRBuilder.Core.Entity`1.GetActiveProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
   name: GetActiveProcess()
   nameWithType: Entity<TData>.GetActiveProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetActiveProcess()
@@ -1112,18 +1291,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity<TData>.GetActiveProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity(Of TData).GetActiveProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.GetConfigurator
   commentId: M:VRBuilder.Core.Entity`1.GetConfigurator
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
   name: GetConfigurator()
   nameWithType: Entity<TData>.GetConfigurator()
   fullName: VRBuilder.Core.Entity<TData>.GetConfigurator()
@@ -1132,18 +1320,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity<TData>.GetConfigurator
+    fullName: VRBuilder.Core.Entity<TData>.GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity(Of TData).GetConfigurator
+    fullName: VRBuilder.Core.Entity(Of TData).GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure(IMode)
   nameWithType: Entity<TData>.Configure(IMode)
   fullName: VRBuilder.Core.Entity<TData>.Configure(VRBuilder.Core.Configuration.Modes.IMode)
@@ -1152,24 +1349,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity<TData>.Configure
+    fullName: VRBuilder.Core.Entity<TData>.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity(Of TData).Configure
+    fullName: VRBuilder.Core.Entity(Of TData).Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Update
   commentId: M:VRBuilder.Core.Entity`1.Update
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
   name: Update()
   nameWithType: Entity<TData>.Update()
   fullName: VRBuilder.Core.Entity<TData>.Update()
@@ -1178,39 +1386,40 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity<TData>.Update
+    fullName: VRBuilder.Core.Entity<TData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity(Of TData).Update
+    fullName: VRBuilder.Core.Entity(Of TData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor*
   commentId: Overload:VRBuilder.Core.Behaviors.ConfettiBehavior.#ctor
-  href: VRBuilder.Core.Behaviors.ConfettiBehavior.html#VRBuilder_Core_Behaviors_ConfettiBehavior__ctor
   name: ConfettiBehavior
   nameWithType: ConfettiBehavior.ConfettiBehavior
   fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.ConfettiBehavior
-  nameWithType.vb: ConfettiBehavior.New
-  fullName.vb: VRBuilder.Core.Behaviors.ConfettiBehavior.New
-  name.vb: New
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.SceneObjects.ISceneObject
   commentId: T:VRBuilder.Core.SceneObjects.ISceneObject
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ISceneObject.html
   name: ISceneObject
   nameWithType: ISceneObject
   fullName: VRBuilder.Core.SceneObjects.ISceneObject
@@ -1218,114 +1427,78 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System.Single
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: VRBuilder.Core.Behaviors.BehaviorExecutionStages
   commentId: T:VRBuilder.Core.Behaviors.BehaviorExecutionStages
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.BehaviorExecutionStages.html
   name: BehaviorExecutionStages
   nameWithType: BehaviorExecutionStages
   fullName: VRBuilder.Core.Behaviors.BehaviorExecutionStages
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
-- uid: VRBuilder.Core.Stage
-  commentId: T:VRBuilder.Core.Stage
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.Stage.html
-  name: Stage
-  nameWithType: Stage
-  fullName: VRBuilder.Core.Stage
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActivatingProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.GetActivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
   name: GetActivatingProcess()
   nameWithType: Entity<ConfettiBehavior.EntityData>.GetActivatingProcess()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetActivatingProcess()
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).GetActivatingProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetActivatingProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity<ConfettiBehavior.EntityData>.GetActivatingProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetActivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity(Of ConfettiBehavior.EntityData).GetActivatingProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.GetActivatingProcess*
   commentId: Overload:VRBuilder.Core.Behaviors.ConfettiBehavior.GetActivatingProcess
-  href: VRBuilder.Core.Behaviors.ConfettiBehavior.html#VRBuilder_Core_Behaviors_ConfettiBehavior_GetActivatingProcess
   name: GetActivatingProcess
   nameWithType: ConfettiBehavior.GetActivatingProcess
   fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.GetActivatingProcess
 - uid: VRBuilder.Core.IStageProcess
   commentId: T:VRBuilder.Core.IStageProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStageProcess.html
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
 - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
   commentId: M:VRBuilder.Core.Entity`1.GetActivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
   name: GetActivatingProcess()
   nameWithType: Entity<TData>.GetActivatingProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetActivatingProcess()
@@ -1334,46 +1507,63 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity<TData>.GetActivatingProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity(Of TData).GetActivatingProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetDeactivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}
   definition: VRBuilder.Core.Entity`1.GetDeactivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
   name: GetDeactivatingProcess()
   nameWithType: Entity<ConfettiBehavior.EntityData>.GetDeactivatingProcess()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetDeactivatingProcess()
   nameWithType.vb: Entity(Of ConfettiBehavior.EntityData).GetDeactivatingProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetDeactivatingProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetDeactivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity<ConfettiBehavior.EntityData>.GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData>.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData}.GetDeactivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity(Of ConfettiBehavior.EntityData).GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Behaviors.ConfettiBehavior.EntityData).GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors.ConfettiBehavior.GetDeactivatingProcess*
   commentId: Overload:VRBuilder.Core.Behaviors.ConfettiBehavior.GetDeactivatingProcess
-  href: VRBuilder.Core.Behaviors.ConfettiBehavior.html#VRBuilder_Core_Behaviors_ConfettiBehavior_GetDeactivatingProcess
   name: GetDeactivatingProcess
   nameWithType: ConfettiBehavior.GetDeactivatingProcess
   fullName: VRBuilder.Core.Behaviors.ConfettiBehavior.GetDeactivatingProcess
 - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Entity`1.GetDeactivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
   name: GetDeactivatingProcess()
   nameWithType: Entity<TData>.GetDeactivatingProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetDeactivatingProcess()
@@ -1382,12 +1572,22 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity<TData>.GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity(Of TData).GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )

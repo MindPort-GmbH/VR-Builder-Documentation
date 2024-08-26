@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Base interface for objects which can be completed.
+  summary: "\nBase interface for objects which can be completed.\n"
   example: []
   syntax:
     content: public interface ICompletable
     content.vb: Public Interface ICompletable
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.ICompletable.IsCompleted
   commentId: P:VRBuilder.Core.ICompletable.IsCompleted
   id: IsCompleted
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: True if this instance is already completed.
+  summary: "\nTrue if this instance is already completed.\n"
   example: []
   syntax:
     content: bool IsCompleted { get; }
@@ -61,6 +67,10 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsCompleted As Boolean
   overload: VRBuilder.Core.ICompletable.IsCompleted*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.ICompletable.Autocomplete
   commentId: M:VRBuilder.Core.ICompletable.Autocomplete
   id: Autocomplete
@@ -83,38 +93,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Forces this instance's completion.
+  summary: "\nForces this instance&apos;s completion.\n"
   example: []
   syntax:
     content: void Autocomplete()
-    content.vb: Sub Autocomplete()
+    content.vb: Sub Autocomplete
   overload: VRBuilder.Core.ICompletable.Autocomplete*
 references:
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.ICompletable.IsCompleted*
   commentId: Overload:VRBuilder.Core.ICompletable.IsCompleted
-  href: VRBuilder.Core.ICompletable.html#VRBuilder_Core_ICompletable_IsCompleted
   name: IsCompleted
   nameWithType: ICompletable.IsCompleted
   fullName: VRBuilder.Core.ICompletable.IsCompleted
@@ -122,23 +114,17 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.ICompletable.Autocomplete*
   commentId: Overload:VRBuilder.Core.ICompletable.Autocomplete
-  href: VRBuilder.Core.ICompletable.html#VRBuilder_Core_ICompletable_Autocomplete
   name: Autocomplete
   nameWithType: ICompletable.Autocomplete
   fullName: VRBuilder.Core.ICompletable.Autocomplete

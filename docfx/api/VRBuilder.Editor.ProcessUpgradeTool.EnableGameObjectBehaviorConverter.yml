@@ -24,14 +24,14 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: >-
-    Replaces an obsolete <xref href="VRBuilder.Core.Behaviors.EnableGameObjectBehavior" data-throw-if-not-resolved="false"></xref> with a <xref href="VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior" data-throw-if-not-resolved="false"></xref>
-
-    with the same configuration.
+  summary: "\nReplaces an obsolete <xref href=\"VRBuilder.Core.Behaviors.EnableGameObjectBehavior\" data-throw-if-not-resolved=\"false\"></xref> with a <xref href=\"VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior\" data-throw-if-not-resolved=\"false\"></xref>\nwith the same configuration.\n"
   example: []
   syntax:
     content: 'public class EnableGameObjectBehaviorConverter : Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>, IConverter'
-    content.vb: Public Class EnableGameObjectBehaviorConverter Inherits Converter(Of EnableGameObjectBehavior, SetObjectsEnabledBehavior) Implements IConverter
+    content.vb: >-
+      Public Class EnableGameObjectBehaviorConverter
+          Inherits Converter(Of EnableGameObjectBehavior, SetObjectsEnabledBehavior)
+          Implements IConverter
   inheritance:
   - System.Object
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}
@@ -41,13 +41,19 @@ items:
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.ConvertedType
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.Convert(System.Object)
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   id: PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
@@ -70,7 +76,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: Returns an object which can replace the provided object.
+  summary: "\nReturns an object which can replace the provided object.\n"
   example: []
   syntax:
     content: protected override SetObjectsEnabledBehavior PerformConversion(EnableGameObjectBehavior oldBehavior)
@@ -82,67 +88,41 @@ items:
     content.vb: Protected Overrides Function PerformConversion(oldBehavior As EnableGameObjectBehavior) As SetObjectsEnabledBehavior
   overridden: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   overload: VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.PerformConversion*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
   commentId: T:VRBuilder.Core.Behaviors.EnableGameObjectBehavior
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.EnableGameObjectBehavior.html
   name: EnableGameObjectBehavior
   nameWithType: EnableGameObjectBehavior
   fullName: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
 - uid: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
   commentId: T:VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
   parent: VRBuilder.Core.Behaviors
-  href: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior.html
   name: SetObjectsEnabledBehavior
   nameWithType: SetObjectsEnabledBehavior
   fullName: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
 - uid: VRBuilder.Editor.ProcessUpgradeTool
   commentId: N:VRBuilder.Editor.ProcessUpgradeTool
-  href: VRBuilder.html
   name: VRBuilder.Editor.ProcessUpgradeTool
   nameWithType: VRBuilder.Editor.ProcessUpgradeTool
   fullName: VRBuilder.Editor.ProcessUpgradeTool
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessUpgradeTool
-    name: ProcessUpgradeTool
-    href: VRBuilder.Editor.ProcessUpgradeTool.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}
   commentId: T:VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}
   parent: VRBuilder.Editor.ProcessUpgradeTool
   definition: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
   name: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>
   nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>
@@ -152,33 +132,50 @@ references:
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
     name: EnableGameObjectBehavior
-  - name: ','
-  - name: " "
+    nameWithType: EnableGameObjectBehavior
+    fullName: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
     name: SetObjectsEnabledBehavior
+    nameWithType: SetObjectsEnabledBehavior
+    fullName: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
     name: EnableGameObjectBehavior
-  - name: ','
-  - name: " "
+    nameWithType: EnableGameObjectBehavior
+    fullName: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
     name: SetObjectsEnabledBehavior
+    nameWithType: SetObjectsEnabledBehavior
+    fullName: VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.IConverter
   commentId: T:VRBuilder.Editor.ProcessUpgradeTool.IConverter
   parent: VRBuilder.Editor.ProcessUpgradeTool
-  href: VRBuilder.Editor.ProcessUpgradeTool.IConverter.html
   name: IConverter
   nameWithType: IConverter
   fullName: VRBuilder.Editor.ProcessUpgradeTool.IConverter
@@ -186,7 +183,6 @@ references:
   commentId: P:VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.ConvertedType
   parent: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}
   definition: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.ConvertedType
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_ConvertedType
   name: ConvertedType
   nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>.ConvertedType
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>.ConvertedType
@@ -196,318 +192,374 @@ references:
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   parent: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}
   definition: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
   name: PerformConversion(EnableGameObjectBehavior)
   nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>.PerformConversion(EnableGameObjectBehavior)
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   nameWithType.vb: Converter(Of EnableGameObjectBehavior, SetObjectsEnabledBehavior).PerformConversion(EnableGameObjectBehavior)
   fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior).PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
   spec.csharp:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
+    nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>.PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>.PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
     name: EnableGameObjectBehavior
+    nameWithType: EnableGameObjectBehavior
+    fullName: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.PerformConversion(VRBuilder.Core.Behaviors.EnableGameObjectBehavior)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
+    nameWithType: Converter(Of EnableGameObjectBehavior, SetObjectsEnabledBehavior).PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior).PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
     name: EnableGameObjectBehavior
+    nameWithType: EnableGameObjectBehavior
+    fullName: VRBuilder.Core.Behaviors.EnableGameObjectBehavior
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.Convert(System.Object)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.Convert(System.Object)
   parent: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}
   definition: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
-  name: Convert(object)
-  nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>.Convert(object)
-  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>.Convert(object)
+  name: Convert(Object)
+  nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>.Convert(Object)
+  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>.Convert(System.Object)
   nameWithType.vb: Converter(Of EnableGameObjectBehavior, SetObjectsEnabledBehavior).Convert(Object)
-  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior).Convert(Object)
-  name.vb: Convert(Object)
+  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior).Convert(System.Object)
   spec.csharp:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.Convert(System.Object)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
+    nameWithType: Converter<EnableGameObjectBehavior, SetObjectsEnabledBehavior>.Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior>.Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.Core.Behaviors.EnableGameObjectBehavior,VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior}.Convert(System.Object)
+  - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
+    nameWithType: Converter(Of EnableGameObjectBehavior, SetObjectsEnabledBehavior).Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of VRBuilder.Core.Behaviors.EnableGameObjectBehavior, VRBuilder.Core.Behaviors.SetObjectsEnabledBehavior).Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
   commentId: T:VRBuilder.Editor.ProcessUpgradeTool.Converter`2
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
   name: Converter<TIn, TOut>
   nameWithType: Converter<TIn, TOut>
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>
@@ -517,28 +569,45 @@ references:
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TIn
-  - name: ','
-  - name: " "
+    nameWithType: TIn
+    fullName: TIn
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - name: TOut
+    nameWithType: TOut
+    fullName: TOut
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2
     name: Converter
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Converter
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TIn
-  - name: ','
-  - name: " "
+    nameWithType: TIn
+    fullName: TIn
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - name: TOut
+    nameWithType: TOut
+    fullName: TOut
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.ConvertedType
   commentId: P:VRBuilder.Editor.ProcessUpgradeTool.Converter`2.ConvertedType
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_ConvertedType
   name: ConvertedType
   nameWithType: Converter<TIn, TOut>.ConvertedType
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.ConvertedType
@@ -546,7 +615,6 @@ references:
   fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).ConvertedType
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
   name: PerformConversion(TIn)
   nameWithType: Converter<TIn, TOut>.PerformConversion(TIn)
   fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.PerformConversion(TIn)
@@ -555,50 +623,73 @@ references:
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
+    nameWithType: Converter<TIn, TOut>.PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - name: TIn
+    nameWithType: TIn
+    fullName: TIn
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.PerformConversion(`0)
     name: PerformConversion
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_PerformConversion__0_
+    nameWithType: Converter(Of TIn, TOut).PerformConversion
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).PerformConversion
   - name: (
+    nameWithType: (
+    fullName: (
   - name: TIn
+    nameWithType: TIn
+    fullName: TIn
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
   commentId: M:VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
   isExternal: true
-  href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
-  name: Convert(object)
-  nameWithType: Converter<TIn, TOut>.Convert(object)
-  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.Convert(object)
+  name: Convert(Object)
+  nameWithType: Converter<TIn, TOut>.Convert(Object)
+  fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.Convert(System.Object)
   nameWithType.vb: Converter(Of TIn, TOut).Convert(Object)
-  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).Convert(Object)
-  name.vb: Convert(Object)
+  fullName.vb: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).Convert(System.Object)
   spec.csharp:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
+    nameWithType: Converter<TIn, TOut>.Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter<TIn, TOut>.Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Editor.ProcessUpgradeTool.Converter`2.Convert(System.Object)
     name: Convert
-    href: VRBuilder.Editor.ProcessUpgradeTool.Converter-2.html#VRBuilder_Editor_ProcessUpgradeTool_Converter_2_Convert_System_Object_
+    nameWithType: Converter(Of TIn, TOut).Convert
+    fullName: VRBuilder.Editor.ProcessUpgradeTool.Converter(Of TIn, TOut).Convert
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.PerformConversion*
   commentId: Overload:VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.PerformConversion
-  href: VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.html#VRBuilder_Editor_ProcessUpgradeTool_EnableGameObjectBehaviorConverter_PerformConversion_VRBuilder_Core_Behaviors_EnableGameObjectBehavior_
   name: PerformConversion
   nameWithType: EnableGameObjectBehaviorConverter.PerformConversion
   fullName: VRBuilder.Editor.ProcessUpgradeTool.EnableGameObjectBehaviorConverter.PerformConversion

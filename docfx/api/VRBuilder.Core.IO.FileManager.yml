@@ -28,7 +28,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
-  summary: Handles runtime operations that allow reading and writing to files in Unity.
+  summary: "\nHandles runtime operations that allow reading and writing to files in Unity.\n"
   example: []
   syntax:
     content: public static class FileManager
@@ -36,13 +36,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
 - uid: VRBuilder.Core.IO.FileManager.Read(System.String)
   commentId: M:VRBuilder.Core.IO.FileManager.Read(System.String)
   id: Read(System.String)
@@ -50,9 +57,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Read(string)
-  nameWithType: FileManager.Read(string)
-  fullName: VRBuilder.Core.IO.FileManager.Read(string)
+  name: Read(String)
+  nameWithType: FileManager.Read(String)
+  fullName: VRBuilder.Core.IO.FileManager.Read(System.String)
   type: Method
   source:
     remote:
@@ -65,11 +72,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
-  summary: Loads a file stored at <code class="paramref">filePath</code>.
-  remarks: <code class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
+  summary: "\nLoads a file stored at <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code>.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
   example: []
   syntax:
-    content: public static Task<byte[]> Read(string filePath)
+    content: public static async Task<byte[]> Read(string filePath)
     parameters:
     - id: filePath
       type: System.String
@@ -81,13 +88,17 @@ items:
   exceptions:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Exception thrown if <code class="paramref">filePath</code> is invalid.
+    description: Exception thrown if <code data-dev-comment-type="paramref" class="paramref">filePath</code> is invalid.
   - type: System.IO.FileNotFoundException
     commentId: T:System.IO.FileNotFoundException
     description: Exception thrown if the file does not exist.
-  nameWithType.vb: FileManager.Read(String)
-  fullName.vb: VRBuilder.Core.IO.FileManager.Read(String)
-  name.vb: Read(String)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.IO.FileManager.ReadAllText(System.String)
   commentId: M:VRBuilder.Core.IO.FileManager.ReadAllText(System.String)
   id: ReadAllText(System.String)
@@ -95,9 +106,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ReadAllText(string)
-  nameWithType: FileManager.ReadAllText(string)
-  fullName: VRBuilder.Core.IO.FileManager.ReadAllText(string)
+  name: ReadAllText(String)
+  nameWithType: FileManager.ReadAllText(String)
+  fullName: VRBuilder.Core.IO.FileManager.ReadAllText(System.String)
   type: Method
   source:
     remote:
@@ -110,11 +121,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
-  summary: Loads a file stored at <code class="paramref">filePath</code>.
-  remarks: <code class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
+  summary: "\nLoads a file stored at <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code>.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
   example: []
   syntax:
-    content: public static Task<string> ReadAllText(string filePath)
+    content: public static async Task<string> ReadAllText(string filePath)
     parameters:
     - id: filePath
       type: System.String
@@ -126,13 +137,17 @@ items:
   exceptions:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Exception thrown if <code class="paramref">filePath</code> is invalid.
+    description: Exception thrown if <code data-dev-comment-type="paramref" class="paramref">filePath</code> is invalid.
   - type: System.IO.FileNotFoundException
     commentId: T:System.IO.FileNotFoundException
     description: Exception thrown if the file does not exist.
-  nameWithType.vb: FileManager.ReadAllText(String)
-  fullName.vb: VRBuilder.Core.IO.FileManager.ReadAllText(String)
-  name.vb: ReadAllText(String)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.IO.FileManager.Write(System.String,System.Byte[])
   commentId: M:VRBuilder.Core.IO.FileManager.Write(System.String,System.Byte[])
   id: Write(System.String,System.Byte[])
@@ -140,9 +155,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Write(string, byte[])
-  nameWithType: FileManager.Write(string, byte[])
-  fullName: VRBuilder.Core.IO.FileManager.Write(string, byte[])
+  name: Write(String, Byte[])
+  nameWithType: FileManager.Write(String, Byte[])
+  fullName: VRBuilder.Core.IO.FileManager.Write(System.String, System.Byte[])
   type: Method
   source:
     remote:
@@ -155,11 +170,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
-  summary: Saves given <code class="paramref">fileData</code> in provided <code class="paramref">filePath</code>.
-  remarks: <code class="paramref">filePath</code> must be relative to PersistentDataPath.
+  summary: "\nSaves given <code data-dev-comment-type=\"paramref\" class=\"paramref\">fileData</code> in provided <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code>.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to <see cref="!:PersistentDataPath"></see>.
   example: []
   syntax:
-    content: public static Task<bool> Write(string filePath, byte[] fileData)
+    content: public static async Task<bool> Write(string filePath, byte[] fileData)
     parameters:
     - id: filePath
       type: System.String
@@ -167,11 +182,18 @@ items:
       type: System.Byte[]
     return:
       type: System.Threading.Tasks.Task{System.Boolean}
-      description: Returns true if <code class="paramref">fileData</code> could be saved successfully; otherwise, false.
+      description: Returns true if <code data-dev-comment-type="paramref" class="paramref">fileData</code> could be saved successfully; otherwise, false.
     content.vb: Public Shared Function Write(filePath As String, fileData As Byte()) As Task(Of Boolean)
   overload: VRBuilder.Core.IO.FileManager.Write*
   nameWithType.vb: FileManager.Write(String, Byte())
-  fullName.vb: VRBuilder.Core.IO.FileManager.Write(String, Byte())
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.IO.FileManager.Write(System.String, System.Byte())
   name.vb: Write(String, Byte())
 - uid: VRBuilder.Core.IO.FileManager.Exists(System.String)
   commentId: M:VRBuilder.Core.IO.FileManager.Exists(System.String)
@@ -180,9 +202,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Exists(string)
-  nameWithType: FileManager.Exists(string)
-  fullName: VRBuilder.Core.IO.FileManager.Exists(string)
+  name: Exists(String)
+  nameWithType: FileManager.Exists(String)
+  fullName: VRBuilder.Core.IO.FileManager.Exists(System.String)
   type: Method
   source:
     remote:
@@ -195,11 +217,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
-  summary: Returns true if given <code class="paramref">filePath</code> contains the name of an existing file under the StreamingAssets or platform persistent data folder; otherwise, false.
-  remarks: <code class="paramref">filePath</code> must be relative to the StreamingAssets or the platform persistent data folder.
+  summary: "\nReturns true if given <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code> contains the name of an existing file under the StreamingAssets or platform persistent data folder; otherwise, false.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to the StreamingAssets or the platform persistent data folder.
   example: []
   syntax:
-    content: public static Task<bool> Exists(string filePath)
+    content: public static async Task<bool> Exists(string filePath)
     parameters:
     - id: filePath
       type: System.String
@@ -207,9 +229,13 @@ items:
       type: System.Threading.Tasks.Task{System.Boolean}
     content.vb: Public Shared Function Exists(filePath As String) As Task(Of Boolean)
   overload: VRBuilder.Core.IO.FileManager.Exists*
-  nameWithType.vb: FileManager.Exists(String)
-  fullName.vb: VRBuilder.Core.IO.FileManager.Exists(String)
-  name.vb: Exists(String)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt(System.String,System.String)
   commentId: M:VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt(System.String,System.String)
   id: FetchStreamingAssetsFilesAt(System.String,System.String)
@@ -217,9 +243,9 @@ items:
   langs:
   - csharp
   - vb
-  name: FetchStreamingAssetsFilesAt(string, string)
-  nameWithType: FileManager.FetchStreamingAssetsFilesAt(string, string)
-  fullName: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt(string, string)
+  name: FetchStreamingAssetsFilesAt(String, String)
+  nameWithType: FileManager.FetchStreamingAssetsFilesAt(String, String)
+  fullName: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt(System.String, System.String)
   type: Method
   source:
     remote:
@@ -232,7 +258,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
-  summary: Returns the names of files (including their paths) that match the specified search pattern in the specified directory relative to the Streaming Assets folder.
+  summary: "\nReturns the names of files (including their paths) that match the specified search pattern in the specified directory relative to the Streaming Assets folder.\n"
   example: []
   syntax:
     content: public static IEnumerable<string> FetchStreamingAssetsFilesAt(string path, string searchPattern)
@@ -242,302 +268,323 @@ items:
       description: The relative path to the Streaming Assets folder. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: >-
-        The search string to match against the names of files in <code class="paramref">path</code>.
-
-        Depending on the platform, this parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see implementations of <xref href="VRBuilder.Core.IO.IPlatformFileSystem" data-throw-if-not-resolved="false"></xref>), but doesn't support regular expressions.
+      description: "\nThe search string to match against the names of files in <code data-dev-comment-type=\"paramref\" class=\"paramref\">path</code>.\nDepending on the platform, this parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see implementations of <xref href=\"VRBuilder.Core.IO.IPlatformFileSystem\" data-throw-if-not-resolved=\"false\"></xref>), but doesn&apos;t support regular expressions.\n"
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
     content.vb: Public Shared Function FetchStreamingAssetsFilesAt(path As String, searchPattern As String) As IEnumerable(Of String)
   overload: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt*
-  nameWithType.vb: FileManager.FetchStreamingAssetsFilesAt(String, String)
-  fullName.vb: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt(String, String)
-  name.vb: FetchStreamingAssetsFilesAt(String, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: VRBuilder.Core.IO
   commentId: N:VRBuilder.Core.IO
-  href: VRBuilder.html
   name: VRBuilder.Core.IO
   nameWithType: VRBuilder.Core.IO
   fullName: VRBuilder.Core.IO
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.IO
-    name: IO
-    href: VRBuilder.Core.IO.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.IO
-    name: IO
-    href: VRBuilder.Core.IO.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
-  name: ArgumentException
-  nameWithType: ArgumentException
-  fullName: System.ArgumentException
 - uid: System.IO.FileNotFoundException
   commentId: T:System.IO.FileNotFoundException
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
-  name: FileNotFoundException
-  nameWithType: FileNotFoundException
-  fullName: System.IO.FileNotFoundException
 - uid: VRBuilder.Core.IO.FileManager.Read*
   commentId: Overload:VRBuilder.Core.IO.FileManager.Read
-  href: VRBuilder.Core.IO.FileManager.html#VRBuilder_Core_IO_FileManager_Read_System_String_
   name: Read
   nameWithType: FileManager.Read
   fullName: VRBuilder.Core.IO.FileManager.Read
@@ -545,56 +592,62 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System.Threading.Tasks.Task{System.Byte[]}
   commentId: T:System.Threading.Tasks.Task{System.Byte[]}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<byte[]>
-  nameWithType: Task<byte[]>
-  fullName: System.Threading.Tasks.Task<byte[]>
+  name: Task<Byte[]>
+  nameWithType: Task<Byte[]>
+  fullName: System.Threading.Tasks.Task<System.Byte[]>
   nameWithType.vb: Task(Of Byte())
-  fullName.vb: System.Threading.Tasks.Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of System.Byte())
   name.vb: Task(Of Byte())
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Threading.Tasks.Task`1
   commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   name: Task<TResult>
   nameWithType: Task<TResult>
   fullName: System.Threading.Tasks.Task<TResult>
@@ -604,61 +657,41 @@ references:
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Threading.Tasks
   nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
 - uid: VRBuilder.Core.IO.FileManager.ReadAllText*
   commentId: Overload:VRBuilder.Core.IO.FileManager.ReadAllText
-  href: VRBuilder.Core.IO.FileManager.html#VRBuilder_Core_IO_FileManager_ReadAllText_System_String_
   name: ReadAllText
   nameWithType: FileManager.ReadAllText
   fullName: VRBuilder.Core.IO.FileManager.ReadAllText
@@ -666,117 +699,134 @@ references:
   commentId: T:System.Threading.Tasks.Task{System.String}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<string>
-  nameWithType: Task<string>
-  fullName: System.Threading.Tasks.Task<string>
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: System.Threading.Tasks.Task<System.String>
   nameWithType.vb: Task(Of String)
-  fullName.vb: System.Threading.Tasks.Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of System.String)
   name.vb: Task(Of String)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.String
-    name: string
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IO.FileManager.Write*
   commentId: Overload:VRBuilder.Core.IO.FileManager.Write
-  href: VRBuilder.Core.IO.FileManager.html#VRBuilder_Core_IO_FileManager_Write_System_String_System_Byte___
   name: Write
   nameWithType: FileManager.Write
   fullName: VRBuilder.Core.IO.FileManager.Write
 - uid: System.Byte[]
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
   nameWithType.vb: Byte()
-  fullName.vb: Byte()
+  fullName.vb: System.Byte()
   name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: System.Threading.Tasks.Task{System.Boolean}
   commentId: T:System.Threading.Tasks.Task{System.Boolean}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<bool>
-  nameWithType: Task<bool>
-  fullName: System.Threading.Tasks.Task<bool>
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
   nameWithType.vb: Task(Of Boolean)
-  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
   name.vb: Task(Of Boolean)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Boolean
-    name: bool
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IO.FileManager.Exists*
   commentId: Overload:VRBuilder.Core.IO.FileManager.Exists
-  href: VRBuilder.Core.IO.FileManager.html#VRBuilder_Core_IO_FileManager_Exists_System_String_
   name: Exists
   nameWithType: FileManager.Exists
   fullName: VRBuilder.Core.IO.FileManager.Exists
 - uid: VRBuilder.Core.IO.IPlatformFileSystem
   commentId: T:VRBuilder.Core.IO.IPlatformFileSystem
   parent: VRBuilder.Core.IO
-  href: VRBuilder.Core.IO.IPlatformFileSystem.html
   name: IPlatformFileSystem
   nameWithType: IPlatformFileSystem
   fullName: VRBuilder.Core.IO.IPlatformFileSystem
 - uid: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt*
   commentId: Overload:VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt
-  href: VRBuilder.Core.IO.FileManager.html#VRBuilder_Core_IO_FileManager_FetchStreamingAssetsFilesAt_System_String_System_String_
   name: FetchStreamingAssetsFilesAt
   nameWithType: FileManager.FetchStreamingAssetsFilesAt
   fullName: VRBuilder.Core.IO.FileManager.FetchStreamingAssetsFilesAt
@@ -784,41 +834,49 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{System.String}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  name: IEnumerable<string>
-  nameWithType: IEnumerable<string>
-  fullName: System.Collections.Generic.IEnumerable<string>
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
   nameWithType.vb: IEnumerable(Of String)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
   name.vb: IEnumerable(Of String)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.String
-    name: string
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -828,55 +886,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

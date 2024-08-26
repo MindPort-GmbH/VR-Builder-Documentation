@@ -29,10 +29,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: >-
-    ModeParameter is responsible for fetching its parameter value from a <xref href="VRBuilder.Core.Configuration.Modes.IMode" data-throw-if-not-resolved="false"></xref>.
-
-    If the value changes while being configured, an event will be triggered.
+  summary: "\nModeParameter is responsible for fetching its parameter value from a <xref href=\"VRBuilder.Core.Configuration.Modes.IMode\" data-throw-if-not-resolved=\"false\"></xref>.\nIf the value changes while being configured, an event will be triggered.\n"
   example: []
   syntax:
     content: public class ModeParameter<T>
@@ -42,14 +39,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   nameWithType.vb: ModeParameter(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T)
   name.vb: ModeParameter(Of T)
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.ParameterModified
@@ -80,6 +83,10 @@ items:
       type: System.EventHandler{System.EventArgs}
     content.vb: Public ParameterModified As EventHandler(Of EventArgs)
   nameWithType.vb: ModeParameter(Of T).ParameterModified
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).ParameterModified
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.IsModified
   commentId: P:VRBuilder.Core.Configuration.Modes.ModeParameter`1.IsModified
@@ -103,16 +110,22 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Is true when the current value is different to the default value.
+  summary: "\nIs true when the current value is different to the default value.\n"
   example: []
   syntax:
     content: public bool IsModified { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsModified As Boolean
+    content.vb: Public ReadOnly Property IsModified As Boolean
   overload: VRBuilder.Core.Configuration.Modes.ModeParameter`1.IsModified*
   nameWithType.vb: ModeParameter(Of T).IsModified
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).IsModified
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Value
   commentId: P:VRBuilder.Core.Configuration.Modes.ModeParameter`1.Value
@@ -136,7 +149,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Returns the current value, if set and different to the default value it will invoke a ParameterModified event.
+  summary: "\nReturns the current value, if set and different to the default value it will invoke a ParameterModified event.\n"
   example: []
   syntax:
     content: public T Value { get; set; }
@@ -146,6 +159,12 @@ items:
     content.vb: Public Property Value As T
   overload: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Value*
   nameWithType.vb: ModeParameter(Of T).Value
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).Value
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.#ctor(System.String,`0)
   commentId: M:VRBuilder.Core.Configuration.Modes.ModeParameter`1.#ctor(System.String,`0)
@@ -154,9 +173,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ModeParameter(string, T)
-  nameWithType: ModeParameter<T>.ModeParameter(string, T)
-  fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.ModeParameter(string, T)
+  name: ModeParameter(String, T)
+  nameWithType: ModeParameter<T>.ModeParameter(String, T)
+  fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.ModeParameter(System.String, T)
   type: Constructor
   source:
     remote:
@@ -170,7 +189,7 @@ items:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
   syntax:
-    content: public ModeParameter(string key, T defaultValue = default)
+    content: public ModeParameter(string key, T defaultValue = null)
     parameters:
     - id: key
       type: System.String
@@ -178,9 +197,12 @@ items:
       type: '{T}'
     content.vb: Public Sub New(key As String, defaultValue As T = Nothing)
   overload: VRBuilder.Core.Configuration.Modes.ModeParameter`1.#ctor*
-  nameWithType.vb: ModeParameter(Of T).New(String, T)
-  fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).New(String, T)
-  name.vb: New(String, T)
+  nameWithType.vb: ModeParameter(Of T).ModeParameter(String, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).ModeParameter(System.String, T)
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Configuration.Modes.ModeParameter`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   id: Configure(VRBuilder.Core.Configuration.Modes.IMode)
@@ -203,7 +225,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Configures this parameter with the given mode.
+  summary: "\nConfigures this parameter with the given mode.\n"
   example: []
   syntax:
     content: public void Configure(IMode mode)
@@ -213,6 +235,10 @@ items:
     content.vb: Public Sub Configure(mode As IMode)
   overload: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Configure*
   nameWithType.vb: ModeParameter(Of T).Configure(IMode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).Configure(VRBuilder.Core.Configuration.Modes.IMode)
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Reset
   commentId: M:VRBuilder.Core.Configuration.Modes.ModeParameter`1.Reset
@@ -236,294 +262,319 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: Resets the parameter, will triggered modified if the value changes.
+  summary: "\nResets the parameter, will triggered modified if the value changes.\n"
   example: []
   syntax:
     content: public void Reset()
-    content.vb: Public Sub Reset()
+    content.vb: Public Sub Reset
   overload: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Reset*
   nameWithType.vb: ModeParameter(Of T).Reset()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).Reset()
 references:
 - uid: VRBuilder.Core.Configuration.Modes.IMode
   commentId: T:VRBuilder.Core.Configuration.Modes.IMode
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IMode.html
   name: IMode
   nameWithType: IMode
   fullName: VRBuilder.Core.Configuration.Modes.IMode
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
@@ -531,7 +582,6 @@ references:
   commentId: T:System.EventHandler{System.EventArgs}
   parent: System
   definition: System.EventHandler`1
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<EventArgs>
   nameWithType: EventHandler<EventArgs>
   fullName: System.EventHandler<System.EventArgs>
@@ -541,31 +591,40 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.EventArgs
     name: EventArgs
+    nameWithType: EventArgs
+    fullName: System.EventArgs
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventargs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.EventArgs
     name: EventArgs
+    nameWithType: EventArgs
+    fullName: System.EventArgs
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventargs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.EventHandler`1
   commentId: T:System.EventHandler`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<TEventArgs>
   nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
@@ -575,24 +634,35 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.IsModified*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ModeParameter`1.IsModified
-  href: VRBuilder.Core.Configuration.Modes.ModeParameter-1.html#VRBuilder_Core_Configuration_Modes_ModeParameter_1_IsModified
   name: IsModified
   nameWithType: ModeParameter<T>.IsModified
   fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.IsModified
@@ -602,16 +672,11 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Value*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ModeParameter`1.Value
-  href: VRBuilder.Core.Configuration.Modes.ModeParameter-1.html#VRBuilder_Core_Configuration_Modes_ModeParameter_1_Value
   name: Value
   nameWithType: ModeParameter<T>.Value
   fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.Value
@@ -629,27 +694,20 @@ references:
   fullName: T
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.#ctor*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ModeParameter`1.#ctor
-  href: VRBuilder.Core.Configuration.Modes.ModeParameter-1.html#VRBuilder_Core_Configuration_Modes_ModeParameter_1__ctor_System_String__0_
   name: ModeParameter
   nameWithType: ModeParameter<T>.ModeParameter
   fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.ModeParameter
-  nameWithType.vb: ModeParameter(Of T).New
-  fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).New
-  name.vb: New
+  nameWithType.vb: ModeParameter(Of T).ModeParameter
+  fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).ModeParameter
 - uid: System.String
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Configure*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ModeParameter`1.Configure
-  href: VRBuilder.Core.Configuration.Modes.ModeParameter-1.html#VRBuilder_Core_Configuration_Modes_ModeParameter_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure
   nameWithType: ModeParameter<T>.Configure
   fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.Configure
@@ -657,7 +715,6 @@ references:
   fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of T).Configure
 - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1.Reset*
   commentId: Overload:VRBuilder.Core.Configuration.Modes.ModeParameter`1.Reset
-  href: VRBuilder.Core.Configuration.Modes.ModeParameter-1.html#VRBuilder_Core_Configuration_Modes_ModeParameter_1_Reset
   name: Reset
   nameWithType: ModeParameter<T>.Reset
   fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<T>.Reset

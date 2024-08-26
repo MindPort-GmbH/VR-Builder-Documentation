@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Interface for editor configuration extension definition.
+  summary: "\nInterface for editor configuration extension definition.\n"
   example: []
   syntax:
     content: public interface IEditorConfigurationExtension
     content.vb: Public Interface IEditorConfigurationExtension
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.RequiredMenuItems
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfigurationExtension.RequiredMenuItems
   id: RequiredMenuItems
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Menu items required by this configuration.
+  summary: "\nMenu items required by this configuration.\n"
   example: []
   syntax:
     content: IEnumerable<Type> RequiredMenuItems { get; }
@@ -61,6 +67,10 @@ items:
       type: System.Collections.Generic.IEnumerable{System.Type}
     content.vb: ReadOnly Property RequiredMenuItems As IEnumerable(Of Type)
   overload: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.RequiredMenuItems*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.DisabledMenuItems
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfigurationExtension.DisabledMenuItems
   id: DisabledMenuItems
@@ -83,7 +93,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Menu items disabled by this configuration.
+  summary: "\nMenu items disabled by this configuration.\n"
   example: []
   syntax:
     content: IEnumerable<Type> DisabledMenuItems { get; }
@@ -92,40 +102,18 @@ items:
       type: System.Collections.Generic.IEnumerable{System.Type}
     content.vb: ReadOnly Property DisabledMenuItems As IEnumerable(Of Type)
   overload: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.DisabledMenuItems*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 references:
 - uid: VRBuilder.Editor.Configuration
   commentId: N:VRBuilder.Editor.Configuration
-  href: VRBuilder.html
   name: VRBuilder.Editor.Configuration
   nameWithType: VRBuilder.Editor.Configuration
   fullName: VRBuilder.Editor.Configuration
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.Configuration
-    name: Configuration
-    href: VRBuilder.Editor.Configuration.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.Configuration
-    name: Configuration
-    href: VRBuilder.Editor.Configuration.html
 - uid: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.RequiredMenuItems*
   commentId: Overload:VRBuilder.Editor.Configuration.IEditorConfigurationExtension.RequiredMenuItems
-  href: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.html#VRBuilder_Editor_Configuration_IEditorConfigurationExtension_RequiredMenuItems
   name: RequiredMenuItems
   nameWithType: IEditorConfigurationExtension.RequiredMenuItems
   fullName: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.RequiredMenuItems
@@ -133,7 +121,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{System.Type}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<Type>
   nameWithType: IEnumerable<Type>
   fullName: System.Collections.Generic.IEnumerable<System.Type>
@@ -143,31 +130,40 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -177,61 +173,41 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.DisabledMenuItems*
   commentId: Overload:VRBuilder.Editor.Configuration.IEditorConfigurationExtension.DisabledMenuItems
-  href: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.html#VRBuilder_Editor_Configuration_IEditorConfigurationExtension_DisabledMenuItems
   name: DisabledMenuItems
   nameWithType: IEditorConfigurationExtension.DisabledMenuItems
   fullName: VRBuilder.Editor.Configuration.IEditorConfigurationExtension.DisabledMenuItems

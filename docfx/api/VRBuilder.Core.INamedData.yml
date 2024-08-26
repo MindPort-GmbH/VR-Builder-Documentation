@@ -24,13 +24,22 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Data structure with an <xref href="VRBuilder.Core.IStep" data-throw-if-not-resolved="false"></xref>'s name.
+  summary: "\nData structure with an <xref href=\"VRBuilder.Core.IStep\" data-throw-if-not-resolved=\"false\"></xref>&apos;s name.\n"
   example: []
   syntax:
     content: 'public interface INamedData : IData'
-    content.vb: Public Interface INamedData Inherits IData
+    content.vb: >-
+      Public Interface INamedData
+
+          Inherits IData
   inheritedMembers:
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   id: Name
@@ -53,7 +62,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Name of the entity.
+  summary: "\nName of the entity.\n"
   example: []
   syntax:
     content: string Name { get; }
@@ -62,53 +71,36 @@ items:
       type: System.String
     content.vb: ReadOnly Property Name As String
   overload: VRBuilder.Core.INamedData.Name*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 references:
 - uid: VRBuilder.Core.IStep
   commentId: T:VRBuilder.Core.IStep
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStep.html
   name: IStep
   nameWithType: IStep
   fullName: VRBuilder.Core.IStep
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core.INamedData.Name*
   commentId: Overload:VRBuilder.Core.INamedData.Name
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
@@ -116,17 +108,12 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System

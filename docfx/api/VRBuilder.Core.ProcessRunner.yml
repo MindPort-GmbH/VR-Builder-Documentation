@@ -32,7 +32,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Runs a <xref href="VRBuilder.Core.IProcess" data-throw-if-not-resolved="false"></xref>, expects to be run only once.
+  summary: "\nRuns a <xref href=\"VRBuilder.Core.IProcess\" data-throw-if-not-resolved=\"false\"></xref>, expects to be run only once.\n"
   example: []
   syntax:
     content: public static class ProcessRunner
@@ -40,13 +40,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
 - uid: VRBuilder.Core.ProcessRunner.Events
   commentId: P:VRBuilder.Core.ProcessRunner.Events
   id: Events
@@ -69,7 +76,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Returns all process events for the current scene.
+  summary: "\nReturns all process events for the current scene.\n"
   example: []
   syntax:
     content: public static ProcessRunner.ProcessEvents Events { get; }
@@ -78,6 +85,14 @@ items:
       type: VRBuilder.Core.ProcessRunner.ProcessEvents
     content.vb: Public Shared ReadOnly Property Events As ProcessRunner.ProcessEvents
   overload: VRBuilder.Core.ProcessRunner.Events*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: VRBuilder.Core.ProcessRunner.Current
   commentId: P:VRBuilder.Core.ProcessRunner.Current
   id: Current
@@ -100,7 +115,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Currently running <xref href="VRBuilder.Core.IProcess" data-throw-if-not-resolved="false"></xref>
+  summary: "\nCurrently running <xref href=\"VRBuilder.Core.IProcess\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
     content: public static IProcess Current { get; }
@@ -109,6 +124,14 @@ items:
       type: VRBuilder.Core.IProcess
     content.vb: Public Shared ReadOnly Property Current As IProcess
   overload: VRBuilder.Core.ProcessRunner.Current*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: VRBuilder.Core.ProcessRunner.IsRunning
   commentId: P:VRBuilder.Core.ProcessRunner.IsRunning
   id: IsRunning
@@ -131,7 +154,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Returns true if the current <xref href="VRBuilder.Core.IProcess" data-throw-if-not-resolved="false"></xref> is running.
+  summary: "\nReturns true if the current <xref href=\"VRBuilder.Core.IProcess\" data-throw-if-not-resolved=\"false\"></xref> is running.\n"
   example: []
   syntax:
     content: public static bool IsRunning { get; }
@@ -140,6 +163,14 @@ items:
       type: System.Boolean
     content.vb: Public Shared ReadOnly Property IsRunning As Boolean
   overload: VRBuilder.Core.ProcessRunner.IsRunning*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: VRBuilder.Core.ProcessRunner.Initialize(VRBuilder.Core.IProcess)
   commentId: M:VRBuilder.Core.ProcessRunner.Initialize(VRBuilder.Core.IProcess)
   id: Initialize(VRBuilder.Core.IProcess)
@@ -162,7 +193,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Initializes the process runner by creating all required component in scene.
+  summary: "\nInitializes the process runner by creating all required component in scene.\n"
   example: []
   syntax:
     content: public static void Initialize(IProcess process)
@@ -172,6 +203,12 @@ items:
       description: The process which should be run.
     content.vb: Public Shared Sub Initialize(process As IProcess)
   overload: VRBuilder.Core.ProcessRunner.Initialize*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.ProcessRunner.SkipChapters(System.Int32)
   commentId: M:VRBuilder.Core.ProcessRunner.SkipChapters(System.Int32)
   id: SkipChapters(System.Int32)
@@ -179,9 +216,9 @@ items:
   langs:
   - csharp
   - vb
-  name: SkipChapters(int)
-  nameWithType: ProcessRunner.SkipChapters(int)
-  fullName: VRBuilder.Core.ProcessRunner.SkipChapters(int)
+  name: SkipChapters(Int32)
+  nameWithType: ProcessRunner.SkipChapters(Int32)
+  fullName: VRBuilder.Core.ProcessRunner.SkipChapters(System.Int32)
   type: Method
   source:
     remote:
@@ -194,7 +231,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Skips the given amount of chapters.
+  summary: "\nSkips the given amount of chapters.\n"
   example: []
   syntax:
     content: public static void SkipChapters(int numberOfChapters)
@@ -204,9 +241,12 @@ items:
       description: Number of chapters.
     content.vb: Public Shared Sub SkipChapters(numberOfChapters As Integer)
   overload: VRBuilder.Core.ProcessRunner.SkipChapters*
-  nameWithType.vb: ProcessRunner.SkipChapters(Integer)
-  fullName.vb: VRBuilder.Core.ProcessRunner.SkipChapters(Integer)
-  name.vb: SkipChapters(Integer)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.ProcessRunner.SkipCurrentChapter
   commentId: M:VRBuilder.Core.ProcessRunner.SkipCurrentChapter
   id: SkipCurrentChapter
@@ -229,12 +269,18 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Skips the current chapters.
+  summary: "\nSkips the current chapters.\n"
   example: []
   syntax:
     content: public static void SkipCurrentChapter()
-    content.vb: Public Shared Sub SkipCurrentChapter()
+    content.vb: Public Shared Sub SkipCurrentChapter
   overload: VRBuilder.Core.ProcessRunner.SkipCurrentChapter*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.ProcessRunner.SetNextChapter(VRBuilder.Core.IChapter)
   commentId: M:VRBuilder.Core.ProcessRunner.SetNextChapter(VRBuilder.Core.IChapter)
   id: SetNextChapter(VRBuilder.Core.IChapter)
@@ -257,7 +303,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Sets the specified chapter as the next chapter in the process.
+  summary: "\nSets the specified chapter as the next chapter in the process.\n"
   example: []
   syntax:
     content: public static void SetNextChapter(IChapter chapter)
@@ -266,6 +312,12 @@ items:
       type: VRBuilder.Core.IChapter
     content.vb: Public Shared Sub SetNextChapter(chapter As IChapter)
   overload: VRBuilder.Core.ProcessRunner.SetNextChapter*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.ProcessRunner.SkipStep(VRBuilder.Core.ITransition)
   commentId: M:VRBuilder.Core.ProcessRunner.SkipStep(VRBuilder.Core.ITransition)
   id: SkipStep(VRBuilder.Core.ITransition)
@@ -288,7 +340,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Skips the current step and uses given transition.
+  summary: "\nSkips the current step and uses given transition.\n"
   example: []
   syntax:
     content: public static void SkipStep(ITransition transition)
@@ -298,6 +350,12 @@ items:
       description: Transition which should be used.
     content.vb: Public Shared Sub SkipStep(transition As ITransition)
   overload: VRBuilder.Core.ProcessRunner.SkipStep*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.ProcessRunner.Run
   commentId: M:VRBuilder.Core.ProcessRunner.Run
   id: Run
@@ -320,317 +378,340 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Starts the <xref href="VRBuilder.Core.IProcess" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nStarts the <xref href=\"VRBuilder.Core.IProcess\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void Run()
-    content.vb: Public Shared Sub Run()
+    content.vb: Public Shared Sub Run
   overload: VRBuilder.Core.ProcessRunner.Run*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: VRBuilder.Core.IProcess
   commentId: T:VRBuilder.Core.IProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IProcess.html
   name: IProcess
   nameWithType: IProcess
   fullName: VRBuilder.Core.IProcess
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.ProcessRunner.Events*
   commentId: Overload:VRBuilder.Core.ProcessRunner.Events
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_Events
   name: Events
   nameWithType: ProcessRunner.Events
   fullName: VRBuilder.Core.ProcessRunner.Events
 - uid: VRBuilder.Core.ProcessRunner.ProcessEvents
   commentId: T:VRBuilder.Core.ProcessRunner.ProcessEvents
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ProcessRunner.html
   name: ProcessRunner.ProcessEvents
   nameWithType: ProcessRunner.ProcessEvents
   fullName: VRBuilder.Core.ProcessRunner.ProcessEvents
-  spec.csharp:
-  - uid: VRBuilder.Core.ProcessRunner
-    name: ProcessRunner
-    href: VRBuilder.Core.ProcessRunner.html
-  - name: .
-  - uid: VRBuilder.Core.ProcessRunner.ProcessEvents
-    name: ProcessEvents
-    href: VRBuilder.Core.ProcessRunner.ProcessEvents.html
-  spec.vb:
-  - uid: VRBuilder.Core.ProcessRunner
-    name: ProcessRunner
-    href: VRBuilder.Core.ProcessRunner.html
-  - name: .
-  - uid: VRBuilder.Core.ProcessRunner.ProcessEvents
-    name: ProcessEvents
-    href: VRBuilder.Core.ProcessRunner.ProcessEvents.html
 - uid: VRBuilder.Core.ProcessRunner.Current*
   commentId: Overload:VRBuilder.Core.ProcessRunner.Current
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_Current
   name: Current
   nameWithType: ProcessRunner.Current
   fullName: VRBuilder.Core.ProcessRunner.Current
 - uid: VRBuilder.Core.ProcessRunner.IsRunning*
   commentId: Overload:VRBuilder.Core.ProcessRunner.IsRunning
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_IsRunning
   name: IsRunning
   nameWithType: ProcessRunner.IsRunning
   fullName: VRBuilder.Core.ProcessRunner.IsRunning
@@ -638,22 +719,16 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.ProcessRunner.Initialize*
   commentId: Overload:VRBuilder.Core.ProcessRunner.Initialize
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_Initialize_VRBuilder_Core_IProcess_
   name: Initialize
   nameWithType: ProcessRunner.Initialize
   fullName: VRBuilder.Core.ProcessRunner.Initialize
 - uid: VRBuilder.Core.ProcessRunner.SkipChapters*
   commentId: Overload:VRBuilder.Core.ProcessRunner.SkipChapters
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_SkipChapters_System_Int32_
   name: SkipChapters
   nameWithType: ProcessRunner.SkipChapters
   fullName: VRBuilder.Core.ProcessRunner.SkipChapters
@@ -661,48 +736,38 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Core.ProcessRunner.SkipCurrentChapter*
   commentId: Overload:VRBuilder.Core.ProcessRunner.SkipCurrentChapter
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_SkipCurrentChapter
   name: SkipCurrentChapter
   nameWithType: ProcessRunner.SkipCurrentChapter
   fullName: VRBuilder.Core.ProcessRunner.SkipCurrentChapter
 - uid: VRBuilder.Core.ProcessRunner.SetNextChapter*
   commentId: Overload:VRBuilder.Core.ProcessRunner.SetNextChapter
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_SetNextChapter_VRBuilder_Core_IChapter_
   name: SetNextChapter
   nameWithType: ProcessRunner.SetNextChapter
   fullName: VRBuilder.Core.ProcessRunner.SetNextChapter
 - uid: VRBuilder.Core.IChapter
   commentId: T:VRBuilder.Core.IChapter
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IChapter.html
   name: IChapter
   nameWithType: IChapter
   fullName: VRBuilder.Core.IChapter
 - uid: VRBuilder.Core.ProcessRunner.SkipStep*
   commentId: Overload:VRBuilder.Core.ProcessRunner.SkipStep
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_SkipStep_VRBuilder_Core_ITransition_
   name: SkipStep
   nameWithType: ProcessRunner.SkipStep
   fullName: VRBuilder.Core.ProcessRunner.SkipStep
 - uid: VRBuilder.Core.ITransition
   commentId: T:VRBuilder.Core.ITransition
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ITransition.html
   name: ITransition
   nameWithType: ITransition
   fullName: VRBuilder.Core.ITransition
 - uid: VRBuilder.Core.ProcessRunner.Run*
   commentId: Overload:VRBuilder.Core.ProcessRunner.Run
-  href: VRBuilder.Core.ProcessRunner.html#VRBuilder_Core_ProcessRunner_Run
   name: Run
   nameWithType: ProcessRunner.Run
   fullName: VRBuilder.Core.ProcessRunner.Run

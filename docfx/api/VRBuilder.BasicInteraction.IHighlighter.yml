@@ -7,7 +7,7 @@ items:
   children:
   - VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial
   - VRBuilder.BasicInteraction.IHighlighter.IsHighlighting
-  - VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
+  - VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
   - VRBuilder.BasicInteraction.IHighlighter.StopHighlighting
   langs:
   - csharp
@@ -27,11 +27,17 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Adds highlighting functionality to a GameObject with Renderers.
+  summary: "\nAdds highlighting functionality to a GameObject with Renderers.\n"
   example: []
   syntax:
     content: public interface IHighlighter
     content.vb: Public Interface IHighlighter
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.BasicInteraction.IHighlighter.IsHighlighting
   commentId: P:VRBuilder.BasicInteraction.IHighlighter.IsHighlighting
   id: IsHighlighting
@@ -54,7 +60,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Returns true if there is this object is currently being highlighted.
+  summary: "\nReturns true if there is this object is currently being highlighted.\n"
   example: []
   syntax:
     content: bool IsHighlighting { get; }
@@ -63,16 +69,20 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsHighlighting As Boolean
   overload: VRBuilder.BasicInteraction.IHighlighter.IsHighlighting*
-- uid: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
-  commentId: M:VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
-  id: StartHighlighting(UnityEngine.Material)
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
+  commentId: M:VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
+  id: StartHighlighting(Material)
   parent: VRBuilder.BasicInteraction.IHighlighter
   langs:
   - csharp
   - vb
   name: StartHighlighting(Material)
   nameWithType: IHighlighter.StartHighlighting(Material)
-  fullName: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
+  fullName: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
   type: Method
   source:
     remote:
@@ -85,13 +95,13 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Starts highlighting this object.
+  summary: "\nStarts highlighting this object.\n"
   example: []
   syntax:
     content: void StartHighlighting(Material highlightMaterial)
     parameters:
     - id: highlightMaterial
-      type: UnityEngine.Material
+      type: Material
       description: Material to be applied as highlight.
     content.vb: Sub StartHighlighting(highlightMaterial As Material)
   overload: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting*
@@ -117,11 +127,11 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: Stops highlighting this object.
+  summary: "\nStops highlighting this object.\n"
   example: []
   syntax:
     content: void StopHighlighting()
-    content.vb: Sub StopHighlighting()
+    content.vb: Sub StopHighlighting
   overload: VRBuilder.BasicInteraction.IHighlighter.StopHighlighting*
 - uid: VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial
   commentId: M:VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial
@@ -145,41 +155,23 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
-  summary: ''
+  summary: "\n\n"
   example: []
   syntax:
     content: Material GetHighlightMaterial()
     return:
-      type: UnityEngine.Material
+      type: Material
       description: ''
-    content.vb: Function GetHighlightMaterial() As Material
+    content.vb: Function GetHighlightMaterial As Material
   overload: VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial*
 references:
 - uid: VRBuilder.BasicInteraction
   commentId: N:VRBuilder.BasicInteraction
-  href: VRBuilder.html
   name: VRBuilder.BasicInteraction
   nameWithType: VRBuilder.BasicInteraction
   fullName: VRBuilder.BasicInteraction
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.BasicInteraction
-    name: BasicInteraction
-    href: VRBuilder.BasicInteraction.html
 - uid: VRBuilder.BasicInteraction.IHighlighter.IsHighlighting*
   commentId: Overload:VRBuilder.BasicInteraction.IHighlighter.IsHighlighting
-  href: VRBuilder.BasicInteraction.IHighlighter.html#VRBuilder_BasicInteraction_IHighlighter_IsHighlighting
   name: IsHighlighting
   nameWithType: IHighlighter.IsHighlighting
   fullName: VRBuilder.BasicInteraction.IHighlighter.IsHighlighting
@@ -187,48 +179,32 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting*
   commentId: Overload:VRBuilder.BasicInteraction.IHighlighter.StartHighlighting
-  href: VRBuilder.BasicInteraction.IHighlighter.html#VRBuilder_BasicInteraction_IHighlighter_StartHighlighting_UnityEngine_Material_
   name: StartHighlighting
   nameWithType: IHighlighter.StartHighlighting
   fullName: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting
-- uid: UnityEngine.Material
-  commentId: T:UnityEngine.Material
-  parent: UnityEngine
+- uid: Material
   isExternal: true
   name: Material
   nameWithType: Material
-  fullName: UnityEngine.Material
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: Material
 - uid: VRBuilder.BasicInteraction.IHighlighter.StopHighlighting*
   commentId: Overload:VRBuilder.BasicInteraction.IHighlighter.StopHighlighting
-  href: VRBuilder.BasicInteraction.IHighlighter.html#VRBuilder_BasicInteraction_IHighlighter_StopHighlighting
   name: StopHighlighting
   nameWithType: IHighlighter.StopHighlighting
   fullName: VRBuilder.BasicInteraction.IHighlighter.StopHighlighting
 - uid: VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial*
   commentId: Overload:VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial
-  href: VRBuilder.BasicInteraction.IHighlighter.html#VRBuilder_BasicInteraction_IHighlighter_GetHighlightMaterial
   name: GetHighlightMaterial
   nameWithType: IHighlighter.GetHighlightMaterial
   fullName: VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial

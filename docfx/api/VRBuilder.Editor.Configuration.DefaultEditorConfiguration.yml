@@ -31,23 +31,31 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Default editor configuration definition which is used if no other was implemented.
+  summary: "\nDefault editor configuration definition which is used if no other was implemented.\n"
   example: []
   syntax:
     content: 'public class DefaultEditorConfiguration : IEditorConfiguration'
-    content.vb: Public Class DefaultEditorConfiguration Implements IEditorConfiguration
+    content.vb: >-
+      Public Class DefaultEditorConfiguration
+          Implements IEditorConfiguration
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory
   id: ProcessStreamingAssetsSubdirectory
@@ -70,7 +78,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Absolute path where processes are stored.
+  summary: "\nAbsolute path where processes are stored.\n"
   example: []
   syntax:
     content: public virtual string ProcessStreamingAssetsSubdirectory { get; }
@@ -81,6 +89,14 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessStreamingAssetsSubdirectory
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath
   id: AllowedMenuItemsSettingsAssetPath
@@ -103,10 +119,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: >-
-    Assets path where to save the serialized <xref href="VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings" data-throw-if-not-resolved="false"></xref> file.
-
-    It has to start with "Assets/".
+  summary: "\nAssets path where to save the serialized <xref href=\"VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings\" data-throw-if-not-resolved=\"false\"></xref> file.\nIt has to start with &quot;Assets/&quot;.\n"
   example: []
   syntax:
     content: public virtual string AllowedMenuItemsSettingsAssetPath { get; }
@@ -117,6 +130,14 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettingsAssetPath
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.Serializer
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.Serializer
   id: Serializer
@@ -139,7 +160,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Serializer used to serialize processes and steps.
+  summary: "\nSerializer used to serialize processes and steps.\n"
   example: []
   syntax:
     content: public virtual IProcessSerializer Serializer { get; }
@@ -150,6 +171,14 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.Serializer*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.Serializer
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessAssetStrategy
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessAssetStrategy
   id: ProcessAssetStrategy
@@ -172,7 +201,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: Defines how the asset is going to be saved on disk.
+  summary: "\nDefines how the asset is going to be saved on disk.\n"
   example: []
   syntax:
     content: public IProcessAssetStrategy ProcessAssetStrategy { get; }
@@ -183,6 +212,12 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessAssetStrategy*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessAssetStrategy
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.BehaviorsMenuContent
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.BehaviorsMenuContent
   id: BehaviorsMenuContent
@@ -205,7 +240,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: List of available options in "Add new behavior" dropdown.
+  summary: "\nList of available options in &quot;Add new behavior&quot; dropdown.\n"
   example: []
   syntax:
     content: public virtual ReadOnlyCollection<MenuOption<IBehavior>> BehaviorsMenuContent { get; }
@@ -216,6 +251,14 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.BehaviorsMenuContent*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.BehaviorsMenuContent
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ConditionsMenuContent
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ConditionsMenuContent
   id: ConditionsMenuContent
@@ -238,7 +281,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: List of available options in "Add new condition" dropdown.
+  summary: "\nList of available options in &quot;Add new condition&quot; dropdown.\n"
   example: []
   syntax:
     content: public virtual ReadOnlyCollection<MenuOption<ICondition>> ConditionsMenuContent { get; }
@@ -249,6 +292,14 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ConditionsMenuContent*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.ConditionsMenuContent
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettings
   commentId: P:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettings
   id: AllowedMenuItemsSettings
@@ -271,10 +322,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: >-
-    The current instance of the <xref href="VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings" data-throw-if-not-resolved="false"></xref> object.
-
-    It manages the display status of all available behaviors and conditions.
+  summary: "\nThe current instance of the <xref href=\"VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings\" data-throw-if-not-resolved=\"false\"></xref> object.\nIt manages the display status of all available behaviors and conditions.\n"
   example: []
   syntax:
     content: public virtual AllowedMenuItemsSettings AllowedMenuItemsSettings { get; set; }
@@ -285,6 +333,14 @@ items:
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettings*
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.#ctor
   commentId: M:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.#ctor
   id: '#ctor'
@@ -309,296 +365,324 @@ items:
   namespace: VRBuilder.Editor.Configuration
   syntax:
     content: protected DefaultEditorConfiguration()
-    content.vb: Protected Sub New()
+    content.vb: Protected Sub New
   overload: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.#ctor*
-  nameWithType.vb: DefaultEditorConfiguration.New()
-  fullName.vb: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.New()
-  name.vb: New()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: VRBuilder.Editor.Configuration
   commentId: N:VRBuilder.Editor.Configuration
-  href: VRBuilder.html
   name: VRBuilder.Editor.Configuration
   nameWithType: VRBuilder.Editor.Configuration
   fullName: VRBuilder.Editor.Configuration
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.Configuration
-    name: Configuration
-    href: VRBuilder.Editor.Configuration.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.Configuration
-    name: Configuration
-    href: VRBuilder.Editor.Configuration.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration
   commentId: T:VRBuilder.Editor.Configuration.IEditorConfiguration
   parent: VRBuilder.Editor.Configuration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html
   name: IEditorConfiguration
   nameWithType: IEditorConfiguration
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_ProcessStreamingAssetsSubdirectory
   name: ProcessStreamingAssetsSubdirectory
   nameWithType: DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessStreamingAssetsSubdirectory
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessStreamingAssetsSubdirectory
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessStreamingAssetsSubdirectory
   parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_ProcessStreamingAssetsSubdirectory
   name: ProcessStreamingAssetsSubdirectory
   nameWithType: IEditorConfiguration.ProcessStreamingAssetsSubdirectory
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessStreamingAssetsSubdirectory
@@ -606,143 +690,72 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
-  commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
-  parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_AllowedMenuItemsSettings
-  name: AllowedMenuItemsSettings
-  nameWithType: IEditorConfiguration.AllowedMenuItemsSettings
-  fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_AllowedMenuItemsSettingsAssetPath
   name: AllowedMenuItemsSettingsAssetPath
   nameWithType: DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettingsAssetPath
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettingsAssetPath
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettingsAssetPath
   parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_AllowedMenuItemsSettingsAssetPath
   name: AllowedMenuItemsSettingsAssetPath
   nameWithType: IEditorConfiguration.AllowedMenuItemsSettingsAssetPath
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettingsAssetPath
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.Serializer*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.Serializer
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_Serializer
   name: Serializer
   nameWithType: DefaultEditorConfiguration.Serializer
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.Serializer
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration.Serializer
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.Serializer
   parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_Serializer
   name: Serializer
   nameWithType: IEditorConfiguration.Serializer
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.Serializer
 - uid: VRBuilder.Core.Serialization.IProcessSerializer
   commentId: T:VRBuilder.Core.Serialization.IProcessSerializer
   parent: VRBuilder.Core.Serialization
-  href: VRBuilder.Core.Serialization.IProcessSerializer.html
   name: IProcessSerializer
   nameWithType: IProcessSerializer
   fullName: VRBuilder.Core.Serialization.IProcessSerializer
 - uid: VRBuilder.Core.Serialization
   commentId: N:VRBuilder.Core.Serialization
-  href: VRBuilder.html
   name: VRBuilder.Core.Serialization
   nameWithType: VRBuilder.Core.Serialization
   fullName: VRBuilder.Core.Serialization
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization
-    name: Serialization
-    href: VRBuilder.Core.Serialization.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization
-    name: Serialization
-    href: VRBuilder.Core.Serialization.html
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessAssetStrategy*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessAssetStrategy
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_ProcessAssetStrategy
   name: ProcessAssetStrategy
   nameWithType: DefaultEditorConfiguration.ProcessAssetStrategy
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ProcessAssetStrategy
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessAssetStrategy
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessAssetStrategy
   parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_ProcessAssetStrategy
   name: ProcessAssetStrategy
   nameWithType: IEditorConfiguration.ProcessAssetStrategy
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.ProcessAssetStrategy
 - uid: VRBuilder.Core.IO.IProcessAssetStrategy
   commentId: T:VRBuilder.Core.IO.IProcessAssetStrategy
   parent: VRBuilder.Core.IO
-  href: VRBuilder.Core.IO.IProcessAssetStrategy.html
   name: IProcessAssetStrategy
   nameWithType: IProcessAssetStrategy
   fullName: VRBuilder.Core.IO.IProcessAssetStrategy
 - uid: VRBuilder.Core.IO
   commentId: N:VRBuilder.Core.IO
-  href: VRBuilder.html
   name: VRBuilder.Core.IO
   nameWithType: VRBuilder.Core.IO
   fullName: VRBuilder.Core.IO
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.IO
-    name: IO
-    href: VRBuilder.Core.IO.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.IO
-    name: IO
-    href: VRBuilder.Core.IO.html
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.BehaviorsMenuContent*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.BehaviorsMenuContent
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_BehaviorsMenuContent
   name: BehaviorsMenuContent
   nameWithType: DefaultEditorConfiguration.BehaviorsMenuContent
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.BehaviorsMenuContent
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration.BehaviorsMenuContent
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.BehaviorsMenuContent
   parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_BehaviorsMenuContent
   name: BehaviorsMenuContent
   nameWithType: IEditorConfiguration.BehaviorsMenuContent
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.BehaviorsMenuContent
@@ -750,7 +763,6 @@ references:
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{VRBuilder.Editor.UI.StepInspector.Menu.MenuOption{VRBuilder.Core.Behaviors.IBehavior}}
   parent: System.Collections.ObjectModel
   definition: System.Collections.ObjectModel.ReadOnlyCollection`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<MenuOption<IBehavior>>
   nameWithType: ReadOnlyCollection<MenuOption<IBehavior>>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<VRBuilder.Editor.UI.StepInspector.Menu.MenuOption<VRBuilder.Core.Behaviors.IBehavior>>
@@ -760,39 +772,58 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption`1
     name: MenuOption
-    href: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption-1.html
+    nameWithType: MenuOption
+    fullName: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption`1
     name: MenuOption
-    href: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: MenuOption
+    fullName: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Behaviors.IBehavior
     name: IBehavior
+    nameWithType: IBehavior
+    fullName: VRBuilder.Core.Behaviors.IBehavior
   - name: )
+    nameWithType: )
+    fullName: )
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<T>
   nameWithType: ReadOnlyCollection<T>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
@@ -802,68 +833,47 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.ObjectModel
-    name: ObjectModel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.ObjectModel
-    name: ObjectModel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ConditionsMenuContent*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ConditionsMenuContent
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_ConditionsMenuContent
   name: ConditionsMenuContent
   nameWithType: DefaultEditorConfiguration.ConditionsMenuContent
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.ConditionsMenuContent
 - uid: VRBuilder.Editor.Configuration.IEditorConfiguration.ConditionsMenuContent
   commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.ConditionsMenuContent
   parent: VRBuilder.Editor.Configuration.IEditorConfiguration
-  href: VRBuilder.Editor.Configuration.IEditorConfiguration.html#VRBuilder_Editor_Configuration_IEditorConfiguration_ConditionsMenuContent
   name: ConditionsMenuContent
   nameWithType: IEditorConfiguration.ConditionsMenuContent
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.ConditionsMenuContent
@@ -871,7 +881,6 @@ references:
   commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{VRBuilder.Editor.UI.StepInspector.Menu.MenuOption{VRBuilder.Core.Conditions.ICondition}}
   parent: System.Collections.ObjectModel
   definition: System.Collections.ObjectModel.ReadOnlyCollection`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   name: ReadOnlyCollection<MenuOption<ICondition>>
   nameWithType: ReadOnlyCollection<MenuOption<ICondition>>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<VRBuilder.Editor.UI.StepInspector.Menu.MenuOption<VRBuilder.Core.Conditions.ICondition>>
@@ -881,54 +890,74 @@ references:
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption`1
     name: MenuOption
-    href: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption-1.html
+    nameWithType: MenuOption
+    fullName: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.ICondition
     name: ICondition
+    nameWithType: ICondition
+    fullName: VRBuilder.Core.Conditions.ICondition
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption`1
     name: MenuOption
-    href: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: MenuOption
+    fullName: VRBuilder.Editor.UI.StepInspector.Menu.MenuOption
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.ICondition
     name: ICondition
+    nameWithType: ICondition
+    fullName: VRBuilder.Core.Conditions.ICondition
   - name: )
+    nameWithType: )
+    fullName: )
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettings*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettings
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration_AllowedMenuItemsSettings
   name: AllowedMenuItemsSettings
   nameWithType: DefaultEditorConfiguration.AllowedMenuItemsSettings
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.AllowedMenuItemsSettings
+- uid: VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
+  commentId: P:VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
+  parent: VRBuilder.Editor.Configuration.IEditorConfiguration
+  name: AllowedMenuItemsSettings
+  nameWithType: IEditorConfiguration.AllowedMenuItemsSettings
+  fullName: VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings
 - uid: VRBuilder.Editor.Configuration.AllowedMenuItemsSettings
   commentId: T:VRBuilder.Editor.Configuration.AllowedMenuItemsSettings
   parent: VRBuilder.Editor.Configuration
-  href: VRBuilder.Editor.Configuration.AllowedMenuItemsSettings.html
   name: AllowedMenuItemsSettings
   nameWithType: AllowedMenuItemsSettings
   fullName: VRBuilder.Editor.Configuration.AllowedMenuItemsSettings
 - uid: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.#ctor*
   commentId: Overload:VRBuilder.Editor.Configuration.DefaultEditorConfiguration.#ctor
-  href: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.html#VRBuilder_Editor_Configuration_DefaultEditorConfiguration__ctor
   name: DefaultEditorConfiguration
   nameWithType: DefaultEditorConfiguration.DefaultEditorConfiguration
   fullName: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.DefaultEditorConfiguration
-  nameWithType.vb: DefaultEditorConfiguration.New
-  fullName.vb: VRBuilder.Editor.Configuration.DefaultEditorConfiguration.New
-  name.vb: New

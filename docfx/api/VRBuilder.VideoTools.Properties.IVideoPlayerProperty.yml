@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IVideoPlayerProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: IVideoPlayerProperty
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Properties/IVideoPlayerProperty.cs
@@ -28,13 +28,22 @@ items:
   assemblies:
   - VRBuilder.VideoTools
   namespace: VRBuilder.VideoTools.Properties
-  summary: Property that controls a video player.
+  summary: "\nProperty that controls a video player.\n"
   example: []
   syntax:
     content: 'public interface IVideoPlayerProperty : ISceneObjectProperty'
-    content.vb: Public Interface IVideoPlayerProperty Inherits ISceneObjectProperty
+    content.vb: >-
+      Public Interface IVideoPlayerProperty
+
+          Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.IsPlaying
   commentId: P:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.IsPlaying
   id: IsPlaying
@@ -49,7 +58,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IVideoPlayerProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: IsPlaying
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Properties/IVideoPlayerProperty.cs
@@ -57,7 +66,7 @@ items:
   assemblies:
   - VRBuilder.VideoTools
   namespace: VRBuilder.VideoTools.Properties
-  summary: True while the video is playing.
+  summary: "\nTrue while the video is playing.\n"
   example: []
   syntax:
     content: bool IsPlaying { get; }
@@ -66,6 +75,10 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsPlaying As Boolean
   overload: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.IsPlaying*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Play
   commentId: M:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Play
   id: Play
@@ -80,7 +93,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IVideoPlayerProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: Play
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Properties/IVideoPlayerProperty.cs
@@ -88,11 +101,11 @@ items:
   assemblies:
   - VRBuilder.VideoTools
   namespace: VRBuilder.VideoTools.Properties
-  summary: Starts playback of the selected video.
+  summary: "\nStarts playback of the selected video.\n"
   example: []
   syntax:
     content: void Play()
-    content.vb: Sub Play()
+    content.vb: Sub Play
   overload: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Play*
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Stop
   commentId: M:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Stop
@@ -108,7 +121,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IVideoPlayerProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: Stop
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Properties/IVideoPlayerProperty.cs
@@ -116,11 +129,11 @@ items:
   assemblies:
   - VRBuilder.VideoTools
   namespace: VRBuilder.VideoTools.Properties
-  summary: Stops playback of the currently playing video.
+  summary: "\nStops playback of the currently playing video.\n"
   example: []
   syntax:
     content: void Stop()
-    content.vb: Sub [Stop]()
+    content.vb: Sub Stop
   overload: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Stop*
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL(System.String)
   commentId: M:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL(System.String)
@@ -129,14 +142,14 @@ items:
   langs:
   - csharp
   - vb
-  name: SetVideoURL(string)
-  nameWithType: IVideoPlayerProperty.SetVideoURL(string)
-  fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL(string)
+  name: SetVideoURL(String)
+  nameWithType: IVideoPlayerProperty.SetVideoURL(String)
+  fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL(System.String)
   type: Method
   source:
     remote:
       path: Source/Runtime/Properties/IVideoPlayerProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: SetVideoURL
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Properties/IVideoPlayerProperty.cs
@@ -144,7 +157,7 @@ items:
   assemblies:
   - VRBuilder.VideoTools
   namespace: VRBuilder.VideoTools.Properties
-  summary: Sets the source video to the specified URL.
+  summary: "\nSets the source video to the specified URL.\n"
   example: []
   syntax:
     content: void SetVideoURL(string url)
@@ -153,9 +166,6 @@ items:
       type: System.String
     content.vb: Sub SetVideoURL(url As String)
   overload: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL*
-  nameWithType.vb: IVideoPlayerProperty.SetVideoURL(String)
-  fullName.vb: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL(String)
-  name.vb: SetVideoURL(String)
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath(System.String)
   commentId: M:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath(System.String)
   id: SetVideoResourcePath(System.String)
@@ -163,14 +173,14 @@ items:
   langs:
   - csharp
   - vb
-  name: SetVideoResourcePath(string)
-  nameWithType: IVideoPlayerProperty.SetVideoResourcePath(string)
-  fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath(string)
+  name: SetVideoResourcePath(String)
+  nameWithType: IVideoPlayerProperty.SetVideoResourcePath(String)
+  fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath(System.String)
   type: Method
   source:
     remote:
       path: Source/Runtime/Properties/IVideoPlayerProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: SetVideoResourcePath
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Properties/IVideoPlayerProperty.cs
@@ -178,7 +188,7 @@ items:
   assemblies:
   - VRBuilder.VideoTools
   namespace: VRBuilder.VideoTools.Properties
-  summary: Sets the source video to the specified Resources path.
+  summary: "\nSets the source video to the specified Resources path.\n"
   example: []
   syntax:
     content: void SetVideoResourcePath(string path)
@@ -187,87 +197,31 @@ items:
       type: System.String
     content.vb: Sub SetVideoResourcePath(path As String)
   overload: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath*
-  nameWithType.vb: IVideoPlayerProperty.SetVideoResourcePath(String)
-  fullName.vb: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath(String)
-  name.vb: SetVideoResourcePath(String)
 references:
 - uid: VRBuilder.VideoTools.Properties
   commentId: N:VRBuilder.VideoTools.Properties
-  href: VRBuilder.html
   name: VRBuilder.VideoTools.Properties
   nameWithType: VRBuilder.VideoTools.Properties
   fullName: VRBuilder.VideoTools.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.VideoTools
-    name: VideoTools
-    href: VRBuilder.VideoTools.html
-  - name: .
-  - uid: VRBuilder.VideoTools.Properties
-    name: Properties
-    href: VRBuilder.VideoTools.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.VideoTools
-    name: VideoTools
-    href: VRBuilder.VideoTools.html
-  - name: .
-  - uid: VRBuilder.VideoTools.Properties
-    name: Properties
-    href: VRBuilder.VideoTools.Properties.html
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   commentId: P:VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   parent: VRBuilder.Core.Properties.ISceneObjectProperty
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html#VRBuilder_Core_Properties_ISceneObjectProperty_SceneObject
   name: SceneObject
   nameWithType: ISceneObjectProperty.SceneObject
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty
   commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
   name: ISceneObjectProperty
   nameWithType: ISceneObjectProperty
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.IsPlaying*
   commentId: Overload:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.IsPlaying
-  href: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.html#VRBuilder_VideoTools_Properties_IVideoPlayerProperty_IsPlaying
   name: IsPlaying
   nameWithType: IVideoPlayerProperty.IsPlaying
   fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.IsPlaying
@@ -275,35 +229,27 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Play*
   commentId: Overload:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Play
-  href: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.html#VRBuilder_VideoTools_Properties_IVideoPlayerProperty_Play
   name: Play
   nameWithType: IVideoPlayerProperty.Play
   fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Play
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Stop*
   commentId: Overload:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Stop
-  href: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.html#VRBuilder_VideoTools_Properties_IVideoPlayerProperty_Stop
   name: Stop
   nameWithType: IVideoPlayerProperty.Stop
   fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.Stop
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL*
   commentId: Overload:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL
-  href: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.html#VRBuilder_VideoTools_Properties_IVideoPlayerProperty_SetVideoURL_System_String_
   name: SetVideoURL
   nameWithType: IVideoPlayerProperty.SetVideoURL
   fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoURL
@@ -311,16 +257,11 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath*
   commentId: Overload:VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath
-  href: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.html#VRBuilder_VideoTools_Properties_IVideoPlayerProperty_SetVideoResourcePath_System_String_
   name: SetVideoResourcePath
   nameWithType: IVideoPlayerProperty.SetVideoResourcePath
   fullName: VRBuilder.VideoTools.Properties.IVideoPlayerProperty.SetVideoResourcePath

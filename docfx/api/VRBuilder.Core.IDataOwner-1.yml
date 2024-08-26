@@ -24,14 +24,23 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Abstract holder of data.
+  summary: "\nAbstract holder of data.\n"
   example: []
   syntax:
     content: 'public interface IDataOwner<out TData> : IDataOwner'
     typeParameters:
     - id: TData
-    content.vb: Public Interface IDataOwner(Of Out TData) Inherits IDataOwner
+    content.vb: >-
+      Public Interface IDataOwner(Of Out TData)
+
+          Inherits IDataOwner
   nameWithType.vb: IDataOwner(Of TData)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
   fullName.vb: VRBuilder.Core.IDataOwner(Of TData)
   name.vb: IDataOwner(Of TData)
 - uid: VRBuilder.Core.IDataOwner`1.Data
@@ -56,7 +65,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Abstract data.
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: >-
@@ -76,33 +85,19 @@ items:
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
   nameWithType.vb: IDataOwner(Of TData).Data
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
   fullName.vb: VRBuilder.Core.IDataOwner(Of TData).Data
 references:
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.IDataOwner`1.Data*
   commentId: Overload:VRBuilder.Core.IDataOwner`1.Data
-  href: VRBuilder.Core.IDataOwner-1.html#VRBuilder_Core_IDataOwner_1_Data
   name: Data
   nameWithType: IDataOwner<TData>.Data
   fullName: VRBuilder.Core.IDataOwner<TData>.Data

@@ -31,7 +31,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.ProcessUtils
-  summary: Struct for a process variable. Accommodates the value coming from a <xref href="VRBuilder.Core.Properties.IDataProperty%601" data-throw-if-not-resolved="false"></xref>, or being a constant value set e.g. in the Step Inspector.
+  summary: "\nStruct for a process variable. Accommodates the value coming from a <xref href=\"VRBuilder.Core.Properties.IDataProperty%601\" data-throw-if-not-resolved=\"false\"></xref>, or being a constant value set e.g. in the Step Inspector.\n"
   example: []
   syntax:
     content: >-
@@ -48,8 +48,8 @@ items:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -59,6 +59,12 @@ items:
       type: System.Boolean
       value: true
   nameWithType.vb: ProcessVariable(Of T)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T)
   name.vb: ProcessVariable(Of T)
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.ConstValue
@@ -83,13 +89,15 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.ProcessUtils
-  summary: Constant value.
+  summary: "\nConstant value.\n"
   example: []
   syntax:
     content: >-
       [DataMember]
 
-      public T ConstValue { readonly get; set; }
+      public T ConstValue { readonly get; set;
+
+      }
     parameters: []
     return:
       type: '{T}'
@@ -103,6 +111,12 @@ items:
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
   nameWithType.vb: ProcessVariable(Of T).ConstValue
+  modifiers.csharp:
+  - public
+  - readonly get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).ConstValue
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.Property
   commentId: P:VRBuilder.Core.ProcessUtils.ProcessVariable`1.Property
@@ -126,26 +140,34 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.ProcessUtils
-  summary: Property reference for the variable.
+  summary: "\nProperty reference for the variable.\n"
   example: []
   syntax:
     content: >-
       [DataMember]
 
-      public SingleScenePropertyReference<IDataProperty<T>> Property { readonly get; set; }
+      public SingleScenePropertyReference<IDataProperty<T>> Property { readonly get; set;
+
+      }
     parameters: []
     return:
       type: VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.Core.Properties.IDataProperty{{T}}}
     content.vb: >-
       <DataMember>
 
-      Public Property [Property] As SingleScenePropertyReference(Of IDataProperty(Of T))
+      Public Property Property As SingleScenePropertyReference(Of IDataProperty(Of T))
   overload: VRBuilder.Core.ProcessUtils.ProcessVariable`1.Property*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
   nameWithType.vb: ProcessVariable(Of T).Property
+  modifiers.csharp:
+  - public
+  - readonly get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).Property
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.PropertyReference
   commentId: P:VRBuilder.Core.ProcessUtils.ProcessVariable`1.PropertyReference
@@ -177,7 +199,9 @@ items:
 
       [LegacyProperty("Property")]
 
-      public ScenePropertyReference<IDataProperty<T>> PropertyReference { readonly get; set; }
+      public ScenePropertyReference<IDataProperty<T>> PropertyReference { readonly get; set;
+
+      }
     parameters: []
     return:
       type: VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.Core.Properties.IDataProperty{{T}}}
@@ -205,6 +229,12 @@ items:
     - type: System.String
       value: Property
   nameWithType.vb: ProcessVariable(Of T).PropertyReference
+  modifiers.csharp:
+  - public
+  - readonly get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).PropertyReference
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.IsConst
   commentId: P:VRBuilder.Core.ProcessUtils.ProcessVariable`1.IsConst
@@ -228,13 +258,15 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.ProcessUtils
-  summary: If true, <xref href="VRBuilder.Core.ProcessUtils.ProcessVariable%601.ConstValue" data-throw-if-not-resolved="false"></xref> is used. Else the value will be fetched from the <xref href="VRBuilder.Core.ProcessUtils.ProcessVariable%601.PropertyReference" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nIf true, <xref href=\"VRBuilder.Core.ProcessUtils.ProcessVariable%601.ConstValue\" data-throw-if-not-resolved=\"false\"></xref> is used. Else the value will be fetched from the <xref href=\"VRBuilder.Core.ProcessUtils.ProcessVariable%601.PropertyReference\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: >-
       [DataMember]
 
-      public bool IsConst { readonly get; set; }
+      public bool IsConst { readonly get; set;
+
+      }
     parameters: []
     return:
       type: System.Boolean
@@ -248,6 +280,12 @@ items:
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
   nameWithType.vb: ProcessVariable(Of T).IsConst
+  modifiers.csharp:
+  - public
+  - readonly get
+  - set
+  modifiers.vb:
+  - Public
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).IsConst
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor(`0,System.Guid,System.Boolean)
   commentId: M:VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor(`0,System.Guid,System.Boolean)
@@ -256,9 +294,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ProcessVariable(T, Guid, bool)
-  nameWithType: ProcessVariable<T>.ProcessVariable(T, Guid, bool)
-  fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ProcessVariable(T, System.Guid, bool)
+  name: ProcessVariable(T, Guid, Boolean)
+  nameWithType: ProcessVariable<T>.ProcessVariable(T, Guid, Boolean)
+  fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ProcessVariable(T, System.Guid, System.Boolean)
   type: Constructor
   source:
     remote:
@@ -282,9 +320,12 @@ items:
       type: System.Boolean
     content.vb: Public Sub New(constValue As T, referenceId As Guid, isConst As Boolean)
   overload: VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor*
-  nameWithType.vb: ProcessVariable(Of T).New(T, Guid, Boolean)
-  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).New(T, System.Guid, Boolean)
-  name.vb: New(T, Guid, Boolean)
+  nameWithType.vb: ProcessVariable(Of T).ProcessVariable(T, Guid, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).ProcessVariable(T, System.Guid, System.Boolean)
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)
   commentId: M:VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)
   id: '#ctor(`0,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)'
@@ -292,9 +333,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ProcessVariable(T, IEnumerable<Guid>, bool)
-  nameWithType: ProcessVariable<T>.ProcessVariable(T, IEnumerable<Guid>, bool)
-  fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ProcessVariable(T, System.Collections.Generic.IEnumerable<System.Guid>, bool)
+  name: ProcessVariable(T, IEnumerable<Guid>, Boolean)
+  nameWithType: ProcessVariable<T>.ProcessVariable(T, IEnumerable<Guid>, Boolean)
+  fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ProcessVariable(T, System.Collections.Generic.IEnumerable<System.Guid>, System.Boolean)
   type: Constructor
   source:
     remote:
@@ -318,9 +359,13 @@ items:
       type: System.Boolean
     content.vb: Public Sub New(constValue As T, referenceIds As IEnumerable(Of Guid), isConst As Boolean)
   overload: VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor*
-  nameWithType.vb: ProcessVariable(Of T).New(T, IEnumerable(Of Guid), Boolean)
-  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).New(T, System.Collections.Generic.IEnumerable(Of System.Guid), Boolean)
-  name.vb: New(T, IEnumerable(Of Guid), Boolean)
+  nameWithType.vb: ProcessVariable(Of T).ProcessVariable(T, IEnumerable(Of Guid), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).ProcessVariable(T, System.Collections.Generic.IEnumerable(Of System.Guid), System.Boolean)
+  name.vb: ProcessVariable(T, IEnumerable(Of Guid), Boolean)
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.Value
   commentId: P:VRBuilder.Core.ProcessUtils.ProcessVariable`1.Value
   id: Value
@@ -343,16 +388,23 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.ProcessUtils
-  summary: Returns the current value of this variable.
+  summary: "\nReturns the current value of this variable.\n"
   example: []
   syntax:
-    content: public T Value { get; }
+    content: public readonly T Value { get; }
     parameters: []
     return:
       type: '{T}'
     content.vb: Public ReadOnly Property Value As T
   overload: VRBuilder.Core.ProcessUtils.ProcessVariable`1.Value*
   nameWithType.vb: ProcessVariable(Of T).Value
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).Value
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.ToString
   commentId: M:VRBuilder.Core.ProcessUtils.ProcessVariable`1.ToString
@@ -376,20 +428,24 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.ProcessUtils
-  example: []
   syntax:
     content: public override string ToString()
     return:
       type: System.String
-    content.vb: Public Overrides Function ToString() As String
+    content.vb: Public Overrides Function ToString As String
   overridden: System.ValueType.ToString
   overload: VRBuilder.Core.ProcessUtils.ProcessVariable`1.ToString*
   nameWithType.vb: ProcessVariable(Of T).ToString()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
   fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).ToString()
 references:
 - uid: VRBuilder.Core.Properties.IDataProperty`1
   commentId: T:VRBuilder.Core.Properties.IDataProperty`1
-  href: VRBuilder.Core.Properties.IDataProperty-1.html
   name: IDataProperty<T>
   nameWithType: IDataProperty<T>
   fullName: VRBuilder.Core.Properties.IDataProperty<T>
@@ -399,223 +455,257 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Properties.IDataProperty`1
     name: IDataProperty
-    href: VRBuilder.Core.Properties.IDataProperty-1.html
+    nameWithType: IDataProperty
+    fullName: VRBuilder.Core.Properties.IDataProperty
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Properties.IDataProperty`1
     name: IDataProperty
-    href: VRBuilder.Core.Properties.IDataProperty-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataProperty
+    fullName: VRBuilder.Core.Properties.IDataProperty
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.ProcessUtils
   commentId: N:VRBuilder.Core.ProcessUtils
-  href: VRBuilder.html
   name: VRBuilder.Core.ProcessUtils
   nameWithType: VRBuilder.Core.ProcessUtils
   fullName: VRBuilder.Core.ProcessUtils
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.ProcessUtils
-    name: ProcessUtils
-    href: VRBuilder.Core.ProcessUtils.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.ProcessUtils
-    name: ProcessUtils
-    href: VRBuilder.Core.ProcessUtils.html
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  name: Equals(object)
-  nameWithType: ValueType.Equals(object)
-  fullName: System.ValueType.Equals(object)
-  nameWithType.vb: ValueType.Equals(Object)
-  fullName.vb: System.ValueType.Equals(Object)
-  name.vb: Equals(Object)
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.GetHashCode
   commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   name: GetHashCode()
   nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
-    name: object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype
   name: ValueType
   nameWithType: ValueType
   fullName: System.ValueType
@@ -623,23 +713,17 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.ConstValue*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.ConstValue
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_ConstValue
   name: ConstValue
   nameWithType: ProcessVariable<T>.ConstValue
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ConstValue
@@ -657,7 +741,6 @@ references:
   fullName: T
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.Property*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.Property
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_Property
   name: Property
   nameWithType: ProcessVariable<T>.Property
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.Property
@@ -667,7 +750,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.Core.Properties.IDataProperty{`0}}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
-  href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
   name: SingleScenePropertyReference<IDataProperty<T>>
   nameWithType: SingleScenePropertyReference<IDataProperty<T>>
   fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<VRBuilder.Core.Properties.IDataProperty<T>>
@@ -677,34 +759,53 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Properties.IDataProperty`1
     name: IDataProperty
-    href: VRBuilder.Core.Properties.IDataProperty-1.html
+    nameWithType: IDataProperty
+    fullName: VRBuilder.Core.Properties.IDataProperty
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Properties.IDataProperty`1
     name: IDataProperty
-    href: VRBuilder.Core.Properties.IDataProperty-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataProperty
+    fullName: VRBuilder.Core.Properties.IDataProperty
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
-  href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
   name: SingleScenePropertyReference<T>
   nameWithType: SingleScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<T>
@@ -714,52 +815,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
     name: SingleScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.SingleScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.PropertyReference*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.PropertyReference
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_PropertyReference
   name: PropertyReference
   nameWithType: ProcessVariable<T>.PropertyReference
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.PropertyReference
@@ -769,7 +856,6 @@ references:
   commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.Core.Properties.IDataProperty{`0}}
   parent: VRBuilder.Core.SceneObjects
   definition: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-  href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
   name: ScenePropertyReference<IDataProperty<T>>
   nameWithType: ScenePropertyReference<IDataProperty<T>>
   fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<VRBuilder.Core.Properties.IDataProperty<T>>
@@ -779,35 +865,54 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Properties.IDataProperty`1
     name: IDataProperty
-    href: VRBuilder.Core.Properties.IDataProperty-1.html
+    nameWithType: IDataProperty
+    fullName: VRBuilder.Core.Properties.IDataProperty
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Properties.IDataProperty`1
     name: IDataProperty
-    href: VRBuilder.Core.Properties.IDataProperty-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataProperty
+    fullName: VRBuilder.Core.Properties.IDataProperty
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
   commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference`1
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
   name: ScenePropertyReference<T>
   nameWithType: ScenePropertyReference<T>
   fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<T>
@@ -817,38 +922,39 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
     name: ScenePropertyReference
-    href: VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: ScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.ConstValue
   commentId: P:VRBuilder.Core.ProcessUtils.ProcessVariable`1.ConstValue
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_ConstValue
-  name: ConstValue
-  nameWithType: ProcessVariable<T>.ConstValue
-  fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ConstValue
-  nameWithType.vb: ProcessVariable(Of T).ConstValue
-  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).ConstValue
+  isExternal: true
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.PropertyReference
   commentId: P:VRBuilder.Core.ProcessUtils.ProcessVariable`1.PropertyReference
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_PropertyReference
-  name: PropertyReference
-  nameWithType: ProcessVariable<T>.PropertyReference
-  fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.PropertyReference
-  nameWithType.vb: ProcessVariable(Of T).PropertyReference
-  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).PropertyReference
+  isExternal: true
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.IsConst*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.IsConst
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_IsConst
   name: IsConst
   nameWithType: ProcessVariable<T>.IsConst
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.IsConst
@@ -858,27 +964,20 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.#ctor
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1__ctor__0_System_Guid_System_Boolean_
   name: ProcessVariable
   nameWithType: ProcessVariable<T>.ProcessVariable
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ProcessVariable
-  nameWithType.vb: ProcessVariable(Of T).New
-  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).New
-  name.vb: New
+  nameWithType.vb: ProcessVariable(Of T).ProcessVariable
+  fullName.vb: VRBuilder.Core.ProcessUtils.ProcessVariable(Of T).ProcessVariable
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
@@ -886,7 +985,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<Guid>
   nameWithType: IEnumerable<Guid>
   fullName: System.Collections.Generic.IEnumerable<System.Guid>
@@ -896,31 +994,40 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Guid
     name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.guid
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Guid
     name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.guid
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -930,61 +1037,41 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.Value*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.Value
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_Value
   name: Value
   nameWithType: ProcessVariable<T>.Value
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.Value
@@ -994,27 +1081,35 @@ references:
   commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   name: ToString()
   nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.ProcessUtils.ProcessVariable`1.ToString*
   commentId: Overload:VRBuilder.Core.ProcessUtils.ProcessVariable`1.ToString
-  href: VRBuilder.Core.ProcessUtils.ProcessVariable-1.html#VRBuilder_Core_ProcessUtils_ProcessVariable_1_ToString
   name: ToString
   nameWithType: ProcessVariable<T>.ToString
   fullName: VRBuilder.Core.ProcessUtils.ProcessVariable<T>.ToString
@@ -1024,10 +1119,6 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String

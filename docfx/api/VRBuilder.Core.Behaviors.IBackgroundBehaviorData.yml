@@ -24,17 +24,23 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: >-
-    Interface that enables non-blocking background behaviors.
-
-    If the `IsBlocking` property returns false, the behavior will not hinder the completion of a step.
+  summary: "\nInterface that enables non-blocking background behaviors.\nIf the `IsBlocking` property returns false, the behavior will not hinder the completion of a step.\n"
   example: []
   syntax:
     content: 'public interface IBackgroundBehaviorData : IBehaviorData, INamedData, IData'
-    content.vb: Public Interface IBackgroundBehaviorData Inherits IBehaviorData, INamedData, IData
+    content.vb: >-
+      Public Interface IBackgroundBehaviorData
+
+          Inherits IBehaviorData
   inheritedMembers:
   - VRBuilder.Core.INamedData.Name
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
   commentId: P:VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
   id: IsBlocking
@@ -57,10 +63,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: >-
-    If true, the behavior prevents the completion of a step until it is completed itself.
-
-    If false, the behavior does not hinder the completion of a step.
+  summary: "\nIf true, the behavior prevents the completion of a step until it is completed itself.\nIf false, the behavior does not hinder the completion of a step.\n"
   example: []
   syntax:
     content: >-
@@ -79,90 +82,46 @@ items:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
     arguments: []
+  modifiers.csharp:
+  - get
+  - set
 references:
 - uid: VRBuilder.Core.Behaviors
   commentId: N:VRBuilder.Core.Behaviors
-  href: VRBuilder.html
   name: VRBuilder.Core.Behaviors
   nameWithType: VRBuilder.Core.Behaviors
   fullName: VRBuilder.Core.Behaviors
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Behaviors
-    name: Behaviors
-    href: VRBuilder.Core.Behaviors.html
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking*
   commentId: Overload:VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
-  href: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.html#VRBuilder_Core_Behaviors_IBackgroundBehaviorData_IsBlocking
   name: IsBlocking
   nameWithType: IBackgroundBehaviorData.IsBlocking
   fullName: VRBuilder.Core.Behaviors.IBackgroundBehaviorData.IsBlocking
@@ -170,17 +129,12 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System

@@ -25,15 +25,24 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: This property represents a linear path.
+  summary: "\nThis property represents a linear path.\n"
   example: []
   syntax:
     content: 'public interface IPathProperty : ISceneObjectProperty'
-    content.vb: Public Interface IPathProperty Inherits ISceneObjectProperty
+    content.vb: >-
+      Public Interface IPathProperty
+
+          Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   extensionMethods:
   - VRBuilder.Core.Properties.ISceneObjectProperty.VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Properties.IPathProperty.GetPoint(System.Single)
   commentId: M:VRBuilder.Core.Properties.IPathProperty.GetPoint(System.Single)
   id: GetPoint(System.Single)
@@ -41,9 +50,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetPoint(float)
-  nameWithType: IPathProperty.GetPoint(float)
-  fullName: VRBuilder.Core.Properties.IPathProperty.GetPoint(float)
+  name: GetPoint(Single)
+  nameWithType: IPathProperty.GetPoint(Single)
+  fullName: VRBuilder.Core.Properties.IPathProperty.GetPoint(System.Single)
   type: Method
   source:
     remote:
@@ -56,7 +65,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Get a point on the path.
+  summary: "\nGet a point on the path.\n"
   example: []
   syntax:
     content: Vector3 GetPoint(float t)
@@ -65,12 +74,9 @@ items:
       type: System.Single
       description: Position on the path, 0 to 1.
     return:
-      type: UnityEngine.Vector3
+      type: Vector3
     content.vb: Function GetPoint(t As Single) As Vector3
   overload: VRBuilder.Core.Properties.IPathProperty.GetPoint*
-  nameWithType.vb: IPathProperty.GetPoint(Single)
-  fullName.vb: VRBuilder.Core.Properties.IPathProperty.GetPoint(Single)
-  name.vb: GetPoint(Single)
 - uid: VRBuilder.Core.Properties.IPathProperty.GetDirection(System.Single)
   commentId: M:VRBuilder.Core.Properties.IPathProperty.GetDirection(System.Single)
   id: GetDirection(System.Single)
@@ -78,9 +84,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetDirection(float)
-  nameWithType: IPathProperty.GetDirection(float)
-  fullName: VRBuilder.Core.Properties.IPathProperty.GetDirection(float)
+  name: GetDirection(Single)
+  nameWithType: IPathProperty.GetDirection(Single)
+  fullName: VRBuilder.Core.Properties.IPathProperty.GetDirection(System.Single)
   type: Method
   source:
     remote:
@@ -93,7 +99,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Get the direction of the path in a given position.
+  summary: "\nGet the direction of the path in a given position.\n"
   example: []
   syntax:
     content: Vector3 GetDirection(float t)
@@ -102,47 +108,18 @@ items:
       type: System.Single
       description: Position on the path, 0 to 1.
     return:
-      type: UnityEngine.Vector3
+      type: Vector3
     content.vb: Function GetDirection(t As Single) As Vector3
   overload: VRBuilder.Core.Properties.IPathProperty.GetDirection*
-  nameWithType.vb: IPathProperty.GetDirection(Single)
-  fullName.vb: VRBuilder.Core.Properties.IPathProperty.GetDirection(Single)
-  name.vb: GetDirection(Single)
 references:
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   commentId: P:VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   parent: VRBuilder.Core.Properties.ISceneObjectProperty
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html#VRBuilder_Core_Properties_ISceneObjectProperty_SceneObject
   name: SceneObject
   nameWithType: ISceneObjectProperty.SceneObject
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -150,69 +127,80 @@ references:
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   parent: VRBuilder.Core.Properties.SceneObjectExtensions
   definition: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
-  name: AddProcessPropertyExtensions(ISceneObjectProperty)
-  nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions(ISceneObjectProperty)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  name: AddProcessPropertyExtensions()
+  nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions()
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions()
   spec.csharp:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
-  - uid: VRBuilder.Core.Properties.ISceneObjectProperty
-    name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
-  - uid: VRBuilder.Core.Properties.ISceneObjectProperty
-    name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty
   commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
   name: ISceneObjectProperty
   nameWithType: ISceneObjectProperty
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
   name: AddProcessPropertyExtensions(ISceneObjectProperty)
   nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions(ISceneObjectProperty)
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   spec.csharp:
   - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Properties.ISceneObjectProperty
     name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: ISceneObjectProperty
+    fullName: VRBuilder.Core.Properties.ISceneObjectProperty
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Properties.ISceneObjectProperty
     name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: ISceneObjectProperty
+    fullName: VRBuilder.Core.Properties.ISceneObjectProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions
   commentId: T:VRBuilder.Core.Properties.SceneObjectExtensions
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html
   name: SceneObjectExtensions
   nameWithType: SceneObjectExtensions
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions
 - uid: VRBuilder.Core.Properties.IPathProperty.GetPoint*
   commentId: Overload:VRBuilder.Core.Properties.IPathProperty.GetPoint
-  href: VRBuilder.Core.Properties.IPathProperty.html#VRBuilder_Core_Properties_IPathProperty_GetPoint_System_Single_
   name: GetPoint
   nameWithType: IPathProperty.GetPoint
   fullName: VRBuilder.Core.Properties.IPathProperty.GetPoint
@@ -220,36 +208,22 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: UnityEngine.Vector3
-  commentId: T:UnityEngine.Vector3
-  parent: UnityEngine
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vector3
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: UnityEngine.Vector3
+  fullName: Vector3
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
 - uid: VRBuilder.Core.Properties.IPathProperty.GetDirection*
   commentId: Overload:VRBuilder.Core.Properties.IPathProperty.GetDirection
-  href: VRBuilder.Core.Properties.IPathProperty.html#VRBuilder_Core_Properties_IPathProperty_GetDirection_System_Single_
   name: GetDirection
   nameWithType: IPathProperty.GetDirection
   fullName: VRBuilder.Core.Properties.IPathProperty.GetDirection

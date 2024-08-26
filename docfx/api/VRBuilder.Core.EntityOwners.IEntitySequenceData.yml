@@ -26,9 +26,18 @@ items:
   namespace: VRBuilder.Core.EntityOwners
   syntax:
     content: 'public interface IEntitySequenceData : IData'
-    content.vb: Public Interface IEntitySequenceData Inherits IData
+    content.vb: >-
+      Public Interface IEntitySequenceData
+
+          Inherits IData
   inheritedMembers:
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData.Current
   commentId: P:VRBuilder.Core.EntityOwners.IEntitySequenceData.Current
   id: Current
@@ -51,7 +60,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
-  summary: Current entity in the sequence.
+  summary: "\nCurrent entity in the sequence.\n"
   example: []
   syntax:
     content: IEntity Current { get; }
@@ -60,83 +69,41 @@ items:
       type: VRBuilder.Core.IEntity
     content.vb: ReadOnly Property Current As IEntity
   overload: VRBuilder.Core.EntityOwners.IEntitySequenceData.Current*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 references:
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData.Current*
   commentId: Overload:VRBuilder.Core.EntityOwners.IEntitySequenceData.Current
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData.html#VRBuilder_Core_EntityOwners_IEntitySequenceData_Current
   name: Current
   nameWithType: IEntitySequenceData.Current
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData.Current
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity

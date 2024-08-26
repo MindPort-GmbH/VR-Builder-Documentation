@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessValidation
-  summary: Context is used to indicate the position in the process structure.
+  summary: "\nContext is used to indicate the position in the process structure.\n"
   example: []
   syntax:
     content: public interface IContext
     content.vb: Public Interface IContext
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Editor.ProcessValidation.IContext.Parent
   commentId: P:VRBuilder.Editor.ProcessValidation.IContext.Parent
   id: Parent
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessValidation
-  summary: Parent context, can be null.
+  summary: "\nParent context, can be null.\n"
   example: []
   syntax:
     content: IContext Parent { get; }
@@ -61,6 +67,10 @@ items:
       type: VRBuilder.Editor.ProcessValidation.IContext
     content.vb: ReadOnly Property Parent As IContext
   overload: VRBuilder.Editor.ProcessValidation.IContext.Parent*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.ProcessValidation.IContext.ToString
   commentId: M:VRBuilder.Editor.ProcessValidation.IContext.ToString
   id: ToString
@@ -83,61 +93,33 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.ProcessValidation
-  summary: Produces a readable string which allows us to find the context in editor.
+  summary: "\nProduces a readable string which allows us to find the context in editor.\n"
   example: []
   syntax:
     content: string ToString()
     return:
       type: System.String
-    content.vb: Function ToString() As String
+    content.vb: Function ToString As String
   overload: VRBuilder.Editor.ProcessValidation.IContext.ToString*
 references:
 - uid: VRBuilder.Editor.ProcessValidation
   commentId: N:VRBuilder.Editor.ProcessValidation
-  href: VRBuilder.html
   name: VRBuilder.Editor.ProcessValidation
   nameWithType: VRBuilder.Editor.ProcessValidation
   fullName: VRBuilder.Editor.ProcessValidation
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessValidation
-    name: ProcessValidation
-    href: VRBuilder.Editor.ProcessValidation.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.ProcessValidation
-    name: ProcessValidation
-    href: VRBuilder.Editor.ProcessValidation.html
 - uid: VRBuilder.Editor.ProcessValidation.IContext.Parent*
   commentId: Overload:VRBuilder.Editor.ProcessValidation.IContext.Parent
-  href: VRBuilder.Editor.ProcessValidation.IContext.html#VRBuilder_Editor_ProcessValidation_IContext_Parent
   name: Parent
   nameWithType: IContext.Parent
   fullName: VRBuilder.Editor.ProcessValidation.IContext.Parent
 - uid: VRBuilder.Editor.ProcessValidation.IContext
   commentId: T:VRBuilder.Editor.ProcessValidation.IContext
   parent: VRBuilder.Editor.ProcessValidation
-  href: VRBuilder.Editor.ProcessValidation.IContext.html
   name: IContext
   nameWithType: IContext
   fullName: VRBuilder.Editor.ProcessValidation.IContext
 - uid: VRBuilder.Editor.ProcessValidation.IContext.ToString*
   commentId: Overload:VRBuilder.Editor.ProcessValidation.IContext.ToString
-  href: VRBuilder.Editor.ProcessValidation.IContext.html#VRBuilder_Editor_ProcessValidation_IContext_ToString
   name: ToString
   nameWithType: IContext.ToString
   fullName: VRBuilder.Editor.ProcessValidation.IContext.ToString
@@ -145,17 +127,12 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System

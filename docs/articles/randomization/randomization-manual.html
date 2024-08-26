@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Randomization for VR Builder | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Randomization for VR Builder | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="randomization-for-vr-builder">Randomization for VR Builder</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#the-random-branch-node">The Random Branch Node</a><ul>
+<li><a href="#logging-the-random-branch-node">Logging the Random Branch node</a></li>
+</ul>
+</li>
+<li><a href="#data-properties">Data Properties</a><ul>
+<li><a href="#creating-data-properties">Creating Data Properties</a></li>
+</ul>
+</li>
+<li><a href="#working-with-data-properties">Working with Data Properties</a><ul>
+<li><a href="#set-value-behaviors">Set Value Behaviors</a></li>
+<li><a href="#reset-value-behavior">Reset Value Behavior</a></li>
+<li><a href="#compare-values-conditions">Compare Values Conditions</a></li>
+<li><a href="#logging-data-properties">Logging Data Properties</a></li>
+</ul>
+</li>
+<li><a href="#set-random-boolean-behavior">Set Random Boolean Behavior</a><ul>
+<li><a href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#set-random-number-behavior">Set Random Number Behavior</a><ul>
+<li><a href="#configuration-1">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>The Randomization add-on makes it easy to add unpredictability to a VR Builder process. It includes a new type of node, called Random Branch, which allows to add random events and alternative paths with zero effort.
+Additionally, there are a couple tools to work with data properties: behaviors to set random booleans and numbers. You can use these to set random values for the process, and compare those values in condition, to make sure that every run of a process will be different than last time.</p>
+<h2 id="quick-start">Quick Start</h2>
+<p>You can check out the main features of this add-on in the provided demo scene. After importing the package in a properly set-up VR Builder project, you can access the demo scene from the menu <code>Tools &gt; VR Builder &gt; Demo Scenes &gt; Randomization</code>. It is necessary to open the demo scene from the menu at least the first time, so a script will copy the required process file in the <code>StreamingAssets</code> folder.</p>
+<p>In the demo scene, the user must check and change the pressure of the tires of a car by using a provided tool. It is a freeform process, where the user can check the tires in any order and even go back to previous ones. Once done, putting the tool in the box triggers the final evaluation.</p>
+<p>This scene uses the <code>Random Branch</code> node to randomly select a scenario when the process starts, and the <code>Set Random Number</code> behavior to set the initial tire pressure to random values.</p>
+<p>You can press Play to try out the scene, or open the Process Editor to check out how the process is made.</p>
+<p>Additionally, you can find a tutorial on how this demo scene was created on our <a href="https://www.mindport.co/vr-builder-learning-path/randomization-tutorial">website</a>.</p>
+<p><img src="images/demo-scene.png" alt="Demo Scene"></p>
+<h2 id="the-random-branch-node">The Random Branch Node</h2>
+<p>The Randomization add-on introduces a new type of node in addition to the standard step: the Random Branch node. This is a special kind of step that immediately routes the process to a random transition. This can be useful to add random events to your process.</p>
+<p>To create it, select the new <code>Create Random Branch</code> option in the context menu.</p>
+<p><img src="images/random-branch-creation.png" alt="Random Branch Creation"></p>
+<p>The Random Branch node is designed so it can be configured directly in the Process Editor window. You can add and remove transitions at will, like any step. The fields to the left of the output port can be used to specify a weight, so it is possible for some transitions to be more probable than others.</p>
+<p><img src="images/random-branch.png" alt="Random Branch Node"></p>
+<p>By default, all weights are 1 and all transitions have equal chance to trigger. The weight can be any arbitrary number above or equal to zero. In the example above, the weights have a total of 5. This means that the <code>Very Probable Step</code> has a a 50% chance to be selected, while the <code>Improbable Step</code> only has one chance in ten.</p>
+<p>Note that it can be useful to set a weight to zero for debugging purposes - such a transition will never be selected, so it is possible to steer the process through the desired nodes. If all weights in a node are equal to zero, however, the first transition will be selected.</p>
+<h3 id="logging-the-random-branch-node">Logging the Random Branch node</h3>
+<p>If VR Builder is set to log step output in the Project Settings, Random Branch nodes will create a log entry stating which transition has been selected.</p>
+<h2 id="data-properties">Data Properties</h2>
+<p>This add-on makes use of data properties to store values. A data property is a VR Builder property that stores one value of a defined data type, for example a number or a boolean. It is then possible to access those in the process steps to read or change the values.</p>
+<p>This add-on supports two types of data properties.</p>
+<ul>
+<li><strong>Number Data Property</strong>: Stores a single number (C# type: float).</li>
+<li><strong>Boolean Data Property</strong>: Stores a true/false value (C# type: bool).</li>
+</ul>
+<h3 id="creating-data-properties">Creating Data Properties</h3>
+<p>We consider good practice to have each data property on a different, appropriately named empty game object, e.g. &quot;Total Points&quot;. This way it is easy to keep track of them and drag them in the step inspector when needed.</p>
+<p>To create the property itself, just add a <code>Data Property</code> component of the required type to the game object, or do it directly in the step inspector through &quot;Fix it&quot; button.</p>
+<p>In the inspector, it is possible to type a default value for the data property. The property will have that value at the start of the process, and the <code>Reset Value</code> behavior will reset the property to its default.</p>
+<p><img src="images/boolean-data-property.png" alt="Boolean Data Property"></p>
+<h2 id="working-with-data-properties">Working with Data Properties</h2>
+<p>There are some standard tools to work with data properties. These are the Set/Reset Value behaviors, which are used to change the value stored in a data property, and the Compare Values conditions, which compare two values (from data properties or constant) to check if they are fulfilled.</p>
+<h3 id="set-value-behaviors">Set Value Behaviors</h3>
+<p>These behaviors set the value of a data property to a value specified in the step inspector. There is one behavior for each data property type. In the Randomization add-on, it is possible to set data properties of type Boolean and Number.</p>
+<p><img src="images/set-number-behavior.png" alt="Set Number Behavior"></p>
+<h3 id="reset-value-behavior">Reset Value Behavior</h3>
+<p>This behavior resets a data property&#39;s value to its default. This is zero for numerical values and false for booleans, but a different default can be specified in the inspector of the data property. The property needs to be referenced in the step inspector, and will reset when the behavior is triggered.</p>
+<p><img src="images/reset-value-behavior.png" alt="Reset Value Behavior"></p>
+<h3 id="compare-values-conditions">Compare Values Conditions</h3>
+<p>In the Randomization add-on it is possible to use a <code>Compare Numbers</code> or <code>Compare Booleans</code> condition. These can for example compare a random value to a constant in order to branch a process a certain way. They work in a similar way, but the comparison operators differ. You&#39;ll need to select two values and the operation between them. Use the radio buttons to select if a value comes from a data property or is a constant entered in the step inspector. In the example below, the condition will be fulfilled when the <code>RandomNumber</code> property is greater than 5.</p>
+<p><img src="images/compare-values-condition.png" alt="Compare Values Condition"></p>
+<h3 id="logging-data-properties">Logging Data Properties</h3>
+<p>It can be useful to log value changes to data properties in the console for debugging purposes. This can be enabled globally by ticking the relevant box in <code>Project Settings -&gt; VR Builder -&gt; Settings</code>.</p>
+<p><img src="images/logging-settings.png" alt="Logging Settings">]</p>
+<p>If the <code>Log Data Property changes</code> checkbox is enabled, changes to the value of the data property will be logged in the console like the following example. Note that the name provided is the game object&#39;s name.</p>
+<p><img src="images/data-property-log-entry.png" alt="Data Property Log Entry"></p>
+<h2 id="set-random-boolean-behavior">Set Random Boolean Behavior</h2>
+<p>This behavior works similarly to the <em>Set Boolean</em> behavior, except the property is not set to a specific value. Instead, it will be randomly set to <em>true</em> or <em>false</em> at runtime. It is possible to specify the probability of it to be true by moving the slider from 0 (always false) to 1 (always true).</p>
+<p><img src="images/set-random-boolean.png" alt="Set Random Boolean"></p>
+<h3 id="configuration">Configuration</h3>
+<ul>
+<li><strong>Data Property</strong>: The boolean data property to set to a random value.</li>
+<li><strong>Probability to be True</strong>: The probability of the randomized value to be true measured from 0 (always false) to 1 (always true).</li>
+</ul>
+<h2 id="set-random-number-behavior">Set Random Number Behavior</h2>
+<p>This behavior sets a number data property to a random value within a range.</p>
+<p><img src="images/set-random-number.png" alt="Set Random Number"></p>
+<h3 id="configuration-1">Configuration</h3>
+<ul>
+<li><strong>Data Property</strong>: The number data property to set to a random value.</li>
+<li><strong>Min Value</strong>: The minimum value the randomized number can have.</li>
+<li><strong>Max Value</strong>: The maximum value the randomized number can have.</li>
+<li><strong>Randomize Integer</strong>: If checked, the randomized number will be an integer within the range. Otherwise it can be any float in the range.</li>
+</ul>
+<h2 id="contact">Contact</h2>
+<p>Join our official <a href="http://community.mindport.co">Discord server</a> for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder.</p>
+<p>Make sure to review <a href="https://assetstore.unity.com/packages/tools/visual-scripting/vr-builder-201913">VR Builder</a> and this <a href="https://u3d.as/2Stq">asset</a> if you like it. It will help us immensely.</p>
+<p>If you have any issues, please contact <a href="mailto:contact@mindport.co">contact@mindport.co</a>. We&#39;d love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance!
+Let&#39;s build something extraordinary!</p>
+<p>You can also visit our website at <a href="http://www.mindport.co">mindport.co</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/randomization/randomization-manual.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -29,11 +29,16 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  summary: Improved version of the NewtonsoftJsonProcessSerializer, which now flattens nested subchapters.
+  summary: "\nImproved version of the NewtonsoftJsonProcessSerializer, which now flattens nested subchapters.\n"
   example: []
   syntax:
     content: 'public class NewtonsoftJsonProcessSerializerV4 : NewtonsoftJsonProcessSerializer, IProcessSerializer'
-    content.vb: Public Class NewtonsoftJsonProcessSerializerV4 Inherits NewtonsoftJsonProcessSerializer Implements IProcessSerializer
+    content.vb: >-
+      Public Class NewtonsoftJsonProcessSerializerV4
+
+          Inherits NewtonsoftJsonProcessSerializer
+
+          Implements IProcessSerializer
   inheritance:
   - System.Object
   - VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
@@ -50,13 +55,19 @@ items:
   - VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte[])
   - VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
   - VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte[])
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Name
   commentId: P:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Name
   id: Name
@@ -79,7 +90,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  summary: Display name.
   example: []
   syntax:
     content: public override string Name { get; }
@@ -89,6 +99,14 @@ items:
     content.vb: Public Overrides ReadOnly Property Name As String
   overridden: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Name
   overload: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Name*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Version
   commentId: P:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Version
   id: Version
@@ -111,7 +129,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  example: []
   syntax:
     content: protected override int Version { get; }
     parameters: []
@@ -120,6 +137,14 @@ items:
     content.vb: Protected Overrides ReadOnly Property Version As Integer
   overridden: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Version
   overload: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Version*
+  modifiers.csharp:
+  - protected
+  - override
+  - get
+  modifiers.vb:
+  - Protected
+  - Overrides
+  - ReadOnly
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(System.Byte[])
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(System.Byte[])
   id: ProcessFromByteArray(System.Byte[])
@@ -127,9 +152,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ProcessFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(byte[])
+  name: ProcessFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(System.Byte[])
   type: Method
   source:
     remote:
@@ -142,7 +167,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  summary: Deserializes a given process to a usable object.
   example: []
   syntax:
     content: public override IProcess ProcessFromByteArray(byte[] data)
@@ -155,7 +179,13 @@ items:
   overridden: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte[])
   overload: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray*
   nameWithType.vb: NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(Byte())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray(System.Byte())
   name.vb: ProcessFromByteArray(Byte())
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessToByteArray(VRBuilder.Core.IProcess)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessToByteArray(VRBuilder.Core.IProcess)
@@ -179,7 +209,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  summary: Serializes a given process into a byte array.
   example: []
   syntax:
     content: public override byte[] ProcessToByteArray(IProcess process)
@@ -191,6 +220,12 @@ items:
     content.vb: Public Overrides Function ProcessToByteArray(process As IProcess) As Byte()
   overridden: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
   overload: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessToByteArray*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(System.Byte[])
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(System.Byte[])
   id: ChapterFromByteArray(System.Byte[])
@@ -198,9 +233,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ChapterFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(byte[])
+  name: ChapterFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(System.Byte[])
   type: Method
   source:
     remote:
@@ -213,7 +248,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  summary: Deserializes a given chapter to a usable object.
   example: []
   syntax:
     content: public override IChapter ChapterFromByteArray(byte[] data)
@@ -226,7 +260,13 @@ items:
   overridden: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(System.Byte[])
   overload: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray*
   nameWithType.vb: NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(Byte())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray(System.Byte())
   name.vb: ChapterFromByteArray(Byte())
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterToByteArray(VRBuilder.Core.IChapter)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterToByteArray(VRBuilder.Core.IChapter)
@@ -250,7 +290,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Serialization
-  summary: Serializes a given chapter into a byte array.
   example: []
   syntax:
     content: public override byte[] ChapterToByteArray(IChapter chapter)
@@ -262,73 +301,46 @@ items:
     content.vb: Public Overrides Function ChapterToByteArray(chapter As IChapter) As Byte()
   overridden: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
   overload: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterToByteArray*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: VRBuilder.Core.Serialization
   commentId: N:VRBuilder.Core.Serialization
-  href: VRBuilder.html
   name: VRBuilder.Core.Serialization
   nameWithType: VRBuilder.Core.Serialization
   fullName: VRBuilder.Core.Serialization
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization
-    name: Serialization
-    href: VRBuilder.Core.Serialization.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization
-    name: Serialization
-    href: VRBuilder.Core.Serialization.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   commentId: T:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   parent: VRBuilder.Core.Serialization.NewtonsoftJson
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html
   name: NewtonsoftJsonProcessSerializer
   nameWithType: NewtonsoftJsonProcessSerializer
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
 - uid: VRBuilder.Core.Serialization.IProcessSerializer
   commentId: T:VRBuilder.Core.Serialization.IProcessSerializer
   parent: VRBuilder.Core.Serialization
-  href: VRBuilder.Core.Serialization.IProcessSerializer.html
   name: IProcessSerializer
   nameWithType: IProcessSerializer
   fullName: VRBuilder.Core.Serialization.IProcessSerializer
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessSerializerSettings
   commentId: P:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessSerializerSettings
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessSerializerSettings
   name: ProcessSerializerSettings
   nameWithType: NewtonsoftJsonProcessSerializer.ProcessSerializerSettings
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessSerializerSettings
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.FileFormat
   commentId: P:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.FileFormat
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_FileFormat
   name: FileFormat
   nameWithType: NewtonsoftJsonProcessSerializer.FileFormat
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.FileFormat
@@ -336,545 +348,669 @@ references:
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Serialize(VRBuilder.Core.IEntity,Newtonsoft.Json.JsonSerializerSettings)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Serialize_VRBuilder_Core_IEntity_Newtonsoft_Json_JsonSerializerSettings_
   name: Serialize(IEntity, JsonSerializerSettings)
   nameWithType: NewtonsoftJsonProcessSerializer.Serialize(IEntity, JsonSerializerSettings)
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Serialize(VRBuilder.Core.IEntity, Newtonsoft.Json.JsonSerializerSettings)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Serialize(VRBuilder.Core.IEntity,Newtonsoft.Json.JsonSerializerSettings)
     name: Serialize
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Serialize_VRBuilder_Core_IEntity_Newtonsoft_Json_JsonSerializerSettings_
+    nameWithType: NewtonsoftJsonProcessSerializer.Serialize
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Serialize
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IEntity
     name: IEntity
-    href: VRBuilder.Core.IEntity.html
-  - name: ','
-  - name: " "
+    nameWithType: IEntity
+    fullName: VRBuilder.Core.IEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: Newtonsoft.Json.JsonSerializerSettings
     name: JsonSerializerSettings
+    nameWithType: JsonSerializerSettings
+    fullName: Newtonsoft.Json.JsonSerializerSettings
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Serialize(VRBuilder.Core.IEntity,Newtonsoft.Json.JsonSerializerSettings)
     name: Serialize
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Serialize_VRBuilder_Core_IEntity_Newtonsoft_Json_JsonSerializerSettings_
+    nameWithType: NewtonsoftJsonProcessSerializer.Serialize
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Serialize
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IEntity
     name: IEntity
-    href: VRBuilder.Core.IEntity.html
-  - name: ','
-  - name: " "
+    nameWithType: IEntity
+    fullName: VRBuilder.Core.IEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: Newtonsoft.Json.JsonSerializerSettings
     name: JsonSerializerSettings
+    nameWithType: JsonSerializerSettings
+    fullName: Newtonsoft.Json.JsonSerializerSettings
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Deserialize__1_System_Byte___Newtonsoft_Json_JsonSerializerSettings_
-  name: Deserialize<T>(byte[], JsonSerializerSettings)
-  nameWithType: NewtonsoftJsonProcessSerializer.Deserialize<T>(byte[], JsonSerializerSettings)
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize<T>(byte[], Newtonsoft.Json.JsonSerializerSettings)
+  name: Deserialize<T>(Byte[], JsonSerializerSettings)
+  nameWithType: NewtonsoftJsonProcessSerializer.Deserialize<T>(Byte[], JsonSerializerSettings)
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize<T>(System.Byte[], Newtonsoft.Json.JsonSerializerSettings)
   nameWithType.vb: NewtonsoftJsonProcessSerializer.Deserialize(Of T)(Byte(), JsonSerializerSettings)
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize(Of T)(Byte(), Newtonsoft.Json.JsonSerializerSettings)
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize(Of T)(System.Byte(), Newtonsoft.Json.JsonSerializerSettings)
   name.vb: Deserialize(Of T)(Byte(), JsonSerializerSettings)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings)
-    name: Deserialize
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Deserialize__1_System_Byte___Newtonsoft_Json_JsonSerializerSettings_
-  - name: <
-  - name: T
-  - name: '>'
+    name: Deserialize<T>
+    nameWithType: NewtonsoftJsonProcessSerializer.Deserialize<T>
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize<T>
   - name: (
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
-  - name: ','
-  - name: " "
-  - uid: Newtonsoft.Json.JsonSerializerSettings
-    name: JsonSerializerSettings
-    isExternal: true
-  - name: )
-  spec.vb:
-  - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings)
-    name: Deserialize
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Deserialize__1_System_Byte___Newtonsoft_Json_JsonSerializerSettings_
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-  - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
-  - name: ','
-  - name: " "
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: Newtonsoft.Json.JsonSerializerSettings
     name: JsonSerializerSettings
+    nameWithType: JsonSerializerSettings
+    fullName: Newtonsoft.Json.JsonSerializerSettings
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings)
+    name: Deserialize(Of T)
+    nameWithType: NewtonsoftJsonProcessSerializer.Deserialize(Of T)
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Deserialize(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Newtonsoft.Json.JsonSerializerSettings
+    name: JsonSerializerSettings
+    nameWithType: JsonSerializerSettings
+    fullName: Newtonsoft.Json.JsonSerializerSettings
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray(VRBuilder.Core.IStep)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray(VRBuilder.Core.IStep)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_StepToByteArray_VRBuilder_Core_IStep_
   name: StepToByteArray(IStep)
   nameWithType: NewtonsoftJsonProcessSerializer.StepToByteArray(IStep)
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray(VRBuilder.Core.IStep)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray(VRBuilder.Core.IStep)
     name: StepToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_StepToByteArray_VRBuilder_Core_IStep_
+    nameWithType: NewtonsoftJsonProcessSerializer.StepToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IStep
     name: IStep
-    href: VRBuilder.Core.IStep.html
+    nameWithType: IStep
+    fullName: VRBuilder.Core.IStep
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray(VRBuilder.Core.IStep)
     name: StepToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_StepToByteArray_VRBuilder_Core_IStep_
+    nameWithType: NewtonsoftJsonProcessSerializer.StepToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IStep
     name: IStep
-    href: VRBuilder.Core.IStep.html
+    nameWithType: IStep
+    fullName: VRBuilder.Core.IStep
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(System.Byte[])
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(System.Byte[])
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_StepFromByteArray_System_Byte___
-  name: StepFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializer.StepFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(byte[])
+  name: StepFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializer.StepFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(System.Byte[])
   nameWithType.vb: NewtonsoftJsonProcessSerializer.StepFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(Byte())
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(System.Byte())
   name.vb: StepFromByteArray(Byte())
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(System.Byte[])
     name: StepFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_StepFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.StepFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray(System.Byte[])
     name: StepFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_StepFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.StepFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.StepFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ManifestToByteArray_VRBuilder_Core_IO_IProcessAssetManifest_
   name: ManifestToByteArray(IProcessAssetManifest)
   nameWithType: NewtonsoftJsonProcessSerializer.ManifestToByteArray(IProcessAssetManifest)
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)
     name: ManifestToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ManifestToByteArray_VRBuilder_Core_IO_IProcessAssetManifest_
+    nameWithType: NewtonsoftJsonProcessSerializer.ManifestToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IO.IProcessAssetManifest
     name: IProcessAssetManifest
-    href: VRBuilder.Core.IO.IProcessAssetManifest.html
+    nameWithType: IProcessAssetManifest
+    fullName: VRBuilder.Core.IO.IProcessAssetManifest
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray(VRBuilder.Core.IO.IProcessAssetManifest)
     name: ManifestToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ManifestToByteArray_VRBuilder_Core_IO_IProcessAssetManifest_
+    nameWithType: NewtonsoftJsonProcessSerializer.ManifestToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IO.IProcessAssetManifest
     name: IProcessAssetManifest
-    href: VRBuilder.Core.IO.IProcessAssetManifest.html
+    nameWithType: IProcessAssetManifest
+    fullName: VRBuilder.Core.IO.IProcessAssetManifest
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte[])
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte[])
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ManifestFromByteArray_System_Byte___
-  name: ManifestFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializer.ManifestFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(byte[])
+  name: ManifestFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializer.ManifestFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte[])
   nameWithType.vb: NewtonsoftJsonProcessSerializer.ManifestFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(Byte())
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte())
   name.vb: ManifestFromByteArray(Byte())
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte[])
     name: ManifestFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ManifestFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.ManifestFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray(System.Byte[])
     name: ManifestFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ManifestFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.ManifestFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ManifestFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_EntityToByteArray_VRBuilder_Core_IEntity_
   name: EntityToByteArray(IEntity)
   nameWithType: NewtonsoftJsonProcessSerializer.EntityToByteArray(IEntity)
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
     name: EntityToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_EntityToByteArray_VRBuilder_Core_IEntity_
+    nameWithType: NewtonsoftJsonProcessSerializer.EntityToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IEntity
     name: IEntity
-    href: VRBuilder.Core.IEntity.html
+    nameWithType: IEntity
+    fullName: VRBuilder.Core.IEntity
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray(VRBuilder.Core.IEntity)
     name: EntityToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_EntityToByteArray_VRBuilder_Core_IEntity_
+    nameWithType: NewtonsoftJsonProcessSerializer.EntityToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IEntity
     name: IEntity
-    href: VRBuilder.Core.IEntity.html
+    nameWithType: IEntity
+    fullName: VRBuilder.Core.IEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte[])
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte[])
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_EntityFromByteArray_System_Byte___
-  name: EntityFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializer.EntityFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(byte[])
+  name: EntityFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializer.EntityFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte[])
   nameWithType.vb: NewtonsoftJsonProcessSerializer.EntityFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(Byte())
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte())
   name.vb: EntityFromByteArray(Byte())
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte[])
     name: EntityFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_EntityFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.EntityFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray(System.Byte[])
     name: EntityFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_EntityFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.EntityFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.EntityFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson
   commentId: N:VRBuilder.Core.Serialization.NewtonsoftJson
-  href: VRBuilder.html
   name: VRBuilder.Core.Serialization.NewtonsoftJson
   nameWithType: VRBuilder.Core.Serialization.NewtonsoftJson
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization
-    name: Serialization
-    href: VRBuilder.Core.Serialization.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization.NewtonsoftJson
-    name: NewtonsoftJson
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization
-    name: Serialization
-    href: VRBuilder.Core.Serialization.html
-  - name: .
-  - uid: VRBuilder.Core.Serialization.NewtonsoftJson
-    name: NewtonsoftJson
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.html
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Name
   commentId: P:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Name
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Name
   name: Name
   nameWithType: NewtonsoftJsonProcessSerializer.Name
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Name
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Name*
   commentId: Overload:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Name
-  href: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.html#VRBuilder_Core_Serialization_NewtonsoftJsonProcessSerializerV4_Name
   name: Name
   nameWithType: NewtonsoftJsonProcessSerializerV4.Name
   fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Name
@@ -882,23 +1018,17 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Version
   commentId: P:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Version
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_Version
   name: Version
   nameWithType: NewtonsoftJsonProcessSerializer.Version
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.Version
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Version*
   commentId: Overload:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Version
-  href: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.html#VRBuilder_Core_Serialization_NewtonsoftJsonProcessSerializerV4_Version
   name: Version
   nameWithType: NewtonsoftJsonProcessSerializerV4.Version
   fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.Version
@@ -906,134 +1036,137 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte[])
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte[])
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessFromByteArray_System_Byte___
-  name: ProcessFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializer.ProcessFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(byte[])
+  name: ProcessFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializer.ProcessFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte[])
   nameWithType.vb: NewtonsoftJsonProcessSerializer.ProcessFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(Byte())
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte())
   name.vb: ProcessFromByteArray(Byte())
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte[])
     name: ProcessFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.ProcessFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray(System.Byte[])
     name: ProcessFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.ProcessFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray*
   commentId: Overload:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray
-  href: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.html#VRBuilder_Core_Serialization_NewtonsoftJsonProcessSerializerV4_ProcessFromByteArray_System_Byte___
   name: ProcessFromByteArray
   nameWithType: NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray
   fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessFromByteArray
 - uid: System.Byte[]
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte[]
-  nameWithType: byte[]
-  fullName: byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
   nameWithType.vb: Byte()
-  fullName.vb: Byte()
+  fullName.vb: System.Byte()
   name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
-  - name: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: VRBuilder.Core.IProcess
   commentId: T:VRBuilder.Core.IProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IProcess.html
   name: IProcess
   nameWithType: IProcess
   fullName: VRBuilder.Core.IProcess
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessToByteArray_VRBuilder_Core_IProcess_
   name: ProcessToByteArray(IProcess)
   nameWithType: NewtonsoftJsonProcessSerializer.ProcessToByteArray(IProcess)
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
     name: ProcessToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessToByteArray_VRBuilder_Core_IProcess_
+    nameWithType: NewtonsoftJsonProcessSerializer.ProcessToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IProcess
     name: IProcess
-    href: VRBuilder.Core.IProcess.html
+    nameWithType: IProcess
+    fullName: VRBuilder.Core.IProcess
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray(VRBuilder.Core.IProcess)
     name: ProcessToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ProcessToByteArray_VRBuilder_Core_IProcess_
+    nameWithType: NewtonsoftJsonProcessSerializer.ProcessToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ProcessToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IProcess
     name: IProcess
-    href: VRBuilder.Core.IProcess.html
+    nameWithType: IProcess
+    fullName: VRBuilder.Core.IProcess
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessToByteArray*
   commentId: Overload:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessToByteArray
-  href: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.html#VRBuilder_Core_Serialization_NewtonsoftJsonProcessSerializerV4_ProcessToByteArray_VRBuilder_Core_IProcess_
   name: ProcessToByteArray
   nameWithType: NewtonsoftJsonProcessSerializerV4.ProcessToByteArray
   fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ProcessToByteArray
@@ -1041,78 +1174,99 @@ references:
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(System.Byte[])
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
   isExternal: true
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ChapterFromByteArray_System_Byte___
-  name: ChapterFromByteArray(byte[])
-  nameWithType: NewtonsoftJsonProcessSerializer.ChapterFromByteArray(byte[])
-  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(byte[])
+  name: ChapterFromByteArray(Byte[])
+  nameWithType: NewtonsoftJsonProcessSerializer.ChapterFromByteArray(Byte[])
+  fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(System.Byte[])
   nameWithType.vb: NewtonsoftJsonProcessSerializer.ChapterFromByteArray(Byte())
-  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(Byte())
+  fullName.vb: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(System.Byte())
   name.vb: ChapterFromByteArray(Byte())
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(System.Byte[])
     name: ChapterFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ChapterFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.ChapterFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
-    name: byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray(System.Byte[])
     name: ChapterFromByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ChapterFromByteArray_System_Byte___
+    nameWithType: NewtonsoftJsonProcessSerializer.ChapterFromByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterFromByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray*
   commentId: Overload:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray
-  href: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.html#VRBuilder_Core_Serialization_NewtonsoftJsonProcessSerializerV4_ChapterFromByteArray_System_Byte___
   name: ChapterFromByteArray
   nameWithType: NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray
   fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterFromByteArray
 - uid: VRBuilder.Core.IChapter
   commentId: T:VRBuilder.Core.IChapter
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IChapter.html
   name: IChapter
   nameWithType: IChapter
   fullName: VRBuilder.Core.IChapter
 - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
   commentId: M:VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
   parent: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer
-  href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ChapterToByteArray_VRBuilder_Core_IChapter_
   name: ChapterToByteArray(IChapter)
   nameWithType: NewtonsoftJsonProcessSerializer.ChapterToByteArray(IChapter)
   fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
   spec.csharp:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
     name: ChapterToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ChapterToByteArray_VRBuilder_Core_IChapter_
+    nameWithType: NewtonsoftJsonProcessSerializer.ChapterToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray(VRBuilder.Core.IChapter)
     name: ChapterToByteArray
-    href: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.html#VRBuilder_Core_Serialization_NewtonsoftJson_NewtonsoftJsonProcessSerializer_ChapterToByteArray_VRBuilder_Core_IChapter_
+    nameWithType: NewtonsoftJsonProcessSerializer.ChapterToByteArray
+    fullName: VRBuilder.Core.Serialization.NewtonsoftJson.NewtonsoftJsonProcessSerializer.ChapterToByteArray
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IChapter
     name: IChapter
-    href: VRBuilder.Core.IChapter.html
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterToByteArray*
   commentId: Overload:VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterToByteArray
-  href: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.html#VRBuilder_Core_Serialization_NewtonsoftJsonProcessSerializerV4_ChapterToByteArray_VRBuilder_Core_IChapter_
   name: ChapterToByteArray
   nameWithType: NewtonsoftJsonProcessSerializerV4.ChapterToByteArray
   fullName: VRBuilder.Core.Serialization.NewtonsoftJsonProcessSerializerV4.ChapterToByteArray

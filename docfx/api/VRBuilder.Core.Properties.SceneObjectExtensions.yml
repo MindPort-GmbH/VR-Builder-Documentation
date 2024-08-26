@@ -6,10 +6,10 @@ items:
   parent: VRBuilder.Core.Properties
   children:
   - VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type)
-  - VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   - VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty``1(VRBuilder.Core.SceneObjects.ISceneObject)
-  - VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
-  - VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  - VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  - VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
   - VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject,System.String)
   langs:
   - csharp
@@ -29,7 +29,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Helper class that adds functionality to any <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nHelper class that adds functionality to any <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static class SceneObjectExtensions
@@ -37,13 +37,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject,System.String)
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject,System.String)
   id: SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject,System.String)
@@ -52,9 +59,9 @@ items:
   langs:
   - csharp
   - vb
-  name: SetSuitableName(ISceneObject, string)
-  nameWithType: SceneObjectExtensions.SetSuitableName(ISceneObject, string)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject, string)
+  name: SetSuitableName(ISceneObject, String)
+  nameWithType: SceneObjectExtensions.SetSuitableName(ISceneObject, String)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject, System.String)
   type: Method
   source:
     remote:
@@ -67,7 +74,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Ensures that this <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>'s UniqueName is not duplicated.
+  summary: "\nEnsures that this <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref>&apos;s UniqueName is not duplicated.\n"
   example: []
   syntax:
     content: >-
@@ -80,9 +87,11 @@ items:
       description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> to whom the `UniqueName` will be validated.
     - id: baseName
       type: System.String
-      description: Optional base for this <code class="paramref">sceneObject</code>'s `UniqueName`.
+      description: Optional base for this <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>&apos;s `UniqueName`.
     content.vb: >-
       <Obsolete("This function is no longer used and will be removed in the next major version.")>
+
+      <ExtensionAttribute>
 
       Public Shared Sub SetSuitableName(sceneObject As ISceneObject, baseName As String = "")
   overload: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName*
@@ -92,9 +101,12 @@ items:
     arguments:
     - type: System.String
       value: This function is no longer used and will be removed in the next major version.
-  nameWithType.vb: SceneObjectExtensions.SetSuitableName(ISceneObject, String)
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(VRBuilder.Core.SceneObjects.ISceneObject, String)
-  name.vb: SetSuitableName(ISceneObject, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty``1(VRBuilder.Core.SceneObjects.ISceneObject)
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty``1(VRBuilder.Core.SceneObjects.ISceneObject)
   id: AddProcessProperty``1(VRBuilder.Core.SceneObjects.ISceneObject)
@@ -118,23 +130,32 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Adds a <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> of type <code class="typeparamref">T</code> into this <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nAdds a <xref href=\"VRBuilder.Core.Properties.ISceneObjectProperty\" data-throw-if-not-resolved=\"false\"></xref> of type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code> into this <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static ISceneObjectProperty AddProcessProperty<T>(this ISceneObject sceneObject)
     parameters:
     - id: sceneObject
       type: VRBuilder.Core.SceneObjects.ISceneObject
-      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> to whom the type <code class="typeparamref">T</code> will be added.
+      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> to whom the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> will be added.
     typeParameters:
     - id: T
-      description: The type of <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be added to <code class="paramref">sceneObject</code>.
+      description: The type of <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be added to <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>.
     return:
       type: VRBuilder.Core.Properties.ISceneObjectProperty
-      description: A reference to the <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> added to <code class="paramref">sceneObject</code>.
-    content.vb: Public Shared Function AddProcessProperty(Of T)(sceneObject As ISceneObject) As ISceneObjectProperty
+      description: A reference to the <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> added to <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddProcessProperty(Of T)(sceneObject As ISceneObject) As ISceneObjectProperty
   overload: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty*
   nameWithType.vb: SceneObjectExtensions.AddProcessProperty(Of T)(ISceneObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
   fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty(Of T)(VRBuilder.Core.SceneObjects.ISceneObject)
   name.vb: AddProcessProperty(Of T)(ISceneObject)
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type)
@@ -160,22 +181,31 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Adds a type of <code class="paramref">processProperty</code> into this <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nAdds a type of <code data-dev-comment-type=\"paramref\" class=\"paramref\">processProperty</code> into this <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static ISceneObjectProperty AddProcessProperty(this ISceneObject sceneObject, Type processProperty)
     parameters:
     - id: sceneObject
       type: VRBuilder.Core.SceneObjects.ISceneObject
-      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> to whom the <code class="paramref">processProperty</code> will be added.
+      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> to whom the <code data-dev-comment-type="paramref" class="paramref">processProperty</code> will be added.
     - id: processProperty
       type: System.Type
-      description: Typo of <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be added to <code class="paramref">sceneObject</code>.
+      description: Typo of <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be added to <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>.
     return:
       type: VRBuilder.Core.Properties.ISceneObjectProperty
-      description: A reference to the <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> added to <code class="paramref">sceneObject</code>.
-    content.vb: Public Shared Function AddProcessProperty(sceneObject As ISceneObject, processProperty As Type) As ISceneObjectProperty
+      description: A reference to the <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> added to <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddProcessProperty(sceneObject As ISceneObject, processProperty As Type) As ISceneObjectProperty
   overload: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   id: AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
@@ -199,7 +229,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Checks if property extensions exist in the project and adds them to the game object if the current scene requires them.
+  summary: "\nChecks if property extensions exist in the project and adds them to the game object if the current scene requires them.\n"
   example: []
   syntax:
     content: public static void AddProcessPropertyExtensions(this ISceneObjectProperty property)
@@ -207,19 +237,28 @@ items:
     - id: property
       type: VRBuilder.Core.Properties.ISceneObjectProperty
       description: The property to check for.
-    content.vb: Public Shared Sub AddProcessPropertyExtensions([property] As ISceneObjectProperty)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub AddProcessPropertyExtensions(property As ISceneObjectProperty)
   overload: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions*
-- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
-  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
-  id: RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  id: RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
   isExtensionMethod: true
   parent: VRBuilder.Core.Properties.SceneObjectExtensions
   langs:
   - csharp
   - vb
-  name: RemoveProcessProperty(ISceneObject, Component, bool, IEnumerable<Component>)
-  nameWithType: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Component, bool, IEnumerable<Component>)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, UnityEngine.Component, bool, System.Collections.Generic.IEnumerable<UnityEngine.Component>)
+  name: RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable<Component>)
+  nameWithType: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable<Component>)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, Component, System.Boolean, System.Collections.Generic.IEnumerable<Component>)
   type: Method
   source:
     remote:
@@ -232,39 +271,48 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Removes type of <code class="paramref">processProperty</code> from this <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nRemoves type of <code data-dev-comment-type=\"paramref\" class=\"paramref\">processProperty</code> from this <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void RemoveProcessProperty(this ISceneObject sceneObject, Component processProperty, bool removeDependencies = false, IEnumerable<Component> excludedFromBeingRemoved = null)
     parameters:
     - id: sceneObject
       type: VRBuilder.Core.SceneObjects.ISceneObject
-      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> from whom the <code class="paramref">processProperty</code> will be removed.
+      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> from whom the <code data-dev-comment-type="paramref" class="paramref">processProperty</code> will be removed.
     - id: processProperty
-      type: UnityEngine.Component
-      description: <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be removed from <code class="paramref">sceneObject</code>.
+      type: Component
+      description: <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be removed from <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>.
     - id: removeDependencies
       type: System.Boolean
-      description: If true, this method also removes other components that are marked as `RequiredComponent` by <code class="paramref">processProperty</code>.
+      description: If true, this method also removes other components that are marked as `RequiredComponent` by <code data-dev-comment-type="paramref" class="paramref">processProperty</code>.
     - id: excludedFromBeingRemoved
-      type: System.Collections.Generic.IEnumerable{UnityEngine.Component}
-      description: The process properties in this list will not be removed if any is a dependency of <code class="paramref">processProperty</code>. Only relevant if <code class="paramref">removeDependencies</code> is true.
-    content.vb: Public Shared Sub RemoveProcessProperty(sceneObject As ISceneObject, processProperty As Component, removeDependencies As Boolean = False, excludedFromBeingRemoved As IEnumerable(Of Component) = Nothing)
+      type: System.Collections.Generic.IEnumerable{Component}
+      description: The process properties in this list will not be removed if any is a dependency of <code data-dev-comment-type="paramref" class="paramref">processProperty</code>. Only relevant if <code data-dev-comment-type="paramref" class="paramref">removeDependencies</code> is true.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub RemoveProcessProperty(sceneObject As ISceneObject, processProperty As Component, removeDependencies As Boolean = False, excludedFromBeingRemoved As IEnumerable(Of Component) = Nothing)
   overload: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty*
   nameWithType.vb: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable(Of Component))
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, UnityEngine.Component, Boolean, System.Collections.Generic.IEnumerable(Of UnityEngine.Component))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, Component, System.Boolean, System.Collections.Generic.IEnumerable(Of Component))
   name.vb: RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable(Of Component))
-- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
-  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
-  id: RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  id: RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
   isExtensionMethod: true
   parent: VRBuilder.Core.Properties.SceneObjectExtensions
   langs:
   - csharp
   - vb
-  name: RemoveProcessProperty(ISceneObject, Type, bool, IEnumerable<Component>)
-  nameWithType: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Type, bool, IEnumerable<Component>)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, bool, System.Collections.Generic.IEnumerable<UnityEngine.Component>)
+  name: RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable<Component>)
+  nameWithType: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable<Component>)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, System.Boolean, System.Collections.Generic.IEnumerable<Component>)
   type: Method
   source:
     remote:
@@ -277,336 +325,348 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Removes type of <code class="paramref">processProperty</code> from this <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nRemoves type of <code data-dev-comment-type=\"paramref\" class=\"paramref\">processProperty</code> from this <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static void RemoveProcessProperty(this ISceneObject sceneObject, Type processProperty, bool removeDependencies = false, IEnumerable<Component> excludedFromBeingRemoved = null)
     parameters:
     - id: sceneObject
       type: VRBuilder.Core.SceneObjects.ISceneObject
-      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> from whom the <code class="paramref">processProperty</code> will be removed.
+      description: <xref href="VRBuilder.Core.SceneObjects.ISceneObject" data-throw-if-not-resolved="false"></xref> from whom the <code data-dev-comment-type="paramref" class="paramref">processProperty</code> will be removed.
     - id: processProperty
       type: System.Type
-      description: Typo of <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be removed from <code class="paramref">sceneObject</code>.
+      description: Typo of <xref href="VRBuilder.Core.Properties.ISceneObjectProperty" data-throw-if-not-resolved="false"></xref> to be removed from <code data-dev-comment-type="paramref" class="paramref">sceneObject</code>.
     - id: removeDependencies
       type: System.Boolean
-      description: If true, this method also removes other components that are marked as `RequiredComponent` by <code class="paramref">processProperty</code>.
+      description: If true, this method also removes other components that are marked as `RequiredComponent` by <code data-dev-comment-type="paramref" class="paramref">processProperty</code>.
     - id: excludedFromBeingRemoved
-      type: System.Collections.Generic.IEnumerable{UnityEngine.Component}
-      description: The process properties in this list will not be removed if any is a dependency of <code class="paramref">processProperty</code>. Only relevant if <code class="paramref">removeDependencies</code> is true.
-    content.vb: Public Shared Sub RemoveProcessProperty(sceneObject As ISceneObject, processProperty As Type, removeDependencies As Boolean = False, excludedFromBeingRemoved As IEnumerable(Of Component) = Nothing)
+      type: System.Collections.Generic.IEnumerable{Component}
+      description: The process properties in this list will not be removed if any is a dependency of <code data-dev-comment-type="paramref" class="paramref">processProperty</code>. Only relevant if <code data-dev-comment-type="paramref" class="paramref">removeDependencies</code> is true.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub RemoveProcessProperty(sceneObject As ISceneObject, processProperty As Type, removeDependencies As Boolean = False, excludedFromBeingRemoved As IEnumerable(Of Component) = Nothing)
   overload: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty*
   nameWithType.vb: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable(Of Component))
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, Boolean, System.Collections.Generic.IEnumerable(Of UnityEngine.Component))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, System.Boolean, System.Collections.Generic.IEnumerable(Of Component))
   name.vb: RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable(Of Component))
 references:
 - uid: VRBuilder.Core.SceneObjects.ISceneObject
   commentId: T:VRBuilder.Core.SceneObjects.ISceneObject
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ISceneObject.html
   name: ISceneObject
   nameWithType: ISceneObject
   fullName: VRBuilder.Core.SceneObjects.ISceneObject
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName*
   commentId: Overload:VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_SetSuitableName_VRBuilder_Core_SceneObjects_ISceneObject_System_String_
   name: SetSuitableName
   nameWithType: SceneObjectExtensions.SetSuitableName
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName
@@ -614,23 +674,17 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty
   commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
   name: ISceneObjectProperty
   nameWithType: ISceneObjectProperty
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty*
   commentId: Overload:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessProperty__1_VRBuilder_Core_SceneObjects_ISceneObject_
   name: AddProcessProperty
   nameWithType: SceneObjectExtensions.AddProcessProperty
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty
@@ -638,83 +692,79 @@ references:
   commentId: T:System.Type
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type
   nameWithType: Type
   fullName: System.Type
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions*
   commentId: Overload:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
   name: AddProcessPropertyExtensions
   nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty*
   commentId: Overload:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_RemoveProcessProperty_VRBuilder_Core_SceneObjects_ISceneObject_UnityEngine_Component_System_Boolean_System_Collections_Generic_IEnumerable_UnityEngine_Component__
   name: RemoveProcessProperty
   nameWithType: SceneObjectExtensions.RemoveProcessProperty
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
-- uid: UnityEngine.Component
-  commentId: T:UnityEngine.Component
-  parent: UnityEngine
+- uid: Component
+  commentId: '!:Component'
   isExternal: true
   name: Component
   nameWithType: Component
-  fullName: UnityEngine.Component
+  fullName: Component
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: System.Collections.Generic.IEnumerable{UnityEngine.Component}
-  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.Component}
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable{Component}
+  commentId: T:System.Collections.Generic.IEnumerable{Component}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<Component>
   nameWithType: IEnumerable<Component>
-  fullName: System.Collections.Generic.IEnumerable<UnityEngine.Component>
+  fullName: System.Collections.Generic.IEnumerable<Component>
   nameWithType.vb: IEnumerable(Of Component)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.Component)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Component)
   name.vb: IEnumerable(Of Component)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
-  - uid: UnityEngine.Component
+    nameWithType: <
+    fullName: <
+  - uid: Component
     name: Component
+    nameWithType: Component
+    fullName: Component
     isExternal: true
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: UnityEngine.Component
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Component
     name: Component
+    nameWithType: Component
+    fullName: Component
     isExternal: true
   - name: )
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -724,55 +774,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

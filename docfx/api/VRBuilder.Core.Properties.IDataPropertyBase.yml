@@ -25,15 +25,24 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Base interface for a property that stores a single value.
+  summary: "\nBase interface for a property that stores a single value.\n"
   example: []
   syntax:
     content: 'public interface IDataPropertyBase : ISceneObjectProperty'
-    content.vb: Public Interface IDataPropertyBase Inherits ISceneObjectProperty
+    content.vb: >-
+      Public Interface IDataPropertyBase
+
+          Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   extensionMethods:
   - VRBuilder.Core.Properties.ISceneObjectProperty.VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset
   commentId: P:VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset
   id: OnValueReset
@@ -56,15 +65,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Raised when the stored value is reset to the default.
+  summary: "\nRaised when the stored value is reset to the default.\n"
   example: []
   syntax:
     content: UnityEvent OnValueReset { get; }
     parameters: []
     return:
-      type: UnityEngine.Events.UnityEvent
+      type: UnityEvent
     content.vb: ReadOnly Property OnValueReset As UnityEvent
   overload: VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Properties.IDataPropertyBase.ResetValue
   commentId: M:VRBuilder.Core.Properties.IDataPropertyBase.ResetValue
   id: ResetValue
@@ -87,47 +100,21 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
-  summary: Resets the value to its default.
+  summary: "\nResets the value to its default.\n"
   example: []
   syntax:
     content: void ResetValue()
-    content.vb: Sub ResetValue()
+    content.vb: Sub ResetValue
   overload: VRBuilder.Core.Properties.IDataPropertyBase.ResetValue*
 references:
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   commentId: P:VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
   parent: VRBuilder.Core.Properties.ISceneObjectProperty
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html#VRBuilder_Core_Properties_ISceneObjectProperty_SceneObject
   name: SceneObject
   nameWithType: ISceneObjectProperty.SceneObject
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -135,104 +122,90 @@ references:
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   parent: VRBuilder.Core.Properties.SceneObjectExtensions
   definition: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
-  name: AddProcessPropertyExtensions(ISceneObjectProperty)
-  nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions(ISceneObjectProperty)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  name: AddProcessPropertyExtensions()
+  nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions()
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions()
   spec.csharp:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
-  - uid: VRBuilder.Core.Properties.ISceneObjectProperty
-    name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
-  - uid: VRBuilder.Core.Properties.ISceneObjectProperty
-    name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Properties.ISceneObjectProperty
   commentId: T:VRBuilder.Core.Properties.ISceneObjectProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ISceneObjectProperty.html
   name: ISceneObjectProperty
   nameWithType: ISceneObjectProperty
   fullName: VRBuilder.Core.Properties.ISceneObjectProperty
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
   name: AddProcessPropertyExtensions(ISceneObjectProperty)
   nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions(ISceneObjectProperty)
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
   spec.csharp:
   - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Properties.ISceneObjectProperty
     name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: ISceneObjectProperty
+    fullName: VRBuilder.Core.Properties.ISceneObjectProperty
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions(VRBuilder.Core.Properties.ISceneObjectProperty)
     name: AddProcessPropertyExtensions
-    href: VRBuilder.Core.Properties.SceneObjectExtensions.html#VRBuilder_Core_Properties_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_
+    nameWithType: SceneObjectExtensions.AddProcessPropertyExtensions
+    fullName: VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessPropertyExtensions
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Properties.ISceneObjectProperty
     name: ISceneObjectProperty
-    href: VRBuilder.Core.Properties.ISceneObjectProperty.html
+    nameWithType: ISceneObjectProperty
+    fullName: VRBuilder.Core.Properties.ISceneObjectProperty
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Properties.SceneObjectExtensions
   commentId: T:VRBuilder.Core.Properties.SceneObjectExtensions
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.SceneObjectExtensions.html
   name: SceneObjectExtensions
   nameWithType: SceneObjectExtensions
   fullName: VRBuilder.Core.Properties.SceneObjectExtensions
 - uid: VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset*
   commentId: Overload:VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset
-  href: VRBuilder.Core.Properties.IDataPropertyBase.html#VRBuilder_Core_Properties_IDataPropertyBase_OnValueReset
   name: OnValueReset
   nameWithType: IDataPropertyBase.OnValueReset
   fullName: VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset
-- uid: UnityEngine.Events.UnityEvent
-  commentId: T:UnityEngine.Events.UnityEvent
-  parent: UnityEngine.Events
+- uid: UnityEvent
   isExternal: true
   name: UnityEvent
   nameWithType: UnityEvent
-  fullName: UnityEngine.Events.UnityEvent
-- uid: UnityEngine.Events
-  commentId: N:UnityEngine.Events
-  isExternal: true
-  name: UnityEngine.Events
-  nameWithType: UnityEngine.Events
-  fullName: UnityEngine.Events
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.Events
-    name: Events
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.Events
-    name: Events
-    isExternal: true
+  fullName: UnityEvent
 - uid: VRBuilder.Core.Properties.IDataPropertyBase.ResetValue*
   commentId: Overload:VRBuilder.Core.Properties.IDataPropertyBase.ResetValue
-  href: VRBuilder.Core.Properties.IDataPropertyBase.html#VRBuilder_Core_Properties_IDataPropertyBase_ResetValue
   name: ResetValue
   nameWithType: IDataPropertyBase.ResetValue
   fullName: VRBuilder.Core.Properties.IDataPropertyBase.ResetValue

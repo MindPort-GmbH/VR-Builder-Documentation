@@ -28,11 +28,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Interface for the class playing sounds for the process, i.e. tts and play audio behaviors.
+  summary: "\nInterface for the class playing sounds for the process, i.e. tts and play audio behaviors.\n"
   example: []
   syntax:
     content: public interface IProcessAudioPlayer
     content.vb: Public Interface IProcessAudioPlayer
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
   commentId: P:VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
   id: FallbackAudioSource
@@ -55,15 +61,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Gets a fallback audio source. Used only for backwards compatibility.
+  summary: "\nGets a fallback audio source. Used only for backwards compatibility.\n"
   example: []
   syntax:
     content: AudioSource FallbackAudioSource { get; }
     parameters: []
     return:
-      type: UnityEngine.AudioSource
+      type: AudioSource
     content.vb: ReadOnly Property FallbackAudioSource As AudioSource
   overload: VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
   commentId: P:VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
   id: IsPlaying
@@ -86,7 +96,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: True if currently playing audio.
+  summary: "\nTrue if currently playing audio.\n"
   example: []
   syntax:
     content: bool IsPlaying { get; }
@@ -95,6 +105,10 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsPlaying As Boolean
   overload: VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
   commentId: M:VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
   id: PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
@@ -102,9 +116,9 @@ items:
   langs:
   - csharp
   - vb
-  name: PlayAudio(IAudioData, float, float)
-  nameWithType: IProcessAudioPlayer.PlayAudio(IAudioData, float, float)
-  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, float, float)
+  name: PlayAudio(IAudioData, Single, Single)
+  nameWithType: IProcessAudioPlayer.PlayAudio(IAudioData, Single, Single)
+  fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, System.Single, System.Single)
   type: Method
   source:
     remote:
@@ -117,10 +131,10 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Play the specified audio immediately with the set parameters.
+  summary: "\nPlay the specified audio immediately with the set parameters.\n"
   example: []
   syntax:
-    content: void PlayAudio(IAudioData audioData, float volume = 1, float pitch = 1)
+    content: void PlayAudio(IAudioData audioData, float volume = 1F, float pitch = 1F)
     parameters:
     - id: audioData
       type: VRBuilder.Core.Audio.IAudioData
@@ -128,11 +142,8 @@ items:
       type: System.Single
     - id: pitch
       type: System.Single
-    content.vb: Sub PlayAudio(audioData As IAudioData, volume As Single = 1, pitch As Single = 1)
+    content.vb: Sub PlayAudio(audioData As IAudioData, volume As Single = 1F, pitch As Single = 1F)
   overload: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio*
-  nameWithType.vb: IProcessAudioPlayer.PlayAudio(IAudioData, Single, Single)
-  fullName.vb: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData, Single, Single)
-  name.vb: PlayAudio(IAudioData, Single, Single)
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
   commentId: M:VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
   id: Stop
@@ -155,11 +166,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Stops playing audio.
+  summary: "\nStops playing audio.\n"
   example: []
   syntax:
     content: void Stop()
-    content.vb: Sub [Stop]()
+    content.vb: Sub Stop
   overload: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop*
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
   commentId: M:VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
@@ -183,65 +194,30 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: Resets the player to its default settings.
+  summary: "\nResets the player to its default settings.\n"
   example: []
   syntax:
     content: void Reset()
-    content.vb: Sub Reset()
+    content.vb: Sub Reset
   overload: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset*
 references:
 - uid: VRBuilder.Core.Configuration
   commentId: N:VRBuilder.Core.Configuration
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration
   nameWithType: VRBuilder.Core.Configuration
   fullName: VRBuilder.Core.Configuration
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource*
   commentId: Overload:VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
-  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_FallbackAudioSource
   name: FallbackAudioSource
   nameWithType: IProcessAudioPlayer.FallbackAudioSource
   fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.FallbackAudioSource
-- uid: UnityEngine.AudioSource
-  commentId: T:UnityEngine.AudioSource
-  parent: UnityEngine
+- uid: AudioSource
   isExternal: true
   name: AudioSource
   nameWithType: AudioSource
-  fullName: UnityEngine.AudioSource
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  fullName: AudioSource
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying*
   commentId: Overload:VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
-  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_IsPlaying
   name: IsPlaying
   nameWithType: IProcessAudioPlayer.IsPlaying
   fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.IsPlaying
@@ -249,30 +225,23 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio*
   commentId: Overload:VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio
-  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_PlayAudio_VRBuilder_Core_Audio_IAudioData_System_Single_System_Single_
   name: PlayAudio
   nameWithType: IProcessAudioPlayer.PlayAudio
   fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.PlayAudio
 - uid: VRBuilder.Core.Audio.IAudioData
   commentId: T:VRBuilder.Core.Audio.IAudioData
   parent: VRBuilder.Core.Audio
-  href: VRBuilder.Core.Audio.IAudioData.html
   name: IAudioData
   nameWithType: IAudioData
   fullName: VRBuilder.Core.Audio.IAudioData
@@ -280,52 +249,21 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: VRBuilder.Core.Audio
   commentId: N:VRBuilder.Core.Audio
-  href: VRBuilder.html
   name: VRBuilder.Core.Audio
   nameWithType: VRBuilder.Core.Audio
   fullName: VRBuilder.Core.Audio
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Audio
-    name: Audio
-    href: VRBuilder.Core.Audio.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Audio
-    name: Audio
-    href: VRBuilder.Core.Audio.html
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop*
   commentId: Overload:VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
-  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Stop
   name: Stop
   nameWithType: IProcessAudioPlayer.Stop
   fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.Stop
 - uid: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset*
   commentId: Overload:VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset
-  href: VRBuilder.Core.Configuration.IProcessAudioPlayer.html#VRBuilder_Core_Configuration_IProcessAudioPlayer_Reset
   name: Reset
   nameWithType: IProcessAudioPlayer.Reset
   fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer.Reset

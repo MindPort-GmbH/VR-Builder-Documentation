@@ -28,85 +28,90 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Unity
-  summary: A TextWriter implementation that outputs any added text to Unity's DebugLogger
+  summary: "\nA TextWriter implementation that outputs any added text to Unity&apos;s DebugLogger\n"
   example: []
   syntax:
-    content: 'public class UnityDebugLogErrorWriter : TextWriter, IDisposable, IAsyncDisposable'
-    content.vb: Public Class UnityDebugLogErrorWriter Inherits TextWriter Implements IDisposable, IAsyncDisposable
+    content: 'public class UnityDebugLogErrorWriter : TextWriter, IDisposable'
+    content.vb: >-
+      Public Class UnityDebugLogErrorWriter
+
+          Inherits TextWriter
+
+          Implements IDisposable
   inheritance:
   - System.Object
   - System.MarshalByRefObject
   - System.IO.TextWriter
   implements:
   - System.IDisposable
-  - System.IAsyncDisposable
   inheritedMembers:
-  - System.IO.TextWriter.CoreNewLine
   - System.IO.TextWriter.Null
+  - System.IO.TextWriter.CoreNewLine
   - System.IO.TextWriter.Close
-  - System.IO.TextWriter.Dispose
   - System.IO.TextWriter.Dispose(System.Boolean)
-  - System.IO.TextWriter.FlushAsync
+  - System.IO.TextWriter.Dispose
   - System.IO.TextWriter.Synchronized(System.IO.TextWriter)
-  - System.IO.TextWriter.Write(System.Boolean)
   - System.IO.TextWriter.Write(System.Char[])
-  - System.IO.TextWriter.Write(System.Decimal)
-  - System.IO.TextWriter.Write(System.Double)
+  - System.IO.TextWriter.Write(System.Boolean)
   - System.IO.TextWriter.Write(System.Int32)
+  - System.IO.TextWriter.Write(System.UInt32)
   - System.IO.TextWriter.Write(System.Int64)
-  - System.IO.TextWriter.Write(System.Object)
+  - System.IO.TextWriter.Write(System.UInt64)
   - System.IO.TextWriter.Write(System.Single)
+  - System.IO.TextWriter.Write(System.Double)
+  - System.IO.TextWriter.Write(System.Decimal)
+  - System.IO.TextWriter.Write(System.Object)
   - System.IO.TextWriter.Write(System.String,System.Object)
   - System.IO.TextWriter.Write(System.String,System.Object,System.Object)
   - System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
   - System.IO.TextWriter.Write(System.String,System.Object[])
-  - System.IO.TextWriter.Write(System.UInt32)
-  - System.IO.TextWriter.Write(System.UInt64)
-  - System.IO.TextWriter.WriteAsync(System.Char)
-  - System.IO.TextWriter.WriteAsync(System.Char[])
-  - System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
-  - System.IO.TextWriter.WriteAsync(System.String)
   - System.IO.TextWriter.WriteLine
-  - System.IO.TextWriter.WriteLine(System.Boolean)
   - System.IO.TextWriter.WriteLine(System.Char)
   - System.IO.TextWriter.WriteLine(System.Char[])
   - System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
-  - System.IO.TextWriter.WriteLine(System.Decimal)
-  - System.IO.TextWriter.WriteLine(System.Double)
+  - System.IO.TextWriter.WriteLine(System.Boolean)
   - System.IO.TextWriter.WriteLine(System.Int32)
+  - System.IO.TextWriter.WriteLine(System.UInt32)
   - System.IO.TextWriter.WriteLine(System.Int64)
-  - System.IO.TextWriter.WriteLine(System.Object)
+  - System.IO.TextWriter.WriteLine(System.UInt64)
   - System.IO.TextWriter.WriteLine(System.Single)
+  - System.IO.TextWriter.WriteLine(System.Double)
+  - System.IO.TextWriter.WriteLine(System.Decimal)
   - System.IO.TextWriter.WriteLine(System.String)
+  - System.IO.TextWriter.WriteLine(System.Object)
   - System.IO.TextWriter.WriteLine(System.String,System.Object)
   - System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
   - System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
   - System.IO.TextWriter.WriteLine(System.String,System.Object[])
-  - System.IO.TextWriter.WriteLine(System.UInt32)
-  - System.IO.TextWriter.WriteLine(System.UInt64)
-  - System.IO.TextWriter.WriteLineAsync
+  - System.IO.TextWriter.WriteAsync(System.Char)
+  - System.IO.TextWriter.WriteAsync(System.String)
+  - System.IO.TextWriter.WriteAsync(System.Char[])
+  - System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
   - System.IO.TextWriter.WriteLineAsync(System.Char)
+  - System.IO.TextWriter.WriteLineAsync(System.String)
   - System.IO.TextWriter.WriteLineAsync(System.Char[])
   - System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
-  - System.IO.TextWriter.WriteLineAsync(System.String)
-  - System.IO.TextWriter.DisposeAsync
-  - System.IO.TextWriter.Write(System.ReadOnlySpan{System.Char})
-  - System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  - System.IO.TextWriter.WriteLine(System.ReadOnlySpan{System.Char})
-  - System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
+  - System.IO.TextWriter.WriteLineAsync
+  - System.IO.TextWriter.FlushAsync
   - System.IO.TextWriter.FormatProvider
   - System.IO.TextWriter.NewLine
-  - System.MarshalByRefObject.CreateObjRef(System.Type)
+  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
   - System.MarshalByRefObject.GetLifetimeService
   - System.MarshalByRefObject.InitializeLifetimeService
-  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  - System.MarshalByRefObject.CreateObjRef(System.Type)
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Encoding
   commentId: P:VRBuilder.Unity.UnityDebugLogErrorWriter.Encoding
   id: Encoding
@@ -138,6 +143,14 @@ items:
     content.vb: Public Overrides ReadOnly Property Encoding As Encoding
   overridden: System.IO.TextWriter.Encoding
   overload: VRBuilder.Unity.UnityDebugLogErrorWriter.Encoding*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Flush
   commentId: M:VRBuilder.Unity.UnityDebugLogErrorWriter.Flush
   id: Flush
@@ -163,9 +176,15 @@ items:
   example: []
   syntax:
     content: public override void Flush()
-    content.vb: Public Overrides Sub Flush()
+    content.vb: Public Overrides Sub Flush
   overridden: System.IO.TextWriter.Flush
   overload: VRBuilder.Unity.UnityDebugLogErrorWriter.Flush*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.String)
   commentId: M:VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.String)
   id: Write(System.String)
@@ -173,9 +192,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Write(string)
-  nameWithType: UnityDebugLogErrorWriter.Write(string)
-  fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(string)
+  name: Write(String)
+  nameWithType: UnityDebugLogErrorWriter.Write(String)
+  fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.String)
   type: Method
   source:
     remote:
@@ -197,9 +216,12 @@ items:
     content.vb: Public Overrides Sub Write(value As String)
   overridden: System.IO.TextWriter.Write(System.String)
   overload: VRBuilder.Unity.UnityDebugLogErrorWriter.Write*
-  nameWithType.vb: UnityDebugLogErrorWriter.Write(String)
-  fullName.vb: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(String)
-  name.vb: Write(String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char)
   commentId: M:VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char)
   id: Write(System.Char)
@@ -207,9 +229,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Write(char)
-  nameWithType: UnityDebugLogErrorWriter.Write(char)
-  fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(char)
+  name: Write(Char)
+  nameWithType: UnityDebugLogErrorWriter.Write(Char)
+  fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char)
   type: Method
   source:
     remote:
@@ -231,9 +253,12 @@ items:
     content.vb: Public Overrides Sub Write(value As Char)
   overridden: System.IO.TextWriter.Write(System.Char)
   overload: VRBuilder.Unity.UnityDebugLogErrorWriter.Write*
-  nameWithType.vb: UnityDebugLogErrorWriter.Write(Char)
-  fullName.vb: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(Char)
-  name.vb: Write(Char)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char[],System.Int32,System.Int32)
   commentId: M:VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char[],System.Int32,System.Int32)
   id: Write(System.Char[],System.Int32,System.Int32)
@@ -241,9 +266,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Write(char[], int, int)
-  nameWithType: UnityDebugLogErrorWriter.Write(char[], int, int)
-  fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(char[], int, int)
+  name: Write(Char[], Int32, Int32)
+  nameWithType: UnityDebugLogErrorWriter.Write(Char[], Int32, Int32)
+  fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char[], System.Int32, System.Int32)
   type: Method
   source:
     remote:
@@ -269,48 +294,32 @@ items:
     content.vb: Public Overrides Sub Write(value As Char(), index As Integer, count As Integer)
   overridden: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
   overload: VRBuilder.Unity.UnityDebugLogErrorWriter.Write*
-  nameWithType.vb: UnityDebugLogErrorWriter.Write(Char(), Integer, Integer)
-  fullName.vb: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(Char(), Integer, Integer)
-  name.vb: Write(Char(), Integer, Integer)
+  nameWithType.vb: UnityDebugLogErrorWriter.Write(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VRBuilder.Unity.UnityDebugLogErrorWriter.Write(System.Char(), System.Int32, System.Int32)
+  name.vb: Write(Char(), Int32, Int32)
 references:
 - uid: VRBuilder.Unity
   commentId: N:VRBuilder.Unity
-  href: VRBuilder.html
   name: VRBuilder.Unity
   nameWithType: VRBuilder.Unity
   fullName: VRBuilder.Unity
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Unity
-    name: Unity
-    href: VRBuilder.Unity.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Unity
-    name: Unity
-    href: VRBuilder.Unity.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.MarshalByRefObject
   commentId: T:System.MarshalByRefObject
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject
   name: MarshalByRefObject
   nameWithType: MarshalByRefObject
   fullName: System.MarshalByRefObject
@@ -318,7 +327,6 @@ references:
   commentId: T:System.IO.TextWriter
   parent: System.IO
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter
   name: TextWriter
   nameWithType: TextWriter
   fullName: System.IO.TextWriter
@@ -326,2017 +334,2264 @@ references:
   commentId: T:System.IDisposable
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.idisposable
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: System.IAsyncDisposable
-  commentId: T:System.IAsyncDisposable
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable
-  name: IAsyncDisposable
-  nameWithType: IAsyncDisposable
-  fullName: System.IAsyncDisposable
-- uid: System.IO.TextWriter.CoreNewLine
-  commentId: F:System.IO.TextWriter.CoreNewLine
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.corenewline
-  name: CoreNewLine
-  nameWithType: TextWriter.CoreNewLine
-  fullName: System.IO.TextWriter.CoreNewLine
 - uid: System.IO.TextWriter.Null
   commentId: F:System.IO.TextWriter.Null
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.null
   name: "Null"
   nameWithType: TextWriter.Null
   fullName: System.IO.TextWriter.Null
+- uid: System.IO.TextWriter.CoreNewLine
+  commentId: F:System.IO.TextWriter.CoreNewLine
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: CoreNewLine
+  nameWithType: TextWriter.CoreNewLine
+  fullName: System.IO.TextWriter.CoreNewLine
 - uid: System.IO.TextWriter.Close
   commentId: M:System.IO.TextWriter.Close
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.close
   name: Close()
   nameWithType: TextWriter.Close()
   fullName: System.IO.TextWriter.Close()
   spec.csharp:
   - uid: System.IO.TextWriter.Close
     name: Close
+    nameWithType: TextWriter.Close
+    fullName: System.IO.TextWriter.Close
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.close
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Close
     name: Close
+    nameWithType: TextWriter.Close
+    fullName: System.IO.TextWriter.Close
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.close
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Dispose(System.Boolean)
+  commentId: M:System.IO.TextWriter.Dispose(System.Boolean)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: TextWriter.Dispose(Boolean)
+  fullName: System.IO.TextWriter.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: System.IO.TextWriter.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: TextWriter.Dispose
+    fullName: System.IO.TextWriter.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: TextWriter.Dispose
+    fullName: System.IO.TextWriter.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.Dispose
   commentId: M:System.IO.TextWriter.Dispose
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose
   name: Dispose()
   nameWithType: TextWriter.Dispose()
   fullName: System.IO.TextWriter.Dispose()
   spec.csharp:
   - uid: System.IO.TextWriter.Dispose
     name: Dispose
+    nameWithType: TextWriter.Dispose
+    fullName: System.IO.TextWriter.Dispose
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Dispose
     name: Dispose
+    nameWithType: TextWriter.Dispose
+    fullName: System.IO.TextWriter.Dispose
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.IO.TextWriter.Dispose(System.Boolean)
-  commentId: M:System.IO.TextWriter.Dispose(System.Boolean)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose(system-boolean)
-  name: Dispose(bool)
-  nameWithType: TextWriter.Dispose(bool)
-  fullName: System.IO.TextWriter.Dispose(bool)
-  nameWithType.vb: TextWriter.Dispose(Boolean)
-  fullName.vb: System.IO.TextWriter.Dispose(Boolean)
-  name.vb: Dispose(Boolean)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Dispose(System.Boolean)
-    name: Dispose
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose(system-boolean)
-  - name: (
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Dispose(System.Boolean)
-    name: Dispose
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose(system-boolean)
-  - name: (
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-- uid: System.IO.TextWriter.FlushAsync
-  commentId: M:System.IO.TextWriter.FlushAsync
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync
-  name: FlushAsync()
-  nameWithType: TextWriter.FlushAsync()
-  fullName: System.IO.TextWriter.FlushAsync()
-  spec.csharp:
-  - uid: System.IO.TextWriter.FlushAsync
-    name: FlushAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.FlushAsync
-    name: FlushAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync
-  - name: (
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.Synchronized(System.IO.TextWriter)
   commentId: M:System.IO.TextWriter.Synchronized(System.IO.TextWriter)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized
   name: Synchronized(TextWriter)
   nameWithType: TextWriter.Synchronized(TextWriter)
   fullName: System.IO.TextWriter.Synchronized(System.IO.TextWriter)
   spec.csharp:
   - uid: System.IO.TextWriter.Synchronized(System.IO.TextWriter)
     name: Synchronized
+    nameWithType: TextWriter.Synchronized
+    fullName: System.IO.TextWriter.Synchronized
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.IO.TextWriter
     name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Synchronized(System.IO.TextWriter)
     name: Synchronized
+    nameWithType: TextWriter.Synchronized
+    fullName: System.IO.TextWriter.Synchronized
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.IO.TextWriter
     name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter
   - name: )
-- uid: System.IO.TextWriter.Write(System.Boolean)
-  commentId: M:System.IO.TextWriter.Write(System.Boolean)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-boolean)
-  name: Write(bool)
-  nameWithType: TextWriter.Write(bool)
-  fullName: System.IO.TextWriter.Write(bool)
-  nameWithType.vb: TextWriter.Write(Boolean)
-  fullName.vb: System.IO.TextWriter.Write(Boolean)
-  name.vb: Write(Boolean)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.Boolean)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-boolean)
-  - name: (
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.Boolean)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-boolean)
-  - name: (
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.Write(System.Char[])
   commentId: M:System.IO.TextWriter.Write(System.Char[])
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char())
-  name: Write(char[])
-  nameWithType: TextWriter.Write(char[])
-  fullName: System.IO.TextWriter.Write(char[])
+  name: Write(Char[])
+  nameWithType: TextWriter.Write(Char[])
+  fullName: System.IO.TextWriter.Write(System.Char[])
   nameWithType.vb: TextWriter.Write(Char())
-  fullName.vb: System.IO.TextWriter.Write(Char())
+  fullName.vb: System.IO.TextWriter.Write(System.Char())
   name.vb: Write(Char())
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Char[])
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char())
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
-    name: char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Char[])
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char())
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
-- uid: System.IO.TextWriter.Write(System.Decimal)
-  commentId: M:System.IO.TextWriter.Write(System.Decimal)
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.Boolean)
+  commentId: M:System.IO.TextWriter.Write(System.Boolean)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-decimal)
-  name: Write(decimal)
-  nameWithType: TextWriter.Write(decimal)
-  fullName: System.IO.TextWriter.Write(decimal)
-  nameWithType.vb: TextWriter.Write(Decimal)
-  fullName.vb: System.IO.TextWriter.Write(Decimal)
-  name.vb: Write(Decimal)
+  name: Write(Boolean)
+  nameWithType: TextWriter.Write(Boolean)
+  fullName: System.IO.TextWriter.Write(System.Boolean)
   spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.Decimal)
+  - uid: System.IO.TextWriter.Write(System.Boolean)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-decimal)
   - name: (
-  - uid: System.Decimal
-    name: decimal
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.decimal
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.Write(System.Decimal)
+  - uid: System.IO.TextWriter.Write(System.Boolean)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-decimal)
   - name: (
-  - uid: System.Decimal
-    name: Decimal
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.decimal
   - name: )
-- uid: System.IO.TextWriter.Write(System.Double)
-  commentId: M:System.IO.TextWriter.Write(System.Double)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-double)
-  name: Write(double)
-  nameWithType: TextWriter.Write(double)
-  fullName: System.IO.TextWriter.Write(double)
-  nameWithType.vb: TextWriter.Write(Double)
-  fullName.vb: System.IO.TextWriter.Write(Double)
-  name.vb: Write(Double)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.Double)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-double)
-  - name: (
-  - uid: System.Double
-    name: double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.Double)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-double)
-  - name: (
-  - uid: System.Double
-    name: Double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.Write(System.Int32)
   commentId: M:System.IO.TextWriter.Write(System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int32)
-  name: Write(int)
-  nameWithType: TextWriter.Write(int)
-  fullName: System.IO.TextWriter.Write(int)
-  nameWithType.vb: TextWriter.Write(Integer)
-  fullName.vb: System.IO.TextWriter.Write(Integer)
-  name.vb: Write(Integer)
+  name: Write(Int32)
+  nameWithType: TextWriter.Write(Int32)
+  fullName: System.IO.TextWriter.Write(System.Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Int32
-    name: int
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: System.IO.TextWriter.Write(System.Int64)
-  commentId: M:System.IO.TextWriter.Write(System.Int64)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int64)
-  name: Write(long)
-  nameWithType: TextWriter.Write(long)
-  fullName: System.IO.TextWriter.Write(long)
-  nameWithType.vb: TextWriter.Write(Long)
-  fullName.vb: System.IO.TextWriter.Write(Long)
-  name.vb: Write(Long)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.Int64)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int64)
-  - name: (
-  - uid: System.Int64
-    name: long
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int64
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.Int64)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int64)
-  - name: (
-  - uid: System.Int64
-    name: Long
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int64
-  - name: )
-- uid: System.IO.TextWriter.Write(System.Object)
-  commentId: M:System.IO.TextWriter.Write(System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-object)
-  name: Write(object)
-  nameWithType: TextWriter.Write(object)
-  fullName: System.IO.TextWriter.Write(object)
-  nameWithType.vb: TextWriter.Write(Object)
-  fullName.vb: System.IO.TextWriter.Write(Object)
-  name.vb: Write(Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.Write(System.Single)
-  commentId: M:System.IO.TextWriter.Write(System.Single)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-single)
-  name: Write(float)
-  nameWithType: TextWriter.Write(float)
-  fullName: System.IO.TextWriter.Write(float)
-  nameWithType.vb: TextWriter.Write(Single)
-  fullName.vb: System.IO.TextWriter.Write(Single)
-  name.vb: Write(Single)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.Single)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-single)
-  - name: (
-  - uid: System.Single
-    name: float
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.Single)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-single)
-  - name: (
-  - uid: System.Single
-    name: Single
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-- uid: System.IO.TextWriter.Write(System.String,System.Object)
-  commentId: M:System.IO.TextWriter.Write(System.String,System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object)
-  name: Write(string, object)
-  nameWithType: TextWriter.Write(string, object)
-  fullName: System.IO.TextWriter.Write(string, object)
-  nameWithType.vb: TextWriter.Write(String, Object)
-  fullName.vb: System.IO.TextWriter.Write(String, Object)
-  name.vb: Write(String, Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
-  commentId: M:System.IO.TextWriter.Write(System.String,System.Object,System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object)
-  name: Write(string, object, object)
-  nameWithType: TextWriter.Write(string, object, object)
-  fullName: System.IO.TextWriter.Write(string, object, object)
-  nameWithType.vb: TextWriter.Write(String, Object, Object)
-  fullName.vb: System.IO.TextWriter.Write(String, Object, Object)
-  name.vb: Write(String, Object, Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
-  commentId: M:System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object-system-object)
-  name: Write(string, object, object, object)
-  nameWithType: TextWriter.Write(string, object, object, object)
-  fullName: System.IO.TextWriter.Write(string, object, object, object)
-  nameWithType.vb: TextWriter.Write(String, Object, Object, Object)
-  fullName.vb: System.IO.TextWriter.Write(String, Object, Object, Object)
-  name.vb: Write(String, Object, Object, Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.Write(System.String,System.Object[])
-  commentId: M:System.IO.TextWriter.Write(System.String,System.Object[])
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object())
-  name: Write(string, params object[])
-  nameWithType: TextWriter.Write(string, params object[])
-  fullName: System.IO.TextWriter.Write(string, params object[])
-  nameWithType.vb: TextWriter.Write(String, ParamArray Object())
-  fullName.vb: System.IO.TextWriter.Write(String, ParamArray Object())
-  name.vb: Write(String, ParamArray Object())
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object[])
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object())
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - name: params
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: '['
-  - name: ']'
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.String,System.Object[])
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object())
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - name: ParamArray
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: (
-  - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.Write(System.UInt32)
   commentId: M:System.IO.TextWriter.Write(System.UInt32)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint32)
-  name: Write(uint)
-  nameWithType: TextWriter.Write(uint)
-  fullName: System.IO.TextWriter.Write(uint)
-  nameWithType.vb: TextWriter.Write(UInteger)
-  fullName.vb: System.IO.TextWriter.Write(UInteger)
-  name.vb: Write(UInteger)
+  name: Write(UInt32)
+  nameWithType: TextWriter.Write(UInt32)
+  fullName: System.IO.TextWriter.Write(System.UInt32)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.UInt32)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt32
-    name: uint
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.UInt32)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt32
-    name: UInteger
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint32
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.Int64)
+  commentId: M:System.IO.TextWriter.Write(System.Int64)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: Write(Int64)
+  nameWithType: TextWriter.Write(Int64)
+  fullName: System.IO.TextWriter.Write(System.Int64)
+  spec.csharp:
+  - uid: System.IO.TextWriter.Write(System.Int64)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.Write(System.Int64)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.Write(System.UInt64)
   commentId: M:System.IO.TextWriter.Write(System.UInt64)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint64)
-  name: Write(ulong)
-  nameWithType: TextWriter.Write(ulong)
-  fullName: System.IO.TextWriter.Write(ulong)
-  nameWithType.vb: TextWriter.Write(ULong)
-  fullName.vb: System.IO.TextWriter.Write(ULong)
-  name.vb: Write(ULong)
+  name: Write(UInt64)
+  nameWithType: TextWriter.Write(UInt64)
+  fullName: System.IO.TextWriter.Write(System.UInt64)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.UInt64)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint64)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt64
-    name: ulong
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.UInt64)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint64)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt64
-    name: ULong
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
   - name: )
-- uid: System.IO.TextWriter.WriteAsync(System.Char)
-  commentId: M:System.IO.TextWriter.WriteAsync(System.Char)
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.Single)
+  commentId: M:System.IO.TextWriter.Write(System.Single)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char)
-  name: WriteAsync(char)
-  nameWithType: TextWriter.WriteAsync(char)
-  fullName: System.IO.TextWriter.WriteAsync(char)
-  nameWithType.vb: TextWriter.WriteAsync(Char)
-  fullName.vb: System.IO.TextWriter.WriteAsync(Char)
-  name.vb: WriteAsync(Char)
+  name: Write(Single)
+  nameWithType: TextWriter.Write(Single)
+  fullName: System.IO.TextWriter.Write(System.Single)
   spec.csharp:
-  - uid: System.IO.TextWriter.WriteAsync(System.Char)
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Single)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char)
   - name: (
-  - uid: System.Char
-    name: char
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.WriteAsync(System.Char)
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Single)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char)
   - name: (
-  - uid: System.Char
-    name: Char
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
   - name: )
-- uid: System.IO.TextWriter.WriteAsync(System.Char[])
-  commentId: M:System.IO.TextWriter.WriteAsync(System.Char[])
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.Double)
+  commentId: M:System.IO.TextWriter.Write(System.Double)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char())
-  name: WriteAsync(char[])
-  nameWithType: TextWriter.WriteAsync(char[])
-  fullName: System.IO.TextWriter.WriteAsync(char[])
-  nameWithType.vb: TextWriter.WriteAsync(Char())
-  fullName.vb: System.IO.TextWriter.WriteAsync(Char())
-  name.vb: WriteAsync(Char())
+  name: Write(Double)
+  nameWithType: TextWriter.Write(Double)
+  fullName: System.IO.TextWriter.Write(System.Double)
   spec.csharp:
-  - uid: System.IO.TextWriter.WriteAsync(System.Char[])
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Double)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char())
   - name: (
-  - uid: System.Char
-    name: char
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.WriteAsync(System.Char[])
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Double)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char())
   - name: (
-  - uid: System.Char
-    name: Char
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
   - name: )
-  - name: )
-- uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
-  commentId: M:System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.Decimal)
+  commentId: M:System.IO.TextWriter.Write(System.Decimal)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char()-system-int32-system-int32)
-  name: WriteAsync(char[], int, int)
-  nameWithType: TextWriter.WriteAsync(char[], int, int)
-  fullName: System.IO.TextWriter.WriteAsync(char[], int, int)
-  nameWithType.vb: TextWriter.WriteAsync(Char(), Integer, Integer)
-  fullName.vb: System.IO.TextWriter.WriteAsync(Char(), Integer, Integer)
-  name.vb: WriteAsync(Char(), Integer, Integer)
+  name: Write(Decimal)
+  nameWithType: TextWriter.Write(Decimal)
+  fullName: System.IO.TextWriter.Write(System.Decimal)
   spec.csharp:
-  - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Decimal)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char()-system-int32-system-int32)
   - name: (
-  - uid: System.Char
-    name: char
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Decimal)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char()-system-int32-system-int32)
   - name: (
-  - uid: System.Char
-    name: Char
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
   - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-- uid: System.IO.TextWriter.WriteAsync(System.String)
-  commentId: M:System.IO.TextWriter.WriteAsync(System.String)
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.Object)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-string)
-  name: WriteAsync(string)
-  nameWithType: TextWriter.WriteAsync(string)
-  fullName: System.IO.TextWriter.WriteAsync(string)
-  nameWithType.vb: TextWriter.WriteAsync(String)
-  fullName.vb: System.IO.TextWriter.WriteAsync(String)
-  name.vb: WriteAsync(String)
+  name: Write(Object)
+  nameWithType: TextWriter.Write(Object)
+  fullName: System.IO.TextWriter.Write(System.Object)
   spec.csharp:
-  - uid: System.IO.TextWriter.WriteAsync(System.String)
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-string)
   - name: (
-  - uid: System.String
-    name: string
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.WriteAsync(System.String)
-    name: WriteAsync
+  - uid: System.IO.TextWriter.Write(System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-string)
   - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.String,System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: Write(String, Object)
+  nameWithType: TextWriter.Write(String, Object)
+  fullName: System.IO.TextWriter.Write(System.String, System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object,System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: Write(String, Object, Object)
+  nameWithType: TextWriter.Write(String, Object, Object)
+  fullName: System.IO.TextWriter.Write(System.String, System.Object, System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: Write(String, Object, Object, Object)
+  nameWithType: TextWriter.Write(String, Object, Object, Object)
+  fullName: System.IO.TextWriter.Write(System.String, System.Object, System.Object, System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.Write(System.String,System.Object[])
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object[])
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: Write(String, Object[])
+  nameWithType: TextWriter.Write(String, Object[])
+  fullName: System.IO.TextWriter.Write(System.String, System.Object[])
+  nameWithType.vb: TextWriter.Write(String, Object())
+  fullName.vb: System.IO.TextWriter.Write(System.String, System.Object())
+  name.vb: Write(String, Object())
+  spec.csharp:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object[])
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.Write(System.String,System.Object[])
+    name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine
   commentId: M:System.IO.TextWriter.WriteLine
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline
   name: WriteLine()
   nameWithType: TextWriter.WriteLine()
   fullName: System.IO.TextWriter.WriteLine()
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.IO.TextWriter.WriteLine(System.Boolean)
-  commentId: M:System.IO.TextWriter.WriteLine(System.Boolean)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-boolean)
-  name: WriteLine(bool)
-  nameWithType: TextWriter.WriteLine(bool)
-  fullName: System.IO.TextWriter.WriteLine(bool)
-  nameWithType.vb: TextWriter.WriteLine(Boolean)
-  fullName.vb: System.IO.TextWriter.WriteLine(Boolean)
-  name.vb: WriteLine(Boolean)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.Boolean)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-boolean)
-  - name: (
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Boolean)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-boolean)
-  - name: (
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Char)
   commentId: M:System.IO.TextWriter.WriteLine(System.Char)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char)
-  name: WriteLine(char)
-  nameWithType: TextWriter.WriteLine(char)
-  fullName: System.IO.TextWriter.WriteLine(char)
-  nameWithType.vb: TextWriter.WriteLine(Char)
-  fullName.vb: System.IO.TextWriter.WriteLine(Char)
-  name.vb: WriteLine(Char)
+  name: WriteLine(Char)
+  nameWithType: TextWriter.WriteLine(Char)
+  fullName: System.IO.TextWriter.WriteLine(System.Char)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Char)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
-    name: char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Char)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Char[])
   commentId: M:System.IO.TextWriter.WriteLine(System.Char[])
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char())
-  name: WriteLine(char[])
-  nameWithType: TextWriter.WriteLine(char[])
-  fullName: System.IO.TextWriter.WriteLine(char[])
+  name: WriteLine(Char[])
+  nameWithType: TextWriter.WriteLine(Char[])
+  fullName: System.IO.TextWriter.WriteLine(System.Char[])
   nameWithType.vb: TextWriter.WriteLine(Char())
-  fullName.vb: System.IO.TextWriter.WriteLine(Char())
+  fullName.vb: System.IO.TextWriter.WriteLine(System.Char())
   name.vb: WriteLine(Char())
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Char[])
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char())
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
-    name: char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Char[])
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char())
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
+  - name: ()
+    nameWithType: ()
+    fullName: ()
   - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
   commentId: M:System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char()-system-int32-system-int32)
-  name: WriteLine(char[], int, int)
-  nameWithType: TextWriter.WriteLine(char[], int, int)
-  fullName: System.IO.TextWriter.WriteLine(char[], int, int)
-  nameWithType.vb: TextWriter.WriteLine(Char(), Integer, Integer)
-  fullName.vb: System.IO.TextWriter.WriteLine(Char(), Integer, Integer)
-  name.vb: WriteLine(Char(), Integer, Integer)
+  name: WriteLine(Char[], Int32, Int32)
+  nameWithType: TextWriter.WriteLine(Char[], Int32, Int32)
+  fullName: System.IO.TextWriter.WriteLine(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.WriteLine(Char(), Int32, Int32)
+  fullName.vb: System.IO.TextWriter.WriteLine(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteLine(Char(), Int32, Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char()-system-int32-system-int32)
   - name: (
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char()-system-int32-system-int32)
-  - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
   - name: (
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: Integer
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
   - name: )
-- uid: System.IO.TextWriter.WriteLine(System.Decimal)
-  commentId: M:System.IO.TextWriter.WriteLine(System.Decimal)
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.Boolean)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Boolean)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-decimal)
-  name: WriteLine(decimal)
-  nameWithType: TextWriter.WriteLine(decimal)
-  fullName: System.IO.TextWriter.WriteLine(decimal)
-  nameWithType.vb: TextWriter.WriteLine(Decimal)
-  fullName.vb: System.IO.TextWriter.WriteLine(Decimal)
-  name.vb: WriteLine(Decimal)
+  name: WriteLine(Boolean)
+  nameWithType: TextWriter.WriteLine(Boolean)
+  fullName: System.IO.TextWriter.WriteLine(System.Boolean)
   spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.Decimal)
+  - uid: System.IO.TextWriter.WriteLine(System.Boolean)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-decimal)
   - name: (
-  - uid: System.Decimal
-    name: decimal
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.decimal
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Decimal)
+  - uid: System.IO.TextWriter.WriteLine(System.Boolean)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-decimal)
   - name: (
-  - uid: System.Decimal
-    name: Decimal
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.decimal
   - name: )
-- uid: System.IO.TextWriter.WriteLine(System.Double)
-  commentId: M:System.IO.TextWriter.WriteLine(System.Double)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-double)
-  name: WriteLine(double)
-  nameWithType: TextWriter.WriteLine(double)
-  fullName: System.IO.TextWriter.WriteLine(double)
-  nameWithType.vb: TextWriter.WriteLine(Double)
-  fullName.vb: System.IO.TextWriter.WriteLine(Double)
-  name.vb: WriteLine(Double)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.Double)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-double)
-  - name: (
-  - uid: System.Double
-    name: double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Double)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-double)
-  - name: (
-  - uid: System.Double
-    name: Double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Int32)
   commentId: M:System.IO.TextWriter.WriteLine(System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int32)
-  name: WriteLine(int)
-  nameWithType: TextWriter.WriteLine(int)
-  fullName: System.IO.TextWriter.WriteLine(int)
-  nameWithType.vb: TextWriter.WriteLine(Integer)
-  fullName.vb: System.IO.TextWriter.WriteLine(Integer)
-  name.vb: WriteLine(Integer)
+  name: WriteLine(Int32)
+  nameWithType: TextWriter.WriteLine(Int32)
+  fullName: System.IO.TextWriter.WriteLine(System.Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Int32
-    name: int
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: System.IO.TextWriter.WriteLine(System.Int64)
-  commentId: M:System.IO.TextWriter.WriteLine(System.Int64)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int64)
-  name: WriteLine(long)
-  nameWithType: TextWriter.WriteLine(long)
-  fullName: System.IO.TextWriter.WriteLine(long)
-  nameWithType.vb: TextWriter.WriteLine(Long)
-  fullName.vb: System.IO.TextWriter.WriteLine(Long)
-  name.vb: WriteLine(Long)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.Int64)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int64)
-  - name: (
-  - uid: System.Int64
-    name: long
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int64
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Int64)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int64)
-  - name: (
-  - uid: System.Int64
-    name: Long
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int64
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.Object)
-  commentId: M:System.IO.TextWriter.WriteLine(System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-object)
-  name: WriteLine(object)
-  nameWithType: TextWriter.WriteLine(object)
-  fullName: System.IO.TextWriter.WriteLine(object)
-  nameWithType.vb: TextWriter.WriteLine(Object)
-  fullName.vb: System.IO.TextWriter.WriteLine(Object)
-  name.vb: WriteLine(Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.Single)
-  commentId: M:System.IO.TextWriter.WriteLine(System.Single)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-single)
-  name: WriteLine(float)
-  nameWithType: TextWriter.WriteLine(float)
-  fullName: System.IO.TextWriter.WriteLine(float)
-  nameWithType.vb: TextWriter.WriteLine(Single)
-  fullName.vb: System.IO.TextWriter.WriteLine(Single)
-  name.vb: WriteLine(Single)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.Single)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-single)
-  - name: (
-  - uid: System.Single
-    name: float
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.Single)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-single)
-  - name: (
-  - uid: System.Single
-    name: Single
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.String)
-  commentId: M:System.IO.TextWriter.WriteLine(System.String)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string)
-  name: WriteLine(string)
-  nameWithType: TextWriter.WriteLine(string)
-  fullName: System.IO.TextWriter.WriteLine(string)
-  nameWithType.vb: TextWriter.WriteLine(String)
-  fullName.vb: System.IO.TextWriter.WriteLine(String)
-  name.vb: WriteLine(String)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.String)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.String)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
-  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object)
-  name: WriteLine(string, object)
-  nameWithType: TextWriter.WriteLine(string, object)
-  fullName: System.IO.TextWriter.WriteLine(string, object)
-  nameWithType.vb: TextWriter.WriteLine(String, Object)
-  fullName.vb: System.IO.TextWriter.WriteLine(String, Object)
-  name.vb: WriteLine(String, Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
-  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object)
-  name: WriteLine(string, object, object)
-  nameWithType: TextWriter.WriteLine(string, object, object)
-  fullName: System.IO.TextWriter.WriteLine(string, object, object)
-  nameWithType.vb: TextWriter.WriteLine(String, Object, Object)
-  fullName.vb: System.IO.TextWriter.WriteLine(String, Object, Object)
-  name.vb: WriteLine(String, Object, Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
-  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object-system-object)
-  name: WriteLine(string, object, object, object)
-  nameWithType: TextWriter.WriteLine(string, object, object, object)
-  fullName: System.IO.TextWriter.WriteLine(string, object, object, object)
-  nameWithType.vb: TextWriter.WriteLine(String, Object, Object, Object)
-  fullName.vb: System.IO.TextWriter.WriteLine(String, Object, Object, Object)
-  name.vb: WriteLine(String, Object, Object, Object)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object-system-object)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
-  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object[])
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object())
-  name: WriteLine(string, params object[])
-  nameWithType: TextWriter.WriteLine(string, params object[])
-  fullName: System.IO.TextWriter.WriteLine(string, params object[])
-  nameWithType.vb: TextWriter.WriteLine(String, ParamArray Object())
-  fullName.vb: System.IO.TextWriter.WriteLine(String, ParamArray Object())
-  name.vb: WriteLine(String, ParamArray Object())
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object())
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - name: params
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: '['
-  - name: ']'
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object())
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - name: ParamArray
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: (
-  - name: )
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.UInt32)
   commentId: M:System.IO.TextWriter.WriteLine(System.UInt32)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint32)
-  name: WriteLine(uint)
-  nameWithType: TextWriter.WriteLine(uint)
-  fullName: System.IO.TextWriter.WriteLine(uint)
-  nameWithType.vb: TextWriter.WriteLine(UInteger)
-  fullName.vb: System.IO.TextWriter.WriteLine(UInteger)
-  name.vb: WriteLine(UInteger)
+  name: WriteLine(UInt32)
+  nameWithType: TextWriter.WriteLine(UInt32)
+  fullName: System.IO.TextWriter.WriteLine(System.UInt32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.UInt32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt32
-    name: uint
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.UInt32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt32
-    name: UInteger
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint32
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.Int64)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Int64)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(Int64)
+  nameWithType: TextWriter.WriteLine(Int64)
+  fullName: System.IO.TextWriter.WriteLine(System.Int64)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.Int64)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.Int64)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.UInt64)
   commentId: M:System.IO.TextWriter.WriteLine(System.UInt64)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint64)
-  name: WriteLine(ulong)
-  nameWithType: TextWriter.WriteLine(ulong)
-  fullName: System.IO.TextWriter.WriteLine(ulong)
-  nameWithType.vb: TextWriter.WriteLine(ULong)
-  fullName.vb: System.IO.TextWriter.WriteLine(ULong)
-  name.vb: WriteLine(ULong)
+  name: WriteLine(UInt64)
+  nameWithType: TextWriter.WriteLine(UInt64)
+  fullName: System.IO.TextWriter.WriteLine(System.UInt64)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.UInt64)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint64)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt64
-    name: ulong
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.UInt64)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint64)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.UInt64
-    name: ULong
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.Single)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Single)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(Single)
+  nameWithType: TextWriter.WriteLine(Single)
+  fullName: System.IO.TextWriter.WriteLine(System.Single)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.Single)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.Single)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.Double)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Double)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(Double)
+  nameWithType: TextWriter.WriteLine(Double)
+  fullName: System.IO.TextWriter.WriteLine(System.Double)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.Double)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.Double)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.Decimal)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Decimal)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(Decimal)
+  nameWithType: TextWriter.WriteLine(Decimal)
+  fullName: System.IO.TextWriter.WriteLine(System.Decimal)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.Decimal)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.Decimal)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.String)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(String)
+  nameWithType: TextWriter.WriteLine(String)
+  fullName: System.IO.TextWriter.WriteLine(System.String)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.String)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.String)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(Object)
+  nameWithType: TextWriter.WriteLine(Object)
+  fullName: System.IO.TextWriter.WriteLine(System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(String, Object)
+  nameWithType: TextWriter.WriteLine(String, Object)
+  fullName: System.IO.TextWriter.WriteLine(System.String, System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(String, Object, Object)
+  nameWithType: TextWriter.WriteLine(String, Object, Object)
+  fullName: System.IO.TextWriter.WriteLine(System.String, System.Object, System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(String, Object, Object, Object)
+  nameWithType: TextWriter.WriteLine(String, Object, Object, Object)
+  fullName: System.IO.TextWriter.WriteLine(System.String, System.Object, System.Object, System.Object)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object[])
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLine(String, Object[])
+  nameWithType: TextWriter.WriteLine(String, Object[])
+  fullName: System.IO.TextWriter.WriteLine(System.String, System.Object[])
+  nameWithType.vb: TextWriter.WriteLine(String, Object())
+  fullName.vb: System.IO.TextWriter.WriteLine(System.String, System.Object())
+  name.vb: WriteLine(String, Object())
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
+    name: WriteLine
+    nameWithType: TextWriter.WriteLine
+    fullName: System.IO.TextWriter.WriteLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteAsync(System.Char)
+  commentId: M:System.IO.TextWriter.WriteAsync(System.Char)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteAsync(Char)
+  nameWithType: TextWriter.WriteAsync(Char)
+  fullName: System.IO.TextWriter.WriteAsync(System.Char)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteAsync(System.Char)
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteAsync(System.Char)
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteAsync(System.String)
+  commentId: M:System.IO.TextWriter.WriteAsync(System.String)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteAsync(String)
+  nameWithType: TextWriter.WriteAsync(String)
+  fullName: System.IO.TextWriter.WriteAsync(System.String)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteAsync(System.String)
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteAsync(System.String)
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteAsync(System.Char[])
+  commentId: M:System.IO.TextWriter.WriteAsync(System.Char[])
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteAsync(Char[])
+  nameWithType: TextWriter.WriteAsync(Char[])
+  fullName: System.IO.TextWriter.WriteAsync(System.Char[])
+  nameWithType.vb: TextWriter.WriteAsync(Char())
+  fullName.vb: System.IO.TextWriter.WriteAsync(System.Char())
+  name.vb: WriteAsync(Char())
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteAsync(System.Char[])
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteAsync(System.Char[])
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteAsync(Char[], Int32, Int32)
+  nameWithType: TextWriter.WriteAsync(Char[], Int32, Int32)
+  fullName: System.IO.TextWriter.WriteAsync(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.WriteAsync(Char(), Int32, Int32)
+  fullName.vb: System.IO.TextWriter.WriteAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteAsync(Char(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+    name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
+    fullName: System.IO.TextWriter.WriteAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLineAsync(System.Char)
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLineAsync(Char)
+  nameWithType: TextWriter.WriteLineAsync(Char)
+  fullName: System.IO.TextWriter.WriteLineAsync(System.Char)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLineAsync(System.String)
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.String)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLineAsync(String)
+  nameWithType: TextWriter.WriteLineAsync(String)
+  fullName: System.IO.TextWriter.WriteLineAsync(System.String)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.String)
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.String)
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char[])
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLineAsync(Char[])
+  nameWithType: TextWriter.WriteLineAsync(Char[])
+  fullName: System.IO.TextWriter.WriteLineAsync(System.Char[])
+  nameWithType.vb: TextWriter.WriteLineAsync(Char())
+  fullName.vb: System.IO.TextWriter.WriteLineAsync(System.Char())
+  name.vb: WriteLineAsync(Char())
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
+  parent: System.IO.TextWriter
+  isExternal: true
+  name: WriteLineAsync(Char[], Int32, Int32)
+  nameWithType: TextWriter.WriteLineAsync(Char[], Int32, Int32)
+  fullName: System.IO.TextWriter.WriteLineAsync(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.WriteLineAsync(Char(), Int32, Int32)
+  fullName.vb: System.IO.TextWriter.WriteLineAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteLineAsync(Char(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
+    name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.WriteLineAsync
   commentId: M:System.IO.TextWriter.WriteLineAsync
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync
   name: WriteLineAsync()
   nameWithType: TextWriter.WriteLineAsync()
   fullName: System.IO.TextWriter.WriteLineAsync()
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLineAsync
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLineAsync
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
+    fullName: System.IO.TextWriter.WriteLineAsync
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.IO.TextWriter.WriteLineAsync(System.Char)
-  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char)
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter.FlushAsync
+  commentId: M:System.IO.TextWriter.FlushAsync
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char)
-  name: WriteLineAsync(char)
-  nameWithType: TextWriter.WriteLineAsync(char)
-  fullName: System.IO.TextWriter.WriteLineAsync(char)
-  nameWithType.vb: TextWriter.WriteLineAsync(Char)
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(Char)
-  name.vb: WriteLineAsync(Char)
+  name: FlushAsync()
+  nameWithType: TextWriter.FlushAsync()
+  fullName: System.IO.TextWriter.FlushAsync()
   spec.csharp:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
-    name: WriteLineAsync
+  - uid: System.IO.TextWriter.FlushAsync
+    name: FlushAsync
+    nameWithType: TextWriter.FlushAsync
+    fullName: System.IO.TextWriter.FlushAsync
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char)
   - name: (
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
-    name: WriteLineAsync
+  - uid: System.IO.TextWriter.FlushAsync
+    name: FlushAsync
+    nameWithType: TextWriter.FlushAsync
+    fullName: System.IO.TextWriter.FlushAsync
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char)
   - name: (
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
-  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char[])
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char())
-  name: WriteLineAsync(char[])
-  nameWithType: TextWriter.WriteLineAsync(char[])
-  fullName: System.IO.TextWriter.WriteLineAsync(char[])
-  nameWithType.vb: TextWriter.WriteLineAsync(Char())
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(Char())
-  name.vb: WriteLineAsync(Char())
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char())
-  - name: (
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char())
-  - name: (
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
-  - name: )
-  - name: )
-- uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
-  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char()-system-int32-system-int32)
-  name: WriteLineAsync(char[], int, int)
-  nameWithType: TextWriter.WriteLineAsync(char[], int, int)
-  fullName: System.IO.TextWriter.WriteLineAsync(char[], int, int)
-  nameWithType.vb: TextWriter.WriteLineAsync(Char(), Integer, Integer)
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(Char(), Integer, Integer)
-  name.vb: WriteLineAsync(Char(), Integer, Integer)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char()-system-int32-system-int32)
-  - name: (
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char()-system-int32-system-int32)
-  - name: (
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-- uid: System.IO.TextWriter.WriteLineAsync(System.String)
-  commentId: M:System.IO.TextWriter.WriteLineAsync(System.String)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-string)
-  name: WriteLineAsync(string)
-  nameWithType: TextWriter.WriteLineAsync(string)
-  fullName: System.IO.TextWriter.WriteLineAsync(string)
-  nameWithType.vb: TextWriter.WriteLineAsync(String)
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(String)
-  name.vb: WriteLineAsync(String)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.String)
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-string)
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.String)
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-string)
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: System.IO.TextWriter.DisposeAsync
-  commentId: M:System.IO.TextWriter.DisposeAsync
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.disposeasync
-  name: DisposeAsync()
-  nameWithType: TextWriter.DisposeAsync()
-  fullName: System.IO.TextWriter.DisposeAsync()
-  spec.csharp:
-  - uid: System.IO.TextWriter.DisposeAsync
-    name: DisposeAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.disposeasync
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.DisposeAsync
-    name: DisposeAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.disposeasync
-  - name: (
-  - name: )
-- uid: System.IO.TextWriter.Write(System.ReadOnlySpan{System.Char})
-  commentId: M:System.IO.TextWriter.Write(System.ReadOnlySpan{System.Char})
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-readonlyspan((system-char)))
-  name: Write(ReadOnlySpan<char>)
-  nameWithType: TextWriter.Write(ReadOnlySpan<char>)
-  fullName: System.IO.TextWriter.Write(System.ReadOnlySpan<char>)
-  nameWithType.vb: TextWriter.Write(ReadOnlySpan(Of Char))
-  fullName.vb: System.IO.TextWriter.Write(System.ReadOnlySpan(Of Char))
-  name.vb: Write(ReadOnlySpan(Of Char))
-  spec.csharp:
-  - uid: System.IO.TextWriter.Write(System.ReadOnlySpan{System.Char})
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-readonlyspan((system-char)))
-  - name: (
-  - uid: System.ReadOnlySpan`1
-    name: ReadOnlySpan
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
-  - name: <
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '>'
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.Write(System.ReadOnlySpan{System.Char})
-    name: Write
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-readonlyspan((system-char)))
-  - name: (
-  - uid: System.ReadOnlySpan`1
-    name: ReadOnlySpan
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: )
-  - name: )
-- uid: System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  commentId: M:System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)
-  name: WriteAsync(ReadOnlyMemory<char>, CancellationToken)
-  nameWithType: TextWriter.WriteAsync(ReadOnlyMemory<char>, CancellationToken)
-  fullName: System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
-  nameWithType.vb: TextWriter.WriteAsync(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName.vb: System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
-  name.vb: WriteAsync(ReadOnlyMemory(Of Char), CancellationToken)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-    name: WriteAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)
-  - name: (
-  - uid: System.ReadOnlyMemory`1
-    name: ReadOnlyMemory
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
-  - name: <
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-    name: WriteAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)
-  - name: (
-  - uid: System.ReadOnlyMemory`1
-    name: ReadOnlyMemory
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  - name: )
-- uid: System.IO.TextWriter.WriteLine(System.ReadOnlySpan{System.Char})
-  commentId: M:System.IO.TextWriter.WriteLine(System.ReadOnlySpan{System.Char})
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-readonlyspan((system-char)))
-  name: WriteLine(ReadOnlySpan<char>)
-  nameWithType: TextWriter.WriteLine(ReadOnlySpan<char>)
-  fullName: System.IO.TextWriter.WriteLine(System.ReadOnlySpan<char>)
-  nameWithType.vb: TextWriter.WriteLine(ReadOnlySpan(Of Char))
-  fullName.vb: System.IO.TextWriter.WriteLine(System.ReadOnlySpan(Of Char))
-  name.vb: WriteLine(ReadOnlySpan(Of Char))
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLine(System.ReadOnlySpan{System.Char})
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-readonlyspan((system-char)))
-  - name: (
-  - uid: System.ReadOnlySpan`1
-    name: ReadOnlySpan
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
-  - name: <
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '>'
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLine(System.ReadOnlySpan{System.Char})
-    name: WriteLine
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-readonlyspan((system-char)))
-  - name: (
-  - uid: System.ReadOnlySpan`1
-    name: ReadOnlySpan
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: )
-  - name: )
-- uid: System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  commentId: M:System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  parent: System.IO.TextWriter
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)
-  name: WriteLineAsync(ReadOnlyMemory<char>, CancellationToken)
-  nameWithType: TextWriter.WriteLineAsync(ReadOnlyMemory<char>, CancellationToken)
-  fullName: System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
-  nameWithType.vb: TextWriter.WriteLineAsync(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
-  name.vb: WriteLineAsync(ReadOnlyMemory(Of Char), CancellationToken)
-  spec.csharp:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)
-  - name: (
-  - uid: System.ReadOnlyMemory`1
-    name: ReadOnlyMemory
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
-  - name: <
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  - name: )
-  spec.vb:
-  - uid: System.IO.TextWriter.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-    name: WriteLineAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)
-  - name: (
-  - uid: System.ReadOnlyMemory`1
-    name: ReadOnlyMemory
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.TextWriter.FormatProvider
   commentId: P:System.IO.TextWriter.FormatProvider
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.formatprovider
   name: FormatProvider
   nameWithType: TextWriter.FormatProvider
   fullName: System.IO.TextWriter.FormatProvider
@@ -2344,381 +2599,453 @@ references:
   commentId: P:System.IO.TextWriter.NewLine
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.newline
   name: NewLine
   nameWithType: TextWriter.NewLine
   fullName: System.IO.TextWriter.NewLine
-- uid: System.MarshalByRefObject.CreateObjRef(System.Type)
-  commentId: M:System.MarshalByRefObject.CreateObjRef(System.Type)
+- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
   parent: System.MarshalByRefObject
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref
-  name: CreateObjRef(Type)
-  nameWithType: MarshalByRefObject.CreateObjRef(Type)
-  fullName: System.MarshalByRefObject.CreateObjRef(System.Type)
+  name: MemberwiseClone(Boolean)
+  nameWithType: MarshalByRefObject.MemberwiseClone(Boolean)
+  fullName: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
   spec.csharp:
-  - uid: System.MarshalByRefObject.CreateObjRef(System.Type)
-    name: CreateObjRef
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    nameWithType: MarshalByRefObject.MemberwiseClone
+    fullName: System.MarshalByRefObject.MemberwiseClone
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref
   - name: (
-  - uid: System.Type
-    name: Type
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.MarshalByRefObject.CreateObjRef(System.Type)
-    name: CreateObjRef
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    nameWithType: MarshalByRefObject.MemberwiseClone
+    fullName: System.MarshalByRefObject.MemberwiseClone
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref
   - name: (
-  - uid: System.Type
-    name: Type
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.MarshalByRefObject.GetLifetimeService
   commentId: M:System.MarshalByRefObject.GetLifetimeService
   parent: System.MarshalByRefObject
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
   name: GetLifetimeService()
   nameWithType: MarshalByRefObject.GetLifetimeService()
   fullName: System.MarshalByRefObject.GetLifetimeService()
   spec.csharp:
   - uid: System.MarshalByRefObject.GetLifetimeService
     name: GetLifetimeService
+    nameWithType: MarshalByRefObject.GetLifetimeService
+    fullName: System.MarshalByRefObject.GetLifetimeService
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.MarshalByRefObject.GetLifetimeService
     name: GetLifetimeService
+    nameWithType: MarshalByRefObject.GetLifetimeService
+    fullName: System.MarshalByRefObject.GetLifetimeService
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.MarshalByRefObject.InitializeLifetimeService
   commentId: M:System.MarshalByRefObject.InitializeLifetimeService
   parent: System.MarshalByRefObject
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
   name: InitializeLifetimeService()
   nameWithType: MarshalByRefObject.InitializeLifetimeService()
   fullName: System.MarshalByRefObject.InitializeLifetimeService()
   spec.csharp:
   - uid: System.MarshalByRefObject.InitializeLifetimeService
     name: InitializeLifetimeService
+    nameWithType: MarshalByRefObject.InitializeLifetimeService
+    fullName: System.MarshalByRefObject.InitializeLifetimeService
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.MarshalByRefObject.InitializeLifetimeService
     name: InitializeLifetimeService
+    nameWithType: MarshalByRefObject.InitializeLifetimeService
+    fullName: System.MarshalByRefObject.InitializeLifetimeService
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
-  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.CreateObjRef(System.Type)
+  commentId: M:System.MarshalByRefObject.CreateObjRef(System.Type)
   parent: System.MarshalByRefObject
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
-  name: MemberwiseClone(bool)
-  nameWithType: MarshalByRefObject.MemberwiseClone(bool)
-  fullName: System.MarshalByRefObject.MemberwiseClone(bool)
-  nameWithType.vb: MarshalByRefObject.MemberwiseClone(Boolean)
-  fullName.vb: System.MarshalByRefObject.MemberwiseClone(Boolean)
-  name.vb: MemberwiseClone(Boolean)
+  name: CreateObjRef(Type)
+  nameWithType: MarshalByRefObject.CreateObjRef(Type)
+  fullName: System.MarshalByRefObject.CreateObjRef(System.Type)
   spec.csharp:
-  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
-    name: MemberwiseClone
+  - uid: System.MarshalByRefObject.CreateObjRef(System.Type)
+    name: CreateObjRef
+    nameWithType: MarshalByRefObject.CreateObjRef
+    fullName: System.MarshalByRefObject.CreateObjRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
   - name: (
-  - uid: System.Boolean
-    name: bool
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
-    name: MemberwiseClone
+  - uid: System.MarshalByRefObject.CreateObjRef(System.Type)
+    name: CreateObjRef
+    nameWithType: MarshalByRefObject.CreateObjRef
+    fullName: System.MarshalByRefObject.CreateObjRef
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
   - name: (
-  - uid: System.Boolean
-    name: Boolean
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: System.IO
   commentId: N:System.IO
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.IO
   nameWithType: System.IO
   fullName: System.IO
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.IO
-    name: IO
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.IO
-    name: IO
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io
 - uid: System.IO.TextWriter.Encoding
   commentId: P:System.IO.TextWriter.Encoding
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.encoding
   name: Encoding
   nameWithType: TextWriter.Encoding
   fullName: System.IO.TextWriter.Encoding
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Encoding*
   commentId: Overload:VRBuilder.Unity.UnityDebugLogErrorWriter.Encoding
-  href: VRBuilder.Unity.UnityDebugLogErrorWriter.html#VRBuilder_Unity_UnityDebugLogErrorWriter_Encoding
   name: Encoding
   nameWithType: UnityDebugLogErrorWriter.Encoding
   fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Encoding
@@ -2726,62 +3053,48 @@ references:
   commentId: T:System.Text.Encoding
   parent: System.Text
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.text.encoding
   name: Encoding
   nameWithType: Encoding
   fullName: System.Text.Encoding
 - uid: System.Text
   commentId: N:System.Text
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Text
   nameWithType: System.Text
   fullName: System.Text
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Text
-    name: Text
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Text
-    name: Text
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text
 - uid: System.IO.TextWriter.Flush
   commentId: M:System.IO.TextWriter.Flush
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.flush
   name: Flush()
   nameWithType: TextWriter.Flush()
   fullName: System.IO.TextWriter.Flush()
   spec.csharp:
   - uid: System.IO.TextWriter.Flush
     name: Flush
+    nameWithType: TextWriter.Flush
+    fullName: System.IO.TextWriter.Flush
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.flush
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Flush
     name: Flush
+    nameWithType: TextWriter.Flush
+    fullName: System.IO.TextWriter.Flush
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.flush
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Flush*
   commentId: Overload:VRBuilder.Unity.UnityDebugLogErrorWriter.Flush
-  href: VRBuilder.Unity.UnityDebugLogErrorWriter.html#VRBuilder_Unity_UnityDebugLogErrorWriter_Flush
   name: Flush
   nameWithType: UnityDebugLogErrorWriter.Flush
   fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Flush
@@ -2789,38 +3102,45 @@ references:
   commentId: M:System.IO.TextWriter.Write(System.String)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string)
-  name: Write(string)
-  nameWithType: TextWriter.Write(string)
-  fullName: System.IO.TextWriter.Write(string)
-  nameWithType.vb: TextWriter.Write(String)
-  fullName.vb: System.IO.TextWriter.Write(String)
-  name.vb: Write(String)
+  name: Write(String)
+  nameWithType: TextWriter.Write(String)
+  fullName: System.IO.TextWriter.Write(System.String)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.String)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
-    name: string
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.String)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Unity.UnityDebugLogErrorWriter.Write*
   commentId: Overload:VRBuilder.Unity.UnityDebugLogErrorWriter.Write
-  href: VRBuilder.Unity.UnityDebugLogErrorWriter.html#VRBuilder_Unity_UnityDebugLogErrorWriter_Write_System_String_
   name: Write
   nameWithType: UnityDebugLogErrorWriter.Write
   fullName: VRBuilder.Unity.UnityDebugLogErrorWriter.Write
@@ -2828,149 +3148,169 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System.IO.TextWriter.Write(System.Char)
   commentId: M:System.IO.TextWriter.Write(System.Char)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char)
-  name: Write(char)
-  nameWithType: TextWriter.Write(char)
-  fullName: System.IO.TextWriter.Write(char)
-  nameWithType.vb: TextWriter.Write(Char)
-  fullName.vb: System.IO.TextWriter.Write(Char)
-  name.vb: Write(Char)
+  name: Write(Char)
+  nameWithType: TextWriter.Write(Char)
+  fullName: System.IO.TextWriter.Write(System.Char)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Char)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
-    name: char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Char)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Char
   commentId: T:System.Char
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.char
-  name: char
-  nameWithType: char
-  fullName: char
-  nameWithType.vb: Char
-  fullName.vb: Char
-  name.vb: Char
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
 - uid: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
   commentId: M:System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char()-system-int32-system-int32)
-  name: Write(char[], int, int)
-  nameWithType: TextWriter.Write(char[], int, int)
-  fullName: System.IO.TextWriter.Write(char[], int, int)
-  nameWithType.vb: TextWriter.Write(Char(), Integer, Integer)
-  fullName.vb: System.IO.TextWriter.Write(Char(), Integer, Integer)
-  name.vb: Write(Char(), Integer, Integer)
+  name: Write(Char[], Int32, Int32)
+  nameWithType: TextWriter.Write(Char[], Int32, Int32)
+  fullName: System.IO.TextWriter.Write(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.Write(Char(), Int32, Int32)
+  fullName.vb: System.IO.TextWriter.Write(System.Char(), System.Int32, System.Int32)
+  name.vb: Write(Char(), Int32, Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char()-system-int32-system-int32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
-    name: char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
-  - name: ','
-  - name: " "
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
-    name: int
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
-    name: int
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
+    fullName: System.IO.TextWriter.Write
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char()-system-int32-system-int32)
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
-  - name: )
-  - name: ','
-  - name: " "
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: System.Int32
-    name: Integer
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Char[]
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.char
-  name: char[]
-  nameWithType: char[]
-  fullName: char[]
+  name: Char[]
+  nameWithType: Char[]
+  fullName: System.Char[]
   nameWithType.vb: Char()
-  fullName.vb: Char()
+  fullName.vb: System.Char()
   name.vb: Char()
   spec.csharp:
   - uid: System.Char
-    name: char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
   - uid: System.Char
     name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: (
-  - name: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

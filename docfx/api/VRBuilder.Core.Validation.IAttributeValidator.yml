@@ -25,11 +25,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Validation
-  summary: Can be used to validate variables in any EntityData.
+  summary: "\nCan be used to validate variables in any EntityData.\n"
   example: []
   syntax:
     content: public interface IAttributeValidator
     content.vb: Public Interface IAttributeValidator
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.Validation.IAttributeValidator.ErrorLevel
   commentId: P:VRBuilder.Core.Validation.IAttributeValidator.ErrorLevel
   id: ErrorLevel
@@ -52,7 +58,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Validation
-  summary: ValidationState which will be used if the validation fails.
+  summary: "\nValidationState which will be used if the validation fails.\n"
   example: []
   syntax:
     content: ValidationErrorLevel ErrorLevel { get; }
@@ -61,6 +67,10 @@ items:
       type: VRBuilder.Core.Validation.ValidationErrorLevel
     content.vb: ReadOnly Property ErrorLevel As ValidationErrorLevel
   overload: VRBuilder.Core.Validation.IAttributeValidator.ErrorLevel*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.Validation.IAttributeValidator.Validate(System.Object)
   commentId: M:VRBuilder.Core.Validation.IAttributeValidator.Validate(System.Object)
   id: Validate(System.Object)
@@ -68,9 +78,9 @@ items:
   langs:
   - csharp
   - vb
-  name: Validate(object)
-  nameWithType: IAttributeValidator.Validate(object)
-  fullName: VRBuilder.Core.Validation.IAttributeValidator.Validate(object)
+  name: Validate(Object)
+  nameWithType: IAttributeValidator.Validate(Object)
+  fullName: VRBuilder.Core.Validation.IAttributeValidator.Validate(System.Object)
   type: Method
   source:
     remote:
@@ -83,7 +93,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Validation
-  summary: Runs the validation and returns true if there is a problem.
+  summary: "\nRuns the validation and returns true if there is a problem.\n"
   example: []
   syntax:
     content: List<ReportEntry> Validate(object value)
@@ -96,56 +106,25 @@ items:
       description: Returns a list of report entries.
     content.vb: Function Validate(value As Object) As List(Of ReportEntry)
   overload: VRBuilder.Core.Validation.IAttributeValidator.Validate*
-  nameWithType.vb: IAttributeValidator.Validate(Object)
-  fullName.vb: VRBuilder.Core.Validation.IAttributeValidator.Validate(Object)
-  name.vb: Validate(Object)
 references:
 - uid: VRBuilder.Core.Validation
   commentId: N:VRBuilder.Core.Validation
-  href: VRBuilder.html
   name: VRBuilder.Core.Validation
   nameWithType: VRBuilder.Core.Validation
   fullName: VRBuilder.Core.Validation
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Validation
-    name: Validation
-    href: VRBuilder.Core.Validation.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Validation
-    name: Validation
-    href: VRBuilder.Core.Validation.html
 - uid: VRBuilder.Core.Validation.IAttributeValidator.ErrorLevel*
   commentId: Overload:VRBuilder.Core.Validation.IAttributeValidator.ErrorLevel
-  href: VRBuilder.Core.Validation.IAttributeValidator.html#VRBuilder_Core_Validation_IAttributeValidator_ErrorLevel
   name: ErrorLevel
   nameWithType: IAttributeValidator.ErrorLevel
   fullName: VRBuilder.Core.Validation.IAttributeValidator.ErrorLevel
 - uid: VRBuilder.Core.Validation.ValidationErrorLevel
   commentId: T:VRBuilder.Core.Validation.ValidationErrorLevel
   parent: VRBuilder.Core.Validation
-  href: VRBuilder.Core.Validation.ValidationErrorLevel.html
   name: ValidationErrorLevel
   nameWithType: ValidationErrorLevel
   fullName: VRBuilder.Core.Validation.ValidationErrorLevel
 - uid: VRBuilder.Core.Validation.IAttributeValidator.Validate*
   commentId: Overload:VRBuilder.Core.Validation.IAttributeValidator.Validate
-  href: VRBuilder.Core.Validation.IAttributeValidator.html#VRBuilder_Core_Validation_IAttributeValidator_Validate_System_Object_
   name: Validate
   nameWithType: IAttributeValidator.Validate
   fullName: VRBuilder.Core.Validation.IAttributeValidator.Validate
@@ -153,18 +132,13 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Collections.Generic.List{VRBuilder.Core.Validation.ReportEntry}
   commentId: T:System.Collections.Generic.List{VRBuilder.Core.Validation.ReportEntry}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<ReportEntry>
   nameWithType: List<ReportEntry>
   fullName: System.Collections.Generic.List<VRBuilder.Core.Validation.ReportEntry>
@@ -174,36 +148,44 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Validation.ReportEntry
     name: ReportEntry
-    href: VRBuilder.Core.Validation.ReportEntry.html
+    nameWithType: ReportEntry
+    fullName: VRBuilder.Core.Validation.ReportEntry
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Validation.ReportEntry
     name: ReportEntry
-    href: VRBuilder.Core.Validation.ReportEntry.html
+    nameWithType: ReportEntry
+    fullName: VRBuilder.Core.Validation.ReportEntry
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   name: List<T>
   nameWithType: List<T>
   fullName: System.Collections.Generic.List<T>
@@ -213,55 +195,36 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
     name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

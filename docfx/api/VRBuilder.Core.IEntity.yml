@@ -30,16 +30,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: >-
-    The basic interface for all components of a process: behaviors, conditions, transitions, and so on.
-
-    Do not implement this interface directly.
-
-    Use Behaviors.Behavior or Conditions.Condition abstract classes instead.
+  summary: "\nThe basic interface for all components of a process: behaviors, conditions, transitions, and so on.\nDo not implement this interface directly.\nUse <see cref=\"!:Behaviors.Behavior\"></see> or <see cref=\"!:Conditions.Condition\"></see> abstract classes instead.\n"
   example: []
   syntax:
     content: public interface IEntity
     content.vb: Public Interface IEntity
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.IEntity.LifeCycle
   commentId: P:VRBuilder.Core.IEntity.LifeCycle
   id: LifeCycle
@@ -62,7 +63,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The entity's life cycle.
+  summary: "\nThe entity&apos;s life cycle.\n"
   example: []
   syntax:
     content: ILifeCycle LifeCycle { get; }
@@ -71,6 +72,10 @@ items:
       type: VRBuilder.Core.ILifeCycle
     content.vb: ReadOnly Property LifeCycle As ILifeCycle
   overload: VRBuilder.Core.IEntity.LifeCycle*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Core.IEntity.GetActivatingProcess
   commentId: M:VRBuilder.Core.IEntity.GetActivatingProcess
   id: GetActivatingProcess
@@ -93,13 +98,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Returns a new instance of a process for the Activating <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: IStageProcess GetActivatingProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Function GetActivatingProcess() As IStageProcess
+    content.vb: Function GetActivatingProcess As IStageProcess
   overload: VRBuilder.Core.IEntity.GetActivatingProcess*
 - uid: VRBuilder.Core.IEntity.GetActiveProcess
   commentId: M:VRBuilder.Core.IEntity.GetActiveProcess
@@ -123,13 +128,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Returns a new instance of a process for the Active <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: IStageProcess GetActiveProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Function GetActiveProcess() As IStageProcess
+    content.vb: Function GetActiveProcess As IStageProcess
   overload: VRBuilder.Core.IEntity.GetActiveProcess*
 - uid: VRBuilder.Core.IEntity.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.IEntity.GetDeactivatingProcess
@@ -153,13 +158,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Returns a new instance of a process for the Deactivating <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: IStageProcess GetDeactivatingProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Function GetDeactivatingProcess() As IStageProcess
+    content.vb: Function GetDeactivatingProcess As IStageProcess
   overload: VRBuilder.Core.IEntity.GetDeactivatingProcess*
 - uid: VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.IEntity.Configure(VRBuilder.Core.Configuration.Modes.IMode)
@@ -183,7 +188,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Configures the entity according to the given <code class="paramref">mode</code>.
+  summary: "\nConfigures the entity according to the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">mode</code>.\n"
   example: []
   syntax:
     content: void Configure(IMode mode)
@@ -214,11 +219,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Called every frame during the Unity's update.
+  summary: "\nCalled every frame during the Unity&apos;s update.\n"
   example: []
   syntax:
     content: void Update()
-    content.vb: Sub Update()
+    content.vb: Sub Update
   overload: VRBuilder.Core.IEntity.Update*
 - uid: VRBuilder.Core.IEntity.Parent
   commentId: P:VRBuilder.Core.IEntity.Parent
@@ -242,7 +247,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Entity parent to this entity.
+  summary: "\nEntity parent to this entity.\n"
   example: []
   syntax:
     content: IEntity Parent { get; set; }
@@ -251,141 +256,82 @@ items:
       type: VRBuilder.Core.IEntity
     content.vb: Property Parent As IEntity
   overload: VRBuilder.Core.IEntity.Parent*
+  modifiers.csharp:
+  - get
+  - set
 references:
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.IEntity.LifeCycle*
   commentId: Overload:VRBuilder.Core.IEntity.LifeCycle
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_LifeCycle
   name: LifeCycle
   nameWithType: IEntity.LifeCycle
   fullName: VRBuilder.Core.IEntity.LifeCycle
 - uid: VRBuilder.Core.ILifeCycle
   commentId: T:VRBuilder.Core.ILifeCycle
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ILifeCycle.html
   name: ILifeCycle
   nameWithType: ILifeCycle
   fullName: VRBuilder.Core.ILifeCycle
 - uid: VRBuilder.Core.Stage
   commentId: T:VRBuilder.Core.Stage
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Stage.html
   name: Stage
   nameWithType: Stage
   fullName: VRBuilder.Core.Stage
 - uid: VRBuilder.Core.IEntity.GetActivatingProcess*
   commentId: Overload:VRBuilder.Core.IEntity.GetActivatingProcess
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActivatingProcess
   name: GetActivatingProcess
   nameWithType: IEntity.GetActivatingProcess
   fullName: VRBuilder.Core.IEntity.GetActivatingProcess
 - uid: VRBuilder.Core.IStageProcess
   commentId: T:VRBuilder.Core.IStageProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStageProcess.html
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
 - uid: VRBuilder.Core.IEntity.GetActiveProcess*
   commentId: Overload:VRBuilder.Core.IEntity.GetActiveProcess
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetActiveProcess
   name: GetActiveProcess
   nameWithType: IEntity.GetActiveProcess
   fullName: VRBuilder.Core.IEntity.GetActiveProcess
 - uid: VRBuilder.Core.IEntity.GetDeactivatingProcess*
   commentId: Overload:VRBuilder.Core.IEntity.GetDeactivatingProcess
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_GetDeactivatingProcess
   name: GetDeactivatingProcess
   nameWithType: IEntity.GetDeactivatingProcess
   fullName: VRBuilder.Core.IEntity.GetDeactivatingProcess
 - uid: VRBuilder.Core.IEntity.Configure*
   commentId: Overload:VRBuilder.Core.IEntity.Configure
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure
   nameWithType: IEntity.Configure
   fullName: VRBuilder.Core.IEntity.Configure
 - uid: VRBuilder.Core.Configuration.Modes.IMode
   commentId: T:VRBuilder.Core.Configuration.Modes.IMode
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IMode.html
   name: IMode
   nameWithType: IMode
   fullName: VRBuilder.Core.Configuration.Modes.IMode
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: VRBuilder.Core.IEntity.Update*
   commentId: Overload:VRBuilder.Core.IEntity.Update
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Update
   name: Update
   nameWithType: IEntity.Update
   fullName: VRBuilder.Core.IEntity.Update
 - uid: VRBuilder.Core.IEntity.Parent*
   commentId: Overload:VRBuilder.Core.IEntity.Parent
-  href: VRBuilder.Core.IEntity.html#VRBuilder_Core_IEntity_Parent
   name: Parent
   nameWithType: IEntity.Parent
   fullName: VRBuilder.Core.IEntity.Parent
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity

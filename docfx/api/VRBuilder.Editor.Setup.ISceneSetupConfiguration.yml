@@ -31,11 +31,17 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Defines the configuration for a particular scene setup.
+  summary: "\nDefines the configuration for a particular scene setup.\n"
   example: []
   syntax:
     content: public interface ISceneSetupConfiguration
     content.vb: Public Interface ISceneSetupConfiguration
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Priority
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.Priority
   id: Priority
@@ -58,7 +64,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Priority of this configuration.
+  summary: "\nPriority of this configuration.\n"
   example: []
   syntax:
     content: int Priority { get; }
@@ -67,6 +73,10 @@ items:
       type: System.Int32
     content.vb: ReadOnly Property Priority As Integer
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Priority*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Name
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.Name
   id: Name
@@ -89,7 +99,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Display name of the configuration.
+  summary: "\nDisplay name of the configuration.\n"
   example: []
   syntax:
     content: string Name { get; }
@@ -98,6 +108,10 @@ items:
       type: System.String
     content.vb: ReadOnly Property Name As String
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Name*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Description
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.Description
   id: Description
@@ -120,7 +134,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Detailed description of the configuration.
+  summary: "\nDetailed description of the configuration.\n"
   example: []
   syntax:
     content: string Description { get; }
@@ -129,6 +143,10 @@ items:
       type: System.String
     content.vb: ReadOnly Property Description As String
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Description*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultProcessController
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultProcessController
   id: DefaultProcessController
@@ -151,7 +169,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Default process controller to use in this configuration.
+  summary: "\nDefault process controller to use in this configuration.\n"
   example: []
   syntax:
     content: string DefaultProcessController { get; }
@@ -160,6 +178,10 @@ items:
       type: System.String
     content.vb: ReadOnly Property DefaultProcessController As String
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultProcessController*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultConfettiPrefab
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultConfettiPrefab
   id: DefaultConfettiPrefab
@@ -182,7 +204,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Default resources prefab to use for Confetti behavior.
+  summary: "\nDefault resources prefab to use for Confetti behavior.\n"
   example: []
   syntax:
     content: string DefaultConfettiPrefab { get; }
@@ -191,6 +213,10 @@ items:
       type: System.String
     content.vb: ReadOnly Property DefaultConfettiPrefab As String
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultConfettiPrefab*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.RuntimeConfigurationName
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.RuntimeConfigurationName
   id: RuntimeConfigurationName
@@ -213,7 +239,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Name of the runtime configuration to use.
+  summary: "\nName of the runtime configuration to use.\n"
   example: []
   syntax:
     content: string RuntimeConfigurationName { get; }
@@ -222,6 +248,10 @@ items:
       type: System.String
     content.vb: ReadOnly Property RuntimeConfigurationName As String
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.RuntimeConfigurationName*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.AllowedExtensionAssemblies
   commentId: P:VRBuilder.Editor.Setup.ISceneSetupConfiguration.AllowedExtensionAssemblies
   id: AllowedExtensionAssemblies
@@ -244,7 +274,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Returns the names of the assemblies which contain allowed extensions.
+  summary: "\nReturns the names of the assemblies which contain allowed extensions.\n"
   example: []
   syntax:
     content: IEnumerable<string> AllowedExtensionAssemblies { get; }
@@ -253,6 +283,10 @@ items:
       type: System.Collections.Generic.IEnumerable{System.String}
     content.vb: ReadOnly Property AllowedExtensionAssemblies As IEnumerable(Of String)
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.AllowedExtensionAssemblies*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.GetSetupNames
   commentId: M:VRBuilder.Editor.Setup.ISceneSetupConfiguration.GetSetupNames
   id: GetSetupNames
@@ -275,48 +309,22 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Setup
-  summary: Gets the required scene setup actions for this configuration.
+  summary: "\nGets the required scene setup actions for this configuration.\n"
   example: []
   syntax:
     content: IEnumerable<string> GetSetupNames()
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-    content.vb: Function GetSetupNames() As IEnumerable(Of String)
+    content.vb: Function GetSetupNames As IEnumerable(Of String)
   overload: VRBuilder.Editor.Setup.ISceneSetupConfiguration.GetSetupNames*
 references:
 - uid: VRBuilder.Editor.Setup
   commentId: N:VRBuilder.Editor.Setup
-  href: VRBuilder.html
   name: VRBuilder.Editor.Setup
   nameWithType: VRBuilder.Editor.Setup
   fullName: VRBuilder.Editor.Setup
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.Setup
-    name: Setup
-    href: VRBuilder.Editor.Setup.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.Setup
-    name: Setup
-    href: VRBuilder.Editor.Setup.html
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Priority*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.Priority
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_Priority
   name: Priority
   nameWithType: ISceneSetupConfiguration.Priority
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Priority
@@ -324,23 +332,17 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Name*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.Name
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_Name
   name: Name
   nameWithType: ISceneSetupConfiguration.Name
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Name
@@ -348,40 +350,31 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Description*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.Description
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_Description
   name: Description
   nameWithType: ISceneSetupConfiguration.Description
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.Description
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultProcessController*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultProcessController
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_DefaultProcessController
   name: DefaultProcessController
   nameWithType: ISceneSetupConfiguration.DefaultProcessController
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultProcessController
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultConfettiPrefab*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultConfettiPrefab
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_DefaultConfettiPrefab
   name: DefaultConfettiPrefab
   nameWithType: ISceneSetupConfiguration.DefaultConfettiPrefab
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.DefaultConfettiPrefab
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.RuntimeConfigurationName*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.RuntimeConfigurationName
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_RuntimeConfigurationName
   name: RuntimeConfigurationName
   nameWithType: ISceneSetupConfiguration.RuntimeConfigurationName
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.RuntimeConfigurationName
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.AllowedExtensionAssemblies*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.AllowedExtensionAssemblies
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_AllowedExtensionAssemblies
   name: AllowedExtensionAssemblies
   nameWithType: ISceneSetupConfiguration.AllowedExtensionAssemblies
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.AllowedExtensionAssemblies
@@ -389,41 +382,49 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{System.String}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  name: IEnumerable<string>
-  nameWithType: IEnumerable<string>
-  fullName: System.Collections.Generic.IEnumerable<string>
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
   nameWithType.vb: IEnumerable(Of String)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
   name.vb: IEnumerable(Of String)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.String
-    name: string
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -433,61 +434,41 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Editor.Setup.ISceneSetupConfiguration.GetSetupNames*
   commentId: Overload:VRBuilder.Editor.Setup.ISceneSetupConfiguration.GetSetupNames
-  href: VRBuilder.Editor.Setup.ISceneSetupConfiguration.html#VRBuilder_Editor_Setup_ISceneSetupConfiguration_GetSetupNames
   name: GetSetupNames
   nameWithType: ISceneSetupConfiguration.GetSetupNames
   fullName: VRBuilder.Editor.Setup.ISceneSetupConfiguration.GetSetupNames

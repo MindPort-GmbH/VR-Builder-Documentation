@@ -25,11 +25,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The interface for a step's data.
+  summary: "\nThe interface for a step&apos;s data.\n"
   example: []
   syntax:
     content: 'public interface IStepData : IRenameableData, INamedData, IDescribedData, IEntitySequenceDataWithMode<IStepChild>, IEntitySequenceData<IStepChild>, IEntityCollectionData<IStepChild>, IEntityCollectionData, IEntitySequenceData, IModeData, IData'
-    content.vb: Public Interface IStepData Inherits IRenameableData, INamedData, IDescribedData, IEntitySequenceDataWithMode(Of IStepChild), IEntitySequenceData(Of IStepChild), IEntityCollectionData(Of IStepChild), IEntityCollectionData, IEntitySequenceData, IModeData, IData
+    content.vb: >-
+      Public Interface IStepData
+
+          Inherits IRenameableData, IDescribedData, IEntitySequenceDataWithMode(Of IStepChild)
   inheritedMembers:
   - VRBuilder.Core.IRenameableData.SetName(System.String)
   - VRBuilder.Core.INamedData.Name
@@ -38,6 +41,12 @@ items:
   - VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}.GetChildren
   - VRBuilder.Core.Configuration.Modes.IModeData.Mode
   - VRBuilder.Core.IData.Metadata
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: VRBuilder.Core.IStepData.Behaviors
   commentId: P:VRBuilder.Core.IStepData.Behaviors
   id: Behaviors
@@ -60,7 +69,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The list of the step's behaviors.
+  summary: "\nThe list of the step&apos;s behaviors.\n"
   example: []
   syntax:
     content: IBehaviorCollection Behaviors { get; set; }
@@ -69,6 +78,9 @@ items:
       type: VRBuilder.Core.IBehaviorCollection
     content.vb: Property Behaviors As IBehaviorCollection
   overload: VRBuilder.Core.IStepData.Behaviors*
+  modifiers.csharp:
+  - get
+  - set
 - uid: VRBuilder.Core.IStepData.Transitions
   commentId: P:VRBuilder.Core.IStepData.Transitions
   id: Transitions
@@ -91,7 +103,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The list of the step's transitions.
+  summary: "\nThe list of the step&apos;s transitions.\n"
   example: []
   syntax:
     content: ITransitionCollection Transitions { get; set; }
@@ -100,71 +112,63 @@ items:
       type: VRBuilder.Core.ITransitionCollection
     content.vb: Property Transitions As ITransitionCollection
   overload: VRBuilder.Core.IStepData.Transitions*
+  modifiers.csharp:
+  - get
+  - set
 references:
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.IRenameableData.SetName(System.String)
   commentId: M:VRBuilder.Core.IRenameableData.SetName(System.String)
   parent: VRBuilder.Core.IRenameableData
   isExternal: true
-  href: VRBuilder.Core.IRenameableData.html#VRBuilder_Core_IRenameableData_SetName_System_String_
-  name: SetName(string)
-  nameWithType: IRenameableData.SetName(string)
-  fullName: VRBuilder.Core.IRenameableData.SetName(string)
-  nameWithType.vb: IRenameableData.SetName(String)
-  fullName.vb: VRBuilder.Core.IRenameableData.SetName(String)
-  name.vb: SetName(String)
+  name: SetName(String)
+  nameWithType: IRenameableData.SetName(String)
+  fullName: VRBuilder.Core.IRenameableData.SetName(System.String)
   spec.csharp:
   - uid: VRBuilder.Core.IRenameableData.SetName(System.String)
     name: SetName
-    href: VRBuilder.Core.IRenameableData.html#VRBuilder_Core_IRenameableData_SetName_System_String_
+    nameWithType: IRenameableData.SetName
+    fullName: VRBuilder.Core.IRenameableData.SetName
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
-    name: string
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.IRenameableData.SetName(System.String)
     name: SetName
-    href: VRBuilder.Core.IRenameableData.html#VRBuilder_Core_IRenameableData_SetName_System_String_
+    nameWithType: IRenameableData.SetName
+    fullName: VRBuilder.Core.IRenameableData.SetName
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.INamedData.Name
   commentId: P:VRBuilder.Core.INamedData.Name
   parent: VRBuilder.Core.INamedData
-  href: VRBuilder.Core.INamedData.html#VRBuilder_Core_INamedData_Name
   name: Name
   nameWithType: INamedData.Name
   fullName: VRBuilder.Core.INamedData.Name
 - uid: VRBuilder.Core.IDescribedData.Description
   commentId: P:VRBuilder.Core.IDescribedData.Description
   parent: VRBuilder.Core.IDescribedData
-  href: VRBuilder.Core.IDescribedData.html#VRBuilder_Core_IDescribedData_Description
   name: Description
   nameWithType: IDescribedData.Description
   fullName: VRBuilder.Core.IDescribedData.Description
@@ -172,7 +176,6 @@ references:
   commentId: P:VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IStepChild}.Current
   parent: VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IStepChild}
   definition: VRBuilder.Core.EntityOwners.IEntitySequenceData`1.Current
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html#VRBuilder_Core_EntityOwners_IEntitySequenceData_1_Current
   name: Current
   nameWithType: IEntitySequenceData<IStepChild>.Current
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<VRBuilder.Core.IStepChild>.Current
@@ -182,62 +185,65 @@ references:
   commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}.GetChildren
   parent: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: IEntityCollectionData<IStepChild>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IStepChild>.GetChildren()
   nameWithType.vb: IEntityCollectionData(Of IStepChild).GetChildren()
   fullName.vb: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.IStepChild).GetChildren()
   spec.csharp:
-  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData<IStepChild>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IStepChild>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}.GetChildren
+  - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData(Of IStepChild).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of VRBuilder.Core.IStepChild).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeData.Mode
   commentId: P:VRBuilder.Core.Configuration.Modes.IModeData.Mode
   parent: VRBuilder.Core.Configuration.Modes.IModeData
-  href: VRBuilder.Core.Configuration.Modes.IModeData.html#VRBuilder_Core_Configuration_Modes_IModeData_Mode
   name: Mode
   nameWithType: IModeData.Mode
   fullName: VRBuilder.Core.Configuration.Modes.IModeData.Mode
 - uid: VRBuilder.Core.IData.Metadata
   commentId: P:VRBuilder.Core.IData.Metadata
   parent: VRBuilder.Core.IData
-  href: VRBuilder.Core.IData.html#VRBuilder_Core_IData_Metadata
   name: Metadata
   nameWithType: IData.Metadata
   fullName: VRBuilder.Core.IData.Metadata
 - uid: VRBuilder.Core.IRenameableData
   commentId: T:VRBuilder.Core.IRenameableData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IRenameableData.html
   name: IRenameableData
   nameWithType: IRenameableData
   fullName: VRBuilder.Core.IRenameableData
 - uid: VRBuilder.Core.INamedData
   commentId: T:VRBuilder.Core.INamedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.INamedData.html
   name: INamedData
   nameWithType: INamedData
   fullName: VRBuilder.Core.INamedData
 - uid: VRBuilder.Core.IDescribedData
   commentId: T:VRBuilder.Core.IDescribedData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IDescribedData.html
   name: IDescribedData
   nameWithType: IDescribedData
   fullName: VRBuilder.Core.IDescribedData
 - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1.Current
   commentId: P:VRBuilder.Core.EntityOwners.IEntitySequenceData`1.Current
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html#VRBuilder_Core_EntityOwners_IEntitySequenceData_1_Current
   name: Current
   nameWithType: IEntitySequenceData<TEntity>.Current
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<TEntity>.Current
@@ -247,7 +253,6 @@ references:
   commentId: T:VRBuilder.Core.EntityOwners.IEntitySequenceData{VRBuilder.Core.IStepChild}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
   name: IEntitySequenceData<IStepChild>
   nameWithType: IEntitySequenceData<IStepChild>
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<VRBuilder.Core.IStepChild>
@@ -257,26 +262,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IStepChild
     name: IStepChild
-    href: VRBuilder.Core.IStepChild.html
+    nameWithType: IStepChild
+    fullName: VRBuilder.Core.IStepChild
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IStepChild
     name: IStepChild
-    href: VRBuilder.Core.IStepChild.html
+    nameWithType: IStepChild
+    fullName: VRBuilder.Core.IStepChild
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
   commentId: M:VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
   name: GetChildren()
   nameWithType: IEntityCollectionData<TEntity>.GetChildren()
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren()
@@ -285,20 +299,29 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData<TEntity>.GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>.GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1.GetChildren
     name: GetChildren
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html#VRBuilder_Core_EntityOwners_IEntityCollectionData_1_GetChildren
+    nameWithType: IEntityCollectionData(Of TEntity).GetChildren
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData(Of TEntity).GetChildren
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData{VRBuilder.Core.IStepChild}
   parent: VRBuilder.Core.EntityOwners
   definition: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<IStepChild>
   nameWithType: IEntityCollectionData<IStepChild>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<VRBuilder.Core.IStepChild>
@@ -308,40 +331,47 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.IStepChild
     name: IStepChild
-    href: VRBuilder.Core.IStepChild.html
+    nameWithType: IStepChild
+    fullName: VRBuilder.Core.IStepChild
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.IStepChild
     name: IStepChild
-    href: VRBuilder.Core.IStepChild.html
+    nameWithType: IStepChild
+    fullName: VRBuilder.Core.IStepChild
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes.IModeData
   commentId: T:VRBuilder.Core.Configuration.Modes.IModeData
   parent: VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.Core.Configuration.Modes.IModeData.html
   name: IModeData
   nameWithType: IModeData
   fullName: VRBuilder.Core.Configuration.Modes.IModeData
 - uid: VRBuilder.Core.IData
   commentId: T:VRBuilder.Core.IData
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IData.html
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
 - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntitySequenceData`1
-  href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
   name: IEntitySequenceData<TEntity>
   nameWithType: IEntitySequenceData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData<TEntity>
@@ -351,52 +381,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntitySequenceData`1
     name: IEntitySequenceData
-    href: VRBuilder.Core.EntityOwners.IEntitySequenceData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntitySequenceData
+    fullName: VRBuilder.Core.EntityOwners.IEntitySequenceData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.EntityOwners
   commentId: N:VRBuilder.Core.EntityOwners
-  href: VRBuilder.html
   name: VRBuilder.Core.EntityOwners
   nameWithType: VRBuilder.Core.EntityOwners
   fullName: VRBuilder.Core.EntityOwners
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.EntityOwners
-    name: EntityOwners
-    href: VRBuilder.Core.EntityOwners.html
 - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
   commentId: T:VRBuilder.Core.EntityOwners.IEntityCollectionData`1
-  href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
   name: IEntityCollectionData<TEntity>
   nameWithType: IEntityCollectionData<TEntity>
   fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData<TEntity>
@@ -406,80 +422,55 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.EntityOwners.IEntityCollectionData`1
     name: IEntityCollectionData
-    href: VRBuilder.Core.EntityOwners.IEntityCollectionData-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IEntityCollectionData
+    fullName: VRBuilder.Core.EntityOwners.IEntityCollectionData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Configuration.Modes
   commentId: N:VRBuilder.Core.Configuration.Modes
-  href: VRBuilder.html
   name: VRBuilder.Core.Configuration.Modes
   nameWithType: VRBuilder.Core.Configuration.Modes
   fullName: VRBuilder.Core.Configuration.Modes
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration
-    name: Configuration
-    href: VRBuilder.Core.Configuration.html
-  - name: .
-  - uid: VRBuilder.Core.Configuration.Modes
-    name: Modes
-    href: VRBuilder.Core.Configuration.Modes.html
 - uid: VRBuilder.Core.IStepData.Behaviors*
   commentId: Overload:VRBuilder.Core.IStepData.Behaviors
-  href: VRBuilder.Core.IStepData.html#VRBuilder_Core_IStepData_Behaviors
   name: Behaviors
   nameWithType: IStepData.Behaviors
   fullName: VRBuilder.Core.IStepData.Behaviors
 - uid: VRBuilder.Core.IBehaviorCollection
   commentId: T:VRBuilder.Core.IBehaviorCollection
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IBehaviorCollection.html
   name: IBehaviorCollection
   nameWithType: IBehaviorCollection
   fullName: VRBuilder.Core.IBehaviorCollection
 - uid: VRBuilder.Core.IStepData.Transitions*
   commentId: Overload:VRBuilder.Core.IStepData.Transitions
-  href: VRBuilder.Core.IStepData.html#VRBuilder_Core_IStepData_Transitions
   name: Transitions
   nameWithType: IStepData.Transitions
   fullName: VRBuilder.Core.IStepData.Transitions
 - uid: VRBuilder.Core.ITransitionCollection
   commentId: T:VRBuilder.Core.ITransitionCollection
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ITransitionCollection.html
   name: ITransitionCollection
   nameWithType: ITransitionCollection
   fullName: VRBuilder.Core.ITransitionCollection

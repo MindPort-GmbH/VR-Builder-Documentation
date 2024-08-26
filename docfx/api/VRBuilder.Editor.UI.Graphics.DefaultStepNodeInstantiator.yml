@@ -5,7 +5,7 @@ items:
   id: DefaultStepNodeInstantiator
   parent: VRBuilder.Editor.UI.Graphics
   children:
-  - VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  - VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
   - VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   - VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu
   - VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name
@@ -29,23 +29,31 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: Instantiator for a default <xref href="VRBuilder.Core.IStep" data-throw-if-not-resolved="false"></xref> node.
+  summary: "\nInstantiator for a default <xref href=\"VRBuilder.Core.IStep\" data-throw-if-not-resolved=\"false\"></xref> node.\n"
   example: []
   syntax:
     content: 'public class DefaultStepNodeInstantiator : IStepNodeInstantiator'
-    content.vb: Public Class DefaultStepNodeInstantiator Implements IStepNodeInstantiator
+    content.vb: >-
+      Public Class DefaultStepNodeInstantiator
+          Implements IStepNodeInstantiator
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name
   commentId: P:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name
   id: Name
@@ -68,7 +76,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: Display name of the instantiated node.
+  summary: "\nDisplay name of the instantiated node.\n"
   example: []
   syntax:
     content: public string Name { get; }
@@ -79,6 +87,12 @@ items:
   overload: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name*
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Name
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu
   commentId: P:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu
   id: IsInNodeMenu
@@ -101,7 +115,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: If true, it will appear in the node menu.
+  summary: "\nIf true, it will appear in the node menu.\n"
   example: []
   syntax:
     content: public bool IsInNodeMenu { get; }
@@ -112,6 +126,12 @@ items:
   overload: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu*
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.IsInNodeMenu
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.StepType
   commentId: P:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.StepType
   id: StepType
@@ -134,7 +154,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: Step type metadata.
+  summary: "\nStep type metadata.\n"
   example: []
   syntax:
     content: public string StepType { get; }
@@ -145,6 +165,12 @@ items:
   overload: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.StepType*
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.StepType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Priority
   commentId: P:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Priority
   id: Priority
@@ -167,7 +193,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: Nodes with a lower value will appear first in the menu.
+  summary: "\nNodes with a lower value will appear first in the menu.\n"
   example: []
   syntax:
     content: public int Priority { get; }
@@ -178,16 +204,22 @@ items:
   overload: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Priority*
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Priority
-- uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
-  commentId: M:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
-  id: GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
+  id: GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
   parent: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator
   langs:
   - csharp
   - vb
   name: GetContextMenuStatus(IEventHandler, IChapter)
   nameWithType: DefaultStepNodeInstantiator.GetContextMenuStatus(IEventHandler, IChapter)
-  fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler, VRBuilder.Core.IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus(IEventHandler, VRBuilder.Core.IChapter)
   type: Method
   source:
     remote:
@@ -200,21 +232,25 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: Returns the status for the context menu entry to instantiate the node.
+  summary: "\nReturns the status for the context menu entry to instantiate the node.\n"
   example: []
   syntax:
     content: public DropdownMenuAction.Status GetContextMenuStatus(IEventHandler target, IChapter currentChapter)
     parameters:
     - id: target
-      type: UnityEngine.UIElements.IEventHandler
+      type: IEventHandler
     - id: currentChapter
       type: VRBuilder.Core.IChapter
     return:
-      type: UnityEngine.UIElements.DropdownMenuAction.Status
+      type: DropdownMenuAction.Status
     content.vb: Public Function GetContextMenuStatus(target As IEventHandler, currentChapter As IChapter) As DropdownMenuAction.Status
   overload: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus*
   implements:
-  - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   commentId: M:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   id: InstantiateNode(VRBuilder.Core.IStep)
@@ -237,7 +273,7 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Graphics
-  summary: Creates a graphview node of the corresponding type.
+  summary: "\nCreates a graphview node of the corresponding type. \n"
   example: []
   syntax:
     content: public ProcessGraphNode InstantiateNode(IStep step)
@@ -246,332 +282,337 @@ items:
       type: VRBuilder.Core.IStep
     return:
       type: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
-    content.vb: Public Function InstantiateNode([step] As IStep) As ProcessGraphNode
+    content.vb: Public Function InstantiateNode(step As IStep) As ProcessGraphNode
   overload: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode*
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.Core.IStep
   commentId: T:VRBuilder.Core.IStep
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStep.html
   name: IStep
   nameWithType: IStep
   fullName: VRBuilder.Core.IStep
 - uid: VRBuilder.Editor.UI.Graphics
   commentId: N:VRBuilder.Editor.UI.Graphics
-  href: VRBuilder.html
   name: VRBuilder.Editor.UI.Graphics
   nameWithType: VRBuilder.Editor.UI.Graphics
   fullName: VRBuilder.Editor.UI.Graphics
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.UI
-    name: UI
-    href: VRBuilder.Editor.UI.html
-  - name: .
-  - uid: VRBuilder.Editor.UI.Graphics
-    name: Graphics
-    href: VRBuilder.Editor.UI.Graphics.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Editor
-    name: Editor
-    href: VRBuilder.Editor.html
-  - name: .
-  - uid: VRBuilder.Editor.UI
-    name: UI
-    href: VRBuilder.Editor.UI.html
-  - name: .
-  - uid: VRBuilder.Editor.UI.Graphics
-    name: Graphics
-    href: VRBuilder.Editor.UI.Graphics.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
   commentId: T:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
   parent: VRBuilder.Editor.UI.Graphics
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html
   name: IStepNodeInstantiator
   nameWithType: IStepNodeInstantiator
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name*
   commentId: Overload:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name
-  href: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_DefaultStepNodeInstantiator_Name
   name: Name
   nameWithType: DefaultStepNodeInstantiator.Name
   fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Name
 - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Name
   commentId: P:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Name
   parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_Name
   name: Name
   nameWithType: IStepNodeInstantiator.Name
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Name
@@ -579,23 +620,17 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu*
   commentId: Overload:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu
-  href: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_DefaultStepNodeInstantiator_IsInNodeMenu
   name: IsInNodeMenu
   nameWithType: DefaultStepNodeInstantiator.IsInNodeMenu
   fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.IsInNodeMenu
 - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.IsInNodeMenu
   commentId: P:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.IsInNodeMenu
   parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_IsInNodeMenu
   name: IsInNodeMenu
   nameWithType: IStepNodeInstantiator.IsInNodeMenu
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.IsInNodeMenu
@@ -603,36 +638,28 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.StepType*
   commentId: Overload:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.StepType
-  href: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_DefaultStepNodeInstantiator_StepType
   name: StepType
   nameWithType: DefaultStepNodeInstantiator.StepType
   fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.StepType
 - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.StepType
   commentId: P:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.StepType
   parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_StepType
   name: StepType
   nameWithType: IStepNodeInstantiator.StepType
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.StepType
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Priority*
   commentId: Overload:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Priority
-  href: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_DefaultStepNodeInstantiator_Priority
   name: Priority
   nameWithType: DefaultStepNodeInstantiator.Priority
   fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.Priority
 - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Priority
   commentId: P:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Priority
   parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_Priority
   name: Priority
   nameWithType: IStepNodeInstantiator.Priority
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.Priority
@@ -640,145 +667,127 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus*
   commentId: Overload:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus
-  href: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_DefaultStepNodeInstantiator_GetContextMenuStatus_UnityEngine_UIElements_IEventHandler_VRBuilder_Core_IChapter_
   name: GetContextMenuStatus
   nameWithType: DefaultStepNodeInstantiator.GetContextMenuStatus
   fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.GetContextMenuStatus
-- uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
-  commentId: M:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+- uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
   parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
   isExternal: true
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_GetContextMenuStatus_UnityEngine_UIElements_IEventHandler_VRBuilder_Core_IChapter_
   name: GetContextMenuStatus(IEventHandler, IChapter)
   nameWithType: IStepNodeInstantiator.GetContextMenuStatus(IEventHandler, IChapter)
-  fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler, VRBuilder.Core.IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(IEventHandler, VRBuilder.Core.IChapter)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
     name: GetContextMenuStatus
-    href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_GetContextMenuStatus_UnityEngine_UIElements_IEventHandler_VRBuilder_Core_IChapter_
+    nameWithType: IStepNodeInstantiator.GetContextMenuStatus
+    fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus
   - name: (
-  - uid: UnityEngine.UIElements.IEventHandler
+    nameWithType: (
+    fullName: (
+  - uid: IEventHandler
     name: IEventHandler
+    nameWithType: IEventHandler
+    fullName: IEventHandler
     isExternal: true
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
     name: GetContextMenuStatus
-    href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_GetContextMenuStatus_UnityEngine_UIElements_IEventHandler_VRBuilder_Core_IChapter_
+    nameWithType: IStepNodeInstantiator.GetContextMenuStatus
+    fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus
   - name: (
-  - uid: UnityEngine.UIElements.IEventHandler
+    nameWithType: (
+    fullName: (
+  - uid: IEventHandler
     name: IEventHandler
+    nameWithType: IEventHandler
+    fullName: IEventHandler
     isExternal: true
-  - name: ','
-  - name: " "
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: VRBuilder.Core.IChapter
     name: IChapter
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
   - name: )
-- uid: UnityEngine.UIElements.IEventHandler
-  commentId: T:UnityEngine.UIElements.IEventHandler
-  parent: UnityEngine.UIElements
+    nameWithType: )
+    fullName: )
+- uid: IEventHandler
   isExternal: true
   name: IEventHandler
   nameWithType: IEventHandler
-  fullName: UnityEngine.UIElements.IEventHandler
+  fullName: IEventHandler
 - uid: VRBuilder.Core.IChapter
   commentId: T:VRBuilder.Core.IChapter
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IChapter.html
   name: IChapter
   nameWithType: IChapter
   fullName: VRBuilder.Core.IChapter
-- uid: UnityEngine.UIElements.DropdownMenuAction.Status
-  commentId: T:UnityEngine.UIElements.DropdownMenuAction.Status
-  parent: UnityEngine.UIElements
+- uid: DropdownMenuAction.Status
   isExternal: true
   name: DropdownMenuAction.Status
   nameWithType: DropdownMenuAction.Status
-  fullName: UnityEngine.UIElements.DropdownMenuAction.Status
-  spec.csharp:
-  - uid: UnityEngine.UIElements.DropdownMenuAction
-    name: DropdownMenuAction
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.UIElements.DropdownMenuAction.Status
-    name: Status
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine.UIElements.DropdownMenuAction
-    name: DropdownMenuAction
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.UIElements.DropdownMenuAction.Status
-    name: Status
-    isExternal: true
-- uid: UnityEngine.UIElements
-  commentId: N:UnityEngine.UIElements
-  isExternal: true
-  name: UnityEngine.UIElements
-  nameWithType: UnityEngine.UIElements
-  fullName: UnityEngine.UIElements
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.UIElements
-    name: UIElements
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.UIElements
-    name: UIElements
-    isExternal: true
+  fullName: DropdownMenuAction.Status
 - uid: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode*
   commentId: Overload:VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode
-  href: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_DefaultStepNodeInstantiator_InstantiateNode_VRBuilder_Core_IStep_
   name: InstantiateNode
   nameWithType: DefaultStepNodeInstantiator.InstantiateNode
   fullName: VRBuilder.Editor.UI.Graphics.DefaultStepNodeInstantiator.InstantiateNode
 - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   commentId: M:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-  href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_InstantiateNode_VRBuilder_Core_IStep_
   name: InstantiateNode(IStep)
   nameWithType: IStepNodeInstantiator.InstantiateNode(IStep)
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   spec.csharp:
   - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
     name: InstantiateNode
-    href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_InstantiateNode_VRBuilder_Core_IStep_
+    nameWithType: IStepNodeInstantiator.InstantiateNode
+    fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IStep
     name: IStep
+    nameWithType: IStep
+    fullName: VRBuilder.Core.IStep
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
     name: InstantiateNode
-    href: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.html#VRBuilder_Editor_UI_Graphics_IStepNodeInstantiator_InstantiateNode_VRBuilder_Core_IStep_
+    nameWithType: IStepNodeInstantiator.InstantiateNode
+    fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.InstantiateNode
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.IStep
     name: IStep
+    nameWithType: IStep
+    fullName: VRBuilder.Core.IStep
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.UI.Graphics.ProcessGraphNode
   commentId: T:VRBuilder.Editor.UI.Graphics.ProcessGraphNode
   parent: VRBuilder.Editor.UI.Graphics
-  href: VRBuilder.Editor.UI.Graphics.ProcessGraphNode.html
   name: ProcessGraphNode
   nameWithType: ProcessGraphNode
   fullName: VRBuilder.Editor.UI.Graphics.ProcessGraphNode

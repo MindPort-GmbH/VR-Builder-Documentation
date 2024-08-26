@@ -29,7 +29,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
-  summary: Condition which is completed when `TargetObject` gets inside `TriggerProperty`'s collider.
+  summary: "\nCondition which is completed when `TargetObject` gets inside `TriggerProperty`&apos;s collider.\n"
   example: []
   syntax:
     content: >-
@@ -43,7 +43,11 @@ items:
 
       <HelpLink("https://www.mindport.co/vr-builder/manual/default-conditions/move-object-in-collider")>
 
-      Public Class ObjectInColliderCondition Inherits Condition(Of ObjectInColliderCondition.EntityData) Implements IDataOwner(Of ObjectInColliderCondition.EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
+      Public Class ObjectInColliderCondition
+
+          Inherits Condition(Of ObjectInColliderCondition.EntityData)
+
+          Implements IDataOwner(Of ObjectInColliderCondition.EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
@@ -60,11 +64,13 @@ items:
   - VRBuilder.Core.IClonable{VRBuilder.Core.Conditions.ICondition}
   - VRBuilder.Core.ILockablePropertiesProvider
   inheritedMembers:
+  - VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data
   - VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Clone
   - VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetLockableProperties
   - VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.IsCompleted
   - VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Autocomplete
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Data
+  - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.VRBuilder#Core#IDataOwner#Data
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.LifeCycle
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Parent
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActivatingProcess
@@ -72,13 +78,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Update
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -92,6 +98,12 @@ items:
     arguments:
     - type: System.String
       value: https://www.mindport.co/vr-builder/manual/default-conditions/move-object-in-collider
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor
   commentId: M:VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor
   id: '#ctor'
@@ -118,26 +130,20 @@ items:
     content: >-
       [JsonConstructor]
 
-      [Preserve]
-
       public ObjectInColliderCondition()
     content.vb: >-
       <JsonConstructor>
 
-      <Preserve>
-
-      Public Sub New()
+      Public Sub New
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
-  - type: UnityEngine.Scripting.PreserveAttribute
-    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
-    arguments: []
-  nameWithType.vb: ObjectInColliderCondition.New()
-  fullName.vb: VRBuilder.Core.Conditions.ObjectInColliderCondition.New()
-  name.vb: New()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor(VRBuilder.Core.Properties.ColliderWithTriggerProperty,VRBuilder.Core.SceneObjects.ISceneObject,System.Single)
   commentId: M:VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor(VRBuilder.Core.Properties.ColliderWithTriggerProperty,VRBuilder.Core.SceneObjects.ISceneObject,System.Single)
   id: '#ctor(VRBuilder.Core.Properties.ColliderWithTriggerProperty,VRBuilder.Core.SceneObjects.ISceneObject,System.Single)'
@@ -145,9 +151,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ObjectInColliderCondition(ColliderWithTriggerProperty, ISceneObject, float)
-  nameWithType: ObjectInColliderCondition.ObjectInColliderCondition(ColliderWithTriggerProperty, ISceneObject, float)
-  fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition(VRBuilder.Core.Properties.ColliderWithTriggerProperty, VRBuilder.Core.SceneObjects.ISceneObject, float)
+  name: ObjectInColliderCondition(ColliderWithTriggerProperty, ISceneObject, Single)
+  nameWithType: ObjectInColliderCondition.ObjectInColliderCondition(ColliderWithTriggerProperty, ISceneObject, Single)
+  fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition(VRBuilder.Core.Properties.ColliderWithTriggerProperty, VRBuilder.Core.SceneObjects.ISceneObject, System.Single)
   type: Constructor
   source:
     remote:
@@ -161,7 +167,7 @@ items:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
   syntax:
-    content: public ObjectInColliderCondition(ColliderWithTriggerProperty targetPosition, ISceneObject targetObject, float requiredTimeInTarget = 0)
+    content: public ObjectInColliderCondition(ColliderWithTriggerProperty targetPosition, ISceneObject targetObject, float requiredTimeInTarget = 0F)
     parameters:
     - id: targetPosition
       type: VRBuilder.Core.Properties.ColliderWithTriggerProperty
@@ -169,11 +175,12 @@ items:
       type: VRBuilder.Core.SceneObjects.ISceneObject
     - id: requiredTimeInTarget
       type: System.Single
-    content.vb: Public Sub New(targetPosition As ColliderWithTriggerProperty, targetObject As ISceneObject, requiredTimeInTarget As Single = 0)
+    content.vb: Public Sub New(targetPosition As ColliderWithTriggerProperty, targetObject As ISceneObject, requiredTimeInTarget As Single = 0F)
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor*
-  nameWithType.vb: ObjectInColliderCondition.New(ColliderWithTriggerProperty, ISceneObject, Single)
-  fullName.vb: VRBuilder.Core.Conditions.ObjectInColliderCondition.New(VRBuilder.Core.Properties.ColliderWithTriggerProperty, VRBuilder.Core.SceneObjects.ISceneObject, Single)
-  name.vb: New(ColliderWithTriggerProperty, ISceneObject, Single)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor(System.String,System.String,System.Single)
   commentId: M:VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor(System.String,System.String,System.Single)
   id: '#ctor(System.String,System.String,System.Single)'
@@ -181,9 +188,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ObjectInColliderCondition(string, string, float)
-  nameWithType: ObjectInColliderCondition.ObjectInColliderCondition(string, string, float)
-  fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition(string, string, float)
+  name: ObjectInColliderCondition(String, String, Single)
+  nameWithType: ObjectInColliderCondition.ObjectInColliderCondition(String, String, Single)
+  fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition(System.String, System.String, System.Single)
   type: Constructor
   source:
     remote:
@@ -200,7 +207,7 @@ items:
     content: >-
       [Obsolete("This constructor will be removed in the next major version.")]
 
-      public ObjectInColliderCondition(string targetPosition, string targetObject, float requiredTimeInTarget = 0)
+      public ObjectInColliderCondition(string targetPosition, string targetObject, float requiredTimeInTarget = 0F)
     parameters:
     - id: targetPosition
       type: System.String
@@ -211,7 +218,7 @@ items:
     content.vb: >-
       <Obsolete("This constructor will be removed in the next major version.")>
 
-      Public Sub New(targetPosition As String, targetObject As String, requiredTimeInTarget As Single = 0)
+      Public Sub New(targetPosition As String, targetObject As String, requiredTimeInTarget As Single = 0F)
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor*
   attributes:
   - type: System.ObsoleteAttribute
@@ -219,9 +226,10 @@ items:
     arguments:
     - type: System.String
       value: This constructor will be removed in the next major version.
-  nameWithType.vb: ObjectInColliderCondition.New(String, String, Single)
-  fullName.vb: VRBuilder.Core.Conditions.ObjectInColliderCondition.New(String, String, Single)
-  name.vb: New(String, String, Single)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor(System.Guid,System.Guid,System.Single)
   commentId: M:VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor(System.Guid,System.Guid,System.Single)
   id: '#ctor(System.Guid,System.Guid,System.Single)'
@@ -229,9 +237,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ObjectInColliderCondition(Guid, Guid, float)
-  nameWithType: ObjectInColliderCondition.ObjectInColliderCondition(Guid, Guid, float)
-  fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition(System.Guid, System.Guid, float)
+  name: ObjectInColliderCondition(Guid, Guid, Single)
+  nameWithType: ObjectInColliderCondition.ObjectInColliderCondition(Guid, Guid, Single)
+  fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition(System.Guid, System.Guid, System.Single)
   type: Constructor
   source:
     remote:
@@ -245,7 +253,7 @@ items:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
   syntax:
-    content: public ObjectInColliderCondition(Guid targetPosition, Guid targetObject, float requiredTimeInTarget = 0)
+    content: public ObjectInColliderCondition(Guid targetPosition, Guid targetObject, float requiredTimeInTarget = 0F)
     parameters:
     - id: targetPosition
       type: System.Guid
@@ -253,11 +261,12 @@ items:
       type: System.Guid
     - id: requiredTimeInTarget
       type: System.Single
-    content.vb: Public Sub New(targetPosition As Guid, targetObject As Guid, requiredTimeInTarget As Single = 0)
+    content.vb: Public Sub New(targetPosition As Guid, targetObject As Guid, requiredTimeInTarget As Single = 0F)
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor*
-  nameWithType.vb: ObjectInColliderCondition.New(Guid, Guid, Single)
-  fullName.vb: VRBuilder.Core.Conditions.ObjectInColliderCondition.New(System.Guid, System.Guid, Single)
-  name.vb: New(Guid, Guid, Single)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetActiveProcess
   commentId: M:VRBuilder.Core.Conditions.ObjectInColliderCondition.GetActiveProcess
   id: GetActiveProcess
@@ -280,15 +289,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
-  summary: Returns a new instance of a process for the Active <xref href="VRBuilder.Core.Stage" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
     return:
       type: VRBuilder.Core.IStageProcess
-    content.vb: Public Overrides Function GetActiveProcess() As IStageProcess
+    content.vb: Public Overrides Function GetActiveProcess As IStageProcess
   overridden: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActiveProcess
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetActiveProcess*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter
   commentId: M:VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter
   id: GetAutocompleter
@@ -311,63 +325,37 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
-  summary: Override this method to return a custom <xref href="VRBuilder.Core.Autocompleter%601" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: protected override IAutocompleter GetAutocompleter()
     return:
       type: VRBuilder.Core.IAutocompleter
-      description: By default, it returns and empty autocompleter which does nothing.
-    content.vb: Protected Overrides Function GetAutocompleter() As IAutocompleter
+    content.vb: Protected Overrides Function GetAutocompleter As IAutocompleter
   overridden: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetAutocompleter
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: VRBuilder.Core.Conditions
   commentId: N:VRBuilder.Core.Conditions
-  href: VRBuilder.html
   name: VRBuilder.Core.Conditions
   nameWithType: VRBuilder.Core.Conditions
   fullName: VRBuilder.Core.Conditions
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Conditions
-    name: Conditions
-    href: VRBuilder.Core.Conditions.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Conditions
-    name: Conditions
-    href: VRBuilder.Core.Conditions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   commentId: T:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.Entity`1
-  href: VRBuilder.Core.Entity-1.html
   name: Entity<ObjectInColliderCondition.EntityData>
   nameWithType: Entity<ObjectInColliderCondition.EntityData>
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>
@@ -377,36 +365,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
   - name: <
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   commentId: T:VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.CompletableEntity`1
-  href: VRBuilder.Core.CompletableEntity-1.html
   name: CompletableEntity<ObjectInColliderCondition.EntityData>
   nameWithType: CompletableEntity<ObjectInColliderCondition.EntityData>
   fullName: VRBuilder.Core.CompletableEntity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>
@@ -416,36 +405,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.CompletableEntity`1
     name: CompletableEntity
-    href: VRBuilder.Core.CompletableEntity-1.html
+    nameWithType: CompletableEntity
+    fullName: VRBuilder.Core.CompletableEntity
   - name: <
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.CompletableEntity`1
     name: CompletableEntity
-    href: VRBuilder.Core.CompletableEntity-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: CompletableEntity
+    fullName: VRBuilder.Core.CompletableEntity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   commentId: T:VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   parent: VRBuilder.Core.Conditions
   definition: VRBuilder.Core.Conditions.Condition`1
-  href: VRBuilder.Core.Conditions.Condition-1.html
   name: Condition<ObjectInColliderCondition.EntityData>
   nameWithType: Condition<ObjectInColliderCondition.EntityData>
   fullName: VRBuilder.Core.Conditions.Condition<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>
@@ -455,36 +445,37 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Conditions.Condition`1
     name: Condition
-    href: VRBuilder.Core.Conditions.Condition-1.html
+    nameWithType: Condition
+    fullName: VRBuilder.Core.Conditions.Condition
   - name: <
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Conditions.Condition`1
     name: Condition
-    href: VRBuilder.Core.Conditions.Condition-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: Condition
+    fullName: VRBuilder.Core.Conditions.Condition
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<ObjectInColliderCondition.EntityData>
   nameWithType: IDataOwner<ObjectInColliderCondition.EntityData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>
@@ -494,56 +485,54 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition
-    name: ObjectInColliderCondition
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html
-  - name: .
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
-    name: EntityData
-    href: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData.html
+    name: ObjectInColliderCondition.EntityData
+    nameWithType: ObjectInColliderCondition.EntityData
+    fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.ICondition
   commentId: T:VRBuilder.Core.Conditions.ICondition
   parent: VRBuilder.Core.Conditions
-  href: VRBuilder.Core.Conditions.ICondition.html
   name: ICondition
   nameWithType: ICondition
   fullName: VRBuilder.Core.Conditions.ICondition
 - uid: VRBuilder.Core.ICompletableEntity
   commentId: T:VRBuilder.Core.ICompletableEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ICompletableEntity.html
   name: ICompletableEntity
   nameWithType: ICompletableEntity
   fullName: VRBuilder.Core.ICompletableEntity
 - uid: VRBuilder.Core.ICompletable
   commentId: T:VRBuilder.Core.ICompletable
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ICompletable.html
   name: ICompletable
   nameWithType: ICompletable
   fullName: VRBuilder.Core.ICompletable
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity
@@ -551,7 +540,6 @@ references:
   commentId: T:VRBuilder.Core.IDataOwner{VRBuilder.Core.Conditions.IConditionData}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<IConditionData>
   nameWithType: IDataOwner<IConditionData>
   fullName: VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>
@@ -561,27 +549,36 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.IConditionData
     name: IConditionData
-    href: VRBuilder.Core.Conditions.IConditionData.html
+    nameWithType: IConditionData
+    fullName: VRBuilder.Core.Conditions.IConditionData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.IConditionData
     name: IConditionData
-    href: VRBuilder.Core.Conditions.IConditionData.html
+    nameWithType: IConditionData
+    fullName: VRBuilder.Core.Conditions.IConditionData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner
   commentId: T:VRBuilder.Core.IDataOwner
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IDataOwner.html
   name: IDataOwner
   nameWithType: IDataOwner
   fullName: VRBuilder.Core.IDataOwner
@@ -589,7 +586,6 @@ references:
   commentId: T:VRBuilder.Core.IClonable{VRBuilder.Core.Conditions.ICondition}
   parent: VRBuilder.Core
   definition: VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<ICondition>
   nameWithType: IClonable<ICondition>
   fullName: VRBuilder.Core.IClonable<VRBuilder.Core.Conditions.ICondition>
@@ -599,79 +595,115 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.Conditions.ICondition
     name: ICondition
-    href: VRBuilder.Core.Conditions.ICondition.html
+    nameWithType: ICondition
+    fullName: VRBuilder.Core.Conditions.ICondition
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.Conditions.ICondition
     name: ICondition
-    href: VRBuilder.Core.Conditions.ICondition.html
+    nameWithType: ICondition
+    fullName: VRBuilder.Core.Conditions.ICondition
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.ILockablePropertiesProvider
   commentId: T:VRBuilder.Core.ILockablePropertiesProvider
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ILockablePropertiesProvider.html
   name: ILockablePropertiesProvider
   nameWithType: ILockablePropertiesProvider
   fullName: VRBuilder.Core.ILockablePropertiesProvider
+- uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data
+  commentId: P:VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data
+  parent: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
+  definition: VRBuilder.Core.Conditions.Condition`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data
+  name: IDataOwner<IConditionData>.Data
+  nameWithType: Condition<ObjectInColliderCondition.EntityData>.IDataOwner<IConditionData>.Data
+  fullName: VRBuilder.Core.Conditions.Condition<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
+  nameWithType.vb: Condition(Of ObjectInColliderCondition.EntityData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
+  fullName.vb: VRBuilder.Core.Conditions.Condition(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
+  name.vb: VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
 - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Clone
   commentId: M:VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Clone
   parent: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Conditions.Condition`1.Clone
-  href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_Clone
   name: Clone()
   nameWithType: Condition<ObjectInColliderCondition.EntityData>.Clone()
   fullName: VRBuilder.Core.Conditions.Condition<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Clone()
   nameWithType.vb: Condition(Of ObjectInColliderCondition.EntityData).Clone()
   fullName.vb: VRBuilder.Core.Conditions.Condition(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Clone()
   spec.csharp:
-  - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Clone
+  - uid: VRBuilder.Core.Conditions.Condition`1.Clone
     name: Clone
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_Clone
+    nameWithType: Condition<ObjectInColliderCondition.EntityData>.Clone
+    fullName: VRBuilder.Core.Conditions.Condition<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Clone
+  - uid: VRBuilder.Core.Conditions.Condition`1.Clone
     name: Clone
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_Clone
+    nameWithType: Condition(Of ObjectInColliderCondition.EntityData).Clone
+    fullName: VRBuilder.Core.Conditions.Condition(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetLockableProperties
   commentId: M:VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetLockableProperties
   parent: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
-  href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_GetLockableProperties
   name: GetLockableProperties()
   nameWithType: Condition<ObjectInColliderCondition.EntityData>.GetLockableProperties()
   fullName: VRBuilder.Core.Conditions.Condition<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetLockableProperties()
   nameWithType.vb: Condition(Of ObjectInColliderCondition.EntityData).GetLockableProperties()
   fullName.vb: VRBuilder.Core.Conditions.Condition(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetLockableProperties()
   spec.csharp:
-  - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetLockableProperties
+  - uid: VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
     name: GetLockableProperties
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_GetLockableProperties
+    nameWithType: Condition<ObjectInColliderCondition.EntityData>.GetLockableProperties
+    fullName: VRBuilder.Core.Conditions.Condition<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetLockableProperties
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Conditions.Condition{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetLockableProperties
+  - uid: VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
     name: GetLockableProperties
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_GetLockableProperties
+    nameWithType: Condition(Of ObjectInColliderCondition.EntityData).GetLockableProperties
+    fullName: VRBuilder.Core.Conditions.Condition(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetLockableProperties
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.IsCompleted
   commentId: P:VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.IsCompleted
   parent: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.CompletableEntity`1.IsCompleted
-  href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_IsCompleted
   name: IsCompleted
   nameWithType: CompletableEntity<ObjectInColliderCondition.EntityData>.IsCompleted
   fullName: VRBuilder.Core.CompletableEntity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.IsCompleted
@@ -681,39 +713,56 @@ references:
   commentId: M:VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Autocomplete
   parent: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.CompletableEntity`1.Autocomplete
-  href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_Autocomplete
   name: Autocomplete()
   nameWithType: CompletableEntity<ObjectInColliderCondition.EntityData>.Autocomplete()
   fullName: VRBuilder.Core.CompletableEntity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Autocomplete()
   nameWithType.vb: CompletableEntity(Of ObjectInColliderCondition.EntityData).Autocomplete()
   fullName.vb: VRBuilder.Core.CompletableEntity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Autocomplete()
   spec.csharp:
-  - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Autocomplete
+  - uid: VRBuilder.Core.CompletableEntity`1.Autocomplete
     name: Autocomplete
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_Autocomplete
+    nameWithType: CompletableEntity<ObjectInColliderCondition.EntityData>.Autocomplete
+    fullName: VRBuilder.Core.CompletableEntity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Autocomplete
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Autocomplete
+  - uid: VRBuilder.Core.CompletableEntity`1.Autocomplete
     name: Autocomplete
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_Autocomplete
+    nameWithType: CompletableEntity(Of ObjectInColliderCondition.EntityData).Autocomplete
+    fullName: VRBuilder.Core.CompletableEntity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Autocomplete
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Data
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Data
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.Data
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Data
   name: Data
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.Data
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Data
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).Data
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Data
+- uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.VRBuilder#Core#IDataOwner#Data
+  commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.VRBuilder#Core#IDataOwner#Data
+  parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
+  definition: VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  name: IDataOwner.Data
+  nameWithType: Entity<ObjectInColliderCondition.EntityData>.IDataOwner.Data
+  fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.VRBuilder.Core.IDataOwner.Data
+  nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).VRBuilder.Core.IDataOwner.Data
+  fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).VRBuilder.Core.IDataOwner.Data
+  name.vb: VRBuilder.Core.IDataOwner.Data
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.LifeCycle
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.LifeCycle
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.LifeCycle
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_LifeCycle
   name: LifeCycle
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.LifeCycle
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.LifeCycle
@@ -723,7 +772,6 @@ references:
   commentId: P:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Parent
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.Parent
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Parent
   name: Parent
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.Parent
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Parent
@@ -733,347 +781,452 @@ references:
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.GetActivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
   name: GetActivatingProcess()
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetActivatingProcess()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetActivatingProcess()
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).GetActivatingProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetActivatingProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetActivatingProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity(Of ObjectInColliderCondition.EntityData).GetActivatingProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetDeactivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.GetDeactivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
   name: GetDeactivatingProcess()
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetDeactivatingProcess()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetDeactivatingProcess()
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).GetDeactivatingProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetDeactivatingProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetDeactivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetDeactivatingProcess
+  - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity(Of ObjectInColliderCondition.EntityData).GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetConfigurator
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetConfigurator
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.GetConfigurator
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
   name: GetConfigurator()
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetConfigurator()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetConfigurator()
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).GetConfigurator()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetConfigurator()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetConfigurator
+  - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetConfigurator
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetConfigurator
+  - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity(Of ObjectInColliderCondition.EntityData).GetConfigurator
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure(IMode)
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.Configure(IMode)
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).Configure(IMode)
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Configure(VRBuilder.Core.Configuration.Modes.IMode)
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity<ObjectInColliderCondition.EntityData>.Configure
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
+  - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity(Of ObjectInColliderCondition.EntityData).Configure
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Update
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Update
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.Update
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
   name: Update()
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.Update()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Update()
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).Update()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Update()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Update
+  - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity<ObjectInColliderCondition.EntityData>.Update
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Update
+  - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity(Of ObjectInColliderCondition.EntityData).Update
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Entity`1
   commentId: T:VRBuilder.Core.Entity`1
-  href: VRBuilder.Core.Entity-1.html
   name: Entity<TData>
   nameWithType: Entity<TData>
   fullName: VRBuilder.Core.Entity<TData>
@@ -1083,44 +1236,38 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Entity`1
     name: Entity
-    href: VRBuilder.Core.Entity-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Entity
+    fullName: VRBuilder.Core.Entity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: VRBuilder.Core.CompletableEntity`1
   commentId: T:VRBuilder.Core.CompletableEntity`1
-  href: VRBuilder.Core.CompletableEntity-1.html
   name: CompletableEntity<TData>
   nameWithType: CompletableEntity<TData>
   fullName: VRBuilder.Core.CompletableEntity<TData>
@@ -1130,22 +1277,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.CompletableEntity`1
     name: CompletableEntity
-    href: VRBuilder.Core.CompletableEntity-1.html
+    nameWithType: CompletableEntity
+    fullName: VRBuilder.Core.CompletableEntity
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.CompletableEntity`1
     name: CompletableEntity
-    href: VRBuilder.Core.CompletableEntity-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: CompletableEntity
+    fullName: VRBuilder.Core.CompletableEntity
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.Condition`1
   commentId: T:VRBuilder.Core.Conditions.Condition`1
-  href: VRBuilder.Core.Conditions.Condition-1.html
   name: Condition<TData>
   nameWithType: Condition<TData>
   fullName: VRBuilder.Core.Conditions.Condition<TData>
@@ -1155,22 +1313,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Conditions.Condition`1
     name: Condition
-    href: VRBuilder.Core.Conditions.Condition-1.html
+    nameWithType: Condition
+    fullName: VRBuilder.Core.Conditions.Condition
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.Conditions.Condition`1
     name: Condition
-    href: VRBuilder.Core.Conditions.Condition-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: Condition
+    fullName: VRBuilder.Core.Conditions.Condition
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IDataOwner`1
   commentId: T:VRBuilder.Core.IDataOwner`1
-  href: VRBuilder.Core.IDataOwner-1.html
   name: IDataOwner<TData>
   nameWithType: IDataOwner<TData>
   fullName: VRBuilder.Core.IDataOwner<TData>
@@ -1180,22 +1349,33 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IDataOwner`1
     name: IDataOwner
-    href: VRBuilder.Core.IDataOwner-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IDataOwner
+    fullName: VRBuilder.Core.IDataOwner
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TData
+    nameWithType: TData
+    fullName: TData
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.IClonable`1
   commentId: T:VRBuilder.Core.IClonable`1
-  href: VRBuilder.Core.IClonable-1.html
   name: IClonable<T>
   nameWithType: IClonable<T>
   fullName: VRBuilder.Core.IClonable<T>
@@ -1205,22 +1385,41 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: VRBuilder.Core.IClonable`1
     name: IClonable
-    href: VRBuilder.Core.IClonable-1.html
-  - name: (
-  - name: Of
-  - name: " "
+    nameWithType: IClonable
+    fullName: VRBuilder.Core.IClonable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: VRBuilder.Core.Conditions.Condition`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data
+  commentId: P:VRBuilder.Core.Conditions.Condition`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data
+  name: IDataOwner<IConditionData>.Data
+  nameWithType: Condition<TData>.IDataOwner<IConditionData>.Data
+  fullName: VRBuilder.Core.Conditions.Condition<TData>.VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
+  nameWithType.vb: Condition(Of TData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
+  fullName.vb: VRBuilder.Core.Conditions.Condition(Of TData).VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
+  name.vb: VRBuilder.Core.IDataOwner<VRBuilder.Core.Conditions.IConditionData>.Data
 - uid: VRBuilder.Core.Conditions.Condition`1.Clone
   commentId: M:VRBuilder.Core.Conditions.Condition`1.Clone
-  href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_Clone
   name: Clone()
   nameWithType: Condition<TData>.Clone()
   fullName: VRBuilder.Core.Conditions.Condition<TData>.Clone()
@@ -1229,18 +1428,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Conditions.Condition`1.Clone
     name: Clone
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_Clone
+    nameWithType: Condition<TData>.Clone
+    fullName: VRBuilder.Core.Conditions.Condition<TData>.Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Conditions.Condition`1.Clone
     name: Clone
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_Clone
+    nameWithType: Condition(Of TData).Clone
+    fullName: VRBuilder.Core.Conditions.Condition(Of TData).Clone
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
   commentId: M:VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
-  href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_GetLockableProperties
   name: GetLockableProperties()
   nameWithType: Condition<TData>.GetLockableProperties()
   fullName: VRBuilder.Core.Conditions.Condition<TData>.GetLockableProperties()
@@ -1249,18 +1457,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
     name: GetLockableProperties
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_GetLockableProperties
+    nameWithType: Condition<TData>.GetLockableProperties
+    fullName: VRBuilder.Core.Conditions.Condition<TData>.GetLockableProperties
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Conditions.Condition`1.GetLockableProperties
     name: GetLockableProperties
-    href: VRBuilder.Core.Conditions.Condition-1.html#VRBuilder_Core_Conditions_Condition_1_GetLockableProperties
+    nameWithType: Condition(Of TData).GetLockableProperties
+    fullName: VRBuilder.Core.Conditions.Condition(Of TData).GetLockableProperties
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.CompletableEntity`1.IsCompleted
   commentId: P:VRBuilder.Core.CompletableEntity`1.IsCompleted
-  href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_IsCompleted
   name: IsCompleted
   nameWithType: CompletableEntity<TData>.IsCompleted
   fullName: VRBuilder.Core.CompletableEntity<TData>.IsCompleted
@@ -1268,7 +1485,6 @@ references:
   fullName.vb: VRBuilder.Core.CompletableEntity(Of TData).IsCompleted
 - uid: VRBuilder.Core.CompletableEntity`1.Autocomplete
   commentId: M:VRBuilder.Core.CompletableEntity`1.Autocomplete
-  href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_Autocomplete
   name: Autocomplete()
   nameWithType: CompletableEntity<TData>.Autocomplete()
   fullName: VRBuilder.Core.CompletableEntity<TData>.Autocomplete()
@@ -1277,26 +1493,42 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.CompletableEntity`1.Autocomplete
     name: Autocomplete
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_Autocomplete
+    nameWithType: CompletableEntity<TData>.Autocomplete
+    fullName: VRBuilder.Core.CompletableEntity<TData>.Autocomplete
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.CompletableEntity`1.Autocomplete
     name: Autocomplete
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_Autocomplete
+    nameWithType: CompletableEntity(Of TData).Autocomplete
+    fullName: VRBuilder.Core.CompletableEntity(Of TData).Autocomplete
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Data
   commentId: P:VRBuilder.Core.Entity`1.Data
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Data
   name: Data
   nameWithType: Entity<TData>.Data
   fullName: VRBuilder.Core.Entity<TData>.Data
   nameWithType.vb: Entity(Of TData).Data
   fullName.vb: VRBuilder.Core.Entity(Of TData).Data
+- uid: VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  commentId: P:VRBuilder.Core.Entity`1.VRBuilder#Core#IDataOwner#Data
+  name: IDataOwner.Data
+  nameWithType: Entity<TData>.IDataOwner.Data
+  fullName: VRBuilder.Core.Entity<TData>.VRBuilder.Core.IDataOwner.Data
+  nameWithType.vb: Entity(Of TData).VRBuilder.Core.IDataOwner.Data
+  fullName.vb: VRBuilder.Core.Entity(Of TData).VRBuilder.Core.IDataOwner.Data
+  name.vb: VRBuilder.Core.IDataOwner.Data
 - uid: VRBuilder.Core.Entity`1.LifeCycle
   commentId: P:VRBuilder.Core.Entity`1.LifeCycle
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_LifeCycle
   name: LifeCycle
   nameWithType: Entity<TData>.LifeCycle
   fullName: VRBuilder.Core.Entity<TData>.LifeCycle
@@ -1304,7 +1536,6 @@ references:
   fullName.vb: VRBuilder.Core.Entity(Of TData).LifeCycle
 - uid: VRBuilder.Core.Entity`1.Parent
   commentId: P:VRBuilder.Core.Entity`1.Parent
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Parent
   name: Parent
   nameWithType: Entity<TData>.Parent
   fullName: VRBuilder.Core.Entity<TData>.Parent
@@ -1312,7 +1543,6 @@ references:
   fullName.vb: VRBuilder.Core.Entity(Of TData).Parent
 - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
   commentId: M:VRBuilder.Core.Entity`1.GetActivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
   name: GetActivatingProcess()
   nameWithType: Entity<TData>.GetActivatingProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetActivatingProcess()
@@ -1321,18 +1551,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity<TData>.GetActivatingProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetActivatingProcess
     name: GetActivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActivatingProcess
+    nameWithType: Entity(Of TData).GetActivatingProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetActivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
   commentId: M:VRBuilder.Core.Entity`1.GetDeactivatingProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
   name: GetDeactivatingProcess()
   nameWithType: Entity<TData>.GetDeactivatingProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetDeactivatingProcess()
@@ -1341,18 +1580,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity<TData>.GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetDeactivatingProcess
     name: GetDeactivatingProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess
+    nameWithType: Entity(Of TData).GetDeactivatingProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetDeactivatingProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.GetConfigurator
   commentId: M:VRBuilder.Core.Entity`1.GetConfigurator
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
   name: GetConfigurator()
   nameWithType: Entity<TData>.GetConfigurator()
   fullName: VRBuilder.Core.Entity<TData>.GetConfigurator()
@@ -1361,18 +1609,27 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity<TData>.GetConfigurator
+    fullName: VRBuilder.Core.Entity<TData>.GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetConfigurator
     name: GetConfigurator
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator
+    nameWithType: Entity(Of TData).GetConfigurator
+    fullName: VRBuilder.Core.Entity(Of TData).GetConfigurator
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   commentId: M:VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
   name: Configure(IMode)
   nameWithType: Entity<TData>.Configure(IMode)
   fullName: VRBuilder.Core.Entity<TData>.Configure(VRBuilder.Core.Configuration.Modes.IMode)
@@ -1381,24 +1638,35 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity<TData>.Configure
+    fullName: VRBuilder.Core.Entity<TData>.Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.Configure(VRBuilder.Core.Configuration.Modes.IMode)
     name: Configure
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Configure_VRBuilder_Core_Configuration_Modes_IMode_
+    nameWithType: Entity(Of TData).Configure
+    fullName: VRBuilder.Core.Entity(Of TData).Configure
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Configuration.Modes.IMode
     name: IMode
-    href: VRBuilder.Core.Configuration.Modes.IMode.html
+    nameWithType: IMode
+    fullName: VRBuilder.Core.Configuration.Modes.IMode
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Entity`1.Update
   commentId: M:VRBuilder.Core.Entity`1.Update
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
   name: Update()
   nameWithType: Entity<TData>.Update()
   fullName: VRBuilder.Core.Entity<TData>.Update()
@@ -1407,35 +1675,39 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity<TData>.Update
+    fullName: VRBuilder.Core.Entity<TData>.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.Update
     name: Update
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update
+    nameWithType: Entity(Of TData).Update
+    fullName: VRBuilder.Core.Entity(Of TData).Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor*
   commentId: Overload:VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor
-  href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html#VRBuilder_Core_Conditions_ObjectInColliderCondition__ctor
   name: ObjectInColliderCondition
   nameWithType: ObjectInColliderCondition.ObjectInColliderCondition
   fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.ObjectInColliderCondition
-  nameWithType.vb: ObjectInColliderCondition.New
-  fullName.vb: VRBuilder.Core.Conditions.ObjectInColliderCondition.New
-  name.vb: New
 - uid: VRBuilder.Core.Properties.ColliderWithTriggerProperty
   commentId: T:VRBuilder.Core.Properties.ColliderWithTriggerProperty
   parent: VRBuilder.Core.Properties
-  href: VRBuilder.Core.Properties.ColliderWithTriggerProperty.html
   name: ColliderWithTriggerProperty
   nameWithType: ColliderWithTriggerProperty
   fullName: VRBuilder.Core.Properties.ColliderWithTriggerProperty
 - uid: VRBuilder.Core.SceneObjects.ISceneObject
   commentId: T:VRBuilder.Core.SceneObjects.ISceneObject
   parent: VRBuilder.Core.SceneObjects
-  href: VRBuilder.Core.SceneObjects.ISceneObject.html
   name: ISceneObject
   nameWithType: ISceneObject
   fullName: VRBuilder.Core.SceneObjects.ISceneObject
@@ -1443,137 +1715,77 @@ references:
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: VRBuilder.Core.Properties
   commentId: N:VRBuilder.Core.Properties
-  href: VRBuilder.html
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Properties
-    name: Properties
-    href: VRBuilder.Core.Properties.html
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
-  href: VRBuilder.html
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.SceneObjects
-    name: SceneObjects
-    href: VRBuilder.Core.SceneObjects.html
 - uid: System.String
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.guid
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
-- uid: VRBuilder.Core.Stage
-  commentId: T:VRBuilder.Core.Stage
-  parent: VRBuilder.Core
-  href: VRBuilder.Core.Stage.html
-  name: Stage
-  nameWithType: Stage
-  fullName: VRBuilder.Core.Stage
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActiveProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActiveProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.Entity`1.GetActiveProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
   name: GetActiveProcess()
   nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetActiveProcess()
   fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetActiveProcess()
   nameWithType.vb: Entity(Of ObjectInColliderCondition.EntityData).GetActiveProcess()
   fullName.vb: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetActiveProcess()
   spec.csharp:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActiveProcess
+  - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity<ObjectInColliderCondition.EntityData>.GetActiveProcess
+    fullName: VRBuilder.Core.Entity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetActiveProcess
+  - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity(Of ObjectInColliderCondition.EntityData).GetActiveProcess
+    fullName: VRBuilder.Core.Entity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetActiveProcess*
   commentId: Overload:VRBuilder.Core.Conditions.ObjectInColliderCondition.GetActiveProcess
-  href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html#VRBuilder_Core_Conditions_ObjectInColliderCondition_GetActiveProcess
   name: GetActiveProcess
   nameWithType: ObjectInColliderCondition.GetActiveProcess
   fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetActiveProcess
 - uid: VRBuilder.Core.IStageProcess
   commentId: T:VRBuilder.Core.IStageProcess
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IStageProcess.html
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
 - uid: VRBuilder.Core.Entity`1.GetActiveProcess
   commentId: M:VRBuilder.Core.Entity`1.GetActiveProcess
-  href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
   name: GetActiveProcess()
   nameWithType: Entity<TData>.GetActiveProcess()
   fullName: VRBuilder.Core.Entity<TData>.GetActiveProcess()
@@ -1582,78 +1794,69 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity<TData>.GetActiveProcess
+    fullName: VRBuilder.Core.Entity<TData>.GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.Entity`1.GetActiveProcess
     name: GetActiveProcess
-    href: VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetActiveProcess
+    nameWithType: Entity(Of TData).GetActiveProcess
+    fullName: VRBuilder.Core.Entity(Of TData).GetActiveProcess
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
-- uid: VRBuilder.Core.Autocompleter`1
-  commentId: T:VRBuilder.Core.Autocompleter`1
-  href: VRBuilder.Core.Autocompleter-1.html
-  name: Autocompleter<TData>
-  nameWithType: Autocompleter<TData>
-  fullName: VRBuilder.Core.Autocompleter<TData>
-  nameWithType.vb: Autocompleter(Of TData)
-  fullName.vb: VRBuilder.Core.Autocompleter(Of TData)
-  name.vb: Autocompleter(Of TData)
-  spec.csharp:
-  - uid: VRBuilder.Core.Autocompleter`1
-    name: Autocompleter
-    href: VRBuilder.Core.Autocompleter-1.html
-  - name: <
-  - name: TData
-  - name: '>'
-  spec.vb:
-  - uid: VRBuilder.Core.Autocompleter`1
-    name: Autocompleter
-    href: VRBuilder.Core.Autocompleter-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TData
-  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetAutocompleter
   commentId: M:VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetAutocompleter
   parent: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}
   definition: VRBuilder.Core.CompletableEntity`1.GetAutocompleter
-  href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_GetAutocompleter
   name: GetAutocompleter()
   nameWithType: CompletableEntity<ObjectInColliderCondition.EntityData>.GetAutocompleter()
   fullName: VRBuilder.Core.CompletableEntity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetAutocompleter()
   nameWithType.vb: CompletableEntity(Of ObjectInColliderCondition.EntityData).GetAutocompleter()
   fullName.vb: VRBuilder.Core.CompletableEntity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetAutocompleter()
   spec.csharp:
-  - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetAutocompleter
+  - uid: VRBuilder.Core.CompletableEntity`1.GetAutocompleter
     name: GetAutocompleter
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_GetAutocompleter
+    nameWithType: CompletableEntity<ObjectInColliderCondition.EntityData>.GetAutocompleter
+    fullName: VRBuilder.Core.CompletableEntity<VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData>.GetAutocompleter
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetAutocompleter
+  - uid: VRBuilder.Core.CompletableEntity`1.GetAutocompleter
     name: GetAutocompleter
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_GetAutocompleter
+    nameWithType: CompletableEntity(Of ObjectInColliderCondition.EntityData).GetAutocompleter
+    fullName: VRBuilder.Core.CompletableEntity(Of VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData).GetAutocompleter
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter*
   commentId: Overload:VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter
-  href: VRBuilder.Core.Conditions.ObjectInColliderCondition.html#VRBuilder_Core_Conditions_ObjectInColliderCondition_GetAutocompleter
   name: GetAutocompleter
   nameWithType: ObjectInColliderCondition.GetAutocompleter
   fullName: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter
 - uid: VRBuilder.Core.IAutocompleter
   commentId: T:VRBuilder.Core.IAutocompleter
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IAutocompleter.html
   name: IAutocompleter
   nameWithType: IAutocompleter
   fullName: VRBuilder.Core.IAutocompleter
 - uid: VRBuilder.Core.CompletableEntity`1.GetAutocompleter
   commentId: M:VRBuilder.Core.CompletableEntity`1.GetAutocompleter
-  href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_GetAutocompleter
   name: GetAutocompleter()
   nameWithType: CompletableEntity<TData>.GetAutocompleter()
   fullName: VRBuilder.Core.CompletableEntity<TData>.GetAutocompleter()
@@ -1662,12 +1865,22 @@ references:
   spec.csharp:
   - uid: VRBuilder.Core.CompletableEntity`1.GetAutocompleter
     name: GetAutocompleter
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_GetAutocompleter
+    nameWithType: CompletableEntity<TData>.GetAutocompleter
+    fullName: VRBuilder.Core.CompletableEntity<TData>.GetAutocompleter
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.CompletableEntity`1.GetAutocompleter
     name: GetAutocompleter
-    href: VRBuilder.Core.CompletableEntity-1.html#VRBuilder_Core_CompletableEntity_1_GetAutocompleter
+    nameWithType: CompletableEntity(Of TData).GetAutocompleter
+    fullName: VRBuilder.Core.CompletableEntity(Of TData).GetAutocompleter
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )

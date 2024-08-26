@@ -31,22 +31,34 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The implementation of the <xref href="VRBuilder.Core.ILifeCycle" data-throw-if-not-resolved="false"></xref> interface.
+  summary: "\nThe implementation of the <xref href=\"VRBuilder.Core.ILifeCycle\" data-throw-if-not-resolved=\"false\"></xref> interface.\n"
   example: []
   syntax:
     content: 'public sealed class LifeCycle : ILifeCycle'
-    content.vb: Public NotInheritable Class LifeCycle Implements ILifeCycle
+    content.vb: >-
+      Public NotInheritable Class LifeCycle
+
+          Implements ILifeCycle
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.ILifeCycle
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: VRBuilder.Core.LifeCycle.#ctor(VRBuilder.Core.IEntity)
   commentId: M:VRBuilder.Core.LifeCycle.#ctor(VRBuilder.Core.IEntity)
   id: '#ctor(VRBuilder.Core.IEntity)'
@@ -76,9 +88,10 @@ items:
       type: VRBuilder.Core.IEntity
     content.vb: Public Sub New(owner As IEntity)
   overload: VRBuilder.Core.LifeCycle.#ctor*
-  nameWithType.vb: LifeCycle.New(IEntity)
-  fullName.vb: VRBuilder.Core.LifeCycle.New(VRBuilder.Core.IEntity)
-  name.vb: New(IEntity)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.LifeCycle.StageChanged
   commentId: E:VRBuilder.Core.LifeCycle.StageChanged
   id: StageChanged
@@ -101,7 +114,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: An event which is fired when the current stage changes.
   example: []
   syntax:
     content: public event EventHandler<ActivationStateChangedEventArgs> StageChanged
@@ -110,6 +122,10 @@ items:
     content.vb: Public Event StageChanged As EventHandler(Of ActivationStateChangedEventArgs)
   implements:
   - VRBuilder.Core.ILifeCycle.StageChanged
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.LifeCycle.Stage
   commentId: P:VRBuilder.Core.LifeCycle.Stage
   id: Stage
@@ -132,17 +148,22 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: The current stage.
   example: []
   syntax:
     content: public Stage Stage { get; }
     parameters: []
     return:
       type: VRBuilder.Core.Stage
-    content.vb: Public Property Stage As Stage
+    content.vb: Public ReadOnly Property Stage As Stage
   overload: VRBuilder.Core.LifeCycle.Stage*
   implements:
   - VRBuilder.Core.ILifeCycle.Stage
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: VRBuilder.Core.LifeCycle.Activate
   commentId: M:VRBuilder.Core.LifeCycle.Activate
   id: Activate
@@ -165,14 +186,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Enters Activating stage if was deactivating.
   example: []
   syntax:
     content: public void Activate()
-    content.vb: Public Sub Activate()
+    content.vb: Public Sub Activate
   overload: VRBuilder.Core.LifeCycle.Activate*
   implements:
   - VRBuilder.Core.ILifeCycle.Activate
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.LifeCycle.Deactivate
   commentId: M:VRBuilder.Core.LifeCycle.Deactivate
   id: Deactivate
@@ -195,14 +219,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Enters Deactivating stage if was Active. If was Activating, will start deactivating as soon as it enters Active stage.
   example: []
   syntax:
     content: public void Deactivate()
-    content.vb: Public Sub Deactivate()
+    content.vb: Public Sub Deactivate
   overload: VRBuilder.Core.LifeCycle.Deactivate*
   implements:
   - VRBuilder.Core.ILifeCycle.Deactivate
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.LifeCycle.MarkToFastForward
   commentId: M:VRBuilder.Core.LifeCycle.MarkToFastForward
   id: MarkToFastForward
@@ -225,14 +252,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Marks all stages to fast-forward until it reaches Inactive stage.
   example: []
   syntax:
     content: public void MarkToFastForward()
-    content.vb: Public Sub MarkToFastForward()
+    content.vb: Public Sub MarkToFastForward
   overload: VRBuilder.Core.LifeCycle.MarkToFastForward*
   implements:
   - VRBuilder.Core.ILifeCycle.MarkToFastForward
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.LifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
   commentId: M:VRBuilder.Core.LifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
   id: MarkToFastForwardStage(VRBuilder.Core.Stage)
@@ -255,7 +285,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: Marks the given <code class="paramref">stage</code> to fast-forward.
   example: []
   syntax:
     content: public void MarkToFastForwardStage(Stage stage)
@@ -266,6 +295,10 @@ items:
   overload: VRBuilder.Core.LifeCycle.MarkToFastForwardStage*
   implements:
   - VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: VRBuilder.Core.LifeCycle.Update
   commentId: M:VRBuilder.Core.LifeCycle.Update
   id: Update
@@ -288,277 +321,335 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: This method should be called every frame.
   example: []
   syntax:
     content: public void Update()
-    content.vb: Public Sub Update()
+    content.vb: Public Sub Update
   overload: VRBuilder.Core.LifeCycle.Update*
   implements:
   - VRBuilder.Core.ILifeCycle.Update
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: VRBuilder.Core.ILifeCycle
   commentId: T:VRBuilder.Core.ILifeCycle
   parent: VRBuilder.Core
-  href: VRBuilder.Core.ILifeCycle.html
   name: ILifeCycle
   nameWithType: ILifeCycle
   fullName: VRBuilder.Core.ILifeCycle
 - uid: VRBuilder.Core
   commentId: N:VRBuilder.Core
-  href: VRBuilder.html
   name: VRBuilder.Core
   nameWithType: VRBuilder.Core
   fullName: VRBuilder.Core
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.LifeCycle.#ctor*
   commentId: Overload:VRBuilder.Core.LifeCycle.#ctor
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle__ctor_VRBuilder_Core_IEntity_
   name: LifeCycle
   nameWithType: LifeCycle.LifeCycle
   fullName: VRBuilder.Core.LifeCycle.LifeCycle
-  nameWithType.vb: LifeCycle.New
-  fullName.vb: VRBuilder.Core.LifeCycle.New
-  name.vb: New
 - uid: VRBuilder.Core.IEntity
   commentId: T:VRBuilder.Core.IEntity
   parent: VRBuilder.Core
-  href: VRBuilder.Core.IEntity.html
   name: IEntity
   nameWithType: IEntity
   fullName: VRBuilder.Core.IEntity
 - uid: VRBuilder.Core.ILifeCycle.StageChanged
   commentId: E:VRBuilder.Core.ILifeCycle.StageChanged
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_StageChanged
   name: StageChanged
   nameWithType: ILifeCycle.StageChanged
   fullName: VRBuilder.Core.ILifeCycle.StageChanged
@@ -566,7 +657,6 @@ references:
   commentId: T:System.EventHandler{VRBuilder.Core.ActivationStateChangedEventArgs}
   parent: System
   definition: System.EventHandler`1
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<ActivationStateChangedEventArgs>
   nameWithType: EventHandler<ActivationStateChangedEventArgs>
   fullName: System.EventHandler<VRBuilder.Core.ActivationStateChangedEventArgs>
@@ -576,29 +666,38 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: VRBuilder.Core.ActivationStateChangedEventArgs
     name: ActivationStateChangedEventArgs
-    href: VRBuilder.Core.ActivationStateChangedEventArgs.html
+    nameWithType: ActivationStateChangedEventArgs
+    fullName: VRBuilder.Core.ActivationStateChangedEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: VRBuilder.Core.ActivationStateChangedEventArgs
     name: ActivationStateChangedEventArgs
-    href: VRBuilder.Core.ActivationStateChangedEventArgs.html
+    nameWithType: ActivationStateChangedEventArgs
+    fullName: VRBuilder.Core.ActivationStateChangedEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.EventHandler`1
   commentId: T:System.EventHandler`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   name: EventHandler<TEventArgs>
   nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
@@ -608,169 +707,220 @@ references:
   spec.csharp:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.EventHandler`1
     name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.LifeCycle.Stage*
   commentId: Overload:VRBuilder.Core.LifeCycle.Stage
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle_Stage
   name: Stage
   nameWithType: LifeCycle.Stage
   fullName: VRBuilder.Core.LifeCycle.Stage
 - uid: VRBuilder.Core.ILifeCycle.Stage
   commentId: P:VRBuilder.Core.ILifeCycle.Stage
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Stage
   name: Stage
   nameWithType: ILifeCycle.Stage
   fullName: VRBuilder.Core.ILifeCycle.Stage
 - uid: VRBuilder.Core.Stage
   commentId: T:VRBuilder.Core.Stage
   parent: VRBuilder.Core
-  href: VRBuilder.Core.Stage.html
   name: Stage
   nameWithType: Stage
   fullName: VRBuilder.Core.Stage
 - uid: VRBuilder.Core.LifeCycle.Activate*
   commentId: Overload:VRBuilder.Core.LifeCycle.Activate
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle_Activate
   name: Activate
   nameWithType: LifeCycle.Activate
   fullName: VRBuilder.Core.LifeCycle.Activate
 - uid: VRBuilder.Core.ILifeCycle.Activate
   commentId: M:VRBuilder.Core.ILifeCycle.Activate
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Activate
   name: Activate()
   nameWithType: ILifeCycle.Activate()
   fullName: VRBuilder.Core.ILifeCycle.Activate()
   spec.csharp:
   - uid: VRBuilder.Core.ILifeCycle.Activate
     name: Activate
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Activate
+    nameWithType: ILifeCycle.Activate
+    fullName: VRBuilder.Core.ILifeCycle.Activate
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.ILifeCycle.Activate
     name: Activate
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Activate
+    nameWithType: ILifeCycle.Activate
+    fullName: VRBuilder.Core.ILifeCycle.Activate
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.LifeCycle.Deactivate*
   commentId: Overload:VRBuilder.Core.LifeCycle.Deactivate
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle_Deactivate
   name: Deactivate
   nameWithType: LifeCycle.Deactivate
   fullName: VRBuilder.Core.LifeCycle.Deactivate
 - uid: VRBuilder.Core.ILifeCycle.Deactivate
   commentId: M:VRBuilder.Core.ILifeCycle.Deactivate
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Deactivate
   name: Deactivate()
   nameWithType: ILifeCycle.Deactivate()
   fullName: VRBuilder.Core.ILifeCycle.Deactivate()
   spec.csharp:
   - uid: VRBuilder.Core.ILifeCycle.Deactivate
     name: Deactivate
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Deactivate
+    nameWithType: ILifeCycle.Deactivate
+    fullName: VRBuilder.Core.ILifeCycle.Deactivate
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.ILifeCycle.Deactivate
     name: Deactivate
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Deactivate
+    nameWithType: ILifeCycle.Deactivate
+    fullName: VRBuilder.Core.ILifeCycle.Deactivate
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.LifeCycle.MarkToFastForward*
   commentId: Overload:VRBuilder.Core.LifeCycle.MarkToFastForward
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle_MarkToFastForward
   name: MarkToFastForward
   nameWithType: LifeCycle.MarkToFastForward
   fullName: VRBuilder.Core.LifeCycle.MarkToFastForward
 - uid: VRBuilder.Core.ILifeCycle.MarkToFastForward
   commentId: M:VRBuilder.Core.ILifeCycle.MarkToFastForward
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForward
   name: MarkToFastForward()
   nameWithType: ILifeCycle.MarkToFastForward()
   fullName: VRBuilder.Core.ILifeCycle.MarkToFastForward()
   spec.csharp:
   - uid: VRBuilder.Core.ILifeCycle.MarkToFastForward
     name: MarkToFastForward
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForward
+    nameWithType: ILifeCycle.MarkToFastForward
+    fullName: VRBuilder.Core.ILifeCycle.MarkToFastForward
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.ILifeCycle.MarkToFastForward
     name: MarkToFastForward
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForward
+    nameWithType: ILifeCycle.MarkToFastForward
+    fullName: VRBuilder.Core.ILifeCycle.MarkToFastForward
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.LifeCycle.MarkToFastForwardStage*
   commentId: Overload:VRBuilder.Core.LifeCycle.MarkToFastForwardStage
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle_MarkToFastForwardStage_VRBuilder_Core_Stage_
   name: MarkToFastForwardStage
   nameWithType: LifeCycle.MarkToFastForwardStage
   fullName: VRBuilder.Core.LifeCycle.MarkToFastForwardStage
 - uid: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
   commentId: M:VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForwardStage_VRBuilder_Core_Stage_
   name: MarkToFastForwardStage(Stage)
   nameWithType: ILifeCycle.MarkToFastForwardStage(Stage)
   fullName: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
   spec.csharp:
   - uid: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
     name: MarkToFastForwardStage
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForwardStage_VRBuilder_Core_Stage_
+    nameWithType: ILifeCycle.MarkToFastForwardStage
+    fullName: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Stage
     name: Stage
-    href: VRBuilder.Core.Stage.html
+    nameWithType: Stage
+    fullName: VRBuilder.Core.Stage
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage(VRBuilder.Core.Stage)
     name: MarkToFastForwardStage
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_MarkToFastForwardStage_VRBuilder_Core_Stage_
+    nameWithType: ILifeCycle.MarkToFastForwardStage
+    fullName: VRBuilder.Core.ILifeCycle.MarkToFastForwardStage
   - name: (
+    nameWithType: (
+    fullName: (
   - uid: VRBuilder.Core.Stage
     name: Stage
-    href: VRBuilder.Core.Stage.html
+    nameWithType: Stage
+    fullName: VRBuilder.Core.Stage
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.LifeCycle.Update*
   commentId: Overload:VRBuilder.Core.LifeCycle.Update
-  href: VRBuilder.Core.LifeCycle.html#VRBuilder_Core_LifeCycle_Update
   name: Update
   nameWithType: LifeCycle.Update
   fullName: VRBuilder.Core.LifeCycle.Update
 - uid: VRBuilder.Core.ILifeCycle.Update
   commentId: M:VRBuilder.Core.ILifeCycle.Update
   parent: VRBuilder.Core.ILifeCycle
-  href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Update
   name: Update()
   nameWithType: ILifeCycle.Update()
   fullName: VRBuilder.Core.ILifeCycle.Update()
   spec.csharp:
   - uid: VRBuilder.Core.ILifeCycle.Update
     name: Update
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Update
+    nameWithType: ILifeCycle.Update
+    fullName: VRBuilder.Core.ILifeCycle.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: VRBuilder.Core.ILifeCycle.Update
     name: Update
-    href: VRBuilder.Core.ILifeCycle.html#VRBuilder_Core_ILifeCycle_Update
+    nameWithType: ILifeCycle.Update
+    fullName: VRBuilder.Core.ILifeCycle.Update
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )

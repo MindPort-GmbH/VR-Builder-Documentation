@@ -54,13 +54,20 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
+  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetNameWithNesting(System.Type)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetNameWithNesting(System.Type)
   id: GetNameWithNesting(System.Type)
@@ -84,7 +91,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Return <code class="paramref">type</code> name taking into consideration if it is nested type or not.
+  summary: "\nReturn <code data-dev-comment-type=\"paramref\" class=\"paramref\">type</code> name taking into consideration if it is nested type or not.\n"
   example: []
   syntax:
     content: public static string GetNameWithNesting(this Type type)
@@ -93,8 +100,17 @@ items:
       type: System.Type
     return:
       type: System.String
-    content.vb: Public Shared Function GetNameWithNesting(type As Type) As String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetNameWithNesting(type As Type) As String
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetNameWithNesting*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(System.Object)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(System.Object)
   id: GetEntryType(System.Object)
@@ -102,9 +118,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetEntryType(object)
-  nameWithType: ReflectionUtils.GetEntryType(object)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(object)
+  name: GetEntryType(Object)
+  nameWithType: ReflectionUtils.GetEntryType(Object)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(System.Object)
   type: Method
   source:
     remote:
@@ -126,9 +142,12 @@ items:
       type: System.Type
     content.vb: Public Shared Function GetEntryType(list As Object) As Type
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType*
-  nameWithType.vb: ReflectionUtils.GetEntryType(Object)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(Object)
-  name.vb: GetEntryType(Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(System.Type)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetEntryType(System.Type)
   id: GetEntryType(System.Type)
@@ -151,7 +170,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: If the given <code class="paramref">listType</code> is IList{T}, return its generic type argument. Otherwise, return typeof(object).
+  summary: "\nIf the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">listType</code> is IList{T}, return its generic type argument. Otherwise, return typeof(object).\n"
   example: []
   syntax:
     content: public static Type GetEntryType(Type listType)
@@ -162,6 +181,12 @@ items:
       type: System.Type
     content.vb: Public Shared Function GetEntryType(listType As Type) As Type
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetAllTypes
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetAllTypes
   id: GetAllTypes
@@ -184,14 +209,20 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns all existing types of all assemblies.
+  summary: "\nReturns all existing types of all assemblies.\n"
   example: []
   syntax:
     content: public static IEnumerable<Type> GetAllTypes()
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-    content.vb: Public Shared Function GetAllTypes() As IEnumerable(Of Type)
+    content.vb: Public Shared Function GetAllTypes As IEnumerable(Of Type)
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetAllTypes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf(System.Type)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf(System.Type)
   id: GetConcreteImplementationsOf(System.Type)
@@ -214,7 +245,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns non-abstract classes that implement or inherit from given type.
+  summary: "\nReturns non-abstract classes that implement or inherit from given type.\n"
   example: []
   syntax:
     content: public static IEnumerable<Type> GetConcreteImplementationsOf(Type baseType)
@@ -225,6 +256,12 @@ items:
       type: System.Collections.Generic.IEnumerable{System.Type}
     content.vb: Public Shared Function GetConcreteImplementationsOf(baseType As Type) As IEnumerable(Of Type)
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute``1(System.Collections.Generic.IEnumerable{System.Type})
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute``1(System.Collections.Generic.IEnumerable{System.Type})
   id: WhichHaveAttribute``1(System.Collections.Generic.IEnumerable{System.Type})
@@ -248,10 +285,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns <code class="paramref">types</code> which have attribute <code class="typeparamref">T</code>.
+  summary: "\nReturns <code data-dev-comment-type=\"paramref\" class=\"paramref\">types</code> which have attribute <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code>.\n"
   example: []
   syntax:
-    content: 'public static IEnumerable<Type> WhichHaveAttribute<T>(this IEnumerable<Type> types) where T : Attribute'
+    content: >-
+      public static IEnumerable<Type> WhichHaveAttribute<T>(this IEnumerable<Type> types)
+
+          where T : Attribute
     parameters:
     - id: types
       type: System.Collections.Generic.IEnumerable{System.Type}
@@ -259,9 +299,18 @@ items:
     - id: T
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-    content.vb: Public Shared Function WhichHaveAttribute(Of T As Attribute)(types As IEnumerable(Of Type)) As IEnumerable(Of Type)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function WhichHaveAttribute(Of T As Attribute)(types As IEnumerable(Of Type)) As IEnumerable(Of Type)
   overload: VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute*
   nameWithType.vb: ReflectionUtils.WhichHaveAttribute(Of T)(IEnumerable(Of Type))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
   fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute(Of T)(System.Collections.Generic.IEnumerable(Of System.Type))
   name.vb: WhichHaveAttribute(Of T)(IEnumerable(Of Type))
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute``1(System.Type,System.Boolean)
@@ -272,9 +321,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetAttribute<T>(Type, bool)
-  nameWithType: ReflectionUtils.GetAttribute<T>(Type, bool)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute<T>(System.Type, bool)
+  name: GetAttribute<T>(Type, Boolean)
+  nameWithType: ReflectionUtils.GetAttribute<T>(Type, Boolean)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute<T>(System.Type, System.Boolean)
   type: Method
   source:
     remote:
@@ -287,10 +336,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns first attribute <code class="typeparamref">T</code> of <code class="paramref">type</code>
+  summary: "\nReturns first attribute <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code> of <code data-dev-comment-type=\"paramref\" class=\"paramref\">type</code>\n"
   example: []
   syntax:
-    content: 'public static T GetAttribute<T>(this Type type, bool inherit = false) where T : Attribute'
+    content: >-
+      public static T GetAttribute<T>(this Type type, bool inherit = false)
+
+          where T : Attribute
     parameters:
     - id: type
       type: System.Type
@@ -300,10 +352,19 @@ items:
     - id: T
     return:
       type: '{T}'
-    content.vb: Public Shared Function GetAttribute(Of T As Attribute)(type As Type, inherit As Boolean = False) As T
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAttribute(Of T As Attribute)(type As Type, inherit As Boolean = False) As T
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute*
   nameWithType.vb: ReflectionUtils.GetAttribute(Of T)(Type, Boolean)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute(Of T)(System.Type, Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute(Of T)(System.Type, System.Boolean)
   name.vb: GetAttribute(Of T)(Type, Boolean)
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf``1
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf``1
@@ -327,7 +388,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns non-abstract classes that implement or inherit from given type.
+  summary: "\nReturns non-abstract classes that implement or inherit from given type.\n"
   example: []
   syntax:
     content: public static IEnumerable<Type> GetConcreteImplementationsOf<T>()
@@ -335,9 +396,15 @@ items:
     - id: T
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-    content.vb: Public Shared Function GetConcreteImplementationsOf(Of T)() As IEnumerable(Of Type)
+    content.vb: Public Shared Function GetConcreteImplementationsOf(Of T) As IEnumerable(Of Type)
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf*
   nameWithType.vb: ReflectionUtils.GetConcreteImplementationsOf(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
   fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf(Of T)()
   name.vb: GetConcreteImplementationsOf(Of T)()
 - uid: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType(System.Type)
@@ -362,7 +429,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Creates instance of given type using public or protected constructor with no parameters.
+  summary: "\nCreates instance of given type using public or protected constructor with no parameters.\n"
   example: []
   syntax:
     content: public static object CreateInstanceOfType(Type type)
@@ -373,6 +440,12 @@ items:
       type: System.Object
     content.vb: Public Shared Function CreateInstanceOfType(type As Type) As Object
   overload: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType``1
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType``1
   id: CreateInstanceOfType``1
@@ -395,7 +468,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Creates instance of given type using public or protected constructor with no parameters.
+  summary: "\nCreates instance of given type using public or protected constructor with no parameters.\n"
   example: []
   syntax:
     content: public static T CreateInstanceOfType<T>()
@@ -403,9 +476,15 @@ items:
     - id: T
     return:
       type: '{T}'
-    content.vb: Public Shared Function CreateInstanceOfType(Of T)() As T
+    content.vb: Public Shared Function CreateInstanceOfType(Of T) As T
   overload: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType*
   nameWithType.vb: ReflectionUtils.CreateInstanceOfType(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
   fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType(Of T)()
   name.vb: CreateInstanceOfType(Of T)()
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetDefault(System.Type)
@@ -430,7 +509,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns default instance of type.
+  summary: "\nReturns default instance of type.\n"
   example: []
   syntax:
     content: public static object GetDefault(Type type)
@@ -441,6 +520,12 @@ items:
       type: System.Object
     content.vb: Public Shared Function GetDefault(type As Type) As Object
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetDefault*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface(System.Object)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface(System.Object)
   id: GetGenericDictionaryInterface(System.Object)
@@ -448,9 +533,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetGenericDictionaryInterface(object)
-  nameWithType: ReflectionUtils.GetGenericDictionaryInterface(object)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface(object)
+  name: GetGenericDictionaryInterface(Object)
+  nameWithType: ReflectionUtils.GetGenericDictionaryInterface(Object)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface(System.Object)
   type: Method
   source:
     remote:
@@ -463,10 +548,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: >-
-    Returns generic IDictionary interface which is implemented by the type of <code class="paramref">dictionaryValue</code>.
-
-    If <code class="paramref">dictionaryValue</code>'s type does not implement it, returns null.
+  summary: "\nReturns generic IDictionary interface which is implemented by the type of <code data-dev-comment-type=\"paramref\" class=\"paramref\">dictionaryValue</code>.\nIf <code data-dev-comment-type=\"paramref\" class=\"paramref\">dictionaryValue</code>&apos;s type does not implement it, returns null.\n"
   example: []
   syntax:
     content: public static Type GetGenericDictionaryInterface(object dictionaryValue)
@@ -477,9 +559,12 @@ items:
       type: System.Type
     content.vb: Public Shared Function GetGenericDictionaryInterface(dictionaryValue As Object) As Type
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface*
-  nameWithType.vb: ReflectionUtils.GetGenericDictionaryInterface(Object)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface(Object)
-  name.vb: GetGenericDictionaryInterface(Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList(System.Collections.IList@,System.Int32)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList(System.Collections.IList@,System.Int32)
   id: RemoveFromList(System.Collections.IList@,System.Int32)
@@ -487,9 +572,9 @@ items:
   langs:
   - csharp
   - vb
-  name: RemoveFromList(ref IList, int)
-  nameWithType: ReflectionUtils.RemoveFromList(ref IList, int)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList(ref System.Collections.IList, int)
+  name: RemoveFromList(ref IList, Int32)
+  nameWithType: ReflectionUtils.RemoveFromList(ref IList, Int32)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList(ref System.Collections.IList, System.Int32)
   type: Method
   source:
     remote:
@@ -502,7 +587,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Remove an element from <code class="paramref">list</code> at <code class="paramref">index</code>. If the list is fixed size, new instance is created.
+  summary: "\nRemove an element from <code data-dev-comment-type=\"paramref\" class=\"paramref\">list</code> at <code data-dev-comment-type=\"paramref\" class=\"paramref\">index</code>. If the list is fixed size, new instance is created.\n"
   example: []
   syntax:
     content: public static void RemoveFromList(ref IList list, int index)
@@ -511,11 +596,17 @@ items:
       type: System.Collections.IList
     - id: index
       type: System.Int32
-    content.vb: Public Shared Sub RemoveFromList(list As IList, index As Integer)
+    content.vb: Public Shared Sub RemoveFromList(ByRef list As IList, index As Integer)
   overload: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList*
-  nameWithType.vb: ReflectionUtils.RemoveFromList(IList, Integer)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList(System.Collections.IList, Integer)
-  name.vb: RemoveFromList(IList, Integer)
+  nameWithType.vb: ReflectionUtils.RemoveFromList(ByRef IList, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList(ByRef System.Collections.IList, System.Int32)
+  name.vb: RemoveFromList(ByRef IList, Int32)
 - uid: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList(System.Collections.IList@,System.Int32,System.Object)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList(System.Collections.IList@,System.Int32,System.Object)
   id: InsertIntoList(System.Collections.IList@,System.Int32,System.Object)
@@ -523,9 +614,9 @@ items:
   langs:
   - csharp
   - vb
-  name: InsertIntoList(ref IList, int, object)
-  nameWithType: ReflectionUtils.InsertIntoList(ref IList, int, object)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList(ref System.Collections.IList, int, object)
+  name: InsertIntoList(ref IList, Int32, Object)
+  nameWithType: ReflectionUtils.InsertIntoList(ref IList, Int32, Object)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList(ref System.Collections.IList, System.Int32, System.Object)
   type: Method
   source:
     remote:
@@ -538,7 +629,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Insert a <code class="paramref">value</code> in <code class="paramref">list</code> at index <code class="paramref">index</code>. If the list is fixed size, new instance is created.
+  summary: "\nInsert a <code data-dev-comment-type=\"paramref\" class=\"paramref\">value</code> in <code data-dev-comment-type=\"paramref\" class=\"paramref\">list</code> at index <code data-dev-comment-type=\"paramref\" class=\"paramref\">index</code>. If the list is fixed size, new instance is created.\n"
   example: []
   syntax:
     content: public static void InsertIntoList(ref IList list, int index, object value)
@@ -549,11 +640,17 @@ items:
       type: System.Int32
     - id: value
       type: System.Object
-    content.vb: Public Shared Sub InsertIntoList(list As IList, index As Integer, value As Object)
+    content.vb: Public Shared Sub InsertIntoList(ByRef list As IList, index As Integer, value As Object)
   overload: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList*
-  nameWithType.vb: ReflectionUtils.InsertIntoList(IList, Integer, Object)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList(System.Collections.IList, Integer, Object)
-  name.vb: InsertIntoList(IList, Integer, Object)
+  nameWithType.vb: ReflectionUtils.InsertIntoList(ByRef IList, Int32, Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList(ByRef System.Collections.IList, System.Int32, System.Object)
+  name.vb: InsertIntoList(ByRef IList, Int32, Object)
 - uid: VRBuilder.Core.Utils.ReflectionUtils.ReplaceList``1(System.Collections.IList@,System.Collections.Generic.IEnumerable{``0})
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.ReplaceList``1(System.Collections.IList@,System.Collections.Generic.IEnumerable{``0})
   id: ReplaceList``1(System.Collections.IList@,System.Collections.Generic.IEnumerable{``0})
@@ -576,7 +673,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Replace <code class="paramref">list</code> with a <code class="paramref">newList</code>. New instance is created.
+  summary: "\nReplace <code data-dev-comment-type=\"paramref\" class=\"paramref\">list</code> with a <code data-dev-comment-type=\"paramref\" class=\"paramref\">newList</code>. New instance is created.\n"
   example: []
   syntax:
     content: public static void ReplaceList<T>(ref IList list, IEnumerable<T> newList)
@@ -587,11 +684,17 @@ items:
       type: System.Collections.Generic.IEnumerable{{T}}
     typeParameters:
     - id: T
-    content.vb: Public Shared Sub ReplaceList(Of T)(list As IList, newList As IEnumerable(Of T))
+    content.vb: Public Shared Sub ReplaceList(Of T)(ByRef list As IList, newList As IEnumerable(Of T))
   overload: VRBuilder.Core.Utils.ReflectionUtils.ReplaceList*
-  nameWithType.vb: ReflectionUtils.ReplaceList(Of T)(IList, IEnumerable(Of T))
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.ReplaceList(Of T)(System.Collections.IList, System.Collections.Generic.IEnumerable(Of T))
-  name.vb: ReplaceList(Of T)(IList, IEnumerable(Of T))
+  nameWithType.vb: ReflectionUtils.ReplaceList(Of T)(ByRef IList, IEnumerable(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.ReplaceList(Of T)(ByRef System.Collections.IList, System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ReplaceList(Of T)(ByRef IList, IEnumerable(Of T))
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetDeclaredTypeOfPropertyOrField(System.Reflection.MemberInfo)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetDeclaredTypeOfPropertyOrField(System.Reflection.MemberInfo)
   id: GetDeclaredTypeOfPropertyOrField(System.Reflection.MemberInfo)
@@ -614,7 +717,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Get declared type of field/property <code class="paramref">info</code>.
+  summary: "\nGet declared type of field/property <code data-dev-comment-type=\"paramref\" class=\"paramref\">info</code>.\n"
   example: []
   syntax:
     content: public static Type GetDeclaredTypeOfPropertyOrField(MemberInfo info)
@@ -625,6 +728,12 @@ items:
       type: System.Type
     content.vb: Public Shared Function GetDeclaredTypeOfPropertyOrField(info As MemberInfo) As Type
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetDeclaredTypeOfPropertyOrField*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsProperty(System.Reflection.MemberInfo)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.IsProperty(System.Reflection.MemberInfo)
   id: IsProperty(System.Reflection.MemberInfo)
@@ -647,7 +756,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Is given <code class="paramref">memberInfo</code> a PropertyInfo?
+  summary: "\nIs given <code data-dev-comment-type=\"paramref\" class=\"paramref\">memberInfo</code> a PropertyInfo?\n"
   example: []
   syntax:
     content: public static bool IsProperty(MemberInfo memberInfo)
@@ -658,6 +767,12 @@ items:
       type: System.Boolean
     content.vb: Public Shared Function IsProperty(memberInfo As MemberInfo) As Boolean
   overload: VRBuilder.Core.Utils.ReflectionUtils.IsProperty*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsField(System.Reflection.MemberInfo)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.IsField(System.Reflection.MemberInfo)
   id: IsField(System.Reflection.MemberInfo)
@@ -680,7 +795,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Is given <code class="paramref">memberInfo</code> a FieldInfo?
+  summary: "\nIs given <code data-dev-comment-type=\"paramref\" class=\"paramref\">memberInfo</code> a FieldInfo?\n"
   example: []
   syntax:
     content: public static bool IsField(MemberInfo memberInfo)
@@ -691,6 +806,12 @@ items:
       type: System.Boolean
     content.vb: Public Shared Function IsField(memberInfo As MemberInfo) As Boolean
   overload: VRBuilder.Core.Utils.ReflectionUtils.IsField*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField(System.Object,System.Reflection.MemberInfo,System.Object)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField(System.Object,System.Reflection.MemberInfo,System.Object)
   id: SetValueToPropertyOrField(System.Object,System.Reflection.MemberInfo,System.Object)
@@ -698,9 +819,9 @@ items:
   langs:
   - csharp
   - vb
-  name: SetValueToPropertyOrField(object, MemberInfo, object)
-  nameWithType: ReflectionUtils.SetValueToPropertyOrField(object, MemberInfo, object)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField(object, System.Reflection.MemberInfo, object)
+  name: SetValueToPropertyOrField(Object, MemberInfo, Object)
+  nameWithType: ReflectionUtils.SetValueToPropertyOrField(Object, MemberInfo, Object)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField(System.Object, System.Reflection.MemberInfo, System.Object)
   type: Method
   source:
     remote:
@@ -713,7 +834,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Set <code class="paramref">value</code> to property/field <code class="paramref">member</code> of object <code class="paramref">owner</code>.
+  summary: "\nSet <code data-dev-comment-type=\"paramref\" class=\"paramref\">value</code> to property/field <code data-dev-comment-type=\"paramref\" class=\"paramref\">member</code> of object <code data-dev-comment-type=\"paramref\" class=\"paramref\">owner</code>.\n"
   example: []
   syntax:
     content: public static void SetValueToPropertyOrField(object owner, MemberInfo member, object value)
@@ -726,9 +847,12 @@ items:
       type: System.Object
     content.vb: Public Shared Sub SetValueToPropertyOrField(owner As Object, member As MemberInfo, value As Object)
   overload: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField*
-  nameWithType.vb: ReflectionUtils.SetValueToPropertyOrField(Object, MemberInfo, Object)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField(Object, System.Reflection.MemberInfo, Object)
-  name.vb: SetValueToPropertyOrField(Object, MemberInfo, Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField(System.Object,System.Reflection.MemberInfo)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField(System.Object,System.Reflection.MemberInfo)
   id: GetValueFromPropertyOrField(System.Object,System.Reflection.MemberInfo)
@@ -736,9 +860,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetValueFromPropertyOrField(object, MemberInfo)
-  nameWithType: ReflectionUtils.GetValueFromPropertyOrField(object, MemberInfo)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField(object, System.Reflection.MemberInfo)
+  name: GetValueFromPropertyOrField(Object, MemberInfo)
+  nameWithType: ReflectionUtils.GetValueFromPropertyOrField(Object, MemberInfo)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField(System.Object, System.Reflection.MemberInfo)
   type: Method
   source:
     remote:
@@ -751,7 +875,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Get value from property/field <code class="paramref">member</code> of object <code class="paramref">owner</code>
+  summary: "\nGet value from property/field <code data-dev-comment-type=\"paramref\" class=\"paramref\">member</code> of object <code data-dev-comment-type=\"paramref\" class=\"paramref\">owner</code>\n"
   example: []
   syntax:
     content: public static object GetValueFromPropertyOrField(object owner, MemberInfo member)
@@ -764,9 +888,12 @@ items:
       type: System.Object
     content.vb: Public Shared Function GetValueFromPropertyOrField(owner As Object, member As MemberInfo) As Object
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField*
-  nameWithType.vb: ReflectionUtils.GetValueFromPropertyOrField(Object, MemberInfo)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField(Object, System.Reflection.MemberInfo)
-  name.vb: GetValueFromPropertyOrField(Object, MemberInfo)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName(System.String)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName(System.String)
   id: GetTypeFromAssemblyQualifiedName(System.String)
@@ -774,9 +901,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetTypeFromAssemblyQualifiedName(string)
-  nameWithType: ReflectionUtils.GetTypeFromAssemblyQualifiedName(string)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName(string)
+  name: GetTypeFromAssemblyQualifiedName(String)
+  nameWithType: ReflectionUtils.GetTypeFromAssemblyQualifiedName(String)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName(System.String)
   type: Method
   source:
     remote:
@@ -789,7 +916,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Returns the type from <code class="paramref">assemblyQualifiedName</code> or null if not found.
+  summary: "\nReturns the type from <code data-dev-comment-type=\"paramref\" class=\"paramref\">assemblyQualifiedName</code> or null if not found.\n"
   example: []
   syntax:
     content: public static Type GetTypeFromAssemblyQualifiedName(string assemblyQualifiedName)
@@ -800,9 +927,12 @@ items:
       type: System.Type
     content.vb: Public Shared Function GetTypeFromAssemblyQualifiedName(assemblyQualifiedName As String) As Type
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName*
-  nameWithType.vb: ReflectionUtils.GetTypeFromAssemblyQualifiedName(String)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName(String)
-  name.vb: GetTypeFromAssemblyQualifiedName(String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf``1(System.Type[])
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf``1(System.Type[])
   id: GetFinalImplementationsOf``1(System.Type[])
@@ -810,9 +940,9 @@ items:
   langs:
   - csharp
   - vb
-  name: GetFinalImplementationsOf<T>(params Type[])
-  nameWithType: ReflectionUtils.GetFinalImplementationsOf<T>(params Type[])
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf<T>(params System.Type[])
+  name: GetFinalImplementationsOf<T>(Type[])
+  nameWithType: ReflectionUtils.GetFinalImplementationsOf<T>(Type[])
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf<T>(System.Type[])
   type: Method
   source:
     remote:
@@ -825,10 +955,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: >-
-    Return an IEnumerable of types which inherit <code class="typeparamref">T</code> and are not inherited by any other type.
-
-    It is sorted by priority. <code class="paramref">lowestPriorityTypes</code> come at the end.
+  summary: "\nReturn an IEnumerable of types which inherit <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code> and are not inherited by any other type.\nIt is sorted by priority. <code data-dev-comment-type=\"paramref\" class=\"paramref\">lowestPriorityTypes</code> come at the end.\n"
   example: []
   syntax:
     content: public static IEnumerable<Type> GetFinalImplementationsOf<T>(params Type[] lowestPriorityTypes)
@@ -841,9 +968,15 @@ items:
       type: System.Collections.Generic.IEnumerable{System.Type}
     content.vb: Public Shared Function GetFinalImplementationsOf(Of T)(ParamArray lowestPriorityTypes As Type()) As IEnumerable(Of Type)
   overload: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf*
-  nameWithType.vb: ReflectionUtils.GetFinalImplementationsOf(Of T)(ParamArray Type())
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf(Of T)(ParamArray System.Type())
-  name.vb: GetFinalImplementationsOf(Of T)(ParamArray Type())
+  nameWithType.vb: ReflectionUtils.GetFinalImplementationsOf(Of T)(Type())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf(Of T)(System.Type())
+  name.vb: GetFinalImplementationsOf(Of T)(Type())
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsSubclassOfGenericDefinition(System.Type,System.Type)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.IsSubclassOfGenericDefinition(System.Type,System.Type)
   id: IsSubclassOfGenericDefinition(System.Type,System.Type)
@@ -867,7 +1000,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Check if <code class="paramref">type</code> inherits from <code class="paramref">genericDefinition</code>.
+  summary: "\nCheck if <code data-dev-comment-type=\"paramref\" class=\"paramref\">type</code> inherits from <code data-dev-comment-type=\"paramref\" class=\"paramref\">genericDefinition</code>.\n"
   example: []
   syntax:
     content: public static bool IsSubclassOfGenericDefinition(this Type typeToCheck, Type genericDefinition)
@@ -878,8 +1011,17 @@ items:
       type: System.Type
     return:
       type: System.Boolean
-    content.vb: Public Shared Function IsSubclassOfGenericDefinition(typeToCheck As Type, genericDefinition As Type) As Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsSubclassOfGenericDefinition(typeToCheck As Type, genericDefinition As Type) As Boolean
   overload: VRBuilder.Core.Utils.ReflectionUtils.IsSubclassOfGenericDefinition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty(System.Object)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.IsEmpty(System.Object)
   id: IsEmpty(System.Object)
@@ -887,9 +1029,9 @@ items:
   langs:
   - csharp
   - vb
-  name: IsEmpty(object)
-  nameWithType: ReflectionUtils.IsEmpty(object)
-  fullName: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty(object)
+  name: IsEmpty(Object)
+  nameWithType: ReflectionUtils.IsEmpty(Object)
+  fullName: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty(System.Object)
   type: Method
   source:
     remote:
@@ -902,7 +1044,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Determines if the given object is empty.
+  summary: "\nDetermines if the given object is empty.\n"
   example: []
   syntax:
     content: public static bool IsEmpty(object value)
@@ -913,9 +1055,12 @@ items:
       type: System.Boolean
     content.vb: Public Shared Function IsEmpty(value As Object) As Boolean
   overload: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty*
-  nameWithType.vb: ReflectionUtils.IsEmpty(Object)
-  fullName.vb: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty(Object)
-  name.vb: IsEmpty(Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsNumeric(System.Type)
   commentId: M:VRBuilder.Core.Utils.ReflectionUtils.IsNumeric(System.Type)
   id: IsNumeric(System.Type)
@@ -938,7 +1083,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Utils
-  summary: Checks if the given type is a number.
+  summary: "\nChecks if the given type is a number.\n"
   example: []
   syntax:
     content: public static bool IsNumeric(Type type)
@@ -949,277 +1094,312 @@ items:
       type: System.Boolean
     content.vb: Public Shared Function IsNumeric(type As Type) As Boolean
   overload: VRBuilder.Core.Utils.ReflectionUtils.IsNumeric*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: VRBuilder.Core.Utils
   commentId: N:VRBuilder.Core.Utils
-  href: VRBuilder.html
   name: VRBuilder.Core.Utils
   nameWithType: VRBuilder.Core.Utils
   fullName: VRBuilder.Core.Utils
-  spec.csharp:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Utils
-    name: Utils
-    href: VRBuilder.Core.Utils.html
-  spec.vb:
-  - uid: VRBuilder
-    name: VRBuilder
-    href: VRBuilder.html
-  - name: .
-  - uid: VRBuilder.Core
-    name: Core
-    href: VRBuilder.Core.html
-  - name: .
-  - uid: VRBuilder.Core.Utils
-    name: Utils
-    href: VRBuilder.Core.Utils.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
+    nameWithType: (
+    fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetNameWithNesting*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetNameWithNesting
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetNameWithNesting_System_Type_
   name: GetNameWithNesting
   nameWithType: ReflectionUtils.GetNameWithNesting
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetNameWithNesting
@@ -1227,7 +1407,6 @@ references:
   commentId: T:System.Type
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type
   nameWithType: Type
   fullName: System.Type
@@ -1235,22 +1414,16 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetEntryType
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetEntryType_System_Object_
   name: GetEntryType
   nameWithType: ReflectionUtils.GetEntryType
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetEntryType
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetAllTypes*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetAllTypes
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetAllTypes
   name: GetAllTypes
   nameWithType: ReflectionUtils.GetAllTypes
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetAllTypes
@@ -1258,7 +1431,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{System.Type}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<Type>
   nameWithType: IEnumerable<Type>
   fullName: System.Collections.Generic.IEnumerable<System.Type>
@@ -1268,31 +1440,40 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -1302,73 +1483,51 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetConcreteImplementationsOf_System_Type_
   name: GetConcreteImplementationsOf
   nameWithType: ReflectionUtils.GetConcreteImplementationsOf
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetConcreteImplementationsOf
 - uid: VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_WhichHaveAttribute__1_System_Collections_Generic_IEnumerable_System_Type__
   name: WhichHaveAttribute
   nameWithType: ReflectionUtils.WhichHaveAttribute
   fullName: VRBuilder.Core.Utils.ReflectionUtils.WhichHaveAttribute
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetAttribute
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetAttribute__1_System_Type_System_Boolean_
   name: GetAttribute
   nameWithType: ReflectionUtils.GetAttribute
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetAttribute
@@ -1376,13 +1535,9 @@ references:
   commentId: T:System.Boolean
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: '{T}'
   commentId: '!:T'
   definition: T
@@ -1395,25 +1550,21 @@ references:
   fullName: T
 - uid: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_CreateInstanceOfType_System_Type_
   name: CreateInstanceOfType
   nameWithType: ReflectionUtils.CreateInstanceOfType
   fullName: VRBuilder.Core.Utils.ReflectionUtils.CreateInstanceOfType
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetDefault*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetDefault
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetDefault_System_Type_
   name: GetDefault
   nameWithType: ReflectionUtils.GetDefault
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetDefault
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetGenericDictionaryInterface_System_Object_
   name: GetGenericDictionaryInterface
   nameWithType: ReflectionUtils.GetGenericDictionaryInterface
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetGenericDictionaryInterface
 - uid: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_RemoveFromList_System_Collections_IList__System_Int32_
   name: RemoveFromList
   nameWithType: ReflectionUtils.RemoveFromList
   fullName: VRBuilder.Core.Utils.ReflectionUtils.RemoveFromList
@@ -1421,7 +1572,6 @@ references:
   commentId: T:System.Collections.IList
   parent: System.Collections
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
   name: IList
   nameWithType: IList
   fullName: System.Collections.IList
@@ -1429,49 +1579,22 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: System.Collections
   commentId: N:System.Collections
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Collections
   nameWithType: System.Collections
   fullName: System.Collections
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
 - uid: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_InsertIntoList_System_Collections_IList__System_Int32_System_Object_
   name: InsertIntoList
   nameWithType: ReflectionUtils.InsertIntoList
   fullName: VRBuilder.Core.Utils.ReflectionUtils.InsertIntoList
 - uid: VRBuilder.Core.Utils.ReflectionUtils.ReplaceList*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.ReplaceList
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_ReplaceList__1_System_Collections_IList__System_Collections_Generic_IEnumerable___0__
   name: ReplaceList
   nameWithType: ReflectionUtils.ReplaceList
   fullName: VRBuilder.Core.Utils.ReflectionUtils.ReplaceList
@@ -1479,7 +1602,6 @@ references:
   commentId: T:System.Collections.Generic.IEnumerable{`0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   name: IEnumerable<T>
   nameWithType: IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
@@ -1489,24 +1611,35 @@ references:
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
+    nameWithType: <
+    fullName: <
   - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - name: T
+    nameWithType: T
+    fullName: T
   - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetDeclaredTypeOfPropertyOrField*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetDeclaredTypeOfPropertyOrField
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetDeclaredTypeOfPropertyOrField_System_Reflection_MemberInfo_
   name: GetDeclaredTypeOfPropertyOrField
   nameWithType: ReflectionUtils.GetDeclaredTypeOfPropertyOrField
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetDeclaredTypeOfPropertyOrField
@@ -1514,76 +1647,47 @@ references:
   commentId: T:System.Reflection.MemberInfo
   parent: System.Reflection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo
   name: MemberInfo
   nameWithType: MemberInfo
   fullName: System.Reflection.MemberInfo
 - uid: System.Reflection
   commentId: N:System.Reflection
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System.Reflection
   nameWithType: System.Reflection
   fullName: System.Reflection
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Reflection
-    name: Reflection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.reflection
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Reflection
-    name: Reflection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.reflection
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsProperty*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.IsProperty
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_IsProperty_System_Reflection_MemberInfo_
   name: IsProperty
   nameWithType: ReflectionUtils.IsProperty
   fullName: VRBuilder.Core.Utils.ReflectionUtils.IsProperty
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsField*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.IsField
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_IsField_System_Reflection_MemberInfo_
   name: IsField
   nameWithType: ReflectionUtils.IsField
   fullName: VRBuilder.Core.Utils.ReflectionUtils.IsField
 - uid: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_SetValueToPropertyOrField_System_Object_System_Reflection_MemberInfo_System_Object_
   name: SetValueToPropertyOrField
   nameWithType: ReflectionUtils.SetValueToPropertyOrField
   fullName: VRBuilder.Core.Utils.ReflectionUtils.SetValueToPropertyOrField
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetValueFromPropertyOrField_System_Object_System_Reflection_MemberInfo_
   name: GetValueFromPropertyOrField
   nameWithType: ReflectionUtils.GetValueFromPropertyOrField
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetValueFromPropertyOrField
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetTypeFromAssemblyQualifiedName_System_String_
   name: GetTypeFromAssemblyQualifiedName
   nameWithType: ReflectionUtils.GetTypeFromAssemblyQualifiedName
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetTypeFromAssemblyQualifiedName
 - uid: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_GetFinalImplementationsOf__1_System_Type___
   name: GetFinalImplementationsOf
   nameWithType: ReflectionUtils.GetFinalImplementationsOf
   fullName: VRBuilder.Core.Utils.ReflectionUtils.GetFinalImplementationsOf
 - uid: System.Type[]
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.type
   name: Type[]
   nameWithType: Type[]
   fullName: System.Type[]
@@ -1593,32 +1697,33 @@ references:
   spec.csharp:
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
-  - name: '['
-  - name: ']'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
   - uid: System.Type
     name: Type
+    nameWithType: Type
+    fullName: System.Type
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.type
-  - name: (
-  - name: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsSubclassOfGenericDefinition*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.IsSubclassOfGenericDefinition
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_IsSubclassOfGenericDefinition_System_Type_System_Type_
   name: IsSubclassOfGenericDefinition
   nameWithType: ReflectionUtils.IsSubclassOfGenericDefinition
   fullName: VRBuilder.Core.Utils.ReflectionUtils.IsSubclassOfGenericDefinition
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.IsEmpty
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_IsEmpty_System_Object_
   name: IsEmpty
   nameWithType: ReflectionUtils.IsEmpty
   fullName: VRBuilder.Core.Utils.ReflectionUtils.IsEmpty
 - uid: VRBuilder.Core.Utils.ReflectionUtils.IsNumeric*
   commentId: Overload:VRBuilder.Core.Utils.ReflectionUtils.IsNumeric
-  href: VRBuilder.Core.Utils.ReflectionUtils.html#VRBuilder_Core_Utils_ReflectionUtils_IsNumeric_System_Type_
   name: IsNumeric
   nameWithType: ReflectionUtils.IsNumeric
   fullName: VRBuilder.Core.Utils.ReflectionUtils.IsNumeric
