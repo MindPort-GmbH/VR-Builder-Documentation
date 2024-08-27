@@ -2,5 +2,12 @@
 
 Welcome to the VR Builder documentation.
 
-- [Manuals](articles/animations/introduction.md)
-- [API Documentation](api/)
+## VR Builder Manual
+- [VR Builder Manual](articles/core/introduction.md)
+
+## Asset Store add-ons
+- [Animations](articles/animations/introduction.md)
+- [Menus](articles/process-menu/introduction.md)
+- [Randomization](articles/randomization/introduction.md)
+- [States and Data](articles/states-and-data/introduction.md)
+- [Track and Measure](articles/track-and-measure/introduction.md)

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Highlight Object | VR Builder Documentation </title>
+    <title>Customizing the Process Controller | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Highlight Object | VR Builder Documentation ">
+    <meta name="title" content="Customizing the Process Controller | VR Builder Documentation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -69,22 +69,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="highlight-object">Highlight Object</h3>
+<h2 id="customizing-the-process-controller">Customizing the Process Controller</h2>
 
-<h4 id="description">Description</h4>
-<p>The Highlight Object behavior visually highlights the selected object until the end of a step.</p>
-<p>For additional highting features you can replace the <em>Default Highlighter</em> with a <em>Interactable Highlighter Script</em>. Select the highlighted <code>Object</code> in the Unity Hierarchy. In the Unity Inspector replace the <em>DefaultHighlighter</em> with a <em>Interactable Highlighter Script</em>.</p>
-<p><a href="images/interactable-highlighter-script.png"><img src="images/interactable-highlighter-script.png" alt="Interactable Highlighter Script"></a></p>
-<p>You can define the Color and Material for <em>On Touch Highlight</em>, <em>On Grab Highlight</em>, and <em>On Use Highlight</em>. The object will show the highlight color configured in the Highlight behavior by default. As soon as the object is touched it will change to the color configured in <em>On Touch Highlight</em>. The same happens when the object is grabbed or used. It will display the configured color in ‘On Grab Highlight’ or ‘On Use Highlight’. </p>
-<h4 id="configuration">Configuration</h4>
-<ul>
-<li><p><strong>Color</strong></p>
-<p>  Color in which the target object will be highlighted. Colors are defined in the RGBA or HSV color channel. By configuring the alpha (A) value, highlights can be translucent.</p>
-</li>
-<li><p><strong>Object</strong></p>
-<p>  The <code>Process Scene Object</code> which should be highlighted.</p>
-</li>
-</ul>
+<p>The process controller can be configured on the <code>[PROCESS_CONTROLLER]</code> game object in a VR Builder scene. This object handles running the process and a few configuration parameters. The <code>Process Controller Setup</code> script lets you choose which process controller prefab is spawned when the scene runs.</p>
+<p><img src="images/process-controller-setup.png" alt="Process Controller Setup"></p>
+<p>It is possible to select one of the default process controller prefabs, or use a custom one by ticking the <code>Use custom prefab</code> box. It is also possible to select whether to auto start the process, or start it manually, for example through one of the menus provided in this add-on.</p>
+<p>Both default process controllers automatically start the process when the scene runs. If you want to avoid that, so the process can be started from the menu, you&#39;ll have to create a custom process controller prefab. You can use one of the default ones found in <code>Assets\MindPort\VR Builder\Core\Source\Basic-UI-Component\Runtime\ProcessController\Resources\Prefabs</code> as a baseline.</p>
+<p>The <code>Basic Process Loader</code> component ensures the process runs on scene start. To prevent this behavior, do not include this script in your custom controller.</p>
 </article>
           </div>
           
@@ -93,7 +84,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/highlight-object-behavior.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/process-menu/customizing-process-controller.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

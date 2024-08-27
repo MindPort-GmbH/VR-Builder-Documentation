@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Highlight Object | VR Builder Documentation </title>
+    <title>How to Use the Menu | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Highlight Object | VR Builder Documentation ">
+    <meta name="title" content="How to Use the Menu | VR Builder Documentation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -69,22 +69,40 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="highlight-object">Highlight Object</h3>
+<h2 id="how-to-use-the-menu">How to Use the Menu</h2>
 
-<h4 id="description">Description</h4>
-<p>The Highlight Object behavior visually highlights the selected object until the end of a step.</p>
-<p>For additional highting features you can replace the <em>Default Highlighter</em> with a <em>Interactable Highlighter Script</em>. Select the highlighted <code>Object</code> in the Unity Hierarchy. In the Unity Inspector replace the <em>DefaultHighlighter</em> with a <em>Interactable Highlighter Script</em>.</p>
-<p><a href="images/interactable-highlighter-script.png"><img src="images/interactable-highlighter-script.png" alt="Interactable Highlighter Script"></a></p>
-<p>You can define the Color and Material for <em>On Touch Highlight</em>, <em>On Grab Highlight</em>, and <em>On Use Highlight</em>. The object will show the highlight color configured in the Highlight behavior by default. As soon as the object is touched it will change to the color configured in <em>On Touch Highlight</em>. The same happens when the object is grabbed or used. It will display the configured color in ‘On Grab Highlight’ or ‘On Use Highlight’. </p>
-<h4 id="configuration">Configuration</h4>
-<ul>
-<li><p><strong>Color</strong></p>
-<p>  Color in which the target object will be highlighted. Colors are defined in the RGBA or HSV color channel. By configuring the alpha (A) value, highlights can be translucent.</p>
-</li>
-<li><p><strong>Object</strong></p>
-<p>  The <code>Process Scene Object</code> which should be highlighted.</p>
-</li>
-</ul>
+<h3 id="desktop-process-menu">Desktop Process Menu</h3>
+<p>The desktop process menu is laid out as follows.</p>
+<p><img src="images/desktop-menu.png" alt="Desktop process menu"></p>
+<ol>
+<li>VR Builder logo. Feel free to replace it with your own!</li>
+<li>Current chapter. You can use the drop-down to skip to a later chapter.</li>
+<li>Process state indicator. It appears when the process is running.</li>
+<li>Name of the current step.</li>
+<li>Info button. Click it to see the description of the current step.</li>
+<li>Skip Step button. Clicking this button will fast-forward to the following step. If the process is not running, it is replaced by the Start Process button.</li>
+<li>Restart process button. Clicking it will restart the process from the beginning.</li>
+<li>Audio toggle. Enables/disables process audio.</li>
+</ol>
+<p>The desktop menu can be used by clicking with the mouse on the desired option.</p>
+<h3 id="standalone-process-menu">Standalone Process Menu</h3>
+<p>The standalone process menu is laid out as follows.</p>
+<p><img src="images/standalone-menu.png" alt="Standalone process menu"></p>
+<ol>
+<li>VR Builder logo. Feel free to replace it with your own!</li>
+<li>Current chapter. You can use the drop-down to skip to a later chapter.</li>
+<li>Process state indicator. It appears when the process is running.</li>
+<li>Name of the current step.</li>
+<li>Info button. Click it to see the description of the current step.</li>
+<li>Skip Step button. Clicking this button will fast-forward to the following step. If the process is not running, it is replaced by the Start Process button.</li>
+<li>Restart process button. Clicking it will restart the process from the beginning.</li>
+<li>Audio toggle. Enables/disables process audio.</li>
+</ol>
+<p>The standalone menu is designed to be opened through user input. By default, the primary button on the right controller opens the menu. This can be changed on the <code>Standalone Menu Handler</code> component on the menu prefab. In case you want the menu to be permanently present in the scene, remove the <code>Standalone Menu Handler</code> component from the prefab.</p>
+<p><img src="images/standalone-menu-handler.png" alt="Standalone Menu Handler"></p>
+<p>In the inspector, it is possible to select which button can be used to open and close the menu.
+The <code>Standalone Menu Handler</code> also takes care of repositioning the menu in front of the user every time it is opened.</p>
+<p>To interact with the standalone menu, press the grip button on a controller to enter UI mode with that controller. This will change the hand to a pointing animation and visualize a ray originating from it. Point the ray to interactable elements on the menu and press the trigger button to activate them.</p>
 </article>
           </div>
           
@@ -93,7 +111,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/highlight-object-behavior.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/process-menu/how-to-use.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

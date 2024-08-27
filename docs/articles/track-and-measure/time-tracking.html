@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Highlight Object | VR Builder Documentation </title>
+    <title>Time Tracking | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Highlight Object | VR Builder Documentation ">
+    <meta name="title" content="Time Tracking | VR Builder Documentation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -69,22 +69,21 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="highlight-object">Highlight Object</h3>
+<h2 id="time-tracking">Time Tracking</h2>
 
-<h4 id="description">Description</h4>
-<p>The Highlight Object behavior visually highlights the selected object until the end of a step.</p>
-<p>For additional highting features you can replace the <em>Default Highlighter</em> with a <em>Interactable Highlighter Script</em>. Select the highlighted <code>Object</code> in the Unity Hierarchy. In the Unity Inspector replace the <em>DefaultHighlighter</em> with a <em>Interactable Highlighter Script</em>.</p>
-<p><a href="images/interactable-highlighter-script.png"><img src="images/interactable-highlighter-script.png" alt="Interactable Highlighter Script"></a></p>
-<p>You can define the Color and Material for <em>On Touch Highlight</em>, <em>On Grab Highlight</em>, and <em>On Use Highlight</em>. The object will show the highlight color configured in the Highlight behavior by default. As soon as the object is touched it will change to the color configured in <em>On Touch Highlight</em>. The same happens when the object is grabbed or used. It will display the configured color in ‘On Grab Highlight’ or ‘On Use Highlight’. </p>
-<h4 id="configuration">Configuration</h4>
-<ul>
-<li><p><strong>Color</strong></p>
-<p>  Color in which the target object will be highlighted. Colors are defined in the RGBA or HSV color channel. By configuring the alpha (A) value, highlights can be translucent.</p>
-</li>
-<li><p><strong>Object</strong></p>
-<p>  The <code>Process Scene Object</code> which should be highlighted.</p>
-</li>
-</ul>
+<p>This add-on allows creating and managing timers which can be used for tracking performance or changing the state of the process. This is done mostly through the <code>Start Timer</code> and <code>Stop Timer</code> behaviors. Those interact with a <code>Timer Property</code> on a game object, which in turn stores the elapsed time (in seconds) in a <code>Number Data Property</code>. Since the time is stored in a standard property, it is possible to use it as any numerical data, for example by dragging the timer game object in a <code>Compare Values</code> condition, and to display it in the scene like other data properties.</p>
+<h3 id="start-timer-behavior">Start Timer Behavior</h3>
+<p>This behavior tells a <code>Timer Property</code> to start counting time in the attached <code>Number Data Property</code>, adding to the value already stored there. If <code>Is countdown</code> is selected, the timer will count down instead, and stop when zero is reached.</p>
+<h3 id="stop-timer-behavior">Stop Timer Behavior</h3>
+<p>This behavior stops a running timer. It does nothing on a <code>Timer Property</code> that is not running. The <code>Number Data Property</code> will store the time at which the timer was stopped, and if the timer starts again it will start counting from that value.</p>
+<h3 id="resetting-a-timer">Resetting a Timer</h3>
+<p>Since a timer stores its data in a <code>Number Data Property</code>, a timer can be reset to 0 (or whatever default) by executing the <code>Reset Value</code> (or the <code>Set Number</code>) behavior on the timer&#39;s game object.</p>
+<h3 id="timer-at-zero-condition">Timer at Zero Condition</h3>
+<p>It may be common to need a condition that completes when a timer reaches zero. Since the time is stored in a <code>Number Data Property</code>, no specific tool is needed - simply use a <code>Compare Numbers Condition</code> to check if the time is equal to zero. In fact, you can compare the stored time to any value, keeping in mind that the time is stored in seconds.</p>
+<p><img src="images/timer-at-zero-condition.png" alt="Timer at Zero Condition"></p>
+<h3 id="displaying-time">Displaying Time</h3>
+<p>Timers store their value in seconds in a <code>Number Data Property</code>. This means that of course a <code>Number Display</code> prefab will show that value. There is however one more prefab created specifically to show time: the <code>Time Display</code> shares many similarities with the <code>Number Display</code> but treats the value as time. By default it displays time in the mm:ss format, but that can be changed by editing the <code>Text</code> field. Since the field uses .NET formatting rules, it is possible to customize the time format as detailed <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings">here</a>.</p>
+<p><img src="images/time-display.png" alt="Time Display"></p>
 </article>
           </div>
           
@@ -93,7 +92,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/highlight-object-behavior.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/track-and-measure/time-tracking.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
