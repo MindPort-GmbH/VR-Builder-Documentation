@@ -1,1020 +1,1159 @@
 ﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+  
   <head>
     <meta charset="utf-8">
-      <title>Class EditorDrawingHelper | VR Builder Documentation </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class EditorDrawingHelper | VR Builder Documentation ">
-      
-      <meta name="description" content="Helper class for drawing primitives in custom editors.">
-      <link rel="icon" href="../images/favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      <meta name="docfx:rel" content="../">
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
-
-      <script type="module" src="./../public/docfx.min.js"></script>
-
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EditorDrawingHelper
+   | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EditorDrawingHelper
+   | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
   </head>
-
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
-            VR Builder Documentation
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-              <form class="search" role="search" id="search">
-                <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
               </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
-
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
-
-        <article data-uid="VRBuilder.Editor.UI.EditorDrawingHelper">
-
-
-
-  <h1 id="VRBuilder_Editor_UI_EditorDrawingHelper" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper" class="text-break">
-Class EditorDrawingHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L14"><i class="bi bi-code-slash"></i></a>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper">
+  
+  
+  <h1 id="VRBuilder_Editor_UI_EditorDrawingHelper" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper" class="text-break">Class EditorDrawingHelper
   </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.Editor.UI.html">VRBuilder.Editor.UI</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>VRBuilder.Editor.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Helper class for drawing primitives in custom editors.</p>
+  <div class="markdown level0 summary"><p>Helper class for drawing primitives in custom editors.</p>
 </div>
-  <div class="markdown conceptual"></div>
-
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EditorDrawingHelper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Editor.UI.html">VRBuilder.Editor.UI</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.Editor.dll</h6>
+  <h5 id="VRBuilder_Editor_UI_EditorDrawingHelper_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class EditorDrawingHelper</code></pre>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><span class="xref">Object</span></div>
-      <div><span class="xref">EditorDrawingHelper</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <span class="xref">Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">Object.Equals(Object)</span>
-    </div>
-    <div>
-      <span class="xref">Object.Equals(Object, Object)</span>
-    </div>
-    <div>
-      <span class="xref">Object.ReferenceEquals(Object, Object)</span>
-    </div>
-    <div>
-      <span class="xref">Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">Object.MemberwiseClone()</span>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_ButtonHeight" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.ButtonHeight">
-  ButtonHeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <h3 id="fields">Fields
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_ButtonHeight.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.ButtonHeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L47">View Source</a>
+  </span>
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_ButtonHeight" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.ButtonHeight">ButtonHeight</h4>
   <div class="markdown level1 summary"><p>Height of one button in the Step Inspector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static float ButtonHeight</code></pre>
   </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Single</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-  <h4 class="section" id="VRBuilder_Editor_UI_EditorDrawingHelper_ButtonHeight_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>There isn't a constant for this in Unity. This is the same as the height of the &quot;Add Behavior&quot; Unity button.</p>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="VRBuilder_Editor_UI_EditorDrawingHelper_ButtonHeight_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>There isn&apos;t a constant for this in Unity. This is the same as the height of the &quot;Add Behavior&quot; Unity button.</p>
 </div>
-
-
-
-
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_IndentationWidth" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.IndentationWidth">
-  IndentationWidth
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L28"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_IndentationWidth.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.IndentationWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L28">View Source</a>
+  </span>
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_IndentationWidth" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.IndentationWidth">IndentationWidth</h4>
   <div class="markdown level1 summary"><p>Width of one indentation step in the Step Inspector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const float IndentationWidth = 16F</code></pre>
   </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Single</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_VerticalSpacing" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.VerticalSpacing">
-  VerticalSpacing
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L23"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_VerticalSpacing.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.VerticalSpacing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L23">View Source</a>
+  </span>
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_VerticalSpacing" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.VerticalSpacing">VerticalSpacing</h4>
   <div class="markdown level1 summary"><p>Default spacing between Step Inspector elements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const float VerticalSpacing = 6F</code></pre>
   </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Single</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="VRBuilder_Editor_UI_EditorDrawingHelper_HeaderLineHeight_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.HeaderLineHeight*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_HeaderLineHeight" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.HeaderLineHeight">
-  HeaderLineHeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_HeaderLineHeight.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.HeaderLineHeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L54">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_EditorDrawingHelper_HeaderLineHeight_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.HeaderLineHeight*"></a>
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_HeaderLineHeight" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.HeaderLineHeight">HeaderLineHeight</h4>
   <div class="markdown level1 summary"><p>Height of slightly bigger line in the Step Inspector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static float HeaderLineHeight { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Single</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_SingleLineHeight.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.SingleLineHeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L33">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_SingleLineHeight_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.SingleLineHeight*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_SingleLineHeight" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.SingleLineHeight">
-  SingleLineHeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_SingleLineHeight" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.SingleLineHeight">SingleLineHeight</h4>
   <div class="markdown level1 summary"><p>Height of one line in the Step Inspector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static float SingleLineHeight { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Single</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="VRBuilder_Editor_UI_EditorDrawingHelper_CalculateAddButtonRect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.CalculateAddButtonRect*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_CalculateAddButtonRect_Rect__" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.CalculateAddButtonRect(Rect@)">
-  CalculateAddButtonRect(ref Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_CalculateAddButtonRect_Rect__.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.CalculateAddButtonRect(Rect%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L66">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_EditorDrawingHelper_CalculateAddButtonRect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.CalculateAddButtonRect*"></a>
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_CalculateAddButtonRect_Rect__" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.CalculateAddButtonRect(Rect@)">CalculateAddButtonRect(ref Rect)</h4>
   <div class="markdown level1 summary"><p>Draw button which is similar to default &quot;Add Component&quot; Unity button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Rect CalculateAddButtonRect(ref Rect rect)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawAddButton_Rect__System_String_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawAddButton(Rect%40%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L81">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawAddButton_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawAddButton*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawAddButton_Rect__System_String_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawAddButton(Rect@,System.String)">
-  DrawAddButton(ref Rect, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L81"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawAddButton_Rect__System_String_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawAddButton(Rect@,System.String)">DrawAddButton(ref Rect, String)</h4>
   <div class="markdown level1 summary"><p>Draw button which is similar to default &quot;Add Component&quot; Unity button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool DrawAddButton(ref Rect rect, string label)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd></dd>
-    <dt><code>label</code> <span class="xref">String</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Boolean</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">label</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawArrow_Vector2_Vector2_Color_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawArrow(Vector2%2CVector2%2CColor%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L160">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawArrow_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawArrow*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawArrow_Vector2_Vector2_Color_System_Single_System_Single_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawArrow(Vector2,Vector2,Color,System.Single,System.Single)">
-  DrawArrow(Vector2, Vector2, Color, Single, Single)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L160"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawArrow_Vector2_Vector2_Color_System_Single_System_Single_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawArrow(Vector2,Vector2,Color,System.Single,System.Single)">DrawArrow(Vector2, Vector2, Color, Single, Single)</h4>
   <div class="markdown level1 summary"><p>Draw an arrow.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawArrow(Vector2 from, Vector2 to, Color color, float arrowheadAngleInDegrees, float arrowheadLength)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>from</code> <span class="xref">Vector2</span></dt>
-    <dd><p>Position from which arrow begins.</p>
-</dd>
-    <dt><code>to</code> <span class="xref">Vector2</span></dt>
-    <dd><p>Position at which arrow is pointing.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Arrow color.</p>
-</dd>
-    <dt><code>arrowheadAngleInDegrees</code> <span class="xref">Single</span></dt>
-    <dd><p>How wide is the arrow's end in degrees.</p>
-</dd>
-    <dt><code>arrowheadLength</code> <span class="xref">Single</span></dt>
-    <dd><p>How long is the arrow head in pixels.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>Position from which arrow begins.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>Position at which arrow is pointing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Arrow color.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">arrowheadAngleInDegrees</span></td>
+        <td><p>How wide is the arrow&apos;s end in degrees.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">arrowheadLength</span></td>
+        <td><p>How long is the arrow head in pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawCircle_Vector2_System_Single_Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawCircle(Vector2%2CSystem.Single%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L140">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawCircle_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawCircle*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawCircle_Vector2_System_Single_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawCircle(Vector2,System.Single,Color)">
-  DrawCircle(Vector2, Single, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L140"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawCircle_Vector2_System_Single_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawCircle(Vector2,System.Single,Color)">DrawCircle(Vector2, Single, Color)</h4>
   <div class="markdown level1 summary"><p>Draw a circle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawCircle(Vector2 position, float radius, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>position</code> <span class="xref">Vector2</span></dt>
-    <dd><p>Center of the circle.</p>
-</dd>
-    <dt><code>radius</code> <span class="xref">Single</span></dt>
-    <dd><p>Radius of the circle.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color of the circle.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Center of the circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Radius of the circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawFoldoutWithReducedFocusArea_Rect_System_Boolean_GUIContent_GUIStyle_GUIStyle_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawFoldoutWithReducedFocusArea(Rect%2CSystem.Boolean%2CGUIContent%2CGUIStyle%2CGUIStyle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L275">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawFoldoutWithReducedFocusArea_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawFoldoutWithReducedFocusArea*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawFoldoutWithReducedFocusArea_Rect_System_Boolean_GUIContent_GUIStyle_GUIStyle_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawFoldoutWithReducedFocusArea(Rect,System.Boolean,GUIContent,GUIStyle,GUIStyle)">
-  DrawFoldoutWithReducedFocusArea(Rect, Boolean, GUIContent, GUIStyle, GUIStyle)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L275"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawFoldoutWithReducedFocusArea_Rect_System_Boolean_GUIContent_GUIStyle_GUIStyle_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawFoldoutWithReducedFocusArea(Rect,System.Boolean,GUIContent,GUIStyle,GUIStyle)">DrawFoldoutWithReducedFocusArea(Rect, Boolean, GUIContent, GUIStyle, GUIStyle)</h4>
   <div class="markdown level1 summary"><p>Draws EditorGUI.Foldout with focus area located only around triangle-shaped button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool DrawFoldoutWithReducedFocusArea(Rect rect, bool currentState, GUIContent foldoutLabel, GUIStyle foldoutStyle = null, GUIStyle labelStyle = null)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd><p>Rectangle in which foldout view is drawn.</p>
-</dd>
-    <dt><code>currentState</code> <span class="xref">Boolean</span></dt>
-    <dd><p>Are contents folded out.</p>
-</dd>
-    <dt><code>foldoutLabel</code> <span class="xref">GUIContent</span></dt>
-    <dd><p>Foldout text.</p>
-</dd>
-    <dt><code>foldoutStyle</code> <span class="xref">GUIStyle</span></dt>
-    <dd><p>Foldout style.</p>
-</dd>
-    <dt><code>labelStyle</code> <span class="xref">GUIStyle</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Boolean</span></dt>
-    <dd><p>result of EditorGUI.Foldout (is foldout expanded or not).</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>Rectangle in which foldout view is drawn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">currentState</span></td>
+        <td><p>Are contents folded out.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">foldoutLabel</span></td>
+        <td><p>Foldout text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIStyle</span></td>
+        <td><span class="parametername">foldoutStyle</span></td>
+        <td><p>Foldout style.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIStyle</span></td>
+        <td><span class="parametername">labelStyle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>result of EditorGUI.Foldout (is foldout expanded or not).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawHelpButton_Rect__.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawHelpButton(Rect%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L118">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHelpButton_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHelpButton*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHelpButton_Rect__" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHelpButton(Rect@)">
-  DrawHelpButton(ref Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L118"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHelpButton_Rect__" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHelpButton(Rect@)">DrawHelpButton(ref Rect)</h4>
   <div class="markdown level1 summary"><p>Draw a paste button next to the <a class="xref" href="VRBuilder.Editor.UI.EditorDrawingHelper.html#VRBuilder_Editor_UI_EditorDrawingHelper_DrawPasteButton_Rect__">DrawPasteButton(ref Rect)</a> button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool DrawHelpButton(ref Rect rect)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Boolean</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawHollowRectangle_Rect_Color_System_Single_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawHollowRectangle(Rect%2CColor%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L347">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHollowRectangle_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHollowRectangle*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHollowRectangle_Rect_Color_System_Single_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHollowRectangle(Rect,Color,System.Single)">
-  DrawHollowRectangle(Rect, Color, Single)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L347"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHollowRectangle_Rect_Color_System_Single_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHollowRectangle(Rect,Color,System.Single)">DrawHollowRectangle(Rect, Color, Single)</h4>
   <div class="markdown level1 summary"><p>Draws a rectangle which is hollow inside.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawHollowRectangle(Rect rect, Color color, float lineWidth)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd><p>Rect that defines outer bounds of rectangle.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color of rectangle borders.</p>
-</dd>
-    <dt><code>lineWidth</code> <span class="xref">Single</span></dt>
-    <dd><p>Thickness of the rect border.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>Rect that defines outer bounds of rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of rectangle borders.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">lineWidth</span></td>
+        <td><p>Thickness of the rect border.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawHorizontalLine_Vector2_System_Single_Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawHorizontalLine(Vector2%2CSystem.Single%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L390">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHorizontalLine_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHorizontalLine*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHorizontalLine_Vector2_System_Single_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHorizontalLine(Vector2,System.Single,Color)">
-  DrawHorizontalLine(Vector2, Single, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L390"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawHorizontalLine_Vector2_System_Single_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawHorizontalLine(Vector2,System.Single,Color)">DrawHorizontalLine(Vector2, Single, Color)</h4>
   <div class="markdown level1 summary"><p>Draws a horizontal line starting at <code data-dev-comment-type="paramref" class="paramref">startPoint</code> with given <code data-dev-comment-type="paramref" class="paramref">length</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawHorizontalLine(Vector2 startPoint, float length, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>startPoint</code> <span class="xref">Vector2</span></dt>
-    <dd><p>Origin of line.</p>
-</dd>
-    <dt><code>length</code> <span class="xref">Single</span></dt>
-    <dd><p>Length of line.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color or line.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>Origin of line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>Length of line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color or line.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawPasteButton_Rect__.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawPasteButton(Rect%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L97">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawPasteButton_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawPasteButton*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawPasteButton_Rect__" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawPasteButton(Rect@)">
-  DrawPasteButton(ref Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L97"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawPasteButton_Rect__" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawPasteButton(Rect@)">DrawPasteButton(ref Rect)</h4>
   <div class="markdown level1 summary"><p>Draw a paste button next to the <a class="xref" href="VRBuilder.Editor.UI.EditorDrawingHelper.html#VRBuilder_Editor_UI_EditorDrawingHelper_DrawAddButton_Rect__System_String_">DrawAddButton(ref Rect, String)</a> button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool DrawPasteButton(ref Rect rect)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Boolean</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawPolyline_System_Collections_Generic_IList_Vector2__Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawPolyline(System.Collections.Generic.IList%7BVector2%7D%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L365">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawPolyline_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawPolyline*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawPolyline_System_Collections_Generic_IList_Vector2__Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawPolyline(System.Collections.Generic.IList{Vector2},Color)">
-  DrawPolyline(IList&lt;Vector2&gt;, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L365"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawPolyline_System_Collections_Generic_IList_Vector2__Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawPolyline(System.Collections.Generic.IList{Vector2},Color)">DrawPolyline(IList&lt;Vector2&gt;, Color)</h4>
   <div class="markdown level1 summary"><p>Draws a curve by connecting the given <code data-dev-comment-type="paramref" class="paramref">points</code> with lines.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawPolyline(IList&lt;Vector2&gt; points, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>points</code> <span class="xref">IList</span>&lt;<span class="xref">Vector2</span>&gt;</dt>
-    <dd></dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color of the curve.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the curve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawRect_Rect_Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawRect(Rect%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L231">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawRect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawRect*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawRect_Rect_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawRect(Rect,Color)">
-  DrawRect(Rect, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L231"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawRect_Rect_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawRect(Rect,Color)">DrawRect(Rect, Color)</h4>
   <div class="markdown level1 summary"><p>Draw a rect.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawRect(Rect rect, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd><p>Rect size and position to draw.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color of the rect.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>Rect size and position to draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the rect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawRoundedRect_Rect_Color_System_Single_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawRoundedRect(Rect%2CColor%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L242">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawRoundedRect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawRoundedRect*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawRoundedRect_Rect_Color_System_Single_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawRoundedRect(Rect,Color,System.Single)">
-  DrawRoundedRect(Rect, Color, Single)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L242"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawRoundedRect_Rect_Color_System_Single_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawRoundedRect(Rect,Color,System.Single)">DrawRoundedRect(Rect, Color, Single)</h4>
   <div class="markdown level1 summary"><p>Draw a rectangle with rounded corners.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawRoundedRect(Rect rect, Color color, float cornerRadius)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rect</code> <span class="xref">Rect</span></dt>
-    <dd><p>Rect size and position to draw.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color of the rect.</p>
-</dd>
-    <dt><code>cornerRadius</code> <span class="xref">Single</span></dt>
-    <dd><p>Corners are drawn as quarters of a circle with radius equal to cornerRadius. If the radius is too small (less than one pixel) or too big (bigger than a half of any side), simple rect is drawn.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>Rect size and position to draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the rect.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">cornerRadius</span></td>
+        <td><p>Corners are drawn as quarters of a circle with radius equal to cornerRadius. If the radius is too small (less than one pixel) or too big (bigger than a half of any side), simple rect is drawn.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawTexture_Rect_Texture_Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawTexture(Rect%2CTexture%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L412">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawTexture_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawTexture*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawTexture_Rect_Texture_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawTexture(Rect,Texture,Color)">
-  DrawTexture(Rect, Texture, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L412"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawTexture_Rect_Texture_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawTexture(Rect,Texture,Color)">DrawTexture(Rect, Texture, Color)</h4>
   <div class="markdown level1 summary"><p>Draws a texture in a specific color</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawTexture(Rect iconRect, Texture texture, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iconRect</code> <span class="xref">Rect</span></dt>
-    <dd><p>Position and size of the texture.</p>
-</dd>
-    <dt><code>texture</code> <span class="xref">Texture</span></dt>
-    <dd><p>The texture to paint.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>The color it should be painted in.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">iconRect</span></td>
+        <td><p>Position and size of the texture.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Texture</span></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The texture to paint.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The color it should be painted in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawTriangle_System_Collections_Generic_IList_Vector2__Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawTriangle(System.Collections.Generic.IList%7BVector2%7D%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L180">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawTriangle_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawTriangle*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawTriangle_System_Collections_Generic_IList_Vector2__Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawTriangle(System.Collections.Generic.IList{Vector2},Color)">
-  DrawTriangle(IList&lt;Vector2&gt;, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L180"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawTriangle_System_Collections_Generic_IList_Vector2__Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawTriangle(System.Collections.Generic.IList{Vector2},Color)">DrawTriangle(IList&lt;Vector2&gt;, Color)</h4>
   <div class="markdown level1 summary"><p>Draw a triangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawTriangle(IList&lt;Vector2&gt; points, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>points</code> <span class="xref">IList</span>&lt;<span class="xref">Vector2</span>&gt;</dt>
-    <dd><p>List of points</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Fill color of triangle</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>List of points</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Fill color of triangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_DrawVerticalLine_Vector2_System_Single_Color_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.DrawVerticalLine(Vector2%2CSystem.Single%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L401">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawVerticalLine_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawVerticalLine*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawVerticalLine_Vector2_System_Single_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawVerticalLine(Vector2,System.Single,Color)">
-  DrawVerticalLine(Vector2, Single, Color)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L401"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_DrawVerticalLine_Vector2_System_Single_Color_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.DrawVerticalLine(Vector2,System.Single,Color)">DrawVerticalLine(Vector2, Single, Color)</h4>
   <div class="markdown level1 summary"><p>Draws a vertical line starting at <code data-dev-comment-type="paramref" class="paramref">startPoint</code> with given <code data-dev-comment-type="paramref" class="paramref">length</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void DrawVerticalLine(Vector2 startPoint, float length, Color color)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>startPoint</code> <span class="xref">Vector2</span></dt>
-    <dd><p>Origin of line.</p>
-</dd>
-    <dt><code>length</code> <span class="xref">Single</span></dt>
-    <dd><p>Length of line.</p>
-</dd>
-    <dt><code>color</code> <span class="xref">Color</span></dt>
-    <dd><p>Color or line.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>Origin of line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>Length of line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color or line.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_GetNextLineRect_Rect_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.GetNextLineRect(Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L297">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_GetNextLineRect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.GetNextLineRect*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_GetNextLineRect_Rect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.GetNextLineRect(Rect)">
-  GetNextLineRect(Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L297"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_GetNextLineRect_Rect_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.GetNextLineRect(Rect)">GetNextLineRect(Rect)</h4>
   <div class="markdown level1 summary"><p>Returns Rect which is one EditorGUIUtility.singleLineHeight lower and one EditorGUIUtility.singleLineHeight shorter than origin Rect.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Rect GetNextLineRect(Rect origin)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>origin</code> <span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper_TruncateText_System_String_GUIStyle_System_Single_System_String_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper.TruncateText(System.String%2CGUIStyle%2CSystem.Single%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L311">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_EditorDrawingHelper_TruncateText_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.TruncateText*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_EditorDrawingHelper_TruncateText_System_String_GUIStyle_System_Single_System_String_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.TruncateText(System.String,GUIStyle,System.Single,System.String)">
-  TruncateText(String, GUIStyle, Single, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L311"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_EditorDrawingHelper_TruncateText_System_String_GUIStyle_System_Single_System_String_" data-uid="VRBuilder.Editor.UI.EditorDrawingHelper.TruncateText(System.String,GUIStyle,System.Single,System.String)">TruncateText(String, GUIStyle, Single, String)</h4>
   <div class="markdown level1 summary"><p>Truncate given text. Applies <code>truncatingSequence</code> at the end of truncated text. Space characters at the end of the line are discarded.
 Designed for a single-line string, no clue how well would it work with multi-line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string TruncateText(string text, GUIStyle style, float maxWidth, string truncatingSequence = &quot;...&quot;)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>text</code> <span class="xref">String</span></dt>
-    <dd><p>Initial text.</p>
-</dd>
-    <dt><code>style</code> <span class="xref">GUIStyle</span></dt>
-    <dd><p>Style in which text width is calculated.</p>
-</dd>
-    <dt><code>maxWidth</code> <span class="xref">Single</span></dt>
-    <dd><p>Maximal width allowed in pixels.</p>
-</dd>
-    <dt><code>truncatingSequence</code> <span class="xref">String</span></dt>
-    <dd><p>Text to be appended at the end of the truncated text.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">String</span></dt>
-    <dd><p>Truncated text that is not wider than maximal width.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Initial text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIStyle</span></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>Style in which text width is calculated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">maxWidth</span></td>
+        <td><p>Maximal width allowed in pixels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">truncatingSequence</span></td>
+        <td><p>Text to be appended at the end of the truncated text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Truncated text that is not wider than maximal width.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
-
-        <div class="contribution d-print-none">
-          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L14" class="edit-link">Edit this page</a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_EditorDrawingHelper.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.EditorDrawingHelper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/EditorDrawingHelper.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-    <div class="container-xxl search-results" id="search-results"></div>
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>

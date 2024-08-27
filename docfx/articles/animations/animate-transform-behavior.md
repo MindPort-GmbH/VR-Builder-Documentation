@@ -1,11 +1,11 @@
-## Animate Transform
-### Introduction
+### Animate Transform
+#### Introduction
 This behavior animates a game object by changing its position, rotation and scale over time until it matches those of a "transform provider" game object. It is possible to set how position, rotation and scale are animated over time through separate animation curves.
 The behavior can be found under `Animation > Animate Transform`.
 
 ![Demo Image](images/animate-transform-demo.gif "Animate Transform Demo")
 
-### Inspector
+#### Inspector
 ![Inspector Layout](images/animate-transform-inspector.png "Animate Transform Inspector")
 
 The **Animate Transform** behavior accepts the following parameters.

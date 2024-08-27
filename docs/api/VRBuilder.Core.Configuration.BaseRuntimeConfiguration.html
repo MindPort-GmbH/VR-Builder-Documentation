@@ -1,739 +1,694 @@
 ﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+  
   <head>
     <meta charset="utf-8">
-      <title>Class BaseRuntimeConfiguration | VR Builder Documentation </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class BaseRuntimeConfiguration | VR Builder Documentation ">
-      
-      <meta name="description" content="Base class for your runtime process configuration. Extend it to create your own.">
-      <link rel="icon" href="../images/favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      <meta name="docfx:rel" content="../">
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
-
-      <script type="module" src="./../public/docfx.min.js"></script>
-
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseRuntimeConfiguration
+   | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseRuntimeConfiguration
+   | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
   </head>
-
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
-            VR Builder Documentation
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-              <form class="search" role="search" id="search">
-                <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
               </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
-
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
-
-        <article data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration">
-
-
-
-  <h1 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration" class="text-break">
-Class BaseRuntimeConfiguration  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L24"><i class="bi bi-code-slash"></i></a>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration">
+  
+  
+  <h1 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration" class="text-break">Class BaseRuntimeConfiguration
   </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.Core.Configuration.html">VRBuilder.Core.Configuration</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>VRBuilder.Core.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Base class for your runtime process configuration. Extend it to create your own.</p>
+  <div class="markdown level0 summary"><p>Base class for your runtime process configuration. Extend it to create your own.</p>
 </div>
-  <div class="markdown conceptual"></div>
-
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BaseRuntimeConfiguration</span></div>
+      <div class="level2"><a class="xref" href="VRBuilder.Core.Configuration.DefaultRuntimeConfiguration.html">DefaultRuntimeConfiguration</a></div>
+      <div class="level2"><a class="xref" href="VRBuilder.Netcode.Configuration.NetcodeRuntimeConfiguration.html">NetcodeRuntimeConfiguration</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.Configuration.html">VRBuilder.Core.Configuration</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.Core.dll</h6>
+  <h5 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class BaseRuntimeConfiguration</code></pre>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><span class="xref">Object</span></div>
-      <div><span class="xref">BaseRuntimeConfiguration</span></div>
-    </dd>
-  </dl>
-
-
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="VRBuilder.Core.Configuration.DefaultRuntimeConfiguration.html">DefaultRuntimeConfiguration</a></div>
-      <div><a class="xref" href="VRBuilder.Netcode.Configuration.NetcodeRuntimeConfiguration.html">NetcodeRuntimeConfiguration</a></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <span class="xref">Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">Object.Equals(Object)</span>
-    </div>
-    <div>
-      <span class="xref">Object.Equals(Object, Object)</span>
-    </div>
-    <div>
-      <span class="xref">Object.ReferenceEquals(Object, Object)</span>
-    </div>
-    <div>
-      <span class="xref">Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">Object.MemberwiseClone()</span>
-    </div>
-  </dd></dl>
-
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L138">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor">BaseRuntimeConfiguration()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseRuntimeConfiguration()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_VRBuilder_Core_RestrictiveEnvironment_StepLockHandlingStrategy_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.%23ctor(VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L142">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_VRBuilder_Core_RestrictiveEnvironment_StepLockHandlingStrategy_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor(VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy)">BaseRuntimeConfiguration(StepLockHandlingStrategy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseRuntimeConfiguration(StepLockHandlingStrategy lockHandling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy.html">StepLockHandlingStrategy</a></td>
+        <td><span class="parametername">lockHandling</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_CustomInputActionAssetPath.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.CustomInputActionAssetPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L62">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_CustomInputActionAssetPath_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.CustomInputActionAssetPath*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_CustomInputActionAssetPath" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.CustomInputActionAssetPath">CustomInputActionAssetPath</h4>
+  <div class="markdown level1 summary"><p>Custom InputActionAsset path which is used when key bindings are modified.
+Should be stored in project path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string CustomInputActionAssetPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_DefaultInputActionAssetPath.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.DefaultInputActionAssetPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L56">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_DefaultInputActionAssetPath_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.DefaultInputActionAssetPath*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_DefaultInputActionAssetPath" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.DefaultInputActionAssetPath">DefaultInputActionAssetPath</h4>
+  <div class="markdown level1 summary"><p>Default input action asset which is used when no customization of key bindings are done.
+Should be stored inside the VR Builder package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string DefaultInputActionAssetPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_InstructionPlayer.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.InstructionPlayer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L101">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_InstructionPlayer_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.InstructionPlayer*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_InstructionPlayer" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.InstructionPlayer">InstructionPlayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract AudioSource InstructionPlayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AudioSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LocalUser.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L98">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LocalUser_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LocalUser" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser">LocalUser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract UserSceneObject LocalUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Properties.UserSceneObject.html">UserSceneObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ManifestFileName.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ManifestFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L30">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ManifestFileName_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ManifestFileName*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ManifestFileName" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ManifestFileName">ManifestFileName</h4>
+  <div class="markdown level1 summary"><p>Name of the manifest file that could be used to save process asset information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ManifestFileName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Modes.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Modes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L91">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Modes_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Modes*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Modes" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Modes">Modes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IModeHandler Modes { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Configuration.Modes.IModeHandler.html">IModeHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ProcessAudioPlayer.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ProcessAudioPlayer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L112">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ProcessAudioPlayer_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ProcessAudioPlayer*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ProcessAudioPlayer" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ProcessAudioPlayer">ProcessAudioPlayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IProcessAudioPlayer ProcessAudioPlayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Configuration.IProcessAudioPlayer.html">IProcessAudioPlayer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneConfiguration.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneConfiguration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L118">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneConfiguration_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneConfiguration*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneConfiguration" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneConfiguration">SceneConfiguration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISceneConfiguration SceneConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Configuration.ISceneConfiguration.html">ISceneConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectManager.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L115">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectManager_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectManager*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectManager" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectManager">SceneObjectManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ISceneObjectManager SceneObjectManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Configuration.ISceneObjectManager.html">ISceneObjectManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectRegistry.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectRegistry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L36">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectRegistry_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectRegistry*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectRegistry" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectRegistry">SceneObjectRegistry</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ISceneObjectRegistry SceneObjectRegistry { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html">ISceneObjectRegistry</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Serializer.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Serializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L50">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Serializer_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Serializer*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Serializer" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Serializer">Serializer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IProcessSerializer Serializer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Serialization.IProcessSerializer.html">IProcessSerializer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_StepLockHandling.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.StepLockHandling%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L106">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_StepLockHandling_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.StepLockHandling*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_StepLockHandling" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.StepLockHandling">StepLockHandling</h4>
+  <div class="markdown level1 summary"><p>Determines the property locking strategy used for this runtime configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StepLockHandlingStrategy StepLockHandling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy.html">StepLockHandlingStrategy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_User.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.User%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L94">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_User_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.User*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_User" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.User">User</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This property is obsolete and no longer returns a valid value. Use LocalUser instead.&quot;, true)]
+public abstract ProcessSceneObject User { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.SceneObjects.ProcessSceneObject.html">ProcessSceneObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Users.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L109">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Users_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Users*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Users" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Users">Users</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;UserSceneObject&gt; Users { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="VRBuilder.Core.Properties.UserSceneObject.html">UserSceneObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LoadProcess_System_String_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LoadProcess(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L148">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LoadProcess_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LoadProcess*"></a>
+  <h4 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LoadProcess_System_String_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LoadProcess(System.String)">LoadProcess(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IProcess&gt; LoadProcess(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="VRBuilder.Core.IProcess.html">IProcess</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="VRBuilder.TextToSpeech.RuntimeConfigurationExtensions.html#VRBuilder_TextToSpeech_RuntimeConfigurationExtensions_GetTextToSpeechConfiguration_VRBuilder_Core_Configuration_BaseRuntimeConfiguration_">RuntimeConfigurationExtensions.GetTextToSpeechConfiguration(BaseRuntimeConfiguration)</a>
   </div>
   <div>
       <a class="xref" href="VRBuilder.TextToSpeech.RuntimeConfigurationExtensions.html#VRBuilder_TextToSpeech_RuntimeConfigurationExtensions_SetTextToSpeechConfiguration_VRBuilder_Core_Configuration_BaseRuntimeConfiguration_VRBuilder_TextToSpeech_TextToSpeechConfiguration_">RuntimeConfigurationExtensions.SetTextToSpeechConfiguration(BaseRuntimeConfiguration, TextToSpeechConfiguration)</a>
   </div>
-  </dd></dl>
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor">
-  BaseRuntimeConfiguration()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L138"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BaseRuntimeConfiguration()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration__ctor_VRBuilder_Core_RestrictiveEnvironment_StepLockHandlingStrategy_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.#ctor(VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy)">
-  BaseRuntimeConfiguration(StepLockHandlingStrategy)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L142"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BaseRuntimeConfiguration(StepLockHandlingStrategy lockHandling)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>lockHandling</code> <a class="xref" href="VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy.html">StepLockHandlingStrategy</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_CustomInputActionAssetPath_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.CustomInputActionAssetPath*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_CustomInputActionAssetPath" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.CustomInputActionAssetPath">
-  CustomInputActionAssetPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L62"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Custom InputActionAsset path which is used when key bindings are modified.
-Should be stored in project path.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string CustomInputActionAssetPath { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">String</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_DefaultInputActionAssetPath_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.DefaultInputActionAssetPath*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_DefaultInputActionAssetPath" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.DefaultInputActionAssetPath">
-  DefaultInputActionAssetPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L56"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Default input action asset which is used when no customization of key bindings are done.
-Should be stored inside the VR Builder package.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string DefaultInputActionAssetPath { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">String</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_InstructionPlayer_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.InstructionPlayer*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_InstructionPlayer" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.InstructionPlayer">
-  InstructionPlayer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L101"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract AudioSource InstructionPlayer { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">AudioSource</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LocalUser_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LocalUser" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LocalUser">
-  LocalUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L98"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract UserSceneObject LocalUser { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Properties.UserSceneObject.html">UserSceneObject</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ManifestFileName_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ManifestFileName*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ManifestFileName" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ManifestFileName">
-  ManifestFileName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L30"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Name of the manifest file that could be used to save process asset information.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ManifestFileName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">String</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Modes_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Modes*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Modes" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Modes">
-  Modes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L91"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IModeHandler Modes { get; protected set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Configuration.Modes.IModeHandler.html">IModeHandler</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ProcessAudioPlayer_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ProcessAudioPlayer*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_ProcessAudioPlayer" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.ProcessAudioPlayer">
-  ProcessAudioPlayer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L112"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IProcessAudioPlayer ProcessAudioPlayer { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Configuration.IProcessAudioPlayer.html">IProcessAudioPlayer</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneConfiguration_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneConfiguration*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneConfiguration" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneConfiguration">
-  SceneConfiguration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L118"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ISceneConfiguration SceneConfiguration { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Configuration.ISceneConfiguration.html">ISceneConfiguration</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectManager_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectManager*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectManager" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectManager">
-  SceneObjectManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L115"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract ISceneObjectManager SceneObjectManager { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Configuration.ISceneObjectManager.html">ISceneObjectManager</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectRegistry_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectRegistry*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_SceneObjectRegistry" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.SceneObjectRegistry">
-  SceneObjectRegistry
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L36"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ISceneObjectRegistry SceneObjectRegistry { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html">ISceneObjectRegistry</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Serializer_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Serializer*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Serializer" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Serializer">
-  Serializer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L50"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IProcessSerializer Serializer { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Serialization.IProcessSerializer.html">IProcessSerializer</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_StepLockHandling_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.StepLockHandling*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_StepLockHandling" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.StepLockHandling">
-  StepLockHandling
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L106"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Determines the property locking strategy used for this runtime configuration.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StepLockHandlingStrategy StepLockHandling { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy.html">StepLockHandlingStrategy</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_User_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.User*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_User" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.User">
-  User
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L94"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This property is obsolete and no longer returns a valid value. Use LocalUser instead.&quot;, true)]
-public abstract ProcessSceneObject User { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.SceneObjects.ProcessSceneObject.html">ProcessSceneObject</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Users_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Users*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_Users" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.Users">
-  Users
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L109"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;UserSceneObject&gt; Users { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">IEnumerable</span>&lt;<a class="xref" href="VRBuilder.Core.Properties.UserSceneObject.html">UserSceneObject</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LoadProcess_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LoadProcess*"></a>
-
-  <h3 id="VRBuilder_Core_Configuration_BaseRuntimeConfiguration_LoadProcess_System_String_" data-uid="VRBuilder.Core.Configuration.BaseRuntimeConfiguration.LoadProcess(System.String)">
-  LoadProcess(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L148"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IProcess&gt; LoadProcess(string path)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>path</code> <span class="xref">String</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Task</span>&lt;<a class="xref" href="VRBuilder.Core.IProcess.html">IProcess</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 </article>
-
-        <div class="contribution d-print-none">
-          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L24" class="edit-link">Edit this page</a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Configuration_BaseRuntimeConfiguration.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Configuration.BaseRuntimeConfiguration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Configuration/BaseRuntimeConfiguration.cs/#L24" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-    <div class="container-xxl search-results" id="search-results"></div>
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>
