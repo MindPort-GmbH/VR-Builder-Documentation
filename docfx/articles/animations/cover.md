@@ -1,4 +1,5 @@
 ---
 documentType: cover
 ---
-# Animations for VR Builder Manual
+# Animations for VR Builder
+## User Manual

@@ -1,4 +1,5 @@
 ---
 documentType: cover
 ---
-# Animations for VR Builder Manual
+# Randomization for VR Builder
+## User Manual

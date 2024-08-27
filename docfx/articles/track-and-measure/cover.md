@@ -1,4 +1,5 @@
 ---
 documentType: cover
 ---
-# Animations for VR Builder Manual
+# Track and Measure for VR Builder
+## User Manual

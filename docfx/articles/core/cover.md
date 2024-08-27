@@ -1,4 +1,5 @@
 ---
 documentType: cover
 ---
-# VR Builder Manual
+# VR Builder
+## User Manual
