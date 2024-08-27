@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installation | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installation | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="installation">Installation</h2>
+
+<p>You can get VR Builder from the <a href="https://assetstore.unity.com/packages/tools/visual-scripting/vr-builder-201913">Unity Asset Store</a> or from our <a href="https://github.com/MindPort-GmbH/VR-Builder/releases">GitHub</a>. In the first case, you will be able to download and import the VR Builder package from the package manager. If you have downloaded a .unitypackage from GitHub, just import it in the project.</p>
+<p>If you are creating a new project, select the <code>3D</code> or <code>3D (URP)</code> template. Note that it is not necessary to choose the <code>VR</code> template as VR Builder will configure the project for VR automatically.</p>
+<p>After importing, VR Builder will compile and import some dependencies. </p>
+<p>For older Unity versions, a dialog from Unity&#39;s XR Interaction Component appears. VR Builder should work with either choice, so select the option that better suits your existing project. Use <code>I Made a Backup, Go Ahead!</code> if you are starting a new project. This will trigger an automated restart.</p>
+<p><img src="images/installation-xrit-layermask-update.png" alt="Update Interaction Layermask"></p>
+<p>For newer Unity versions the Samples of the XR Interaction Toolkit might need an update.</p>
+<p><img src="images/update-xri-samples.png" alt="Update Interaction Layermask"></p>
+<p>After these notifications the Project Setup Wizard will appear.</p>
+<h3 id="guide-through-the-project-setup-wizard">Guide Through the Project Setup Wizard</h3>
+<p>The Setup Wizard helps to get new or existing Unity scenes set up and ready to be used with VR Builder. </p>
+<h4 id="welcome">Welcome</h4>
+<p>In the following we will guide you through the different tabs of the VR Builder Setup Wizard.
+Click <code>Next</code> to proceed to the interaction settings page setup page.</p>
+<p><img src="images/installation-wizard-welcome.png" alt="Wizard Welcome Page"></p>
+<h4 id="interaction-settings">Interaction Settings</h4>
+<p>Here you can configure some default settings related to VR Builder interactions. Right now, the only available setting will determine whether a newly created grabbable object will use physics or not. You can also change these options at any time in <code>Project Settings &gt; VR Builder &gt; Settings</code>.</p>
+<p><img src="images/installation-wizard-interaction-settings.png" alt="Wizard Interaction Settings Page"></p>
+<h4 id="xr-hardware-setup">XR Hardware Setup</h4>
+<p>Then, if it&#39;s not configured already, you will be able to configure your project to work with your VR hardware. If your hardware is not listed but supports OpenXR, select Other. You might need to finish the configuration under Project Settings -&gt; XR Plug-in Management. If your device is not supported, please reach out to us in the VR Builder Community. The packages for the selected hardware will be imported after closing the wizard.</p>
+<p><img src="images/installation-wizard-hardware.png" alt="Wizard Hardware Page"></p>
+<h4 id="unity-localization">Unity Localization</h4>
+<p>Finally you must choose whether to set up localization support or skip it for now. VR Builder supports localization through the Unity Localization package. When setting up localization, the wizard will guide you through the manual steps required for a localized project. It provides a useful checklist and some shortcuts to make the task easier. It also has links that redirect to the relevant Unity documentation. If you decide to skip this setup, VR Builder will work in a single language. You can perform localization setup at any time. We encourage you to use Unity Localization, even if you use just one language. With Unity Localization, you will have all your texts in one place inside the Unity Localization Tables, which in turn will give you the possibility to export and refine them and import them back into Unity. Note that as of January 2024, we do not support asset localization tables. See <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Documentation/vr-builder-manual.md#configuration">Resources path/Key</a> in the Documentation on how to localize audio files.</p>
+<p><img src="images/installation-wizard-localization.png" alt="Localization Page"></p>
+<h4 id="help--documentation">Help &amp; Documentation</h4>
+<p>This page lists some useful resources to get you started with VR Builder. There is also a checkbox which lets you choose if the demo scene should be loaded after closing the wizard.After clicking Finish, VR Builder is set up! You will need to wait a few seconds for packages to import if you selected a headset from the hardware list. Then, feel free to try out the demo scene or create your own scene by selecting <code>Tools &gt; VR Builder &gt; Scene Setup Wizard…</code>.</p>
+<p>Note that if you selected the Unity URP template in the beginning, the materials on the avatar hands and demo scene will look solid magenta. That&#39;s Unity&#39;s way to tell you that the materials are not compatible with the current render pipeline. You can rectify this by selecting all materials (by filtering them in the project window), then click <code>Edit &gt; Rendering &gt; Materials &gt; Convert Selected Built-in</code> Materials to URP. You can of course ignore this step if you don&#39;t plan to use the provided hand models or the demo scene.</p>
+<p><img src="images/instalation-wizard-help-documentantion.png" alt="Localization Page"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/installation.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
