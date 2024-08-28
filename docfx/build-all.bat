@@ -1,4 +1,7 @@
 @echo off
+echo Building API documentation...
+docfx metadata
+
 echo Building documentation...
 docfx build --output ../docs
 

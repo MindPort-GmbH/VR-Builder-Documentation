@@ -33,9 +33,7 @@ items:
       description: Type which can be filtered.
     content.vb: >-
       Public Class WhitelistTypeRule(Of TBase)
-
           Inherits ListTypeRule(Of WhitelistTypeRule(Of TBase), TBase)
-
           Implements IRule(Of Type)
   inheritance:
   - System.Object
@@ -87,6 +85,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nActual check of a given type. It is guaranteed that <code data-dev-comment-type=\"paramref\" class=\"paramref\">type</code> inherits the <typeparam name=\"TValueBase\"></typeparam>\n"
   example: []
   syntax:
     content: protected override bool IsQualifiedByPredicate(Type type)

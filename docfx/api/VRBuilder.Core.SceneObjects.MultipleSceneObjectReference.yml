@@ -38,9 +38,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class MultipleSceneObjectReference
-
           Inherits MultipleSceneReference(Of ISceneObject)
-
           Implements ICanBeEmpty
   inheritance:
   - System.Object
@@ -100,6 +98,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nDetermine the objects referenced by this scene reference.\n"
   example: []
   syntax:
     content: protected override IEnumerable<ISceneObject> DetermineValue(IEnumerable<ISceneObject> cachedValue)

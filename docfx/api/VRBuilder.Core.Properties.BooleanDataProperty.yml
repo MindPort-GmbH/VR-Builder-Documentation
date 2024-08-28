@@ -33,9 +33,7 @@ items:
     content: 'public class BooleanDataProperty : DataProperty<bool>, IDataProperty<bool>, IDataPropertyBase, ISceneObjectProperty'
     content.vb: >-
       Public Class BooleanDataProperty
-
           Inherits DataProperty(Of Boolean)
-
           Implements IDataProperty(Of Boolean), IDataPropertyBase, ISceneObjectProperty
   inheritance:
   - System.Object
@@ -85,6 +83,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nRaised when the stored value changes.\n"
   example: []
   syntax:
     content: public override UnityEvent<bool> OnValueChanged { get; }
@@ -124,6 +123,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nRaised when the stored value is reset to the default.\n"
   example: []
   syntax:
     content: public override UnityEvent OnValueReset { get; }
@@ -163,6 +163,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nDefines a default value for the property.\n"
   example: []
   syntax:
     content: public override bool DefaultValue { get; }

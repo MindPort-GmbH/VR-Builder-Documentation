@@ -36,15 +36,14 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nAdds highlighting functionality to a GameObject with Renderers.\n"
   remarks: "\nHighlights are always queued following a LIFO (Last In First Out) scheme. \n"
   example: []
   syntax:
     content: 'public class DefaultHighlighter : AbstractHighlighter, IHighlighter'
     content.vb: >-
       Public Class DefaultHighlighter
-
           Inherits AbstractHighlighter
-
           Implements IHighlighter
   inheritance:
   - System.Object
@@ -90,6 +89,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nReturns true if there is this object is currently being highlighted.\n"
   example: []
   syntax:
     content: public override bool IsHighlighting { get; }
@@ -316,12 +316,14 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nStarts highlighting this object.\n"
   example: []
   syntax:
     content: public override void StartHighlighting(Material highlightMaterial)
     parameters:
     - id: highlightMaterial
       type: Material
+      description: Material to be applied as highlight.
     content.vb: Public Overrides Sub StartHighlighting(highlightMaterial As Material)
   overridden: VRBuilder.BasicInteraction.AbstractHighlighter.StartHighlighting(Material)
   overload: VRBuilder.BasicInteraction.DefaultHighlighter.StartHighlighting*
@@ -353,6 +355,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nStops highlighting this object.\n"
   example: []
   syntax:
     content: public override void StopHighlighting()
@@ -422,11 +425,13 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\n\n"
   example: []
   syntax:
     content: public override Material GetHighlightMaterial()
     return:
       type: Material
+      description: ''
     content.vb: Public Overrides Function GetHighlightMaterial As Material
   overridden: VRBuilder.BasicInteraction.AbstractHighlighter.GetHighlightMaterial
   overload: VRBuilder.BasicInteraction.DefaultHighlighter.GetHighlightMaterial*

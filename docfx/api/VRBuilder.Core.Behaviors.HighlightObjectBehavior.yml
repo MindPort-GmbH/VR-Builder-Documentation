@@ -45,9 +45,7 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder/manual/default-behaviors/highlight-object")>
 
       Public Class HighlightObjectBehavior
-
           Inherits Behavior(Of HighlightObjectBehavior.EntityData)
-
           Implements IDataOwner(Of HighlightObjectBehavior.EntityData), IBehavior, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior), IOptional, IEntity
   inheritance:
   - System.Object
@@ -262,6 +260,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -300,6 +299,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -338,6 +338,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nOverride this method if your behavior or condition supports changing between process modes (<xref href=\"VRBuilder.Core.Configuration.Modes.IMode\" data-throw-if-not-resolved=\"false\"></xref>).\nBy default returns an empty configurator that does nothing.\n"
   example: []
   syntax:
     content: protected override IConfigurator GetConfigurator()

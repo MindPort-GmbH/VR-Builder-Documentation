@@ -43,9 +43,7 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder/manual/default-conditions/object-nearby")>
 
       Public Class ObjectInRangeCondition
-
           Inherits Condition(Of ObjectInRangeCondition.EntityData)
-
           Implements IDataOwner(Of ObjectInRangeCondition.EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -243,6 +241,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
@@ -279,11 +278,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
+  summary: "\nOverride this method to return a custom <xref href=\"VRBuilder.Core.Autocompleter%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: protected override IAutocompleter GetAutocompleter()
     return:
       type: VRBuilder.Core.IAutocompleter
+      description: By default, it returns and empty autocompleter which does nothing.
     content.vb: Protected Overrides Function GetAutocompleter As IAutocompleter
   overridden: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInRangeCondition.EntityData}.GetAutocompleter
   overload: VRBuilder.Core.Conditions.ObjectInRangeCondition.GetAutocompleter*

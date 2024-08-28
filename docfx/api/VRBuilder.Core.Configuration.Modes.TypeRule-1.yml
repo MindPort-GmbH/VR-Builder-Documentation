@@ -35,7 +35,6 @@ items:
       description: A type from which all input types have to be inherited from.
     content.vb: >-
       Public MustInherit Class TypeRule(Of TValueBase)
-
           Implements IRule(Of Type)
   inheritance:
   - System.Object
@@ -89,7 +88,6 @@ items:
   syntax:
     content: >-
       public bool IsQualifiedBy<T>()
-
           where T : TValueBase
     typeParameters:
     - id: T
@@ -126,6 +124,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nChecks a given <code data-dev-comment-type=\"paramref\" class=\"paramref\">value</code> and returns true if this value qualifies the rule.\n"
   example: []
   syntax:
     content: public bool IsQualifiedBy(Type type)

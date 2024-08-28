@@ -44,7 +44,6 @@ items:
     content: 'public class DefaultFileSystem : IPlatformFileSystem'
     content.vb: >-
       Public Class DefaultFileSystem
-
           Implements IPlatformFileSystem
   inheritance:
   - System.Object
@@ -191,6 +190,8 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nLoads a file stored at <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code>.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
   example: []
   syntax:
     content: public virtual async Task<byte[]> Read(string filePath)
@@ -199,8 +200,13 @@ items:
       type: System.String
     return:
       type: System.Threading.Tasks.Task{System.Byte[]}
+      description: The contents of the file into a byte array.
     content.vb: Public Overridable Function Read(filePath As String) As Task(Of Byte())
   overload: VRBuilder.Core.IO.DefaultFileSystem.Read*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: Exception thrown if the file does not exist.
   implements:
   - VRBuilder.Core.IO.IPlatformFileSystem.Read(System.String)
   modifiers.csharp:
@@ -232,6 +238,8 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nLoads a file stored at <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code>.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to the StreamingAssets or the persistent data folder.
   example: []
   syntax:
     content: public virtual async Task<string> ReadAllText(string filePath)
@@ -240,8 +248,13 @@ items:
       type: System.String
     return:
       type: System.Threading.Tasks.Task{System.String}
+      description: Returns a `string` with the content of the file.
     content.vb: Public Overridable Function ReadAllText(filePath As String) As Task(Of String)
   overload: VRBuilder.Core.IO.DefaultFileSystem.ReadAllText*
+  exceptions:
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: Exception thrown if the file does not exist.
   implements:
   - VRBuilder.Core.IO.IPlatformFileSystem.ReadAllText(System.String)
   modifiers.csharp:
@@ -273,6 +286,8 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nSaves given <code data-dev-comment-type=\"paramref\" class=\"paramref\">fileData</code> in provided <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code>.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to <see cref="!:PersistentDataPath"></see>.
   example: []
   syntax:
     content: public virtual async Task<bool> Write(string filePath, byte[] fileData)
@@ -283,6 +298,7 @@ items:
       type: System.Byte[]
     return:
       type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns true if <code data-dev-comment-type="paramref" class="paramref">fileData</code> could be saved successfully; otherwise, false.
     content.vb: Public Overridable Function Write(filePath As String, fileData As Byte()) As Task(Of Boolean)
   overload: VRBuilder.Core.IO.DefaultFileSystem.Write*
   implements:
@@ -319,6 +335,8 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nReturns true if given <code data-dev-comment-type=\"paramref\" class=\"paramref\">filePath</code> contains the name of an existing file under the StreamingAssets or platform persistent data folder; otherwise, false.\n"
+  remarks: <code data-dev-comment-type="paramref" class="paramref">filePath</code> must be relative to the StreamingAssets or the platform persistent data folder.
   example: []
   syntax:
     content: public virtual async Task<bool> Exists(string filePath)
@@ -360,6 +378,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nReturns the names of files (including their paths) that match the specified search pattern in the specified directory relative to the Streaming Assets folder.\n"
   remarks: "\nThe following wildcard specifiers are permitted in <code data-dev-comment-type=\"paramref\" class=\"paramref\">searchPattern</code>:\nWildcard specifier	    Matches\n* (asterisk)	        Zero or more characters in that position.\n? (question mark)	    Zero or one character in that position.\n"
   example: []
   syntax:
@@ -367,8 +386,10 @@ items:
     parameters:
     - id: path
       type: System.String
+      description: The relative path to the Streaming Assets folder. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
+      description: "\nThe search string to match against the names of files in <code data-dev-comment-type=\"paramref\" class=\"paramref\">path</code>.\nDepending on the platform, this parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn&apos;t support regular expressions.\n"
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
     content.vb: Public Overridable Function FetchStreamingAssetsFilesAt(path As String, searchPattern As String) As IEnumerable(Of String)
@@ -987,6 +1008,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
 - uid: System.Threading.Tasks.Task{System.Byte[]}
   commentId: T:System.Threading.Tasks.Task{System.Byte[]}
   parent: System.Threading.Tasks

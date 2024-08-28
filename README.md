@@ -5,6 +5,7 @@
 1. Pull this repo in a VR Builder Unity project folder (same level as Assets folder).
 2. Use DocFX DocFX 2.59.4. At the time of writing, it can be installed from chocolatey running `choco install docfx`.
 3. To create PDFs, you also need wkhtmltopdf. Can be installed from chocolatey as well, `choco install wkhtmltopdf`.
+4. To build API Metadata, you'll need MSBuild that can be installed from the VS installer.
 
 ## Usage
 

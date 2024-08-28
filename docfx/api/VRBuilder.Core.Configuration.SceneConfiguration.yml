@@ -33,9 +33,7 @@ items:
     content: 'public class SceneConfiguration : MonoBehaviour, ISceneConfiguration'
     content.vb: >-
       Public Class SceneConfiguration
-
           Inherits MonoBehaviour
-
           Implements ISceneConfiguration
   inheritance:
   - System.Object
@@ -69,6 +67,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nLists all assemblies whose property extensions will be used in the current scene.\n"
   example: []
   syntax:
     content: public IEnumerable<string> ExtensionAssembliesWhitelist { get; }
@@ -107,6 +106,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nDefault resources prefab to use for Confetti behavior.\n"
   example: []
   syntax:
     content: public string DefaultConfettiPrefab { get; set; }
@@ -145,6 +145,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nTrue if the specified type is not in an exclusion list for the specified assembly.\n"
   example: []
   syntax:
     content: public bool IsAllowedInAssembly(Type extensionType, string assemblyName)

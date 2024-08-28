@@ -36,7 +36,6 @@ items:
     content: 'public class DefaultAudioPlayer : IProcessAudioPlayer'
     content.vb: >-
       Public Class DefaultAudioPlayer
-
           Implements IProcessAudioPlayer
   inheritance:
   - System.Object
@@ -141,6 +140,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nGets a fallback audio source. Used only for backwards compatibility.\n"
   example: []
   syntax:
     content: public AudioSource FallbackAudioSource { get; }
@@ -179,6 +179,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nTrue if currently playing audio.\n"
   example: []
   syntax:
     content: public bool IsPlaying { get; }
@@ -217,6 +218,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nPlay the specified audio immediately with the set parameters.\n"
   example: []
   syntax:
     content: public void PlayAudio(IAudioData audioData, float volume = 1F, float pitch = 1F)
@@ -257,6 +259,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nResets the player to its default settings.\n"
   example: []
   syntax:
     content: public void Reset()
@@ -290,6 +293,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
+  summary: "\nStops playing audio.\n"
   example: []
   syntax:
     content: public void Stop()

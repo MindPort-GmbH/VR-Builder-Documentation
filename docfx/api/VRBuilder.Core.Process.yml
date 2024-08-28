@@ -43,9 +43,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class Process
-
           Inherits Entity(Of Process.EntityData)
-
           Implements IDataOwner(Of Process.EntityData), IProcess, IEntity, IDataOwner(Of IProcessData), IDataOwner, IClonable(Of IProcess)
   inheritance:
   - System.Object
@@ -158,6 +156,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nUtility data used by editor.\n"
   example: []
   syntax:
     content: >-
@@ -207,6 +206,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: IProcessData IDataOwner<IProcessData>.Data { get; }
@@ -245,6 +245,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -283,6 +284,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -321,6 +323,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public IProcess Clone()

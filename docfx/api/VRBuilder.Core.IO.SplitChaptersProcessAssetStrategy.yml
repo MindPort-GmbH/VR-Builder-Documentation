@@ -32,7 +32,6 @@ items:
     content: 'public class SplitChaptersProcessAssetStrategy : IProcessAssetStrategy'
     content.vb: >-
       Public Class SplitChaptersProcessAssetStrategy
-
           Implements IProcessAssetStrategy
   inheritance:
   - System.Object
@@ -74,6 +73,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nIf true, a manifest file will be created. The file will be read first when loading the process.\n"
   example: []
   syntax:
     content: public bool CreateManifest { get; }
@@ -112,6 +112,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nReturns a number of named byte arrays containing the process data. The first key is the process file,\nsubsequent ones are additional data.\n"
   example: []
   syntax:
     content: public IDictionary<string, byte[]> CreateSerializedProcessAssets(IProcess process, IProcessSerializer serializer)
@@ -152,6 +153,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.IO
+  summary: "\nAttempts to build a process from the provided serialized data.\n"
   example: []
   syntax:
     content: public IProcess GetProcessFromSerializedData(byte[] processData, IEnumerable<byte[]> additionalData, IProcessSerializer serializer)

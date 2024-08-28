@@ -64,9 +64,7 @@ items:
     content: 'public class ProcessSceneObject : MonoBehaviour, ISceneObject, ILockable, IGuidContainer'
     content.vb: >-
       Public Class ProcessSceneObject
-
           Inherits MonoBehaviour
-
           Implements ISceneObject, ILockable, IGuidContainer
   inheritance:
   - System.Object
@@ -186,6 +184,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nUnique Guid for each entity, which is required\n"
   example: []
   syntax:
     content: public Guid Guid { get; }
@@ -304,6 +303,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nAll guids on the object.\n"
   example: []
   syntax:
     content: public IEnumerable<Guid> Guids { get; }
@@ -433,6 +433,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nTarget GameObject, used for applying stuff.\n"
   example: []
   syntax:
     content: public GameObject GameObject { get; }
@@ -510,6 +511,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns if the object is locked.\n"
   example: []
   syntax:
     content: public bool IsLocked { get; }
@@ -851,6 +853,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nGives the object a new specified unique ID.\n"
   example: []
   syntax:
     content: public void SetObjectId(Guid guid)
@@ -1001,11 +1004,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nTrue if the scene object has a property of the specified type.\n"
   example: []
   syntax:
     content: >-
       public bool CheckHasProperty<T>()
-
           where T : ISceneObjectProperty
     typeParameters:
     - id: T
@@ -1044,6 +1047,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nTrue if the scene object has a property of the specified type.\n"
   example: []
   syntax:
     content: public bool CheckHasProperty(Type type)
@@ -1082,11 +1086,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns a property of the specified type.\n"
   example: []
   syntax:
     content: >-
       public T GetProperty<T>()
-
           where T : ISceneObjectProperty
     typeParameters:
     - id: T
@@ -1125,6 +1129,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nValidates properties on the scene object.\n"
   example: []
   syntax:
     content: public void ValidateProperties(IEnumerable<Type> properties)
@@ -1164,6 +1169,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nChanges the lock state of the object.\n"
   example: []
   syntax:
     content: public void SetLocked(bool lockState)
@@ -1200,6 +1206,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nRequests a change on the lock state of the object.\n"
   example: []
   syntax:
     content: public virtual void RequestLocked(bool lockState, IStepData stepData)
@@ -1240,6 +1247,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nManually removes a step data keeping the object unlocked.\n"
   example: []
   syntax:
     content: public bool RemoveUnlocker(IStepData data)
@@ -1278,6 +1286,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nAdd the specified guid.\n"
   example: []
   syntax:
     content: public void AddGuid(Guid guid)
@@ -1314,6 +1323,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nTrue if the object has the specified guid.\n"
   example: []
   syntax:
     content: public bool HasGuid(Guid guid)
@@ -1352,6 +1362,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nRemove the specified guid.\n"
   example: []
   syntax:
     content: public bool RemoveGuid(Guid guid)

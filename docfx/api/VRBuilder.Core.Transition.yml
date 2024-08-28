@@ -43,9 +43,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class Transition
-
           Inherits CompletableEntity(Of Transition.EntityData)
-
           Implements IDataOwner(Of Transition.EntityData), ICompletableEntity, ITransition, IEntity, ICompletable, IDataOwner(Of ITransitionData), IDataOwner, IClonable(Of ITransition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -114,6 +112,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: ITransitionData IDataOwner<ITransitionData>.Data { get; }
@@ -152,6 +151,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -190,6 +190,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
@@ -228,6 +229,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -266,6 +268,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nOverride this method if your behavior or condition supports changing between process modes (<xref href=\"VRBuilder.Core.Configuration.Modes.IMode\" data-throw-if-not-resolved=\"false\"></xref>).\nBy default returns an empty configurator that does nothing.\n"
   example: []
   syntax:
     content: protected override IConfigurator GetConfigurator()
@@ -302,11 +305,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nOverride this method to return a custom <xref href=\"VRBuilder.Core.Autocompleter%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: protected override IAutocompleter GetAutocompleter()
     return:
       type: VRBuilder.Core.IAutocompleter
+      description: By default, it returns and empty autocompleter which does nothing.
     content.vb: Protected Overrides Function GetAutocompleter As IAutocompleter
   overridden: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Transition.EntityData}.GetAutocompleter
   overload: VRBuilder.Core.Transition.GetAutocompleter*
@@ -369,6 +374,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns all LockableProperties this provider requires.\n"
   example: []
   syntax:
     content: public IEnumerable<LockablePropertyData> GetLockableProperties()
@@ -404,6 +410,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public ITransition Clone()

@@ -31,7 +31,6 @@ items:
     content: 'public class NonLockingStepHandling : StepLockHandlingStrategy'
     content.vb: >-
       Public Class NonLockingStepHandling
-
           Inherits StepLockHandlingStrategy
   inheritance:
   - System.Object
@@ -75,14 +74,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.RestrictiveEnvironment
+  summary: "\nUnlocks the restrictive environment and allows interaction with scene objects required for this Step to complete.\n"
   example: []
   syntax:
     content: public override void Unlock(IStepData data, IEnumerable<LockablePropertyData> manualUnlocked)
     parameters:
     - id: data
       type: VRBuilder.Core.IStepData
+      description: IStepData of the current step
     - id: manualUnlocked
       type: System.Collections.Generic.IEnumerable{VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData}
+      description: All LockableProperties which are should be unlocked in addition
     content.vb: Public Overrides Sub Unlock(data As IStepData, manualUnlocked As IEnumerable(Of LockablePropertyData))
   overridden: VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy.Unlock(VRBuilder.Core.IStepData,System.Collections.Generic.IEnumerable{VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData})
   overload: VRBuilder.Core.RestrictiveEnvironment.NonLockingStepHandling.Unlock*
@@ -117,14 +119,17 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.RestrictiveEnvironment
+  summary: "\nLocks all unlocked LockableProperties for the current step.\n"
   example: []
   syntax:
     content: public override void Lock(IStepData data, IEnumerable<LockablePropertyData> manualUnlocked)
     parameters:
     - id: data
       type: VRBuilder.Core.IStepData
+      description: IStepData of the current step
     - id: manualUnlocked
       type: System.Collections.Generic.IEnumerable{VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData}
+      description: All LockableProperties which were unlocked in addition
     content.vb: Public Overrides Sub Lock(data As IStepData, manualUnlocked As IEnumerable(Of LockablePropertyData))
   overridden: VRBuilder.Core.RestrictiveEnvironment.StepLockHandlingStrategy.Lock(VRBuilder.Core.IStepData,System.Collections.Generic.IEnumerable{VRBuilder.Core.RestrictiveEnvironment.LockablePropertyData})
   overload: VRBuilder.Core.RestrictiveEnvironment.NonLockingStepHandling.Lock*

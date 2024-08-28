@@ -41,7 +41,6 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class EntityData
-
           Implements IBackgroundBehaviorData, IBehaviorData, INamedData, IData, IBehaviorExecutionStages
   inheritance:
   - System.Object
@@ -142,6 +141,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nA property that determines if the Behavior should be run at activation or deactivation (or both).\n"
   example: []
   syntax:
     content: >-
@@ -292,6 +292,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReference to this object&apos;s <xref href=\"VRBuilder.Core.IMetadata\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Metadata Metadata { get; set; }
@@ -330,6 +331,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nName of the entity.\n"
   example: []
   syntax:
     content: >-
@@ -378,6 +380,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nIf true, the behavior prevents the completion of a step until it is completed itself.\nIf false, the behavior does not hinder the completion of a step.\n"
   example: []
   syntax:
     content: public bool IsBlocking { get; set; }

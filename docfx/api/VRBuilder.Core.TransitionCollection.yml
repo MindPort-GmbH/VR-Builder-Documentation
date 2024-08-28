@@ -41,9 +41,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class TransitionCollection
-
           Inherits Entity(Of TransitionCollection.EntityData)
-
           Implements IDataOwner(Of TransitionCollection.EntityData), ITransitionCollection, IStepChild, IEntity, IDataOwner(Of ITransitionCollectionData), IDataOwner, IClonable(Of ITransitionCollection)
   inheritance:
   - System.Object
@@ -106,6 +104,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nOverride this method if your behavior or condition supports changing between process modes (<xref href=\"VRBuilder.Core.Configuration.Modes.IMode\" data-throw-if-not-resolved=\"false\"></xref>).\nBy default returns an empty configurator that does nothing.\n"
   example: []
   syntax:
     content: protected override IConfigurator GetConfigurator()
@@ -143,6 +142,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: ITransitionCollectionData IDataOwner<ITransitionCollectionData>.Data { get; }
@@ -211,6 +211,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -249,6 +250,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
@@ -287,6 +289,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -325,6 +328,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public ITransitionCollection Clone()

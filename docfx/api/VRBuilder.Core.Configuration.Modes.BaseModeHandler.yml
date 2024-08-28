@@ -36,7 +36,6 @@ items:
     content: 'public sealed class BaseModeHandler : IModeHandler'
     content.vb: >-
       Public NotInheritable Class BaseModeHandler
-
           Implements IModeHandler
   inheritance:
   - System.Object
@@ -80,6 +79,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nThe event that has to be invoked when the current mode changes, for example in <xref href=\"VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
   example: []
   syntax:
     content: public event EventHandler<ModeChangedEventArgs> ModeChanged
@@ -114,6 +114,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nThe index of the current process mode.\n"
   example: []
   syntax:
     content: public int CurrentModeIndex { get; }
@@ -152,6 +153,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nThe current process mode.\n"
   example: []
   syntax:
     content: public IMode CurrentMode { get; }
@@ -190,6 +192,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nThe ordered collection of all available process modes.\n"
   example: []
   syntax:
     content: public ReadOnlyCollection<IMode> AvailableModes { get; }
@@ -266,12 +269,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nSet the current process mode.\n"
   example: []
   syntax:
     content: public void SetMode(int index)
     parameters:
     - id: index
       type: System.Int32
+      description: The index of the desired process mode.
     content.vb: Public Sub SetMode(index As Integer)
   overload: VRBuilder.Core.Configuration.Modes.BaseModeHandler.SetMode*
   implements:
@@ -302,12 +307,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nSet the current process mode, this process mode has to be one of the available modes.\n"
   example: []
   syntax:
     content: public void SetMode(IMode mode)
     parameters:
     - id: mode
       type: VRBuilder.Core.Configuration.Modes.IMode
+      description: The desired process mode which should be set.
     content.vb: Public Sub SetMode(mode As IMode)
   overload: VRBuilder.Core.Configuration.Modes.BaseModeHandler.SetMode*
   implements:

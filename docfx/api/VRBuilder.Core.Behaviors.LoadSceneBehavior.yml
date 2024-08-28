@@ -36,9 +36,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class LoadSceneBehavior
-
           Inherits Behavior(Of LoadSceneBehavior.EntityData)
-
           Implements IDataOwner(Of LoadSceneBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -146,6 +144,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()

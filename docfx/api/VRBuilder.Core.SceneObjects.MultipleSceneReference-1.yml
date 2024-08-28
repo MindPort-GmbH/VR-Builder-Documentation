@@ -44,9 +44,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public MustInherit Class MultipleSceneReference(Of T As Class)
-
           Inherits ProcessSceneReference(Of T)
-
           Implements ICanBeEmpty
   inheritance:
   - System.Object
@@ -191,6 +189,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns true if the reference contains a non-null value.\n"
   example: []
   syntax:
     content: public override bool HasValue()

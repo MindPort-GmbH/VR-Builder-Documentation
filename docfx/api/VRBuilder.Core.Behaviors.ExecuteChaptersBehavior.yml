@@ -40,9 +40,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class ExecuteChaptersBehavior
-
           Inherits Behavior(Of ExecuteChaptersBehavior.EntityData)
-
           Implements IDataOwner(Of ExecuteChaptersBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -217,6 +215,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -253,6 +252,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -289,6 +289,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public override IBehavior Clone()

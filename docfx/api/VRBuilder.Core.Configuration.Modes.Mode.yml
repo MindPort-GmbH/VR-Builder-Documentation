@@ -35,7 +35,6 @@ items:
     content: 'public sealed class Mode : IMode'
     content.vb: >-
       Public NotInheritable Class Mode
-
           Implements IMode
   inheritance:
   - System.Object
@@ -79,6 +78,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nThe name of this process mode.\n"
   example: []
   syntax:
     content: public string Name { get; }
@@ -161,11 +161,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nReturns whether the given <xref href=\"VRBuilder.Core.Configuration.Modes.IOptional\" data-throw-if-not-resolved=\"false\"></xref> type should be skipped in this process mode.\n"
   example: []
   syntax:
     content: >-
       public bool CheckIfSkipped<TSkippable>()
-
           where TSkippable : IOptional
     typeParameters:
     - id: TSkippable
@@ -204,12 +204,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nReturns whether the given type should be skipped in this process mode.\n"
   example: []
   syntax:
     content: public bool CheckIfSkipped(Type type)
     parameters:
     - id: type
       type: System.Type
+      description: The type to check.
     return:
       type: System.Boolean
     content.vb: Public Function CheckIfSkipped(type As Type) As Boolean
@@ -242,16 +244,19 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nProvides a specific parameter for this mode.\n"
   example: []
   syntax:
     content: public TValue GetParameter<TValue>(string key)
     parameters:
     - id: key
       type: System.String
+      description: Name of the parameter.
     typeParameters:
     - id: TValue
     return:
       type: '{TValue}'
+      description: The value for the given key
     content.vb: Public Function GetParameter(Of TValue)(key As String) As TValue
   overload: VRBuilder.Core.Configuration.Modes.Mode.GetParameter*
   implements:
@@ -285,12 +290,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
+  summary: "\nChecks if given key exists.\n"
   example: []
   syntax:
     content: public bool ContainsParameter<TValue>(string key)
     parameters:
     - id: key
       type: System.String
+      description: Name of the key
     typeParameters:
     - id: TValue
     return:

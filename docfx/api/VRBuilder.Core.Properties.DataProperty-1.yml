@@ -39,9 +39,7 @@ items:
     - id: T
     content.vb: >-
       Public MustInherit Class DataProperty(Of T)
-
           Inherits ProcessSceneObjectProperty
-
           Implements IDataProperty(Of T), IDataPropertyBase, ISceneObjectProperty
   inheritance:
   - System.Object
@@ -170,6 +168,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nRaised when the stored value changes.\n"
   example: []
   syntax:
     content: public abstract UnityEvent<T> OnValueChanged { get; }
@@ -212,6 +211,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nRaised when the stored value is reset to the default.\n"
   example: []
   syntax:
     content: public abstract UnityEvent OnValueReset { get; }
@@ -254,6 +254,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nReturns the value.\n"
   example: []
   syntax:
     content: public T GetValue()
@@ -291,6 +292,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nResets the value to its default.\n"
   example: []
   syntax:
     content: public void ResetValue()
@@ -326,6 +328,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nSets the value.\n"
   example: []
   syntax:
     content: public void SetValue(T value)

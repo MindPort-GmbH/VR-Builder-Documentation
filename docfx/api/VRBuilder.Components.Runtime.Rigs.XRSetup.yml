@@ -33,7 +33,6 @@ items:
     content: 'public class XRSetup : XRSetupBase'
     content.vb: >-
       Public Class XRSetup
-
           Inherits XRSetupBase
   inheritance:
   - System.Object
@@ -81,6 +80,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
+  summary: "\nThe name for this rig, has to be unique.\n"
   example: []
   syntax:
     content: public override string Name { get; }
@@ -120,6 +120,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
+  summary: "\nName of the prefab which should be loaded.\n"
   example: []
   syntax:
     content: public override string PrefabName { get; }
@@ -159,6 +160,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
+  summary: "\nDecides if this rig is useable at this moment. Can be overwritten to be more sophisticated.\n"
   example: []
   syntax:
     content: public override bool CanBeUsed()
@@ -195,6 +197,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
+  summary: "\nReturns the tooltip which should be shown when this rig cannot be used.\n"
   example: []
   syntax:
     content: public override string GetSetupTooltip()

@@ -37,7 +37,6 @@ items:
     content: 'public sealed class LifeCycle : ILifeCycle'
     content.vb: >-
       Public NotInheritable Class LifeCycle
-
           Implements ILifeCycle
   inheritance:
   - System.Object
@@ -114,6 +113,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAn event which is fired when the current stage changes.\n"
   example: []
   syntax:
     content: public event EventHandler<ActivationStateChangedEventArgs> StageChanged
@@ -148,6 +148,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nThe current stage.\n"
   example: []
   syntax:
     content: public Stage Stage { get; }
@@ -186,6 +187,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nEnters Activating stage if was deactivating.\n"
   example: []
   syntax:
     content: public void Activate()
@@ -219,6 +221,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nEnters Deactivating stage if was Active. If was Activating, will start deactivating as soon as it enters Active stage.\n"
   example: []
   syntax:
     content: public void Deactivate()
@@ -252,6 +255,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nMarks all stages to fast-forward until it reaches Inactive stage.\n"
   example: []
   syntax:
     content: public void MarkToFastForward()
@@ -285,6 +289,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nMarks the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">stage</code> to fast-forward.\n"
   example: []
   syntax:
     content: public void MarkToFastForwardStage(Stage stage)
@@ -321,6 +326,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nThis method should be called every frame.\n"
   example: []
   syntax:
     content: public void Update()

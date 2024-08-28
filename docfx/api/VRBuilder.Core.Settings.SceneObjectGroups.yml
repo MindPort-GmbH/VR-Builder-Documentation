@@ -14,7 +14,6 @@ items:
   - VRBuilder.Core.Settings.SceneObjectGroups.RemoveGroup(System.Guid)
   - VRBuilder.Core.Settings.SceneObjectGroups.RenameGroup(VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup,System.String)
   - VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.Guid,VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup@)
-  - VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.String,VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup@)
   - VRBuilder.Core.Settings.SceneObjectGroups.UniqueGuidName
   - VRBuilder.Core.Settings.SceneObjectGroups.UniqueGuidNameItalic
   langs:
@@ -41,7 +40,6 @@ items:
     content: 'public class SceneObjectGroups : SettingsObject<SceneObjectGroups>'
     content.vb: >-
       Public Class SceneObjectGroups
-
           Inherits SettingsObject(Of SceneObjectGroups)
   inheritance:
   - System.Object
@@ -172,7 +170,7 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Groups
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 80
+    startLine: 73
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
@@ -209,7 +207,7 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 85
+    startLine: 78
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
@@ -248,21 +246,19 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CanCreateGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 110
+    startLine: 101
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
-  summary: "\nDetermines whether a group with the specified label can be created.\n"
+  summary: "\nTrue if a group with this label can be created.\n"
   example: []
   syntax:
     content: public bool CanCreateGroup(string label)
     parameters:
     - id: label
       type: System.String
-      description: The label of the group.
     return:
       type: System.Boolean
-      description: <code>true</code> if a group with the specified label can be created; otherwise, <code>false</code>.
     content.vb: Public Function CanCreateGroup(label As String) As Boolean
   overload: VRBuilder.Core.Settings.SceneObjectGroups.CanCreateGroup*
   modifiers.csharp:
@@ -287,21 +283,19 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RemoveGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 121
+    startLine: 110
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
-  summary: "\nRemoves a group from the list of groups based on the specified GUID.\n"
+  summary: "\nRemove the specified group from the list.\n"
   example: []
   syntax:
     content: public bool RemoveGroup(Guid guid)
     parameters:
     - id: guid
       type: System.Guid
-      description: The GUID of the group to remove.
     return:
       type: System.Boolean
-      description: <code>true</code> if the group was successfully removed; otherwise, <code>false</code>.
     content.vb: Public Function RemoveGroup(guid As Guid) As Boolean
   overload: VRBuilder.Core.Settings.SceneObjectGroups.RemoveGroup*
   modifiers.csharp:
@@ -326,21 +320,19 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GroupExists
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 131
+    startLine: 118
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
-  summary: "\nChecks if a group with the specified GUID exists.\n"
+  summary: "\nTrue if the specified group is present in the list.\n"
   example: []
   syntax:
     content: public bool GroupExists(Guid guid)
     parameters:
     - id: guid
       type: System.Guid
-      description: The GUID of the group to check.
     return:
       type: System.Boolean
-      description: <code>true</code> if a group with the specified GUID exists, otherwise <code>false</code>.
     content.vb: Public Function GroupExists(guid As Guid) As Boolean
   overload: VRBuilder.Core.Settings.SceneObjectGroups.GroupExists*
   modifiers.csharp:
@@ -365,7 +357,7 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TryGetGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 142
+    startLine: 129
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
@@ -392,51 +384,6 @@ items:
   - Public
   fullName.vb: VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.Guid, ByRef VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup)
   name.vb: TryGetGroup(Guid, ByRef SceneObjectGroups.SceneObjectGroup)
-- uid: VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.String,VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup@)
-  commentId: M:VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.String,VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup@)
-  id: TryGetGroup(System.String,VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup@)
-  parent: VRBuilder.Core.Settings.SceneObjectGroups
-  langs:
-  - csharp
-  - vb
-  name: TryGetGroup(String, out SceneObjectGroups.SceneObjectGroup)
-  nameWithType: SceneObjectGroups.TryGetGroup(String, out SceneObjectGroups.SceneObjectGroup)
-  fullName: VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.String, out VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup)
-  type: Method
-  source:
-    remote:
-      path: Source/Core/Runtime/Settings/SceneObjectGroups.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/VR-Builder.git
-    id: TryGetGroup
-    path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 154
-  assemblies:
-  - VRBuilder.Core
-  namespace: VRBuilder.Core.Settings
-  summary: "\nTries to get a group associated with the specified label. Takes the first label found.\n"
-  example: []
-  syntax:
-    content: public bool TryGetGroup(string label, out SceneObjectGroups.SceneObjectGroup group)
-    parameters:
-    - id: label
-      type: System.String
-      description: The label of the group to retrieve.
-    - id: group
-      type: VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup
-      description: When this method returns, contains the first group found associated with the specified label, if found; otherwise, the default value.
-    return:
-      type: System.Boolean
-      description: <code>true</code> if a group with the specified label is found; otherwise, <code>false</code>.
-    content.vb: Public Function TryGetGroup(label As String, ByRef group As SceneObjectGroups.SceneObjectGroup) As Boolean
-  overload: VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup*
-  nameWithType.vb: SceneObjectGroups.TryGetGroup(String, ByRef SceneObjectGroups.SceneObjectGroup)
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-  fullName.vb: VRBuilder.Core.Settings.SceneObjectGroups.TryGetGroup(System.String, ByRef VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup)
-  name.vb: TryGetGroup(String, ByRef SceneObjectGroups.SceneObjectGroup)
 - uid: VRBuilder.Core.Settings.SceneObjectGroups.GetLabel(System.Guid)
   commentId: M:VRBuilder.Core.Settings.SceneObjectGroups.GetLabel(System.Guid)
   id: GetLabel(System.Guid)
@@ -455,21 +402,19 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLabel
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 165
+    startLine: 138
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
-  summary: "\nRetrieves the label of a <xref href=\"VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup\" data-throw-if-not-resolved=\"false\"></xref> based on its GUID.\n"
+  summary: "\nReturns the text label associated with the specified guid.\n"
   example: []
   syntax:
     content: public string GetLabel(Guid guid)
     parameters:
     - id: guid
       type: System.Guid
-      description: The GUID of the <xref href="VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup" data-throw-if-not-resolved="false"></xref> .
     return:
       type: System.String
-      description: The label of the <xref href="VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup" data-throw-if-not-resolved="false"></xref> if a group with the specified GUID is found; otherwise, <code>string.Empty</code>.
     content.vb: Public Function GetLabel(guid As Guid) As String
   overload: VRBuilder.Core.Settings.SceneObjectGroups.GetLabel*
   modifiers.csharp:
@@ -494,24 +439,21 @@ items:
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RenameGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Settings/SceneObjectGroups.cs
-    startLine: 183
+    startLine: 153
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Settings
-  summary: "\nRenames the specified scene object group with the given label.\n"
+  summary: "\nAttempts to rename a group.\n"
   example: []
   syntax:
     content: public bool RenameGroup(SceneObjectGroups.SceneObjectGroup group, string label)
     parameters:
     - id: group
       type: VRBuilder.Core.Settings.SceneObjectGroups.SceneObjectGroup
-      description: The scene object group to rename.
     - id: label
       type: System.String
-      description: The new label for the group.
     return:
       type: System.Boolean
-      description: <code>true</code> if the group was renamed successfully, <code>false</code> otherwise.
     content.vb: Public Function RenameGroup(group As SceneObjectGroups.SceneObjectGroup, label As String) As Boolean
   overload: VRBuilder.Core.Settings.SceneObjectGroups.RenameGroup*
   modifiers.csharp:

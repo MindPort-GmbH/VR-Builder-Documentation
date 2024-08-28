@@ -36,9 +36,7 @@ items:
     - id: TEntity
     content.vb: >-
       Public Class StopEntityIteratingProcess(Of TEntity As IEntity)
-
           Inherits StageProcess(Of IEntitySequenceData(Of TEntity))
-
           Implements IStageProcess
   inheritance:
   - System.Object
@@ -86,6 +84,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
+  summary: "\nThis method is invoked immediately when entity enters the stage.\nThe invocation is guaranteed.\nUse it for initialization.\n"
   example: []
   syntax:
     content: public override void Start()
@@ -122,11 +121,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
+  summary: "\nThis method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.\n"
   example: []
   syntax:
     content: public override IEnumerator Update()
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Overrides Function Update As IEnumerator
   overridden: VRBuilder.Core.StageProcess{VRBuilder.Core.EntityOwners.IEntitySequenceData{{TEntity}}}.Update
   overload: VRBuilder.Core.EntityOwners.StopEntityIteratingProcess`1.Update*
@@ -160,6 +161,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
+  summary: "\nThis method is invoked immediately after the <xref href=\"VRBuilder.Core.IStageProcess.Update\" data-throw-if-not-resolved=\"false\"></xref> was iterated over completely, or after the <xref href=\"VRBuilder.Core.IStageProcess.FastForward\" data-throw-if-not-resolved=\"false\"></xref> was called.\nThe invocation is guaranteed.\nUse it for deinitialization.\n"
   example: []
   syntax:
     content: public override void End()
@@ -196,6 +198,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.EntityOwners
+  summary: "\nThis method is called when the process was not completed yet.\nIt must &quot;fake&quot; normal execution of the process and handle the cases when the <xref href=\"VRBuilder.Core.IStageProcess.Update\" data-throw-if-not-resolved=\"false\"></xref> is not iterated over completely.\n"
   example: []
   syntax:
     content: public override void FastForward()

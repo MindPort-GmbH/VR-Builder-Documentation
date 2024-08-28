@@ -42,9 +42,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class EntityData
-
           Inherits EntityCollectionData(Of IStep)
-
           Implements IChapterData, IEntitySequenceDataWithMode(Of IStep), IEntitySequenceData(Of IStep), IEntityCollectionData(Of IStep), IEntityCollectionData, IEntitySequenceData, IModeData, IRenameableData, INamedData, IData
   inheritance:
   - System.Object
@@ -106,6 +104,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nName of the entity.\n"
   example: []
   syntax:
     content: >-
@@ -290,6 +289,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nSet the new name.\n"
   example: []
   syntax:
     content: public void SetName(string name)
@@ -364,6 +364,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nCurrent entity in the sequence.\n"
   example: []
   syntax:
     content: >-
@@ -413,6 +414,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nCurrent entity in the sequence.\n"
   example: []
   syntax:
     content: IEntity IEntitySequenceData.Current { get; }

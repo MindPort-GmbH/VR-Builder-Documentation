@@ -33,9 +33,7 @@ items:
     content: 'public abstract class InputActionListener : MonoBehaviour, IInputActionListener'
     content.vb: >-
       Public MustInherit Class InputActionListener
-
           Inherits MonoBehaviour
-
           Implements IInputActionListener
   inheritance:
   - System.Object
@@ -73,6 +71,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Input
+  summary: "\nPriority of this input.\n"
   example: []
   syntax:
     content: public virtual int Priority { get; }
@@ -113,6 +112,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Input
+  summary: "\nIf this listener ignores a set focus, it will also be called when focus is active.\n"
   example: []
   syntax:
     content: public virtual bool IgnoreFocus { get; }

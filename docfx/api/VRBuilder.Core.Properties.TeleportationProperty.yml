@@ -42,9 +42,7 @@ items:
     content: 'public class TeleportationProperty : LockableProperty, ITeleportationProperty, ISceneObjectProperty, ILockable'
     content.vb: >-
       Public Class TeleportationProperty
-
           Inherits LockableProperty
-
           Implements ITeleportationProperty, ISceneObjectProperty, ILockable
   inheritance:
   - System.Object
@@ -203,6 +201,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Core.Properties
+  summary: "\nTrue if the teleportation property is ready to be teleported to.\n"
   example: []
   syntax:
     content: public bool IsActive { get; }
@@ -337,6 +336,8 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Core.Properties
+  summary: "\nSets <xref href=\"VRBuilder.BasicInteraction.Properties.ITeleportationProperty.WasUsedToTeleport\" data-throw-if-not-resolved=\"false\"></xref> to true.\n"
+  remarks: "\nThis method is called every time a <xref href=\"VRBuilder.BasicInteraction.Conditions.TeleportCondition\" data-throw-if-not-resolved=\"false\"></xref> is activate.\n"
   example: []
   syntax:
     content: public void Initialize()
@@ -370,6 +371,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Core.Properties
+  summary: "\nInstantaneously simulate that the object was used.\n"
   example: []
   syntax:
     content: public void FastForwardTeleport()
@@ -403,6 +405,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Core.Properties
+  summary: "\nHandle your internal locking affairs here.\n"
   example: []
   syntax:
     content: protected override void InternalSetLocked(bool lockState)

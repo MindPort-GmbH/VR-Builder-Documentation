@@ -59,9 +59,7 @@ items:
     content: 'public class SnapZone : XRSocketInteractor, IXRHoverInteractor, IXRSelectInteractor, IXRTargetPriorityInteractor, IXRGroupMember, IXRInteractionStrengthInteractor, IXRInteractor, ISnapZone'
     content.vb: >-
       Public Class SnapZone
-
           Inherits XRSocketInteractor
-
           Implements IXRHoverInteractor, IXRSelectInteractor, IXRTargetPriorityInteractor, IXRGroupMember, IXRInteractionStrengthInteractor, IXRInteractor, ISnapZone
   inheritance:
   - System.Object
@@ -271,6 +269,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
+  summary: "\nReturns if the SnapZone is empty.\n"
   example: []
   syntax:
     content: public bool IsEmpty { get; }
@@ -309,6 +308,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
+  summary: "\nReturns the snapped object, can be null.\n"
   example: []
   syntax:
     content: public ISnappableProperty SnappedObject { get; }
@@ -1173,6 +1173,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
+  summary: "\nReturns if the object can be snapped at all.\n"
   example: []
   syntax:
     content: public bool CanSnap(ISnappableProperty target)
@@ -1211,6 +1212,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
+  summary: "\nForces the object to be snapped, returns true when it was snapped successfully.\n"
   example: []
   syntax:
     content: public bool ForceSnap(ISnappableProperty target)
@@ -1249,6 +1251,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction
+  summary: "\nForces release the snapped object, will return false when there is no object.\n"
   example: []
   syntax:
     content: public bool ForceRelease()

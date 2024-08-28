@@ -35,7 +35,6 @@ items:
     content: 'public abstract class BaseProcessController : IProcessController'
     content.vb: >-
       Public MustInherit Class BaseProcessController
-
           Implements IProcessController
   inheritance:
   - System.Object
@@ -83,6 +82,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nPrettified name.\n"
   example: []
   syntax:
     content: public abstract string Name { get; }
@@ -123,6 +123,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nPriority of the controller.\n"
   example: []
   syntax:
     content: public abstract int Priority { get; }
@@ -202,6 +203,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nGets a process controller game object.\n"
   example: []
   syntax:
     content: public virtual GameObject GetProcessControllerPrefab()
@@ -239,11 +241,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nList of component types which are required on the setup object.\n"
   example: []
   syntax:
     content: public virtual List<Type> GetRequiredSetupComponents()
     return:
       type: System.Collections.Generic.List{System.Type}
+      description: List of component types.
     content.vb: Public Overridable Function GetRequiredSetupComponents As List(Of Type)
   overload: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents*
   implements:
@@ -276,12 +280,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nHandles post-setup logic.\nShould be called after all components are added and object is initialized.\n"
   example: []
   syntax:
     content: public virtual void HandlePostSetup(GameObject processControllerObject)
     parameters:
     - id: processControllerObject
       type: GameObject
+      description: Actual process controller object
     content.vb: Public Overridable Sub HandlePostSetup(processControllerObject As GameObject)
   overload: VRBuilder.UX.BaseProcessController.HandlePostSetup*
   implements:

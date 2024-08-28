@@ -40,9 +40,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public MustInherit Class Behavior(Of TData As {Class, IBehaviorData, New})
-
           Inherits Entity(Of TData)
-
           Implements IDataOwner(Of TData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -92,11 +90,6 @@ items:
   - VRBuilder.TrackAndMeasure.Behaviors.StartTimerBehavior
   - VRBuilder.TrackAndMeasure.Behaviors.StopTimerBehavior
   - VRBuilder.TrackAndMeasure.Behaviors.UpdateScoreBehavior
-  - VRBuilder.UI.Behaviors.MultipleChoiceBehavior
-  - VRBuilder.UI.Behaviors.NumPadBehavior
-  - VRBuilder.UI.Behaviors.OptionalnfoBoxBehavior
-  - VRBuilder.UI.Behaviors.SetLocalizedTextBehavior
-  - VRBuilder.UI.Behaviors.UiOutlineBehavior
   - VRBuilder.VideoTools.Behaviors.PlayAnimationClipBehavior
   - VRBuilder.VideoTools.Behaviors.PlayVideoBehavior
   implements:
@@ -166,6 +159,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: IBehaviorData IDataOwner<IBehaviorData>.Data { get; }
@@ -237,6 +231,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public virtual IBehavior Clone()

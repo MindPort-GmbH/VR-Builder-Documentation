@@ -44,9 +44,7 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder-tutorials/states-data-add-on")>
 
       Public Class CompareValuesCondition(Of T As {IEquatable(Of T), IComparable(Of T)})
-
           Inherits Condition(Of CompareValuesCondition(Of T).EntityData)
-
           Implements IDataOwner(Of CompareValuesCondition(Of T).EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -268,6 +266,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()

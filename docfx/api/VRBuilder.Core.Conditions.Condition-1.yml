@@ -40,9 +40,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public MustInherit Class Condition(Of TData As {Class, IConditionData, New})
-
           Inherits CompletableEntity(Of TData)
-
           Implements IDataOwner(Of TData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -63,12 +61,6 @@ items:
   - VRBuilder.Core.Conditions.TimeoutCondition
   - VRBuilder.Randomization.Conditions.RandomlySelectedCondition
   - VRBuilder.StatesAndData.Conditions.CheckStateCondition
-  - VRBuilder.UI.Conditions.MandatoryInfoBoxCondition
-  - VRBuilder.UI.Conditions.MultipleChoiceCondition
-  - VRBuilder.UI.Conditions.NumPadCompareCondition
-  - VRBuilder.UI.Conditions.NumPadCondition
-  - VRBuilder.UI.Conditions.UiButtonCondition
-  - VRBuilder.VIRTOSHA.Conditions.DrillHolesCondition
   implements:
   - VRBuilder.Core.IDataOwner{{TData}}
   - VRBuilder.Core.Conditions.ICondition
@@ -174,6 +166,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: IConditionData IDataOwner<IConditionData>.Data { get; }
@@ -213,6 +206,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public virtual ICondition Clone()
@@ -252,6 +246,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
+  summary: "\nReturns all LockableProperties this provider requires.\n"
   example: []
   syntax:
     content: public virtual IEnumerable<LockablePropertyData> GetLockableProperties()

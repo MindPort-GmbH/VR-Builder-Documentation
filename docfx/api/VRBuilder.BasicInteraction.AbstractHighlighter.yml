@@ -41,9 +41,7 @@ items:
     content: 'public abstract class AbstractHighlighter : MonoBehaviour, IHighlighter'
     content.vb: >-
       Public MustInherit Class AbstractHighlighter
-
           Inherits MonoBehaviour
-
           Implements IHighlighter
   inheritance:
   - System.Object
@@ -174,6 +172,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nReturns true if there is this object is currently being highlighted.\n"
   example: []
   syntax:
     content: public abstract bool IsHighlighting { get; }
@@ -214,12 +213,14 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nStarts highlighting this object.\n"
   example: []
   syntax:
     content: public abstract void StartHighlighting(Material highlightMaterial)
     parameters:
     - id: highlightMaterial
       type: Material
+      description: Material to be applied as highlight.
     content.vb: Public MustOverride Sub StartHighlighting(highlightMaterial As Material)
   overload: VRBuilder.BasicInteraction.AbstractHighlighter.StartHighlighting*
   implements:
@@ -252,6 +253,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\nStops highlighting this object.\n"
   example: []
   syntax:
     content: public abstract void StopHighlighting()
@@ -287,11 +289,13 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction
+  summary: "\n\n"
   example: []
   syntax:
     content: public abstract Material GetHighlightMaterial()
     return:
       type: Material
+      description: ''
     content.vb: Public MustOverride Function GetHighlightMaterial As Material
   overload: VRBuilder.BasicInteraction.AbstractHighlighter.GetHighlightMaterial*
   implements:

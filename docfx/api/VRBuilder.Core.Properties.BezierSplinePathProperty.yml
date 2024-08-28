@@ -32,9 +32,7 @@ items:
     content: 'public class BezierSplinePathProperty : ProcessSceneObjectProperty, IPathProperty, ISceneObjectProperty'
     content.vb: >-
       Public Class BezierSplinePathProperty
-
           Inherits ProcessSceneObjectProperty
-
           Implements IPathProperty, ISceneObjectProperty
   inheritance:
   - System.Object
@@ -109,12 +107,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nGet a point on the path.\n"
   example: []
   syntax:
     content: public Vector3 GetPoint(float t)
     parameters:
     - id: t
       type: System.Single
+      description: Position on the path, 0 to 1.
     return:
       type: Vector3
     content.vb: Public Function GetPoint(t As Single) As Vector3
@@ -147,12 +147,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nGet the direction of the path in a given position.\n"
   example: []
   syntax:
     content: public Vector3 GetDirection(float t)
     parameters:
     - id: t
       type: System.Single
+      description: Position on the path, 0 to 1.
     return:
       type: Vector3
     content.vb: Public Function GetDirection(t As Single) As Vector3

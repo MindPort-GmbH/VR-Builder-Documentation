@@ -33,9 +33,7 @@ items:
     content: 'public class ParticleSystemProperty : ProcessSceneObjectProperty, IParticleSystemProperty, ISceneObjectProperty'
     content.vb: >-
       Public Class ParticleSystemProperty
-
           Inherits ProcessSceneObjectProperty
-
           Implements IParticleSystemProperty, ISceneObjectProperty
   inheritance:
   - System.Object
@@ -78,6 +76,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nCalled when the system starts emitting particles.\n"
   example: []
   syntax:
     content: public UnityEvent<ParticleSystemPropertyEventArgs> StartedEmission { get; }
@@ -116,6 +115,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nCalled when the system stops emitting particles.\n"
   example: []
   syntax:
     content: public UnityEvent<ParticleSystemPropertyEventArgs> StoppedEmission { get; }
@@ -191,6 +191,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nTrue if the system is emitting particles.\n"
   example: []
   syntax:
     content: public bool IsEmitting { get; }
@@ -229,6 +230,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nStart emitting particles.\n"
   example: []
   syntax:
     content: public void StartEmission()
@@ -262,6 +264,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nStop emitting particles.\n"
   example: []
   syntax:
     content: public void StopEmission()

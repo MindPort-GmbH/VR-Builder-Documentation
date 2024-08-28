@@ -35,9 +35,7 @@ items:
     - id: TValueBase
     content.vb: >-
       Public MustInherit Class ListTypeRule(Of TRecursive As {ListTypeRule(Of TRecursive, TValueBase), New}, TValueBase)
-
           Inherits TypeRule(Of TValueBase)
-
           Implements IRule(Of Type)
   inheritance:
   - System.Object
@@ -133,7 +131,6 @@ items:
   syntax:
     content: >-
       public TRecursive Add<T>()
-
           where T : TValueBase
     typeParameters:
     - id: T

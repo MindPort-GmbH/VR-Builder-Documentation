@@ -36,9 +36,7 @@ items:
     content: 'public class HasGuidValidation : Validator, IGuidContainer'
     content.vb: >-
       Public Class HasGuidValidation
-
           Inherits Validator
-
           Implements IGuidContainer
   inheritance:
   - System.Object
@@ -73,6 +71,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Validation
+  summary: "\nAll guids on the object.\n"
   example: []
   syntax:
     content: public IEnumerable<Guid> Guids { get; }
@@ -177,6 +176,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Validation
+  summary: "\nAdd the specified guid.\n"
   example: []
   syntax:
     content: public void AddGuid(Guid guid)
@@ -213,6 +213,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Validation
+  summary: "\nTrue if the object has the specified guid.\n"
   example: []
   syntax:
     content: public bool HasGuid(Guid guid)
@@ -251,6 +252,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Validation
+  summary: "\nRemove the specified guid.\n"
   example: []
   syntax:
     content: public bool RemoveGuid(Guid guid)
@@ -289,6 +291,7 @@ items:
   assemblies:
   - VRBuilder.BasicInteraction
   namespace: VRBuilder.BasicInteraction.Validation
+  summary: "\nWhen this returns true, the given object is allowed to be snapped.\n"
   example: []
   syntax:
     content: public override bool Validate(GameObject obj)

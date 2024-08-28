@@ -33,9 +33,7 @@ items:
     content: 'public class StandardProcessController : BaseProcessController, IProcessController'
     content.vb: >-
       Public Class StandardProcessController
-
           Inherits BaseProcessController
-
           Implements IProcessController
   inheritance:
   - System.Object
@@ -80,6 +78,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nPrettified name.\n"
   example: []
   syntax:
     content: public override string Name { get; }
@@ -119,6 +118,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nPriority of the controller.\n"
   example: []
   syntax:
     content: public override int Priority { get; }
@@ -158,6 +158,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nName of the process controller prefab.\n"
   example: []
   syntax:
     content: protected override string PrefabName { get; }
@@ -197,11 +198,13 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
+  summary: "\nList of component types which are required on the setup object.\n"
   example: []
   syntax:
     content: public override List<Type> GetRequiredSetupComponents()
     return:
       type: System.Collections.Generic.List{System.Type}
+      description: List of component types.
     content.vb: Public Overrides Function GetRequiredSetupComponents As List(Of Type)
   overridden: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   overload: VRBuilder.UX.StandardProcessController.GetRequiredSetupComponents*

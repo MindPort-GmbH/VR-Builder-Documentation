@@ -184,7 +184,10 @@
   </span>
   <a id="VRBuilder_Core_InstantProcess_1_End_" data-uid="VRBuilder.Core.InstantProcess`1.End*"></a>
   <h4 id="VRBuilder_Core_InstantProcess_1_End" data-uid="VRBuilder.Core.InstantProcess`1.End">End()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is invoked immediately after the <a class="xref" href="VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update">Update()</a> was iterated over completely, or after the <a class="xref" href="VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward">FastForward()</a> was called.
+The invocation is guaranteed.
+Use it for deinitialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,7 +204,9 @@
   </span>
   <a id="VRBuilder_Core_InstantProcess_1_FastForward_" data-uid="VRBuilder.Core.InstantProcess`1.FastForward*"></a>
   <h4 id="VRBuilder_Core_InstantProcess_1_FastForward" data-uid="VRBuilder.Core.InstantProcess`1.FastForward">FastForward()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is called when the process was not completed yet.
+It must &quot;fake&quot; normal execution of the process and handle the cases when the <a class="xref" href="VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update">Update()</a> is not iterated over completely.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -218,7 +223,10 @@
   </span>
   <a id="VRBuilder_Core_InstantProcess_1_Start_" data-uid="VRBuilder.Core.InstantProcess`1.Start*"></a>
   <h4 id="VRBuilder_Core_InstantProcess_1_Start" data-uid="VRBuilder.Core.InstantProcess`1.Start">Start()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is invoked immediately when entity enters the stage.
+The invocation is guaranteed.
+Use it for initialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -235,7 +243,8 @@
   </span>
   <a id="VRBuilder_Core_InstantProcess_1_Update_" data-uid="VRBuilder.Core.InstantProcess`1.Update*"></a>
   <h4 id="VRBuilder_Core_InstantProcess_1_Update" data-uid="VRBuilder.Core.InstantProcess`1.Update">Update()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

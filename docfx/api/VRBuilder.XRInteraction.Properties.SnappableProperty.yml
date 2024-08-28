@@ -41,9 +41,7 @@ items:
     content: 'public class SnappableProperty : LockableProperty, ISnappableProperty, ISceneObjectProperty, ILockable'
     content.vb: >-
       Public Class SnappableProperty
-
           Inherits LockableProperty
-
           Implements ISnappableProperty, ISceneObjectProperty, ILockable
   inheritance:
   - System.Object
@@ -243,6 +241,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction.Properties
+  summary: "\nWill object be locked when it has been snapped.\n"
   example: []
   syntax:
     content: public bool LockObjectOnSnap { get; set; }
@@ -382,6 +381,7 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.XRInteraction.Properties
+  summary: "\nHandle your internal locking affairs here.\n"
   example: []
   syntax:
     content: protected override void InternalSetLocked(bool lockState)

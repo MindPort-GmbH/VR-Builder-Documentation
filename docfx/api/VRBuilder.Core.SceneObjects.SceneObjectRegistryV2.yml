@@ -47,7 +47,6 @@ items:
     content: 'public class SceneObjectRegistryV2 : ISceneObjectRegistry'
     content.vb: >-
       Public Class SceneObjectRegistryV2
-
           Implements ISceneObjectRegistry
   inheritance:
   - System.Object
@@ -157,6 +156,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nShortcut for GetByName(string name) method.\n"
   example: []
   syntax:
     content: public ISceneObject this[string name] { get; }
@@ -200,6 +200,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nShortcut for GetByGuid(Guid guid) method.\n"
   example: []
   syntax:
     content: public ISceneObject this[Guid guid] { get; }
@@ -273,6 +274,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns if the Guid is registered in the registry.\n"
   example: []
   syntax:
     content: public bool ContainsGuid(Guid guid)
@@ -311,6 +313,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns if the name is registered in the registry.\n"
   example: []
   syntax:
     content: public bool ContainsName(string guidString)
@@ -349,6 +352,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns the IProcessSceneEntity belonging to the given Guid.\nIf there is no fitting Entity found a MissingEntityException will be thrown.\n"
   example: []
   syntax:
     content: public ISceneObject GetByGuid(Guid guid)
@@ -387,6 +391,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns the IProcessSceneEntity belonging to the given unique name.\nIf there is no fitting Entity found a MissingEntityException will be thrown.\n"
   example: []
   syntax:
     content: public ISceneObject GetByName(string name)
@@ -425,6 +430,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns all registered scene objects which have the provided guid assigned to them.\n"
   example: []
   syntax:
     content: public IEnumerable<ISceneObject> GetObjects(Guid guid)
@@ -463,11 +469,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nReturns all registered scene objects with the provided guid and at least one valid property of the specified type.\n"
   example: []
   syntax:
     content: >-
       public IEnumerable<T> GetProperties<T>(Guid guid)
-
           where T : ISceneObjectProperty
     parameters:
     - id: guid
@@ -509,6 +515,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nRegisters an SceneObject in the registry. If there is an SceneObject with the same name\nalready registered, an NameNotUniqueException will be thrown. Also if the Guid\nis already known an SceneObjectAlreadyRegisteredException will be thrown.\n"
   example: []
   syntax:
     content: public void Register(ISceneObject obj)
@@ -545,6 +552,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nRegisters all SceneObject in scene, independent of their state.\n"
   example: []
   syntax:
     content: public void RegisterAll()
@@ -578,6 +586,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nUpdates the registry by removing all <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref> which are not in the scene anymore and adding new ones.\n"
   example: []
   syntax:
     content: public void Refresh()
@@ -643,6 +652,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
+  summary: "\nRemoves the SceneObject completely from the Registry.\n"
   example: []
   syntax:
     content: public bool Unregister(ISceneObject obj)
@@ -737,7 +747,6 @@ items:
       [Obsolete("Use GetProperties instead.")]
 
       public IEnumerable<T> GetPropertyByTag<T>(Guid tag)
-
           where T : ISceneObjectProperty
     parameters:
     - id: tag

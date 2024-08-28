@@ -44,9 +44,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class Step
-
           Inherits Entity(Of  Step.EntityData)
-
           Implements IDataOwner(Of  Step.EntityData), IStep, IDataOwner(Of IStepData), IDataOwner, IEntity, IClonable(Of IStep)
   inheritance:
   - System.Object
@@ -145,6 +143,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nStep&apos;s metadata.\n"
   example: []
   syntax:
     content: >-
@@ -193,6 +192,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -231,6 +231,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
@@ -269,6 +270,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -307,6 +309,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nOverride this method if your behavior or condition supports changing between process modes (<xref href=\"VRBuilder.Core.Configuration.Modes.IMode\" data-throw-if-not-resolved=\"false\"></xref>).\nBy default returns an empty configurator that does nothing.\n"
   example: []
   syntax:
     content: protected override IConfigurator GetConfigurator()
@@ -343,6 +346,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a deep copy of the object.\n"
   example: []
   syntax:
     content: public IStep Clone()
@@ -379,6 +383,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: IStepData IDataOwner<IStepData>.Data { get; }

@@ -46,9 +46,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class EntityData
-
           Inherits EntityCollectionData(Of IBehavior)
-
           Implements IEntitySequenceDataWithMode(Of IBehavior), IEntitySequenceData(Of IBehavior), IEntityCollectionData(Of IBehavior), IEntityCollectionData, IEntitySequenceData, IModeData, IBackgroundBehaviorData, IBehaviorData, INamedData, IData
   inheritance:
   - System.Object
@@ -269,6 +267,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nCurrent entity in the sequence.\n"
   example: []
   syntax:
     content: >-
@@ -317,6 +316,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nName of the entity.\n"
   example: []
   syntax:
     content: >-
@@ -403,6 +403,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nIf true, the behavior prevents the completion of a step until it is completed itself.\nIf false, the behavior does not hinder the completion of a step.\n"
   example: []
   syntax:
     content: public bool IsBlocking { get; set; }
@@ -442,6 +443,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
+  summary: "\nCurrent entity in the sequence.\n"
   example: []
   syntax:
     content: IEntity IEntitySequenceData.Current { get; }

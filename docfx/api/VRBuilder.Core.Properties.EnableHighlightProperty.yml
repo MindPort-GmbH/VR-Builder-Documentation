@@ -31,9 +31,7 @@ items:
     content: 'public class EnableHighlightProperty : BaseHighlightProperty, IHighlightProperty, ISceneObjectProperty'
     content.vb: >-
       Public Class EnableHighlightProperty
-
           Inherits BaseHighlightProperty
-
           Implements IHighlightProperty, ISceneObjectProperty
   inheritance:
   - System.Object
@@ -82,12 +80,14 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nHighlight this object and use <code data-dev-comment-type=\"paramref\" class=\"paramref\">highlightColor</code>.\n"
   example: []
   syntax:
     content: public override void Highlight(Color highlightColor)
     parameters:
     - id: highlightColor
       type: Color
+      description: Color to use for highlighting.
     content.vb: Public Overrides Sub Highlight(highlightColor As Color)
   overridden: VRBuilder.Core.Properties.BaseHighlightProperty.Highlight(Color)
   overload: VRBuilder.Core.Properties.EnableHighlightProperty.Highlight*
@@ -119,6 +119,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Properties
+  summary: "\nDisable highlight.\n"
   example: []
   syntax:
     content: public override void Unhighlight()

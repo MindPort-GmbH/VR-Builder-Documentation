@@ -32,7 +32,6 @@ items:
     content: 'public abstract class TextToSpeechContent : ITextToSpeechContent, ILocalizedContent'
     content.vb: >-
       Public MustInherit Class TextToSpeechContent
-
           Implements ITextToSpeechContent, ILocalizedContent
   inheritance:
   - System.Object
@@ -79,6 +78,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech.Audio
+  summary: "\nText content to be fed to the TTS provider.\n"
   example: []
   syntax:
     content: public abstract string Text { get; set; }
@@ -119,6 +119,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech.Audio
+  summary: "\nReturns localized content according to the localization and process configuration.\n"
   example: []
   syntax:
     content: public abstract string GetLocalizedContent()
@@ -156,6 +157,7 @@ items:
   assemblies:
   - VRBuilder.TextToSpeech
   namespace: VRBuilder.TextToSpeech.Audio
+  summary: "\nTrue if a generated file for this content exists in the project.\n"
   example: []
   syntax:
     content: public virtual bool IsCached(Locale locale)

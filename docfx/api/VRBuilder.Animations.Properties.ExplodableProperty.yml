@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/ExplodableProperty.cs
-      branch: feature/mp-2734-component-icons
+      branch: develop
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: ExplodableProperty
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/ExplodableProperty.cs
@@ -32,9 +32,7 @@ items:
     content: 'public class ExplodableProperty : ProcessSceneObjectProperty, IExplodableProperty, ISceneObjectProperty'
     content.vb: >-
       Public Class ExplodableProperty
-
           Inherits ProcessSceneObjectProperty
-
           Implements IExplodableProperty, ISceneObjectProperty
   inheritance:
   - System.Object
@@ -67,7 +65,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/ExplodableProperty.cs
-      branch: feature/mp-2734-component-icons
+      branch: develop
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: ExplodedObjects
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/ExplodableProperty.cs
@@ -75,6 +73,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Properties
+  summary: "\nObjects that will be animated.\n"
   example: []
   syntax:
     content: public IEnumerable<Transform> ExplodedObjects { get; }
@@ -105,7 +104,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/ExplodableProperty.cs
-      branch: feature/mp-2734-component-icons
+      branch: develop
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Explode
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/ExplodableProperty.cs
@@ -113,6 +112,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Properties
+  summary: "\nExplodes the view by the specified ratio.\n"
   example: []
   syntax:
     content: public void Explode(float progress, float scale)
@@ -121,6 +121,7 @@ items:
       type: System.Single
     - id: scale
       type: System.Single
+      description: Positive is outwards, negative is inwards. Zero is the original state.
     content.vb: Public Sub Explode(progress As Single, scale As Single)
   overload: VRBuilder.Animations.Properties.ExplodableProperty.Explode*
   implements:
@@ -143,7 +144,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/ExplodableProperty.cs
-      branch: feature/mp-2734-component-icons
+      branch: develop
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: InitializeAnimation
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/ExplodableProperty.cs
@@ -151,6 +152,7 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Properties
+  summary: "\nInitializes the property before a new animation.\n"
   example: []
   syntax:
     content: public void InitializeAnimation()

@@ -47,7 +47,6 @@ items:
       <DisplayName("Play Audio File")>
 
       Public Class ResourceAudio
-
           Implements IAudioData, ICanBeEmpty, ILocalizedContent
   inheritance:
   - System.Object
@@ -269,6 +268,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Audio
+  summary: "\nThe AudioClip of this source, can be null. Best check first with HasAudio.\n"
   example: []
   syntax:
     content: public AudioClip AudioClip { get; }
@@ -307,6 +307,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Audio
+  summary: "\nData used to retrieve the audio clip.\n"
   example: []
   syntax:
     content: public string ClipData { get; set; }
@@ -377,6 +378,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Audio
+  summary: "\nReturns true when this object is not properly filled.\n"
   example: []
   syntax:
     content: public bool IsEmpty()

@@ -47,7 +47,6 @@ items:
       <DataContract(IsReference:=True)>
 
       Public MustInherit Class Entity(Of TData As {Class, IData, New})
-
           Implements IEntity, IDataOwner(Of TData), IDataOwner
   inheritance:
   - System.Object
@@ -112,6 +111,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: >-
@@ -163,6 +163,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nAbstract data.\n"
   example: []
   syntax:
     content: IData IDataOwner.Data { get; }
@@ -202,6 +203,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nThe entity&apos;s life cycle.\n"
   example: []
   syntax:
     content: >-
@@ -252,6 +254,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nEntity parent to this entity.\n"
   example: []
   syntax:
     content: >-
@@ -334,6 +337,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public virtual IStageProcess GetActivatingProcess()
@@ -373,6 +377,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public virtual IStageProcess GetActiveProcess()
@@ -412,6 +417,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public virtual IStageProcess GetDeactivatingProcess()
@@ -489,6 +495,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nConfigures the entity according to the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">mode</code>.\n"
   example: []
   syntax:
     content: public virtual void Configure(IMode mode)
@@ -529,6 +536,7 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
+  summary: "\nCalled every frame during the Unity&apos;s update.\n"
   example: []
   syntax:
     content: public void Update()
