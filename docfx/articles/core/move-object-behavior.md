@@ -23,3 +23,7 @@ Note: If `Object` was affected by gravity before, it will continue to be affecte
     **Example**
     
     Duration (in seconds) = 1.3
+
+- **Animation curve**
+
+    Lets you tweak the speed of the animation over time.
