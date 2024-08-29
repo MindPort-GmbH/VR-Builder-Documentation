@@ -20,16 +20,24 @@ The `Outline Property` will automatically add a `Outline Renderer` component to 
 
 **Outline Mode**
 
-    Lets you choose whether to outline the entire object, only the visible or hidden parts of it, also provides the option to display the silouhette of the hidden part of the object in the highlight color.
+Lets you choose whether to outline the entire object, only the visible or hidden parts of it, also provides the option to display the silouhette of the hidden part of the object in the highlight color.
 
 **Outline Color**
 
-    This parameter is overridden by the behavior so it won't have any effect.
+This parameter is overridden by the behavior so it won't have any effect.
 
 **Outline Width**
 
-    Specifies the width of the displayed outline.
+Specifies the width of the displayed outline.
 
 **Precompute Outline**
 
-    If checked, the outline calculations will be performed in editor and serialized with the object, else the computation will be performed at runtime in the `Awake()` function.
+If checked, the outline calculations will be performed in editor and serialized with the object, else the computation will be performed at runtime in the `Awake()` function.
+
+#### Troubleshooting
+
+If the outline appears off-center, you can try the following.
+
+1. Set 'Read/Write Enabled' on each model's import settings.
+2. Disable 'Optimize Mesh Data' in the player settings.
+
