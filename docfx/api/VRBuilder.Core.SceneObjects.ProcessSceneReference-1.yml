@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessSceneReference
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
@@ -39,7 +39,9 @@ items:
       <DataContract(IsReference:=True)>
 
       Public MustInherit Class ProcessSceneReference(Of T As Class)
+
           Inherits ProcessSceneReferenceBase
+
           Implements ICanBeEmpty
   inheritance:
   - System.Object
@@ -58,11 +60,11 @@ items:
   - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.IsEmpty
   - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
   - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
-  - System.Object.ToString
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -96,7 +98,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
@@ -128,7 +130,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
@@ -163,7 +165,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ProcessSceneReference.cs
@@ -481,37 +483,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
   commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
@@ -549,63 +520,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -681,6 +595,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

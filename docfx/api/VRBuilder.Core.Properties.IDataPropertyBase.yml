@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataPropertyBase.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IDataPropertyBase
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataPropertyBase.cs
@@ -31,6 +31,7 @@ items:
     content: 'public interface IDataPropertyBase : ISceneObjectProperty'
     content.vb: >-
       Public Interface IDataPropertyBase
+
           Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -56,7 +57,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataPropertyBase.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnValueReset
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataPropertyBase.cs
@@ -70,7 +71,7 @@ items:
     content: UnityEvent OnValueReset { get; }
     parameters: []
     return:
-      type: UnityEvent
+      type: UnityEngine.Events.UnityEvent
     content.vb: ReadOnly Property OnValueReset As UnityEvent
   overload: VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset*
   modifiers.csharp:
@@ -91,7 +92,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataPropertyBase.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ResetValue
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataPropertyBase.cs
@@ -198,11 +199,19 @@ references:
   name: OnValueReset
   nameWithType: IDataPropertyBase.OnValueReset
   fullName: VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset
-- uid: UnityEvent
+- uid: UnityEngine.Events.UnityEvent
+  commentId: T:UnityEngine.Events.UnityEvent
+  parent: UnityEngine.Events
   isExternal: true
   name: UnityEvent
   nameWithType: UnityEvent
-  fullName: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
 - uid: VRBuilder.Core.Properties.IDataPropertyBase.ResetValue*
   commentId: Overload:VRBuilder.Core.Properties.IDataPropertyBase.ResetValue
   name: ResetValue

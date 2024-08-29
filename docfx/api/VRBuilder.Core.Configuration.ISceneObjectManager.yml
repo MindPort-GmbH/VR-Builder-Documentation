@@ -5,7 +5,7 @@ items:
   id: ISceneObjectManager
   parent: VRBuilder.Core.Configuration
   children:
-  - VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
+  - VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
   - VRBuilder.Core.Configuration.ISceneObjectManager.RequestAuthority(VRBuilder.Core.SceneObjects.ISceneObject)
   - VRBuilder.Core.Configuration.ISceneObjectManager.SetComponentActive(VRBuilder.Core.SceneObjects.ISceneObject,System.String,System.Boolean)
   - VRBuilder.Core.Configuration.ISceneObjectManager.SetSceneObjectActive(VRBuilder.Core.SceneObjects.ISceneObject,System.Boolean)
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/ISceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ISceneObjectManager
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/ISceneObjectManager.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/ISceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetSceneObjectActive
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/ISceneObjectManager.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/ISceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetComponentActive
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/ISceneObjectManager.cs
@@ -106,21 +106,21 @@ items:
       type: System.Boolean
     content.vb: Sub SetComponentActive(sceneObject As ISceneObject, componentTypeName As String, isActive As Boolean)
   overload: VRBuilder.Core.Configuration.ISceneObjectManager.SetComponentActive*
-- uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
-  commentId: M:VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
-  id: InstantiatePrefab(GameObject,Vector3,Quaternion)
+- uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
+  commentId: M:VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
+  id: InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
   parent: VRBuilder.Core.Configuration.ISceneObjectManager
   langs:
   - csharp
   - vb
   name: InstantiatePrefab(GameObject, Vector3, Quaternion)
   nameWithType: ISceneObjectManager.InstantiatePrefab(GameObject, Vector3, Quaternion)
-  fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject, Vector3, Quaternion)
+  fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject, UnityEngine.Vector3, UnityEngine.Quaternion)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Configuration/ISceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: InstantiatePrefab
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/ISceneObjectManager.cs
@@ -134,13 +134,13 @@ items:
     content: GameObject InstantiatePrefab(GameObject prefab, Vector3 position, Quaternion rotation)
     parameters:
     - id: prefab
-      type: GameObject
+      type: UnityEngine.GameObject
     - id: position
-      type: Vector3
+      type: UnityEngine.Vector3
     - id: rotation
-      type: Quaternion
+      type: UnityEngine.Quaternion
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: Function InstantiatePrefab(prefab As GameObject, position As Vector3, rotation As Quaternion) As GameObject
   overload: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab*
 - uid: VRBuilder.Core.Configuration.ISceneObjectManager.RequestAuthority(VRBuilder.Core.SceneObjects.ISceneObject)
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/ISceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RequestAuthority
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/ISceneObjectManager.cs
@@ -226,21 +226,33 @@ references:
   name: InstantiatePrefab
   nameWithType: ISceneObjectManager.InstantiatePrefab
   fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
-- uid: Vector3
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: Vector3
-- uid: Quaternion
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Configuration.ISceneObjectManager.RequestAuthority*
   commentId: Overload:VRBuilder.Core.Configuration.ISceneObjectManager.RequestAuthority
   name: RequestAuthority

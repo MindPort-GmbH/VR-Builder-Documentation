@@ -8,7 +8,7 @@ items:
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.ClearAll
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.Initialize
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.IsControllerInteracting(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
-  - VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
+  - VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
   - VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState(VRBuilder.XRInteraction.ControllerManager.ControllerStates)
   langs:
   - csharp
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ControllerState
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -38,8 +38,8 @@ items:
   - System.ValueType.GetHashCode
   - System.ValueType.ToString
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   modifiers.csharp:
   - public
   - struct
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Initialize
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ClearAll
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -110,21 +110,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
-  commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
-  id: SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,GameObject)
+- uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
+  commentId: M:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
+  id: SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates,UnityEngine.GameObject)
   parent: VRBuilder.XRInteraction.ControllerManager.ControllerState
   langs:
   - csharp
   - vb
   name: SetGameObject(ControllerManager.ControllerStates, GameObject)
   nameWithType: ControllerManager.ControllerState.SetGameObject(ControllerManager.ControllerStates, GameObject)
-  fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates, GameObject)
+  fullName: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject(VRBuilder.XRInteraction.ControllerManager.ControllerStates, UnityEngine.GameObject)
   type: Method
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetGameObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -141,7 +141,7 @@ items:
       type: VRBuilder.XRInteraction.ControllerManager.ControllerStates
       description: The state that we&apos;re attaching the game object to
     - id: parentGamObject
-      type: GameObject
+      type: UnityEngine.GameObject
       description: The game object that represents the interactor for that state.
     content.vb: Public Sub SetGameObject(state As ControllerManager.ControllerStates, parentGamObject As GameObject)
   overload: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetGameObject*
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetState
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsControllerInteracting
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -389,6 +389,37 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
@@ -446,37 +477,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System
@@ -518,11 +518,19 @@ references:
   name: ControllerManager.ControllerStates
   nameWithType: ControllerManager.ControllerStates
   fullName: VRBuilder.XRInteraction.ControllerManager.ControllerStates
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.ControllerState.SetState
   name: SetState

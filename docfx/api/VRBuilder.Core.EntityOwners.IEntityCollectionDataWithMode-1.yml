@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/EntityOwners/Collection/IEntityCollectionDataWithMode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IEntityCollectionDataWithMode
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/EntityOwners/Collection/IEntityCollectionDataWithMode.cs
@@ -31,6 +31,7 @@ items:
     - id: TEntity
     content.vb: >-
       Public Interface IEntityCollectionDataWithMode(Of Out TEntity As IEntity)
+
           Inherits IEntityCollectionData(Of TEntity), IEntityCollectionDataWithMode
   inheritedMembers:
   - VRBuilder.Core.EntityOwners.IEntityCollectionData{{TEntity}}.GetChildren

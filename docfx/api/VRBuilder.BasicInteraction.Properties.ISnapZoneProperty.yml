@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ISnapZoneProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -33,6 +33,7 @@ items:
     content: 'public interface ISnapZoneProperty : ISceneObjectProperty, ILockable'
     content.vb: >-
       Public Interface ISnapZoneProperty
+
           Inherits ISceneObjectProperty, ILockable
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -62,7 +63,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ObjectAttached
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -76,7 +77,7 @@ items:
     content: UnityEvent<SnapZonePropertyEventArgs> ObjectAttached { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
     content.vb: ReadOnly Property ObjectAttached As UnityEvent(Of SnapZonePropertyEventArgs)
   overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached*
   modifiers.csharp:
@@ -97,7 +98,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ObjectDetached
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -111,7 +112,7 @@ items:
     content: UnityEvent<SnapZonePropertyEventArgs> ObjectDetached { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
     content.vb: ReadOnly Property ObjectDetached As UnityEvent(Of SnapZonePropertyEventArgs)
   overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached*
   modifiers.csharp:
@@ -132,7 +133,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsObjectSnapped
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -167,7 +168,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SnappedObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -201,7 +202,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SnapZoneObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -215,7 +216,7 @@ items:
     content: GameObject SnapZoneObject { get; }
     parameters: []
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: ReadOnly Property SnapZoneObject As GameObject
   overload: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject*
   modifiers.csharp:
@@ -236,7 +237,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Configure
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ISnapZoneProperty.cs
@@ -436,20 +437,21 @@ references:
   name: ObjectAttached
   nameWithType: ISnapZoneProperty.ObjectAttached
   fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectAttached
-- uid: UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
-  commentId: '!:UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}'
-  definition: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+  commentId: T:UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
   name: UnityEvent<SnapZonePropertyEventArgs>
   nameWithType: UnityEvent<SnapZonePropertyEventArgs>
-  fullName: UnityEvent<VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs>
+  fullName: UnityEngine.Events.UnityEvent<VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs>
   nameWithType.vb: UnityEvent(Of SnapZonePropertyEventArgs)
-  fullName.vb: UnityEvent(Of VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs)
   name.vb: UnityEvent(Of SnapZonePropertyEventArgs)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
@@ -462,10 +464,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -477,44 +479,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
   isExternal: true
-  name: UnityEvent<>
-  nameWithType: UnityEvent<>
-  fullName: UnityEvent<>
-  nameWithType.vb: UnityEvent(Of )
-  fullName.vb: UnityEvent(Of )
-  name.vb: UnityEvent(Of )
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
 - uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.ObjectDetached
   name: ObjectDetached
@@ -554,11 +563,19 @@ references:
   name: SnapZoneObject
   nameWithType: ISnapZoneProperty.SnapZoneObject
   fullName: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.SnapZoneObject
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.Configure
   name: Configure

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ITransition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ITransition
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ITransition.cs
@@ -29,6 +29,7 @@ items:
     content: 'public interface ITransition : IEntity, ICompletable, IDataOwner<ITransitionData>, IDataOwner, IClonable<ITransition>'
     content.vb: >-
       Public Interface ITransition
+
           Inherits IEntity, ICompletable, IDataOwner(Of ITransitionData), IClonable(Of ITransition)
   inheritedMembers:
   - VRBuilder.Core.IEntity.LifeCycle

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IDataProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
@@ -35,6 +35,7 @@ items:
       description: Type of the value to be stored.
     content.vb: >-
       Public Interface IDataProperty(Of T)
+
           Inherits IDataPropertyBase
   inheritedMembers:
   - VRBuilder.Core.Properties.IDataPropertyBase.OnValueReset
@@ -65,7 +66,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnValueChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
@@ -79,7 +80,7 @@ items:
     content: UnityEvent<T> OnValueChanged { get; }
     parameters: []
     return:
-      type: UnityEvent{{T}}
+      type: UnityEngine.Events.UnityEvent{{T}}
     content.vb: ReadOnly Property OnValueChanged As UnityEvent(Of T)
   overload: VRBuilder.Core.Properties.IDataProperty`1.OnValueChanged*
   nameWithType.vb: IDataProperty(Of T).OnValueChanged
@@ -102,7 +103,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetValue
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
@@ -134,7 +135,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetValue
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Data/IDataProperty.cs
@@ -288,20 +289,21 @@ references:
   fullName: VRBuilder.Core.Properties.IDataProperty<T>.OnValueChanged
   nameWithType.vb: IDataProperty(Of T).OnValueChanged
   fullName.vb: VRBuilder.Core.Properties.IDataProperty(Of T).OnValueChanged
-- uid: UnityEvent{{T}}
-  commentId: '!:UnityEvent{`0}'
-  definition: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent{{T}}
+  commentId: T:UnityEngine.Events.UnityEvent{`0}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
   name: UnityEvent<T>
   nameWithType: UnityEvent<T>
-  fullName: UnityEvent<T>
+  fullName: UnityEngine.Events.UnityEvent<T>
   nameWithType.vb: UnityEvent(Of T)
-  fullName.vb: UnityEvent(Of T)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T)
   name.vb: UnityEvent(Of T)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
@@ -313,10 +315,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -327,44 +329,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
   isExternal: true
-  name: UnityEvent<>
-  nameWithType: UnityEvent<>
-  fullName: UnityEvent<>
-  nameWithType.vb: UnityEvent(Of )
-  fullName.vb: UnityEvent(Of )
-  name.vb: UnityEvent(Of )
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
 - uid: VRBuilder.Core.Properties.IDataProperty`1.GetValue*
   commentId: Overload:VRBuilder.Core.Properties.IDataProperty`1.GetValue
   name: GetValue

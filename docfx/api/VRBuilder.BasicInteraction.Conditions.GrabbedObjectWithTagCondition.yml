@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GrabbedObjectWithTagCondition
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
@@ -43,7 +43,9 @@ items:
       <Obsolete("Use GrabbedCondition instead.")>
 
       Public Class GrabbedObjectWithTagCondition
+
           Inherits Condition(Of GrabbedObjectWithTagCondition.EntityData)
+
           Implements IDataOwner(Of GrabbedObjectWithTagCondition.EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -74,13 +76,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.BasicInteraction.Conditions.GrabbedObjectWithTagCondition.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.BasicInteraction.Conditions.GrabbedObjectWithTagCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.BasicInteraction.Conditions.GrabbedObjectWithTagCondition.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -114,7 +116,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
@@ -126,15 +128,22 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public GrabbedObjectWithTagCondition()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Public Sub New
   overload: VRBuilder.BasicInteraction.Conditions.GrabbedObjectWithTagCondition.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
+    arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
     arguments: []
   modifiers.csharp:
   - public
@@ -154,7 +163,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
@@ -187,7 +196,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLockableProperties
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
@@ -222,7 +231,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetActiveProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
@@ -257,7 +266,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetAutocompleter
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Conditions/GrabbedObjectWithTagCondition.cs
@@ -854,37 +863,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -963,63 +941,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1126,6 +1047,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SpectatorProcessController
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
@@ -33,7 +33,9 @@ items:
     content: 'public class SpectatorProcessController : BaseProcessController, IProcessController'
     content.vb: >-
       Public Class SpectatorProcessController
+
           Inherits BaseProcessController
+
           Implements IProcessController
   inheritance:
   - System.Object
@@ -42,14 +44,14 @@ items:
   - VRBuilder.UX.IProcessController
   inheritedMembers:
   - VRBuilder.UX.BaseProcessController.GetProcessControllerPrefab
-  - VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
-  - System.Object.ToString
+  - VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -70,7 +72,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
@@ -78,7 +80,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: "\nPrettified name.\n"
   example: []
   syntax:
     content: public override string Name { get; }
@@ -110,7 +111,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: PrefabName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
@@ -118,7 +119,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: "\nName of the process controller prefab.\n"
   example: []
   syntax:
     content: protected override string PrefabName { get; }
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Priority
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
@@ -158,7 +158,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: "\nPriority of the controller.\n"
   example: []
   syntax:
     content: public override int Priority { get; }
@@ -190,7 +189,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetRequiredSetupComponents
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/Controllers/SpectatorProcessController.cs
@@ -198,13 +197,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.UX
-  summary: "\nList of component types which are required on the setup object.\n"
   example: []
   syntax:
     content: public override List<Type> GetRequiredSetupComponents()
     return:
       type: System.Collections.Generic.List{System.Type}
-      description: List of component types.
     content.vb: Public Overrides Function GetRequiredSetupComponents As List(Of Type)
   overridden: VRBuilder.UX.BaseProcessController.GetRequiredSetupComponents
   overload: VRBuilder.UX.SpectatorProcessController.GetRequiredSetupComponents*
@@ -267,73 +264,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
-  commentId: M:VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
+- uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
+  commentId: M:VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
   parent: VRBuilder.UX.BaseProcessController
   isExternal: true
   name: HandlePostSetup(GameObject)
   nameWithType: BaseProcessController.HandlePostSetup(GameObject)
-  fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
+  fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
   spec.csharp:
-  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
+  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
     name: HandlePostSetup
     nameWithType: BaseProcessController.HandlePostSetup
     fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup
   - name: (
     nameWithType: (
     fullName: (
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(GameObject)
+  - uid: VRBuilder.UX.BaseProcessController.HandlePostSetup(UnityEngine.GameObject)
     name: HandlePostSetup
     nameWithType: BaseProcessController.HandlePostSetup
     fullName: VRBuilder.UX.BaseProcessController.HandlePostSetup
   - name: (
     nameWithType: (
     fullName: (
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -415,63 +381,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -578,6 +487,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IParticleSystemProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
@@ -34,6 +34,7 @@ items:
     content: 'public interface IParticleSystemProperty : ISceneObjectProperty'
     content.vb: >-
       Public Interface IParticleSystemProperty
+
           Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -59,7 +60,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StartedEmission
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
@@ -73,7 +74,7 @@ items:
     content: UnityEvent<ParticleSystemPropertyEventArgs> StartedEmission { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
     content.vb: ReadOnly Property StartedEmission As UnityEvent(Of ParticleSystemPropertyEventArgs)
   overload: VRBuilder.Core.Properties.IParticleSystemProperty.StartedEmission*
   modifiers.csharp:
@@ -94,7 +95,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StoppedEmission
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
@@ -108,7 +109,7 @@ items:
     content: UnityEvent<ParticleSystemPropertyEventArgs> StoppedEmission { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
     content.vb: ReadOnly Property StoppedEmission As UnityEvent(Of ParticleSystemPropertyEventArgs)
   overload: VRBuilder.Core.Properties.IParticleSystemProperty.StoppedEmission*
   modifiers.csharp:
@@ -129,7 +130,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsEmitting
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
@@ -164,7 +165,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StartEmission
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
@@ -192,7 +193,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StopEmission
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Particles/IParticleSystemProperty.cs
@@ -299,20 +300,21 @@ references:
   name: StartedEmission
   nameWithType: IParticleSystemProperty.StartedEmission
   fullName: VRBuilder.Core.Properties.IParticleSystemProperty.StartedEmission
-- uid: UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
-  commentId: '!:UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}'
-  definition: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
+  commentId: T:UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
   name: UnityEvent<ParticleSystemPropertyEventArgs>
   nameWithType: UnityEvent<ParticleSystemPropertyEventArgs>
-  fullName: UnityEvent<VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs>
+  fullName: UnityEngine.Events.UnityEvent<VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs>
   nameWithType.vb: UnityEvent(Of ParticleSystemPropertyEventArgs)
-  fullName.vb: UnityEvent(Of VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs)
   name.vb: UnityEvent(Of ParticleSystemPropertyEventArgs)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
@@ -325,10 +327,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -340,44 +342,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
   isExternal: true
-  name: UnityEvent<>
-  nameWithType: UnityEvent<>
-  fullName: UnityEvent<>
-  nameWithType.vb: UnityEvent(Of )
-  fullName.vb: UnityEvent(Of )
-  name.vb: UnityEvent(Of )
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
 - uid: VRBuilder.Core.Properties.IParticleSystemProperty.StoppedEmission*
   commentId: Overload:VRBuilder.Core.Properties.IParticleSystemProperty.StoppedEmission
   name: StoppedEmission

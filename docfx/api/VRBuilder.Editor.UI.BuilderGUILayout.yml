@@ -8,10 +8,10 @@ items:
   - VRBuilder.Editor.UI.BuilderGUILayout.DrawCheckBoxList``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})
   - VRBuilder.Editor.UI.BuilderGUILayout.DrawLink(System.String,System.Action,System.Int32)
   - VRBuilder.Editor.UI.BuilderGUILayout.DrawLink(System.String,System.String,System.Int32)
-  - VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,GUILayoutOption[])
-  - VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,System.Int32,GUILayoutOption[])
-  - VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{GUIContent},System.Collections.Generic.List{``0})
+  - VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,System.Int32,UnityEngine.GUILayoutOption[])
+  - VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,UnityEngine.GUILayoutOption[])
   - VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})
+  - VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{UnityEngine.GUIContent},System.Collections.Generic.List{``0})
   langs:
   - csharp
   - vb
@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: BuilderGUILayout
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -38,13 +38,13 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawLink
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawLink
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -140,21 +140,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,GUILayoutOption[])
-  commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,GUILayoutOption[])
-  id: DrawTextField(System.String,System.Int32,GUILayoutOption[])
+- uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,UnityEngine.GUILayoutOption[])
+  commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,UnityEngine.GUILayoutOption[])
+  id: DrawTextField(System.String,System.Int32,UnityEngine.GUILayoutOption[])
   parent: VRBuilder.Editor.UI.BuilderGUILayout
   langs:
   - csharp
   - vb
   name: DrawTextField(String, Int32, GUILayoutOption[])
   nameWithType: BuilderGUILayout.DrawTextField(String, Int32, GUILayoutOption[])
-  fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, GUILayoutOption[])
+  fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, UnityEngine.GUILayoutOption[])
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawTextField
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -170,7 +170,7 @@ items:
     - id: charLimit
       type: System.Int32
     - id: options
-      type: GUILayoutOption[]
+      type: UnityEngine.GUILayoutOption[]
     return:
       type: System.String
     content.vb: Public Shared Function DrawTextField(content As String, charLimit As Integer = -1, ParamArray options As GUILayoutOption()) As String
@@ -182,23 +182,23 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, GUILayoutOption())
+  fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, UnityEngine.GUILayoutOption())
   name.vb: DrawTextField(String, Int32, GUILayoutOption())
-- uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,System.Int32,GUILayoutOption[])
-  commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,System.Int32,GUILayoutOption[])
-  id: DrawTextField(System.String,System.Int32,System.Int32,GUILayoutOption[])
+- uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,System.Int32,UnityEngine.GUILayoutOption[])
+  commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String,System.Int32,System.Int32,UnityEngine.GUILayoutOption[])
+  id: DrawTextField(System.String,System.Int32,System.Int32,UnityEngine.GUILayoutOption[])
   parent: VRBuilder.Editor.UI.BuilderGUILayout
   langs:
   - csharp
   - vb
   name: DrawTextField(String, Int32, Int32, GUILayoutOption[])
   nameWithType: BuilderGUILayout.DrawTextField(String, Int32, Int32, GUILayoutOption[])
-  fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, System.Int32, GUILayoutOption[])
+  fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, System.Int32, UnityEngine.GUILayoutOption[])
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawTextField
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -216,7 +216,7 @@ items:
     - id: indent
       type: System.Int32
     - id: options
-      type: GUILayoutOption[]
+      type: UnityEngine.GUILayoutOption[]
     return:
       type: System.String
     content.vb: Public Shared Function DrawTextField(content As String, charLimit As Integer = -1, indent As Integer = 0, ParamArray options As GUILayoutOption()) As String
@@ -228,7 +228,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, System.Int32, GUILayoutOption())
+  fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField(System.String, System.Int32, System.Int32, UnityEngine.GUILayoutOption())
   name.vb: DrawTextField(String, Int32, Int32, GUILayoutOption())
 - uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})
   commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawToggleGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -278,21 +278,21 @@ items:
   - Shared
   fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup(Of T)(T, System.Collections.Generic.List(Of T), System.Collections.Generic.List(Of System.String), System.Collections.Generic.List(Of T))
   name.vb: DrawToggleGroup(Of T)(T, List(Of T), List(Of String), List(Of T))
-- uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{GUIContent},System.Collections.Generic.List{``0})
-  commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{GUIContent},System.Collections.Generic.List{``0})
-  id: DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{GUIContent},System.Collections.Generic.List{``0})
+- uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{UnityEngine.GUIContent},System.Collections.Generic.List{``0})
+  commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{UnityEngine.GUIContent},System.Collections.Generic.List{``0})
+  id: DrawToggleGroup``1(``0,System.Collections.Generic.List{``0},System.Collections.Generic.List{UnityEngine.GUIContent},System.Collections.Generic.List{``0})
   parent: VRBuilder.Editor.UI.BuilderGUILayout
   langs:
   - csharp
   - vb
   name: DrawToggleGroup<T>(T, List<T>, List<GUIContent>, List<T>)
   nameWithType: BuilderGUILayout.DrawToggleGroup<T>(T, List<T>, List<GUIContent>, List<T>)
-  fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup<T>(T, System.Collections.Generic.List<T>, System.Collections.Generic.List<GUIContent>, System.Collections.Generic.List<T>)
+  fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup<T>(T, System.Collections.Generic.List<T>, System.Collections.Generic.List<UnityEngine.GUIContent>, System.Collections.Generic.List<T>)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawToggleGroup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -308,7 +308,7 @@ items:
     - id: entries
       type: System.Collections.Generic.List{{T}}
     - id: content
-      type: System.Collections.Generic.List{GUIContent}
+      type: System.Collections.Generic.List{UnityEngine.GUIContent}
     - id: disabledEntries
       type: System.Collections.Generic.List{{T}}
     typeParameters:
@@ -324,7 +324,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup(Of T)(T, System.Collections.Generic.List(Of T), System.Collections.Generic.List(Of GUIContent), System.Collections.Generic.List(Of T))
+  fullName.vb: VRBuilder.Editor.UI.BuilderGUILayout.DrawToggleGroup(Of T)(T, System.Collections.Generic.List(Of T), System.Collections.Generic.List(Of UnityEngine.GUIContent), System.Collections.Generic.List(Of T))
   name.vb: DrawToggleGroup(Of T)(T, List(Of T), List(Of GUIContent), List(Of T))
 - uid: VRBuilder.Editor.UI.BuilderGUILayout.DrawCheckBoxList``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})
   commentId: M:VRBuilder.Editor.UI.BuilderGUILayout.DrawCheckBoxList``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/BuilderGUILayout.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DrawCheckBoxList
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/BuilderGUILayout.cs
@@ -387,37 +387,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -496,63 +465,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -666,6 +578,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -703,28 +703,28 @@ references:
   name: DrawTextField
   nameWithType: BuilderGUILayout.DrawTextField
   fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawTextField
-- uid: GUILayoutOption[]
+- uid: UnityEngine.GUILayoutOption[]
   isExternal: true
   name: GUILayoutOption[]
   nameWithType: GUILayoutOption[]
-  fullName: GUILayoutOption[]
+  fullName: UnityEngine.GUILayoutOption[]
   nameWithType.vb: GUILayoutOption()
-  fullName.vb: GUILayoutOption()
+  fullName.vb: UnityEngine.GUILayoutOption()
   name.vb: GUILayoutOption()
   spec.csharp:
-  - uid: GUILayoutOption
+  - uid: UnityEngine.GUILayoutOption
     name: GUILayoutOption
     nameWithType: GUILayoutOption
-    fullName: GUILayoutOption
+    fullName: UnityEngine.GUILayoutOption
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: GUILayoutOption
+  - uid: UnityEngine.GUILayoutOption
     name: GUILayoutOption
     nameWithType: GUILayoutOption
-    fullName: GUILayoutOption
+    fullName: UnityEngine.GUILayoutOption
     isExternal: true
   - name: ()
     nameWithType: ()
@@ -873,15 +873,15 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: System.Collections.Generic.List{GUIContent}
-  commentId: T:System.Collections.Generic.List{GUIContent}
+- uid: System.Collections.Generic.List{UnityEngine.GUIContent}
+  commentId: T:System.Collections.Generic.List{UnityEngine.GUIContent}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   name: List<GUIContent>
   nameWithType: List<GUIContent>
-  fullName: System.Collections.Generic.List<GUIContent>
+  fullName: System.Collections.Generic.List<UnityEngine.GUIContent>
   nameWithType.vb: List(Of GUIContent)
-  fullName.vb: System.Collections.Generic.List(Of GUIContent)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.GUIContent)
   name.vb: List(Of GUIContent)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -892,10 +892,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -909,10 +909,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
@@ -923,7 +923,7 @@ references:
   nameWithType: BuilderGUILayout.DrawCheckBoxList
   fullName: VRBuilder.Editor.UI.BuilderGUILayout.DrawCheckBoxList
 - uid: System.Collections.Generic.IEnumerable{{T}}
-  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<T>

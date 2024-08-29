@@ -7,7 +7,7 @@ items:
   children:
   - VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
   - VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
-  - VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(AudioClip,System.String)
+  - VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IAudioConverter
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateAudioClipFromMp3
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
@@ -68,7 +68,7 @@ items:
       type: System.Byte[]
       description: Data are the bytes of an mp3 file
     return:
-      type: AudioClip
+      type: UnityEngine.AudioClip
     content.vb: Function CreateAudioClipFromMp3(data As Byte()) As AudioClip
   overload: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3*
   nameWithType.vb: IAudioConverter.CreateAudioClipFromMp3(Byte())
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateAudioClipFromWAVE
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
@@ -105,27 +105,27 @@ items:
       type: System.Byte[]
       description: Data are the bytes of a wave file
     return:
-      type: AudioClip
+      type: UnityEngine.AudioClip
     content.vb: Function CreateAudioClipFromWAVE(data As Byte()) As AudioClip
   overload: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE*
   nameWithType.vb: IAudioConverter.CreateAudioClipFromWAVE(Byte())
   fullName.vb: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte())
   name.vb: CreateAudioClipFromWAVE(Byte())
-- uid: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(AudioClip,System.String)
-  commentId: M:VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(AudioClip,System.String)
-  id: TryWriteAudioClipToFile(AudioClip,System.String)
+- uid: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+  commentId: M:VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+  id: TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
   parent: VRBuilder.TextToSpeech.IAudioConverter
   langs:
   - csharp
   - vb
   name: TryWriteAudioClipToFile(AudioClip, String)
   nameWithType: IAudioConverter.TryWriteAudioClipToFile(AudioClip, String)
-  fullName: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(AudioClip, System.String)
+  fullName: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip, System.String)
   type: Method
   source:
     remote:
       path: Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TryWriteAudioClipToFile
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Runtime/IAudioConverter.cs
@@ -139,7 +139,7 @@ items:
     content: bool TryWriteAudioClipToFile(AudioClip audio, string filePath)
     parameters:
     - id: audio
-      type: AudioClip
+      type: UnityEngine.AudioClip
       description: AudioClip to export
     - id: filePath
       type: System.String
@@ -186,11 +186,19 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: AudioClip
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
   isExternal: true
   name: AudioClip
   nameWithType: AudioClip
-  fullName: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE*
   commentId: Overload:VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE
   name: CreateAudioClipFromWAVE

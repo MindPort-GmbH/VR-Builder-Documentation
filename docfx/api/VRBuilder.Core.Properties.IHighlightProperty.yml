@@ -5,7 +5,7 @@ items:
   id: IHighlightProperty
   parent: VRBuilder.Core.Properties
   children:
-  - VRBuilder.Core.Properties.IHighlightProperty.Highlight(Color)
+  - VRBuilder.Core.Properties.IHighlightProperty.Highlight(UnityEngine.Color)
   - VRBuilder.Core.Properties.IHighlightProperty.HighlightEnded
   - VRBuilder.Core.Properties.IHighlightProperty.HighlightStarted
   - VRBuilder.Core.Properties.IHighlightProperty.IsHighlighted
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IHighlightProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -34,6 +34,7 @@ items:
     content: 'public interface IHighlightProperty : ISceneObjectProperty'
     content.vb: >-
       Public Interface IHighlightProperty
+
           Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -59,7 +60,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HighlightStarted
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -73,7 +74,7 @@ items:
     content: UnityEvent<HighlightPropertyEventArgs> HighlightStarted { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
     content.vb: ReadOnly Property HighlightStarted As UnityEvent(Of HighlightPropertyEventArgs)
   overload: VRBuilder.Core.Properties.IHighlightProperty.HighlightStarted*
   modifiers.csharp:
@@ -94,7 +95,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HighlightEnded
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -108,7 +109,7 @@ items:
     content: UnityEvent<HighlightPropertyEventArgs> HighlightEnded { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
     content.vb: ReadOnly Property HighlightEnded As UnityEvent(Of HighlightPropertyEventArgs)
   overload: VRBuilder.Core.Properties.IHighlightProperty.HighlightEnded*
   modifiers.csharp:
@@ -129,7 +130,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsHighlighted
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -150,21 +151,21 @@ items:
   - get
   modifiers.vb:
   - ReadOnly
-- uid: VRBuilder.Core.Properties.IHighlightProperty.Highlight(Color)
-  commentId: M:VRBuilder.Core.Properties.IHighlightProperty.Highlight(Color)
-  id: Highlight(Color)
+- uid: VRBuilder.Core.Properties.IHighlightProperty.Highlight(UnityEngine.Color)
+  commentId: M:VRBuilder.Core.Properties.IHighlightProperty.Highlight(UnityEngine.Color)
+  id: Highlight(UnityEngine.Color)
   parent: VRBuilder.Core.Properties.IHighlightProperty
   langs:
   - csharp
   - vb
   name: Highlight(Color)
   nameWithType: IHighlightProperty.Highlight(Color)
-  fullName: VRBuilder.Core.Properties.IHighlightProperty.Highlight(Color)
+  fullName: VRBuilder.Core.Properties.IHighlightProperty.Highlight(UnityEngine.Color)
   type: Method
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Highlight
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -178,7 +179,7 @@ items:
     content: void Highlight(Color highlightColor)
     parameters:
     - id: highlightColor
-      type: Color
+      type: UnityEngine.Color
       description: Color to use for highlighting.
     content.vb: Sub Highlight(highlightColor As Color)
   overload: VRBuilder.Core.Properties.IHighlightProperty.Highlight*
@@ -196,7 +197,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Unhighlight
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -303,20 +304,21 @@ references:
   name: HighlightStarted
   nameWithType: IHighlightProperty.HighlightStarted
   fullName: VRBuilder.Core.Properties.IHighlightProperty.HighlightStarted
-- uid: UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
-  commentId: '!:UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}'
-  definition: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
+  commentId: T:UnityEngine.Events.UnityEvent{VRBuilder.Core.Properties.HighlightPropertyEventArgs}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
   name: UnityEvent<HighlightPropertyEventArgs>
   nameWithType: UnityEvent<HighlightPropertyEventArgs>
-  fullName: UnityEvent<VRBuilder.Core.Properties.HighlightPropertyEventArgs>
+  fullName: UnityEngine.Events.UnityEvent<VRBuilder.Core.Properties.HighlightPropertyEventArgs>
   nameWithType.vb: UnityEvent(Of HighlightPropertyEventArgs)
-  fullName.vb: UnityEvent(Of VRBuilder.Core.Properties.HighlightPropertyEventArgs)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of VRBuilder.Core.Properties.HighlightPropertyEventArgs)
   name.vb: UnityEvent(Of HighlightPropertyEventArgs)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
@@ -329,10 +331,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -344,44 +346,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
   isExternal: true
-  name: UnityEvent<>
-  nameWithType: UnityEvent<>
-  fullName: UnityEvent<>
-  nameWithType.vb: UnityEvent(Of )
-  fullName.vb: UnityEvent(Of )
-  name.vb: UnityEvent(Of )
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
 - uid: VRBuilder.Core.Properties.IHighlightProperty.HighlightEnded*
   commentId: Overload:VRBuilder.Core.Properties.IHighlightProperty.HighlightEnded
   name: HighlightEnded
@@ -410,11 +419,19 @@ references:
   name: Highlight
   nameWithType: IHighlightProperty.Highlight
   fullName: VRBuilder.Core.Properties.IHighlightProperty.Highlight
-- uid: Color
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
   isExternal: true
   name: Color
   nameWithType: Color
-  fullName: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Properties.IHighlightProperty.Unhighlight*
   commentId: Overload:VRBuilder.Core.Properties.IHighlightProperty.Unhighlight
   name: Unhighlight

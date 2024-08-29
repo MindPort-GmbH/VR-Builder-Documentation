@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: XRSetup
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
@@ -33,6 +33,7 @@ items:
     content: 'public class XRSetup : XRSetupBase'
     content.vb: >-
       Public Class XRSetup
+
           Inherits XRSetupBase
   inheritance:
   - System.Object
@@ -45,13 +46,13 @@ items:
   - VRBuilder.BasicInteraction.RigSetup.InteractionRigProvider.OnSetup
   - VRBuilder.BasicInteraction.RigSetup.InteractionRigProvider.PreSetup
   - VRBuilder.BasicInteraction.RigSetup.InteractionRigProvider.FindPrefab(System.String)
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -72,7 +73,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
@@ -80,7 +81,6 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
-  summary: "\nThe name for this rig, has to be unique.\n"
   example: []
   syntax:
     content: public override string Name { get; }
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: PrefabName
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
@@ -120,7 +120,6 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
-  summary: "\nName of the prefab which should be loaded.\n"
   example: []
   syntax:
     content: public override string PrefabName { get; }
@@ -152,7 +151,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CanBeUsed
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
@@ -160,7 +159,6 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
-  summary: "\nDecides if this rig is useable at this moment. Can be overwritten to be more sophisticated.\n"
   example: []
   syntax:
     content: public override bool CanBeUsed()
@@ -189,7 +187,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetSetupTooltip
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Rigs/XRSetup.cs
@@ -197,7 +195,6 @@ items:
   assemblies:
   - VRBuilder.XRInteraction
   namespace: VRBuilder.Components.Runtime.Rigs
-  summary: "\nReturns the tooltip which should be shown when this rig cannot be used.\n"
   example: []
   syntax:
     content: public override string GetSetupTooltip()
@@ -394,37 +391,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -503,63 +469,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -666,6 +575,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

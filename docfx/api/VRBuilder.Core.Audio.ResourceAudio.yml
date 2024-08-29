@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ResourceAudio
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -47,6 +47,7 @@ items:
       <DisplayName("Play Audio File")>
 
       Public Class ResourceAudio
+
           Implements IAudioData, ICanBeEmpty, ILocalizedContent
   inheritance:
   - System.Object
@@ -55,13 +56,13 @@ items:
   - VRBuilder.Core.Runtime.Properties.ICanBeEmpty
   - VRBuilder.Core.Localization.ILocalizedContent
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -95,7 +96,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ResourcesPath
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -160,7 +161,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -193,7 +194,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -223,7 +224,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HasAudioClip
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -260,7 +261,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AudioClip
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -268,13 +269,12 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Audio
-  summary: "\nThe AudioClip of this source, can be null. Best check first with HasAudio.\n"
   example: []
   syntax:
     content: public AudioClip AudioClip { get; }
     parameters: []
     return:
-      type: AudioClip
+      type: UnityEngine.AudioClip
     content.vb: Public ReadOnly Property AudioClip As AudioClip
   overload: VRBuilder.Core.Audio.ResourceAudio.AudioClip*
   implements:
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ClipData
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -307,7 +307,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Audio
-  summary: "\nData used to retrieve the audio clip.\n"
   example: []
   syntax:
     content: public string ClipData { get; set; }
@@ -338,7 +337,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: InitializeAudioClip
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -370,7 +369,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsEmpty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -378,7 +377,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Audio
-  summary: "\nReturns true when this object is not properly filled.\n"
   example: []
   syntax:
     content: public bool IsEmpty()
@@ -406,7 +404,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLocalizedContent
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/Audio/ResourceAudio.cs
@@ -457,37 +455,6 @@ references:
   name: ILocalizedContent
   nameWithType: ILocalizedContent
   fullName: VRBuilder.Core.Localization.ILocalizedContent
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -566,63 +533,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -736,6 +646,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -798,11 +796,19 @@ references:
   name: AudioClip
   nameWithType: IAudioData.AudioClip
   fullName: VRBuilder.Core.Audio.IAudioData.AudioClip
-- uid: AudioClip
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
   isExternal: true
   name: AudioClip
   nameWithType: AudioClip
-  fullName: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Audio.ResourceAudio.ClipData*
   commentId: Overload:VRBuilder.Core.Audio.ResourceAudio.ClipData
   name: ClipData

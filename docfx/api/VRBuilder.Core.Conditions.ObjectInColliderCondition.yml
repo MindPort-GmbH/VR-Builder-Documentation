@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ObjectInColliderCondition
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -44,7 +44,9 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder/manual/default-conditions/move-object-in-collider")>
 
       Public Class ObjectInColliderCondition
+
           Inherits Condition(Of ObjectInColliderCondition.EntityData)
+
           Implements IDataOwner(Of ObjectInColliderCondition.EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -76,13 +78,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -116,7 +118,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -128,15 +130,22 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public ObjectInColliderCondition()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Public Sub New
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
+    arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
     arguments: []
   modifiers.csharp:
   - public
@@ -156,7 +165,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -193,7 +202,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -242,7 +251,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -279,7 +288,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetActiveProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -287,7 +296,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
-  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
@@ -316,7 +324,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetAutocompleter
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Conditions/PositionalConditions/ObjectInColliderCondition.cs
@@ -324,13 +332,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Conditions
-  summary: "\nOverride this method to return a custom <xref href=\"VRBuilder.Core.Autocompleter%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: protected override IAutocompleter GetAutocompleter()
     return:
       type: VRBuilder.Core.IAutocompleter
-      description: By default, it returns and empty autocompleter which does nothing.
     content.vb: Protected Overrides Function GetAutocompleter As IAutocompleter
   overridden: VRBuilder.Core.CompletableEntity{VRBuilder.Core.Conditions.ObjectInColliderCondition.EntityData}.GetAutocompleter
   overload: VRBuilder.Core.Conditions.ObjectInColliderCondition.GetAutocompleter*
@@ -941,37 +947,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1050,63 +1025,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1213,6 +1131,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

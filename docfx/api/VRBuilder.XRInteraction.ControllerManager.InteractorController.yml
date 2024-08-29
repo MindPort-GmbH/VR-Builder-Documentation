@@ -5,7 +5,7 @@ items:
   id: ControllerManager.InteractorController
   parent: VRBuilder.XRInteraction
   children:
-  - VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(GameObject)
+  - VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(UnityEngine.GameObject)
   - VRBuilder.XRInteraction.ControllerManager.InteractorController.Enter
   - VRBuilder.XRInteraction.ControllerManager.InteractorController.IsInteractorInteracting
   - VRBuilder.XRInteraction.ControllerManager.InteractorController.Leave
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: InteractorController
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -37,29 +37,29 @@ items:
   - System.ValueType.GetHashCode
   - System.ValueType.ToString
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   modifiers.csharp:
   - public
   - struct
   modifiers.vb:
   - Public
   - Structure
-- uid: VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(GameObject)
-  commentId: M:VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(GameObject)
-  id: Attach(GameObject)
+- uid: VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(UnityEngine.GameObject)
+  commentId: M:VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(UnityEngine.GameObject)
+  id: Attach(UnityEngine.GameObject)
   parent: VRBuilder.XRInteraction.ControllerManager.InteractorController
   langs:
   - csharp
   - vb
   name: Attach(GameObject)
   nameWithType: ControllerManager.InteractorController.Attach(GameObject)
-  fullName: VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(GameObject)
+  fullName: VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach(UnityEngine.GameObject)
   type: Method
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Attach
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -73,7 +73,7 @@ items:
     content: public void Attach(GameObject gameObject)
     parameters:
     - id: gameObject
-      type: GameObject
+      type: UnityEngine.GameObject
       description: The game object to scrape the various components from
     content.vb: Public Sub Attach(gameObject As GameObject)
   overload: VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach*
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Enter
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Leave
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsInteractorInteracting
     path: ../../Assets/MindPort/VR Builder/Core/Source/XR-Interaction-Component/Source/Runtime/Interaction/Device-based/ControllerManager.cs
@@ -345,6 +345,37 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
   commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
@@ -402,37 +433,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.ValueType
   commentId: T:System.ValueType
   parent: System
@@ -458,11 +458,19 @@ references:
   name: Attach
   nameWithType: ControllerManager.InteractorController.Attach
   fullName: VRBuilder.XRInteraction.ControllerManager.InteractorController.Attach
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.XRInteraction.ControllerManager.InteractorController.Enter*
   commentId: Overload:VRBuilder.XRInteraction.ControllerManager.InteractorController.Enter
   name: Enter

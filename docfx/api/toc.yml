@@ -461,6 +461,10 @@
     name: MoveObjectBehavior
   - uid: VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData
     name: MoveObjectBehavior.EntityData
+  - uid: VRBuilder.Core.Behaviors.OutlineObjectsBehavior
+    name: OutlineObjectsBehavior
+  - uid: VRBuilder.Core.Behaviors.OutlineObjectsBehavior.EntityData
+    name: OutlineObjectsBehavior.EntityData
   - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior
     name: PlayAudioBehavior
   - uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData
@@ -767,6 +771,8 @@
     name: IDataPropertyBase
   - uid: VRBuilder.Core.Properties.IHighlightProperty
     name: IHighlightProperty
+  - uid: VRBuilder.Core.Properties.IOutlineProperty
+    name: IOutlineProperty
   - uid: VRBuilder.Core.Properties.IParticleSystemProperty
     name: IParticleSystemProperty
   - uid: VRBuilder.Core.Properties.IPathProperty
@@ -780,6 +786,10 @@
     name: LockableProperty
   - uid: VRBuilder.Core.Properties.NumberDataProperty
     name: NumberDataProperty
+  - uid: VRBuilder.Core.Properties.OutlineProperty
+    name: OutlineProperty
+  - uid: VRBuilder.Core.Properties.OutlinePropertyEventArgs
+    name: OutlinePropertyEventArgs
   - uid: VRBuilder.Core.Properties.ParticleSystemProperty
     name: ParticleSystemProperty
   - uid: VRBuilder.Core.Properties.ParticleSystemPropertyEventArgs
@@ -923,6 +933,8 @@
 - uid: VRBuilder.Core.Settings
   name: VRBuilder.Core.Settings
   items:
+  - uid: VRBuilder.Core.Settings.AdvancedSettings
+    name: AdvancedSettings
   - uid: VRBuilder.Core.Settings.InteractionSettings
     name: InteractionSettings
   - uid: VRBuilder.Core.Settings.SceneObjectGroups
@@ -954,6 +966,8 @@
     name: BezierControlPointMode
   - uid: VRBuilder.Core.Utils.BezierSpline
     name: BezierSpline
+  - uid: VRBuilder.Core.Utils.DebugUtils
+    name: DebugUtils
   - uid: VRBuilder.Core.Utils.GameObjectExtension
     name: GameObjectExtension
   - uid: VRBuilder.Core.Utils.LockObjectsOnSceneStart
@@ -969,6 +983,13 @@
   items:
   - uid: VRBuilder.Core.Utils.Logging.LifeCycleLoggingConfig
     name: LifeCycleLoggingConfig
+- uid: VRBuilder.Core.Utils.QuickOutline
+  name: VRBuilder.Core.Utils.QuickOutline
+  items:
+  - uid: VRBuilder.Core.Utils.QuickOutline.OutlineRenderer
+    name: OutlineRenderer
+  - uid: VRBuilder.Core.Utils.QuickOutline.OutlineRenderer.Mode
+    name: OutlineRenderer.Mode
 - uid: VRBuilder.Core.Validation
   name: VRBuilder.Core.Validation
   items:
@@ -1005,6 +1026,8 @@
     name: TestableEditorElements.MenuOption
   - uid: VRBuilder.Editor.TestableEditorElements.MenuSeparator
     name: TestableEditorElements.MenuSeparator
+  - uid: VRBuilder.Editor.VRBuilderEditorHelper
+    name: VRBuilderEditorHelper
 - uid: VRBuilder.Editor.Animations.Configuration
   name: VRBuilder.Editor.Animations.Configuration
   items:
@@ -1399,6 +1422,8 @@
 - uid: VRBuilder.Editor.UI
   name: VRBuilder.Editor.UI
   items:
+  - uid: VRBuilder.Editor.UI.AdvancedSettingsSection
+    name: AdvancedSettingsSection
   - uid: VRBuilder.Editor.UI.BaseSettingsProvider
     name: BaseSettingsProvider
   - uid: VRBuilder.Editor.UI.BuilderEditorStyles
@@ -1448,17 +1473,37 @@
     name: LoadSceneMenuItem
   - uid: VRBuilder.Editor.UI.Behaviors.MoveObjectMenuItem
     name: MoveObjectMenuItem
+  - uid: VRBuilder.Editor.UI.Behaviors.MultipleChoiceBehaviorMenuItem
+    name: MultipleChoiceBehaviorMenuItem
+  - uid: VRBuilder.Editor.UI.Behaviors.NumPadBehaviorMenuItem
+    name: NumPadBehaviorMenuItem
+  - uid: VRBuilder.Editor.UI.Behaviors.OptionalInfoBoxMenuItem
+    name: OptionalInfoBoxMenuItem
+  - uid: VRBuilder.Editor.UI.Behaviors.OutlineObjectsMenuItem
+    name: OutlineObjectsMenuItem
   - uid: VRBuilder.Editor.UI.Behaviors.PlayResourceAudioMenuItem
     name: PlayResourceAudioMenuItem
   - uid: VRBuilder.Editor.UI.Behaviors.ScalingMenuItem
     name: ScalingMenuItem
+  - uid: VRBuilder.Editor.UI.Behaviors.SetLocalizedTextMenuItem
+    name: SetLocalizedTextMenuItem
   - uid: VRBuilder.Editor.UI.Behaviors.StartParticleEmissionMenuItem
     name: StartParticleEmissionMenuItem
   - uid: VRBuilder.Editor.UI.Behaviors.StopParticleEmissionMenuItem
     name: StopParticleEmissionMenuItem
+  - uid: VRBuilder.Editor.UI.Behaviors.UiOutlineMenuItem
+    name: UiOutlineMenuItem
 - uid: VRBuilder.Editor.UI.Conditions
   name: VRBuilder.Editor.UI.Conditions
   items:
+  - uid: VRBuilder.Editor.UI.Conditions.MandatoryInfoBoxMenuItem
+    name: MandatoryInfoBoxMenuItem
+  - uid: VRBuilder.Editor.UI.Conditions.MultipleChoiceConditionMenuItem
+    name: MultipleChoiceConditionMenuItem
+  - uid: VRBuilder.Editor.UI.Conditions.NumPadCompareConditionMenuItem
+    name: NumPadCompareConditionMenuItem
+  - uid: VRBuilder.Editor.UI.Conditions.NumPadConditionMenuItem
+    name: NumPadConditionMenuItem
   - uid: VRBuilder.Editor.UI.Conditions.ObjectInColliderMenuItem
     name: ObjectInColliderMenuItem
   - uid: VRBuilder.Editor.UI.Conditions.ObjectInRangeMenuItem
@@ -1467,6 +1512,8 @@
     name: SetParentMenuItem
   - uid: VRBuilder.Editor.UI.Conditions.TimeoutMenuItem
     name: TimeoutMenuItem
+  - uid: VRBuilder.Editor.UI.Conditions.UiButtonMenuItem
+    name: UiButtonMenuItem
 - uid: VRBuilder.Editor.UI.Drawers
   name: VRBuilder.Editor.UI.Drawers
   items:
@@ -1486,8 +1533,12 @@
     name.vb: DropDownElement(Of T)
   - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer
     name: IProcessDrawer
+  - uid: VRBuilder.Editor.UI.Drawers.LocalizedStringPropertyDrawer
+    name: LocalizedStringPropertyDrawer
   - uid: VRBuilder.Editor.UI.Drawers.NameableDrawer
     name: NameableDrawer
+  - uid: VRBuilder.Editor.UI.Drawers.NumPadCompareDrawer
+    name: NumPadCompareDrawer
   - uid: VRBuilder.Editor.UI.Drawers.ObjectDrawer
     name: ObjectDrawer
   - uid: VRBuilder.Editor.UI.Drawers.ParticleSystemPropertySelectableValueDrawer
@@ -1556,6 +1607,13 @@
   items:
   - uid: VRBuilder.Editor.UI.Graphics.Renderers.GraphicalElementRenderer
     name: GraphicalElementRenderer
+- uid: VRBuilder.Editor.UI.Interaction
+  name: VRBuilder.Editor.UI.Interaction
+  items:
+  - uid: VRBuilder.Editor.UI.Interaction.InfoBoxControllerEditor
+    name: InfoBoxControllerEditor
+  - uid: VRBuilder.Editor.UI.Interaction.Texture2DExtensions
+    name: Texture2DExtensions
 - uid: VRBuilder.Editor.UI.StepInspector.Menu
   name: VRBuilder.Editor.UI.StepInspector.Menu
   items:
@@ -1596,6 +1654,8 @@
 - uid: VRBuilder.Editor.UI.Wizard
   name: VRBuilder.Editor.UI.Wizard
   items:
+  - uid: VRBuilder.Editor.UI.Wizard.MultipleChoiceWizard
+    name: MultipleChoiceWizard
   - uid: VRBuilder.Editor.UI.Wizard.ProjectSetupWizard
     name: ProjectSetupWizard
   - uid: VRBuilder.Editor.UI.Wizard.SceneSetupWizard

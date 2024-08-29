@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Animations.Behaviors
   children:
   - VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor
-  - VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)
-  - VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)
+  - VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)
+  - VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)
   - VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.GetActivatingProcess
   langs:
   - csharp
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: RotateAroundAxisBehavior
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
@@ -42,7 +42,9 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder-tutorials/animations-add-on")>
 
       Public Class RotateAroundAxisBehavior
+
           Inherits Behavior(Of RotateAroundAxisBehavior.EntityData)
+
           Implements IDataOwner(Of RotateAroundAxisBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -67,13 +69,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -107,7 +109,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
@@ -119,9 +121,13 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public RotateAroundAxisBehavior()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Public Sub New
   overload: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor*
@@ -129,25 +135,28 @@ items:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)
-  commentId: M:VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)
-  id: '#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)'
+- uid: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)
+  commentId: M:VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)
+  id: '#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)'
   parent: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior
   langs:
   - csharp
   - vb
   name: RotateAroundAxisBehavior(ISceneObject, ISceneObject, RotateAroundAxisBehavior.RotationAxis, Single, Single, AnimationCurve)
   nameWithType: RotateAroundAxisBehavior.RotateAroundAxisBehavior(ISceneObject, ISceneObject, RotateAroundAxisBehavior.RotationAxis, Single, Single, AnimationCurve)
-  fullName: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotateAroundAxisBehavior(VRBuilder.Core.SceneObjects.ISceneObject, VRBuilder.Core.SceneObjects.ISceneObject, VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis, System.Single, System.Single, AnimationCurve)
+  fullName: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotateAroundAxisBehavior(VRBuilder.Core.SceneObjects.ISceneObject, VRBuilder.Core.SceneObjects.ISceneObject, VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis, System.Single, System.Single, UnityEngine.AnimationCurve)
   type: Constructor
   source:
     remote:
       path: Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
@@ -169,28 +178,28 @@ items:
     - id: degrees
       type: System.Single
     - id: animationCurve
-      type: AnimationCurve
+      type: UnityEngine.AnimationCurve
     content.vb: Public Sub New(target As ISceneObject, axisProvider As ISceneObject, rotationAxis As RotateAroundAxisBehavior.RotationAxis, duration As Single, degrees As Single, animationCurve As AnimationCurve)
   overload: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)
-  commentId: M:VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)
-  id: '#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,AnimationCurve)'
+- uid: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)
+  commentId: M:VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)
+  id: '#ctor(System.Guid,System.Guid,VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis,System.Single,System.Single,UnityEngine.AnimationCurve)'
   parent: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior
   langs:
   - csharp
   - vb
   name: RotateAroundAxisBehavior(Guid, Guid, RotateAroundAxisBehavior.RotationAxis, Single, Single, AnimationCurve)
   nameWithType: RotateAroundAxisBehavior.RotateAroundAxisBehavior(Guid, Guid, RotateAroundAxisBehavior.RotationAxis, Single, Single, AnimationCurve)
-  fullName: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotateAroundAxisBehavior(System.Guid, System.Guid, VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis, System.Single, System.Single, AnimationCurve)
+  fullName: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotateAroundAxisBehavior(System.Guid, System.Guid, VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.RotationAxis, System.Single, System.Single, UnityEngine.AnimationCurve)
   type: Constructor
   source:
     remote:
       path: Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
@@ -212,7 +221,7 @@ items:
     - id: degrees
       type: System.Single
     - id: animationCurve
-      type: AnimationCurve
+      type: UnityEngine.AnimationCurve
     content.vb: Public Sub New(targetGuid As Guid, axisProviderGuid As Guid, rotationAxis As RotateAroundAxisBehavior.RotationAxis, duration As Single, degrees As Single, animationCurve As AnimationCurve)
   overload: VRBuilder.Animations.Behaviors.RotateAroundAxisBehavior.#ctor*
   modifiers.csharp:
@@ -233,7 +242,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: GetActivatingProcess
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/RotateAroundAxisBehavior.cs
@@ -241,7 +250,6 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -728,37 +736,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -837,63 +814,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1000,6 +920,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -1410,16 +1418,24 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: AnimationCurve
+- uid: UnityEngine.AnimationCurve
+  commentId: T:UnityEngine.AnimationCurve
+  parent: UnityEngine
   isExternal: true
   name: AnimationCurve
   nameWithType: AnimationCurve
-  fullName: AnimationCurve
+  fullName: UnityEngine.AnimationCurve
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
   name: VRBuilder.Core.SceneObjects
   nameWithType: VRBuilder.Core.SceneObjects
   fullName: VRBuilder.Core.SceneObjects
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System

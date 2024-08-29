@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DefaultEditorConfiguration
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -37,19 +37,20 @@ items:
     content: 'public class DefaultEditorConfiguration : IEditorConfiguration'
     content.vb: >-
       Public Class DefaultEditorConfiguration
+
           Implements IEditorConfiguration
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Editor.Configuration.IEditorConfiguration
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -70,7 +71,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessStreamingAssetsSubdirectory
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -78,7 +79,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nAbsolute path where processes are stored.\n"
   example: []
   syntax:
     content: public virtual string ProcessStreamingAssetsSubdirectory { get; }
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AllowedMenuItemsSettingsAssetPath
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -119,7 +119,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nAssets path where to save the serialized <xref href=\"VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings\" data-throw-if-not-resolved=\"false\"></xref> file.\nIt has to start with &quot;Assets/&quot;.\n"
   example: []
   syntax:
     content: public virtual string AllowedMenuItemsSettingsAssetPath { get; }
@@ -152,7 +151,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Serializer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -160,7 +159,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nSerializer used to serialize processes and steps.\n"
   example: []
   syntax:
     content: public virtual IProcessSerializer Serializer { get; }
@@ -193,7 +191,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessAssetStrategy
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -201,7 +199,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nDefines how the asset is going to be saved on disk.\n"
   example: []
   syntax:
     content: public IProcessAssetStrategy ProcessAssetStrategy { get; }
@@ -232,7 +229,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: BehaviorsMenuContent
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -240,7 +237,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nList of available options in &quot;Add new behavior&quot; dropdown.\n"
   example: []
   syntax:
     content: public virtual ReadOnlyCollection<MenuOption<IBehavior>> BehaviorsMenuContent { get; }
@@ -273,7 +269,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ConditionsMenuContent
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -281,7 +277,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nList of available options in &quot;Add new condition&quot; dropdown.\n"
   example: []
   syntax:
     content: public virtual ReadOnlyCollection<MenuOption<ICondition>> ConditionsMenuContent { get; }
@@ -314,7 +309,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AllowedMenuItemsSettings
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -322,7 +317,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.Configuration
-  summary: "\nThe current instance of the <xref href=\"VRBuilder.Editor.Configuration.IEditorConfiguration.AllowedMenuItemsSettings\" data-throw-if-not-resolved=\"false\"></xref> object.\nIt manages the display status of all available behaviors and conditions.\n"
   example: []
   syntax:
     content: public virtual AllowedMenuItemsSettings AllowedMenuItemsSettings { get; set; }
@@ -355,7 +349,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/Configuration/DefaultEditorConfiguration.cs
@@ -390,37 +384,6 @@ references:
   name: IEditorConfiguration
   nameWithType: IEditorConfiguration
   fullName: VRBuilder.Editor.Configuration.IEditorConfiguration
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -499,63 +462,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -662,6 +568,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Path/IPathProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IPathProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Path/IPathProperty.cs
@@ -31,6 +31,7 @@ items:
     content: 'public interface IPathProperty : ISceneObjectProperty'
     content.vb: >-
       Public Interface IPathProperty
+
           Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -56,7 +57,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Path/IPathProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetPoint
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Path/IPathProperty.cs
@@ -73,7 +74,7 @@ items:
       type: System.Single
       description: Position on the path, 0 to 1.
     return:
-      type: Vector3
+      type: UnityEngine.Vector3
     content.vb: Function GetPoint(t As Single) As Vector3
   overload: VRBuilder.Core.Properties.IPathProperty.GetPoint*
 - uid: VRBuilder.Core.Properties.IPathProperty.GetDirection(System.Single)
@@ -90,7 +91,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Path/IPathProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetDirection
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Path/IPathProperty.cs
@@ -107,7 +108,7 @@ items:
       type: System.Single
       description: Position on the path, 0 to 1.
     return:
-      type: Vector3
+      type: UnityEngine.Vector3
     content.vb: Function GetDirection(t As Single) As Vector3
   overload: VRBuilder.Core.Properties.IPathProperty.GetDirection*
 references:
@@ -210,17 +211,25 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: Vector3
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: Vector3
+  fullName: UnityEngine.Vector3
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Properties.IPathProperty.GetDirection*
   commentId: Overload:VRBuilder.Core.Properties.IPathProperty.GetDirection
   name: GetDirection

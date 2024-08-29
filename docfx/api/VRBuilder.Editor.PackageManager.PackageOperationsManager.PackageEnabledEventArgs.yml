@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Package-Manager/PackageManager/PackageOperationsManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: PackageEnabledEventArgs
     path: ../../Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/PackageOperationsManager.cs
@@ -29,19 +29,20 @@ items:
     content: 'public class PackageEnabledEventArgs : EventArgs'
     content.vb: >-
       Public Class PackageEnabledEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object
   - System.EventArgs
   inheritedMembers:
   - System.EventArgs.Empty
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -62,7 +63,7 @@ items:
   source:
     remote:
       path: Source/Package-Manager/PackageManager/PackageOperationsManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: PackageInfo
     path: ../../Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/PackageOperationsManager.cs
@@ -71,10 +72,10 @@ items:
   - VRBuilder.Editor.PackageManager
   namespace: VRBuilder.Editor.PackageManager
   syntax:
-    content: public readonly PackageManager.PackageInfo PackageInfo
+    content: public readonly PackageInfo PackageInfo
     return:
       type: UnityEditor.PackageManager.PackageInfo
-    content.vb: Public ReadOnly PackageInfo As PackageManager.PackageInfo
+    content.vb: Public ReadOnly PackageInfo As PackageInfo
   modifiers.csharp:
   - public
   - readonly
@@ -88,14 +89,14 @@ items:
   langs:
   - csharp
   - vb
-  name: PackageEnabledEventArgs(PackageManager.PackageInfo)
-  nameWithType: PackageOperationsManager.PackageEnabledEventArgs.PackageEnabledEventArgs(PackageManager.PackageInfo)
+  name: PackageEnabledEventArgs(PackageInfo)
+  nameWithType: PackageOperationsManager.PackageEnabledEventArgs.PackageEnabledEventArgs(PackageInfo)
   fullName: VRBuilder.Editor.PackageManager.PackageOperationsManager.PackageEnabledEventArgs.PackageEnabledEventArgs(UnityEditor.PackageManager.PackageInfo)
   type: Constructor
   source:
     remote:
       path: Source/Package-Manager/PackageManager/PackageOperationsManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Package-Manager/PackageManager/PackageOperationsManager.cs
@@ -104,11 +105,11 @@ items:
   - VRBuilder.Editor.PackageManager
   namespace: VRBuilder.Editor.PackageManager
   syntax:
-    content: public PackageEnabledEventArgs(PackageManager.PackageInfo packageInfo)
+    content: public PackageEnabledEventArgs(PackageInfo packageInfo)
     parameters:
     - id: packageInfo
       type: UnityEditor.PackageManager.PackageInfo
-    content.vb: Public Sub New(packageInfo As PackageManager.PackageInfo)
+    content.vb: Public Sub New(packageInfo As PackageInfo)
   overload: VRBuilder.Editor.PackageManager.PackageOperationsManager.PackageEnabledEventArgs.#ctor*
   modifiers.csharp:
   - public
@@ -141,37 +142,6 @@ references:
   name: Empty
   nameWithType: EventArgs.Empty
   fullName: System.EventArgs.Empty
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -250,63 +220,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -420,6 +333,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -427,10 +428,18 @@ references:
   nameWithType: System
   fullName: System
 - uid: UnityEditor.PackageManager.PackageInfo
+  commentId: T:UnityEditor.PackageManager.PackageInfo
+  parent: UnityEditor.PackageManager
   isExternal: true
-  name: PackageManager.PackageInfo
-  nameWithType: PackageManager.PackageInfo
+  name: PackageInfo
+  nameWithType: PackageInfo
   fullName: UnityEditor.PackageManager.PackageInfo
+- uid: UnityEditor.PackageManager
+  commentId: N:UnityEditor.PackageManager
+  isExternal: true
+  name: UnityEditor.PackageManager
+  nameWithType: UnityEditor.PackageManager
+  fullName: UnityEditor.PackageManager
 - uid: VRBuilder.Editor.PackageManager.PackageOperationsManager.PackageEnabledEventArgs.#ctor*
   commentId: Overload:VRBuilder.Editor.PackageManager.PackageOperationsManager.PackageEnabledEventArgs.#ctor
   name: PackageEnabledEventArgs

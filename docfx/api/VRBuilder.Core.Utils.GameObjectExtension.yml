@@ -5,8 +5,8 @@ items:
   id: GameObjectExtension
   parent: VRBuilder.Core.Utils
   children:
-  - VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(GameObject,System.String)
-  - VRBuilder.Core.Utils.GameObjectExtension.SetLayer``1(GameObject,System.Int32,System.Boolean)
+  - VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(UnityEngine.GameObject,System.String)
+  - VRBuilder.Core.Utils.GameObjectExtension.SetLayer``1(UnityEngine.GameObject,System.Int32,System.Boolean)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Utils/GameObjectExtension.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GameObjectExtension
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/GameObjectExtension.cs
@@ -31,13 +31,13 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -45,9 +45,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: VRBuilder.Core.Utils.GameObjectExtension.SetLayer``1(GameObject,System.Int32,System.Boolean)
-  commentId: M:VRBuilder.Core.Utils.GameObjectExtension.SetLayer``1(GameObject,System.Int32,System.Boolean)
-  id: SetLayer``1(GameObject,System.Int32,System.Boolean)
+- uid: VRBuilder.Core.Utils.GameObjectExtension.SetLayer``1(UnityEngine.GameObject,System.Int32,System.Boolean)
+  commentId: M:VRBuilder.Core.Utils.GameObjectExtension.SetLayer``1(UnityEngine.GameObject,System.Int32,System.Boolean)
+  id: SetLayer``1(UnityEngine.GameObject,System.Int32,System.Boolean)
   isExtensionMethod: true
   parent: VRBuilder.Core.Utils.GameObjectExtension
   langs:
@@ -55,12 +55,12 @@ items:
   - vb
   name: SetLayer<T>(GameObject, Int32, Boolean)
   nameWithType: GameObjectExtension.SetLayer<T>(GameObject, Int32, Boolean)
-  fullName: VRBuilder.Core.Utils.GameObjectExtension.SetLayer<T>(GameObject, System.Int32, System.Boolean)
+  fullName: VRBuilder.Core.Utils.GameObjectExtension.SetLayer<T>(UnityEngine.GameObject, System.Int32, System.Boolean)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Utils/GameObjectExtension.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetLayer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/GameObjectExtension.cs
@@ -71,10 +71,11 @@ items:
   syntax:
     content: >-
       public static void SetLayer<T>(this GameObject gameObject, int layer, bool includeChildren = false)
+
           where T : Component
     parameters:
     - id: gameObject
-      type: GameObject
+      type: UnityEngine.GameObject
     - id: layer
       type: System.Int32
     - id: includeChildren
@@ -93,11 +94,11 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: VRBuilder.Core.Utils.GameObjectExtension.SetLayer(Of T)(GameObject, System.Int32, System.Boolean)
+  fullName.vb: VRBuilder.Core.Utils.GameObjectExtension.SetLayer(Of T)(UnityEngine.GameObject, System.Int32, System.Boolean)
   name.vb: SetLayer(Of T)(GameObject, Int32, Boolean)
-- uid: VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(GameObject,System.String)
-  commentId: M:VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(GameObject,System.String)
-  id: RemoveChildWithNameImmediate(GameObject,System.String)
+- uid: VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(UnityEngine.GameObject,System.String)
+  commentId: M:VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(UnityEngine.GameObject,System.String)
+  id: RemoveChildWithNameImmediate(UnityEngine.GameObject,System.String)
   isExtensionMethod: true
   parent: VRBuilder.Core.Utils.GameObjectExtension
   langs:
@@ -105,12 +106,12 @@ items:
   - vb
   name: RemoveChildWithNameImmediate(GameObject, String)
   nameWithType: GameObjectExtension.RemoveChildWithNameImmediate(GameObject, String)
-  fullName: VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(GameObject, System.String)
+  fullName: VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate(UnityEngine.GameObject, System.String)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Utils/GameObjectExtension.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RemoveChildWithNameImmediate
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Utils/GameObjectExtension.cs
@@ -124,7 +125,7 @@ items:
     content: public static void RemoveChildWithNameImmediate(this GameObject gameObject, string name)
     parameters:
     - id: gameObject
-      type: GameObject
+      type: UnityEngine.GameObject
       description: ''
     - id: name
       type: System.String
@@ -152,37 +153,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -261,63 +231,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -431,6 +344,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -442,11 +443,13 @@ references:
   name: SetLayer
   nameWithType: GameObjectExtension.SetLayer
   fullName: VRBuilder.Core.Utils.GameObjectExtension.SetLayer
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -461,6 +464,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate*
   commentId: Overload:VRBuilder.Core.Utils.GameObjectExtension.RemoveChildWithNameImmediate
   name: RemoveChildWithNameImmediate

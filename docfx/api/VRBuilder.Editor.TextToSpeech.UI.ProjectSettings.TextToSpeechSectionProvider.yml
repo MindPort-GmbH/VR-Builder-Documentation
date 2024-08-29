@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TextToSpeechSectionProvider
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
@@ -34,19 +34,20 @@ items:
     content: 'public class TextToSpeechSectionProvider : IProjectSettingsSection'
     content.vb: >-
       Public Class TextToSpeechSectionProvider
+
           Implements IProjectSettingsSection
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Editor.UI.IProjectSettingsSection
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -67,7 +68,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Title
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
@@ -75,7 +76,6 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech.UI.ProjectSettings
-  summary: "\nTitle of this section.\n"
   example: []
   syntax:
     content: public string Title { get; }
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TargetPageProvider
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
@@ -114,7 +114,6 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech.UI.ProjectSettings
-  summary: "\nType of the target setting provider.\n"
   example: []
   syntax:
     content: public Type TargetPageProvider { get; }
@@ -145,7 +144,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Priority
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
@@ -153,7 +152,6 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech.UI.ProjectSettings
-  summary: "\nDetermines the draw order, lower priority will be drawn first.\n"
   example: []
   syntax:
     content: public int Priority { get; }
@@ -184,7 +182,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnGUI
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
@@ -192,7 +190,6 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech.UI.ProjectSettings
-  summary: "\nYour draw call.\n"
   example: []
   syntax:
     content: public void OnGUI(string searchContext)
@@ -221,7 +218,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Finalize
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/ProjectSettings/TextToSpeechSectionProvider.cs
@@ -256,37 +253,6 @@ references:
   name: IProjectSettingsSection
   nameWithType: IProjectSettingsSection
   fullName: VRBuilder.Editor.UI.IProjectSettingsSection
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -365,63 +331,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -528,6 +437,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

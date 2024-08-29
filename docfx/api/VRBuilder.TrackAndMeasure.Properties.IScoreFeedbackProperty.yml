@@ -5,7 +5,7 @@ items:
   id: IScoreFeedbackProperty
   parent: VRBuilder.TrackAndMeasure.Properties
   children:
-  - VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,Transform)
+  - VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IScoreFeedbackProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Track-and-Measure-for-VR-Builder.git
     id: IScoreFeedbackProperty
     path: ../../Assets/MindPort/VR Builder/Add-ons/TrackAndMeasure/Source/Runtime/Properties/IScoreFeedbackProperty.cs
@@ -30,6 +30,7 @@ items:
     content: 'public interface IScoreFeedbackProperty : ISceneObjectProperty'
     content.vb: >-
       Public Interface IScoreFeedbackProperty
+
           Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -39,21 +40,21 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,Transform)
-  commentId: M:VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,Transform)
-  id: TriggerFeedback(System.Single,System.Single,Transform)
+- uid: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
+  commentId: M:VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
+  id: TriggerFeedback(System.Single,System.Single,UnityEngine.Transform)
   parent: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty
   langs:
   - csharp
   - vb
   name: TriggerFeedback(Single, Single, Transform)
   nameWithType: IScoreFeedbackProperty.TriggerFeedback(Single, Single, Transform)
-  fullName: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single, System.Single, Transform)
+  fullName: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback(System.Single, System.Single, UnityEngine.Transform)
   type: Method
   source:
     remote:
       path: Source/Runtime/Properties/IScoreFeedbackProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Track-and-Measure-for-VR-Builder.git
     id: TriggerFeedback
     path: ../../Assets/MindPort/VR Builder/Add-ons/TrackAndMeasure/Source/Runtime/Properties/IScoreFeedbackProperty.cs
@@ -71,7 +72,7 @@ items:
     - id: finalScore
       type: System.Single
     - id: position
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Sub TriggerFeedback(scoreDelta As Single, finalScore As Single, position As Transform)
   overload: VRBuilder.TrackAndMeasure.Properties.IScoreFeedbackProperty.TriggerFeedback*
 references:
@@ -109,14 +110,22 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: Transform
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
   isExternal: true
   name: Transform
   nameWithType: Transform
-  fullName: Transform
+  fullName: UnityEngine.Transform
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

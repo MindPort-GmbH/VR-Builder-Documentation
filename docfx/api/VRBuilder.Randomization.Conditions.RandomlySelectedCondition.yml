@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: Source/Runtime/Conditions/RandomlySelectedCondition.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: RandomlySelectedCondition
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Runtime/Conditions/RandomlySelectedCondition.cs
     startLine: 12
@@ -37,7 +37,9 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class RandomlySelectedCondition
+
           Inherits Condition(Of RandomlySelectedCondition.EntityData)
+
           Implements IDataOwner(Of RandomlySelectedCondition.EntityData), ICondition, ICompletableEntity, ICompletable, IEntity, IDataOwner(Of IConditionData), IDataOwner, IClonable(Of ICondition), ILockablePropertiesProvider
   inheritance:
   - System.Object
@@ -70,13 +72,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Randomization.Conditions.RandomlySelectedCondition.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Randomization.Conditions.RandomlySelectedCondition.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Randomization.Conditions.RandomlySelectedCondition.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -105,8 +107,8 @@ items:
   source:
     remote:
       path: Source/Runtime/Conditions/RandomlySelectedCondition.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: IsSetToComplete
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Runtime/Conditions/RandomlySelectedCondition.cs
     startLine: 15
@@ -140,8 +142,8 @@ items:
   source:
     remote:
       path: Source/Runtime/Conditions/RandomlySelectedCondition.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Runtime/Conditions/RandomlySelectedCondition.cs
     startLine: 63
@@ -152,6 +154,8 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public RandomlySelectedCondition(float weight = 1F)
     parameters:
     - id: weight
@@ -159,11 +163,16 @@ items:
     content.vb: >-
       <JsonConstructor>
 
+      <Preserve>
+
       Public Sub New(weight As Single = 1F)
   overload: VRBuilder.Randomization.Conditions.RandomlySelectedCondition.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
+    arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
     arguments: []
   modifiers.csharp:
   - public
@@ -183,15 +192,14 @@ items:
   source:
     remote:
       path: Source/Runtime/Conditions/RandomlySelectedCondition.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: GetActiveProcess
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Runtime/Conditions/RandomlySelectedCondition.cs
     startLine: 70
   assemblies:
   - VRBuilder.Randomization
   namespace: VRBuilder.Randomization.Conditions
-  summary: "\nReturns a new instance of a process for the Active <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActiveProcess()
@@ -838,37 +846,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -947,63 +924,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1110,6 +1030,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

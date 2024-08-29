@@ -6,7 +6,7 @@ items:
   parent: VRBuilder.Core.Configuration
   children:
   - VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor
-  - VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(AudioSource)
+  - VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(UnityEngine.AudioSource)
   - VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
   - VRBuilder.Core.Configuration.DefaultAudioPlayer.IsPlaying
   - VRBuilder.Core.Configuration.DefaultAudioPlayer.PlayAudio(VRBuilder.Core.Audio.IAudioData,System.Single,System.Single)
@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DefaultAudioPlayer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -36,19 +36,20 @@ items:
     content: 'public class DefaultAudioPlayer : IProcessAudioPlayer'
     content.vb: >-
       Public Class DefaultAudioPlayer
+
           Implements IProcessAudioPlayer
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.Configuration.IProcessAudioPlayer
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -69,7 +70,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -85,21 +86,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(AudioSource)
-  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(AudioSource)
-  id: '#ctor(AudioSource)'
+- uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(UnityEngine.AudioSource)
+  commentId: M:VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor(UnityEngine.AudioSource)
+  id: '#ctor(UnityEngine.AudioSource)'
   parent: VRBuilder.Core.Configuration.DefaultAudioPlayer
   langs:
   - csharp
   - vb
   name: DefaultAudioPlayer(AudioSource)
   nameWithType: DefaultAudioPlayer.DefaultAudioPlayer(AudioSource)
-  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.DefaultAudioPlayer(AudioSource)
+  fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.DefaultAudioPlayer(UnityEngine.AudioSource)
   type: Constructor
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -111,7 +112,7 @@ items:
     content: public DefaultAudioPlayer(AudioSource audioSource)
     parameters:
     - id: audioSource
-      type: AudioSource
+      type: UnityEngine.AudioSource
     content.vb: Public Sub New(audioSource As AudioSource)
   overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.#ctor*
   modifiers.csharp:
@@ -132,7 +133,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: FallbackAudioSource
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -140,13 +141,12 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nGets a fallback audio source. Used only for backwards compatibility.\n"
   example: []
   syntax:
     content: public AudioSource FallbackAudioSource { get; }
     parameters: []
     return:
-      type: AudioSource
+      type: UnityEngine.AudioSource
     content.vb: Public ReadOnly Property FallbackAudioSource As AudioSource
   overload: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource*
   implements:
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsPlaying
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -179,7 +179,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nTrue if currently playing audio.\n"
   example: []
   syntax:
     content: public bool IsPlaying { get; }
@@ -210,7 +209,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: PlayAudio
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -218,7 +217,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nPlay the specified audio immediately with the set parameters.\n"
   example: []
   syntax:
     content: public void PlayAudio(IAudioData audioData, float volume = 1F, float pitch = 1F)
@@ -251,7 +249,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Reset
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -259,7 +257,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nResets the player to its default settings.\n"
   example: []
   syntax:
     content: public void Reset()
@@ -285,7 +282,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Stop
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/ProcessController/DefaultAudioPlayer.cs
@@ -293,7 +290,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nStops playing audio.\n"
   example: []
   syntax:
     content: public void Stop()
@@ -324,37 +320,6 @@ references:
   name: IProcessAudioPlayer
   nameWithType: IProcessAudioPlayer
   fullName: VRBuilder.Core.Configuration.IProcessAudioPlayer
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -433,63 +398,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -603,6 +511,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -614,11 +610,19 @@ references:
   name: DefaultAudioPlayer
   nameWithType: DefaultAudioPlayer.DefaultAudioPlayer
   fullName: VRBuilder.Core.Configuration.DefaultAudioPlayer.DefaultAudioPlayer
-- uid: AudioSource
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
   isExternal: true
   name: AudioSource
   nameWithType: AudioSource
-  fullName: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource*
   commentId: Overload:VRBuilder.Core.Configuration.DefaultAudioPlayer.FallbackAudioSource
   name: FallbackAudioSource

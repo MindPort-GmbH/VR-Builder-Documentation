@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/IStep.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IStep
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStep.cs
@@ -30,6 +30,7 @@ items:
     content: 'public interface IStep : IDataOwner<IStepData>, IDataOwner, IEntity, IClonable<IStep>'
     content.vb: >-
       Public Interface IStep
+
           Inherits IDataOwner(Of IStepData), IEntity, IClonable(Of IStep)
   inheritedMembers:
   - VRBuilder.Core.IDataOwner{VRBuilder.Core.IStepData}.Data
@@ -61,7 +62,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/IStep.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StepMetadata
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/IStep.cs

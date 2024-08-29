@@ -5,7 +5,7 @@ items:
   id: HighlightPropertyEventArgs
   parent: VRBuilder.Core.Properties
   children:
-  - VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor(System.Nullable{Color})
+  - VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor(System.Nullable{UnityEngine.Color})
   - VRBuilder.Core.Properties.HighlightPropertyEventArgs.HighlightColor
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HighlightPropertyEventArgs
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -29,19 +29,20 @@ items:
     content: 'public class HighlightPropertyEventArgs : EventArgs'
     content.vb: >-
       Public Class HighlightPropertyEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object
   - System.EventArgs
   inheritedMembers:
   - System.EventArgs.Empty
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -62,7 +63,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HighlightColor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -73,7 +74,7 @@ items:
   syntax:
     content: public readonly Color? HighlightColor
     return:
-      type: System.Nullable{Color}
+      type: System.Nullable{UnityEngine.Color}
     content.vb: Public ReadOnly HighlightColor As Color?
   modifiers.csharp:
   - public
@@ -81,21 +82,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor(System.Nullable{Color})
-  commentId: M:VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor(System.Nullable{Color})
-  id: '#ctor(System.Nullable{Color})'
+- uid: VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor(System.Nullable{UnityEngine.Color})
+  commentId: M:VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor(System.Nullable{UnityEngine.Color})
+  id: '#ctor(System.Nullable{UnityEngine.Color})'
   parent: VRBuilder.Core.Properties.HighlightPropertyEventArgs
   langs:
   - csharp
   - vb
   name: HighlightPropertyEventArgs(Nullable<Color>)
   nameWithType: HighlightPropertyEventArgs.HighlightPropertyEventArgs(Nullable<Color>)
-  fullName: VRBuilder.Core.Properties.HighlightPropertyEventArgs.HighlightPropertyEventArgs(System.Nullable<Color>)
+  fullName: VRBuilder.Core.Properties.HighlightPropertyEventArgs.HighlightPropertyEventArgs(System.Nullable<UnityEngine.Color>)
   type: Constructor
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/Highlighting/IHighlightProperty.cs
@@ -107,7 +108,7 @@ items:
     content: public HighlightPropertyEventArgs(Color? highlightColor)
     parameters:
     - id: highlightColor
-      type: System.Nullable{Color}
+      type: System.Nullable{UnityEngine.Color}
     content.vb: Public Sub New(highlightColor As Color?)
   overload: VRBuilder.Core.Properties.HighlightPropertyEventArgs.#ctor*
   nameWithType.vb: HighlightPropertyEventArgs.HighlightPropertyEventArgs(Nullable(Of Color))
@@ -115,7 +116,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: VRBuilder.Core.Properties.HighlightPropertyEventArgs.HighlightPropertyEventArgs(System.Nullable(Of Color))
+  fullName.vb: VRBuilder.Core.Properties.HighlightPropertyEventArgs.HighlightPropertyEventArgs(System.Nullable(Of UnityEngine.Color))
   name.vb: HighlightPropertyEventArgs(Nullable(Of Color))
 references:
 - uid: VRBuilder.Core.Properties
@@ -144,37 +145,6 @@ references:
   name: Empty
   nameWithType: EventArgs.Empty
   fullName: System.EventArgs.Empty
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -253,63 +223,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -423,21 +336,109 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Nullable{Color}
-  commentId: T:System.Nullable{Color}
+- uid: System.Nullable{UnityEngine.Color}
+  commentId: T:System.Nullable{UnityEngine.Color}
   parent: System
   definition: System.Nullable`1
   name: Nullable<Color>
   nameWithType: Nullable<Color>
-  fullName: System.Nullable<Color>
+  fullName: System.Nullable<UnityEngine.Color>
   nameWithType.vb: Nullable(Of Color)
-  fullName.vb: System.Nullable(Of Color)
+  fullName.vb: System.Nullable(Of UnityEngine.Color)
   name.vb: Nullable(Of Color)
   spec.csharp:
   - uid: System.Nullable`1
@@ -448,10 +449,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Color
+  - uid: UnityEngine.Color
     name: Color
     nameWithType: Color
-    fullName: Color
+    fullName: UnityEngine.Color
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -465,10 +466,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Color
+  - uid: UnityEngine.Color
     name: Color
     nameWithType: Color
-    fullName: Color
+    fullName: UnityEngine.Color
     isExternal: true
   - name: )
     nameWithType: )

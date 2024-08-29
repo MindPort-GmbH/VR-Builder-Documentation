@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/VideoClipResourceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: VideoClipResourceDrawer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/VideoClipResourceDrawer.cs
@@ -23,33 +23,35 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: "\nImplementation of asset path drawer for <see cref=\"!:VideoClip\"></see> assets.\n"
+  summary: "\nImplementation of asset path drawer for <xref href=\"UnityEngine.Video.VideoClip\" data-throw-if-not-resolved=\"false\"></xref> assets.\n"
   example: []
   syntax:
     content: 'public class VideoClipResourceDrawer : ResourcePathDrawer<VideoClip>, IProcessDrawer'
     content.vb: >-
       Public Class VideoClipResourceDrawer
+
           Inherits ResourcePathDrawer(Of VideoClip)
+
           Implements IProcessDrawer
   inheritance:
   - System.Object
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer
-  - VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}
+  - VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}
   implements:
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer
   inheritedMembers:
-  - VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -57,6 +59,9 @@ items:
   - Public
   - Class
 references:
+- uid: UnityEngine.Video.VideoClip
+  commentId: T:UnityEngine.Video.VideoClip
+  isExternal: true
 - uid: VRBuilder.Editor.UI.Drawers
   commentId: N:VRBuilder.Editor.UI.Drawers
   name: VRBuilder.Editor.UI.Drawers
@@ -75,15 +80,15 @@ references:
   name: AbstractDrawer
   nameWithType: AbstractDrawer
   fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer
-- uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}
-  commentId: T:VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}
+- uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}
+  commentId: T:VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}
   parent: VRBuilder.Editor.UI.Drawers
   definition: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1
   name: ResourcePathDrawer<VideoClip>
   nameWithType: ResourcePathDrawer<VideoClip>
-  fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<VideoClip>
+  fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<UnityEngine.Video.VideoClip>
   nameWithType.vb: ResourcePathDrawer(Of VideoClip)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of VideoClip)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of UnityEngine.Video.VideoClip)
   name.vb: ResourcePathDrawer(Of VideoClip)
   spec.csharp:
   - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1
@@ -93,10 +98,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: VideoClip
+  - uid: UnityEngine.Video.VideoClip
     name: VideoClip
     nameWithType: VideoClip
-    fullName: VideoClip
+    fullName: UnityEngine.Video.VideoClip
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -109,10 +114,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: VideoClip
+  - uid: UnityEngine.Video.VideoClip
     name: VideoClip
     nameWithType: VideoClip
-    fullName: VideoClip
+    fullName: UnityEngine.Video.VideoClip
     isExternal: true
   - name: )
     nameWithType: )
@@ -123,28 +128,28 @@ references:
   name: IProcessDrawer
   nameWithType: IProcessDrawer
   fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer
-- uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  parent: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{VideoClip}
-  definition: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  parent: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer{UnityEngine.Video.VideoClip}
+  definition: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: ResourcePathDrawer<VideoClip>.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<VideoClip>.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<UnityEngine.Video.VideoClip>.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: ResourcePathDrawer(Of VideoClip).Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of VideoClip).Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of UnityEngine.Video.VideoClip).Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: ResourcePathDrawer<VideoClip>.Draw
-    fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<VideoClip>.Draw
+    fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<UnityEngine.Video.VideoClip>.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -176,26 +181,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: ResourcePathDrawer(Of VideoClip).Draw
-    fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of VideoClip).Draw
+    fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of UnityEngine.Video.VideoClip).Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -227,36 +232,36 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, String)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, String)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, System.String)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, System.String)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), String)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), System.String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), System.String)
   name.vb: Draw(Rect, Object, Action(Of Object), String)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -297,17 +302,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -597,37 +602,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -706,63 +680,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -876,6 +793,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -918,27 +923,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: ResourcePathDrawer<T>.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<T>.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<T>.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: ResourcePathDrawer(Of T).Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of T).Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of T).Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: ResourcePathDrawer<T>.Draw
     fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer<T>.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -970,26 +975,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: ResourcePathDrawer(Of T).Draw
     fullName: VRBuilder.Editor.UI.Drawers.ResourcePathDrawer(Of T).Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1021,10 +1026,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )

@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SceneObjectRegistry
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -48,19 +48,20 @@ items:
       <Obsolete("This implementation of the scene object registry is obsolete. Use SceneObjectRegistryV2 instead.")>
 
       Public Class SceneObjectRegistry
+
           Implements ISceneObjectRegistry
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.SceneObjects.ISceneObjectRegistry
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor(System.String)
@@ -87,7 +88,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: this[]
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -95,7 +96,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nShortcut for GetByGuid(Guid guid) method.\n"
   example: []
   syntax:
     content: public ISceneObject this[Guid guid] { get; }
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RegisterAll
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -169,7 +169,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nRegisters all SceneObject in scene, independent of their state.\n"
   example: []
   syntax:
     content: public void RegisterAll()
@@ -195,7 +194,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: this[]
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -203,7 +202,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nShortcut for GetByName(string name) method.\n"
   example: []
   syntax:
     content: public ISceneObject this[string name] { get; }
@@ -239,7 +237,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Register
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -247,7 +245,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nRegisters an SceneObject in the registry. If there is an SceneObject with the same name\nalready registered, an NameNotUniqueException will be thrown. Also if the Guid\nis already known an SceneObjectAlreadyRegisteredException will be thrown.\n"
   example: []
   syntax:
     content: public void Register(ISceneObject obj)
@@ -276,7 +273,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Unregister
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -284,7 +281,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nRemoves the SceneObject completely from the Registry.\n"
   example: []
   syntax:
     content: public bool Unregister(ISceneObject entity)
@@ -315,7 +311,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ContainsName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -323,7 +319,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nReturns if the name is registered in the registry.\n"
   example: []
   syntax:
     content: public bool ContainsName(string name)
@@ -354,7 +349,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetByName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -362,7 +357,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nReturns the IProcessSceneEntity belonging to the given unique name.\nIf there is no fitting Entity found a MissingEntityException will be thrown.\n"
   example: []
   syntax:
     content: public ISceneObject GetByName(string name)
@@ -393,7 +387,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ContainsGuid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -401,7 +395,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nReturns if the Guid is registered in the registry.\n"
   example: []
   syntax:
     content: public bool ContainsGuid(Guid guid)
@@ -432,7 +425,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetByGuid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -440,7 +433,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nReturns the IProcessSceneEntity belonging to the given Guid.\nIf there is no fitting Entity found a MissingEntityException will be thrown.\n"
   example: []
   syntax:
     content: public ISceneObject GetByGuid(Guid guid)
@@ -471,7 +463,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetObjects
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -479,7 +471,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nReturns all registered scene objects which have the provided guid assigned to them.\n"
   example: []
   syntax:
     content: public IEnumerable<ISceneObject> GetObjects(Guid tag)
@@ -510,7 +501,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetProperties
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -518,11 +509,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nReturns all registered scene objects with the provided guid and at least one valid property of the specified type.\n"
   example: []
   syntax:
     content: >-
       public IEnumerable<T> GetProperties<T>(Guid tag)
+
           where T : ISceneObjectProperty
     parameters:
     - id: tag
@@ -556,7 +547,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetByTag
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -605,7 +596,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetPropertyByTag
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -618,6 +609,7 @@ items:
       [Obsolete("Use GetProperties instead.")]
 
       public IEnumerable<T> GetPropertyByTag<T>(Guid tag)
+
           where T : ISceneObjectProperty
     parameters:
     - id: tag
@@ -660,7 +652,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Refresh
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/SceneObjectRegistry.cs
@@ -668,7 +660,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nUpdates the registry by removing all <xref href=\"VRBuilder.Core.SceneObjects.ISceneObject\" data-throw-if-not-resolved=\"false\"></xref> which are not in the scene anymore and adding new ones.\n"
   example: []
   syntax:
     content: public void Refresh()
@@ -699,37 +690,6 @@ references:
   name: ISceneObjectRegistry
   nameWithType: ISceneObjectRegistry
   fullName: VRBuilder.Core.SceneObjects.ISceneObjectRegistry
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -808,63 +768,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -971,6 +874,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -1575,7 +1566,7 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{{T}}
-  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<T>

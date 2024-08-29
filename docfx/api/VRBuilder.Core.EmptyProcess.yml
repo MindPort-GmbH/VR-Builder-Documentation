@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Behaviors/EmptyProcess.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: EmptyProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Behaviors/EmptyProcess.cs
@@ -33,19 +33,20 @@ items:
     content: 'public sealed class EmptyProcess : IStageProcess'
     content.vb: >-
       Public NotInheritable Class EmptyProcess
+
           Implements IStageProcess
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.IStageProcess
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - sealed
@@ -68,7 +69,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Behaviors/EmptyProcess.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Start
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Behaviors/EmptyProcess.cs
@@ -76,7 +77,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: "\nThis method is invoked immediately when entity enters the stage.\nThe invocation is guaranteed.\nUse it for initialization.\n"
   example: []
   syntax:
     content: public void Start()
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Behaviors/EmptyProcess.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Update
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Behaviors/EmptyProcess.cs
@@ -110,13 +110,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: "\nThis method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.\n"
   example: []
   syntax:
     content: public IEnumerator Update()
     return:
       type: System.Collections.IEnumerator
-      description: ''
     content.vb: Public Function Update As IEnumerator
   overload: VRBuilder.Core.EmptyProcess.Update*
   implements:
@@ -139,7 +137,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Behaviors/EmptyProcess.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: End
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Behaviors/EmptyProcess.cs
@@ -147,7 +145,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: "\nThis method is invoked immediately after the <xref href=\"VRBuilder.Core.IStageProcess.Update\" data-throw-if-not-resolved=\"false\"></xref> was iterated over completely, or after the <xref href=\"VRBuilder.Core.IStageProcess.FastForward\" data-throw-if-not-resolved=\"false\"></xref> was called.\nThe invocation is guaranteed.\nUse it for deinitialization.\n"
   example: []
   syntax:
     content: public void End()
@@ -173,7 +170,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Behaviors/EmptyProcess.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: FastForward
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Behaviors/EmptyProcess.cs
@@ -181,7 +178,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core
-  summary: "\nThis method is called when the process was not completed yet.\nIt must &quot;fake&quot; normal execution of the process and handle the cases when the <xref href=\"VRBuilder.Core.IStageProcess.Update\" data-throw-if-not-resolved=\"false\"></xref> is not iterated over completely.\n"
   example: []
   syntax:
     content: public void FastForward()
@@ -212,37 +208,6 @@ references:
   name: IStageProcess
   nameWithType: IStageProcess
   fullName: VRBuilder.Core.IStageProcess
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -321,63 +286,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -484,6 +392,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

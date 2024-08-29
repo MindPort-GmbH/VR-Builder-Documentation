@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Editor.UI.Drawers
   children:
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
-  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   langs:
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AbstractDrawer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
@@ -34,6 +34,7 @@ items:
     content: 'public abstract class AbstractDrawer : IProcessDrawer'
     content.vb: >-
       Public MustInherit Class AbstractDrawer
+
           Implements IProcessDrawer
   inheritance:
   - System.Object
@@ -49,13 +50,13 @@ items:
   implements:
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - abstract
@@ -64,21 +65,21 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  id: Draw(Rect,System.Object,System.Action{System.Object},System.String)
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  id: Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   langs:
   - csharp
   - vb
   name: Draw(Rect, Object, Action<Object>, String)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, String)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, System.String)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, System.String)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Draw
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
@@ -86,52 +87,46 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: "\nDraw editor view in given Rect.\n"
   example: []
   syntax:
     content: public Rect Draw(Rect rect, object currentValue, Action<object> changeValueCallback, string label)
     parameters:
     - id: rect
-      type: Rect
-      description: A rectangle in which editor view should fit. The height value is ignored.
+      type: UnityEngine.Rect
     - id: currentValue
       type: System.Object
-      description: Current value of a member.
     - id: changeValueCallback
       type: System.Action{System.Object}
-      description: "\nDelegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).\nInvoke only when the value (or values of child members) has actually changed.\n"
     - id: label
       type: System.String
-      description: Label text to display.
     return:
-      type: Rect
-      description: The area that was taken by the property.
+      type: UnityEngine.Rect
     content.vb: Public Function Draw(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As String) As Rect
   overload: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw*
   implements:
-  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), String)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), System.String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), System.String)
   name.vb: Draw(Rect, Object, Action(Of Object), String)
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  id: Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  id: Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   langs:
   - csharp
   - vb
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Draw
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
@@ -139,30 +134,24 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: "\nDraw editor view in given Rect.\n"
   example: []
   syntax:
     content: public abstract Rect Draw(Rect rect, object currentValue, Action<object> changeValueCallback, GUIContent label)
     parameters:
     - id: rect
-      type: Rect
-      description: A rectangle in which editor view should fit. The height value is ignored.
+      type: UnityEngine.Rect
     - id: currentValue
       type: System.Object
-      description: Current value of a member.
     - id: changeValueCallback
       type: System.Action{System.Object}
-      description: "\nDelegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).\nInvoke only when child member&apos;s value has changed;\nOtherwise, if the value itself has changed, call <xref href=\"VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func%7bSystem.Object%7d%2cSystem.Func%7bSystem.Object%7d%2cSystem.Action%7bSystem.Object%7d)\" data-throw-if-not-resolved=\"false\"></xref> so it could manage Do/Undo stack in a proper way.\n"
     - id: label
-      type: GUIContent
-      description: Label content to display.
+      type: UnityEngine.GUIContent
     return:
-      type: Rect
-      description: The area that was taken by the property.
+      type: UnityEngine.Rect
     content.vb: Public MustOverride Function Draw(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As GUIContent) As Rect
   overload: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw*
   implements:
-  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
   modifiers.csharp:
   - public
@@ -170,7 +159,7 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
 - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
@@ -186,7 +175,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLabel
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
@@ -202,7 +191,7 @@ items:
     - id: memberOwner
       type: System.Object
     return:
-      type: GUIContent
+      type: UnityEngine.GUIContent
     content.vb: Public Overridable Function GetLabel(memberInfo As MemberInfo, memberOwner As Object) As GUIContent
   overload: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel*
   implements:
@@ -227,7 +216,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLabel
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
@@ -243,7 +232,7 @@ items:
     - id: declaredType
       type: System.Type
     return:
-      type: GUIContent
+      type: UnityEngine.GUIContent
     content.vb: Public Overridable Function GetLabel(value As Object, declaredType As Type) As GUIContent
   overload: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel*
   implements:
@@ -268,7 +257,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ChangeValue
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/AbstractDrawer.cs
@@ -276,7 +265,6 @@ items:
   assemblies:
   - VRBuilder.Editor
   namespace: VRBuilder.Editor.UI.Drawers
-  summary: "\nCall when the value has changed; it will create proper <see cref=\"!:ProcessCommand\"></see> to handle Do/Undo logic.\n<xref href=\"VRBuilder.Editor.UI.Drawers.AbstractDrawer\" data-throw-if-not-resolved=\"false\"></xref> for a proper implementation.\n<param name=\"getNewValueCallback\">A delegate that returns a new value for the drawn entity. Invoked during the <see cref=\"!:ProcessCommand.Do\"></see> call. The result is passed to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">assignValueCallback</code>.</param>\n<param name=\"getOldValueCallback\">A delegate that returns an old value for the drawn entity. Invoked during the <see cref=\"!:ProcessCommand.Undo\"></see> call. The result is passed to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">assignValueCallback</code>.</param>\n<param name=\"assignValueCallback\">A delegate that actually assigns a value to the property/field.</param>\n"
   example: []
   syntax:
     content: public void ChangeValue(Func<object> getNewValueCallback, Func<object> getOldValueCallback, Action<object> assignValueCallback)
@@ -317,37 +305,6 @@ references:
   name: IProcessDrawer
   nameWithType: IProcessDrawer
   fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -426,63 +383,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -596,6 +496,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -607,28 +595,28 @@ references:
   name: Draw
   nameWithType: AbstractDrawer.Draw
   fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
-- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   parent: VRBuilder.Editor.UI.Drawers.IProcessDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, String)
   nameWithType: IProcessDrawer.Draw(Rect, Object, Action<Object>, String)
-  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action<System.Object>, System.String)
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, System.String)
   nameWithType.vb: IProcessDrawer.Draw(Rect, Object, Action(Of Object), String)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), System.String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), System.String)
   name.vb: Draw(Rect, Object, Action(Of Object), String)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: IProcessDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -669,17 +657,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: IProcessDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -719,11 +707,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Rect
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
   isExternal: true
   name: Rect
   nameWithType: Rect
-  fullName: Rect
+  fullName: UnityEngine.Rect
 - uid: System.Action{System.Object}
   commentId: T:System.Action{System.Object}
   parent: System
@@ -775,6 +765,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -814,28 +810,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.IProcessDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: IProcessDrawer.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: IProcessDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: IProcessDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -867,26 +863,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: IProcessDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -918,19 +914,21 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: GUIContent
+- uid: UnityEngine.GUIContent
+  commentId: T:UnityEngine.GUIContent
+  parent: UnityEngine
   isExternal: true
   name: GUIContent
   nameWithType: GUIContent
-  fullName: GUIContent
+  fullName: UnityEngine.GUIContent
 - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel*
   commentId: Overload:VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel
   name: GetLabel

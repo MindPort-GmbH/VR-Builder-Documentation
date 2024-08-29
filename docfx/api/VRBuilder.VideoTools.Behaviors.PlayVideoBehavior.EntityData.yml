@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/PlayVideoBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: EntityData
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Behaviors/PlayVideoBehavior.cs
@@ -38,6 +38,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class EntityData
+
           Implements IBehaviorData, INamedData, IData
   inheritance:
   - System.Object
@@ -46,13 +47,13 @@ items:
   - VRBuilder.Core.INamedData
   - VRBuilder.Core.IData
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -81,7 +82,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/PlayVideoBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: VideoSource
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Behaviors/PlayVideoBehavior.cs
@@ -146,7 +147,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/PlayVideoBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: VideoPlayer
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Behaviors/PlayVideoBehavior.cs
@@ -162,16 +163,16 @@ items:
 
       [DisplayName("Video player")]
 
-      public ScenePropertyReference<IVideoPlayerProperty> VideoPlayer { get; set; }
+      public SingleScenePropertyReference<IVideoPlayerProperty> VideoPlayer { get; set; }
     parameters: []
     return:
-      type: VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.VideoTools.Properties.IVideoPlayerProperty}
+      type: VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.VideoTools.Properties.IVideoPlayerProperty}
     content.vb: >-
       <DataMember>
 
       <DisplayName("Video player")>
 
-      Public Property VideoPlayer As ScenePropertyReference(Of IVideoPlayerProperty)
+      Public Property VideoPlayer As SingleScenePropertyReference(Of IVideoPlayerProperty)
   overload: VRBuilder.VideoTools.Behaviors.PlayVideoBehavior.EntityData.VideoPlayer*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
@@ -202,7 +203,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/PlayVideoBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: Metadata
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Behaviors/PlayVideoBehavior.cs
@@ -249,7 +250,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/PlayVideoBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Video-Tools-for-VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Add-ons/VideoTools/Source/Runtime/Behaviors/PlayVideoBehavior.cs
@@ -318,37 +319,6 @@ references:
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -427,63 +397,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -597,6 +510,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -634,21 +635,21 @@ references:
   name: VideoPlayer
   nameWithType: PlayVideoBehavior.EntityData.VideoPlayer
   fullName: VRBuilder.VideoTools.Behaviors.PlayVideoBehavior.EntityData.VideoPlayer
-- uid: VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.VideoTools.Properties.IVideoPlayerProperty}
-  commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference{VRBuilder.VideoTools.Properties.IVideoPlayerProperty}
+- uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.VideoTools.Properties.IVideoPlayerProperty}
+  commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference{VRBuilder.VideoTools.Properties.IVideoPlayerProperty}
   parent: VRBuilder.Core.SceneObjects
-  definition: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-  name: ScenePropertyReference<IVideoPlayerProperty>
-  nameWithType: ScenePropertyReference<IVideoPlayerProperty>
-  fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<VRBuilder.VideoTools.Properties.IVideoPlayerProperty>
-  nameWithType.vb: ScenePropertyReference(Of IVideoPlayerProperty)
-  fullName.vb: VRBuilder.Core.SceneObjects.ScenePropertyReference(Of VRBuilder.VideoTools.Properties.IVideoPlayerProperty)
-  name.vb: ScenePropertyReference(Of IVideoPlayerProperty)
+  definition: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  name: SingleScenePropertyReference<IVideoPlayerProperty>
+  nameWithType: SingleScenePropertyReference<IVideoPlayerProperty>
+  fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<VRBuilder.VideoTools.Properties.IVideoPlayerProperty>
+  nameWithType.vb: SingleScenePropertyReference(Of IVideoPlayerProperty)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleScenePropertyReference(Of VRBuilder.VideoTools.Properties.IVideoPlayerProperty)
+  name.vb: SingleScenePropertyReference(Of IVideoPlayerProperty)
   spec.csharp:
-  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-    name: ScenePropertyReference
-    nameWithType: ScenePropertyReference
-    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
     nameWithType: <
     fullName: <
@@ -660,10 +661,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-    name: ScenePropertyReference
-    nameWithType: ScenePropertyReference
-    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -674,20 +675,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-  commentId: T:VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-  parent: VRBuilder.Core.SceneObjects
-  name: ScenePropertyReference<T>
-  nameWithType: ScenePropertyReference<T>
-  fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference<T>
-  nameWithType.vb: ScenePropertyReference(Of T)
-  fullName.vb: VRBuilder.Core.SceneObjects.ScenePropertyReference(Of T)
-  name.vb: ScenePropertyReference(Of T)
+- uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  commentId: T:VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+  name: SingleScenePropertyReference<T>
+  nameWithType: SingleScenePropertyReference<T>
+  fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference<T>
+  nameWithType.vb: SingleScenePropertyReference(Of T)
+  fullName.vb: VRBuilder.Core.SceneObjects.SingleScenePropertyReference(Of T)
+  name.vb: SingleScenePropertyReference(Of T)
   spec.csharp:
-  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-    name: ScenePropertyReference
-    nameWithType: ScenePropertyReference
-    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: <
     nameWithType: <
     fullName: <
@@ -698,10 +698,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: VRBuilder.Core.SceneObjects.ScenePropertyReference`1
-    name: ScenePropertyReference
-    nameWithType: ScenePropertyReference
-    fullName: VRBuilder.Core.SceneObjects.ScenePropertyReference
+  - uid: VRBuilder.Core.SceneObjects.SingleScenePropertyReference`1
+    name: SingleScenePropertyReference
+    nameWithType: SingleScenePropertyReference
+    fullName: VRBuilder.Core.SceneObjects.SingleScenePropertyReference
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '

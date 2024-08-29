@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: EntityData
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -44,6 +44,7 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class EntityData
+
           Implements IBehaviorData, INamedData, IData
   inheritance:
   - System.Object
@@ -52,13 +53,13 @@ items:
   - VRBuilder.Core.INamedData
   - VRBuilder.Core.IData
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: VRBuilder.Core.Attributes.DisplayNameAttribute
     ctor: VRBuilder.Core.Attributes.DisplayNameAttribute.#ctor(System.String)
@@ -92,7 +93,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CustomHighlightColor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -106,7 +107,7 @@ items:
     content: public ModeParameter<Color> CustomHighlightColor { get; set; }
     parameters: []
     return:
-      type: VRBuilder.Core.Configuration.Modes.ModeParameter{Color}
+      type: VRBuilder.Core.Configuration.Modes.ModeParameter{UnityEngine.Color}
     content.vb: Public Property CustomHighlightColor As ModeParameter(Of Color)
   overload: VRBuilder.Core.Behaviors.HighlightObjectBehavior.EntityData.CustomHighlightColor*
   modifiers.csharp:
@@ -129,7 +130,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: HighlightColor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -148,7 +149,7 @@ items:
       public Color HighlightColor { get; set; }
     parameters: []
     return:
-      type: Color
+      type: UnityEngine.Color
     content.vb: >-
       <DataMember>
 
@@ -185,7 +186,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TargetObjects
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -241,7 +242,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ObjectToHighlight
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -304,7 +305,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Metadata
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -312,7 +313,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: "\nReference to this object&apos;s <xref href=\"VRBuilder.Core.IMetadata\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Metadata Metadata { get; set; }
@@ -343,7 +343,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/HighlightObjectBehavior.cs
@@ -351,7 +351,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: "\nName of the entity.\n"
   example: []
   syntax:
     content: >-
@@ -409,37 +408,6 @@ references:
   name: IData
   nameWithType: IData
   fullName: VRBuilder.Core.IData
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -518,63 +486,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -688,6 +599,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -740,15 +739,15 @@ references:
   name: CustomHighlightColor
   nameWithType: HighlightObjectBehavior.EntityData.CustomHighlightColor
   fullName: VRBuilder.Core.Behaviors.HighlightObjectBehavior.EntityData.CustomHighlightColor
-- uid: VRBuilder.Core.Configuration.Modes.ModeParameter{Color}
-  commentId: T:VRBuilder.Core.Configuration.Modes.ModeParameter{Color}
+- uid: VRBuilder.Core.Configuration.Modes.ModeParameter{UnityEngine.Color}
+  commentId: T:VRBuilder.Core.Configuration.Modes.ModeParameter{UnityEngine.Color}
   parent: VRBuilder.Core.Configuration.Modes
   definition: VRBuilder.Core.Configuration.Modes.ModeParameter`1
   name: ModeParameter<Color>
   nameWithType: ModeParameter<Color>
-  fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<Color>
+  fullName: VRBuilder.Core.Configuration.Modes.ModeParameter<UnityEngine.Color>
   nameWithType.vb: ModeParameter(Of Color)
-  fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of Color)
+  fullName.vb: VRBuilder.Core.Configuration.Modes.ModeParameter(Of UnityEngine.Color)
   name.vb: ModeParameter(Of Color)
   spec.csharp:
   - uid: VRBuilder.Core.Configuration.Modes.ModeParameter`1
@@ -758,10 +757,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Color
+  - uid: UnityEngine.Color
     name: Color
     nameWithType: Color
-    fullName: Color
+    fullName: UnityEngine.Color
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -774,10 +773,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Color
+  - uid: UnityEngine.Color
     name: Color
     nameWithType: Color
-    fullName: Color
+    fullName: UnityEngine.Color
     isExternal: true
   - name: )
     nameWithType: )
@@ -792,11 +791,19 @@ references:
   name: HighlightColor
   nameWithType: HighlightObjectBehavior.EntityData.HighlightColor
   fullName: VRBuilder.Core.Behaviors.HighlightObjectBehavior.EntityData.HighlightColor
-- uid: Color
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
   isExternal: true
   name: Color
   nameWithType: Color
-  fullName: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Behaviors.HighlightObjectBehavior.EntityData.TargetObjects*
   commentId: Overload:VRBuilder.Core.Behaviors.HighlightObjectBehavior.EntityData.TargetObjects
   name: TargetObjects

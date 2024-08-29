@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: MultipleScenePropertyReference
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
@@ -40,7 +40,9 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class MultipleScenePropertyReference(Of T As {Class, ISceneObjectProperty})
+
           Inherits MultipleSceneReference(Of T)
+
           Implements ICanBeEmpty
   inheritance:
   - System.Object
@@ -61,9 +63,9 @@ items:
   - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.Equals(System.Object)
   - VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase.GetHashCode
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -95,7 +97,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DetermineValue
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
@@ -103,7 +105,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.SceneObjects
-  summary: "\nDetermine the objects referenced by this scene reference.\n"
   example: []
   syntax:
     content: protected override IEnumerable<T> DetermineValue(IEnumerable<T> cachedValue)
@@ -138,7 +139,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
@@ -170,7 +171,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
@@ -205,7 +206,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/MultipleScenePropertyReference.cs
@@ -705,63 +706,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -821,6 +765,63 @@ references:
   - name: (
     nameWithType: (
     fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1046,7 +1047,7 @@ references:
   nameWithType.vb: MultipleScenePropertyReference(Of T).DetermineValue
   fullName.vb: VRBuilder.Core.SceneObjects.MultipleScenePropertyReference(Of T).DetermineValue
 - uid: System.Collections.Generic.IEnumerable{{T}}
-  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<T>

@@ -6,15 +6,15 @@ items:
   parent: VRBuilder.Editor.TextToSpeech
   children:
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor
-  - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityWebRequest)
-  - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)
+  - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityEngine.Networking.UnityWebRequest)
+  - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityEngine.Networking.UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.AudioConverter
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.AudioType
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.Configuration
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.CreateAudioClip(System.Byte[])
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.CreateRequest(System.String,System.String)
-  - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{AudioClip})
+  - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip})
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.GetAudioFileDownloadUrl(System.String)
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.SetConfig(VRBuilder.TextToSpeech.TextToSpeechConfiguration)
   - VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.UnityWebRequest
@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: WebTextToSpeechProvider
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -42,19 +42,20 @@ items:
     content: 'public abstract class WebTextToSpeechProvider : ITextToSpeechProvider'
     content.vb: >-
       Public MustInherit Class WebTextToSpeechProvider
+
           Implements ITextToSpeechProvider
   inheritance:
   - System.Object
   implements:
   - VRBuilder.TextToSpeech.ITextToSpeechProvider
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - abstract
@@ -77,7 +78,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Configuration
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -108,7 +109,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UnityWebRequest
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -119,7 +120,7 @@ items:
   syntax:
     content: protected readonly UnityWebRequest UnityWebRequest
     return:
-      type: UnityWebRequest
+      type: UnityEngine.Networking.UnityWebRequest
     content.vb: Protected ReadOnly UnityWebRequest As UnityWebRequest
   modifiers.csharp:
   - protected
@@ -141,7 +142,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AudioConverter
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -174,7 +175,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AudioType
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -189,7 +190,7 @@ items:
     content: protected AudioType AudioType { get; set; }
     parameters: []
     return:
-      type: AudioType
+      type: UnityEngine.AudioType
     content.vb: Protected Property AudioType As AudioType
   overload: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.AudioType*
   modifiers.csharp:
@@ -212,7 +213,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -228,21 +229,21 @@ items:
   - protected
   modifiers.vb:
   - Protected
-- uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityWebRequest)
-  commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityWebRequest)
-  id: '#ctor(UnityWebRequest)'
+- uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityEngine.Networking.UnityWebRequest)
+  commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityEngine.Networking.UnityWebRequest)
+  id: '#ctor(UnityEngine.Networking.UnityWebRequest)'
   parent: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider
   langs:
   - csharp
   - vb
   name: WebTextToSpeechProvider(UnityWebRequest)
   nameWithType: WebTextToSpeechProvider.WebTextToSpeechProvider(UnityWebRequest)
-  fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.WebTextToSpeechProvider(UnityWebRequest)
+  fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.WebTextToSpeechProvider(UnityEngine.Networking.UnityWebRequest)
   type: Constructor
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -254,28 +255,28 @@ items:
     content: protected WebTextToSpeechProvider(UnityWebRequest unityWebRequest)
     parameters:
     - id: unityWebRequest
-      type: UnityWebRequest
+      type: UnityEngine.Networking.UnityWebRequest
     content.vb: Protected Sub New(unityWebRequest As UnityWebRequest)
   overload: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor*
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)
-  commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)
-  id: '#ctor(UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)'
+- uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityEngine.Networking.UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)
+  commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor(UnityEngine.Networking.UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)
+  id: '#ctor(UnityEngine.Networking.UnityWebRequest,VRBuilder.TextToSpeech.IAudioConverter)'
   parent: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider
   langs:
   - csharp
   - vb
   name: WebTextToSpeechProvider(UnityWebRequest, IAudioConverter)
   nameWithType: WebTextToSpeechProvider.WebTextToSpeechProvider(UnityWebRequest, IAudioConverter)
-  fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.WebTextToSpeechProvider(UnityWebRequest, VRBuilder.TextToSpeech.IAudioConverter)
+  fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.WebTextToSpeechProvider(UnityEngine.Networking.UnityWebRequest, VRBuilder.TextToSpeech.IAudioConverter)
   type: Constructor
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -287,7 +288,7 @@ items:
     content: protected WebTextToSpeechProvider(UnityWebRequest unityWebRequest, IAudioConverter audioConverter)
     parameters:
     - id: unityWebRequest
-      type: UnityWebRequest
+      type: UnityEngine.Networking.UnityWebRequest
     - id: audioConverter
       type: VRBuilder.TextToSpeech.IAudioConverter
     content.vb: Protected Sub New(unityWebRequest As UnityWebRequest, audioConverter As IAudioConverter)
@@ -310,7 +311,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetConfig
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -318,7 +319,6 @@ items:
   assemblies:
   - VRBuilder.Editor.TextToSpeech
   namespace: VRBuilder.Editor.TextToSpeech
-  summary: "\nUsed for setting the config file.\n"
   example: []
   syntax:
     content: public void SetConfig(TextToSpeechConfiguration configuration)
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ConvertTextToSpeech
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -364,9 +364,11 @@ items:
     - id: locale
       type: UnityEngine.Localization.Locale
     return:
-      type: System.Threading.Tasks.Task{AudioClip}
+      type: System.Threading.Tasks.Task{UnityEngine.AudioClip}
     content.vb: Public Function ConvertTextToSpeech(text As String, locale As Locale) As Task(Of AudioClip)
   overload: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.ConvertTextToSpeech*
+  implements:
+  - VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)
   modifiers.csharp:
   - public
   - async
@@ -386,7 +388,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetAudioFileDownloadUrl
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -413,21 +415,21 @@ items:
   modifiers.vb:
   - Protected
   - MustOverride
-- uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{AudioClip})
-  commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{AudioClip})
-  id: DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{AudioClip})
+- uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip})
+  commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip})
+  id: DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip})
   parent: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider
   langs:
   - csharp
   - vb
   name: DownloadAudio(String, Locale, TaskCompletionSource<AudioClip>)
   nameWithType: WebTextToSpeechProvider.DownloadAudio(String, Locale, TaskCompletionSource<AudioClip>)
-  fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String, UnityEngine.Localization.Locale, System.Threading.Tasks.TaskCompletionSource<AudioClip>)
+  fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String, UnityEngine.Localization.Locale, System.Threading.Tasks.TaskCompletionSource<UnityEngine.AudioClip>)
   type: Method
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DownloadAudio
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -445,7 +447,7 @@ items:
     - id: locale
       type: UnityEngine.Localization.Locale
     - id: task
-      type: System.Threading.Tasks.TaskCompletionSource{AudioClip}
+      type: System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip}
     return:
       type: System.Collections.IEnumerator
     content.vb: Protected Overridable Function DownloadAudio(text As String, locale As Locale, task As TaskCompletionSource(Of AudioClip)) As IEnumerator
@@ -457,7 +459,7 @@ items:
   modifiers.vb:
   - Protected
   - Overridable
-  fullName.vb: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String, UnityEngine.Localization.Locale, System.Threading.Tasks.TaskCompletionSource(Of AudioClip))
+  fullName.vb: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio(System.String, UnityEngine.Localization.Locale, System.Threading.Tasks.TaskCompletionSource(Of UnityEngine.AudioClip))
   name.vb: DownloadAudio(String, Locale, TaskCompletionSource(Of AudioClip))
 - uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.CreateRequest(System.String,System.String)
   commentId: M:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.CreateRequest(System.String,System.String)
@@ -473,7 +475,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateRequest
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -491,7 +493,7 @@ items:
     - id: text
       type: System.String
     return:
-      type: UnityWebRequest
+      type: UnityEngine.Networking.UnityWebRequest
     content.vb: Protected Overridable Function CreateRequest(url As String, text As String) As UnityWebRequest
   overload: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.CreateRequest*
   modifiers.csharp:
@@ -514,7 +516,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateAudioClip
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/Providers/WebTextToSpeechProvider.cs
@@ -531,7 +533,7 @@ items:
     - id: data
       type: System.Byte[]
     return:
-      type: AudioClip
+      type: UnityEngine.AudioClip
     content.vb: Protected Overridable Function CreateAudioClip(data As Byte()) As AudioClip
   overload: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.CreateAudioClip*
   nameWithType.vb: WebTextToSpeechProvider.CreateAudioClip(Byte())
@@ -562,37 +564,6 @@ references:
   name: ITextToSpeechProvider
   nameWithType: ITextToSpeechProvider
   fullName: VRBuilder.TextToSpeech.ITextToSpeechProvider
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -671,63 +642,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -841,6 +755,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -858,11 +860,19 @@ references:
   name: TextToSpeechConfiguration
   nameWithType: TextToSpeechConfiguration
   fullName: VRBuilder.TextToSpeech.TextToSpeechConfiguration
-- uid: UnityWebRequest
+- uid: UnityEngine.Networking.UnityWebRequest
+  commentId: T:UnityEngine.Networking.UnityWebRequest
+  parent: UnityEngine.Networking
   isExternal: true
   name: UnityWebRequest
   nameWithType: UnityWebRequest
-  fullName: UnityWebRequest
+  fullName: UnityEngine.Networking.UnityWebRequest
+- uid: UnityEngine.Networking
+  commentId: N:UnityEngine.Networking
+  isExternal: true
+  name: UnityEngine.Networking
+  nameWithType: UnityEngine.Networking
+  fullName: UnityEngine.Networking
 - uid: VRBuilder.TextToSpeech.IAudioConverter
   commentId: T:VRBuilder.TextToSpeech.IAudioConverter
   parent: VRBuilder.TextToSpeech
@@ -874,12 +884,19 @@ references:
   name: AudioType
   nameWithType: WebTextToSpeechProvider.AudioType
   fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.AudioType
-- uid: AudioType
-  commentId: '!:AudioType'
+- uid: UnityEngine.AudioType
+  commentId: T:UnityEngine.AudioType
+  parent: UnityEngine
   isExternal: true
   name: AudioType
   nameWithType: AudioType
-  fullName: AudioType
+  fullName: UnityEngine.AudioType
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.#ctor
   name: WebTextToSpeechProvider
@@ -931,6 +948,59 @@ references:
   name: ConvertTextToSpeech
   nameWithType: WebTextToSpeechProvider.ConvertTextToSpeech
   fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.ConvertTextToSpeech
+- uid: VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)
+  commentId: M:VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)
+  parent: VRBuilder.TextToSpeech.ITextToSpeechProvider
+  isExternal: true
+  name: ConvertTextToSpeech(String, Locale)
+  nameWithType: ITextToSpeechProvider.ConvertTextToSpeech(String, Locale)
+  fullName: VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech(System.String, UnityEngine.Localization.Locale)
+  spec.csharp:
+  - uid: VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)
+    name: ConvertTextToSpeech
+    nameWithType: ITextToSpeechProvider.ConvertTextToSpeech
+    fullName: VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: UnityEngine.Localization.Locale
+    name: Locale
+    nameWithType: Locale
+    fullName: UnityEngine.Localization.Locale
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)
+    name: ConvertTextToSpeech
+    nameWithType: ITextToSpeechProvider.ConvertTextToSpeech
+    fullName: VRBuilder.TextToSpeech.ITextToSpeechProvider.ConvertTextToSpeech
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: UnityEngine.Localization.Locale
+    name: Locale
+    nameWithType: Locale
+    fullName: UnityEngine.Localization.Locale
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -944,15 +1014,15 @@ references:
   name: Locale
   nameWithType: Locale
   fullName: UnityEngine.Localization.Locale
-- uid: System.Threading.Tasks.Task{AudioClip}
-  commentId: T:System.Threading.Tasks.Task{AudioClip}
+- uid: System.Threading.Tasks.Task{UnityEngine.AudioClip}
+  commentId: T:System.Threading.Tasks.Task{UnityEngine.AudioClip}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   name: Task<AudioClip>
   nameWithType: Task<AudioClip>
-  fullName: System.Threading.Tasks.Task<AudioClip>
+  fullName: System.Threading.Tasks.Task<UnityEngine.AudioClip>
   nameWithType.vb: Task(Of AudioClip)
-  fullName.vb: System.Threading.Tasks.Task(Of AudioClip)
+  fullName.vb: System.Threading.Tasks.Task(Of UnityEngine.AudioClip)
   name.vb: Task(Of AudioClip)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
@@ -963,10 +1033,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: AudioClip
+  - uid: UnityEngine.AudioClip
     name: AudioClip
     nameWithType: AudioClip
-    fullName: AudioClip
+    fullName: UnityEngine.AudioClip
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -980,10 +1050,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: AudioClip
+  - uid: UnityEngine.AudioClip
     name: AudioClip
     nameWithType: AudioClip
-    fullName: AudioClip
+    fullName: UnityEngine.AudioClip
     isExternal: true
   - name: )
     nameWithType: )
@@ -1048,15 +1118,15 @@ references:
   name: DownloadAudio
   nameWithType: WebTextToSpeechProvider.DownloadAudio
   fullName: VRBuilder.Editor.TextToSpeech.WebTextToSpeechProvider.DownloadAudio
-- uid: System.Threading.Tasks.TaskCompletionSource{AudioClip}
-  commentId: T:System.Threading.Tasks.TaskCompletionSource{AudioClip}
+- uid: System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip}
+  commentId: T:System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.TaskCompletionSource`1
   name: TaskCompletionSource<AudioClip>
   nameWithType: TaskCompletionSource<AudioClip>
-  fullName: System.Threading.Tasks.TaskCompletionSource<AudioClip>
+  fullName: System.Threading.Tasks.TaskCompletionSource<UnityEngine.AudioClip>
   nameWithType.vb: TaskCompletionSource(Of AudioClip)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of AudioClip)
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of UnityEngine.AudioClip)
   name.vb: TaskCompletionSource(Of AudioClip)
   spec.csharp:
   - uid: System.Threading.Tasks.TaskCompletionSource`1
@@ -1067,10 +1137,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: AudioClip
+  - uid: UnityEngine.AudioClip
     name: AudioClip
     nameWithType: AudioClip
-    fullName: AudioClip
+    fullName: UnityEngine.AudioClip
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1084,10 +1154,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: AudioClip
+  - uid: UnityEngine.AudioClip
     name: AudioClip
     nameWithType: AudioClip
-    fullName: AudioClip
+    fullName: UnityEngine.AudioClip
     isExternal: true
   - name: )
     nameWithType: )
@@ -1180,8 +1250,10 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: AudioClip
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
   isExternal: true
   name: AudioClip
   nameWithType: AudioClip
-  fullName: AudioClip
+  fullName: UnityEngine.AudioClip

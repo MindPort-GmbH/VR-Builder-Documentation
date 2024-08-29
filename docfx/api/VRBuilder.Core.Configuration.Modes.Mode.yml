@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Mode
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -35,19 +35,20 @@ items:
     content: 'public sealed class Mode : IMode'
     content.vb: >-
       Public NotInheritable Class Mode
+
           Implements IMode
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.Configuration.Modes.IMode
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - sealed
@@ -70,7 +71,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -78,7 +79,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nThe name of this process mode.\n"
   example: []
   syntax:
     content: public string Name { get; }
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CheckIfSkipped
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -161,11 +161,11 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nReturns whether the given <xref href=\"VRBuilder.Core.Configuration.Modes.IOptional\" data-throw-if-not-resolved=\"false\"></xref> type should be skipped in this process mode.\n"
   example: []
   syntax:
     content: >-
       public bool CheckIfSkipped<TSkippable>()
+
           where TSkippable : IOptional
     typeParameters:
     - id: TSkippable
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CheckIfSkipped
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -204,14 +204,12 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nReturns whether the given type should be skipped in this process mode.\n"
   example: []
   syntax:
     content: public bool CheckIfSkipped(Type type)
     parameters:
     - id: type
       type: System.Type
-      description: The type to check.
     return:
       type: System.Boolean
     content.vb: Public Function CheckIfSkipped(type As Type) As Boolean
@@ -236,7 +234,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetParameter
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -244,19 +242,16 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nProvides a specific parameter for this mode.\n"
   example: []
   syntax:
     content: public TValue GetParameter<TValue>(string key)
     parameters:
     - id: key
       type: System.String
-      description: Name of the parameter.
     typeParameters:
     - id: TValue
     return:
       type: '{TValue}'
-      description: The value for the given key
     content.vb: Public Function GetParameter(Of TValue)(key As String) As TValue
   overload: VRBuilder.Core.Configuration.Modes.Mode.GetParameter*
   implements:
@@ -282,7 +277,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/Mode.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ContainsParameter
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/Mode.cs
@@ -290,14 +285,12 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nChecks if given key exists.\n"
   example: []
   syntax:
     content: public bool ContainsParameter<TValue>(string key)
     parameters:
     - id: key
       type: System.String
-      description: Name of the key
     typeParameters:
     - id: TValue
     return:
@@ -332,37 +325,6 @@ references:
   name: IMode
   nameWithType: IMode
   fullName: VRBuilder.Core.Configuration.Modes.IMode
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -441,63 +403,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -604,6 +509,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

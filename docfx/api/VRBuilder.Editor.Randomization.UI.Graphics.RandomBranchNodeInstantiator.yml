@@ -5,7 +5,7 @@ items:
   id: RandomBranchNodeInstantiator
   parent: VRBuilder.Editor.Randomization.UI.Graphics
   children:
-  - VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
+  - VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
   - VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.InstantiateNode(VRBuilder.Core.IStep)
   - VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.IsInNodeMenu
   - VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.Name
@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: RandomBranchNodeInstantiator
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 9
@@ -35,19 +35,20 @@ items:
     content: 'public class RandomBranchNodeInstantiator : IStepNodeInstantiator'
     content.vb: >-
       Public Class RandomBranchNodeInstantiator
+
           Implements IStepNodeInstantiator
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -68,15 +69,14 @@ items:
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: Name
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 12
   assemblies:
   - VRBuilder.Editor.Randomization
   namespace: VRBuilder.Editor.Randomization.UI.Graphics
-  summary: "\nDisplay name of the instantiated node.\n"
   example: []
   syntax:
     content: public string Name { get; }
@@ -107,15 +107,14 @@ items:
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: IsInNodeMenu
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 15
   assemblies:
   - VRBuilder.Editor.Randomization
   namespace: VRBuilder.Editor.Randomization.UI.Graphics
-  summary: "\nIf true, it will appear in the node menu.\n"
   example: []
   syntax:
     content: public bool IsInNodeMenu { get; }
@@ -146,15 +145,14 @@ items:
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: StepType
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 18
   assemblies:
   - VRBuilder.Editor.Randomization
   namespace: VRBuilder.Editor.Randomization.UI.Graphics
-  summary: "\nStep type metadata.\n"
   example: []
   syntax:
     content: public string StepType { get; }
@@ -185,15 +183,14 @@ items:
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: Priority
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 21
   assemblies:
   - VRBuilder.Editor.Randomization
   namespace: VRBuilder.Editor.Randomization.UI.Graphics
-  summary: "\nNodes with a lower value will appear first in the menu.\n"
   example: []
   syntax:
     content: public int Priority { get; }
@@ -224,15 +221,14 @@ items:
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: InstantiateNode
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 24
   assemblies:
   - VRBuilder.Editor.Randomization
   namespace: VRBuilder.Editor.Randomization.UI.Graphics
-  summary: "\nCreates a graphview node of the corresponding type. \n"
   example: []
   syntax:
     content: public ProcessGraphNode InstantiateNode(IStep step)
@@ -249,22 +245,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
-  commentId: M:VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
-  id: GetContextMenuStatus(IEventHandler,VRBuilder.Core.IChapter)
+- uid: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  id: GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
   parent: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator
   langs:
   - csharp
   - vb
   name: GetContextMenuStatus(IEventHandler, IChapter)
   nameWithType: RandomBranchNodeInstantiator.GetContextMenuStatus(IEventHandler, IChapter)
-  fullName: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(IEventHandler, VRBuilder.Core.IChapter)
+  fullName: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler, VRBuilder.Core.IChapter)
   type: Method
   source:
     remote:
       path: Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
-      branch: develop
-      repo: git@github.com:MindPort-GmbH/Randomization-for-VR-Builder.git
+      branch: feature/mp-2734-component-icons
+      repo: git@github.com:VaLiuM09/Randomization-for-VR-Builder.git
     id: GetContextMenuStatus
     path: ../../Assets/MindPort/VR Builder/Add-ons/Randomization/Source/Editor/UI/GraphView/RandomBranchNodeInstantiator.cs
     startLine: 30
@@ -276,13 +272,15 @@ items:
     content: public DropdownMenuAction.Status GetContextMenuStatus(IEventHandler target, IChapter currentChapter)
     parameters:
     - id: target
-      type: IEventHandler
+      type: UnityEngine.UIElements.IEventHandler
     - id: currentChapter
       type: VRBuilder.Core.IChapter
     return:
-      type: DropdownMenuAction.Status
+      type: UnityEngine.UIElements.DropdownMenuAction.Status
     content.vb: Public Function GetContextMenuStatus(target As IEventHandler, currentChapter As IChapter) As DropdownMenuAction.Status
   overload: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus*
+  implements:
+  - VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -311,37 +309,6 @@ references:
   name: IStepNodeInstantiator
   nameWithType: IStepNodeInstantiator
   fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -420,63 +387,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -583,6 +493,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -729,19 +727,82 @@ references:
   name: GetContextMenuStatus
   nameWithType: RandomBranchNodeInstantiator.GetContextMenuStatus
   fullName: VRBuilder.Editor.Randomization.UI.Graphics.RandomBranchNodeInstantiator.GetContextMenuStatus
-- uid: IEventHandler
+- uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  commentId: M:VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+  parent: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator
+  isExternal: true
+  name: GetContextMenuStatus(IEventHandler, IChapter)
+  nameWithType: IStepNodeInstantiator.GetContextMenuStatus(IEventHandler, IChapter)
+  fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler, VRBuilder.Core.IChapter)
+  spec.csharp:
+  - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+    name: GetContextMenuStatus
+    nameWithType: IStepNodeInstantiator.GetContextMenuStatus
+    fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.UIElements.IEventHandler
+    name: IEventHandler
+    nameWithType: IEventHandler
+    fullName: UnityEngine.UIElements.IEventHandler
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VRBuilder.Core.IChapter
+    name: IChapter
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus(UnityEngine.UIElements.IEventHandler,VRBuilder.Core.IChapter)
+    name: GetContextMenuStatus
+    nameWithType: IStepNodeInstantiator.GetContextMenuStatus
+    fullName: VRBuilder.Editor.UI.Graphics.IStepNodeInstantiator.GetContextMenuStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.UIElements.IEventHandler
+    name: IEventHandler
+    nameWithType: IEventHandler
+    fullName: UnityEngine.UIElements.IEventHandler
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VRBuilder.Core.IChapter
+    name: IChapter
+    nameWithType: IChapter
+    fullName: VRBuilder.Core.IChapter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEngine.UIElements.IEventHandler
+  commentId: T:UnityEngine.UIElements.IEventHandler
+  parent: UnityEngine.UIElements
   isExternal: true
   name: IEventHandler
   nameWithType: IEventHandler
-  fullName: IEventHandler
+  fullName: UnityEngine.UIElements.IEventHandler
 - uid: VRBuilder.Core.IChapter
   commentId: T:VRBuilder.Core.IChapter
   parent: VRBuilder.Core
   name: IChapter
   nameWithType: IChapter
   fullName: VRBuilder.Core.IChapter
-- uid: DropdownMenuAction.Status
+- uid: UnityEngine.UIElements.DropdownMenuAction.Status
+  commentId: T:UnityEngine.UIElements.DropdownMenuAction.Status
+  parent: UnityEngine.UIElements
   isExternal: true
   name: DropdownMenuAction.Status
   nameWithType: DropdownMenuAction.Status
-  fullName: DropdownMenuAction.Status
+  fullName: UnityEngine.UIElements.DropdownMenuAction.Status
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements

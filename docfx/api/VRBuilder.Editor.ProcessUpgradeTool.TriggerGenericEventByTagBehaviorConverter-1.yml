@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Source/Editor/Converters/TriggerGenericEventByTagBehaviorConverter.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: TriggerGenericEventByTagBehaviorConverter
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Editor/Converters/TriggerGenericEventByTagBehaviorConverter.cs
@@ -32,7 +32,9 @@ items:
     - id: T
     content.vb: >-
       Public MustInherit Class TriggerGenericEventByTagBehaviorConverter(Of T)
+
           Inherits Converter(Of TriggerGenericEventByTagBehavior(Of T), TriggerGenericEventBehavior(Of T))
+
           Implements IConverter
   inheritance:
   - System.Object
@@ -47,13 +49,13 @@ items:
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerGenericEventByTagBehavior{{T}},VRBuilder.StatesAndData.Behaviors.TriggerGenericEventBehavior{{T}}}.ConvertedType
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerGenericEventByTagBehavior{{T}},VRBuilder.StatesAndData.Behaviors.TriggerGenericEventBehavior{{T}}}.PerformConversion(VRBuilder.StatesAndData.Behaviors.TriggerGenericEventByTagBehavior{{T}})
   - VRBuilder.Editor.ProcessUpgradeTool.Converter{VRBuilder.StatesAndData.Behaviors.TriggerGenericEventByTagBehavior{{T}},VRBuilder.StatesAndData.Behaviors.TriggerGenericEventBehavior{{T}}}.Convert(System.Object)
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   nameWithType.vb: TriggerGenericEventByTagBehaviorConverter(Of T)
   modifiers.csharp:
   - public
@@ -79,7 +81,7 @@ items:
   source:
     remote:
       path: Source/Editor/Converters/TriggerGenericEventByTagBehaviorConverter.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: PerformConversion
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Editor/Converters/TriggerGenericEventByTagBehaviorConverter.cs
@@ -87,7 +89,6 @@ items:
   assemblies:
   - VRBuilder.Editor.StatesAndData
   namespace: VRBuilder.Editor.ProcessUpgradeTool
-  summary: "\nReturns an object which can replace the provided object.\n"
   example: []
   syntax:
     content: protected override TriggerGenericEventBehavior<T> PerformConversion(TriggerGenericEventByTagBehavior<T> oldBehavior)
@@ -397,37 +398,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -506,63 +476,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -669,6 +582,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

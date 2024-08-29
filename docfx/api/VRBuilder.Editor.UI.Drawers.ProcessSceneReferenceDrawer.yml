@@ -5,17 +5,17 @@ items:
   id: ProcessSceneReferenceDrawer
   parent: VRBuilder.Editor.UI.Drawers
   children:
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable{GameObject},System.Type,Rect@,Rect@)
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(GameObject,System.Type,Rect@,Rect@)
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(Rect@,System.Single)
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(GameObject)
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(Rect@,Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{GameObject,Rect},System.Action{System.Object},GUIContent)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable{UnityEngine.GameObject},System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(UnityEngine.GameObject,System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(UnityEngine.Rect@,System.Single)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(UnityEngine.GameObject)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(UnityEngine.Rect@,UnityEngine.Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{UnityEngine.GameObject,UnityEngine.Rect},System.Action{System.Object},UnityEngine.GUIContent)
   - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.dropBoxStyle
   - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.isExpanded
   - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.isUndoOperation
   - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.richTextLabelStyle
-  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(GameObject,System.Type)
+  - VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(UnityEngine.GameObject,System.Type)
   langs:
   - csharp
   - vb
@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ProcessSceneReferenceDrawer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -45,7 +45,9 @@ items:
       <DefaultProcessDrawer(GetType(ProcessSceneReferenceBase))>
 
       Public Class ProcessSceneReferenceDrawer
+
           Inherits AbstractDrawer
+
           Implements IProcessDrawer
   inheritance:
   - System.Object
@@ -53,17 +55,17 @@ items:
   implements:
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer
   inheritedMembers:
-  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: VRBuilder.Editor.UI.Drawers.DefaultProcessDrawerAttribute
     ctor: VRBuilder.Editor.UI.Drawers.DefaultProcessDrawerAttribute.#ctor(System.Type)
@@ -90,7 +92,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: isUndoOperation
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -121,7 +123,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: isExpanded
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -152,7 +154,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: richTextLabelStyle
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -163,7 +165,7 @@ items:
   syntax:
     content: protected GUIStyle richTextLabelStyle
     return:
-      type: GUIStyle
+      type: UnityEngine.GUIStyle
     content.vb: Protected richTextLabelStyle As GUIStyle
   modifiers.csharp:
   - protected
@@ -183,7 +185,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: dropBoxStyle
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -194,27 +196,27 @@ items:
   syntax:
     content: protected GUIStyle dropBoxStyle
     return:
-      type: GUIStyle
+      type: UnityEngine.GUIStyle
     content.vb: Protected dropBoxStyle As GUIStyle
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  id: Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  id: Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: ProcessSceneReferenceDrawer.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Draw
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -226,17 +228,17 @@ items:
     content: public override Rect Draw(Rect rect, object currentValue, Action<object> changeValueCallback, GUIContent label)
     parameters:
     - id: rect
-      type: Rect
+      type: UnityEngine.Rect
     - id: currentValue
       type: System.Object
     - id: changeValueCallback
       type: System.Action{System.Object}
     - id: label
-      type: GUIContent
+      type: UnityEngine.GUIContent
     return:
-      type: Rect
+      type: UnityEngine.Rect
     content.vb: Public Overrides Function Draw(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As GUIContent) As Rect
-  overridden: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  overridden: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   overload: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw*
   nameWithType.vb: ProcessSceneReferenceDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
   modifiers.csharp:
@@ -245,23 +247,23 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(Rect@,Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{GameObject,Rect},System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(Rect@,Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{GameObject,Rect},System.Action{System.Object},GUIContent)
-  id: DropAreaGUI(Rect@,Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{GameObject,Rect},System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(UnityEngine.Rect@,UnityEngine.Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{UnityEngine.GameObject,UnityEngine.Rect},System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(UnityEngine.Rect@,UnityEngine.Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{UnityEngine.GameObject,UnityEngine.Rect},System.Action{System.Object},UnityEngine.GUIContent)
+  id: DropAreaGUI(UnityEngine.Rect@,UnityEngine.Rect@,VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase,System.Action{UnityEngine.GameObject,UnityEngine.Rect},System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: DropAreaGUI(ref Rect, ref Rect, ProcessSceneReferenceBase, Action<GameObject, Rect>, Action<Object>, GUIContent)
   nameWithType: ProcessSceneReferenceDrawer.DropAreaGUI(ref Rect, ref Rect, ProcessSceneReferenceBase, Action<GameObject, Rect>, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(ref Rect, ref Rect, VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase, System.Action<GameObject, Rect>, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(ref UnityEngine.Rect, ref UnityEngine.Rect, VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase, System.Action<UnityEngine.GameObject, UnityEngine.Rect>, System.Action<System.Object>, UnityEngine.GUIContent)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DropAreaGUI
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -275,20 +277,20 @@ items:
     content: protected void DropAreaGUI(ref Rect originalRect, ref Rect guiLineRect, ProcessSceneReferenceBase reference, Action<GameObject, Rect> dropAction, Action<object> changeValueCallback, GUIContent label)
     parameters:
     - id: originalRect
-      type: Rect
+      type: UnityEngine.Rect
       description: The rect of the whole behavior or condition.
     - id: guiLineRect
-      type: Rect
+      type: UnityEngine.Rect
       description: The rect of the last drawn line.
     - id: reference
       type: VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase
     - id: dropAction
-      type: System.Action{GameObject,Rect}
+      type: System.Action{UnityEngine.GameObject,UnityEngine.Rect}
       description: The action to perform when a game object is dropped.
     - id: changeValueCallback
       type: System.Action{System.Object}
     - id: label
-      type: GUIContent
+      type: UnityEngine.GUIContent
     content.vb: Protected Sub DropAreaGUI(ByRef originalRect As Rect, ByRef guiLineRect As Rect, reference As ProcessSceneReferenceBase, dropAction As Action(Of GameObject, Rect), changeValueCallback As Action(Of Object), label As GUIContent)
   overload: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI*
   nameWithType.vb: ProcessSceneReferenceDrawer.DropAreaGUI(ByRef Rect, ByRef Rect, ProcessSceneReferenceBase, Action(Of GameObject, Rect), Action(Of Object), GUIContent)
@@ -296,23 +298,23 @@ items:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(ByRef Rect, ByRef Rect, VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase, System.Action(Of GameObject, Rect), System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI(ByRef UnityEngine.Rect, ByRef UnityEngine.Rect, VRBuilder.Core.SceneObjects.ProcessSceneReferenceBase, System.Action(Of UnityEngine.GameObject, UnityEngine.Rect), System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: DropAreaGUI(ByRef Rect, ByRef Rect, ProcessSceneReferenceBase, Action(Of GameObject, Rect), Action(Of Object), GUIContent)
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(GameObject)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(GameObject)
-  id: CreateProcessSceneObject(GameObject)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(UnityEngine.GameObject)
+  id: CreateProcessSceneObject(UnityEngine.GameObject)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: CreateProcessSceneObject(GameObject)
   nameWithType: ProcessSceneReferenceDrawer.CreateProcessSceneObject(GameObject)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(GameObject)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject(UnityEngine.GameObject)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateProcessSceneObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -324,7 +326,7 @@ items:
     content: protected Guid CreateProcessSceneObject(GameObject selectedSceneObject)
     parameters:
     - id: selectedSceneObject
-      type: GameObject
+      type: UnityEngine.GameObject
     return:
       type: System.Guid
     content.vb: Protected Function CreateProcessSceneObject(selectedSceneObject As GameObject) As Guid
@@ -333,21 +335,21 @@ items:
   - protected
   modifiers.vb:
   - Protected
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable{GameObject},System.Type,Rect@,Rect@)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable{GameObject},System.Type,Rect@,Rect@)
-  id: AddFixItAllButton(System.Collections.Generic.IEnumerable{GameObject},System.Type,Rect@,Rect@)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable{UnityEngine.GameObject},System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable{UnityEngine.GameObject},System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
+  id: AddFixItAllButton(System.Collections.Generic.IEnumerable{UnityEngine.GameObject},System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: AddFixItAllButton(IEnumerable<GameObject>, Type, ref Rect, ref Rect)
   nameWithType: ProcessSceneReferenceDrawer.AddFixItAllButton(IEnumerable<GameObject>, Type, ref Rect, ref Rect)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable<GameObject>, System.Type, ref Rect, ref Rect)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable<UnityEngine.GameObject>, System.Type, ref UnityEngine.Rect, ref UnityEngine.Rect)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AddFixItAllButton
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -359,13 +361,13 @@ items:
     content: protected void AddFixItAllButton(IEnumerable<GameObject> selectedSceneObject, Type valueType, ref Rect originalRect, ref Rect guiLineRect)
     parameters:
     - id: selectedSceneObject
-      type: System.Collections.Generic.IEnumerable{GameObject}
+      type: System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
     - id: valueType
       type: System.Type
     - id: originalRect
-      type: Rect
+      type: UnityEngine.Rect
     - id: guiLineRect
-      type: Rect
+      type: UnityEngine.Rect
     content.vb: Protected Sub AddFixItAllButton(selectedSceneObject As IEnumerable(Of GameObject), valueType As Type, ByRef originalRect As Rect, ByRef guiLineRect As Rect)
   overload: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton*
   nameWithType.vb: ProcessSceneReferenceDrawer.AddFixItAllButton(IEnumerable(Of GameObject), Type, ByRef Rect, ByRef Rect)
@@ -373,23 +375,23 @@ items:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable(Of GameObject), System.Type, ByRef Rect, ByRef Rect)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton(System.Collections.Generic.IEnumerable(Of UnityEngine.GameObject), System.Type, ByRef UnityEngine.Rect, ByRef UnityEngine.Rect)
   name.vb: AddFixItAllButton(IEnumerable(Of GameObject), Type, ByRef Rect, ByRef Rect)
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(GameObject,System.Type,Rect@,Rect@)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(GameObject,System.Type,Rect@,Rect@)
-  id: AddFixItButton(GameObject,System.Type,Rect@,Rect@)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(UnityEngine.GameObject,System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(UnityEngine.GameObject,System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
+  id: AddFixItButton(UnityEngine.GameObject,System.Type,UnityEngine.Rect@,UnityEngine.Rect@)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: AddFixItButton(GameObject, Type, ref Rect, ref Rect)
   nameWithType: ProcessSceneReferenceDrawer.AddFixItButton(GameObject, Type, ref Rect, ref Rect)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(GameObject, System.Type, ref Rect, ref Rect)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(UnityEngine.GameObject, System.Type, ref UnityEngine.Rect, ref UnityEngine.Rect)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AddFixItButton
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -401,13 +403,13 @@ items:
     content: protected void AddFixItButton(GameObject selectedSceneObject, Type valueType, ref Rect originalRect, ref Rect guiLineRect)
     parameters:
     - id: selectedSceneObject
-      type: GameObject
+      type: UnityEngine.GameObject
     - id: valueType
       type: System.Type
     - id: originalRect
-      type: Rect
+      type: UnityEngine.Rect
     - id: guiLineRect
-      type: Rect
+      type: UnityEngine.Rect
     content.vb: Protected Sub AddFixItButton(selectedSceneObject As GameObject, valueType As Type, ByRef originalRect As Rect, ByRef guiLineRect As Rect)
   overload: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton*
   nameWithType.vb: ProcessSceneReferenceDrawer.AddFixItButton(GameObject, Type, ByRef Rect, ByRef Rect)
@@ -415,23 +417,23 @@ items:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(GameObject, System.Type, ByRef Rect, ByRef Rect)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItButton(UnityEngine.GameObject, System.Type, ByRef UnityEngine.Rect, ByRef UnityEngine.Rect)
   name.vb: AddFixItButton(GameObject, Type, ByRef Rect, ByRef Rect)
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(Rect@,System.Single)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(Rect@,System.Single)
-  id: AddNewRectLine(Rect@,System.Single)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(UnityEngine.Rect@,System.Single)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(UnityEngine.Rect@,System.Single)
+  id: AddNewRectLine(UnityEngine.Rect@,System.Single)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: AddNewRectLine(ref Rect, Single)
   nameWithType: ProcessSceneReferenceDrawer.AddNewRectLine(ref Rect, Single)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(ref Rect, System.Single)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(ref UnityEngine.Rect, System.Single)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AddNewRectLine
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -443,11 +445,11 @@ items:
     content: protected Rect AddNewRectLine(ref Rect currentRect, float height = -3.40282347E+38F)
     parameters:
     - id: currentRect
-      type: Rect
+      type: UnityEngine.Rect
     - id: height
       type: System.Single
     return:
-      type: Rect
+      type: UnityEngine.Rect
     content.vb: Protected Function AddNewRectLine(ByRef currentRect As Rect, height As Single = -3.40282347E+38F) As Rect
   overload: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine*
   nameWithType.vb: ProcessSceneReferenceDrawer.AddNewRectLine(ByRef Rect, Single)
@@ -455,23 +457,23 @@ items:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(ByRef Rect, System.Single)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddNewRectLine(ByRef UnityEngine.Rect, System.Single)
   name.vb: AddNewRectLine(ByRef Rect, Single)
-- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(GameObject,System.Type)
-  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(GameObject,System.Type)
-  id: SceneObjectAutomaticSetup(GameObject,System.Type)
+- uid: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(UnityEngine.GameObject,System.Type)
+  commentId: M:VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(UnityEngine.GameObject,System.Type)
+  id: SceneObjectAutomaticSetup(UnityEngine.GameObject,System.Type)
   parent: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer
   langs:
   - csharp
   - vb
   name: SceneObjectAutomaticSetup(GameObject, Type)
   nameWithType: ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(GameObject, Type)
-  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(GameObject, System.Type)
+  fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.SceneObjectAutomaticSetup(UnityEngine.GameObject, System.Type)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SceneObjectAutomaticSetup
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/ProcessSceneReferenceDrawer.cs
@@ -483,7 +485,7 @@ items:
     content: protected void SceneObjectAutomaticSetup(GameObject selectedSceneObject, Type valueType)
     parameters:
     - id: selectedSceneObject
-      type: GameObject
+      type: UnityEngine.GameObject
     - id: valueType
       type: System.Type
     content.vb: Protected Sub SceneObjectAutomaticSetup(selectedSceneObject As GameObject, valueType As Type)
@@ -523,28 +525,28 @@ references:
   name: IProcessDrawer
   nameWithType: IProcessDrawer
   fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, String)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, String)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, System.String)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, System.String)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), String)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), System.String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), System.String)
   name.vb: Draw(Rect, Object, Action(Of Object), String)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -585,17 +587,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -885,37 +887,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -994,63 +965,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1164,6 +1078,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Core.SceneObjects
   commentId: N:VRBuilder.Core.SceneObjects
   name: VRBuilder.Core.SceneObjects
@@ -1182,33 +1184,41 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: GUIStyle
+- uid: UnityEngine.GUIStyle
+  commentId: T:UnityEngine.GUIStyle
+  parent: UnityEngine
   isExternal: true
   name: GUIStyle
   nameWithType: GUIStyle
-  fullName: GUIStyle
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  fullName: UnityEngine.GUIStyle
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1240,26 +1250,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1291,10 +1301,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
@@ -1304,11 +1314,13 @@ references:
   name: Draw
   nameWithType: ProcessSceneReferenceDrawer.Draw
   fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.Draw
-- uid: Rect
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
   isExternal: true
   name: Rect
   nameWithType: Rect
-  fullName: Rect
+  fullName: UnityEngine.Rect
 - uid: System.Action{System.Object}
   commentId: T:System.Action{System.Object}
   parent: System
@@ -1353,11 +1365,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: GUIContent
+- uid: UnityEngine.GUIContent
+  commentId: T:UnityEngine.GUIContent
+  parent: UnityEngine
   isExternal: true
   name: GUIContent
   nameWithType: GUIContent
-  fullName: GUIContent
+  fullName: UnityEngine.GUIContent
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -1402,15 +1416,15 @@ references:
   name: DropAreaGUI
   nameWithType: ProcessSceneReferenceDrawer.DropAreaGUI
   fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.DropAreaGUI
-- uid: System.Action{GameObject,Rect}
-  commentId: T:System.Action{GameObject,Rect}
+- uid: System.Action{UnityEngine.GameObject,UnityEngine.Rect}
+  commentId: T:System.Action{UnityEngine.GameObject,UnityEngine.Rect}
   parent: System
   definition: System.Action`2
   name: Action<GameObject, Rect>
   nameWithType: Action<GameObject, Rect>
-  fullName: System.Action<GameObject, Rect>
+  fullName: System.Action<UnityEngine.GameObject, UnityEngine.Rect>
   nameWithType.vb: Action(Of GameObject, Rect)
-  fullName.vb: System.Action(Of GameObject, Rect)
+  fullName.vb: System.Action(Of UnityEngine.GameObject, UnityEngine.Rect)
   name.vb: Action(Of GameObject, Rect)
   spec.csharp:
   - uid: System.Action`2
@@ -1421,18 +1435,18 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1446,18 +1460,18 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: )
     nameWithType: )
@@ -1518,11 +1532,13 @@ references:
   name: CreateProcessSceneObject
   nameWithType: ProcessSceneReferenceDrawer.CreateProcessSceneObject
   fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.CreateProcessSceneObject
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System
@@ -1535,15 +1551,15 @@ references:
   name: AddFixItAllButton
   nameWithType: ProcessSceneReferenceDrawer.AddFixItAllButton
   fullName: VRBuilder.Editor.UI.Drawers.ProcessSceneReferenceDrawer.AddFixItAllButton
-- uid: System.Collections.Generic.IEnumerable{GameObject}
-  commentId: T:System.Collections.Generic.IEnumerable{GameObject}
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<GameObject>
   nameWithType: IEnumerable<GameObject>
-  fullName: System.Collections.Generic.IEnumerable<GameObject>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.GameObject>
   nameWithType.vb: IEnumerable(Of GameObject)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of GameObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.GameObject)
   name.vb: IEnumerable(Of GameObject)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -1554,10 +1570,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1571,10 +1587,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: )
     nameWithType: )

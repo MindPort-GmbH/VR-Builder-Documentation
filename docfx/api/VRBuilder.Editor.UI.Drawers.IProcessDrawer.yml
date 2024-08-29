@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Editor.UI.Drawers
   children:
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
-  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Object,System.Type)
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   langs:
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IProcessDrawer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
@@ -39,21 +39,21 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  id: Draw(Rect,System.Object,System.Action{System.Object},System.String)
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  id: Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   parent: VRBuilder.Editor.UI.Drawers.IProcessDrawer
   langs:
   - csharp
   - vb
   name: Draw(Rect, Object, Action<Object>, String)
   nameWithType: IProcessDrawer.Draw(Rect, Object, Action<Object>, String)
-  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action<System.Object>, System.String)
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, System.String)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Draw
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
@@ -67,7 +67,7 @@ items:
     content: Rect Draw(Rect rect, object currentValue, Action<object> changeValueCallback, string label)
     parameters:
     - id: rect
-      type: Rect
+      type: UnityEngine.Rect
       description: A rectangle in which editor view should fit. The height value is ignored.
     - id: currentValue
       type: System.Object
@@ -79,28 +79,28 @@ items:
       type: System.String
       description: Label text to display.
     return:
-      type: Rect
+      type: UnityEngine.Rect
       description: The area that was taken by the property.
     content.vb: Function Draw(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As String) As Rect
   overload: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw*
   nameWithType.vb: IProcessDrawer.Draw(Rect, Object, Action(Of Object), String)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), System.String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), System.String)
   name.vb: Draw(Rect, Object, Action(Of Object), String)
-- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  id: Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  id: Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.IProcessDrawer
   langs:
   - csharp
   - vb
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: IProcessDrawer.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   type: Method
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Draw
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
@@ -114,7 +114,7 @@ items:
     content: Rect Draw(Rect rect, object currentValue, Action<object> changeValueCallback, GUIContent label)
     parameters:
     - id: rect
-      type: Rect
+      type: UnityEngine.Rect
       description: A rectangle in which editor view should fit. The height value is ignored.
     - id: currentValue
       type: System.Object
@@ -123,15 +123,15 @@ items:
       type: System.Action{System.Object}
       description: "\nDelegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).\nInvoke only when child member&apos;s value has changed;\nOtherwise, if the value itself has changed, call <xref href=\"VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func%7bSystem.Object%7d%2cSystem.Func%7bSystem.Object%7d%2cSystem.Action%7bSystem.Object%7d)\" data-throw-if-not-resolved=\"false\"></xref> so it could manage Do/Undo stack in a proper way.\n"
     - id: label
-      type: GUIContent
+      type: UnityEngine.GUIContent
       description: Label content to display.
     return:
-      type: Rect
+      type: UnityEngine.Rect
       description: The area that was taken by the property.
     content.vb: Function Draw(rect As Rect, currentValue As Object, changeValueCallback As Action(Of Object), label As GUIContent) As Rect
   overload: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw*
   nameWithType.vb: IProcessDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
 - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   commentId: M:VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLabel
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
@@ -165,7 +165,7 @@ items:
     - id: memberOwner
       type: System.Object
     return:
-      type: GUIContent
+      type: UnityEngine.GUIContent
     content.vb: Function GetLabel(memberInfo As MemberInfo, memberOwner As Object) As GUIContent
   overload: VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel*
 - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel(System.Object,System.Type)
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetLabel
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
@@ -200,7 +200,7 @@ items:
     - id: declaredType
       type: System.Type
     return:
-      type: GUIContent
+      type: UnityEngine.GUIContent
     content.vb: Function GetLabel(value As Object, declaredType As Type) As GUIContent
   overload: VRBuilder.Editor.UI.Drawers.IProcessDrawer.GetLabel*
 - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ChangeValue
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/IProcessDrawer.cs
@@ -252,11 +252,13 @@ references:
   name: Draw
   nameWithType: IProcessDrawer.Draw
   fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer.Draw
-- uid: Rect
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
   isExternal: true
   name: Rect
   nameWithType: Rect
-  fullName: Rect
+  fullName: UnityEngine.Rect
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -315,6 +317,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System
   commentId: N:System
   isExternal: true
@@ -500,11 +508,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: GUIContent
+- uid: UnityEngine.GUIContent
+  commentId: T:UnityEngine.GUIContent
+  parent: UnityEngine
   isExternal: true
   name: GUIContent
   nameWithType: GUIContent
-  fullName: GUIContent
+  fullName: UnityEngine.GUIContent
 - uid: VRBuilder.Editor.UI.Drawers.IProcessDrawer
   commentId: T:VRBuilder.Editor.UI.Drawers.IProcessDrawer
   parent: VRBuilder.Editor.UI.Drawers

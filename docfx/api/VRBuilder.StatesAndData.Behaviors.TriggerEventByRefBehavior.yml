@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: TriggerEventByRefBehavior
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
@@ -47,7 +47,9 @@ items:
       <Obsolete("Use TriggerEventBehavior instead.")>
 
       Public Class TriggerEventByRefBehavior
+
           Inherits Behavior(Of TriggerEventByRefBehavior.EntityData)
+
           Implements IDataOwner(Of TriggerEventByRefBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -71,13 +73,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -116,7 +118,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
@@ -128,15 +130,22 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public TriggerEventByRefBehavior()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Public Sub New
   overload: VRBuilder.StatesAndData.Behaviors.TriggerEventByRefBehavior.#ctor*
   attributes:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
+    arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
     arguments: []
   modifiers.csharp:
   - public
@@ -156,7 +165,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
@@ -191,7 +200,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
@@ -226,7 +235,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: GetActivatingProcess
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
@@ -234,7 +243,6 @@ items:
   assemblies:
   - VRBuilder.StatesAndData
   namespace: VRBuilder.StatesAndData.Behaviors
-  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -263,7 +271,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/States-and-Data-for-VR-Builder.git
     id: GetDeactivatingProcess
     path: ../../Assets/MindPort/VR Builder/Add-ons/StatesAndData/Source/Runtime/Behaviors/Obsolete/TriggerEventByRefBehavior.cs
@@ -271,7 +279,6 @@ items:
   assemblies:
   - VRBuilder.StatesAndData
   namespace: VRBuilder.StatesAndData.Behaviors
-  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -727,37 +734,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -836,63 +812,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -999,6 +918,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

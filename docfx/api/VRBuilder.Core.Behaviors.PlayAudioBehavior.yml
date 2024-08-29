@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Core.Behaviors
   children:
   - VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor
-  - VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,AudioSource)
-  - VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,AudioSource)
+  - VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,UnityEngine.AudioSource)
+  - VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,UnityEngine.AudioSource)
   - VRBuilder.Core.Behaviors.PlayAudioBehavior.GetActivatingProcess
   - VRBuilder.Core.Behaviors.PlayAudioBehavior.GetDeactivatingProcess
   langs:
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: PlayAudioBehavior
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
@@ -43,7 +43,9 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder/manual/default-behaviors/play-audio-file")>
 
       Public Class PlayAudioBehavior
+
           Inherits Behavior(Of PlayAudioBehavior.EntityData)
+
           Implements IDataOwner(Of PlayAudioBehavior.EntityData), IBehavior, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior), IOptional, IEntity
   inheritance:
   - System.Object
@@ -68,13 +70,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.PlayAudioBehavior.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -108,7 +110,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
@@ -120,9 +122,13 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       protected PlayAudioBehavior()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Protected Sub New
   overload: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor*
@@ -130,25 +136,28 @@ items:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,AudioSource)
-  commentId: M:VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,AudioSource)
-  id: '#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,AudioSource)'
+- uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,UnityEngine.AudioSource)
+  commentId: M:VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,UnityEngine.AudioSource)
+  id: '#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,UnityEngine.AudioSource)'
   parent: VRBuilder.Core.Behaviors.PlayAudioBehavior
   langs:
   - csharp
   - vb
   name: PlayAudioBehavior(IAudioData, BehaviorExecutionStages, AudioSource)
   nameWithType: PlayAudioBehavior.PlayAudioBehavior(IAudioData, BehaviorExecutionStages, AudioSource)
-  fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.PlayAudioBehavior(VRBuilder.Core.Audio.IAudioData, VRBuilder.Core.Behaviors.BehaviorExecutionStages, AudioSource)
+  fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.PlayAudioBehavior(VRBuilder.Core.Audio.IAudioData, VRBuilder.Core.Behaviors.BehaviorExecutionStages, UnityEngine.AudioSource)
   type: Constructor
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
@@ -164,28 +173,28 @@ items:
     - id: executionStages
       type: VRBuilder.Core.Behaviors.BehaviorExecutionStages
     - id: audioPlayer
-      type: AudioSource
+      type: UnityEngine.AudioSource
     content.vb: Public Sub New(audioData As IAudioData, executionStages As BehaviorExecutionStages, audioPlayer As AudioSource = Nothing)
   overload: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,AudioSource)
-  commentId: M:VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,AudioSource)
-  id: '#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,AudioSource)'
+- uid: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,UnityEngine.AudioSource)
+  commentId: M:VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,UnityEngine.AudioSource)
+  id: '#ctor(VRBuilder.Core.Audio.IAudioData,VRBuilder.Core.Behaviors.BehaviorExecutionStages,System.Boolean,UnityEngine.AudioSource)'
   parent: VRBuilder.Core.Behaviors.PlayAudioBehavior
   langs:
   - csharp
   - vb
   name: PlayAudioBehavior(IAudioData, BehaviorExecutionStages, Boolean, AudioSource)
   nameWithType: PlayAudioBehavior.PlayAudioBehavior(IAudioData, BehaviorExecutionStages, Boolean, AudioSource)
-  fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.PlayAudioBehavior(VRBuilder.Core.Audio.IAudioData, VRBuilder.Core.Behaviors.BehaviorExecutionStages, System.Boolean, AudioSource)
+  fullName: VRBuilder.Core.Behaviors.PlayAudioBehavior.PlayAudioBehavior(VRBuilder.Core.Audio.IAudioData, VRBuilder.Core.Behaviors.BehaviorExecutionStages, System.Boolean, UnityEngine.AudioSource)
   type: Constructor
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
@@ -203,7 +212,7 @@ items:
     - id: isBlocking
       type: System.Boolean
     - id: audioPlayer
-      type: AudioSource
+      type: UnityEngine.AudioSource
     content.vb: Public Sub New(audioData As IAudioData, executionStages As BehaviorExecutionStages, isBlocking As Boolean, audioPlayer As AudioSource = Nothing)
   overload: VRBuilder.Core.Behaviors.PlayAudioBehavior.#ctor*
   modifiers.csharp:
@@ -224,7 +233,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetActivatingProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
@@ -232,7 +241,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -263,7 +271,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetDeactivatingProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/PlayAudioBehavior.cs
@@ -271,7 +279,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: "\nReturns a new instance of a process for the Deactivating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetDeactivatingProcess()
@@ -735,37 +742,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -844,63 +820,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1007,6 +926,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -1381,16 +1388,24 @@ references:
   name: BehaviorExecutionStages
   nameWithType: BehaviorExecutionStages
   fullName: VRBuilder.Core.Behaviors.BehaviorExecutionStages
-- uid: AudioSource
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
   isExternal: true
   name: AudioSource
   nameWithType: AudioSource
-  fullName: AudioSource
+  fullName: UnityEngine.AudioSource
 - uid: VRBuilder.Core.Audio
   commentId: N:VRBuilder.Core.Audio
   name: VRBuilder.Core.Audio
   nameWithType: VRBuilder.Core.Audio
   fullName: VRBuilder.Core.Audio
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

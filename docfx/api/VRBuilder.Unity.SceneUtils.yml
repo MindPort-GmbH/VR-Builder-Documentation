@@ -5,11 +5,11 @@ items:
   id: SceneUtils
   parent: VRBuilder.Unity
   children:
-  - VRBuilder.Unity.SceneUtils.ContainsMissingScripts(GameObject)
+  - VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
   - VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents``1
   - VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
-  - VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(GameObject)
-  - VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(GameObject)
+  - VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  - VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(UnityEngine.GameObject)
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Unity/SceneUtils.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SceneUtils
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
@@ -34,13 +34,13 @@ items:
   inheritance:
   - System.Object
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Unity/SceneUtils.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetActiveAndInactiveComponents
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
@@ -75,6 +75,7 @@ items:
   syntax:
     content: >-
       public static IEnumerable<T> GetActiveAndInactiveComponents<T>()
+
           where T : Component
     typeParameters:
     - id: T
@@ -105,7 +106,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Unity/SceneUtils.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetActiveAndInactiveGameObjects
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
@@ -118,7 +119,7 @@ items:
   syntax:
     content: public static IEnumerable<GameObject> GetActiveAndInactiveGameObjects()
     return:
-      type: System.Collections.Generic.IEnumerable{GameObject}
+      type: System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
     content.vb: Public Shared Function GetActiveAndInactiveGameObjects As IEnumerable(Of GameObject)
   overload: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects*
   modifiers.csharp:
@@ -127,9 +128,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(GameObject)
-  commentId: M:VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(GameObject)
-  id: GetComponentInParentIncludingInactive``1(GameObject)
+- uid: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
+  id: GetComponentInParentIncludingInactive``1(UnityEngine.GameObject)
   isExtensionMethod: true
   parent: VRBuilder.Unity.SceneUtils
   langs:
@@ -137,12 +138,12 @@ items:
   - vb
   name: GetComponentInParentIncludingInactive<T>(GameObject)
   nameWithType: SceneUtils.GetComponentInParentIncludingInactive<T>(GameObject)
-  fullName: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive<T>(GameObject)
+  fullName: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive<T>(UnityEngine.GameObject)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Unity/SceneUtils.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetComponentInParentIncludingInactive
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
@@ -150,15 +151,16 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Unity
-  summary: "\nReturns the component of Type <code data-dev-comment-type=\"paramref\" class=\"paramref\">T</code> in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">gameObject</code> or any of its parents, null if there isn&apos;t one.\nIn contrast to <see cref=\"!:UnityEngine.GameObject.GetComponentInParent\"></see> this method also includes inactive components.\n"
+  summary: "\nReturns the component of Type <code data-dev-comment-type=\"paramref\" class=\"paramref\">T</code> in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">gameObject</code> or any of its parents, null if there isn&apos;t one.\nIn contrast to <xref href=\"UnityEngine.GameObject.GetComponentInParent(System.Type%2cSystem.Boolean)\" data-throw-if-not-resolved=\"false\"></xref> this method also includes inactive components.\n"
   example: []
   syntax:
     content: >-
       public static T GetComponentInParentIncludingInactive<T>(this GameObject gameObject)
+
           where T : Component
     parameters:
     - id: gameObject
-      type: GameObject
+      type: UnityEngine.GameObject
     typeParameters:
     - id: T
     return:
@@ -175,11 +177,11 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive(Of T)(GameObject)
+  fullName.vb: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive(Of T)(UnityEngine.GameObject)
   name.vb: GetComponentInParentIncludingInactive(Of T)(GameObject)
-- uid: VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(GameObject)
-  commentId: M:VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(GameObject)
-  id: GetOrAddComponent``1(GameObject)
+- uid: VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Unity.SceneUtils.GetOrAddComponent``1(UnityEngine.GameObject)
+  id: GetOrAddComponent``1(UnityEngine.GameObject)
   isExtensionMethod: true
   parent: VRBuilder.Unity.SceneUtils
   langs:
@@ -187,12 +189,12 @@ items:
   - vb
   name: GetOrAddComponent<T>(GameObject)
   nameWithType: SceneUtils.GetOrAddComponent<T>(GameObject)
-  fullName: VRBuilder.Unity.SceneUtils.GetOrAddComponent<T>(GameObject)
+  fullName: VRBuilder.Unity.SceneUtils.GetOrAddComponent<T>(UnityEngine.GameObject)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Unity/SceneUtils.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetOrAddComponent
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
@@ -205,10 +207,11 @@ items:
   syntax:
     content: >-
       public static T GetOrAddComponent<T>(this GameObject gameObject)
+
           where T : Component
     parameters:
     - id: gameObject
-      type: GameObject
+      type: UnityEngine.GameObject
     typeParameters:
     - id: T
     return:
@@ -225,23 +228,23 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: VRBuilder.Unity.SceneUtils.GetOrAddComponent(Of T)(GameObject)
+  fullName.vb: VRBuilder.Unity.SceneUtils.GetOrAddComponent(Of T)(UnityEngine.GameObject)
   name.vb: GetOrAddComponent(Of T)(GameObject)
-- uid: VRBuilder.Unity.SceneUtils.ContainsMissingScripts(GameObject)
-  commentId: M:VRBuilder.Unity.SceneUtils.ContainsMissingScripts(GameObject)
-  id: ContainsMissingScripts(GameObject)
+- uid: VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
+  id: ContainsMissingScripts(UnityEngine.GameObject)
   parent: VRBuilder.Unity.SceneUtils
   langs:
   - csharp
   - vb
   name: ContainsMissingScripts(GameObject)
   nameWithType: SceneUtils.ContainsMissingScripts(GameObject)
-  fullName: VRBuilder.Unity.SceneUtils.ContainsMissingScripts(GameObject)
+  fullName: VRBuilder.Unity.SceneUtils.ContainsMissingScripts(UnityEngine.GameObject)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Unity/SceneUtils.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ContainsMissingScripts
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Unity/SceneUtils.cs
@@ -255,7 +258,7 @@ items:
     content: public static bool ContainsMissingScripts(GameObject gameObject)
     parameters:
     - id: gameObject
-      type: GameObject
+      type: UnityEngine.GameObject
       description: GameObject to check.
     return:
       type: System.Boolean
@@ -281,37 +284,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -390,63 +362,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -560,6 +475,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -572,7 +575,7 @@ references:
   nameWithType: SceneUtils.GetActiveAndInactiveComponents
   fullName: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveComponents
 - uid: System.Collections.Generic.IEnumerable{{T}}
-  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<T>
@@ -661,15 +664,15 @@ references:
   name: GetActiveAndInactiveGameObjects
   nameWithType: SceneUtils.GetActiveAndInactiveGameObjects
   fullName: VRBuilder.Unity.SceneUtils.GetActiveAndInactiveGameObjects
-- uid: System.Collections.Generic.IEnumerable{GameObject}
-  commentId: T:System.Collections.Generic.IEnumerable{GameObject}
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.GameObject}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<GameObject>
   nameWithType: IEnumerable<GameObject>
-  fullName: System.Collections.Generic.IEnumerable<GameObject>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.GameObject>
   nameWithType.vb: IEnumerable(Of GameObject)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of GameObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.GameObject)
   name.vb: IEnumerable(Of GameObject)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -680,10 +683,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -697,30 +700,41 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)
+  commentId: M:UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)
+  isExternal: true
 - uid: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive*
   commentId: Overload:VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive
   name: GetComponentInParentIncludingInactive
   nameWithType: SceneUtils.GetComponentInParentIncludingInactive
   fullName: VRBuilder.Unity.SceneUtils.GetComponentInParentIncludingInactive
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
 - uid: '{T}'
   commentId: '!:T'
   definition: T
   name: T
   nameWithType: T
   fullName: T
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: T
   name: T
   nameWithType: T

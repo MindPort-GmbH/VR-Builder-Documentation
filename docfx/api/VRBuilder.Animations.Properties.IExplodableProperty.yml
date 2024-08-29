@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IExplodableProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: IExplodableProperty
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/IExplodableProperty.cs
@@ -32,6 +32,7 @@ items:
     content: 'public interface IExplodableProperty : ISceneObjectProperty'
     content.vb: >-
       Public Interface IExplodableProperty
+
           Inherits ISceneObjectProperty
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -55,7 +56,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IExplodableProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: ExplodedObjects
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/IExplodableProperty.cs
@@ -69,7 +70,7 @@ items:
     content: IEnumerable<Transform> ExplodedObjects { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{Transform}
+      type: System.Collections.Generic.IEnumerable{UnityEngine.Transform}
     content.vb: ReadOnly Property ExplodedObjects As IEnumerable(Of Transform)
   overload: VRBuilder.Animations.Properties.IExplodableProperty.ExplodedObjects*
   modifiers.csharp:
@@ -90,7 +91,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IExplodableProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: Explode
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/IExplodableProperty.cs
@@ -124,7 +125,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Properties/IExplodableProperty.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: InitializeAnimation
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Properties/IExplodableProperty.cs
@@ -166,15 +167,15 @@ references:
   name: ExplodedObjects
   nameWithType: IExplodableProperty.ExplodedObjects
   fullName: VRBuilder.Animations.Properties.IExplodableProperty.ExplodedObjects
-- uid: System.Collections.Generic.IEnumerable{Transform}
-  commentId: T:System.Collections.Generic.IEnumerable{Transform}
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.Transform}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.Transform}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<Transform>
   nameWithType: IEnumerable<Transform>
-  fullName: System.Collections.Generic.IEnumerable<Transform>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.Transform>
   nameWithType.vb: IEnumerable(Of Transform)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of Transform)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.Transform)
   name.vb: IEnumerable(Of Transform)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -185,10 +186,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Transform
+  - uid: UnityEngine.Transform
     name: Transform
     nameWithType: Transform
-    fullName: Transform
+    fullName: UnityEngine.Transform
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -202,10 +203,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Transform
+  - uid: UnityEngine.Transform
     name: Transform
     nameWithType: Transform
-    fullName: Transform
+    fullName: UnityEngine.Transform
     isExternal: true
   - name: )
     nameWithType: )

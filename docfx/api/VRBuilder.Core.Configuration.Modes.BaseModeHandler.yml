@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: BaseModeHandler
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -36,19 +36,20 @@ items:
     content: 'public sealed class BaseModeHandler : IModeHandler'
     content.vb: >-
       Public NotInheritable Class BaseModeHandler
+
           Implements IModeHandler
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.Configuration.Modes.IModeHandler
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - sealed
@@ -71,7 +72,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ModeChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -79,7 +80,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nThe event that has to be invoked when the current mode changes, for example in <xref href=\"VRBuilder.Core.Configuration.Modes.IModeHandler.SetMode(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
   example: []
   syntax:
     content: public event EventHandler<ModeChangedEventArgs> ModeChanged
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CurrentModeIndex
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -114,7 +114,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nThe index of the current process mode.\n"
   example: []
   syntax:
     content: public int CurrentModeIndex { get; }
@@ -145,7 +144,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CurrentMode
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -153,7 +152,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nThe current process mode.\n"
   example: []
   syntax:
     content: public IMode CurrentMode { get; }
@@ -184,7 +182,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: AvailableModes
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -192,7 +190,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nThe ordered collection of all available process modes.\n"
   example: []
   syntax:
     content: public ReadOnlyCollection<IMode> AvailableModes { get; }
@@ -223,7 +220,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -261,7 +258,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetMode
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -269,14 +266,12 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nSet the current process mode.\n"
   example: []
   syntax:
     content: public void SetMode(int index)
     parameters:
     - id: index
       type: System.Int32
-      description: The index of the desired process mode.
     content.vb: Public Sub SetMode(index As Integer)
   overload: VRBuilder.Core.Configuration.Modes.BaseModeHandler.SetMode*
   implements:
@@ -299,7 +294,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetMode
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/Modes/BaseModeHandler.cs
@@ -307,14 +302,12 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration.Modes
-  summary: "\nSet the current process mode, this process mode has to be one of the available modes.\n"
   example: []
   syntax:
     content: public void SetMode(IMode mode)
     parameters:
     - id: mode
       type: VRBuilder.Core.Configuration.Modes.IMode
-      description: The desired process mode which should be set.
     content.vb: Public Sub SetMode(mode As IMode)
   overload: VRBuilder.Core.Configuration.Modes.BaseModeHandler.SetMode*
   implements:
@@ -342,37 +335,6 @@ references:
   name: IModeHandler
   nameWithType: IModeHandler
   fullName: VRBuilder.Core.Configuration.Modes.IModeHandler
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -451,63 +413,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -614,6 +519,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (

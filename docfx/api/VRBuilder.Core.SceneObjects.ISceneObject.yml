@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ISceneObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -41,6 +41,7 @@ items:
     content: 'public interface ISceneObject : ILockable, IGuidContainer'
     content.vb: >-
       Public Interface ISceneObject
+
           Inherits ILockable, IGuidContainer
   inheritedMembers:
   - VRBuilder.Core.SceneObjects.ILockable.Locked
@@ -59,8 +60,8 @@ items:
   - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.SetSuitableName(System.String)
   - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty``1
   - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.AddProcessProperty(System.Type)
-  - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
-  - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  - VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   modifiers.csharp:
   - public
   - interface
@@ -81,7 +82,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UniqueNameChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -120,7 +121,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ObjectIdChanged
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -149,7 +150,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Guid
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -184,7 +185,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: UniqueName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -231,7 +232,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GameObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -245,7 +246,7 @@ items:
     content: GameObject GameObject { get; }
     parameters: []
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: ReadOnly Property GameObject As GameObject
   overload: VRBuilder.Core.SceneObjects.ISceneObject.GameObject*
   modifiers.csharp:
@@ -266,7 +267,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Properties
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -301,7 +302,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CheckHasProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -314,6 +315,7 @@ items:
   syntax:
     content: >-
       bool CheckHasProperty<T>()
+
           where T : ISceneObjectProperty
     typeParameters:
     - id: T
@@ -338,7 +340,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CheckHasProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -371,7 +373,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ValidateProperties
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -405,7 +407,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -418,6 +420,7 @@ items:
   syntax:
     content: >-
       T GetProperty<T>()
+
           where T : ISceneObjectProperty
     typeParameters:
     - id: T
@@ -442,7 +445,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ChangeUniqueName
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -485,7 +488,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/SceneObjects/ISceneObject.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetObjectId
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/SceneObjects/ISceneObject.cs
@@ -899,28 +902,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
-  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+- uid: VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   parent: VRBuilder.Core.Properties.SceneObjectExtensions
-  definition: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  definition: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   name: RemoveProcessProperty(Component, Boolean, IEnumerable<Component>)
   nameWithType: SceneObjectExtensions.RemoveProcessProperty(Component, Boolean, IEnumerable<Component>)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(Component, System.Boolean, System.Collections.Generic.IEnumerable<Component>)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(UnityEngine.Component, System.Boolean, System.Collections.Generic.IEnumerable<UnityEngine.Component>)
   nameWithType.vb: SceneObjectExtensions.RemoveProcessProperty(Component, Boolean, IEnumerable(Of Component))
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(Component, System.Boolean, System.Collections.Generic.IEnumerable(Of Component))
+  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(UnityEngine.Component, System.Boolean, System.Collections.Generic.IEnumerable(Of UnityEngine.Component))
   name.vb: RemoveProcessProperty(Component, Boolean, IEnumerable(Of Component))
   spec.csharp:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -941,10 +944,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -953,17 +956,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -984,10 +987,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: )
     nameWithType: )
@@ -995,18 +998,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
-  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+- uid: VRBuilder.Core.SceneObjects.ISceneObject.VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   parent: VRBuilder.Core.Properties.SceneObjectExtensions
-  definition: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  definition: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   name: RemoveProcessProperty(Type, Boolean, IEnumerable<Component>)
   nameWithType: SceneObjectExtensions.RemoveProcessProperty(Type, Boolean, IEnumerable<Component>)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type, System.Boolean, System.Collections.Generic.IEnumerable<Component>)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type, System.Boolean, System.Collections.Generic.IEnumerable<UnityEngine.Component>)
   nameWithType.vb: SceneObjectExtensions.RemoveProcessProperty(Type, Boolean, IEnumerable(Of Component))
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type, System.Boolean, System.Collections.Generic.IEnumerable(Of Component))
+  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type, System.Boolean, System.Collections.Generic.IEnumerable(Of UnityEngine.Component))
   name.vb: RemoveProcessProperty(Type, Boolean, IEnumerable(Of Component))
   spec.csharp:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
@@ -1037,10 +1040,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1049,7 +1052,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
@@ -1080,10 +1083,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: )
     nameWithType: )
@@ -1251,17 +1254,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
-  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   isExternal: true
   name: RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable<Component>)
   nameWithType: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable<Component>)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, Component, System.Boolean, System.Collections.Generic.IEnumerable<Component>)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, UnityEngine.Component, System.Boolean, System.Collections.Generic.IEnumerable<UnityEngine.Component>)
   nameWithType.vb: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable(Of Component))
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, Component, System.Boolean, System.Collections.Generic.IEnumerable(Of Component))
+  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, UnityEngine.Component, System.Boolean, System.Collections.Generic.IEnumerable(Of UnityEngine.Component))
   name.vb: RemoveProcessProperty(ISceneObject, Component, Boolean, IEnumerable(Of Component))
   spec.csharp:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
@@ -1275,10 +1278,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1299,10 +1302,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1311,7 +1314,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,Component,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,UnityEngine.Component,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
@@ -1325,10 +1328,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1349,10 +1352,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: )
     nameWithType: )
@@ -1360,17 +1363,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
-  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+- uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
+  commentId: M:VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
   isExternal: true
   name: RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable<Component>)
   nameWithType: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable<Component>)
-  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, System.Boolean, System.Collections.Generic.IEnumerable<Component>)
+  fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, System.Boolean, System.Collections.Generic.IEnumerable<UnityEngine.Component>)
   nameWithType.vb: SceneObjectExtensions.RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable(Of Component))
-  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, System.Boolean, System.Collections.Generic.IEnumerable(Of Component))
+  fullName.vb: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject, System.Type, System.Boolean, System.Collections.Generic.IEnumerable(Of UnityEngine.Component))
   name.vb: RemoveProcessProperty(ISceneObject, Type, Boolean, IEnumerable(Of Component))
   spec.csharp:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
@@ -1408,10 +1411,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1420,7 +1423,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{Component})
+  - uid: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty(VRBuilder.Core.SceneObjects.ISceneObject,System.Type,System.Boolean,System.Collections.Generic.IEnumerable{UnityEngine.Component})
     name: RemoveProcessProperty
     nameWithType: SceneObjectExtensions.RemoveProcessProperty
     fullName: VRBuilder.Core.Properties.SceneObjectExtensions.RemoveProcessProperty
@@ -1458,10 +1461,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Component
+  - uid: UnityEngine.Component
     name: Component
     nameWithType: Component
-    fullName: Component
+    fullName: UnityEngine.Component
     isExternal: true
   - name: )
     nameWithType: )
@@ -1632,11 +1635,19 @@ references:
   name: GameObject
   nameWithType: ISceneObject.GameObject
   fullName: VRBuilder.Core.SceneObjects.ISceneObject.GameObject
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.SceneObjects.ISceneObject.Properties*
   commentId: Overload:VRBuilder.Core.SceneObjects.ISceneObject.Properties
   name: Properties

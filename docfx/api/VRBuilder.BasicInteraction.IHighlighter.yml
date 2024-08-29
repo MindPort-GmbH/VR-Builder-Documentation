@@ -7,7 +7,7 @@ items:
   children:
   - VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial
   - VRBuilder.BasicInteraction.IHighlighter.IsHighlighting
-  - VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
+  - VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
   - VRBuilder.BasicInteraction.IHighlighter.StopHighlighting
   langs:
   - csharp
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IHighlighter
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsHighlighting
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
@@ -73,21 +73,21 @@ items:
   - get
   modifiers.vb:
   - ReadOnly
-- uid: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
-  commentId: M:VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
-  id: StartHighlighting(Material)
+- uid: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
+  commentId: M:VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
+  id: StartHighlighting(UnityEngine.Material)
   parent: VRBuilder.BasicInteraction.IHighlighter
   langs:
   - csharp
   - vb
   name: StartHighlighting(Material)
   nameWithType: IHighlighter.StartHighlighting(Material)
-  fullName: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(Material)
+  fullName: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting(UnityEngine.Material)
   type: Method
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StartHighlighting
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
@@ -101,7 +101,7 @@ items:
     content: void StartHighlighting(Material highlightMaterial)
     parameters:
     - id: highlightMaterial
-      type: Material
+      type: UnityEngine.Material
       description: Material to be applied as highlight.
     content.vb: Sub StartHighlighting(highlightMaterial As Material)
   overload: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting*
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StopHighlighting
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetHighlightMaterial
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Highlight/IHighlighter.cs
@@ -160,7 +160,7 @@ items:
   syntax:
     content: Material GetHighlightMaterial()
     return:
-      type: Material
+      type: UnityEngine.Material
       description: ''
     content.vb: Function GetHighlightMaterial As Material
   overload: VRBuilder.BasicInteraction.IHighlighter.GetHighlightMaterial*
@@ -193,11 +193,19 @@ references:
   name: StartHighlighting
   nameWithType: IHighlighter.StartHighlighting
   fullName: VRBuilder.BasicInteraction.IHighlighter.StartHighlighting
-- uid: Material
+- uid: UnityEngine.Material
+  commentId: T:UnityEngine.Material
+  parent: UnityEngine
   isExternal: true
   name: Material
   nameWithType: Material
-  fullName: Material
+  fullName: UnityEngine.Material
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.BasicInteraction.IHighlighter.StopHighlighting*
   commentId: Overload:VRBuilder.BasicInteraction.IHighlighter.StopHighlighting
   name: StopHighlighting

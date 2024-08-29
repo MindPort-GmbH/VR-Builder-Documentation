@@ -6,7 +6,7 @@ items:
   parent: VRBuilder.Core.Behaviors
   children:
   - VRBuilder.Core.Behaviors.ScalingBehavior.#ctor
-  - VRBuilder.Core.Behaviors.ScalingBehavior.#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},Vector3,System.Single)
+  - VRBuilder.Core.Behaviors.ScalingBehavior.#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},UnityEngine.Vector3,System.Single)
   - VRBuilder.Core.Behaviors.ScalingBehavior.GetActivatingProcess
   langs:
   - csharp
@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ScalingBehavior
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
@@ -35,7 +35,9 @@ items:
       <DataContract(IsReference:=True)>
 
       Public Class ScalingBehavior
+
           Inherits Behavior(Of ScalingBehavior.EntityData)
+
           Implements IDataOwner(Of ScalingBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -60,13 +62,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ScalingBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ScalingBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ScalingBehavior.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -95,7 +97,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
@@ -107,9 +109,13 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public ScalingBehavior()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Public Sub New
   overload: VRBuilder.Core.Behaviors.ScalingBehavior.#ctor*
@@ -117,25 +123,28 @@ items:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Core.Behaviors.ScalingBehavior.#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},Vector3,System.Single)
-  commentId: M:VRBuilder.Core.Behaviors.ScalingBehavior.#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},Vector3,System.Single)
-  id: '#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},Vector3,System.Single)'
+- uid: VRBuilder.Core.Behaviors.ScalingBehavior.#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},UnityEngine.Vector3,System.Single)
+  commentId: M:VRBuilder.Core.Behaviors.ScalingBehavior.#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},UnityEngine.Vector3,System.Single)
+  id: '#ctor(System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject},UnityEngine.Vector3,System.Single)'
   parent: VRBuilder.Core.Behaviors.ScalingBehavior
   langs:
   - csharp
   - vb
   name: ScalingBehavior(IEnumerable<ISceneObject>, Vector3, Single)
   nameWithType: ScalingBehavior.ScalingBehavior(IEnumerable<ISceneObject>, Vector3, Single)
-  fullName: VRBuilder.Core.Behaviors.ScalingBehavior.ScalingBehavior(System.Collections.Generic.IEnumerable<VRBuilder.Core.SceneObjects.ISceneObject>, Vector3, System.Single)
+  fullName: VRBuilder.Core.Behaviors.ScalingBehavior.ScalingBehavior(System.Collections.Generic.IEnumerable<VRBuilder.Core.SceneObjects.ISceneObject>, UnityEngine.Vector3, System.Single)
   type: Constructor
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
@@ -149,7 +158,7 @@ items:
     - id: targets
       type: System.Collections.Generic.IEnumerable{VRBuilder.Core.SceneObjects.ISceneObject}
     - id: targetScale
-      type: Vector3
+      type: UnityEngine.Vector3
     - id: duration
       type: System.Single
     content.vb: Public Sub New(targets As IEnumerable(Of ISceneObject), targetScale As Vector3, duration As Single)
@@ -159,7 +168,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: VRBuilder.Core.Behaviors.ScalingBehavior.ScalingBehavior(System.Collections.Generic.IEnumerable(Of VRBuilder.Core.SceneObjects.ISceneObject), Vector3, System.Single)
+  fullName.vb: VRBuilder.Core.Behaviors.ScalingBehavior.ScalingBehavior(System.Collections.Generic.IEnumerable(Of VRBuilder.Core.SceneObjects.ISceneObject), UnityEngine.Vector3, System.Single)
   name.vb: ScalingBehavior(IEnumerable(Of ISceneObject), Vector3, Single)
 - uid: VRBuilder.Core.Behaviors.ScalingBehavior.GetActivatingProcess
   commentId: M:VRBuilder.Core.Behaviors.ScalingBehavior.GetActivatingProcess
@@ -175,7 +184,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: GetActivatingProcess
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/ScalingBehavior.cs
@@ -183,7 +192,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Behaviors
-  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -670,37 +678,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -779,63 +756,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -942,6 +862,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -1370,11 +1378,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Vector3
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: Vector3
+  fullName: UnityEngine.Vector3
 - uid: System.Single
   commentId: T:System.Single
   parent: System
@@ -1427,6 +1437,12 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ScalingBehavior.EntityData}.GetActivatingProcess
   commentId: M:VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ScalingBehavior.EntityData}.GetActivatingProcess
   parent: VRBuilder.Core.Entity{VRBuilder.Core.Behaviors.ScalingBehavior.EntityData}

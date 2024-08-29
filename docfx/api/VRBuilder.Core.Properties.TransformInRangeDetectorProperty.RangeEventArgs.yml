@@ -5,7 +5,7 @@ items:
   id: TransformInRangeDetectorProperty.RangeEventArgs
   parent: VRBuilder.Core.Properties
   children:
-  - VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor(Transform)
+  - VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor(UnityEngine.Transform)
   - VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.TrackedTransform
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/TransformInRangeDetectorProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RangeEventArgs
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/TransformInRangeDetectorProperty.cs
@@ -29,19 +29,20 @@ items:
     content: 'public class RangeEventArgs : EventArgs'
     content.vb: >-
       Public Class RangeEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object
   - System.EventArgs
   inheritedMembers:
   - System.EventArgs.Empty
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -62,7 +63,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/TransformInRangeDetectorProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TrackedTransform
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/TransformInRangeDetectorProperty.cs
@@ -73,7 +74,7 @@ items:
   syntax:
     content: public readonly Transform TrackedTransform
     return:
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Public ReadOnly TrackedTransform As Transform
   modifiers.csharp:
   - public
@@ -81,21 +82,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor(Transform)
-  commentId: M:VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor(Transform)
-  id: '#ctor(Transform)'
+- uid: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor(UnityEngine.Transform)
+  commentId: M:VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor(UnityEngine.Transform)
+  id: '#ctor(UnityEngine.Transform)'
   parent: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs
   langs:
   - csharp
   - vb
   name: RangeEventArgs(Transform)
   nameWithType: TransformInRangeDetectorProperty.RangeEventArgs.RangeEventArgs(Transform)
-  fullName: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.RangeEventArgs(Transform)
+  fullName: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.RangeEventArgs(UnityEngine.Transform)
   type: Constructor
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/TransformInRangeDetectorProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/TransformInRangeDetectorProperty.cs
@@ -107,7 +108,7 @@ items:
     content: public RangeEventArgs(Transform trackedTransform)
     parameters:
     - id: trackedTransform
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Public Sub New(trackedTransform As Transform)
   overload: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor*
   modifiers.csharp:
@@ -141,37 +142,6 @@ references:
   name: Empty
   nameWithType: EventArgs.Empty
   fullName: System.EventArgs.Empty
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -250,63 +220,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -420,17 +333,113 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: Transform
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
   isExternal: true
   name: Transform
   nameWithType: Transform
-  fullName: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor*
   commentId: Overload:VRBuilder.Core.Properties.TransformInRangeDetectorProperty.RangeEventArgs.#ctor
   name: RangeEventArgs

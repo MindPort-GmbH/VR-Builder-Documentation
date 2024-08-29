@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ITeleportationProperty
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -36,6 +36,7 @@ items:
     content: 'public interface ITeleportationProperty : ISceneObjectProperty, ILockable'
     content.vb: >-
       Public Interface ITeleportationProperty
+
           Inherits ISceneObjectProperty, ILockable
   inheritedMembers:
   - VRBuilder.Core.Properties.ISceneObjectProperty.SceneObject
@@ -65,7 +66,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TeleportEnded
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -79,7 +80,7 @@ items:
     content: UnityEvent<TeleportationPropertyEventArgs> TeleportEnded { get; }
     parameters: []
     return:
-      type: UnityEvent{VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs}
+      type: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs}
     content.vb: ReadOnly Property TeleportEnded As UnityEvent(Of TeleportationPropertyEventArgs)
   overload: VRBuilder.BasicInteraction.Properties.ITeleportationProperty.TeleportEnded*
   modifiers.csharp:
@@ -100,7 +101,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: OnInitialized
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -114,7 +115,7 @@ items:
     content: UnityEvent OnInitialized { get; }
     parameters: []
     return:
-      type: UnityEvent
+      type: UnityEngine.Events.UnityEvent
     content.vb: ReadOnly Property OnInitialized As UnityEvent
   overload: VRBuilder.BasicInteraction.Properties.ITeleportationProperty.OnInitialized*
   modifiers.csharp:
@@ -135,7 +136,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: IsActive
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -170,7 +171,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: WasUsedToTeleport
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -205,7 +206,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: Initialize
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -234,7 +235,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: FastForwardTeleport
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -262,7 +263,7 @@ items:
   source:
     remote:
       path: Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ForceSetTeleported
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Interaction-Component/Runtime/Properties/ITeleportationProperty.cs
@@ -467,20 +468,21 @@ references:
   name: TeleportEnded
   nameWithType: ITeleportationProperty.TeleportEnded
   fullName: VRBuilder.BasicInteraction.Properties.ITeleportationProperty.TeleportEnded
-- uid: UnityEvent{VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs}
-  commentId: '!:UnityEvent{VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs}'
-  definition: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs}
+  commentId: T:UnityEngine.Events.UnityEvent{VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
   name: UnityEvent<TeleportationPropertyEventArgs>
   nameWithType: UnityEvent<TeleportationPropertyEventArgs>
-  fullName: UnityEvent<VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs>
+  fullName: UnityEngine.Events.UnityEvent<VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs>
   nameWithType.vb: UnityEvent(Of TeleportationPropertyEventArgs)
-  fullName.vb: UnityEvent(Of VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of VRBuilder.BasicInteraction.Properties.TeleportationPropertyEventArgs)
   name.vb: UnityEvent(Of TeleportationPropertyEventArgs)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
@@ -493,10 +495,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -508,54 +510,63 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: UnityEvent`1
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
   isExternal: true
-  name: UnityEvent<>
-  nameWithType: UnityEvent<>
-  fullName: UnityEvent<>
-  nameWithType.vb: UnityEvent(Of )
-  fullName.vb: UnityEvent(Of )
-  name.vb: UnityEvent(Of )
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
   spec.csharp:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: UnityEvent`1
+  - uid: UnityEngine.Events.UnityEvent`1
     name: UnityEvent
     nameWithType: UnityEvent
-    fullName: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T0
+    nameWithType: T0
+    fullName: T0
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
 - uid: VRBuilder.BasicInteraction.Properties.ITeleportationProperty.OnInitialized*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.ITeleportationProperty.OnInitialized
   name: OnInitialized
   nameWithType: ITeleportationProperty.OnInitialized
   fullName: VRBuilder.BasicInteraction.Properties.ITeleportationProperty.OnInitialized
-- uid: UnityEvent
+- uid: UnityEngine.Events.UnityEvent
+  commentId: T:UnityEngine.Events.UnityEvent
+  parent: UnityEngine.Events
   isExternal: true
   name: UnityEvent
   nameWithType: UnityEvent
-  fullName: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
 - uid: VRBuilder.BasicInteraction.Properties.ITeleportationProperty.IsActive*
   commentId: Overload:VRBuilder.BasicInteraction.Properties.ITeleportationProperty.IsActive
   name: IsActive

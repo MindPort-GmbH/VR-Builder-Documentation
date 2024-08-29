@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Source/Core/Editor/UI/Drawers/StringsSelectableValueDrawer.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: StringsSelectableValueDrawer
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Editor/UI/Drawers/StringsSelectableValueDrawer.cs
@@ -29,7 +29,9 @@ items:
     content: 'public class StringsSelectableValueDrawer : SelectableValueDrawer<string, string>, IProcessDrawer'
     content.vb: >-
       Public Class StringsSelectableValueDrawer
+
           Inherits SelectableValueDrawer(Of String, String)
+
           Implements IProcessDrawer
   inheritance:
   - System.Object
@@ -38,20 +40,20 @@ items:
   implements:
   - VRBuilder.Editor.UI.Drawers.IProcessDrawer
   inheritedMembers:
-  - VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  - VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.AddNewRectLine(Rect@)
-  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  - VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.AddNewRectLine(UnityEngine.Rect@)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  - VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Reflection.MemberInfo,System.Object)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.GetLabel(System.Object,System.Type)
   - VRBuilder.Editor.UI.Drawers.AbstractDrawer.ChangeValue(System.Func{System.Object},System.Func{System.Object},System.Action{System.Object})
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -141,28 +143,28 @@ references:
   name: IProcessDrawer
   nameWithType: IProcessDrawer
   fullName: VRBuilder.Editor.UI.Drawers.IProcessDrawer
-- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}
-  definition: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  definition: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: SelectableValueDrawer<String, String>.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<System.String, System.String>.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<System.String, System.String>.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: SelectableValueDrawer(Of String, String).Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of System.String, System.String).Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of System.String, System.String).Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: SelectableValueDrawer<String, String>.Draw
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<System.String, System.String>.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -194,26 +196,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: SelectableValueDrawer(Of String, String).Draw
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of System.String, System.String).Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -245,77 +247,77 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.AddNewRectLine(Rect@)
-  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.AddNewRectLine(Rect@)
+- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.AddNewRectLine(UnityEngine.Rect@)
+  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}.AddNewRectLine(UnityEngine.Rect@)
   parent: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer{System.String,System.String}
-  definition: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
+  definition: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
   name: AddNewRectLine(Rect)
   nameWithType: SelectableValueDrawer<String, String>.AddNewRectLine(Rect)
-  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<System.String, System.String>.AddNewRectLine(Rect)
+  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<System.String, System.String>.AddNewRectLine(UnityEngine.Rect)
   nameWithType.vb: SelectableValueDrawer(Of String, String).AddNewRectLine(Rect)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of System.String, System.String).AddNewRectLine(Rect)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of System.String, System.String).AddNewRectLine(UnityEngine.Rect)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
     name: AddNewRectLine
     nameWithType: SelectableValueDrawer<String, String>.AddNewRectLine
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<System.String, System.String>.AddNewRectLine
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
     name: AddNewRectLine
     nameWithType: SelectableValueDrawer(Of String, String).AddNewRectLine
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of System.String, System.String).AddNewRectLine
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, String)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, String)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, System.String)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, System.String)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), String)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), System.String)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), System.String)
   name.vb: Draw(Rect, Object, Action(Of Object), String)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -356,17 +358,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},System.String)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},System.String)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -406,28 +408,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   parent: VRBuilder.Editor.UI.Drawers.AbstractDrawer
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: AbstractDrawer.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: AbstractDrawer.Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -459,26 +461,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: AbstractDrawer.Draw
     fullName: VRBuilder.Editor.UI.Drawers.AbstractDrawer.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -510,10 +512,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
@@ -768,37 +770,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -877,63 +848,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1047,6 +961,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -1101,27 +1103,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
-  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
+  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
   isExternal: true
   name: Draw(Rect, Object, Action<Object>, GUIContent)
   nameWithType: SelectableValueDrawer<TFirst, TSecond>.Draw(Rect, Object, Action<Object>, GUIContent)
-  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<TFirst, TSecond>.Draw(Rect, System.Object, System.Action<System.Object>, GUIContent)
+  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<TFirst, TSecond>.Draw(UnityEngine.Rect, System.Object, System.Action<System.Object>, UnityEngine.GUIContent)
   nameWithType.vb: SelectableValueDrawer(Of TFirst, TSecond).Draw(Rect, Object, Action(Of Object), GUIContent)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of TFirst, TSecond).Draw(Rect, System.Object, System.Action(Of System.Object), GUIContent)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of TFirst, TSecond).Draw(UnityEngine.Rect, System.Object, System.Action(Of System.Object), UnityEngine.GUIContent)
   name.vb: Draw(Rect, Object, Action(Of Object), GUIContent)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: SelectableValueDrawer<TFirst, TSecond>.Draw
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<TFirst, TSecond>.Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1153,26 +1155,26 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(Rect,System.Object,System.Action{System.Object},GUIContent)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)
     name: Draw
     nameWithType: SelectableValueDrawer(Of TFirst, TSecond).Draw
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of TFirst, TSecond).Draw
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1204,50 +1206,50 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: GUIContent
+  - uid: UnityEngine.GUIContent
     name: GUIContent
     nameWithType: GUIContent
-    fullName: GUIContent
+    fullName: UnityEngine.GUIContent
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
-  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
+- uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
+  commentId: M:VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
   isExternal: true
   name: AddNewRectLine(Rect)
   nameWithType: SelectableValueDrawer<TFirst, TSecond>.AddNewRectLine(Rect)
-  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<TFirst, TSecond>.AddNewRectLine(Rect)
+  fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<TFirst, TSecond>.AddNewRectLine(UnityEngine.Rect)
   nameWithType.vb: SelectableValueDrawer(Of TFirst, TSecond).AddNewRectLine(Rect)
-  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of TFirst, TSecond).AddNewRectLine(Rect)
+  fullName.vb: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of TFirst, TSecond).AddNewRectLine(UnityEngine.Rect)
   spec.csharp:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
     name: AddNewRectLine
     nameWithType: SelectableValueDrawer<TFirst, TSecond>.AddNewRectLine
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer<TFirst, TSecond>.AddNewRectLine
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(Rect@)
+  - uid: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer`2.AddNewRectLine(UnityEngine.Rect@)
     name: AddNewRectLine
     nameWithType: SelectableValueDrawer(Of TFirst, TSecond).AddNewRectLine
     fullName: VRBuilder.Editor.UI.Drawers.SelectableValueDrawer(Of TFirst, TSecond).AddNewRectLine
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Rect
+  - uid: UnityEngine.Rect
     name: Rect
     nameWithType: Rect
-    fullName: Rect
+    fullName: UnityEngine.Rect
     isExternal: true
   - name: )
     nameWithType: )

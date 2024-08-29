@@ -5,7 +5,7 @@ items:
   id: ColliderWithTriggerProperty.ColliderWithTriggerEventArgs
   parent: VRBuilder.Core.Properties
   children:
-  - VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor(GameObject)
+  - VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor(UnityEngine.GameObject)
   - VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.CollidedObject
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/ColliderWithTriggerProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ColliderWithTriggerEventArgs
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/ColliderWithTriggerProperty.cs
@@ -29,19 +29,20 @@ items:
     content: 'public class ColliderWithTriggerEventArgs : EventArgs'
     content.vb: >-
       Public Class ColliderWithTriggerEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object
   - System.EventArgs
   inheritedMembers:
   - System.EventArgs.Empty
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -62,7 +63,7 @@ items:
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/ColliderWithTriggerProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CollidedObject
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/ColliderWithTriggerProperty.cs
@@ -73,7 +74,7 @@ items:
   syntax:
     content: public readonly GameObject CollidedObject
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: Public ReadOnly CollidedObject As GameObject
   modifiers.csharp:
   - public
@@ -81,21 +82,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor(GameObject)
-  commentId: M:VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor(GameObject)
-  id: '#ctor(GameObject)'
+- uid: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor(UnityEngine.GameObject)
+  commentId: M:VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor(UnityEngine.GameObject)
+  id: '#ctor(UnityEngine.GameObject)'
   parent: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs
   langs:
   - csharp
   - vb
   name: ColliderWithTriggerEventArgs(GameObject)
   nameWithType: ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.ColliderWithTriggerEventArgs(GameObject)
-  fullName: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.ColliderWithTriggerEventArgs(GameObject)
+  fullName: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.ColliderWithTriggerEventArgs(UnityEngine.GameObject)
   type: Constructor
   source:
     remote:
       path: Source/Basic-Conditions-And-Behaviors/Runtime/Properties/ColliderWithTriggerProperty.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Core/Source/Basic-Conditions-And-Behaviors/Runtime/Properties/ColliderWithTriggerProperty.cs
@@ -107,7 +108,7 @@ items:
     content: public ColliderWithTriggerEventArgs(GameObject collidedObject)
     parameters:
     - id: collidedObject
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: Public Sub New(collidedObject As GameObject)
   overload: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor*
   modifiers.csharp:
@@ -141,37 +142,6 @@ references:
   name: Empty
   nameWithType: EventArgs.Empty
   fullName: System.EventArgs.Empty
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -250,63 +220,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -420,17 +333,113 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor*
   commentId: Overload:VRBuilder.Core.Properties.ColliderWithTriggerProperty.ColliderWithTriggerEventArgs.#ctor
   name: ColliderWithTriggerEventArgs

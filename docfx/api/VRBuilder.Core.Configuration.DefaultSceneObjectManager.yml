@@ -5,7 +5,7 @@ items:
   id: DefaultSceneObjectManager
   parent: VRBuilder.Core.Configuration
   children:
-  - VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
+  - VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
   - VRBuilder.Core.Configuration.DefaultSceneObjectManager.RequestAuthority(VRBuilder.Core.SceneObjects.ISceneObject)
   - VRBuilder.Core.Configuration.DefaultSceneObjectManager.SetComponentActive(VRBuilder.Core.SceneObjects.ISceneObject,System.String,System.Boolean)
   - VRBuilder.Core.Configuration.DefaultSceneObjectManager.SetSceneObjectActive(VRBuilder.Core.SceneObjects.ISceneObject,System.Boolean)
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: DefaultSceneObjectManager
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
@@ -33,19 +33,20 @@ items:
     content: 'public class DefaultSceneObjectManager : ISceneObjectManager'
     content.vb: >-
       Public Class DefaultSceneObjectManager
+
           Implements ISceneObjectManager
   inheritance:
   - System.Object
   implements:
   - VRBuilder.Core.Configuration.ISceneObjectManager
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -66,7 +67,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetSceneObjectActive
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
@@ -74,7 +75,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nSet the specified scene object enabled or disabled.\n"
   example: []
   syntax:
     content: public void SetSceneObjectActive(ISceneObject sceneObject, bool isActive)
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: SetComponentActive
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
@@ -113,7 +113,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nSets all components of a given type on a specified scene object enabled or disabled.\n"
   example: []
   syntax:
     content: public void SetComponentActive(ISceneObject sceneObject, string componentTypeName, bool isActive)
@@ -132,21 +131,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
-  commentId: M:VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
-  id: InstantiatePrefab(GameObject,Vector3,Quaternion)
+- uid: VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
+  commentId: M:VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
+  id: InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
   parent: VRBuilder.Core.Configuration.DefaultSceneObjectManager
   langs:
   - csharp
   - vb
   name: InstantiatePrefab(GameObject, Vector3, Quaternion)
   nameWithType: DefaultSceneObjectManager.InstantiatePrefab(GameObject, Vector3, Quaternion)
-  fullName: VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(GameObject, Vector3, Quaternion)
+  fullName: VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab(UnityEngine.GameObject, UnityEngine.Vector3, UnityEngine.Quaternion)
   type: Method
   source:
     remote:
       path: Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: InstantiatePrefab
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
@@ -154,23 +153,22 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nInstantiates the specified prefab.\n"
   example: []
   syntax:
     content: public GameObject InstantiatePrefab(GameObject prefab, Vector3 position, Quaternion rotation)
     parameters:
     - id: prefab
-      type: GameObject
+      type: UnityEngine.GameObject
     - id: position
-      type: Vector3
+      type: UnityEngine.Vector3
     - id: rotation
-      type: Quaternion
+      type: UnityEngine.Quaternion
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: Public Function InstantiatePrefab(prefab As GameObject, position As Vector3, rotation As Quaternion) As GameObject
   overload: VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab*
   implements:
-  - VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
+  - VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -189,7 +187,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: RequestAuthority
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Configuration/DefaultSceneObjectManager.cs
@@ -197,7 +195,6 @@ items:
   assemblies:
   - VRBuilder.Core
   namespace: VRBuilder.Core.Configuration
-  summary: "\nRequests authority on the specified scene object.\n"
   example: []
   syntax:
     content: public void RequestAuthority(ISceneObject sceneObject)
@@ -231,37 +228,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -340,63 +306,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -503,6 +412,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -678,92 +675,104 @@ references:
   name: InstantiatePrefab
   nameWithType: DefaultSceneObjectManager.InstantiatePrefab
   fullName: VRBuilder.Core.Configuration.DefaultSceneObjectManager.InstantiatePrefab
-- uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
-  commentId: M:VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
+- uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
+  commentId: M:VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
   parent: VRBuilder.Core.Configuration.ISceneObjectManager
   isExternal: true
   name: InstantiatePrefab(GameObject, Vector3, Quaternion)
   nameWithType: ISceneObjectManager.InstantiatePrefab(GameObject, Vector3, Quaternion)
-  fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject, Vector3, Quaternion)
+  fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject, UnityEngine.Vector3, UnityEngine.Quaternion)
   spec.csharp:
-  - uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
+  - uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
     name: InstantiatePrefab
     nameWithType: ISceneObjectManager.InstantiatePrefab
     fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Vector3
+  - uid: UnityEngine.Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: Vector3
+    fullName: UnityEngine.Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Quaternion
+  - uid: UnityEngine.Quaternion
     name: Quaternion
     nameWithType: Quaternion
-    fullName: Quaternion
+    fullName: UnityEngine.Quaternion
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(GameObject,Vector3,Quaternion)
+  - uid: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Quaternion)
     name: InstantiatePrefab
     nameWithType: ISceneObjectManager.InstantiatePrefab
     fullName: VRBuilder.Core.Configuration.ISceneObjectManager.InstantiatePrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: GameObject
+  - uid: UnityEngine.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: GameObject
+    fullName: UnityEngine.GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Vector3
+  - uid: UnityEngine.Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: Vector3
+    fullName: UnityEngine.Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Quaternion
+  - uid: UnityEngine.Quaternion
     name: Quaternion
     nameWithType: Quaternion
-    fullName: Quaternion
+    fullName: UnityEngine.Quaternion
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: GameObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
   isExternal: true
   name: GameObject
   nameWithType: GameObject
-  fullName: GameObject
-- uid: Vector3
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: Vector3
-- uid: Quaternion
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Core.Configuration.DefaultSceneObjectManager.RequestAuthority*
   commentId: Overload:VRBuilder.Core.Configuration.DefaultSceneObjectManager.RequestAuthority
   name: RequestAuthority

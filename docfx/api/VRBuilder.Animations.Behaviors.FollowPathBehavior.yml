@@ -6,8 +6,8 @@ items:
   parent: VRBuilder.Animations.Behaviors
   children:
   - VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor
-  - VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(System.Guid,System.Guid,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
-  - VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  - VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(System.Guid,System.Guid,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  - VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
   - VRBuilder.Animations.Behaviors.FollowPathBehavior.GetActivatingProcess
   langs:
   - csharp
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: FollowPathBehavior
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -42,7 +42,9 @@ items:
       <HelpLink("https://www.mindport.co/vr-builder-tutorials/animations-add-on")>
 
       Public Class FollowPathBehavior
+
           Inherits Behavior(Of FollowPathBehavior.EntityData)
+
           Implements IDataOwner(Of FollowPathBehavior.EntityData), IBehavior, IEntity, IDataOwner(Of IBehaviorData), IDataOwner, IClonable(Of IBehavior)
   inheritance:
   - System.Object
@@ -67,13 +69,13 @@ items:
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData}.GetConfigurator
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData}.Configure(VRBuilder.Core.Configuration.Modes.IMode)
   - VRBuilder.Core.Entity{VRBuilder.Animations.Behaviors.FollowPathBehavior.EntityData}.Update
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -107,7 +109,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -119,9 +121,13 @@ items:
     content: >-
       [JsonConstructor]
 
+      [Preserve]
+
       public FollowPathBehavior()
     content.vb: >-
       <JsonConstructor>
+
+      <Preserve>
 
       Public Sub New
   overload: VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor*
@@ -129,25 +135,28 @@ items:
   - type: Newtonsoft.Json.JsonConstructorAttribute
     ctor: Newtonsoft.Json.JsonConstructorAttribute.#ctor
     arguments: []
+  - type: UnityEngine.Scripting.PreserveAttribute
+    ctor: UnityEngine.Scripting.PreserveAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
-  commentId: M:VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
-  id: '#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)'
+- uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  commentId: M:VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  id: '#ctor(VRBuilder.Core.SceneObjects.ISceneObject,VRBuilder.Core.Properties.IPathProperty,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)'
   parent: VRBuilder.Animations.Behaviors.FollowPathBehavior
   langs:
   - csharp
   - vb
   name: FollowPathBehavior(ISceneObject, IPathProperty, Single, AnimationCurve, Boolean, Boolean, Boolean, Boolean, Int32, Boolean)
   nameWithType: FollowPathBehavior.FollowPathBehavior(ISceneObject, IPathProperty, Single, AnimationCurve, Boolean, Boolean, Boolean, Boolean, Int32, Boolean)
-  fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.FollowPathBehavior(VRBuilder.Core.SceneObjects.ISceneObject, VRBuilder.Core.Properties.IPathProperty, System.Single, AnimationCurve, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Int32, System.Boolean)
+  fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.FollowPathBehavior(VRBuilder.Core.SceneObjects.ISceneObject, VRBuilder.Core.Properties.IPathProperty, System.Single, UnityEngine.AnimationCurve, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Int32, System.Boolean)
   type: Constructor
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -165,7 +174,7 @@ items:
     - id: duration
       type: System.Single
     - id: velocity
-      type: AnimationCurve
+      type: UnityEngine.AnimationCurve
     - id: keepRelativePosition
       type: System.Boolean
     - id: keepRelativeRotation
@@ -184,21 +193,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(System.Guid,System.Guid,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
-  commentId: M:VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(System.Guid,System.Guid,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
-  id: '#ctor(System.Guid,System.Guid,System.Single,AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)'
+- uid: VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(System.Guid,System.Guid,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  commentId: M:VRBuilder.Animations.Behaviors.FollowPathBehavior.#ctor(System.Guid,System.Guid,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  id: '#ctor(System.Guid,System.Guid,System.Single,UnityEngine.AnimationCurve,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)'
   parent: VRBuilder.Animations.Behaviors.FollowPathBehavior
   langs:
   - csharp
   - vb
   name: FollowPathBehavior(Guid, Guid, Single, AnimationCurve, Boolean, Boolean, Boolean, Boolean, Int32, Boolean)
   nameWithType: FollowPathBehavior.FollowPathBehavior(Guid, Guid, Single, AnimationCurve, Boolean, Boolean, Boolean, Boolean, Int32, Boolean)
-  fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.FollowPathBehavior(System.Guid, System.Guid, System.Single, AnimationCurve, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Int32, System.Boolean)
+  fullName: VRBuilder.Animations.Behaviors.FollowPathBehavior.FollowPathBehavior(System.Guid, System.Guid, System.Single, UnityEngine.AnimationCurve, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Int32, System.Boolean)
   type: Constructor
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: .ctor
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -216,7 +225,7 @@ items:
     - id: duration
       type: System.Single
     - id: velocity
-      type: AnimationCurve
+      type: UnityEngine.AnimationCurve
     - id: keepRelativePosition
       type: System.Boolean
     - id: keepRelativeRotation
@@ -249,7 +258,7 @@ items:
   source:
     remote:
       path: Source/Runtime/Behaviors/FollowPathBehavior.cs
-      branch: develop
+      branch: feature/mp-2734-component-icons
       repo: git@github.com:MindPort-GmbH/Animations-for-VR-Builder.git
     id: GetActivatingProcess
     path: ../../Assets/MindPort/VR Builder/Add-ons/Animations/Source/Runtime/Behaviors/FollowPathBehavior.cs
@@ -257,7 +266,6 @@ items:
   assemblies:
   - VRBuilder.Animations
   namespace: VRBuilder.Animations.Behaviors
-  summary: "\nReturns a new instance of a process for the Activating <xref href=\"VRBuilder.Core.Stage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override IStageProcess GetActivatingProcess()
@@ -744,37 +752,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -853,63 +830,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -1016,6 +936,94 @@ references:
     name: MemberwiseClone
     nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
     isExternal: true
   - name: (
     nameWithType: (
@@ -1426,11 +1434,13 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: AnimationCurve
+- uid: UnityEngine.AnimationCurve
+  commentId: T:UnityEngine.AnimationCurve
+  parent: UnityEngine
   isExternal: true
   name: AnimationCurve
   nameWithType: AnimationCurve
-  fullName: AnimationCurve
+  fullName: UnityEngine.AnimationCurve
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1455,6 +1465,12 @@ references:
   name: VRBuilder.Core.Properties
   nameWithType: VRBuilder.Core.Properties
   fullName: VRBuilder.Core.Properties
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Source/Core/Runtime/Conditions/ICondition.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: ICondition
     path: ../../Assets/MindPort/VR Builder/Core/Source/Core/Runtime/Conditions/ICondition.cs
@@ -27,6 +27,7 @@ items:
     content: 'public interface ICondition : ICompletableEntity, ICompletable, IEntity, IDataOwner<IConditionData>, IDataOwner, IClonable<ICondition>'
     content.vb: >-
       Public Interface ICondition
+
           Inherits ICompletableEntity, IDataOwner(Of IConditionData), IClonable(Of ICondition)
   inheritedMembers:
   - VRBuilder.Core.ICompletable.IsCompleted

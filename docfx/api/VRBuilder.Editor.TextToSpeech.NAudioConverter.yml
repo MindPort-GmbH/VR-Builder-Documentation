@@ -7,7 +7,7 @@ items:
   children:
   - VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromMp3(System.Byte[])
   - VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
-  - VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(AudioClip,System.String)
+  - VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/NAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: NAudioConverter
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/NAudioConverter.cs
@@ -32,19 +32,20 @@ items:
     content: 'public class NAudioConverter : IAudioConverter'
     content.vb: >-
       Public Class NAudioConverter
+
           Implements IAudioConverter
   inheritance:
   - System.Object
   implements:
   - VRBuilder.TextToSpeech.IAudioConverter
   inheritedMembers:
-  - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -65,7 +66,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/NAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateAudioClipFromMp3
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/NAudioConverter.cs
@@ -82,9 +83,11 @@ items:
       type: System.Byte[]
       description: Data are the bytes of an mp3 file
     return:
-      type: AudioClip
+      type: UnityEngine.AudioClip
     content.vb: Public Function CreateAudioClipFromMp3(data As Byte()) As AudioClip
   overload: VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromMp3*
+  implements:
+  - VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
   nameWithType.vb: NAudioConverter.CreateAudioClipFromMp3(Byte())
   modifiers.csharp:
   - public
@@ -106,7 +109,7 @@ items:
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/NAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: CreateAudioClipFromWAVE
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/NAudioConverter.cs
@@ -120,9 +123,11 @@ items:
     - id: data
       type: System.Byte[]
     return:
-      type: AudioClip
+      type: UnityEngine.AudioClip
     content.vb: Public Function CreateAudioClipFromWAVE(data As Byte()) As AudioClip
   overload: VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromWAVE*
+  implements:
+  - VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
   nameWithType.vb: NAudioConverter.CreateAudioClipFromWAVE(Byte())
   modifiers.csharp:
   - public
@@ -130,21 +135,21 @@ items:
   - Public
   fullName.vb: VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromWAVE(System.Byte())
   name.vb: CreateAudioClipFromWAVE(Byte())
-- uid: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(AudioClip,System.String)
-  commentId: M:VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(AudioClip,System.String)
-  id: TryWriteAudioClipToFile(AudioClip,System.String)
+- uid: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+  commentId: M:VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+  id: TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
   parent: VRBuilder.Editor.TextToSpeech.NAudioConverter
   langs:
   - csharp
   - vb
   name: TryWriteAudioClipToFile(AudioClip, String)
   nameWithType: NAudioConverter.TryWriteAudioClipToFile(AudioClip, String)
-  fullName: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(AudioClip, System.String)
+  fullName: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip, System.String)
   type: Method
   source:
     remote:
       path: Source/TextToSpeech-Component/Editor/NAudioConverter.cs
-      branch: develop
+      branch: feature/mp-2811-outline-shader
       repo: git@github.com:MindPort-GmbH/VR-Builder.git
     id: TryWriteAudioClipToFile
     path: ../../Assets/MindPort/VR Builder/Core/Source/TextToSpeech-Component/Editor/NAudioConverter.cs
@@ -158,7 +163,7 @@ items:
     content: public bool TryWriteAudioClipToFile(AudioClip audio, string filePath)
     parameters:
     - id: audio
-      type: AudioClip
+      type: UnityEngine.AudioClip
       description: AudioClip to export
     - id: filePath
       type: System.String
@@ -168,6 +173,8 @@ items:
       description: Returns if the AudioClip could was written to a file on disk.
     content.vb: Public Function TryWriteAudioClipToFile(audio As AudioClip, filePath As String) As Boolean
   overload: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile*
+  implements:
+  - VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -191,37 +198,6 @@ references:
   name: IAudioConverter
   nameWithType: IAudioConverter
   fullName: VRBuilder.TextToSpeech.IAudioConverter
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -300,63 +276,6 @@ references:
     name: Equals
     nameWithType: Object.Equals
     fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
     isExternal: true
   - name: (
     nameWithType: (
@@ -470,6 +389,94 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -486,6 +493,54 @@ references:
   name: CreateAudioClipFromMp3
   nameWithType: NAudioConverter.CreateAudioClipFromMp3
   fullName: VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromMp3
+- uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
+  commentId: M:VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
+  parent: VRBuilder.TextToSpeech.IAudioConverter
+  isExternal: true
+  name: CreateAudioClipFromMp3(Byte[])
+  nameWithType: IAudioConverter.CreateAudioClipFromMp3(Byte[])
+  fullName: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
+  nameWithType.vb: IAudioConverter.CreateAudioClipFromMp3(Byte())
+  fullName.vb: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte())
+  name.vb: CreateAudioClipFromMp3(Byte())
+  spec.csharp:
+  - uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
+    name: CreateAudioClipFromMp3
+    nameWithType: IAudioConverter.CreateAudioClipFromMp3
+    fullName: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3(System.Byte[])
+    name: CreateAudioClipFromMp3
+    nameWithType: IAudioConverter.CreateAudioClipFromMp3
+    fullName: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromMp3
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Byte[]
   isExternal: true
   name: Byte[]
@@ -512,21 +567,132 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: AudioClip
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
   isExternal: true
   name: AudioClip
   nameWithType: AudioClip
-  fullName: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromWAVE*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromWAVE
   name: CreateAudioClipFromWAVE
   nameWithType: NAudioConverter.CreateAudioClipFromWAVE
   fullName: VRBuilder.Editor.TextToSpeech.NAudioConverter.CreateAudioClipFromWAVE
+- uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
+  commentId: M:VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
+  parent: VRBuilder.TextToSpeech.IAudioConverter
+  isExternal: true
+  name: CreateAudioClipFromWAVE(Byte[])
+  nameWithType: IAudioConverter.CreateAudioClipFromWAVE(Byte[])
+  fullName: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
+  nameWithType.vb: IAudioConverter.CreateAudioClipFromWAVE(Byte())
+  fullName.vb: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte())
+  name.vb: CreateAudioClipFromWAVE(Byte())
+  spec.csharp:
+  - uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
+    name: CreateAudioClipFromWAVE
+    nameWithType: IAudioConverter.CreateAudioClipFromWAVE
+    fullName: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE(System.Byte[])
+    name: CreateAudioClipFromWAVE
+    nameWithType: IAudioConverter.CreateAudioClipFromWAVE
+    fullName: VRBuilder.TextToSpeech.IAudioConverter.CreateAudioClipFromWAVE
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile*
   commentId: Overload:VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile
   name: TryWriteAudioClipToFile
   nameWithType: NAudioConverter.TryWriteAudioClipToFile
   fullName: VRBuilder.Editor.TextToSpeech.NAudioConverter.TryWriteAudioClipToFile
+- uid: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+  commentId: M:VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+  parent: VRBuilder.TextToSpeech.IAudioConverter
+  isExternal: true
+  name: TryWriteAudioClipToFile(AudioClip, String)
+  nameWithType: IAudioConverter.TryWriteAudioClipToFile(AudioClip, String)
+  fullName: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip, System.String)
+  spec.csharp:
+  - uid: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+    name: TryWriteAudioClipToFile
+    nameWithType: IAudioConverter.TryWriteAudioClipToFile
+    fullName: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.AudioClip
+    name: AudioClip
+    nameWithType: AudioClip
+    fullName: UnityEngine.AudioClip
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile(UnityEngine.AudioClip,System.String)
+    name: TryWriteAudioClipToFile
+    nameWithType: IAudioConverter.TryWriteAudioClipToFile
+    fullName: VRBuilder.TextToSpeech.IAudioConverter.TryWriteAudioClipToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.AudioClip
+    name: AudioClip
+    nameWithType: AudioClip
+    fullName: UnityEngine.AudioClip
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.String
   commentId: T:System.String
   parent: System
