@@ -1,130 +1,95 @@
 ﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+  
   <head>
     <meta charset="utf-8">
-      <title>Class InputController | VR Builder Documentation </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class InputController | VR Builder Documentation ">
-      
-      <meta name="description" content="Central controller for input via the new Input System using C# events.">
-      <link rel="icon" href="../images/favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      <meta name="docfx:rel" content="../">
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
-
-      <script type="module" src="./../public/docfx.min.js"></script>
-
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InputController
+   | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InputController
+   | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
   </head>
-
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
-            VR Builder Documentation
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-              <form class="search" role="search" id="search">
-                <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
               </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
-
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
-
-        <article data-uid="VRBuilder.Core.Input.InputController">
-
-
-
-  <h1 id="VRBuilder_Core_Input_InputController" data-uid="VRBuilder.Core.Input.InputController" class="text-break">
-Class InputController  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L14"><i class="bi bi-code-slash"></i></a>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRBuilder.Core.Input.InputController">
+  
+  
+  <h1 id="VRBuilder_Core_Input_InputController" data-uid="VRBuilder.Core.Input.InputController" class="text-break">Class InputController
   </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.html">VRBuilder</a>.<a class="xref" href="VRBuilder.Core.html">Core</a>.<a class="xref" href="VRBuilder.Core.Input.html">Input</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>VRBuilder.Core.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Central controller for input via the new Input System using C# events.</p>
+  <div class="markdown level0 summary"><p>Central controller for input via the new Input System using C# events.</p>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class InputController : UnitySceneSingleton&lt;InputController&gt;</code></pre>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
+    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
+    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
+    <div class="level5"><a class="xref" href="VRBuilder.Unity.UnitySceneSingleton-1.html">UnitySceneSingleton</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>&gt;</div>
+    <div class="level6"><span class="xref">InputController</span></div>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Object</span></div>
-      <div><span class="xref">Component</span></div>
-      <div><span class="xref">Behaviour</span></div>
-      <div><span class="xref">MonoBehaviour</span></div>
-      <div><a class="xref" href="VRBuilder.Unity.UnitySceneSingleton-1.html">UnitySceneSingleton</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>&gt;</div>
-      <div><span class="xref">InputController</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="VRBuilder.Unity.UnitySceneSingleton-1.html#VRBuilder_Unity_UnitySceneSingleton_1_ConcreteType">UnitySceneSingleton&lt;InputController&gt;.ConcreteType</a>
     </div>
@@ -141,721 +106,695 @@ Class InputController  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="VRBuilder.Unity.UnitySceneSingleton-1.html#VRBuilder_Unity_UnitySceneSingleton_1_OnDestroy">UnitySceneSingleton&lt;InputController&gt;.OnDestroy()</a>
     </div>
     <div>
-      <span class="xref">MonoBehaviour.IsInvoking()</span>
+      <span class="xref">UnityEngine.MonoBehaviour.IsInvoking()</span>
     </div>
     <div>
-      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+      <span class="xref">UnityEngine.MonoBehaviour.CancelInvoke()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.Invoke(System.String, System.Single)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.InvokeRepeating(System.String, System.Single, System.Single)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.CancelInvoke(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.IsInvoking(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.StartCoroutine(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.StartCoroutine(System.String, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.StartCoroutine(System.Collections.IEnumerator)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.StartCoroutine_Auto(System.Collections.IEnumerator)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.StopCoroutine(System.Collections.IEnumerator)</span>
     </div>
     <div>
-      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+      <span class="xref">UnityEngine.MonoBehaviour.StopCoroutine(UnityEngine.Coroutine)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.StopCoroutine(System.String)</span>
     </div>
     <div>
-      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+      <span class="xref">UnityEngine.MonoBehaviour.StopAllCoroutines()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+      <span class="xref">UnityEngine.MonoBehaviour.print(System.Object)</span>
     </div>
     <div>
-      <span class="xref">MonoBehaviour.useGUILayout</span>
+      <span class="xref">UnityEngine.MonoBehaviour.useGUILayout</span>
     </div>
     <div>
-      <span class="xref">MonoBehaviour.runInEditMode</span>
+      <span class="xref">UnityEngine.MonoBehaviour.runInEditMode</span>
     </div>
     <div>
-      <span class="xref">Behaviour.enabled</span>
+      <span class="xref">UnityEngine.Behaviour.enabled</span>
     </div>
     <div>
-      <span class="xref">Behaviour.isActiveAndEnabled</span>
+      <span class="xref">UnityEngine.Behaviour.isActiveAndEnabled</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+      <span class="xref">UnityEngine.Component.GetComponent(System.Type)</span>
     </div>
     <div>
-      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Component.GetComponent&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+      <span class="xref">UnityEngine.Component.TryGetComponent(System.Type, UnityEngine.Component)</span>
     </div>
     <div>
-      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+      <span class="xref">UnityEngine.Component.TryGetComponent&lt;T&gt;(T)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+      <span class="xref">UnityEngine.Component.GetComponent(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentInChildren(System.Type, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+      <span class="xref">UnityEngine.Component.GetComponentInChildren(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentInChildren&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Component.GetComponentInChildren&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInChildren(System.Type, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInChildren(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInChildren&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInChildren&lt;T&gt;(System.Boolean, System.Collections.Generic.List&lt;T&gt;)</span>
     </div>
     <div>
-      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Component.GetComponentsInChildren&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInChildren&lt;T&gt;(System.Collections.Generic.List&lt;T&gt;)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type, bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentInParent(System.Type, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+      <span class="xref">UnityEngine.Component.GetComponentInParent(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInParent&lt;T&gt;(bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentInParent&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Component.GetComponentInParent&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInParent(System.Type, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInParent(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInParent&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+      <span class="xref">UnityEngine.Component.GetComponentsInParent&lt;T&gt;(System.Boolean, System.Collections.Generic.List&lt;T&gt;)</span>
     </div>
     <div>
-      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Component.GetComponentsInParent&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+      <span class="xref">UnityEngine.Component.GetComponents(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+      <span class="xref">UnityEngine.Component.GetComponents(System.Type, System.Collections.Generic.List&lt;UnityEngine.Component&gt;)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+      <span class="xref">UnityEngine.Component.GetComponents&lt;T&gt;(System.Collections.Generic.List&lt;T&gt;)</span>
     </div>
     <div>
-      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Component.GetComponents&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+      <span class="xref">UnityEngine.Component.CompareTag(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+      <span class="xref">UnityEngine.Component.SendMessageUpwards(System.String, System.Object, UnityEngine.SendMessageOptions)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+      <span class="xref">UnityEngine.Component.SendMessageUpwards(System.String, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+      <span class="xref">UnityEngine.Component.SendMessageUpwards(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+      <span class="xref">UnityEngine.Component.SendMessageUpwards(System.String, UnityEngine.SendMessageOptions)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+      <span class="xref">UnityEngine.Component.SendMessage(System.String, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+      <span class="xref">UnityEngine.Component.SendMessage(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+      <span class="xref">UnityEngine.Component.SendMessage(System.String, System.Object, UnityEngine.SendMessageOptions)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+      <span class="xref">UnityEngine.Component.SendMessage(System.String, UnityEngine.SendMessageOptions)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+      <span class="xref">UnityEngine.Component.BroadcastMessage(System.String, System.Object, UnityEngine.SendMessageOptions)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+      <span class="xref">UnityEngine.Component.BroadcastMessage(System.String, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+      <span class="xref">UnityEngine.Component.BroadcastMessage(System.String)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+      <span class="xref">UnityEngine.Component.BroadcastMessage(System.String, UnityEngine.SendMessageOptions)</span>
     </div>
     <div>
-      <span class="xref">Component.transform</span>
+      <span class="xref">UnityEngine.Component.transform</span>
     </div>
     <div>
-      <span class="xref">Component.gameObject</span>
+      <span class="xref">UnityEngine.Component.gameObject</span>
     </div>
     <div>
-      <span class="xref">Component.tag</span>
+      <span class="xref">UnityEngine.Component.tag</span>
     </div>
     <div>
-      <span class="xref">Object.GetInstanceID()</span>
+      <span class="xref">UnityEngine.Object.GetInstanceID()</span>
     </div>
     <div>
-      <span class="xref">Object.GetHashCode()</span>
+      <span class="xref">UnityEngine.Object.GetHashCode()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+      <span class="xref">UnityEngine.Object.Equals(System.Object)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Vector3, UnityEngine.Quaternion)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Transform)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate(Object)</span>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate(Object, Transform)</span>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Transform)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+      <span class="xref">UnityEngine.Object.Instantiate(UnityEngine.Object, UnityEngine.Transform, System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Vector3, UnityEngine.Quaternion)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Transform)</span>
     </div>
     <div>
-      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Transform)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+      <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T, UnityEngine.Transform, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+      <span class="xref">UnityEngine.Object.Destroy(UnityEngine.Object, System.Single)</span>
     </div>
     <div>
-      <span class="xref">Object.Destroy(Object)</span>
+      <span class="xref">UnityEngine.Object.Destroy(UnityEngine.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+      <span class="xref">UnityEngine.Object.DestroyImmediate(UnityEngine.Object, System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">Object.DestroyImmediate(Object)</span>
+      <span class="xref">UnityEngine.Object.DestroyImmediate(UnityEngine.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType(System.Type, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsByType(System.Type, UnityEngine.FindObjectsSortMode)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsByType(System.Type, UnityEngine.FindObjectsInactive, UnityEngine.FindObjectsSortMode)</span>
     </div>
     <div>
-      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+      <span class="xref">UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+      <span class="xref">UnityEngine.Object.DestroyObject(UnityEngine.Object, System.Single)</span>
     </div>
     <div>
-      <span class="xref">Object.DestroyObject(Object)</span>
+      <span class="xref">UnityEngine.Object.DestroyObject(UnityEngine.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+      <span class="xref">UnityEngine.Object.FindSceneObjectsOfType(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsOfTypeIncludingAssets(System.Type)</span>
     </div>
     <div>
-      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</span>
+      <span class="xref">UnityEngine.Object.FindObjectsByType&lt;T&gt;(UnityEngine.FindObjectsSortMode)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</span>
+      <span class="xref">UnityEngine.Object.FindObjectsByType&lt;T&gt;(UnityEngine.FindObjectsInactive, UnityEngine.FindObjectsSortMode)</span>
     </div>
     <div>
-      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Object.FindObjectOfType&lt;T&gt;()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+      <span class="xref">UnityEngine.Object.FindObjectOfType&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Object.FindFirstObjectByType&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;()</span>
+      <span class="xref">UnityEngine.Object.FindAnyObjectByType&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+      <span class="xref">UnityEngine.Object.FindFirstObjectByType&lt;T&gt;(UnityEngine.FindObjectsInactive)</span>
     </div>
     <div>
-      <span class="xref">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</span>
+      <span class="xref">UnityEngine.Object.FindAnyObjectByType&lt;T&gt;(UnityEngine.FindObjectsInactive)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+      <span class="xref">UnityEngine.Object.FindObjectsOfTypeAll(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+      <span class="xref">UnityEngine.Object.FindObjectOfType(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+      <span class="xref">UnityEngine.Object.FindFirstObjectByType(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+      <span class="xref">UnityEngine.Object.FindAnyObjectByType(System.Type)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+      <span class="xref">UnityEngine.Object.FindObjectOfType(System.Type, System.Boolean)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+      <span class="xref">UnityEngine.Object.FindFirstObjectByType(System.Type, UnityEngine.FindObjectsInactive)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+      <span class="xref">UnityEngine.Object.FindAnyObjectByType(System.Type, UnityEngine.FindObjectsInactive)</span>
     </div>
     <div>
-      <span class="xref">Object.ToString()</span>
+      <span class="xref">UnityEngine.Object.ToString()</span>
     </div>
     <div>
-      <span class="xref">Object.name</span>
+      <span class="xref">UnityEngine.Object.name</span>
     </div>
     <div>
-      <span class="xref">Object.hideFlags</span>
+      <span class="xref">UnityEngine.Object.hideFlags</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="VRBuilder_Core_Input_InputController_OnFocusReleased" data-uid="VRBuilder.Core.Input.InputController.OnFocusReleased">
-  OnFocusReleased
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L59"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Will be called when the focus on an object is released.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventHandler&lt;InputController.InputFocusEventArgs&gt; OnFocusReleased</code></pre>
   </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>.<a class="xref" href="VRBuilder.Core.Input.InputController.InputFocusEventArgs.html">InputFocusEventArgs</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="VRBuilder_Core_Input_InputController_OnFocused" data-uid="VRBuilder.Core.Input.InputController.OnFocused">
-  OnFocused
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.Input.html">VRBuilder.Core.Input</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.Core.dll</h6>
+  <h5 id="VRBuilder_Core_Input_InputController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class InputController : UnitySceneSingleton&lt;InputController&gt;</code></pre>
+  </div>
+  <h3 id="fields">Fields
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_OnFocused.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.OnFocused%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L54">View Source</a>
+  </span>
+  <h4 id="VRBuilder_Core_Input_InputController_OnFocused" data-uid="VRBuilder.Core.Input.InputController.OnFocused">OnFocused</h4>
   <div class="markdown level1 summary"><p>Will be called when an object is focused.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EventHandler&lt;InputController.InputFocusEventArgs&gt; OnFocused</code></pre>
   </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>.<a class="xref" href="VRBuilder.Core.Input.InputController.InputFocusEventArgs.html">InputFocusEventArgs</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="VRBuilder_Core_Input_InputController_CurrentInputFocus_" data-uid="VRBuilder.Core.Input.InputController.CurrentInputFocus*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_CurrentInputFocus" data-uid="VRBuilder.Core.Input.InputController.CurrentInputFocus">
-  CurrentInputFocus
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.InputFocusEventArgs.html">InputController.InputFocusEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_OnFocusReleased.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.OnFocusReleased%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L59">View Source</a>
+  </span>
+  <h4 id="VRBuilder_Core_Input_InputController_OnFocusReleased" data-uid="VRBuilder.Core.Input.InputController.OnFocusReleased">OnFocusReleased</h4>
+  <div class="markdown level1 summary"><p>Will be called when the focus on an object is released.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventHandler&lt;InputController.InputFocusEventArgs&gt; OnFocusReleased</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.InputFocusEventArgs.html">InputController.InputFocusEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_CurrentInputFocus.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.CurrentInputFocus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L64">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Input_InputController_CurrentInputFocus_" data-uid="VRBuilder.Core.Input.InputController.CurrentInputFocus*"></a>
+  <h4 id="VRBuilder_Core_Input_InputController_CurrentInputFocus" data-uid="VRBuilder.Core.Input.InputController.CurrentInputFocus">CurrentInputFocus</h4>
   <div class="markdown level1 summary"><p>Currently focused object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected IInputFocus CurrentInputFocus { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="VRBuilder.Core.Input.IInputFocus.html">IInputFocus</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Input.IInputFocus.html">IInputFocus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_ListenerDictionary.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.ListenerDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L69">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_ListenerDictionary_" data-uid="VRBuilder.Core.Input.InputController.ListenerDictionary*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_ListenerDictionary" data-uid="VRBuilder.Core.Input.InputController.ListenerDictionary">
-  ListenerDictionary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L69"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_ListenerDictionary" data-uid="VRBuilder.Core.Input.InputController.ListenerDictionary">ListenerDictionary</h4>
   <div class="markdown level1 summary"><p>Registered listener.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected Dictionary&lt;string, List&lt;InputController.ListenerInfo&gt;&gt; ListenerDictionary { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>.<a class="xref" href="VRBuilder.Core.Input.InputController.ListenerInfo.html">ListenerInfo</a>&gt;&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="VRBuilder_Core_Input_InputController_Awake_" data-uid="VRBuilder.Core.Input.InputController.Awake*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_Awake" data-uid="VRBuilder.Core.Input.InputController.Awake">
-  Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.ListenerInfo.html">InputController.ListenerInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_Awake.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.Awake%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L111">View Source</a>
+  </span>
+  <a id="VRBuilder_Core_Input_InputController_Awake_" data-uid="VRBuilder.Core.Input.InputController.Awake*"></a>
+  <h4 id="VRBuilder_Core_Input_InputController_Awake" data-uid="VRBuilder.Core.Input.InputController.Awake">Awake()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">VRBuilder.Unity.UnitySceneSingleton&lt;VRBuilder.Core.Input.InputController&gt;.Awake()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_Focus_VRBuilder_Core_Input_IInputFocus_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.Focus(VRBuilder.Core.Input.IInputFocus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L103">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_Focus_" data-uid="VRBuilder.Core.Input.InputController.Focus*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_Focus_VRBuilder_Core_Input_IInputFocus_" data-uid="VRBuilder.Core.Input.InputController.Focus(VRBuilder.Core.Input.IInputFocus)">
-  Focus(IInputFocus)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L103"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_Focus_VRBuilder_Core_Input_IInputFocus_" data-uid="VRBuilder.Core.Input.InputController.Focus(VRBuilder.Core.Input.IInputFocus)">Focus(IInputFocus)</h4>
   <div class="markdown level1 summary"><p>Focus the given input focus target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract void Focus(IInputFocus target)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>target</code> <a class="xref" href="VRBuilder.Core.Input.IInputFocus.html">IInputFocus</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Input.IInputFocus.html">IInputFocus</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_RegisterEvent_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.RegisterEvent(VRBuilder.Core.Input.IInputActionListener%2CSystem.Action%7BVRBuilder.Core.Input.InputController.InputEventArgs%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L76">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_RegisterEvent_" data-uid="VRBuilder.Core.Input.InputController.RegisterEvent*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_RegisterEvent_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__" data-uid="VRBuilder.Core.Input.InputController.RegisterEvent(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})">
-  RegisterEvent(IInputActionListener, Action&lt;InputEventArgs&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L76"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_RegisterEvent_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__" data-uid="VRBuilder.Core.Input.InputController.RegisterEvent(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})">RegisterEvent(IInputActionListener, Action&lt;InputController.InputEventArgs&gt;)</h4>
   <div class="markdown level1 summary"><p>Registers an action event to input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RegisterEvent(IInputActionListener listener, Action&lt;InputController.InputEventArgs&gt; action)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>listener</code> <a class="xref" href="VRBuilder.Core.Input.IInputActionListener.html">IInputActionListener</a></dt>
-    <dd><p>The listener owning the action.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>.<a class="xref" href="VRBuilder.Core.Input.InputController.InputEventArgs.html">InputEventArgs</a>&gt;</dt>
-    <dd><p>The action method which will be called.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Input.IInputActionListener.html">IInputActionListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td><p>The listener owning the action.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.InputEventArgs.html">InputController.InputEventArgs</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action method which will be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_ReleaseFocus.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.ReleaseFocus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L108">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_ReleaseFocus_" data-uid="VRBuilder.Core.Input.InputController.ReleaseFocus*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_ReleaseFocus" data-uid="VRBuilder.Core.Input.InputController.ReleaseFocus">
-  ReleaseFocus()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L108"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_ReleaseFocus" data-uid="VRBuilder.Core.Input.InputController.ReleaseFocus">ReleaseFocus()</h4>
   <div class="markdown level1 summary"><p>Releases the focus, if possible.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract void ReleaseFocus()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_Reset.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L117">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_Reset_" data-uid="VRBuilder.Core.Input.InputController.Reset*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_Reset" data-uid="VRBuilder.Core.Input.InputController.Reset">
-  Reset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L117"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_Reset" data-uid="VRBuilder.Core.Input.InputController.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Reset()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_Setup.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.Setup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L126">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_Setup_" data-uid="VRBuilder.Core.Input.InputController.Setup*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_Setup" data-uid="VRBuilder.Core.Input.InputController.Setup">
-  Setup()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L126"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_Setup" data-uid="VRBuilder.Core.Input.InputController.Setup">Setup()</h4>
   <div class="markdown level1 summary"><p>will be called on Reset (in editor time) and Awake (in play mode).
 Intended to setup the input controller properly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void Setup()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController_UnregisterEvent_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController.UnregisterEvent(VRBuilder.Core.Input.IInputActionListener%2CSystem.Action%7BVRBuilder.Core.Input.InputController.InputEventArgs%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L93">View Source</a>
+  </span>
   <a id="VRBuilder_Core_Input_InputController_UnregisterEvent_" data-uid="VRBuilder.Core.Input.InputController.UnregisterEvent*"></a>
-
-  <h3 id="VRBuilder_Core_Input_InputController_UnregisterEvent_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__" data-uid="VRBuilder.Core.Input.InputController.UnregisterEvent(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})">
-  UnregisterEvent(IInputActionListener, Action&lt;InputEventArgs&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L93"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Core_Input_InputController_UnregisterEvent_VRBuilder_Core_Input_IInputActionListener_System_Action_VRBuilder_Core_Input_InputController_InputEventArgs__" data-uid="VRBuilder.Core.Input.InputController.UnregisterEvent(VRBuilder.Core.Input.IInputActionListener,System.Action{VRBuilder.Core.Input.InputController.InputEventArgs})">UnregisterEvent(IInputActionListener, Action&lt;InputController.InputEventArgs&gt;)</h4>
   <div class="markdown level1 summary"><p>Unregisters the given listeners action.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UnregisterEvent(IInputActionListener listener, Action&lt;InputController.InputEventArgs&gt; action)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>listener</code> <a class="xref" href="VRBuilder.Core.Input.IInputActionListener.html">IInputActionListener</a></dt>
-    <dd></dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.html">InputController</a>.<a class="xref" href="VRBuilder.Core.Input.InputController.InputEventArgs.html">InputEventArgs</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.Input.IInputActionListener.html">IInputActionListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="VRBuilder.Core.Input.InputController.InputEventArgs.html">InputController.InputEventArgs</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
-
-        <div class="contribution d-print-none">
-          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Input/InputController.cs/#L14" class="edit-link">Edit this page</a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Input_InputController.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Input.InputController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Core/Runtime/Input/InputController.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-    <div class="container-xxl search-results" id="search-results"></div>
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>

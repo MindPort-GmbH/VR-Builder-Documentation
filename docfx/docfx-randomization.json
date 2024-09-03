@@ -1,0 +1,92 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../",
+          "files": [
+            "VRBuilder*.csproj"
+          ],
+          "cwd": "../../",
+          "exclude": [
+            "*Tests*.csproj",
+            "*DemoScene*.csproj",
+            "VRBuilder.Community.csproj"
+        ]
+        }
+      ],
+      "dest": "api",
+      "references": [
+        {
+          "uid": "*",
+          "name": "*",
+          "href": "../../Library/ScriptAssemblies/*.dll"        
+        }
+      ]    
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**",
+          "pdf/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "articles/animations/images/**",
+          "articles/core/images/**",
+          "articles/process-menu/images/**",
+          "articles/randomization/images/**",
+          "articles/states-and-data/images/**",
+          "articles/track-and-measure/images/**",
+          "images/**"
+        ]
+      }
+    ],
+    "output": "../docs",
+    "template": [
+      "default",
+      "modern"
+    ],    
+    "globalMetadata": {
+      "_appName": "VR Builder Documentation",
+      "_appTitle": "VR Builder Documentation",
+      "_appLogoPath": "images/logo.svg",
+      "_appFaviconPath": "images/favicon.ico",
+      "_enableNewTab": true,
+      "_enableSearch": true,
+      "_disableBreadcrumb": true,
+      "pdf": false,
+      "_gitContribute": {
+        "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
+        "branch": "develop"
+    }
+    }
+  },
+  "pdf": {
+    "content": [
+      {
+        "files": [
+          "articles/randomization/**.{md,yml}"
+        ]      
+      }
+    ],
+    "resource" : [
+      {
+        "files":[ "articles/randomization/images/**"]
+      }
+    ],
+    "dest": "pdf",
+    "template": ["templates/pdf.vr-builder"],
+    "wkhtmltopdf": {
+      "additionalArguments": "--enable-local-file-access"
+    }
+  }
+}

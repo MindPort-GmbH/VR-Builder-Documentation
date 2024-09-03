@@ -11,7 +11,9 @@
           "exclude": [
             "*Tests*.csproj",
             "*DemoScene*.csproj",
-            "VRBuilder.Community.csproj"
+            "VRBuilder.Community.csproj",
+            "*VIRTOSHA*.csproj",
+            "*UserInterface*.csproj"
         ]
         }
       ],
@@ -32,7 +34,8 @@
           "**/*.{md,yml}"
         ],
         "exclude": [
-          "_site/**"
+          "_site/**",
+          "pdf/**"
         ]
       }
     ],
@@ -53,7 +56,7 @@
     "template": [
       "default",
       "modern"
-    ],
+    ],    
     "globalMetadata": {
       "_appName": "VR Builder Documentation",
       "_appTitle": "VR Builder Documentation",
@@ -67,6 +70,25 @@
         "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
         "branch": "develop"
     }
+    }
+  },
+  "pdf": {
+    "content": [
+      {
+        "files": [
+          "articles/core/**.{md,yml}"
+        ]      
+      }
+    ],
+    "resource" : [
+      {
+        "files":[ "articles/core/images/**"]
+      }
+    ],
+    "dest": "pdf",
+    "template": ["templates/pdf.vr-builder"],
+    "wkhtmltopdf": {
+      "additionalArguments": "--enable-local-file-access"
     }
   }
 }

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Score Tracking | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Score Tracking | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="score-tracking">Score Tracking</h2>
+
+<p>One of the aims of this add-on is to provide an easy way to track scores and quantify performance in a VR process. For this, the main tool is the <code>Update Score</code> behavior, which can add or subtract from a numerical data property and trigger relevant user feedback.</p>
+<h3 id="update-score-behavior">Update Score Behavior</h3>
+<p>The <code>Update Score</code> behavior requires you to specify a <code>Number Data Property</code> holding the score and the amount increase. Note that this can be a negative amount. When the behavior is triggered, the value in the data property will be updated accordingly.</p>
+<p><img src="images/update-score-behavior.png" alt="Update Score Behavior"></p>
+<p>Additionally, you can add feedback to the score increase by referencing a feedback provider object in the <code>Feedback property</code> field. If you do, you can also specify a process scene object which will provide the position for position-dependent feedback, like the floating text in our default implementation.If no position provider is referenced, feedback using a position parameter will default to the feedback provider object’s position.</p>
+<h3 id="feedback-providers">Feedback Providers</h3>
+<p>You can customize the user feedback for a score increase by adding score feedback components to a game object with a <code>Score Feedback Property</code>. When the <code>Update Score</code> behavior triggers, every component on the game object will trigger its feedback.</p>
+<p>For example, we offer two prefabs, one for providing positive feedback, one for negative. Both play a sound and display a floating number showing the score increase when triggered. If a position provider is specified in the behavior, both the floating number and the sound will trigger at the specified position, else it will trigger at the feedback object&#39;s position.</p>
+<p><img src="images/score-feedback-provider.png" alt="Score Feedback Provider"></p>
+<p>This happens because the game object includes both a <code>Floating Text Score Feedback</code> component and an <code>Audio Score Feedback</code> component. These can be further configured by changing the prefabs they spawn, and new components can be added.</p>
+<h4 id="creating-custom-score-feedback-providers">Creating Custom Score Feedback Providers</h4>
+<p>Creating your own score feedback provider components requires minimal coding skills. Just create a component implementing the <code>IScoreFeedbackProvider</code> interface and trigger your logic in the <code>TriggerFeedback</code> method.</p>
+<pre><code>public class MyScoreFeedbackProvider : MonoBehaviour, IScoreFeedbackProvider
+{
+    public void TriggerFeedback(float scoreDelta, float finalScore, Transform positionProvider)
+    {
+        // TODO Implement feedback logic.
+    }
+}
+</code></pre><p>To customize your feedback, you can use the following parameters.</p>
+<ul>
+<li><code>scoreDelta</code>: The score increase.</li>
+<li><code>finalScore</code>: The total score after the increase.</li>
+<li><code>positionProvider</code>: The transform where to trigger the feedback.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/track-and-measure/score-tracking.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
