@@ -113,12 +113,14 @@ The parallel execution node lets you execute two or more step sequences at the s
 Clicking on a Parallel Path button will open a new graph where the path can be edited. This is very similar to a step group, with the difference that there can be multiple parallel paths and they are all executed at the same time.
 Like with step groups, it is possible to return to the main process by clicking the root chapter on the top left of the process editor.
 
-The buttons next to a parallel path let you rename or delete it. The "+" button at the bottom lets you add more parallel paths. There is no theoretical limit to the number of paths in a parallel execution node, but performance might suffer.
+The buttons next to a parallel path let you make the path optional, rename it or delete it. Non-optional paths are displayed with the continuous arrow icon, while the interrupted arrow icon denotes that a path is optional.
+
+When all non-optional paths have finished execution, the node ends execution as well. All optional paths are immediately interrupted. It can be useful to create optional paths to display looping animations, recurring hints and so on - they can even be endless loops, as they will be interrupted anyway when the step ends.
+
+The "+" button at the bottom lets you add more parallel paths. There is no theoretical limit to the number of paths in a parallel execution node, but performance might suffer.
 
 ##### End Chapter
 
-You can use this node as the last node on a sequence. It will end the current chapter and start a new specified chapter, which can be selected from a drop-down list. This is useful to move through the chapters in a non-linear fashion. Note that you are not required to use this node for linear processes, as a chapter will automatically end when an empty transition is reached. In that case, the process will simply proceed to the following chapter.
+You can use this node as the last node on a sequence. It will immediately end the current chapter and start a new specified chapter, which can be selected from a drop-down list. This is useful to move through the chapters in a non-linear fashion. Note that you are not required to use this node for linear processes, as a chapter will automatically end when an empty transition is reached. In that case, the process will simply proceed to the following chapter.
 
 ![End chapter node](images/end-chapter-node.png)
-
-    Note: It is not recommended to use this node inside a step group as it will behave slightly differently (the nodes following the step group will be fast-forwarded before ending the chapter). It is currently not possible to create this node inside a step group.
