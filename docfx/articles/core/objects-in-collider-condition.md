@@ -19,4 +19,4 @@ The Move Objects in Collider condition is fulfilled when the (`Required object c
 
 - **Required object count**
 
-    Set how much `Objects` should stay inside the `Collider`. If it's set to **0** it's always fulfilled. If the `Process Scene Objects` count is **higher than** `Required object count` it's **unfulfillable**.
+    Set how many `Objects` should stay inside the `Collider` at the same time. If this is set to **0**, the condition is always fulfilled. If the `Process Scene Objects` count is **higher than** `Required object count` it's **unfulfillable**.
