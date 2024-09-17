@@ -75,7 +75,7 @@
   
   <h1 id="VRBuilder_Core_Behaviors_GoToChapterBehavior" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior" class="text-break">Class GoToChapterBehavior
   </h1>
-  <div class="markdown level0 summary"><p>This behavior sets the next chapter to an arbitrary chapter and fast forwards to the end of the current chapter.</p>
+  <div class="markdown level0 summary"><p>This behavior sets the next chapter to an arbitrary chapter and immediately aborts the current chapter.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -119,6 +119,9 @@
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetDeactivatingProcess">Entity&lt;GoToChapterBehavior.EntityData&gt;.GetDeactivatingProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetAbortingProcess">Entity&lt;GoToChapterBehavior.EntityData&gt;.GetAbortingProcess()</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_GetConfigurator">Entity&lt;GoToChapterBehavior.EntityData&gt;.GetConfigurator()</a>
@@ -165,7 +168,7 @@ public class GoToChapterBehavior : Behavior&lt;GoToChapterBehavior.EntityData&gt
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.GoToChapterBehavior.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L31">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L33">View Source</a>
   </span>
   <a id="VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor_" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.#ctor*"></a>
   <h4 id="VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.#ctor">GoToChapterBehavior()</h4>
@@ -179,18 +182,18 @@ public GoToChapterBehavior()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.GoToChapterBehavior.%23ctor(System.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor_System_Guid_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.GoToChapterBehavior.%23ctor(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L36">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L38">View Source</a>
   </span>
   <a id="VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor_" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.#ctor*"></a>
-  <h4 id="VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor_System_Guid_System_String_" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.#ctor(System.Guid,System.String)">GoToChapterBehavior(Guid, String)</h4>
+  <h4 id="VRBuilder_Core_Behaviors_GoToChapterBehavior__ctor_System_Guid_" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.#ctor(System.Guid)">GoToChapterBehavior(Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GoToChapterBehavior(Guid chapterGuid, string name = &quot;Go to Chapter&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public GoToChapterBehavior(Guid chapterGuid)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,11 +210,6 @@ public GoToChapterBehavior()</code></pre>
         <td><span class="parametername">chapterGuid</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -221,11 +219,12 @@ public GoToChapterBehavior()</code></pre>
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_GoToChapterBehavior_GetActivatingProcess.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.GoToChapterBehavior.GetActivatingProcess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L82">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L85">View Source</a>
   </span>
   <a id="VRBuilder_Core_Behaviors_GoToChapterBehavior_GetActivatingProcess_" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.GetActivatingProcess*"></a>
   <h4 id="VRBuilder_Core_Behaviors_GoToChapterBehavior_GetActivatingProcess" data-uid="VRBuilder.Core.Behaviors.GoToChapterBehavior.GetActivatingProcess">GetActivatingProcess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new instance of a process for the Activating <a class="xref" href="VRBuilder.Core.Stage.html">Stage</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -278,7 +277,7 @@ public GoToChapterBehavior()</code></pre>
                     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_GoToChapterBehavior.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.GoToChapterBehavior%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/feature/mp-2811-outline-shader/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Conditions-And-Behaviors/Runtime/Behaviors/GoToChapterBehavior.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
