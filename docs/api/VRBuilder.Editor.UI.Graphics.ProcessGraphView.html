@@ -1,828 +1,1118 @@
 ﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+  
   <head>
     <meta charset="utf-8">
-      <title>Class ProcessGraphView | VR Builder Documentation </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ProcessGraphView | VR Builder Documentation ">
-      
-      <meta name="description" content="Graphical representation of a process chapter.">
-      <link rel="icon" href="../images/favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      <meta name="docfx:rel" content="../">
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
-
-      <script type="module" src="./../public/docfx.min.js"></script>
-
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProcessGraphView
+   | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProcessGraphView
+   | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
   </head>
-
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
-            VR Builder Documentation
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-              <form class="search" role="search" id="search">
-                <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
               </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
-
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
-
-        <article data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView">
-
-
-
-  <h1 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView" class="text-break">
-Class ProcessGraphView  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L23"><i class="bi bi-code-slash"></i></a>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView">
+  
+  
+  <h1 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView" class="text-break">Class ProcessGraphView
   </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="VRBuilder.html">VRBuilder</a>.<a class="xref" href="VRBuilder.Editor.html">Editor</a>.<a class="xref" href="VRBuilder.Editor.UI.html">UI</a>.<a class="xref" href="VRBuilder.Editor.UI.Graphics.html">Graphics</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>VRBuilder.Editor.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Graphical representation of a process chapter.</p>
+  <div class="markdown level0 summary"><p>Graphical representation of a process chapter.</p>
 </div>
-  <div class="markdown conceptual"></div>
-
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnityEngine.UIElements.CallbackEventHandler</span></div>
+    <div class="level2"><span class="xref">UnityEngine.UIElements.Focusable</span></div>
+    <div class="level3"><span class="xref">UnityEngine.UIElements.VisualElement</span></div>
+    <div class="level4"><span class="xref">UnityEditor.Experimental.GraphView.GraphView</span></div>
+    <div class="level5"><span class="xref">ProcessGraphView</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">UnityEngine.UIElements.IEventHandler</span></div>
+    <div><span class="xref">UnityEngine.UIElements.ITransform</span></div>
+    <div><span class="xref">UnityEngine.UIElements.Experimental.ITransitionAnimations</span></div>
+    <div><span class="xref">UnityEngine.UIElements.IExperimentalFeatures</span></div>
+    <div><span class="xref">UnityEngine.UIElements.IVisualElementScheduler</span></div>
+    <div><span class="xref">UnityEngine.UIElements.IResolvedStyle</span></div>
+    <div><span class="xref">UnityEditor.Experimental.GraphView.ISelection</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.ports</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.UpdateViewTransform(UnityEngine.Vector3, UnityEngine.Vector3)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetPortCenterOverride(UnityEditor.Experimental.GraphView.Port, UnityEngine.Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.AddLayer(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetElementByGuid(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetNodeByGuid(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetPortByGuid(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetEdgeByGuid(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.SetupZoom(System.Single, System.Single)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.SetupZoom(System.Single, System.Single, System.Single, System.Single)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.ValidateTransform()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.AddToSelection(UnityEditor.Experimental.GraphView.ISelectable)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.RemoveFromSelection(UnityEditor.Experimental.GraphView.ISelectable)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.ClearSelection()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.ExecuteDefaultActionAtTarget(UnityEngine.UIElements.EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.ExecuteDefaultAction(UnityEngine.UIElements.EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CollectElements(System.Collections.Generic.IEnumerable&lt;UnityEditor.Experimental.GraphView.GraphElement&gt;, System.Collections.Generic.HashSet&lt;UnityEditor.Experimental.GraphView.GraphElement&gt;, System.Func&lt;UnityEditor.Experimental.GraphView.GraphElement, System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CollectCopyableGraphElements(System.Collections.Generic.IEnumerable&lt;UnityEditor.Experimental.GraphView.GraphElement&gt;, System.Collections.Generic.HashSet&lt;UnityEditor.Experimental.GraphView.GraphElement&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CopySelectionCallback()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CutSelectionCallback()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.PasteCallback()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.DuplicateSelectionCallback()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.DeleteSelectionCallback(UnityEditor.Experimental.GraphView.GraphView.AskUser)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.SerializeGraphElements(System.Collections.Generic.IEnumerable&lt;UnityEditor.Experimental.GraphView.GraphElement&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CanPasteSerializedData(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.UnserializeAndPasteOperation(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.DeleteSelectionOperation(System.String, UnityEditor.Experimental.GraphView.GraphView.AskUser)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.AddElement(UnityEditor.Experimental.GraphView.GraphElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.RemoveElement(UnityEditor.Experimental.GraphView.GraphElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.DeleteSelection()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.DeleteElements(System.Collections.Generic.IEnumerable&lt;UnityEditor.Experimental.GraphView.GraphElement&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FrameAll()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FrameSelection()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FrameOrigin()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FramePrev()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FrameNext()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FramePrev(System.Func&lt;UnityEditor.Experimental.GraphView.GraphElement, System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.FrameNext(System.Func&lt;UnityEditor.Experimental.GraphView.GraphElement, System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CalculateRectToFitAll(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CalculateFrameTransform(UnityEngine.Rect, UnityEngine.Rect, System.Int32, UnityEngine.Vector3, UnityEngine.Vector3)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetBlackboard()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.ReleaseBlackboard(UnityEditor.Experimental.GraphView.Blackboard)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.CreatePlacematContainer()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.nodeCreationRequest</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.graphViewChanged</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.groupTitleChanged</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.elementsAddedToGroup</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.elementsRemovedFromGroup</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.elementsInsertedToStackNode</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.elementsRemovedFromStackNode</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.elementResized</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.viewTransformChanged</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.supportsWindowedBlackboard</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.contentViewContainer</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.viewport</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.viewTransform</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.isReframable</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.contentContainer</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.placematContainer</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.graphElements</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.nodes</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.edges</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.minScale</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.maxScale</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.scaleStep</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.referenceScale</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.scale</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.zoomerMaxElementCountWithPixelCacheRegen</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.selection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.canCopySelection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.canCutSelection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.canPaste</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.canDuplicateSelection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.canDeleteSelection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.serializeGraphElements</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.canPasteSerializedData</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.unserializeAndPaste</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.GraphView.deleteSelection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.disabledUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.SendEvent(UnityEngine.UIElements.EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.SetEnabledFromHierarchy(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.SetEnabled(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.MarkDirtyRepaint()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.ContainsPoint(UnityEngine.Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Overlaps(UnityEngine.Rect)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.DoMeasure(System.Single, UnityEngine.UIElements.VisualElement.MeasureMode, System.Single, UnityEngine.UIElements.VisualElement.MeasureMode)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.GetClasses()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.ClearClassList()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.AddToClassList(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.RemoveFromClassList(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.ToggleInClassList(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.EnableInClassList(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.ClassListContains(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.FindAncestorUserData()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Single, System.Single, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, System.Single&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.Rect, UnityEngine.Rect, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Rect&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.Color, UnityEngine.Color, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Color&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.Vector3, UnityEngine.Vector3, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Vector3&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.Vector2, UnityEngine.Vector2, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Vector2&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.Quaternion, UnityEngine.Quaternion, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Quaternion&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.UIElements.Experimental.StyleValues, UnityEngine.UIElements.Experimental.StyleValues, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Func&lt;UnityEngine.UIElements.VisualElement, System.Single&gt;, System.Single, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, System.Single&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Func&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Rect&gt;, UnityEngine.Rect, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Rect&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Func&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Color&gt;, UnityEngine.Color, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Color&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Func&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Vector3&gt;, UnityEngine.Vector3, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Vector3&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Func&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Vector2&gt;, UnityEngine.Vector2, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Vector2&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(System.Func&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Quaternion&gt;, UnityEngine.Quaternion, System.Int32, System.Action&lt;UnityEngine.UIElements.VisualElement, UnityEngine.Quaternion&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Start(UnityEngine.UIElements.Experimental.StyleValues, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Layout(UnityEngine.Rect, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.TopLeft(UnityEngine.Vector2, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Size(UnityEngine.Vector2, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Scale(System.Single, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Position(UnityEngine.Vector3, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.Experimental.ITransitionAnimations.Rotation(UnityEngine.Quaternion, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Add(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Insert(System.Int32, UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Remove(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.RemoveAt(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Clear()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.ElementAt(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.IndexOf(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Children()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Sort(System.Comparison&lt;UnityEngine.UIElements.VisualElement&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.BringToFront()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.SendToBack()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.PlaceBehind(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.PlaceInFront(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.RemoveFromHierarchy()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.GetFirstOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.GetFirstAncestorOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Contains(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.FindCommonAncestor(UnityEngine.UIElements.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IVisualElementScheduler.Execute(System.Action&lt;UnityEngine.UIElements.TimerState&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IVisualElementScheduler.Execute(System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.viewDataKey</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.userData</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.canGrabFocus</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.focusController</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.usageHints</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.transform</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.ITransform.position</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.ITransform.rotation</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.ITransform.scale</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.ITransform.matrix</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.layout</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.contentRect</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.paddingRect</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.worldBound</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.localBound</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.worldTransform</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.pickingMode</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.name</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.enabledInHierarchy</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.enabledSelf</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.visible</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.generateVisualContent</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.experimental</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IExperimentalFeatures.animation</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.hierarchy</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.cacheAsBitmap</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.parent</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.panel</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.visualTreeAssetSource</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.childCount</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.schedule</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.style</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.customStyle</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.styleSheets</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.tooltip</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.resolvedStyle</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.alignContent</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.alignItems</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.alignSelf</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.backgroundColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.backgroundImage</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderBottomColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderBottomLeftRadius</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderBottomRightRadius</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderBottomWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderLeftColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderLeftWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderRightColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderRightWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderTopColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderTopLeftRadius</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderTopRightRadius</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.borderTopWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.bottom</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.color</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.display</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.flexBasis</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.flexDirection</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.flexGrow</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.flexShrink</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.flexWrap</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.fontSize</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.height</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.justifyContent</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.left</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.letterSpacing</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.marginBottom</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.marginLeft</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.marginRight</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.marginTop</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.maxHeight</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.maxWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.minHeight</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.minWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.opacity</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.paddingBottom</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.paddingLeft</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.paddingRight</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.paddingTop</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.position</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.right</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.rotate</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.scale</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.textOverflow</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.top</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.transformOrigin</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.transitionDelay</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.transitionDuration</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.transitionProperty</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.transitionTimingFunction</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.translate</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityBackgroundImageTintColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityBackgroundScaleMode</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityFont</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityFontDefinition</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityFontStyleAndWeight</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityParagraphSpacing</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unitySliceBottom</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unitySliceLeft</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unitySliceRight</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unitySliceTop</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityTextAlign</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityTextOutlineColor</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityTextOutlineWidth</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.unityTextOverflowPosition</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.visibility</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.whiteSpace</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.width</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.VisualElement.UnityEngine.UIElements.IResolvedStyle.wordSpacing</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.Focusable.Blur()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.Focusable.focusable</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.Focusable.tabIndex</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.Focusable.delegatesFocus</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.RegisterCallback&lt;TEventType&gt;(UnityEngine.UIElements.EventCallback&lt;TEventType&gt;, UnityEngine.UIElements.TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.RegisterCallback&lt;TEventType, TUserArgsType&gt;(UnityEngine.UIElements.EventCallback&lt;TEventType, TUserArgsType&gt;, TUserArgsType, UnityEngine.UIElements.TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback&lt;TEventType&gt;(UnityEngine.UIElements.EventCallback&lt;TEventType&gt;, UnityEngine.UIElements.TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback&lt;TEventType, TUserArgsType&gt;(UnityEngine.UIElements.EventCallback&lt;TEventType, TUserArgsType&gt;, UnityEngine.UIElements.TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.HandleEvent(UnityEngine.UIElements.EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.HasTrickleDownHandlers()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.UIElements.CallbackEventHandler.HasBubbleUpHandlers()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Editor.UI.Graphics.html">VRBuilder.Editor.UI.Graphics</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.Editor.dll</h6>
+  <h5 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ProcessGraphView : GraphView, IEventHandler, ITransform, ITransitionAnimations, IExperimentalFeatures, IVisualElementScheduler, IResolvedStyle, ISelection</code></pre>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">CallbackEventHandler</span></div>
-      <div><span class="xref">Focusable</span></div>
-      <div><span class="xref">VisualElement</span></div>
-      <div><span class="xref">GraphView</span></div>
-      <div><span class="xref">ProcessGraphView</span></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><span class="xref">IEventHandler</span></div>
-      <div><span class="xref">ITransform</span></div>
-      <div><span class="xref">ITransitionAnimations</span></div>
-      <div><span class="xref">IExperimentalFeatures</span></div>
-      <div><span class="xref">IVisualElementScheduler</span></div>
-      <div><span class="xref">IResolvedStyle</span></div>
-      <div><span class="xref">ISelection</span></div>
-    </dd>
-  </dl>
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <span class="xref">GraphView.ports</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.UpdateViewTransform(Vector3, Vector3)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.GetPortCenterOverride(Port, out Vector2)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">GraphView.AddLayer(int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.GetElementByGuid(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.GetNodeByGuid(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.GetPortByGuid(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.GetEdgeByGuid(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">GraphView.SetupZoom(float, float)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">GraphView.SetupZoom(float, float, float, float)</a>
-    </div>
-    <div>
-      <span class="xref">GraphView.ValidateTransform()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.AddToSelection(ISelectable)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.RemoveFromSelection(ISelectable)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.ClearSelection()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.ExecuteDefaultActionAtTarget(EventBase)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.ExecuteDefaultAction(EventBase)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">GraphView.CollectElements(IEnumerable&lt;GraphElement&gt;, HashSet&lt;GraphElement&gt;, Func&lt;GraphElement, bool&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">GraphView.CollectCopyableGraphElements(IEnumerable&lt;GraphElement&gt;, HashSet&lt;GraphElement&gt;)</a>
-    </div>
-    <div>
-      <span class="xref">GraphView.CopySelectionCallback()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.CutSelectionCallback()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.PasteCallback()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.DuplicateSelectionCallback()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.DeleteSelectionCallback(GraphView.AskUser)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">GraphView.SerializeGraphElements(IEnumerable&lt;GraphElement&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.CanPasteSerializedData(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.UnserializeAndPasteOperation(string, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">GraphView.DeleteSelectionOperation(string, GraphView.AskUser)</a>
-    </div>
-    <div>
-      <span class="xref">GraphView.AddElement(GraphElement)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.RemoveElement(GraphElement)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.DeleteSelection()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">GraphView.DeleteElements(IEnumerable&lt;GraphElement&gt;)</a>
-    </div>
-    <div>
-      <span class="xref">GraphView.FrameAll()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.FrameSelection()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.FrameOrigin()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.FramePrev()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.FrameNext()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">GraphView.FramePrev(Func&lt;GraphElement, bool&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">GraphView.FrameNext(Func&lt;GraphElement, bool&gt;)</a>
-    </div>
-    <div>
-      <span class="xref">GraphView.CalculateRectToFitAll(VisualElement)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">GraphView.CalculateFrameTransform(Rect, Rect, int, out Vector3, out Vector3)</a>
-    </div>
-    <div>
-      <span class="xref">GraphView.GetBlackboard()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.ReleaseBlackboard(Blackboard)</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.CreatePlacematContainer()</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.nodeCreationRequest</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.graphViewChanged</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.groupTitleChanged</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.elementsAddedToGroup</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.elementsRemovedFromGroup</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.elementsInsertedToStackNode</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.elementsRemovedFromStackNode</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.elementResized</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.viewTransformChanged</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.supportsWindowedBlackboard</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.contentViewContainer</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.viewport</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.viewTransform</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.isReframable</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.contentContainer</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.placematContainer</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.graphElements</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.nodes</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.edges</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.minScale</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.maxScale</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.scaleStep</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.referenceScale</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.scale</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.zoomerMaxElementCountWithPixelCacheRegen</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.selection</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.canCopySelection</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.canCutSelection</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.canPaste</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.canDuplicateSelection</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.canDeleteSelection</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.serializeGraphElements</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.canPasteSerializedData</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.unserializeAndPaste</span>
-    </div>
-    <div>
-      <span class="xref">GraphView.deleteSelection</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.disabledUssClassName</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Focus()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.SendEvent(EventBase)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetEnabledFromHierarchy(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetEnabled(bool)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.MarkDirtyRepaint()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.ContainsPoint(Vector2)</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Overlaps(Rect)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.DoMeasure(float, VisualElement.MeasureMode, float, VisualElement.MeasureMode)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.GetClasses()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.ClearClassList()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.AddToClassList(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.RemoveFromClassList(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.ToggleInClassList(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.EnableInClassList(string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.ClassListContains(string)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.FindAncestorUserData()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Add(VisualElement)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.Insert(int, VisualElement)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Remove(VisualElement)</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.RemoveAt(int)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Clear()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ElementAt(int)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.IndexOf(VisualElement)</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Children()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.comparison-1">VisualElement.Sort(Comparison&lt;VisualElement&gt;)</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.BringToFront()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.SendToBack()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.PlaceBehind(VisualElement)</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.PlaceInFront(VisualElement)</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.RemoveFromHierarchy()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.GetFirstOfType&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.GetFirstAncestorOfType&lt;T&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.Contains(VisualElement)</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.FindCommonAncestor(VisualElement)</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.viewDataKey</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.userData</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.canGrabFocus</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.focusController</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.usageHints</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.transform</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.layout</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.contentRect</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.paddingRect</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.worldBound</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.localBound</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.worldTransform</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.pickingMode</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.name</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.enabledInHierarchy</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.enabledSelf</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.visible</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.generateVisualContent</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.experimental</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.hierarchy</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.cacheAsBitmap</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.parent</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.panel</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.visualTreeAssetSource</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.this[int]</a>
-    </div>
-    <div>
-      <span class="xref">VisualElement.childCount</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.schedule</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.style</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.customStyle</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.styleSheets</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.tooltip</span>
-    </div>
-    <div>
-      <span class="xref">VisualElement.resolvedStyle</span>
-    </div>
-    <div>
-      <span class="xref">Focusable.Blur()</span>
-    </div>
-    <div>
-      <span class="xref">Focusable.focusable</span>
-    </div>
-    <div>
-      <span class="xref">Focusable.tabIndex</span>
-    </div>
-    <div>
-      <span class="xref">Focusable.delegatesFocus</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TUserArgsType, TrickleDown)</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.UnregisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.UnregisterCallback&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TrickleDown)</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.HandleEvent(EventBase)</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.HasTrickleDownHandlers()</span>
-    </div>
-    <div>
-      <span class="xref">CallbackEventHandler.HasBubbleUpHandlers()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView__ctor_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.#ctor*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView__ctor" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.#ctor">
-  ProcessGraphView()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <h3 id="constructors">Constructors
   </h3>
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView__ctor.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L30">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView__ctor_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.#ctor*"></a>
+  <h4 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView__ctor" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.#ctor">ProcessGraphView()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ProcessGraphView()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_BuildContextualMenu_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.BuildContextualMenu*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_BuildContextualMenu_UnityEngine_UIElements_ContextualMenuPopulateEvent_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)">
-  BuildContextualMenu(ContextualMenuPopulateEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <h3 id="methods">Methods
   </h3>
-
-  <div class="markdown level1 summary"><p>Add menu items to the contextual menu.</p>
-</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView_BuildContextualMenu_UnityEngine_UIElements_ContextualMenuPopulateEvent_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L121">View Source</a>
+  </span>
+  <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_BuildContextualMenu_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.BuildContextualMenu*"></a>
+  <h4 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_BuildContextualMenu_UnityEngine_UIElements_ContextualMenuPopulateEvent_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)">BuildContextualMenu(ContextualMenuPopulateEvent)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>evt</code> <span class="xref">ContextualMenuPopulateEvent</span></dt>
-    <dd><p>The event holding the menu to populate.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.UIElements.ContextualMenuPopulateEvent</span></td>
+        <td><span class="parametername">evt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEditor.Experimental.GraphView.GraphView.BuildContextualMenu(UnityEngine.UIElements.ContextualMenuPopulateEvent)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView_GetCompatiblePorts_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_NodeAdapter_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView.GetCompatiblePorts(UnityEditor.Experimental.GraphView.Port%2CUnityEditor.Experimental.GraphView.NodeAdapter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L105">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_GetCompatiblePorts_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.GetCompatiblePorts*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_GetCompatiblePorts_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_NodeAdapter_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.GetCompatiblePorts(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.NodeAdapter)">
-  GetCompatiblePorts(Port, NodeAdapter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L105"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Get all ports compatible with given port.</p>
-</div>
+  <h4 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_GetCompatiblePorts_UnityEditor_Experimental_GraphView_Port_UnityEditor_Experimental_GraphView_NodeAdapter_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.GetCompatiblePorts(UnityEditor.Experimental.GraphView.Port,UnityEditor.Experimental.GraphView.NodeAdapter)">GetCompatiblePorts(Port, NodeAdapter)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override List&lt;Port&gt; GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>startPort</code> <span class="xref">Port</span></dt>
-    <dd><p>Start port to validate against.</p>
-</dd>
-    <dt><code>nodeAdapter</code> <span class="xref">NodeAdapter</span></dt>
-    <dd><p>Node adapter.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Port</span>&gt;</dt>
-    <dd><p>List of compatible ports.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEditor.Experimental.GraphView.Port</span></td>
+        <td><span class="parametername">startPort</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEditor.Experimental.GraphView.NodeAdapter</span></td>
+        <td><span class="parametername">nodeAdapter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">UnityEditor.Experimental.GraphView.Port</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">UnityEditor.Experimental.GraphView.GraphView.GetCompatiblePorts(UnityEditor.Experimental.GraphView.Port, UnityEditor.Experimental.GraphView.NodeAdapter)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView_RefreshSelectedNode.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView.RefreshSelectedNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L67">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_RefreshSelectedNode_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.RefreshSelectedNode*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_RefreshSelectedNode" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.RefreshSelectedNode">
-  RefreshSelectedNode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L67"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_RefreshSelectedNode" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.RefreshSelectedNode">RefreshSelectedNode()</h4>
   <div class="markdown level1 summary"><p>Updates visualization of the node selected in the step inspector.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RefreshSelectedNode()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView_SetChapter_VRBuilder_Core_IChapter_.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView.SetChapter(VRBuilder.Core.IChapter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L264">View Source</a>
+  </span>
   <a id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_SetChapter_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.SetChapter*"></a>
-
-  <h3 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_SetChapter_VRBuilder_Core_IChapter_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.SetChapter(VRBuilder.Core.IChapter)">
-  SetChapter(IChapter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L264"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="VRBuilder_Editor_UI_Graphics_ProcessGraphView_SetChapter_VRBuilder_Core_IChapter_" data-uid="VRBuilder.Editor.UI.Graphics.ProcessGraphView.SetChapter(VRBuilder.Core.IChapter)">SetChapter(IChapter)</h4>
   <div class="markdown level1 summary"><p>Displays the specified chapter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetChapter(IChapter chapter)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>chapter</code> <a class="xref" href="VRBuilder.Core.IChapter.html">IChapter</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.IChapter.html">IChapter</a></td>
+        <td><span class="parametername">chapter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">UnityEngine.UIElements.IEventHandler</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UIElements.ITransform</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UIElements.Experimental.ITransitionAnimations</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UIElements.IExperimentalFeatures</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UIElements.IVisualElementScheduler</span>
+  </div>
+  <div>
+      <span class="xref">UnityEngine.UIElements.IResolvedStyle</span>
+  </div>
+  <div>
+      <span class="xref">UnityEditor.Experimental.GraphView.ISelection</span>
+  </div>
 </article>
-
-        <div class="contribution d-print-none">
-          <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L23" class="edit-link">Edit this page</a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Editor_UI_Graphics_ProcessGraphView.md&amp;value=---%0Auid%3A%20VRBuilder.Editor.UI.Graphics.ProcessGraphView%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Editor/UI/GraphView/ProcessGraphView.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-    <div class="container-xxl search-results" id="search-results"></div>
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>
