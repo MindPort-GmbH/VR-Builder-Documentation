@@ -2,4 +2,6 @@
 documentType: cover
 ---
 # VR Builder
-## User Manual
+
+[//]: # (Subtitle)
+Open source toolkit for VR creation

@@ -85,10 +85,8 @@
     <div class="level2"><a class="xref" href="VRBuilder.Core.CompletableEntity-1.html">CompletableEntity</a>&lt;TData&gt;</div>
     <div class="level3"><span class="xref">Condition&lt;TData&gt;</span></div>
       <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.GrabbedCondition.html">GrabbedCondition</a></div>
-      <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.GrabbedObjectWithTagCondition.html">GrabbedObjectWithTagCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.ReleasedCondition.html">ReleasedCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.SnappedCondition.html">SnappedCondition</a></div>
-      <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.SnappedObjectWithTagCondition.html">SnappedObjectWithTagCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.TeleportCondition.html">TeleportCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.TouchedCondition.html">TouchedCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.BasicInteraction.Conditions.UsedCondition.html">UsedCondition</a></div>
@@ -96,8 +94,8 @@
       <div class="level4"><a class="xref" href="VRBuilder.Core.Conditions.ObjectInColliderCondition.html">ObjectInColliderCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.Core.Conditions.ObjectInRangeCondition.html">ObjectInRangeCondition</a></div>
       <div class="level4"><a class="xref" href="VRBuilder.Core.Conditions.TimeoutCondition.html">TimeoutCondition</a></div>
-      <div class="level4"><a class="xref" href="VRBuilder.Randomization.Conditions.RandomlySelectedCondition.html">RandomlySelectedCondition</a></div>
-      <div class="level4"><a class="xref" href="VRBuilder.StatesAndData.Conditions.CheckStateCondition.html">CheckStateCondition</a></div>
+      <div class="level4"><a class="xref" href="VRBuilder.Pro.Conditions.CheckStateCondition.html">CheckStateCondition</a></div>
+      <div class="level4"><a class="xref" href="VRBuilder.Pro.Conditions.RandomlySelectedCondition.html">RandomlySelectedCondition</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -109,7 +107,7 @@
     <div><a class="xref" href="VRBuilder.Core.IDataOwner-1.html">IDataOwner</a>&lt;<a class="xref" href="VRBuilder.Core.Conditions.IConditionData.html">IConditionData</a>&gt;</div>
     <div><a class="xref" href="VRBuilder.Core.IDataOwner.html">IDataOwner</a></div>
     <div><a class="xref" href="VRBuilder.Core.IClonable-1.html">IClonable</a>&lt;<a class="xref" href="VRBuilder.Core.Conditions.ICondition.html">ICondition</a>&gt;</div>
-    <div><a class="xref" href="VRBuilder.Core.ILockablePropertiesProvider.html">ILockablePropertiesProvider</a></div>
+    <div><a class="xref" href="VRBuilder.Core.RestrictiveEnvironment.ILockablePropertiesProvider.html">ILockablePropertiesProvider</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -156,10 +154,16 @@
       <a class="xref" href="VRBuilder.Core.Entity-1.html#VRBuilder_Core_Entity_1_Update">Entity&lt;TData&gt;.Update()</a>
     </div>
     <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.GetHashCode()</span>
@@ -169,12 +173,6 @@
     </div>
     <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.Conditions.html">VRBuilder.Core.Conditions</a></h6>
@@ -206,7 +204,7 @@ public abstract class Condition&lt;TData&gt; : CompletableEntity&lt;TData&gt;, I
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Conditions_Condition_1__ctor.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Conditions.Condition%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Runtime/Conditions/Condition.cs/#L20">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Conditions/Condition.cs/#L21">View Source</a>
   </span>
   <a id="VRBuilder_Core_Conditions_Condition_1__ctor_" data-uid="VRBuilder.Core.Conditions.Condition`1.#ctor*"></a>
   <h4 id="VRBuilder_Core_Conditions_Condition_1__ctor" data-uid="VRBuilder.Core.Conditions.Condition`1.#ctor">Condition()</h4>
@@ -223,7 +221,7 @@ public abstract class Condition&lt;TData&gt; : CompletableEntity&lt;TData&gt;, I
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Conditions_Condition_1_Clone.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Conditions.Condition%601.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Runtime/Conditions/Condition.cs/#L41">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Conditions/Condition.cs/#L42">View Source</a>
   </span>
   <a id="VRBuilder_Core_Conditions_Condition_1_Clone_" data-uid="VRBuilder.Core.Conditions.Condition`1.Clone*"></a>
   <h4 id="VRBuilder_Core_Conditions_Condition_1_Clone" data-uid="VRBuilder.Core.Conditions.Condition`1.Clone">Clone()</h4>
@@ -254,7 +252,7 @@ public abstract class Condition&lt;TData&gt; : CompletableEntity&lt;TData&gt;, I
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Conditions_Condition_1_GetLockableProperties.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Conditions.Condition%601.GetLockableProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Runtime/Conditions/Condition.cs/#L47">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Conditions/Condition.cs/#L48">View Source</a>
   </span>
   <a id="VRBuilder_Core_Conditions_Condition_1_GetLockableProperties_" data-uid="VRBuilder.Core.Conditions.Condition`1.GetLockableProperties*"></a>
   <h4 id="VRBuilder_Core_Conditions_Condition_1_GetLockableProperties" data-uid="VRBuilder.Core.Conditions.Condition`1.GetLockableProperties">GetLockableProperties()</h4>
@@ -287,7 +285,7 @@ public abstract class Condition&lt;TData&gt; : CompletableEntity&lt;TData&gt;, I
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Conditions_Condition_1_VRBuilder_Core_IDataOwner_VRBuilder_Core_Conditions_IConditionData__Data.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Conditions.Condition%601.VRBuilder%23Core%23IDataOwner%7BVRBuilder%23Core%23Conditions%23IConditionData%7D%23Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Runtime/Conditions/Condition.cs/#L32">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Conditions/Condition.cs/#L33">View Source</a>
   </span>
   <a id="VRBuilder_Core_Conditions_Condition_1_VRBuilder_Core_IDataOwner_VRBuilder_Core_Conditions_IConditionData__Data_" data-uid="VRBuilder.Core.Conditions.Condition`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data*"></a>
   <h4 id="VRBuilder_Core_Conditions_Condition_1_VRBuilder_Core_IDataOwner_VRBuilder_Core_Conditions_IConditionData__Data" data-uid="VRBuilder.Core.Conditions.Condition`1.VRBuilder#Core#IDataOwner{VRBuilder#Core#Conditions#IConditionData}#Data">IDataOwner&lt;IConditionData&gt;.Data</h4>
@@ -339,7 +337,7 @@ public abstract class Condition&lt;TData&gt; : CompletableEntity&lt;TData&gt;, I
       <a class="xref" href="VRBuilder.Core.IClonable-1.html">IClonable&lt;T&gt;</a>
   </div>
   <div>
-      <a class="xref" href="VRBuilder.Core.ILockablePropertiesProvider.html">ILockablePropertiesProvider</a>
+      <a class="xref" href="VRBuilder.Core.RestrictiveEnvironment.ILockablePropertiesProvider.html">ILockablePropertiesProvider</a>
   </div>
 </article>
           </div>
@@ -352,7 +350,7 @@ public abstract class Condition&lt;TData&gt; : CompletableEntity&lt;TData&gt;, I
                     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Conditions_Condition_1.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Conditions.Condition%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Core/Runtime/Conditions/Condition.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Conditions/Condition.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

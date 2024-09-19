@@ -91,10 +91,16 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.GetHashCode()</span>
@@ -104,12 +110,6 @@
     </div>
     <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.BasicInteraction.Behaviors.html">VRBuilder.BasicInteraction.Behaviors</a></h6>
@@ -127,7 +127,7 @@ public class EntityData : IBehaviorData, INamedData, IData</code></pre>
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_Metadata.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.Metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L46">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Runtime/Behaviors/UnsnapBehavior.cs/#L35">View Source</a>
   </span>
   <a id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_Metadata_" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.Metadata*"></a>
   <h4 id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_Metadata" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.Metadata">Metadata</h4>
@@ -157,7 +157,7 @@ public class EntityData : IBehaviorData, INamedData, IData</code></pre>
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_Name.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L49">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Runtime/Behaviors/UnsnapBehavior.cs/#L38">View Source</a>
   </span>
   <a id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_Name_" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.Name*"></a>
   <h4 id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_Name" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.Name">Name</h4>
@@ -186,76 +186,10 @@ public string Name { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_SnappedObject.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.SnappedObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L30">View Source</a>
-  </span>
-  <a id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_SnappedObject_" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.SnappedObject*"></a>
-  <h4 id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_SnappedObject" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.SnappedObject">SnappedObject</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[Obsolete(&quot;Use TargetObject instead.&quot;)]
-[LegacyProperty(&quot;TargetObject&quot;)]
-public ScenePropertyReference&lt;ISnappableProperty&gt; SnappedObject { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html">ScenePropertyReference</a>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.ISnappableProperty.html">ISnappableProperty</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_SnapZone.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.SnapZone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L40">View Source</a>
-  </span>
-  <a id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_SnapZone_" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.SnapZone*"></a>
-  <h4 id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_SnapZone" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.SnapZone">SnapZone</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[Obsolete(&quot;Use TargetSnapzone instead.&quot;)]
-[LegacyProperty(&quot;TargetSnapZone&quot;)]
-public ScenePropertyReference&lt;ISnapZoneProperty&gt; SnapZone { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="VRBuilder.Core.SceneObjects.ScenePropertyReference-1.html">ScenePropertyReference</a>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.ISnapZoneProperty.html">ISnapZoneProperty</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_TargetObject.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.TargetObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L26">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Runtime/Behaviors/UnsnapBehavior.cs/#L27">View Source</a>
   </span>
   <a id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_TargetObject_" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.TargetObject*"></a>
   <h4 id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_TargetObject" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.TargetObject">TargetObject</h4>
@@ -287,7 +221,7 @@ public SingleScenePropertyReference&lt;ISnappableProperty&gt; TargetObject { get
     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_TargetSnapZone.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.TargetSnapZone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L36">View Source</a>
+    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Runtime/Behaviors/UnsnapBehavior.cs/#L31">View Source</a>
   </span>
   <a id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_TargetSnapZone_" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.TargetSnapZone*"></a>
   <h4 id="VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData_TargetSnapZone" data-uid="VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData.TargetSnapZone">TargetSnapZone</h4>
@@ -335,7 +269,7 @@ public SingleScenePropertyReference&lt;ISnapZoneProperty&gt; TargetSnapZone { ge
                     <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Behaviors_UnsnapBehavior_EntityData.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Behaviors.UnsnapBehavior.EntityData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/release/v4.3.0/Source/Basic-Interaction-Component/Runtime/Behaviors/UnsnapBehavior.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Runtime/Behaviors/UnsnapBehavior.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

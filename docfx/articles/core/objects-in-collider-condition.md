@@ -2,8 +2,7 @@
 
 #### Description
 
-The Move Objects in Collider condition is fulfilled when the `Objects` are within the specified `Collider` for the required amount of time (`Required seconds inside`) while this condition is active.
-
+The Move Objects in Collider condition is fulfilled when the (`Required object count`) of `Objects` are within the specified `Collider` for the required amount of time (`Required seconds inside`) while this condition is active.
 #### Configuration
 
 - **Objects**
@@ -17,3 +16,7 @@ The Move Objects in Collider condition is fulfilled when the `Objects` are withi
 - **Required seconds inside**
 
     Set the time in seconds that the `Objects` should stay inside the `Collider`.
+
+- **Required object count**
+
+    Set how many `Objects` should stay inside the `Collider` at the same time. If this is set to **0**, the condition is always fulfilled. If the `Process Scene Objects` count is **higher than** `Required object count` it's **unfulfillable**.

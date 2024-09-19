@@ -1,5 +1,13 @@
 # VR Builder Documentation
 
+## Contribute
+
+To contribute, go to the [Documentation](https://mindport-gmbh.github.io/VR-Builder-Documentation/articles/core/introduction.html), navigate to the page you want to fix, and click on `Improve this Doc`. GitHub will guide you through the following steps:
+
+1. Fork the repository  
+2. Edit and commit your changes  
+3. Create a pull request 🎉
+
 ## Installation
 
 1. Pull this repo in a VR Builder Unity project folder (same level as Assets folder).
