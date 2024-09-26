@@ -12,7 +12,7 @@ The `Process Scene Objects` to point at.
 
 - **Pointer Resource**
 
-The prefab in a `Resources` folder that is used to point at the object. The prefab needs to contain an `Object Pointer` component. By default, it points to the `CompassArrow` prefab, which displays an arrow as described above.
+The prefab in a `Resources` folder that is used to point at the object. The prefab needs to contain an `Object Pointer` component. By default, it points to the `CompassArrow` prefab, which displays an arrow as described above. You can select a different prefab if you wish, like for example the `CircleArrow` prefab in the `StaticAssets/Resources` folder of this add-on.
 
 #### Pointer Customization
 
