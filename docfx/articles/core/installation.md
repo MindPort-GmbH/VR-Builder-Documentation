@@ -45,7 +45,7 @@ Finally you must choose whether to set up localization support or skip it for no
 
 This page lists some useful resources to get you started with VR Builder. There is also a checkbox which lets you choose if the demo scene should be loaded after closing the wizard.After clicking Finish, VR Builder is set up! You will need to wait a few seconds for packages to import if you selected a headset from the hardware list. Then, feel free to try out the demo scene or create your own scene by selecting `Tools > VR Builder > Scene Setup Wizard…`.
 
-If the demo scene or any other asset looks solid magenta there is an issue with the shader of the material. The Demo Scenes in VR Builder version 4 used the Built-In Render Pipeline, while VR Builder version 5 uses the Universal Render Pipeline (URP).
+If the demo scene or any other asset looks solid magenta there is an issue with the shader of the material. The Demo Scenes in VR Builder VR Builder version 5 uses the Universal Render Pipeline (URP).
 
 To convert the materials from the SRP to URP, follow the Unity Manual using the [Render Pipeline Converter](https://docs.unity3d.com/6000.0/Documentation/Manual/urp/features/rp-converter.html).
 
