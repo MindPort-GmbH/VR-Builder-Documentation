@@ -4,7 +4,7 @@ VR Builder helps you create interactive VR applications better and faster. By se
 
 You can easily edit a process without coding through VR Builder's process editor. The process editor is a node editor where the user can arrange and connect the *steps* of the process. Each step is a different node and can include any number of *behaviors*, which make things happen in the scene. Likewise, a step will have at least one *transition* leading to another step. Every transition can list several *conditions* which have to be completed for the transition to trigger. For example, step B can be reached only after the user has grabbed the object specified in step A.
 
-Behaviors and conditions are the "building blocks" of VR Builder. Several of them are provided in the free version already. Additional behaviors and conditions are available in our paid add-ons. Since VR Builder is open source, you can always write your own behaviors and conditions as well.
+Behaviors and conditions are the "building blocks" of VR Builder. Several of them are provided in the free open-source version already. Additional behaviors and conditions are available in the commercial version, available on the [Unity Asset Store](https://u3d.as/3pUD) and to Enterprise customers and Content Partners. Since VR Builder is open source and has an open API, you can always write your own behaviors and conditions as well.
 
 Behaviors and conditions can interact only with *process scene objects*. These are game objects in the scene which have a `Process Scene Object` component on them.
 

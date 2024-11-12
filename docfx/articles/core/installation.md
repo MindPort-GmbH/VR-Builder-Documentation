@@ -1,20 +1,11 @@
 ## Installation
 
-You can get VR Builder from the [Unity Asset Store](https://assetstore.unity.com/packages/tools/visual-scripting/vr-builder-201913) or from our [GitHub](https://github.com/MindPort-GmbH/VR-Builder/releases). In the first case, you will be able to download and import the VR Builder package from the package manager. If you have downloaded a .unitypackage from GitHub, just import it in the project.
+You can get VR Builder from the [Unity Asset Store](https://u3d.as/3pUD) or from our [GitHub](https://github.com/MindPort-GmbH/VR-Builder/releases). In the first case, you will download and import the VR Builder package from the Package Manager. From GitHub, you can either download a released .UnityPackage or pull the repository and import the 
+`package.json` file in the Package Manager.
 
 If you are creating a new project, select `Universal 3D` template. Note that it is not necessary to choose the `VR` template as VR Builder will configure the project for VR automatically.
 
-After importing, VR Builder will compile and import some dependencies. 
-
-For older Unity versions, a dialog from Unity's XR Interaction Component appears. VR Builder should work with either choice, so select the option that better suits your existing project. Use `I Made a Backup, Go Ahead!` if you are starting a new project. This will trigger an automated restart.
-
-![Update Interaction Layermask](images/installation-xrit-layermask-update.png)
-
-For newer Unity versions the Samples of the XR Interaction Toolkit might need an update.
-
-![Update Interaction Layermask](images/update-xri-samples.png)
-
-After these notifications the Project Setup Wizard will appear.
+After importing, VR Builder will compile and import some dependencies, then the Project Setup Wizard will appear.
 
 ### Guide Through the Project Setup Wizard
 The Setup Wizard helps to get new or existing Unity scenes set up and ready to be used with VR Builder. 
@@ -45,8 +36,6 @@ Finally you must choose whether to set up localization support or skip it for no
 
 This page lists some useful resources to get you started with VR Builder. There is also a checkbox which lets you choose if the demo scene should be loaded after closing the wizard.After clicking Finish, VR Builder is set up! You will need to wait a few seconds for packages to import if you selected a headset from the hardware list. Then, feel free to try out the demo scene or create your own scene by selecting `Tools > VR Builder > Scene Setup Wizard…`.
 
-If the demo scene or any other asset looks solid magenta there is an issue with the shader of the material. The Demo Scenes in VR Builder VR Builder version 5 uses the Universal Render Pipeline (URP).
-
-To convert the materials from the SRP to URP, follow the Unity Manual using the [Render Pipeline Converter](https://docs.unity3d.com/6000.0/Documentation/Manual/urp/features/rp-converter.html).
+If the demo scene or any other asset looks solid magenta there is an issue with the shader of the material. The Demo Scenes in VR Builder use the Universal Render Pipeline (URP). If the project uses a different render pipeline, they will not display properly.
 
 ![Localization Page](images/instalation-wizard-help-documentantion.png)
