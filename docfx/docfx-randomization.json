@@ -12,7 +12,7 @@
             "*Tests*.csproj",
             "*DemoScene*.csproj",
             "VRBuilder.Community.csproj"
-        ]
+          ]
         }
       ],
       "dest": "api",
@@ -20,9 +20,9 @@
         {
           "uid": "*",
           "name": "*",
-          "href": "../../Library/ScriptAssemblies/*.dll"        
+          "href": "../../Library/ScriptAssemblies/*.dll"
         }
-      ]    
+      ]
     }
   ],
   "build": {
@@ -54,7 +54,7 @@
     "template": [
       "default",
       "modern"
-    ],    
+    ],
     "globalMetadata": {
       "_appName": "VR Builder Documentation",
       "_appTitle": "VR Builder Documentation",
@@ -67,7 +67,7 @@
       "_gitContribute": {
         "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
         "branch": "develop"
-    }
+      }
     }
   },
   "pdf": {
@@ -75,18 +75,22 @@
       {
         "files": [
           "articles/randomization/**.{md,yml}"
-        ]      
+        ]
       }
     ],
-    "resource" : [
+    "resource": [
       {
-        "files":[ "articles/randomization/images/**"]
+        "files": [
+          "articles/randomization/images/**"
+        ]
       }
     ],
     "dest": "pdf",
-    "template": ["templates/pdf.vr-builder"],
+    "template": [
+      "templates/pdf.vr-builder"
+    ],
     "wkhtmltopdf": {
-      "additionalArguments": "--enable-local-file-access"
+      "additionalArguments": "--enable-local-file-access --footer-right \"[page] of [topage]\""
     }
   }
 }
