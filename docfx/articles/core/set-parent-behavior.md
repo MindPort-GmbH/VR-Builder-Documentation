@@ -8,11 +8,11 @@ The Set Parent behavior parents an `Object` to another one in the Unity hierarch
 
 - **Target**
 
-    The `Process Scene Object` to be parented.
+  The `Process Scene Object` to be parented.
 
 - **Parent**
 
-    The new parent for the target object. Note this can be null, in which case the object will be unparented.
+  The new parent for the target object. Note this can be null, in which case the object will be unparented.
 
 - **Snap to parent transform**
 

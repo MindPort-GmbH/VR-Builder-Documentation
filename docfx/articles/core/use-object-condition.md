@@ -2,7 +2,8 @@
 
 #### Description
 
-The Use Objects condition is fulfilled when any of the `Objects` are used by pressing the *Use* button of the controller while being touched or grabbed.
+The Use Objects condition is fulfilled when any of the `Objects` are used by pressing the *Use* button of the controller
+while being touched or grabbed.
 
 #### Configuration
 
