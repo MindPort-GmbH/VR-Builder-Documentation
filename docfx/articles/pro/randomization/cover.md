@@ -2,4 +2,6 @@
 documentType: cover
 ---
 # Randomization for VR Builder
-## User Manual
+
+[//]: # (Subtitle)
+Add-on for VR Builder
