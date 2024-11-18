@@ -14,7 +14,7 @@
             "VRBuilder.Community.csproj",
             "*VIRTOSHA*.csproj",
             "*UserInterface*.csproj"
-        ]
+          ]
         }
       ],
       "dest": "api",
@@ -22,9 +22,9 @@
         {
           "uid": "*",
           "name": "*",
-          "href": "../../Library/ScriptAssemblies/*.dll"        
+          "href": "../../Library/ScriptAssemblies/*.dll"
         }
-      ]    
+      ]
     }
   ],
   "build": {
@@ -54,9 +54,8 @@
     ],
     "output": "../docs",
     "template": [
-      "default",
-      "modern"
-    ],    
+      "templates/customDefault"
+    ],
     "globalMetadata": {
       "_appName": "VR Builder Documentation",
       "_appTitle": "VR Builder Documentation",
@@ -69,7 +68,7 @@
       "_gitContribute": {
         "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
         "branch": "develop"
-    }
+      }
     }
   },
   "pdf": {
@@ -77,23 +76,26 @@
       {
         "files": [
           "articles/pro/**.{md,yml}"
-        ]      
+        ]
       }
     ],
-    "resource" : [
+    "resource": [
       {
-        "files":[ 
-          "articles/pro/animations/images/**",          
+        "files": [
+          "articles/pro/animations/images/**",
           "articles/pro/process-menu/images/**",
           "articles/pro/randomization/images/**",
           "articles/pro/states-and-data/images/**",
-          "articles/pro/track-and-measure/images/**"]
+          "articles/pro/track-and-measure/images/**"
+        ]
       }
     ],
     "dest": "pdf",
-    "template": ["templates/pdf.vr-builder"],
+    "template": [
+      "templates/pdf.vr-builder"
+    ],
     "wkhtmltopdf": {
-      "additionalArguments": "--enable-local-file-access"
+      "additionalArguments": "--enable-local-file-access --footer-right \"[page] of [topage]\""
     }
   }
 }
