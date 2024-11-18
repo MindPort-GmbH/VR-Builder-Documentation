@@ -2,7 +2,7 @@
 
 By default, the default rig supports locomotion by teleportation, continuous movement and climbing. You can modify the locomotion styles supported by your rig by enabling or disabling the child objects of the `Locomotion` object on the rig.
 
-![Rig Locomotion](/images/rig_locomotion.png)
+![Rig Locomotion](images/rig_locomotion.png)
 
 ### Continuous Movement
 
