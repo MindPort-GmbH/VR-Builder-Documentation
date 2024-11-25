@@ -2,4 +2,6 @@
 documentType: cover
 ---
 # States and Data for VR Builder
-## User Manual
+
+[//]: # (Subtitle)
+Add-on for VR Builder

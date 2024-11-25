@@ -1,16 +1,32 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 {{!master(layout/_master.tmpl)}}
 <style>
-.cover-title {
+.centered-content {
     height: 200px;
-    width: 400px;
+    width: 100%;
+    margin-top: -150px;
     position: fixed;
     text-align: center;
+}
+
+.title {
     top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
+}
+
+.sub-title {
+    top: 52.5%;
+}
+
+.cover-logo {
+    top: 0;
+    left: 0;
+    height: 52px;
 }
 </style>
-<div class="cover-title">{{{rawTitle}}}</div>
-{{{conceptual}}}
+
+<div>
+    <img class="cover-logo" src="{{_rel}}{{_appLogoPath}}images/logo.png" />
+    <div class="centered-content title">{{{rawTitle}}}</div>
+</div>
+
+<div class="centered-content sub-title">{{{conceptual}}}</div>

@@ -2,4 +2,6 @@
 documentType: cover
 ---
 # VR Builder
-## User Manual
+
+[//]: # (Subtitle)
+Add-on for VR Builder
