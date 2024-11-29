@@ -4,4 +4,4 @@ documentType: cover
 # VR Builder
 
 [//]: # (Subtitle)
-Add-on for VR Builder
+Open source toolkit for VR creation
