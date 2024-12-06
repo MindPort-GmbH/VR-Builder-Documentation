@@ -8,6 +8,6 @@ This scene uses the `Random Branch` node to randomly select a scenario when the 
 
 You can press Play to try out the scene, or open the Process Editor to check out how the process is made.
 
-Additionally, you can find a tutorial on how this demo scene was created on our [website](https://www.mindport.co/vr-builder-learning-path/randomization-tutorial).
+Additionally, you can find a tutorial on how this demo scene was created on our [website](https://www.mindport.co/vr-builder-tutorials/randomization-add-on).
 
 ![Demo Scene](images/demo-scene.png)
