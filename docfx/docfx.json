@@ -7,14 +7,13 @@
           "files": [
             "VRBuilder*.csproj"
           ],
-          "cwd": "../../",
           "exclude": [
             "*Tests*.csproj",
             "*DemoScene*.csproj",
             "VRBuilder.Community.csproj",
             "*VIRTOSHA*.csproj",
             "*UserInterface*.csproj"
-        ]
+          ]
         }
       ],
       "dest": "api",
@@ -22,9 +21,9 @@
         {
           "uid": "*",
           "name": "*",
-          "href": "../../Library/ScriptAssemblies/*.dll"        
+          "href": "../../Library/ScriptAssemblies/*.dll"
         }
-      ]    
+      ]
     }
   ],
   "build": {
@@ -42,21 +41,20 @@
     "resource": [
       {
         "files": [
-          "articles/animations/images/**",
-          "articles/core/images/**",
-          "articles/process-menu/images/**",
-          "articles/randomization/images/**",
-          "articles/states-and-data/images/**",
-          "articles/track-and-measure/images/**",
+          "articles/pro/animations/images/**",
+          "articles/pro/core/images/**",
+          "articles/pro/process-menu/images/**",
+          "articles/pro/randomization/images/**",
+          "articles/pro/states-and-data/images/**",
+          "articles/pro/track-and-measure/images/**",
           "images/**"
         ]
       }
     ],
     "output": "../docs",
     "template": [
-      "default",
-      "modern"
-    ],    
+      "templates/customDefault"
+    ],
     "globalMetadata": {
       "_appName": "VR Builder Documentation",
       "_appTitle": "VR Builder Documentation",
@@ -69,7 +67,7 @@
       "_gitContribute": {
         "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
         "branch": "develop"
-    }
+      }
     }
   },
   "pdf": {
@@ -77,18 +75,23 @@
       {
         "files": [
           "articles/core/**.{md,yml}"
-        ]      
+        ]
       }
     ],
-    "resource" : [
+    "resource": [
       {
-        "files":[ "articles/core/images/**"]
+        "files": [
+          "articles/core/images/**",
+          "images/**"
+        ]
       }
     ],
     "dest": "pdf",
-    "template": ["templates/pdf.vr-builder"],
+    "template": [
+      "templates/pdf.vr-builder"
+    ],
     "wkhtmltopdf": {
-      "additionalArguments": "--enable-local-file-access"
+      "additionalArguments": "--enable-local-file-access --footer-right \"[page] of [topage]\""
     }
   }
 }

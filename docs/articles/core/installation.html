@@ -71,14 +71,10 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="installation">Installation</h2>
 
-<p>You can get VR Builder from the <a href="https://assetstore.unity.com/packages/tools/visual-scripting/vr-builder-201913">Unity Asset Store</a> or from our <a href="https://github.com/MindPort-GmbH/VR-Builder/releases">GitHub</a>. In the first case, you will be able to download and import the VR Builder package from the package manager. If you have downloaded a .unitypackage from GitHub, just import it in the project.</p>
-<p>If you are creating a new project, select the <code>3D</code> or <code>3D (URP)</code> template. Note that it is not necessary to choose the <code>VR</code> template as VR Builder will configure the project for VR automatically.</p>
-<p>After importing, VR Builder will compile and import some dependencies. </p>
-<p>For older Unity versions, a dialog from Unity&#39;s XR Interaction Component appears. VR Builder should work with either choice, so select the option that better suits your existing project. Use <code>I Made a Backup, Go Ahead!</code> if you are starting a new project. This will trigger an automated restart.</p>
-<p><img src="images/installation-xrit-layermask-update.png" alt="Update Interaction Layermask"></p>
-<p>For newer Unity versions the Samples of the XR Interaction Toolkit might need an update.</p>
-<p><img src="images/update-xri-samples.png" alt="Update Interaction Layermask"></p>
-<p>After these notifications the Project Setup Wizard will appear.</p>
+<p>You can get VR Builder from the <a href="https://u3d.as/3pUD">Unity Asset Store</a> or from our <a href="https://github.com/MindPort-GmbH/VR-Builder/releases">GitHub</a>. In the first case, you will download and import the VR Builder package from the Package Manager. From GitHub, you can either download a released .UnityPackage or pull the repository and import the 
+<code>package.json</code> file in the Package Manager.</p>
+<p>If you are creating a new project, select <code>Universal 3D</code> template. Note that it is not necessary to choose the <code>VR</code> template as VR Builder will configure the project for VR automatically.</p>
+<p>After importing, VR Builder will compile and import some dependencies, then the Project Setup Wizard will appear.</p>
 <h3 id="guide-through-the-project-setup-wizard">Guide Through the Project Setup Wizard</h3>
 <p>The Setup Wizard helps to get new or existing Unity scenes set up and ready to be used with VR Builder. </p>
 <h4 id="welcome">Welcome</h4>
@@ -96,7 +92,7 @@ Click <code>Next</code> to proceed to the interaction settings page setup page.<
 <p><img src="images/installation-wizard-localization.png" alt="Localization Page"></p>
 <h4 id="help--documentation">Help &amp; Documentation</h4>
 <p>This page lists some useful resources to get you started with VR Builder. There is also a checkbox which lets you choose if the demo scene should be loaded after closing the wizard.After clicking Finish, VR Builder is set up! You will need to wait a few seconds for packages to import if you selected a headset from the hardware list. Then, feel free to try out the demo scene or create your own scene by selecting <code>Tools &gt; VR Builder &gt; Scene Setup Wizard…</code>.</p>
-<p>Note that if you selected the Unity URP template in the beginning, the materials on the avatar hands and demo scene will look solid magenta. That&#39;s Unity&#39;s way to tell you that the materials are not compatible with the current render pipeline. You can rectify this by selecting all materials (by filtering them in the project window), then click <code>Edit &gt; Rendering &gt; Materials &gt; Convert Selected Built-in</code> Materials to URP. You can of course ignore this step if you don&#39;t plan to use the provided hand models or the demo scene.</p>
+<p>If the demo scene or any other asset looks solid magenta there is an issue with the shader of the material. The Demo Scenes in VR Builder use the Universal Render Pipeline (URP). If the project uses a different render pipeline, they will not display properly.</p>
 <p><img src="images/instalation-wizard-help-documentantion.png" alt="Localization Page"></p>
 </article>
           </div>

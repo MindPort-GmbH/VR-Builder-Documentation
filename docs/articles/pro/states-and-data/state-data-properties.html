@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>State Data Properties | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="State Data Properties | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="state-data-properties">State Data Properties</h2>
+
+<p>Sometimes we need to simulate a complex behavior that is part of the environment rather than the process. For example, a machinery that can be idle, running, blocked or broken, or a door that can be locked, unlocked or open. In these case, it might make sense to code the object&#39;s logic directly with Unity Monobehaviors rather than trying to write very complex custom behaviors. This can also make sense if the object is independent from the process - for example, the machine will keep running regardless of the user&#39;s position in the process, or is designed to break randomly. </p>
+<p>Maybe we only want VR Builder to decide when the machine starts running, or to trigger a step when it breaks, but we don&#39;t need it to be in control of what exact animation the object is into, or what sound it plays - these are characteristics that are intrinsical to the machine, so we shouldn&#39;t care about them in the process.</p>
+<p>We can use a <code>State Data Property</code> as a communication layer between our VR Builder process and some custom logic we have written for an object. This is a data property which contains an <code>enum</code> listing all the states an object can be in. Like all data properties, it can be read and set both from the Step Inspector and from code. This allows your custom logic and the VR Builder process to interact with each other.</p>
+<h3 id="creating-a-state-data-property">Creating a State Data Property</h3>
+<p>You will need to define your <code>enum</code> and create a state data property specific to it.
+For the machinery described above, it could look like this.</p>
+<pre><code class="lang-csharp">public enum MachineState
+{
+    Idle,
+    Running,
+    Blocked,
+    Broken,
+}
+</code></pre><p>We then need to create a data property component using this enum from the generic state data property. This is just a couple lines.</p>
+<pre><code class="lang-csharp">using VRBuilder.StatesAndData.Properties;
+
+public class MachineStateDataProperty : StateDataProperty&lt;MachineState&gt;
+{
+}
+</code></pre><p>We&#39;ll now be able to add this as a component to a game object. As it can be seen from the drop-down for the default value, it makes use of the <code>MachineState</code> enum.</p>
+<p><img src="images/state-data-property.png" alt="State Data Property"></p>
+<h3 id="handling-states-in-code">Handling States in Code</h3>
+<p>We can read and modify states from code calling the <code>GetState</code> and <code>SetState</code> methods on the data property component.</p>
+<pre><code class="lang-csharp">MachineStateDataProperty stateDataProperty = GetComponent&lt;MachineStateDataProperty&gt;();
+
+// Set a state to a specified value.
+stateDataProperty.SetState(MachineState.Running);
+
+// Read the current state.
+MachineState state = stateDataProperty.GetState(); 
+</code></pre><p>It is also possible to subscribe to the standard data property events <code>ValueChanged</code> and <code>ValueReset</code>, respectively called when the data property value changes or is reset to its default value.</p>
+<pre><code class="lang-csharp">MachineStateDataProperty stateDataProperty = GetComponent&lt;MachineStateDataProperty&gt;();
+
+// Subscribe to the value changed event.
+dataProperty.ValueChanged += OnValueChanged;
+
+// Function to be called when the event is triggered.
+private void OnValueChanged(object sender, EventArgs e)
+{    
+    // Code to be executed on value changed.
+}
+</code></pre><h3 id="set-state-behavior">Set State Behavior</h3>
+<p>The <code>Set State</code> behavior can be used to change the property&#39;s state from the VR Builder process. It works very similarly to the <code>Set Value</code> behavior, the only difference being that the state drop-down will not be visible until a <code>State Data Property</code> is dragged in the inspector, as it depends on the provided enum.</p>
+<p><img src="images/set-state-behavior.png" alt="Set State Behavior"></p>
+<p>It is also possible to use the <code>Reset Value</code> behavior on a <code>State Data Property</code>, it will work like any other data property.</p>
+<h3 id="check-state-condition">Check State Condition</h3>
+<p>It is possible for a process to read a state and react accordingly using the <code>Check State</code> condition. This condition compares a <code>State Data Property</code> to a specified value, in a way similar to other conditions comparing values.</p>
+<p><img src="images/check-state-condition.png" alt="Check State Condition"></p>
+<p>A number of operations are available. Since enum values can be ordered, it is also possible to check if the state precedes or follows the specified one.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/pro/states-and-data/state-data-properties.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
