@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Outline Objects | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Outline Objects | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="outline-objects">Outline Objects</h3>
+
+<h4 id="description">Description</h4>
+<p>The Outline Objects behavior visually highlights the selected objects until the end of a step.</p>
+<h4 id="configuration">Configuration</h4>
+<ul>
+<li><strong>Color</strong></li>
+</ul>
+<p>Color in which the target object will be highlighted. Colors are defined in the RGBA or HSV color channel. By configuring the alpha (A) value, the outline can be translucent.</p>
+<ul>
+<li><strong>Objects</strong></li>
+</ul>
+<p>The <code>Process Scene Objects</code> which should be highlighted.</p>
+<h4 id="outline-renderer-configuration">Outline Renderer Configuration</h4>
+<p>This behaviors adds a <code>Outline Renderer</code> component to the objects to be outlined. It is possible to configure the <code>Outline Renderer</code> with further parameters, or set those parameters globally in <code>Project Settings &gt; VR Builder &gt; Component Settings</code>, in the <code>Outlines</code> section.
+Every newly created <code>Outline Renderer</code> will be configured as specified here.
+The parameters on the <code>Outline Renderer</code> are the following.</p>
+<ul>
+<li><strong>Outline Mode</strong></li>
+</ul>
+<p>These are the different ways an object can be outlined.</p>
+<ul>
+<li><strong>Outline All</strong>: the entire object is outlined.</li>
+<li><strong>Outline Visible</strong>: only the visible part of the object is outlined.</li>
+<li><strong>Outline Hidden</strong>: only the hidden part of the object is outlined.</li>
+<li><strong>Outline And Silouhette</strong>: the object is outline, and the hidden part is shown as a colored silouhette.</li>
+<li><strong>Silouhette Only</strong>: a colored silouhette is shown on the hidden part of the object.</li>
+</ul>
+<ul>
+<li><strong>Outline Color</strong></li>
+</ul>
+<p>Specifies the color of the outline. This parameter is not relevant when using outlines with this behavior, as the behavior will override the color of the outline.</p>
+<ul>
+<li><strong>Outline Width</strong></li>
+</ul>
+<p>The width of the outline. A larger value corresponds to a thicker line.</p>
+<ul>
+<li><strong>Precompute Outline</strong></li>
+</ul>
+<p>This setting is not present in the global settings as it makes sense on a per-object basis. If selected, the outline is computed at editor time and stored in the object, while in the opposite case it will be generated at runtime. This might be noticeable with larger meshes. Precomputing could result in noticeably larger scene/project size, while not precomputing could cause a pause as the outline is generated on Awake().</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/pro/highlights-and-guidance/outline-objects-behavior.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
