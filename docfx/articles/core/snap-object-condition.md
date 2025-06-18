@@ -50,7 +50,7 @@ After the user releases an `Object`, this is moved to the snap zone's `SnapPoint
 
 - **Lock settings**
 
-    If the `Inherit Scene Object Lock State` is marked at the `Snappable Property`, the `Process Scene Object` will inherits the lock state of it's parent `Process Scene Object`.
+    If the `Inherit Scene Object Lock State` is checked on the `Snappable Property`, the `Process Scene Object` will inherit the lock state of its parent `Process Scene Object`.
 
-    If the `Is Always Unlocked` is marked at the `Snappable Property`, the `Process Scene Object` will not be locked by the VR Builder process runtime.
+    If the `Is Always Unlocked` is checked on the `Snappable Property`, the `Process Scene Object` will not be locked by the VR Builder process at runtime.
     It is still possible to lock the `Snappable Property` manually.

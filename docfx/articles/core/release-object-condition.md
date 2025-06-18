@@ -12,7 +12,7 @@ The Release Objects condition is fulfilled when all of the `Objects` are release
 
 - **Lock settings**
 
-    If the `Inherit Scene Object Lock State` is marked at the `Grabbable Property`, the `Process Scene Object` will inherits the lock state of it's parent `Process Scene Object`.
+  If the `Inherit Scene Object Lock State` is checked on the `Grabbable Property`, the `Process Scene Object` will inherit the lock state of its parent `Process Scene Object`.
 
-    If the `Is Always Unlocked` is marked at the `Grabbable Property`, the `Process Scene Object` will not be locked by the VR Builder process runtime.
-    It is still possible to lock the `Grabbable Property` manually.
+  If the `Is Always Unlocked` is checked on the `Grabbable Property`, the `Process Scene Object` will not be locked by the VR Builder process at runtime.
+  It is still possible to lock the `Grabbable Property` manually.

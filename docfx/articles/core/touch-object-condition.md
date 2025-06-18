@@ -12,7 +12,7 @@ The Touch Object condition is fulfilled when any of the `Objects` is touched by 
 
 - **Lock settings**
 
-    If the `Inherit Scene Object Lock State` is marked at the `Touchable Property`, the `Process Scene Object` will inherits the lock state of it's parent `Process Scene Object`.
+    If the `Inherit Scene Object Lock State` is checked on the `Touchable Property`, the `Process Scene Object` will inherit the lock state of its parent `Process Scene Object`.
 
-  If the `Is Always Unlocked` is marked at the `Touchable Property`, the `Process Scene Object` will not be locked by the VR Builder process runtime.
-  It is still possible to lock the `Touchable Property` manually.
+    If the `Is Always Unlocked` is checked on the `Touchable Property`, the `Process Scene Object` will not be locked by the VR Builder process at runtime.
+    It is still possible to lock the `Touchable Property` manually.
