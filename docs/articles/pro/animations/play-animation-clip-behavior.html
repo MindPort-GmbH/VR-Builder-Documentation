@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Release Object | VR Builder Documentation </title>
+    <title>Play Animation Clip | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Release Object | VR Builder Documentation ">
+    <meta name="title" content="Play Animation Clip | VR Builder Documentation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.svg" alt="VR Builder Documentation">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -69,21 +69,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="release-object">Release Object</h3>
+<h3 id="play-animation-clip">Play Animation Clip</h3>
 
-<h4 id="description">Description</h4>
-<p>The Release Objects condition is fulfilled when all of the <code>Objects</code> are released by the user&#39;s controller. If the user is not already holding any of the specified objects in hand while this condition is active, it is fulfilled immediately.</p>
-<h4 id="configuration">Configuration</h4>
-<ul>
-<li><p><strong>Objects</strong></p>
-<p>  The <code>Process Scene Objects</code> to release. The objects need to have the <code>Grabbable Property</code> and a collider component configured.</p>
-</li>
-<li><p><strong>Lock settings</strong></p>
-<p>If the <code>Inherit Scene Object Lock State</code> is checked on the <code>Grabbable Property</code>, the <code>Process Scene Object</code> will inherit the lock state of its parent <code>Process Scene Object</code>.</p>
-<p>If the <code>Is Always Unlocked</code> is checked on the <code>Grabbable Property</code>, the <code>Process Scene Object</code> will not be locked by the VR Builder process at runtime.
-It is still possible to lock the <code>Grabbable Property</code> manually.</p>
-</li>
-</ul>
+<h4 id="introduction">Introduction</h4>
+<p>This behavior plays an animation clip directly on a game object, without needing to set up an animation controller. While this functionality is deprecated by Unity, it can occasionally still be handy for quick and easy object animation.</p>
+<h4 id="inspector">Inspector</h4>
+<p><strong>Animation clip</strong>: The animation clip to play. It needs to be located in a path inside a Resources folder, or the inspector will not accept it. The clip needs to be flagged as Legacy to be played without an animation controller. VR Builder will automatically do this when the clip is dragged in the inspector. To manually flag the clip as Legacy or to undo the change it will be necessary to switch the clip&#39;s inspector to Debug mode, as the checkbox is not visible in the default inspector. If the clip is not flagged as Legacy, the animation will still work in the Unity editor but will not play in builds.</p>
+<p><strong>Object to animate</strong>: The game object to be animated.</p>
 </article>
           </div>
           
@@ -92,7 +84,7 @@ It is still possible to lock the <code>Grabbable Property</code> manually.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/release-object-condition.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/pro/animations/play-animation-clip-behavior.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -119,8 +111,8 @@ It is still possible to lock the <code>Grabbable Property</code> manually.</p>
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>
