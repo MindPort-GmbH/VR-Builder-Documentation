@@ -47,3 +47,10 @@ After the user releases an `Object`, this is moved to the snap zone's `SnapPoint
 - **Zone to snap into**
 
     This field contains the `Process Scene Object` where any of the `Objects` are required to be snapped. Make sure the object has a collider component with the `Is Trigger` property *enabled*.
+
+- **Lock settings**
+
+    If the `Inherit Scene Object Lock State` is checked on the `Snappable Property`, the `Process Scene Object` will inherit the lock state of its parent `Process Scene Object`.
+
+    If the `Is Always Unlocked` is checked on the `Snappable Property`, the `Process Scene Object` will not be locked by the VR Builder process at runtime.
+    It is still possible to lock the `Snappable Property` manually.
