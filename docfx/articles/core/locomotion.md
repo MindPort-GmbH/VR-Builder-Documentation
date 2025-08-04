@@ -1,30 +1,37 @@
 ## Locomotion
 
-By default, the default rig supports locomotion by teleportation, continuous movement and climbing. You can modify the locomotion styles supported by your rig by enabling or disabling the child objects of the `Locomotion` object on the rig.
+By default the rig supports locomotion types that minimize discomfort. These are movement by teleportation and rotation with snap turn. You can modify the locomotion styles supported by your rig by enabling or disabling the child objects of the `Locomotion` object on the rig.
 
 ![Rig Locomotion](images/rig_locomotion.png)
 
-### Continuous Movement
+### General Documentation
 
-Continuous movement is controlled by default with the thumbsticks. Left to move around, right to turn on the spot. We suggest caution in using this locomotion solution as it can cause motion sickness in inexperienced users. However, it can still be useful for specific use cases, precision adjustments or testing.
+For detailed explanations on all locomotion styles supported please refer to the XR Interaction Toolkit documentation. As of 04.08.2025 VR Builder uses XR Interaction Toolkit [version 3.1.2](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.1/manual/locomotion-landing.html) as the source of the rig.
 
-### Teleportation
+For a more in-depth guide on locomotion in VR we suggest reading the excellent guide at [Meta’s locomotion design guidelines](https://developers.meta.com/horizon/design/locomotion-overview).
 
-Teleportation requires the user to push the right thumbstick forward, then release while pointing at a teleportable surface or anchor. Teleportation requires a little more setup to work properly, but most of it is handled automatically by VR Builder.
+### Setup Teleportation in VR Builder
 
-It is recommended for teleportation to work on different layer than normal interactions. By default, VR Builder uses the `Teleport` raycast layer for raycasts from the teleportation controllers, and the `Teleport` XRI interaction layer for teleportation interaction. When imported, VR Builder will attempt to create both layers at the index 31 of the respective layer arrays.
+Teleportation requires the user to push the right thumbstick forward then release it while pointing at a teleportable surface or anchor. Most of the setup is handled automatically by VR Builder, but a few steps are required for it to work properly.
 
-Interactors and interactables need to be configured with these layers in order to work. When a new scene is created, the teleport interactors on the default rig are automatically configured to raycast and interact on these layers.
+#### Layer Configuration
 
-Likewise, when creating a teleportation anchor or area, you should use the `Teleportation Anchor (VR Builder)` or `Teleportation Area (VR Builder)` components instead of the XRI versions. These include a button in the inspector which automatically configures them to settings compatible with the VR Builder rig, including layer settings.
-The teleportation anchor in particular also includes more options, explained below.
+It is recommended that teleportation use a layer different from normal interactions. By default, VR Builder uses the `Teleport` raycast layer for controller raycasts and the `Teleport` XRI interaction layer for teleport actions. When you import VR Builder, it attempts to create both layers at index 31 of their respective layer arrays.
 
-**Set Default Teleportation Anchor**: Creates a default anchor by adding a collider to the game object and a graphical representation of the anchor (a feet silouhette inside a circle).
+Interactors and interactables must be configured with these layers to function. In a new scene, the default rig’s teleport interactors are already set up to raycast and interact on these layers.
 
-**Add Snap Volume**: Configures the anchor so that the teleportation ray snaps to it when it's in the vicinity.
+### Anchor and Area Setup
 
-**Add Interaction Affordance**: Adds feedback when the user interacts with the anchor.
+When creating a teleportation anchor or area, use the **Teleportation Anchor (VR Builder)** or **Teleportation Area (VR Builder)** components instead of the XRI versions. Each component has a button in its inspector that configures compatible settings, including layer masks. The **Teleportation Anchor** also offers additional options:
 
-**Add Proximity Entry**: If this is enabled, the user will be considered teleported at the anchor even if they get close by walking or stick locomotion. This can be relevant if the VR Builder process includes a [Teleport condition](teleport-condition.md) to that anchor.
+- **Set Default Teleportation Anchor**: Creates a default anchor by adding a collider to the game object and a graphical representation of the anchor (a feet silouhette inside a circle).
 
-Teleportation should be easy to setup and just work out of the box. In case something does not, for example when editing an old scene or after changing the position of the XR Teleport layer, it is possible to reset the layers on the rig and all anchors and areas in the scene. To do so, select `Tools > VR Builder > Developer > Configure Teleportation Layers`. Note that this will overwrite your existing layer masks and select the `Teleport` layer on all of them.
+- **Add Snap Volume**: Configures the anchor so that the teleportation ray snaps to it when it's in the vicinity.
+
+- **Add Interaction Affordance**: Adds feedback when the user interacts with the anchor.
+
+- **Add Proximity Entry**: If this is enabled, the user will be considered teleported at the anchor even if they get close by walking or stick locomotion. This can be relevant if the VR Builder process includes a [Teleport condition](teleport-condition.md) to that anchor.
+
+#### Troubelshoting
+
+Teleportation generally works out of the box. If you encounter issues—such as after editing an old scene or moving the XR Teleport layer—you can reset all layers on the rig, anchors, and areas. To do this, select: `Tools > VR Builder > Developer > Configure Teleportation Layers`. Be aware that this will overwrite existing layer masks and assign the `Teleport` layer to all affected objects.

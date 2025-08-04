@@ -1,9 +1,10 @@
-## Tunneling Vignette
+#### Tunneling Vignette
 
-We added a tunneling vignette to improve comfort with [continuous movement](https://mindport-gmbh.github.io/VR-Builder-Documentation/articles/core/locomotion.html#continuous-movement).
-
-### Activate Tunneling Vignette
-
-The vignette works only with continuous movement and is off by default. To enable it, turn on the `TunnelingVignette` GameObject in the rig.
+The tunneling vignette improves comfort during continuous movement. By default, the vignette is configured to activate whenever any continuous [Locomotion](locomotion.md) method is in use on the rig.
 
 ![Tunneling Vignette](images/rig_tunneling_vignette.png)
+
+#### Configure Tunneling Vignette
+
+To configure it, search for the `TunnelingVignette` GameObject in the rig. For detailed explanations of the tunneling vignette settings, refer to the [XR Interaction Toolkit documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.1/manual/tunneling-vignette-controller.html).
+
