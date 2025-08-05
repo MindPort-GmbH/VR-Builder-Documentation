@@ -1,6 +1,6 @@
 ## Locomotion
 
-By default the rig supports locomotion types that minimize discomfort. These are movement by teleportation and rotation with snap turn. You can modify the locomotion styles supported by your rig by enabling or disabling the child objects of the `Locomotion` object on the rig.
+By default the rig is configured for locomotion types that minimize discomfort. These are movement by teleportation and rotation with snap turn. You can modify the locomotion styles supported by your rig by enabling or disabling the child objects of the `Locomotion` object on the rig.
 
 ![Rig Locomotion](images/rig_locomotion.png)
 

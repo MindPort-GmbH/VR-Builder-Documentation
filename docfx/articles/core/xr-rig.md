@@ -1,6 +1,6 @@
 ## XR Rig
 
-The XR Rig is a game object that anchors the user’s head mounted display, controllers, or user’s hands when using hand tracking within the virtual space. You also configure which types of locomotion and interaction are available to the user.
+The XR Rig is a game object that anchors the user’s head mounted display, controllers, or user’s hands when using hand tracking within the virtual space. Essentially, it represents the user in the scene. On the rig, you can configure which types of locomotion and interaction are available to the user.
 
 ### VR Builder XR Rig
 
