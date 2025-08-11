@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Locomotion | VR Builder Documentation </title>
+    <title>XR Rig | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Locomotion | VR Builder Documentation ">
+    <meta name="title" content="XR Rig | VR Builder Documentation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -69,32 +69,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="locomotion">Locomotion</h2>
+<h2 id="xr-rig">XR Rig</h2>
 
-<p>By default the rig is configured for locomotion types that minimize discomfort. These are movement by teleportation and rotation with snap turn. You can modify the locomotion styles supported by your rig by enabling or disabling the child objects of the <code>Locomotion</code> object on the rig.</p>
-<p><img src="images/rig_locomotion.png" alt="Rig Locomotion"></p>
-<h3 id="general-documentation">General Documentation</h3>
-<p>For detailed explanations on all locomotion styles supported please refer to the XR Interaction Toolkit documentation. As of 04.08.2025 VR Builder uses XR Interaction Toolkit <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.1/manual/locomotion-landing.html">version 3.1.2</a> as the source of the rig.</p>
-<p>For a more in-depth guide on locomotion in VR we suggest reading the excellent guide at <a href="https://developers.meta.com/horizon/design/locomotion-overview">Meta’s locomotion design guidelines</a>.</p>
-<h3 id="setup-teleportation-in-vr-builder">Setup Teleportation in VR Builder</h3>
-<p>Teleportation requires the user to push the right thumbstick forward then release it while pointing at a teleportable surface or anchor. Most of the setup is handled automatically by VR Builder, but a few steps are required for it to work properly.</p>
-<h4 id="layer-configuration">Layer Configuration</h4>
-<p>It is recommended that teleportation use a layer different from normal interactions. By default, VR Builder uses the <code>Teleport</code> raycast layer for controller raycasts and the <code>Teleport</code> XRI interaction layer for teleport actions. When you import VR Builder, it attempts to create both layers at index 31 of their respective layer arrays.</p>
-<p>Interactors and interactables must be configured with these layers to function. In a new scene, the default rig’s teleport interactors are already set up to raycast and interact on these layers.</p>
-<h3 id="anchor-and-area-setup">Anchor and Area Setup</h3>
-<p>When creating a teleportation anchor or area, use the <strong>Teleportation Anchor (VR Builder)</strong> or <strong>Teleportation Area (VR Builder)</strong> components instead of the XRI versions. Each component has a button in its inspector that configures compatible settings, including layer masks. The <strong>Teleportation Anchor</strong> also offers additional options:</p>
-<ul>
-<li><p><strong>Set Default Teleportation Anchor</strong>: Creates a default anchor by adding a collider to the game object and a graphical representation of the anchor (a feet silouhette inside a circle).</p>
-</li>
-<li><p><strong>Add Snap Volume</strong>: Configures the anchor so that the teleportation ray snaps to it when it&#39;s in the vicinity.</p>
-</li>
-<li><p><strong>Add Interaction Affordance</strong>: Adds feedback when the user interacts with the anchor.</p>
-</li>
-<li><p><strong>Add Proximity Entry</strong>: If this is enabled, the user will be considered teleported at the anchor even if they get close by walking or stick locomotion. This can be relevant if the VR Builder process includes a <a href="teleport-condition.html">Teleport condition</a> to that anchor.</p>
-</li>
-</ul>
-<h4 id="troubelshoting">Troubelshoting</h4>
-<p>Teleportation generally works out of the box. If you encounter issues—such as after editing an old scene or moving the XR Teleport layer—you can reset all layers on the rig, anchors, and areas. To do this, select: <code>Tools &gt; VR Builder &gt; Developer &gt; Configure Teleportation Layers</code>. Be aware that this will overwrite existing layer masks and assign the <code>Teleport</code> layer to all affected objects.</p>
+<p>The XR Rig is a game object that anchors the user’s head mounted display, controllers, or user’s hands when using hand tracking within the virtual space. Essentially, it represents the user in the scene. On the rig, you can configure which types of locomotion and interaction are available to the user.</p>
+<h3 id="vr-builder-xr-rig">VR Builder XR Rig</h3>
+<p>When creating a new scene with the VR Builder Scene Setup Wizard, you get a <code>VRB_XR_Setup</code> game object automatically added to the scene. <code>VRB_XR_Setup</code> is the VR Builder XR Rig and is built upon the suggested standards set by the Unity XR Interaction Toolkit. Therefore, <code>VRB_XR_Setup</code> is very similar to the <code>XR Origin (XR Rig)</code> found in the XR Interaction Toolkit samples but has some additional VR Builder–specific scripts added.</p>
+<p><img src="images/rig_vrb_xr_rig.png" alt="VR Builder XR Rig"></p>
 </article>
           </div>
           
@@ -103,7 +83,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/locomotion.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/xr-rig.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
