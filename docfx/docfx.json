@@ -4,9 +4,7 @@
       "src": [
         {
           "src": "../../",
-          "files": [
-            "VRBuilder*.csproj"
-          ],
+          "files": [ "Library/ScriptAssemblies/VRBuilder**.dll" ],
           "exclude": [
             "*Tests*.csproj",
             "*DemoScene*.csproj",
@@ -17,13 +15,13 @@
         }
       ],
       "dest": "api",
+      "filter": "filterConfig.yml",
       "references": [
-        {
-          "uid": "*",
-          "name": "*",
-          "href": "../../Library/ScriptAssemblies/*.dll"
-        }
-      ]
+      {
+        "src": "../../",
+        "files": [ "Library/ScriptAssemblies/*.dll" ] 
+      }
+    ]
     }
   ],
   "build": {
