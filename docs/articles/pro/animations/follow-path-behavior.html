@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Follow Path | VR Builder Documentation </title>
+    <title> | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Follow Path | VR Builder Documentation ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
+    <meta name="title" content=" | VR Builder Documentation ">
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.svg" alt="VR Builder Documentation">
               </a>
@@ -49,17 +49,17 @@
         </nav>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -69,8 +69,8 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="follow-path">Follow Path</h3>
 
+<h3 id="follow-path">Follow Path</h3>
 <h4 id="introduction">Introduction</h4>
 <p>This behavior animates a game object so that it follows a path, for example a spline. It is possible to set a curve determining how fast the object moves along the path, plus a number of options described below.
 The behavior can be found under <code>Animation &gt; Follow Path</code>.</p>
@@ -83,15 +83,15 @@ The behavior can be found under <code>Animation &gt; Follow Path</code>.</p>
 <p><strong>Keep relative position</strong>: If unchecked, the object will be teleported on the path when the animation starts, and its position throughout the animation will be on the path itself. If checked, the object will retain its current position and move parallel to the path while animating.</p>
 <p><strong>Keep relative rotation</strong>: If unchecked, the object will rotate so that its forward vector follows the direction of the path throughout the animation. If checked, the object will retain its current orientation, but still rotate following the direction of the path.</p>
 <p><strong>Duration (in seconds)</strong>: Duration in seconds of the animation.</p>
-<p><strong>Velocity curve</strong>: This animation curve determines the object&#39;s position on the path at a given point in time. The position on the path can be a value from 0 (start) to 1 (end). Note that the curve length is normalized: while it is possible to have the time axis greater or lesser than 1, this won&#39;t affect the duration of the animation - the curve will be extended or compressed to fit the provided time duration. The first key of the curve should always be at 0 on the horizontal axis.</p>
-<p><strong>Disable Rotation</strong>: 
+<p><strong>Velocity curve</strong>: This animation curve determines the object's position on the path at a given point in time. The position on the path can be a value from 0 (start) to 1 (end). Note that the curve length is normalized: while it is possible to have the time axis greater or lesser than 1, this won't affect the duration of the animation - the curve will be extended or compressed to fit the provided time duration. The first key of the curve should always be at 0 on the horizontal axis.</p>
+<p><strong>Disable Rotation</strong>:
 If enabled, the object will not rotate while following the path and the settings on <em>Keep relative rotation</em> will be ignored.</p>
 <p><strong>Reverse</strong>: Utility checkbox that plays the animation backwards. It is equivalent to mirroring the velocity curve.</p>
 <p><strong>Ping pong</strong>: If this is checked, the animation will play backwards after finishing, resulting in the object animating and then returning to the original position. Note the total duration will be twice the value in the <code>Duration</code> field. This is similar to creating a symmetrical velocity curve, like for example a bell shape.</p>
 <p><strong>Repeats</strong>: The number of times the animation will repeat. Note that each repeat will increase the duration of the animation by its full amount.</p>
 <h4 id="the-bezier-spline-path-property">The Bezier Spline Path Property</h4>
 <p>The <code>BezierSplinePathProperty</code> is an implementation of the <code>IPathProperty</code> interface included in VR Builder core, and can thus be used to create paths for the <strong>Follow Path</strong> behavior.
-It&#39;s recommended to add it to an empty game object. It will automatically add a <code>BezierSpline</code> component, which will display a default 4 point Bezier curve in the scene.</p>
+It's recommended to add it to an empty game object. It will automatically add a <code>BezierSpline</code> component, which will display a default 4 point Bezier curve in the scene.</p>
 <p><img src="images/default-curve-scene.png" alt="Bezier Curve" title="Default Bezier Curve"></p>
 <p>It is possible to select and move the points in 3D space to manipulate the curve.</p>
 <p><img src="images/bezier-curve-scene.png" alt="Bezier Curve" title="Edited Bezier Curve"></p>
@@ -107,12 +107,12 @@ It&#39;s recommended to add it to an empty game object. It will automatically ad
 <p><strong>Mirrored</strong> (Cyan): The handles of the adjacent curves are aligned and of equal length.</p>
 <p>Other options are:</p>
 <p><strong>Loop</strong>: Will close the path to form a loop. Especially useful with repeats, as the object will keep going around the path.</p>
-<p><strong>Approximate Linear Velocity</strong>: Normally, velocities on a Bezier curve are non-linear. This means that, by default, the object&#39;s speed will change depending on where it is on the path and which curve it is on. Enabling this option will make the object approximate a linear speed, which means that the animation speed will be actually more faithful to the animation curve.</p>
+<p><strong>Approximate Linear Velocity</strong>: Normally, velocities on a Bezier curve are non-linear. This means that, by default, the object's speed will change depending on where it is on the path and which curve it is on. Enabling this option will make the object approximate a linear speed, which means that the animation speed will be actually more faithful to the animation curve.</p>
 <p><strong>Granularity of Approximation</strong>: This parameter is only exposed if <code>Approximate Linear Velocity</code> is selected. It determines the number of segments each curve will be subdivided in, a higher value will result in a more constant speed along the path, very low values (less than 10) can cause the object to change speed in a strange way. Lowering the value can increase performance.</p>
 <p><img src="images/point-modes.png" alt="Point Modes" title="Point Modes"></p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -130,7 +130,7 @@ It&#39;s recommended to add it to an empty game object. It will automatically ad
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -138,13 +138,13 @@ It&#39;s recommended to add it to an empty game object. It will automatically ad
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

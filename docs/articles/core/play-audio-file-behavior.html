@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Play Audio File | VR Builder Documentation </title>
+    <title> | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Play Audio File | VR Builder Documentation ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
+    <meta name="title" content=" | VR Builder Documentation ">
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
               </a>
@@ -49,17 +49,17 @@
         </nav>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -69,8 +69,8 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="play-audio-file">Play Audio File</h3>
 
+<h3 id="play-audio-file">Play Audio File</h3>
 <h4 id="description">Description</h4>
 <p>The Play Audio File behavior plays an audio clip loaded from the <code>Resources</code> folder in your project’s asset folder. VR Builder supports all audio file formats supported by Unity, which are:</p>
 <ul>
@@ -82,16 +82,21 @@
 <h4 id="configuration">Configuration</h4>
 <ul>
 <li><p><strong>Resources path/Key</strong></p>
-<p>  Insert the relative file path from the Resources folder. Please note that you have to omit the file extension, as shown in the example. You can find more information about this on <a href="https://docs.unity3d.com/ScriptReference/Resources.Load.html">https://docs.unity3d.com/ScriptReference/Resources.Load.html</a>.</p>
-<p>  If localization is enabled, this should instead be a key in the localization table associated with the process, which contains the localized resources path.</p>
-<p>  <strong>Example without localization</strong><br>  File to be played: <code>Assets/.../Resources/Sounds/click-sound.ogg</code><br>  Text/Key: <code>Sounds/click-sound</code></p>
-<p>  <strong>Example with localization</strong><br>  File to be played: <code>Assets/.../Resources/Sounds/click-sound.ogg</code><br>  Text/Key: <code>click-sound-key</code><br>  Localization table translation: <code>Sounds/click-sound</code></p>
+<p>Insert the relative file path from the Resources folder. Please note that you have to omit the file extension, as shown in the example. You can find more information about this on <a href="https://docs.unity3d.com/ScriptReference/Resources.Load.html">https://docs.unity3d.com/ScriptReference/Resources.Load.html</a>.</p>
+<p>If localization is enabled, this should instead be a key in the localization table associated with the process, which contains the localized resources path.</p>
+<p><strong>Example without localization</strong><br>
+File to be played: <code>Assets/.../Resources/Sounds/click-sound.ogg</code><br>
+Text/Key: <code>Sounds/click-sound</code></p>
+<p><strong>Example with localization</strong><br>
+File to be played: <code>Assets/.../Resources/Sounds/click-sound.ogg</code><br>
+Text/Key: <code>click-sound-key</code><br>
+Localization table translation: <code>Sounds/click-sound</code></p>
 </li>
 <li><p><strong>Volume</strong></p>
-<p>  The volume at which the audio should be played.</p>
+<p>The volume at which the audio should be played.</p>
 </li>
 <li><p><strong>Execution stages</strong></p>
-<p>  By default, steps execute behaviors in the beginning, in their activation stage. This can be changed with the <code>Execution stages</code> dropdown menu:</p>
+<p>By default, steps execute behaviors in the beginning, in their activation stage. This can be changed with the <code>Execution stages</code> dropdown menu:</p>
 <ul>
 <li><code>Before Step Execution</code>: The step invokes the behavior during its activation.</li>
 <li><code>After Step Execution</code>: Once a transition to another step has been selected and the current step starts deactivating, the behavior is invoked.</li>
@@ -99,13 +104,13 @@
 </ul>
 </li>
 <li><p><strong>Wait for completion</strong></p>
-<p>  By default, the step waits for the audio file to finish. If you want the step to interrupt the audio in case the step is completed, uncheck this option. </p>
-<p>  Note: this might lead to an audio file not even being started, in case the step ends immediately.</p>
+<p>By default, the step waits for the audio file to finish. If you want the step to interrupt the audio in case the step is completed, uncheck this option.</p>
+<p>Note: this might lead to an audio file not even being started, in case the step ends immediately.</p>
 </li>
 </ul>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -123,7 +128,7 @@
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -131,13 +136,13 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
