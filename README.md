@@ -40,11 +40,9 @@ To contribute, go to the [Documentation](https://mindport-gmbh.github.io/VR-Buil
 ## Setting up the repo for building API documentation
 
 1. Pull this repo in a VR Builder Unity project folder (same level as Assets folder).
-2. Use DocFX 2.78. You can use `dotnet tool install -g docfx --version 2.78.3`.
-
-[Obsolete]
-4. To create PDFs, you also need wkhtmltopdf. Can be installed from chocolatey as well, `choco install wkhtmltopdf`.
-5. To build API Metadata, you'll need MSBuild that can be installed from the VS installer.
+2. Install Chocolatey Community Individual https://chocolatey.org/install#individual
+3. Use DocFX DocFX 2.59.4. At the time of writing, it can be installed from chocolatey running choco install docfx.
+4. To create PDFs, you also need wkhtmltopdf. Can be installed from chocolatey as well, choco install wkhtmltopdf.
 
 ## Usage
 
