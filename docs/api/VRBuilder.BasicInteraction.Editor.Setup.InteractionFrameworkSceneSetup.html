@@ -75,9 +75,7 @@
   
   <h1 id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup" class="text-break">Class InteractionFrameworkSceneSetup
   </h1>
-  <div class="markdown level0 summary"><p>This base class is supposed to be implemented by classes which will be called to setup the scene,
-specifically interaction frameworks.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -91,7 +89,10 @@ specifically interaction frameworks.</p>
       <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_Setup_VRBuilder_Core_Editor_Setup_ISceneSetupConfiguration_">SceneSetup.Setup(ISceneSetupConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_SetupPrefab_System_String_">SceneSetup.SetupPrefab(String)</a>
+      <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_SetupPrefab_System_String_System_String_">SceneSetup.SetupPrefab(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_SetPrefabParent_UnityEngine_GameObject_System_String_">SceneSetup.SetPrefabParent(GameObject, String)</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_FindPrefab_System_String_">SceneSetup.FindPrefab(String)</a>
@@ -127,20 +128,25 @@ specifically interaction frameworks.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class InteractionFrameworkSceneSetup : SceneSetup</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup__ctor_" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.#ctor*"></a>
+  <h4 id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup__ctor" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.#ctor">InteractionFrameworkSceneSetup()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InteractionFrameworkSceneSetup()</code></pre>
+  </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_Key.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Editor/Setup/InteractionFrameworkSceneSetup.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_Key_" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.Key*"></a>
   <h4 id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_Key" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.Key">Key</h4>
-  <div class="markdown level1 summary"><p>Identifier key for specific scene setup types,
-e.g. for every interaction framework.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -163,18 +169,11 @@ e.g. for every interaction framework.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_Key">SceneSetup.Key</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_Priority.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.Priority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Editor/Setup/InteractionFrameworkSceneSetup.cs/#L13">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_Priority_" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.Priority*"></a>
   <h4 id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_Priority" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.Priority">Priority</h4>
-  <div class="markdown level1 summary"><p>Priority lets you tweak in which order different <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html">SceneSetup</a>s will be performed.
-The priority is considered from lowest to highest.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -199,17 +198,11 @@ The priority is considered from lowest to highest.</p>
   <div><a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html#VRBuilder_Core_Editor_Setup_SceneSetup_Priority">SceneSetup.Priority</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_RemoveMainCamera.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.RemoveMainCamera%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Editor/Setup/InteractionFrameworkSceneSetup.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_RemoveMainCamera_" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.RemoveMainCamera*"></a>
   <h4 id="VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup_RemoveMainCamera" data-uid="VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup.RemoveMainCamera">RemoveMainCamera()</h4>
-  <div class="markdown level1 summary"><p>Removes current MainCamera.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -222,12 +215,6 @@ The priority is considered from lowest to highest.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_BasicInteraction_Editor_Setup_InteractionFrameworkSceneSetup.md&amp;value=---%0Auid%3A%20VRBuilder.BasicInteraction.Editor.Setup.InteractionFrameworkSceneSetup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/BasicInteraction/Editor/Setup/InteractionFrameworkSceneSetup.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
