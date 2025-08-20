@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-
+  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | VR Builder Documentation </title>
+    <title>Snap Object | VR Builder Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | VR Builder Documentation ">
-    <meta name="generator" content="docfx ">
-  
+    <meta name="title" content="Snap Object | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-  
-  <meta property="docfx:rel" content="../../">
-  <meta property="docfx:newtab" content="true">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-
+        
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-
+              
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
               </a>
@@ -49,17 +49,17 @@
         </nav>
       </header>
       <div class="container body-content">
-
+        
         <div id="search-results">
           <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-
+        
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -69,52 +69,52 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-
 <h3 id="snap-object">Snap Object</h3>
+
 <h4 id="description">Description</h4>
-<p>The Snap Object condition is fulfilled when any of the <code>Objects</code> is released into the <code>Zone to snap into</code>, which means the collider of any of the Objects and collider of the Zone overlap. Adapt the collider size of the snap zone to increase or decrease the area where the user can release an <code>Object</code>. Increasing the collider size of the snap zone decreases the required <em>snap</em> precision and simplifies the user's interaction in VR.
-After the user releases an <code>Object</code>, this is moved to the snap zone's <code>SnapPoint</code>. To adjust this position, change the position of the SnapPoint child object of the <code>Zone to snap into</code> object.</p>
+<p>The Snap Object condition is fulfilled when any of the <code>Objects</code> is released into the <code>Zone to snap into</code>, which means the collider of any of the Objects and collider of the Zone overlap. Adapt the collider size of the snap zone to increase or decrease the area where the user can release an <code>Object</code>. Increasing the collider size of the snap zone decreases the required <em>snap</em> precision and simplifies the user&#39;s interaction in VR. 
+After the user releases an <code>Object</code>, this is moved to the snap zone&#39;s <code>SnapPoint</code>. To adjust this position, change the position of the SnapPoint child object of the <code>Zone to snap into</code> object.</p>
 <ul>
 <li><p><strong>Snap Zone Generator</strong></p>
-<p>For any snappable object you can generate a snap zone that can snap this object and can be used as a <code>Zone to snap into</code>. To do so, navigate to the <code>Snappable Property</code> in Unity's Inspector. You will see two buttons. Clicking on the button <code>Create Snap Zone for this object</code>, you will create a snap zone that only accepts this exact object. Clicking on <code>Create Snap Zone for objects in the same groups</code> will instead create a snap zone that accepts every object that shares at least a group with the current object. Note that the current object will still determine the shape of the snap zone's ghost object.</p>
-<p><img src="images/snapzonegenerator.png" alt="Snap Zone Generator"></p>
-<p>If you want a specific snap zone behavior, like for example accepting only one group of the source object instead of all of them, you'll have to manually change that. Select the snap zone and find the <code>Has Guid Validation</code> component. If you manually created your snap zone, you might have to add this component manually as well.
-Add to the list the objects you want to be valid for this snap zone. You can reference single objects by object ID, or entire categories of objects via groups.</p>
-<p><img src="images/snapzone-validation.png" alt="Snap Zone Validation"></p>
+<p>  For any snappable object you can generate a snap zone that can snap this object and can be used as a <code>Zone to snap into</code>. To do so, navigate to the <code>Snappable Property</code> in Unity&#39;s Inspector. You will see two buttons. Clicking on the button <code>Create Snap Zone for this object</code>, you will create a snap zone that only accepts this exact object. Clicking on <code>Create Snap Zone for objects in the same groups</code> will instead create a snap zone that accepts every object that shares at least a group with the current object. Note that the current object will still determine the shape of the snap zone&#39;s ghost object.</p>
+<p>  <img src="images/snapzonegenerator.png" alt="Snap Zone Generator"></p>
+<p>  If you want a specific snap zone behavior, like for example accepting only one group of the source object instead of all of them, you&#39;ll have to manually change that. Select the snap zone and find the <code>Has Guid Validation</code> component. If you manually created your snap zone, you might have to add this component manually as well.
+  Add to the list the objects you want to be valid for this snap zone. You can reference single objects by object ID, or entire categories of objects via groups.</p>
+<p>  <img src="images/snapzone-validation.png" alt="Snap Zone Validation"></p>
 </li>
 <li><p><strong>Manual Snap Zone Creation</strong></p>
-<p>Instead of the automatic generation as described above, you can do those steps also manually. Please refer to available documentation on the <code>XRSocketInteractor</code> from Unity or related sources. You can also make changes to the automatically created snap zone to adapt it to your needs. Please note that these changes might impact the process logic.</p>
+<p>  Instead of the automatic generation as described above, you can do those steps also manually. Please refer to available documentation on the <code>XRSocketInteractor</code> from Unity or related sources. You can also make changes to the automatically created snap zone to adapt it to your needs. Please note that these changes might impact the process logic.</p>
 </li>
 <li><p><strong>Feed Forward for Snap Zones</strong></p>
-<p>Snap zones are restricted to which objects can be snapped. This means every object can be valid (i.e. it can be snapped to this zone) or invalid (it can not be snapped to this zone) for a snap zone. This is achieved with validation components on the snap zone, for example the <code>Has Guid Validation</code> component. You can use this component to configure which specific objects or groups are accepted by the snap zone.
-In case you are moving a valid object into a zone, the snap zone color changes to ‘Validation Color’ (green), providing the user in VR with positive feedback. In case you are moving an invalid object into a zone, the snap zone color changes to ‘Invalid Color’ (red), giving the user the feedback that this is the wrong object for this zone.
-You can modify the colors and materials to be used in the Snap Zones parameters and settings.</p>
+<p>  Snap zones are restricted to which objects can be snapped. This means every object can be valid (i.e. it can be snapped to this zone) or invalid (it can not be snapped to this zone) for a snap zone. This is achieved with validation components on the snap zone, for example the <code>Has Guid Validation</code> component. You can use this component to configure which specific objects or groups are accepted by the snap zone.
+  In case you are moving a valid object into a zone, the snap zone color changes to ‘Validation Color’ (green), providing the user in VR with positive feedback. In case you are moving an invalid object into a zone, the snap zone color changes to ‘Invalid Color’ (red), giving the user the feedback that this is the wrong object for this zone. 
+  You can modify the colors and materials to be used in the Snap Zones parameters and settings.</p>
 </li>
 <li><p><strong>Snap Zone Parameters and Settings</strong></p>
-<p>To change the highlight color or validation hover material of a dedicated snap zone, navigate to the snap zone object in the Unity Inspector. You will find the Snap Zone Parameters and Settings in the script <code>Snap Zone</code>.</p>
-<p><img src="images/snapzoneparameters.png" alt="Snap Zone Parameters"></p>
-<p>To change the colors and materials of all snap zones in the scene, select them in the VR Builder snap zone settings and press 'Apply settings in current scene'.</p>
-<p><img src="images/snapzonesettings.png" alt="Snap Zone Settings"></p>
-<p>The snap zone settings can be found in the project settings in tab <code>VR Builder &gt; Settings &gt; Snap Zones</code>.</p>
+<p>  To change the highlight color or validation hover material of a dedicated snap zone, navigate to the snap zone object in the Unity Inspector. You will find the Snap Zone Parameters and Settings in the script <code>Snap Zone</code>.</p>
+<p>  <img src="images/snapzoneparameters.png" alt="Snap Zone Parameters"></p>
+<p>  To change the colors and materials of all snap zones in the scene, select them in the VR Builder snap zone settings and press &#39;Apply settings in current scene&#39;.</p>
+<p>  <img src="images/snapzonesettings.png" alt="Snap Zone Settings"></p>
+<p>  The snap zone settings can be found in the project settings in tab <code>VR Builder &gt; Settings &gt; Snap Zones</code>.</p>
 </li>
 </ul>
 <h4 id="configuration">Configuration</h4>
 <ul>
 <li><p><strong>Objects</strong></p>
-<p>The <code>Process Scene Objects</code> to place (snap). The objects needs to have the <code>Snappable Property</code> and a collider component configured.</p>
+<p>  The <code>Process Scene Objects</code> to place (snap). The objects needs to have the <code>Snappable Property</code> and a collider component configured. </p>
 </li>
 <li><p><strong>Zone to snap into</strong></p>
-<p>This field contains the <code>Process Scene Object</code> where any of the <code>Objects</code> are required to be snapped. Make sure the object has a collider component with the <code>Is Trigger</code> property <em>enabled</em>.</p>
+<p>  This field contains the <code>Process Scene Object</code> where any of the <code>Objects</code> are required to be snapped. Make sure the object has a collider component with the <code>Is Trigger</code> property <em>enabled</em>.</p>
 </li>
 <li><p><strong>Lock settings</strong></p>
-<p>If the <code>Inherit Scene Object Lock State</code> is checked on the <code>Snappable Property</code>, the <code>Process Scene Object</code> will inherit the lock state of its parent <code>Process Scene Object</code>.</p>
-<p>If the <code>Is Always Unlocked</code> is checked on the <code>Snappable Property</code>, the <code>Process Scene Object</code> will not be locked by the VR Builder process at runtime.
-It is still possible to lock the <code>Snappable Property</code> manually.</p>
+<p>  If the <code>Inherit Scene Object Lock State</code> is checked on the <code>Snappable Property</code>, the <code>Process Scene Object</code> will inherit the lock state of its parent <code>Process Scene Object</code>.</p>
+<p>  If the <code>Is Always Unlocked</code> is checked on the <code>Snappable Property</code>, the <code>Process Scene Object</code> will not be locked by the VR Builder process at runtime.
+  It is still possible to lock the <code>Snappable Property</code> manually.</p>
 </li>
 </ul>
 </article>
           </div>
-
+          
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -132,7 +132,7 @@ It is still possible to lock the <code>Snappable Property</code> manually.</p>
           </div>
         </div>
       </div>
-
+      
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -140,13 +140,13 @@ It is still possible to lock the <code>Snappable Property</code> manually.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
     </div>
-
+    
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
