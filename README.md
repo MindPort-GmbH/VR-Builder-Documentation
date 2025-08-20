@@ -46,7 +46,7 @@ To contribute, go to the [Documentation](https://mindport-gmbh.github.io/VR-Buil
 
 ## Usage
 
-1. Compile the project in Unity. Then you can close Unity.
+1. Generate project files in Unity and build the project in your IDE. Ensure that you are generating XML documentation for the VR Builder assemblies.
 2. Run `docfx/build-all.bat` in to build the documentation, generate PDFs for all packages, and serve the site to localhost.
 3. Ensure that the documentation works as intended in your browser by checking http://localhost:8080/.
 4. You can find the generated PDF files in the `pdf/docfx_articles` folder.
