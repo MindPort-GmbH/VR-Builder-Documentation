@@ -75,7 +75,9 @@
   
   <h1 id="VRBuilder_XRInteraction_XRI_StarterAssets_ControllerInputActionManager" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.ControllerInputActionManager" class="text-break">Class ControllerInputActionManager
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Use this class to mediate the interactors for a controller under different interaction states
+and the input actions used by them.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -88,6 +90,17 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ControllerInputActionManager : MonoBehaviour</code></pre>
   </div>
+  <h5 id="VRBuilder_XRInteraction_XRI_StarterAssets_ControllerInputActionManager_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>If the teleport ray input is engaged, the Ray Interactor used for distant manipulation is disabled
+and the Ray Interactor used for teleportation is enabled. If the Ray Interactor is selecting and it
+is configured to allow for attach transform manipulation, all locomotion input actions are disabled
+(teleport ray, move, and turn controls) to prevent input collision with the manipulation inputs used
+by the ray interactor.
+<br>
+A typical hierarchy also includes an XR Interaction Group component to mediate between interactors.
+The interaction group ensures that the Direct and Ray Interactors cannot interact at the same time,
+with the Direct Interactor taking priority over the Ray Interactor.</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   

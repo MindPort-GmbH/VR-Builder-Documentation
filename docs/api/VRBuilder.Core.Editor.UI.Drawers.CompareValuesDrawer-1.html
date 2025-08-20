@@ -75,7 +75,8 @@
   
   <h1 id="VRBuilder_Core_Editor_UI_Drawers_CompareValuesDrawer_1" data-uid="VRBuilder.Core.Editor.UI.Drawers.CompareValuesDrawer`1" class="text-break">Class CompareValuesDrawer&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Custom drawer for <a class="xref" href="VRBuilder.Core.Conditions.CompareValuesCondition-1.html">CompareValuesCondition&lt;T&gt;</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -185,7 +186,8 @@
   
   <a id="VRBuilder_Core_Editor_UI_Drawers_CompareValuesDrawer_1_Draw_" data-uid="VRBuilder.Core.Editor.UI.Drawers.CompareValuesDrawer`1.Draw*"></a>
   <h4 id="VRBuilder_Core_Editor_UI_Drawers_CompareValuesDrawer_1_Draw_UnityEngine_Rect_System_Object_System_Action_System_Object__UnityEngine_GUIContent_" data-uid="VRBuilder.Core.Editor.UI.Drawers.CompareValuesDrawer`1.Draw(UnityEngine.Rect,System.Object,System.Action{System.Object},UnityEngine.GUIContent)">Draw(Rect, Object, Action&lt;Object&gt;, GUIContent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draw editor view in given Rect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -204,22 +206,28 @@
       <tr>
         <td><span class="xref">UnityEngine.Rect</span></td>
         <td><span class="parametername">rect</span></td>
-        <td></td>
+        <td><p>A rectangle in which editor view should fit. The height value is ignored.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">currentValue</span></td>
-        <td></td>
+        <td><p>Current value of a member.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><span class="parametername">changeValueCallback</span></td>
-        <td></td>
+        <td><p>Delegate for a method that changes value of a member. Done that way to allow non-instantaneous assignments (for example, from generic menus).
+Invoke only when child member&apos;s value has changed;
+Otherwise, if the value itself has changed, call <a class="xref" href="VRBuilder.Core.Editor.UI.Drawers.IProcessDrawer.html#VRBuilder_Core_Editor_UI_Drawers_IProcessDrawer_ChangeValue_System_Func_System_Object__System_Func_System_Object__System_Action_System_Object__">ChangeValue(Func&lt;Object&gt;, Func&lt;Object&gt;, Action&lt;Object&gt;)</a> so it could manage Do/Undo stack in a proper way.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">UnityEngine.GUIContent</span></td>
         <td><span class="parametername">label</span></td>
-        <td></td>
+        <td><p>Label content to display.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -234,7 +242,8 @@
     <tbody>
       <tr>
         <td><span class="xref">UnityEngine.Rect</span></td>
-        <td></td>
+        <td><p>The area that was taken by the property.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -244,7 +253,8 @@
   
   <a id="VRBuilder_Core_Editor_UI_Drawers_CompareValuesDrawer_1_DrawOperatorDropdown_" data-uid="VRBuilder.Core.Editor.UI.Drawers.CompareValuesDrawer`1.DrawOperatorDropdown*"></a>
   <h4 id="VRBuilder_Core_Editor_UI_Drawers_CompareValuesDrawer_1_DrawOperatorDropdown_System_Action_System_Object__UnityEngine_Rect_VRBuilder_Core_Conditions_CompareValuesCondition__0__EntityData_" data-uid="VRBuilder.Core.Editor.UI.Drawers.CompareValuesDrawer`1.DrawOperatorDropdown(System.Action{System.Object},UnityEngine.Rect,VRBuilder.Core.Conditions.CompareValuesCondition{`0}.EntityData)">DrawOperatorDropdown(Action&lt;Object&gt;, Rect, CompareValuesCondition&lt;T&gt;.EntityData)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draws the dropdown for selecting the operator depending on the operands&apos; type</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

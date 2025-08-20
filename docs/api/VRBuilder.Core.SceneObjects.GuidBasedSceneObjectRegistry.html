@@ -75,7 +75,9 @@
   
   <h1 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry" class="text-break">Class GuidBasedSceneObjectRegistry
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Implementation of <a class="xref" href="VRBuilder.Core.SceneObjects.ISceneObjectRegistry.html">ISceneObjectRegistry</a> that handles <a class="xref" href="VRBuilder.Core.SceneObjects.ISceneObject.html">ISceneObject</a>s with one
+or more GUID associated to them. The GUIDs don&apos;t have to be unique and can represent a group of objects.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -247,7 +249,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_ContainsGuid_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.ContainsGuid*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_ContainsGuid_System_Guid_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.ContainsGuid(System.Guid)">ContainsGuid(Guid)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns if the Guid is registered in the registry.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -331,7 +334,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_DebugRebuild_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.DebugRebuild*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_DebugRebuild" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.DebugRebuild">DebugRebuild()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the registry and registers all object in the scene again.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -425,7 +429,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_GetObjects_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.GetObjects*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_GetObjects_System_Guid_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.GetObjects(System.Guid)">GetObjects(Guid)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all registered scene objects which have the provided guid assigned to them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -467,7 +472,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_GetProperties_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.GetProperties*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_GetProperties__1_System_Guid_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.GetProperties``1(System.Guid)">GetProperties&lt;T&gt;(Guid)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all registered scene objects with the provided guid and at least one valid property of the specified type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -526,7 +532,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_Refresh_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.Refresh*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_Refresh" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.Refresh">Refresh()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the registry by removing all <a class="xref" href="VRBuilder.Core.SceneObjects.ISceneObject.html">ISceneObject</a> which are not in the scene anymore and adding new ones.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -536,7 +543,10 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_Register_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.Register*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_Register_VRBuilder_Core_SceneObjects_ISceneObject_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.Register(VRBuilder.Core.SceneObjects.ISceneObject)">Register(ISceneObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Registers an SceneObject in the registry. If there is an SceneObject with the same name
+already registered, an NameNotUniqueException will be thrown. Also if the Guid
+is already known an SceneObjectAlreadyRegisteredException will be thrown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -563,7 +573,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_RegisterAll_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.RegisterAll*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_RegisterAll" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.RegisterAll">RegisterAll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Registers all SceneObject in scene, independent of their state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -573,7 +584,8 @@
   
   <a id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_Unregister_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.Unregister*"></a>
   <h4 id="VRBuilder_Core_SceneObjects_GuidBasedSceneObjectRegistry_Unregister_VRBuilder_Core_SceneObjects_ISceneObject_" data-uid="VRBuilder.Core.SceneObjects.GuidBasedSceneObjectRegistry.Unregister(VRBuilder.Core.SceneObjects.ISceneObject)">Unregister(ISceneObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the SceneObject completely from the Registry.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

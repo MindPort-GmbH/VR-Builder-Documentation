@@ -75,7 +75,8 @@
   
   <h1 id="VRBuilder_Unity_AssetUtility" data-uid="VRBuilder.Unity.AssetUtility" class="text-break">Class AssetUtility
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Utility class for prefabs.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -88,13 +89,18 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class AssetUtility : Object</code></pre>
   </div>
+  <h5 id="VRBuilder_Unity_AssetUtility_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This is not in the namespace <see cref="!:VRBuilder.Core.Editor"></see> because <a class="xref" href="VRBuilder.Core.html">VRBuilder.Core</a> has no knowledge of <see cref="!:VRBuilder.Core.Editor"></see>.
+At the current state <see cref="!:VRBuilder.Core.ProcessSceneObject"></see> needs <a class="xref" href="VRBuilder.Unity.AssetUtility.html#VRBuilder_Unity_AssetUtility_IsOnDisk_UnityEngine_Object_">IsOnDisk(Object)</a> .</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="VRBuilder_Unity_AssetUtility_IsComponentInScene_" data-uid="VRBuilder.Unity.AssetUtility.IsComponentInScene*"></a>
   <h4 id="VRBuilder_Unity_AssetUtility_IsComponentInScene_UnityEngine_Component_" data-uid="VRBuilder.Unity.AssetUtility.IsComponentInScene(UnityEngine.Component)">IsComponentInScene(Component)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if the specified component is part of a scene game object</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -113,7 +119,8 @@
       <tr>
         <td><span class="xref">UnityEngine.Component</span></td>
         <td><span class="parametername">component</span></td>
-        <td></td>
+        <td><p>The component to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -128,15 +135,20 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><code>true</code> if the component is in the scene; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="VRBuilder_Unity_AssetUtility_IsComponentInScene_UnityEngine_Component__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A component is not part of a scene game object if you are in prefab edit mode and or looking at a prefab in the project view.</p>
+</div>
   
   
   <a id="VRBuilder_Unity_AssetUtility_IsEditingInPrefabMode_" data-uid="VRBuilder.Unity.AssetUtility.IsEditingInPrefabMode*"></a>
   <h4 id="VRBuilder_Unity_AssetUtility_IsEditingInPrefabMode_UnityEngine_GameObject_" data-uid="VRBuilder.Unity.AssetUtility.IsEditingInPrefabMode(UnityEngine.GameObject)">IsEditingInPrefabMode(GameObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the current object is being edited in prefab mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -170,7 +182,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><code>true</code> if the object is being edited in prefab mode; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -178,7 +191,8 @@
   
   <a id="VRBuilder_Unity_AssetUtility_IsInPreviewContext_" data-uid="VRBuilder.Unity.AssetUtility.IsInPreviewContext*"></a>
   <h4 id="VRBuilder_Unity_AssetUtility_IsInPreviewContext_UnityEngine_GameObject_" data-uid="VRBuilder.Unity.AssetUtility.IsInPreviewContext(UnityEngine.GameObject)">IsInPreviewContext(GameObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if the current object is in preview context.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -212,15 +226,20 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><code>true</code> if the object is in preview context; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="VRBuilder_Unity_AssetUtility_IsInPreviewContext_UnityEngine_GameObject__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The object is in preview context if it is <a class="xref" href="VRBuilder.Unity.AssetUtility.html#VRBuilder_Unity_AssetUtility_IsOnDisk_UnityEngine_Object_">IsOnDisk(Object)</a> or if it is being <a class="xref" href="VRBuilder.Unity.AssetUtility.html#VRBuilder_Unity_AssetUtility_IsEditingInPrefabMode_UnityEngine_GameObject_">IsEditingInPrefabMode(GameObject)</a>. </p>
+</div>
   
   
   <a id="VRBuilder_Unity_AssetUtility_IsOnDisk_" data-uid="VRBuilder.Unity.AssetUtility.IsOnDisk*"></a>
   <h4 id="VRBuilder_Unity_AssetUtility_IsOnDisk_UnityEngine_Object_" data-uid="VRBuilder.Unity.AssetUtility.IsOnDisk(UnityEngine.Object)">IsOnDisk(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if the gameObject is saved on disk.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -254,7 +273,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><code>true</code> if the gameObject is saved on disk; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>

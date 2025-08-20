@@ -75,7 +75,8 @@
   
   <h1 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2" class="text-break">Class EntityIteratingProcess&lt;TEntitySequenceDataWithMode, TEntity&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A process that activates and deactivates entities one after another.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -156,7 +157,10 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_End_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_End" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.End">End()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is invoked immediately after the <a class="xref" href="VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update">Update()</a> was iterated over completely, or after the <a class="xref" href="VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_FastForward">FastForward()</a> was called.
+The invocation is guaranteed.
+Use it for deinitialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -168,7 +172,9 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_FastForward_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_FastForward" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.FastForward">FastForward()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is called when the process was not completed yet.
+It must &quot;fake&quot; normal execution of the process and handle the cases when the <a class="xref" href="VRBuilder.Core.IStageProcess.html#VRBuilder_Core_IStageProcess_Update">Update()</a> is not iterated over completely.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -180,7 +186,8 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_ShouldActivateCurrent_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_ShouldActivateCurrent" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldActivateCurrent">ShouldActivateCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns true if the current entity has to be activated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -205,7 +212,8 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_ShouldDeactivateCurrent_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_ShouldDeactivateCurrent" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.ShouldDeactivateCurrent">ShouldDeactivateCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns true if the current entity has to be deactivated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -230,7 +238,10 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_Start_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_Start" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Start">Start()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is invoked immediately when entity enters the stage.
+The invocation is guaranteed.
+Use it for initialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -242,7 +253,8 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_TryNext_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_TryNext__1__" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.TryNext(`1@)">TryNext(out TEntity)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Try to get next child entity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -284,7 +296,8 @@
   
   <a id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_Update_" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update*"></a>
   <h4 id="VRBuilder_Core_EntityOwners_EntityIteratingProcess_2_Update" data-uid="VRBuilder.Core.EntityOwners.EntityIteratingProcess`2.Update">Update()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method will be iterated over while the entity is in this stage, one iteration step per frame, starting from the second frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
