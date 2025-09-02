@@ -94,19 +94,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Locked">LockableProperty.Locked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_unlockers">LockableProperty.unlockers</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Unlocked">LockableProperty.Unlocked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EmitLocked_System_Boolean_">LockableProperty.EmitLocked(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock">LockableProperty.LockOnParentObjectLock</a>
-    </div>
-    <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsLocked">LockableProperty.IsLocked</a>
-    </div>
-    <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EndStepLocked">LockableProperty.EndStepLocked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EmitUnlocked_System_Boolean_">LockableProperty.EmitUnlocked(Boolean)</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_SetLocked_System_Boolean_">LockableProperty.SetLocked(Boolean)</a>
@@ -115,13 +109,43 @@
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_">LockableProperty.RequestLocked(Boolean, IStepData)</a>
     </div>
     <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LogLockState_System_Boolean_VRBuilder_Core_IStepData_System_Boolean_">LockableProperty.LogLockState(Boolean, IStepData, Boolean)</a>
+    </div>
+    <div>
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_RemoveUnlocker_VRBuilder_Core_IStepData_">LockableProperty.RemoveUnlocker(IStepData)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_HandleObjectUnlocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_">LockableProperty.HandleObjectUnlocked(Object, LockStateChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_HandleObjectLocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_">LockableProperty.HandleObjectLocked(Object, LockStateChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InheritSceneObjectLockState">LockableProperty.InheritSceneObjectLockState</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock">LockableProperty.LockOnParentObjectLock</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsAlwaysUnlocked">LockableProperty.IsAlwaysUnlocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsLocked">LockableProperty.IsLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EndStepLocked">LockableProperty.EndStepLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Locked">LockableProperty.Locked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Unlocked">LockableProperty.Unlocked</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_ToString">ProcessSceneObjectProperty.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.XRInteraction.Properties.html">VRBuilder.XRInteraction.Properties</a></h6>
@@ -130,15 +154,22 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class GrabbableProperty : LockableProperty, IGrabbableProperty, ISceneObjectProperty, ILockable</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty__ctor_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.#ctor*"></a>
+  <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty__ctor" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.#ctor">GrabbableProperty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GrabbableProperty()</code></pre>
+  </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_GrabEnded.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.GrabEnded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_GrabEnded_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.GrabEnded*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_GrabEnded" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.GrabEnded">GrabEnded</h4>
   <div class="markdown level1 summary"></div>
@@ -157,18 +188,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html">GrabbablePropertyEventArgs</a>&gt;</td>
+        <td><span class="xref">UnityEngine.Events.UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html">GrabbablePropertyEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_GrabStarted.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.GrabStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_GrabStarted_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.GrabStarted*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_GrabStarted" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.GrabStarted">GrabStarted</h4>
   <div class="markdown level1 summary"></div>
@@ -187,18 +213,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html">GrabbablePropertyEventArgs</a>&gt;</td>
+        <td><span class="xref">UnityEngine.Events.UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.GrabbablePropertyEventArgs.html">GrabbablePropertyEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_Interactable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.Interactable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_Interactable_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.Interactable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_Interactable" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.Interactable">Interactable</h4>
   <div class="markdown level1 summary"><p>Reference to attached <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a>.</p>
@@ -223,13 +244,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_IsGrabbed.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.IsGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L29">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_IsGrabbed_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.IsGrabbed*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_IsGrabbed" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.IsGrabbed">IsGrabbed</h4>
   <div class="markdown level1 summary"><p>Returns true if the Interactable of this property is grabbed.</p>
@@ -256,13 +272,8 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_EmitGrabbed.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.EmitGrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L107">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_EmitGrabbed_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.EmitGrabbed*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_EmitGrabbed" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.EmitGrabbed">EmitGrabbed()</h4>
   <div class="markdown level1 summary"></div>
@@ -271,13 +282,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void EmitGrabbed()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_EmitUngrabbed.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.EmitUngrabbed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L112">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_EmitUngrabbed_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.EmitUngrabbed*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_EmitUngrabbed" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.EmitUngrabbed">EmitUngrabbed()</h4>
   <div class="markdown level1 summary"></div>
@@ -286,13 +292,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void EmitUngrabbed()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_FastForwardGrab.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.FastForwardGrab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L133">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_FastForwardGrab_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.FastForwardGrab*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_FastForwardGrab" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.FastForwardGrab">FastForwardGrab()</h4>
   <div class="markdown level1 summary"><p>Instantaneously simulate that the object was grabbed.</p>
@@ -302,13 +303,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void FastForwardGrab()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_FastForwardUngrab.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.FastForwardUngrab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L149">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_FastForwardUngrab_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.FastForwardUngrab*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_FastForwardUngrab" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.FastForwardUngrab">FastForwardUngrab()</h4>
   <div class="markdown level1 summary"><p>Instantaneously simulate that the object was ungrabbed.</p>
@@ -318,13 +314,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void FastForwardUngrab()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_ForceSetGrabbed_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.ForceSetGrabbed(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L165">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_ForceSetGrabbed_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.ForceSetGrabbed*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_ForceSetGrabbed_System_Boolean_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.ForceSetGrabbed(System.Boolean)">ForceSetGrabbed(Boolean)</h4>
   <div class="markdown level1 summary"><p>Force this property to a specified grabbed state.</p>
@@ -351,13 +342,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_InternalSetLocked_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.InternalSetLocked(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L117">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_InternalSetLocked_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.InternalSetLocked*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_InternalSetLocked_System_Boolean_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.InternalSetLocked(System.Boolean)">InternalSetLocked(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -385,13 +371,8 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InternalSetLocked_System_Boolean_">LockableProperty.InternalSetLocked(Boolean)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_OnDisable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.OnDisable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_OnDisable_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.OnDisable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_OnDisable" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"></div>
@@ -402,13 +383,8 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_OnDisable">LockableProperty.OnDisable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_OnEnable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.OnEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L55">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_OnEnable_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.OnEnable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_OnEnable" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -419,13 +395,8 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_OnEnable">LockableProperty.OnEnable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty_Reset.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L75">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_GrabbableProperty_Reset_" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.Reset*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_GrabbableProperty_Reset" data-uid="VRBuilder.XRInteraction.Properties.GrabbableProperty.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
@@ -453,12 +424,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_GrabbableProperty.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.GrabbableProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/GrabbableProperty.cs/#L16" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

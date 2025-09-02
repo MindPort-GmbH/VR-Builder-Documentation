@@ -89,55 +89,36 @@
     <div><a class="xref" href="VRBuilder.Core.INamedData.html">INamedData</a></div>
     <div><a class="xref" href="VRBuilder.Core.IData.html">IData</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.Behaviors.html">VRBuilder.Core.Behaviors</a></h6>
   <h6><strong>Assembly</strong>: VRBuilder.Core.dll</h6>
   <h5 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DisplayName(&quot;Move Object&quot;)]
-[DataContract(IsReference = true)]
-public class EntityData : IBehaviorData, INamedData, IData</code></pre>
+public class EntityData : Object, IBehaviorData, INamedData, IData</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData__ctor_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.#ctor*"></a>
+  <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData__ctor" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.#ctor">EntityData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityData()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_AnimationCurve.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.AnimationCurve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L51">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_AnimationCurve_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.AnimationCurve*"></a>
   <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_AnimationCurve" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.AnimationCurve">AnimationCurve</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[DisplayName(&quot;Animation curve&quot;)]
+    <pre><code class="lang-csharp hljs">[DisplayName(&quot;Animation curve&quot;)]
 public AnimationCurve AnimationCurve { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -150,18 +131,13 @@ public AnimationCurve AnimationCurve { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">AnimationCurve</span></td>
+        <td><span class="xref">UnityEngine.AnimationCurve</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Duration.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Duration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L47">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Duration_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Duration*"></a>
   <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Duration" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Duration">Duration</h4>
   <div class="markdown level1 summary"><p>Duration of the transition. If duration is equal or less than zero, target object movement is instantaneous.</p>
@@ -169,8 +145,7 @@ public AnimationCurve AnimationCurve { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[DisplayName(&quot;Animation (in seconds)&quot;)]
+    <pre><code class="lang-csharp hljs">[DisplayName(&quot;Animation (in seconds)&quot;)]
 public float Duration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -188,13 +163,8 @@ public float Duration { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_FinalPosition.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.FinalPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_FinalPosition_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.FinalPosition*"></a>
   <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_FinalPosition" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.FinalPosition">FinalPosition</h4>
   <div class="markdown level1 summary"><p>Target&apos;s position and rotation is linearly interpolated to match PositionProvider&apos;s position and rotation at the end of transition.</p>
@@ -202,8 +172,7 @@ public float Duration { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[DisplayName(&quot;Final position provider&quot;)]
+    <pre><code class="lang-csharp hljs">[DisplayName(&quot;Final position provider&quot;)]
 public SingleSceneObjectReference FinalPosition { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -221,13 +190,8 @@ public SingleSceneObjectReference FinalPosition { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Metadata.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Metadata_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Metadata*"></a>
   <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Metadata" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Reference to this object&apos;s <a class="xref" href="VRBuilder.Core.IMetadata.html">IMetadata</a>.</p>
@@ -252,13 +216,8 @@ public SingleSceneObjectReference FinalPosition { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Name.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L59">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Name_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Name*"></a>
   <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_Name" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.Name">Name</h4>
   <div class="markdown level1 summary"><p>Name of the entity.</p>
@@ -266,8 +225,7 @@ public SingleSceneObjectReference FinalPosition { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +242,8 @@ public string Name { get; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_TargetObject.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.TargetObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_TargetObject_" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.TargetObject*"></a>
   <h4 id="VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData_TargetObject" data-uid="VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData.TargetObject">TargetObject</h4>
   <div class="markdown level1 summary"><p>Target scene object to be moved.</p>
@@ -298,8 +251,7 @@ public string Name { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[DisplayName(&quot;Object&quot;)]
+    <pre><code class="lang-csharp hljs">[DisplayName(&quot;Object&quot;)]
 public SingleSceneObjectReference TargetObject { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -334,12 +286,6 @@ public SingleSceneObjectReference TargetObject { get; set; }</code></pre>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_MoveObjectBehavior_EntityData.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.MoveObjectBehavior.EntityData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/MoveObjectBehavior.cs/#L26" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

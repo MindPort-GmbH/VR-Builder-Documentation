@@ -100,31 +100,10 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_Metadata">EntityCollectionData&lt;IBehavior&gt;.Metadata</a>
-    </div>
-    <div>
       <a class="xref" href="VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_VRBuilder_Core_EntityOwners_IEntityCollectionData_GetChildren">EntityCollectionData&lt;IBehavior&gt;.IEntityCollectionData.GetChildren()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="VRBuilder.Core.EntityOwners.EntityCollectionData-1.html#VRBuilder_Core_EntityOwners_EntityCollectionData_1_Metadata">EntityCollectionData&lt;IBehavior&gt;.Metadata</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.Behaviors.html">VRBuilder.Core.Behaviors</a></h6>
@@ -132,18 +111,24 @@
   <h5 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DisplayName(&quot;Behavior Sequence&quot;)]
-[DataContract(IsReference = true)]
 public class EntityData : EntityCollectionData&lt;IBehavior&gt;, IEntitySequenceDataWithMode&lt;IBehavior&gt;, IEntitySequenceData&lt;IBehavior&gt;, IEntityCollectionData&lt;IBehavior&gt;, IEntityCollectionData, IEntitySequenceData, IModeData, IBackgroundBehaviorData, IBehaviorData, INamedData, IData</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData__ctor_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.#ctor*"></a>
+  <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData__ctor" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.#ctor">EntityData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityData()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Behaviors.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Behaviors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Behaviors_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Behaviors*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Behaviors" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Behaviors">Behaviors</h4>
   <div class="markdown level1 summary"><p>List of child behaviors.</p>
@@ -151,9 +136,10 @@ public class EntityData : EntityCollectionData&lt;IBehavior&gt;, IEntitySequence
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-[DisplayName(&quot;Child behaviors&quot;)]
-[ReorderableListOf(new Type[]{typeof(FoldableAttribute), typeof(HelpAttribute), typeof(MenuAttribute)})]
+    <pre><code class="lang-csharp hljs">[DisplayName(&quot;Child behaviors&quot;)]
+[Foldable]
+[ReorderableListOf]
+[ExtendableList]
 public List&lt;IBehavior&gt; Behaviors { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -171,13 +157,8 @@ public List&lt;IBehavior&gt; Behaviors { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Current.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Current_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Current*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Current" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Current">Current</h4>
   <div class="markdown level1 summary"><p>Current entity in the sequence.</p>
@@ -185,8 +166,7 @@ public List&lt;IBehavior&gt; Behaviors { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public IBehavior Current { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IBehavior Current { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +183,8 @@ public IBehavior Current { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_IsBlocking.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.IsBlocking%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L85">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_IsBlocking_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.IsBlocking*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_IsBlocking" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.IsBlocking">IsBlocking</h4>
   <div class="markdown level1 summary"><p>If true, the behavior prevents the completion of a step until it is completed itself.
@@ -235,13 +210,8 @@ If false, the behavior does not hinder the completion of a step.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Mode.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Mode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L82">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Mode_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Mode*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Mode" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Mode">Mode</h4>
   <div class="markdown level1 summary"></div>
@@ -265,13 +235,8 @@ If false, the behavior does not hinder the completion of a step.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Name.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L54">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Name_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Name*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_Name" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.Name">Name</h4>
   <div class="markdown level1 summary"><p>Name of the entity.</p>
@@ -279,8 +244,7 @@ If false, the behavior does not hinder the completion of a step.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,13 +261,8 @@ public string Name { get; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_PlaysOnRepeat.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.PlaysOnRepeat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_PlaysOnRepeat_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.PlaysOnRepeat*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_PlaysOnRepeat" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.PlaysOnRepeat">PlaysOnRepeat</h4>
   <div class="markdown level1 summary"><p>Are child behaviors activated only once or the collection is cycled.</p>
@@ -312,7 +271,6 @@ public string Name { get; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DisplayName(&quot;Repeat&quot;)]
-[DataMember]
 public bool PlaysOnRepeat { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -332,13 +290,8 @@ public bool PlaysOnRepeat { get; set; }</code></pre>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_GetChildren.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.GetChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_GetChildren_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.GetChildren*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_GetChildren" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.GetChildren">GetChildren()</h4>
   <div class="markdown level1 summary"></div>
@@ -366,13 +319,8 @@ public bool PlaysOnRepeat { get; set; }</code></pre>
   <div><span class="xref">VRBuilder.Core.EntityOwners.EntityCollectionData&lt;VRBuilder.Core.Behaviors.IBehavior&gt;.GetChildren()</span></div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_VRBuilder_Core_EntityOwners_IEntitySequenceData_Current.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.VRBuilder%23Core%23EntityOwners%23IEntitySequenceData%23Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L88">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_VRBuilder_Core_EntityOwners_IEntitySequenceData_Current_" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.VRBuilder#Core#EntityOwners#IEntitySequenceData#Current*"></a>
   <h4 id="VRBuilder_Core_Behaviors_BehaviorSequence_EntityData_VRBuilder_Core_EntityOwners_IEntitySequenceData_Current" data-uid="VRBuilder.Core.Behaviors.BehaviorSequence.EntityData.VRBuilder#Core#EntityOwners#IEntitySequenceData#Current">IEntitySequenceData.Current</h4>
   <div class="markdown level1 summary"><p>Current entity in the sequence.</p>
@@ -435,12 +383,6 @@ public bool PlaysOnRepeat { get; set; }</code></pre>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Behaviors_BehaviorSequence_EntityData.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Behaviors.BehaviorSequence.EntityData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Behaviors/BehaviorSequence.cs/#L24" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

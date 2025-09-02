@@ -94,19 +94,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Locked">LockableProperty.Locked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_unlockers">LockableProperty.unlockers</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Unlocked">LockableProperty.Unlocked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EmitLocked_System_Boolean_">LockableProperty.EmitLocked(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock">LockableProperty.LockOnParentObjectLock</a>
-    </div>
-    <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsLocked">LockableProperty.IsLocked</a>
-    </div>
-    <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EndStepLocked">LockableProperty.EndStepLocked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EmitUnlocked_System_Boolean_">LockableProperty.EmitUnlocked(Boolean)</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_SetLocked_System_Boolean_">LockableProperty.SetLocked(Boolean)</a>
@@ -115,13 +109,43 @@
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_">LockableProperty.RequestLocked(Boolean, IStepData)</a>
     </div>
     <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LogLockState_System_Boolean_VRBuilder_Core_IStepData_System_Boolean_">LockableProperty.LogLockState(Boolean, IStepData, Boolean)</a>
+    </div>
+    <div>
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_RemoveUnlocker_VRBuilder_Core_IStepData_">LockableProperty.RemoveUnlocker(IStepData)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_HandleObjectUnlocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_">LockableProperty.HandleObjectUnlocked(Object, LockStateChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_HandleObjectLocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_">LockableProperty.HandleObjectLocked(Object, LockStateChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InheritSceneObjectLockState">LockableProperty.InheritSceneObjectLockState</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock">LockableProperty.LockOnParentObjectLock</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsAlwaysUnlocked">LockableProperty.IsAlwaysUnlocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsLocked">LockableProperty.IsLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EndStepLocked">LockableProperty.EndStepLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Locked">LockableProperty.Locked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Unlocked">LockableProperty.Unlocked</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_ToString">ProcessSceneObjectProperty.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.XRInteraction.Properties.html">VRBuilder.XRInteraction.Properties</a></h6>
@@ -130,15 +154,22 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class UsableProperty : LockableProperty, IUsableProperty, ISceneObjectProperty, ILockable</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_XRInteraction_Properties_UsableProperty__ctor_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.#ctor*"></a>
+  <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty__ctor" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.#ctor">UsableProperty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UsableProperty()</code></pre>
+  </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_Interactable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.Interactable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L32">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_Interactable_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.Interactable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_Interactable" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.Interactable">Interactable</h4>
   <div class="markdown level1 summary"><p>Reference to attached <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a>.</p>
@@ -163,13 +194,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_IsBeingUsed.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.IsBeingUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_IsBeingUsed_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.IsBeingUsed*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_IsBeingUsed" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.IsBeingUsed">IsBeingUsed</h4>
   <div class="markdown level1 summary"><p>Returns true if the GameObject is being used.</p>
@@ -194,13 +220,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_UseEnded.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.UseEnded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L49">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_UseEnded_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.UseEnded*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_UseEnded" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.UseEnded">UseEnded</h4>
   <div class="markdown level1 summary"></div>
@@ -219,18 +240,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.UsablePropertyEventArgs.html">UsablePropertyEventArgs</a>&gt;</td>
+        <td><span class="xref">UnityEngine.Events.UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.UsablePropertyEventArgs.html">UsablePropertyEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_UseStarted.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.UseStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L46">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_UseStarted_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.UseStarted*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_UseStarted" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.UseStarted">UseStarted</h4>
   <div class="markdown level1 summary"></div>
@@ -249,20 +265,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.UsablePropertyEventArgs.html">UsablePropertyEventArgs</a>&gt;</td>
+        <td><span class="xref">UnityEngine.Events.UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.UsablePropertyEventArgs.html">UsablePropertyEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_EmitUsageStarted.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.EmitUsageStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_EmitUsageStarted_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.EmitUsageStarted*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_EmitUsageStarted" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.EmitUsageStarted">EmitUsageStarted()</h4>
   <div class="markdown level1 summary"></div>
@@ -271,13 +282,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void EmitUsageStarted()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_EmitUsageStopped.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.EmitUsageStopped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L95">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_EmitUsageStopped_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.EmitUsageStopped*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_EmitUsageStopped" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.EmitUsageStopped">EmitUsageStopped()</h4>
   <div class="markdown level1 summary"></div>
@@ -286,13 +292,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void EmitUsageStopped()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_FastForwardUse.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.FastForwardUse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L116">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_FastForwardUse_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.FastForwardUse*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_FastForwardUse" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.FastForwardUse">FastForwardUse()</h4>
   <div class="markdown level1 summary"><p>Instantaneously simulate that the object was used.</p>
@@ -302,17 +303,11 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void FastForwardUse()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_ForceSetUsed_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.ForceSetUsed(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L130">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_ForceSetUsed_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.ForceSetUsed*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_ForceSetUsed_System_Boolean_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.ForceSetUsed(System.Boolean)">ForceSetUsed(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Force this property to a specified use state.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -335,13 +330,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_InternalSetLocked_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.InternalSetLocked(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L100">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_InternalSetLocked_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.InternalSetLocked*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_InternalSetLocked_System_Boolean_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.InternalSetLocked(System.Boolean)">InternalSetLocked(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -369,13 +359,8 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InternalSetLocked_System_Boolean_">LockableProperty.InternalSetLocked(Boolean)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_OnDisable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.OnDisable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L63">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_OnDisable_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.OnDisable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_OnDisable" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"></div>
@@ -386,13 +371,8 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_OnDisable">LockableProperty.OnDisable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_OnEnable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.OnEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_OnEnable_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.OnEnable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_OnEnable" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -403,13 +383,8 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_OnEnable">LockableProperty.OnEnable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty_Reset.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_UsableProperty_Reset_" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.Reset*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_UsableProperty_Reset" data-uid="VRBuilder.XRInteraction.Properties.UsableProperty.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
@@ -437,12 +412,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_UsableProperty.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.UsableProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/UsableProperty.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

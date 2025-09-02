@@ -94,19 +94,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Locked">LockableProperty.Locked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_unlockers">LockableProperty.unlockers</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Unlocked">LockableProperty.Unlocked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EmitLocked_System_Boolean_">LockableProperty.EmitLocked(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock">LockableProperty.LockOnParentObjectLock</a>
-    </div>
-    <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsLocked">LockableProperty.IsLocked</a>
-    </div>
-    <div>
-      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EndStepLocked">LockableProperty.EndStepLocked</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EmitUnlocked_System_Boolean_">LockableProperty.EmitUnlocked(Boolean)</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_SetLocked_System_Boolean_">LockableProperty.SetLocked(Boolean)</a>
@@ -115,16 +109,46 @@
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_">LockableProperty.RequestLocked(Boolean, IStepData)</a>
     </div>
     <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LogLockState_System_Boolean_VRBuilder_Core_IStepData_System_Boolean_">LockableProperty.LogLockState(Boolean, IStepData, Boolean)</a>
+    </div>
+    <div>
       <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_RemoveUnlocker_VRBuilder_Core_IStepData_">LockableProperty.RemoveUnlocker(IStepData)</a>
     </div>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_HandleObjectUnlocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_">LockableProperty.HandleObjectUnlocked(Object, LockStateChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_HandleObjectLocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_">LockableProperty.HandleObjectLocked(Object, LockStateChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InheritSceneObjectLockState">LockableProperty.InheritSceneObjectLockState</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock">LockableProperty.LockOnParentObjectLock</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsAlwaysUnlocked">LockableProperty.IsAlwaysUnlocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_IsLocked">LockableProperty.IsLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_EndStepLocked">LockableProperty.EndStepLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Locked">LockableProperty.Locked</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_Unlocked">LockableProperty.Unlocked</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_Reset">ProcessSceneObjectProperty.Reset()</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_ToString">ProcessSceneObjectProperty.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.XRInteraction.Properties.html">VRBuilder.XRInteraction.Properties</a></h6>
@@ -133,15 +157,22 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class SnapZoneProperty : LockableProperty, ISnapZoneProperty, ISceneObjectProperty, ILockable</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty__ctor_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.#ctor*"></a>
+  <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty__ctor" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.#ctor">SnapZoneProperty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SnapZoneProperty()</code></pre>
+  </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_HighlightMaterial.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.HighlightMaterial%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_HighlightMaterial_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.HighlightMaterial*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_HighlightMaterial" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.HighlightMaterial">HighlightMaterial</h4>
   <div class="markdown level1 summary"></div>
@@ -160,22 +191,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="VRBuilder.Core.Configuration.Modes.ModeParameter-1.html">ModeParameter</a>&lt;<span class="xref">Material</span>&gt;</td>
+        <td><a class="xref" href="VRBuilder.Core.Configuration.Modes.ModeParameter-1.html">ModeParameter</a>&lt;<span class="xref">UnityEngine.Material</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsObjectSnapped.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsObjectSnapped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsObjectSnapped_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsObjectSnapped*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsObjectSnapped" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsObjectSnapped">IsObjectSnapped</h4>
-  <div class="markdown level1 summary"><p>Currently has an object snapped into this snap zone.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -196,13 +221,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsShowingHighlightObject.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsShowingHighlightObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L26">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsShowingHighlightObject_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsShowingHighlightObject*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsShowingHighlightObject" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsShowingHighlightObject">IsShowingHighlightObject</h4>
   <div class="markdown level1 summary"></div>
@@ -226,13 +246,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsShowingHoverMeshes.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsShowingHoverMeshes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L25">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsShowingHoverMeshes_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsShowingHoverMeshes*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_IsShowingHoverMeshes" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.IsShowingHoverMeshes">IsShowingHoverMeshes</h4>
   <div class="markdown level1 summary"></div>
@@ -256,13 +271,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_LockOnUnsnap.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.LockOnUnsnap%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_LockOnUnsnap_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.LockOnUnsnap*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_LockOnUnsnap" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.LockOnUnsnap">LockOnUnsnap</h4>
   <div class="markdown level1 summary"><p>If true, the snap zone locks as soon as an object is unsnapped.</p>
@@ -287,13 +297,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_ObjectAttached.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.ObjectAttached%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L62">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_ObjectAttached_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.ObjectAttached*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_ObjectAttached" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.ObjectAttached">ObjectAttached</h4>
   <div class="markdown level1 summary"></div>
@@ -312,18 +317,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html">SnapZonePropertyEventArgs</a>&gt;</td>
+        <td><span class="xref">UnityEngine.Events.UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html">SnapZonePropertyEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_ObjectDetached.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.ObjectDetached%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_ObjectDetached_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.ObjectDetached*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_ObjectDetached" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.ObjectDetached">ObjectDetached</h4>
   <div class="markdown level1 summary"></div>
@@ -342,22 +342,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html">SnapZonePropertyEventArgs</a>&gt;</td>
+        <td><span class="xref">UnityEngine.Events.UnityEvent</span>&lt;<a class="xref" href="VRBuilder.BasicInteraction.Properties.SnapZonePropertyEventArgs.html">SnapZonePropertyEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnappedObject.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnappedObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L41">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnappedObject_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnappedObject*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnappedObject" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnappedObject">SnappedObject</h4>
-  <div class="markdown level1 summary"><p>Object which is snapped into this snap zone.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -378,13 +372,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnapZone.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnapZone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L49">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnapZone_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnapZone*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnapZone" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnapZone">SnapZone</h4>
   <div class="markdown level1 summary"><p>Returns the SnapZone component.</p>
@@ -409,13 +398,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnapZoneObject.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnapZoneObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnapZoneObject_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnapZoneObject*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_SnapZoneObject" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.SnapZoneObject">SnapZoneObject</h4>
   <div class="markdown level1 summary"></div>
@@ -434,20 +418,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GameObject</span></td>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_Configure_VRBuilder_Core_Configuration_Modes_IMode_.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.Configure(VRBuilder.Core.Configuration.Modes.IMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L147">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_Configure_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.Configure*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_Configure_VRBuilder_Core_Configuration_Modes_IMode_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.Configure(VRBuilder.Core.Configuration.Modes.IMode)">Configure(IMode)</h4>
   <div class="markdown level1 summary"><p>Configure snap zone properties according to the provided mode.</p>
@@ -475,13 +454,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitSnapped.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.EmitSnapped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L159">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitSnapped_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.EmitSnapped*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitSnapped" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.EmitSnapped">EmitSnapped()</h4>
   <div class="markdown level1 summary"><p>Invokes the <a class="xref" href="VRBuilder.XRInteraction.Properties.SnapZoneProperty.html#VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitSnapped">EmitSnapped()</a> event.</p>
@@ -491,13 +465,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void EmitSnapped()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitUnsnapped.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.EmitUnsnapped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L167">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitUnsnapped_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.EmitUnsnapped*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitUnsnapped" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.EmitUnsnapped">EmitUnsnapped()</h4>
   <div class="markdown level1 summary"><p>Invokes the <a class="xref" href="VRBuilder.XRInteraction.Properties.SnapZoneProperty.html#VRBuilder_XRInteraction_Properties_SnapZoneProperty_EmitUnsnapped">EmitUnsnapped()</a> event.</p>
@@ -507,13 +476,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void EmitUnsnapped()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_InternalSetLocked_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.InternalSetLocked(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L175">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_InternalSetLocked_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.InternalSetLocked*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_InternalSetLocked_System_Boolean_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.InternalSetLocked(System.Boolean)">InternalSetLocked(Boolean)</h4>
   <div class="markdown level1 summary"><p>Locks or unlocks the snap zone according to the provided <code data-dev-comment-type="paramref" class="paramref">lockState</code>.</p>
@@ -542,13 +506,8 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InternalSetLocked_System_Boolean_">LockableProperty.InternalSetLocked(Boolean)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_OnDisable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.OnDisable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L76">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_OnDisable_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.OnDisable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_OnDisable" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"></div>
@@ -559,13 +518,8 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_OnDisable">LockableProperty.OnDisable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty_OnEnable.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty.OnEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_OnEnable_" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.OnEnable*"></a>
   <h4 id="VRBuilder_XRInteraction_Properties_SnapZoneProperty_OnEnable" data-uid="VRBuilder.XRInteraction.Properties.SnapZoneProperty.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -593,12 +547,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_XRInteraction_Properties_SnapZoneProperty.md&amp;value=---%0Auid%3A%20VRBuilder.XRInteraction.Properties.SnapZoneProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/XRInteraction/Source/Runtime/Properties/SnapZoneProperty.cs/#L15" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

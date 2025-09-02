@@ -1,6 +1,7 @@
 #### Tunneling Vignette
 
 The tunneling vignette improves comfort during continuous movement. By default, the vignette is configured to activate whenever any continuous [Locomotion](locomotion.md) method is in use on the rig.
+Note that continuous locomotion methods are disabled by default on the VR Builder rig, so the vignette will only be used if you manually enabled them.
 
 ![Tunneling Vignette](images/rig_tunneling_vignette.png)
 

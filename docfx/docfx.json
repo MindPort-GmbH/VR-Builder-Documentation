@@ -3,27 +3,24 @@
     {
       "src": [
         {
-          "src": "../../",
-          "files": [
-            "VRBuilder*.csproj"
-          ],
+          "src": "../../Library/ScriptAssemblies/",
+          "files": [ "VRBuilder*.dll" ],
           "exclude": [
-            "*Tests*.csproj",
-            "*DemoScene*.csproj",
-            "VRBuilder.Community.csproj",
-            "*VIRTOSHA*.csproj",
-            "*UserInterface*.csproj"
+            "*Tests*",
+            "*Demo*",
+            "VRBuilder.Community*",
+            "*VIRTOSHA*",
+            "*UserInterface*"
           ]
         }
       ],
       "dest": "api",
       "references": [
-        {
-          "uid": "*",
-          "name": "*",
-          "href": "../../Library/ScriptAssemblies/*.dll"
-        }
-      ]
+      {
+        "src": "../../",
+        "files": [ "Library/ScriptAssemblies/*.dll" ] 
+      }
+    ]
     }
   ],
   "build": {
@@ -47,7 +44,7 @@
           "articles/pro/randomization/images/**",
           "articles/pro/states-and-data/images/**",
           "articles/pro/track-and-measure/images/**",
-          "images/**"
+          "**images/**"
         ]
       }
     ],
@@ -63,7 +60,7 @@
       "_enableNewTab": true,
       "_enableSearch": true,
       "_disableBreadcrumb": true,
-      "pdf": false,
+      "pdf": true,
       "_gitContribute": {
         "repo": "https://github.com/MindPort-GmbH/VR-Builder-Documentation",
         "branch": "develop"

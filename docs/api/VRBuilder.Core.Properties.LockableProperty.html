@@ -99,13 +99,13 @@ locking/unlocking your properties, extend this class.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
-    </div>
-    <div>
       <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_Reset">ProcessSceneObjectProperty.Reset()</a>
     </div>
     <div>
       <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_ToString">ProcessSceneObjectProperty.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_SceneObject">ProcessSceneObjectProperty.SceneObject</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.Properties.html">VRBuilder.Core.Properties</a></h6>
@@ -114,15 +114,48 @@ locking/unlocking your properties, extend this class.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class LockableProperty : ProcessSceneObjectProperty, ISceneObjectProperty, ILockable</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty__ctor_" data-uid="VRBuilder.Core.Properties.LockableProperty.#ctor*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty__ctor" data-uid="VRBuilder.Core.Properties.LockableProperty.#ctor">LockableProperty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected LockableProperty()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_unlockers" data-uid="VRBuilder.Core.Properties.LockableProperty.unlockers">unlockers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;IStepData&gt; unlockers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="VRBuilder.Core.IStepData.html">IStepData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_EndStepLocked.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.EndStepLocked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_EndStepLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.EndStepLocked*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_EndStepLocked" data-uid="VRBuilder.Core.Properties.LockableProperty.EndStepLocked">EndStepLocked</h4>
   <div class="markdown level1 summary"><p>On default the lockable property will use this value to determine if its locked at the end of a step.</p>
@@ -147,21 +180,16 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_IsLocked.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.IsLocked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L40">View Source</a>
-  </span>
-  <a id="VRBuilder_Core_Properties_LockableProperty_IsLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.IsLocked*"></a>
-  <h4 id="VRBuilder_Core_Properties_LockableProperty_IsLocked" data-uid="VRBuilder.Core.Properties.LockableProperty.IsLocked">IsLocked</h4>
-  <div class="markdown level1 summary"><p>Returns if the object is locked.</p>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_InheritSceneObjectLockState_" data-uid="VRBuilder.Core.Properties.LockableProperty.InheritSceneObjectLockState*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_InheritSceneObjectLockState" data-uid="VRBuilder.Core.Properties.LockableProperty.InheritSceneObjectLockState">InheritSceneObjectLockState</h4>
+  <div class="markdown level1 summary"><p>Decides if the property will be locked when the parent scene object is locked.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsLocked { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool InheritSceneObjectLockState { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +206,60 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.LockOnParentObjectLock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L33">View Source</a>
-  </span>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_IsAlwaysUnlocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.IsAlwaysUnlocked*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_IsAlwaysUnlocked" data-uid="VRBuilder.Core.Properties.LockableProperty.IsAlwaysUnlocked">IsAlwaysUnlocked</h4>
+  <div class="markdown level1 summary"><p>Checks if the object should never be locked by the VRBuilder process even if the parent scene object is locked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAlwaysUnlocked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_IsLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.IsLocked*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_IsLocked" data-uid="VRBuilder.Core.Properties.LockableProperty.IsLocked">IsLocked</h4>
+  <div class="markdown level1 summary"><p>Returns if the object is locked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsLocked { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock_" data-uid="VRBuilder.Core.Properties.LockableProperty.LockOnParentObjectLock*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock" data-uid="VRBuilder.Core.Properties.LockableProperty.LockOnParentObjectLock">LockOnParentObjectLock</h4>
   <div class="markdown level1 summary"><p>Decides if the property will be locked when the parent scene object is locked.</p>
@@ -209,15 +284,131 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="VRBuilder_Core_Properties_LockableProperty_LockOnParentObjectLock_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This field is deprecated and will be removed in a future version of VR Builder. Use <a class="xref" href="VRBuilder.Core.Properties.LockableProperty.html#VRBuilder_Core_Properties_LockableProperty_InheritSceneObjectLockState">InheritSceneObjectLockState</a> instead.</p>
+</div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_InternalSetLocked_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.InternalSetLocked(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L151">View Source</a>
-  </span>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_EmitLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.EmitLocked*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_EmitLocked_System_Boolean_" data-uid="VRBuilder.Core.Properties.LockableProperty.EmitLocked(System.Boolean)">EmitLocked(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EmitLocked(bool isLocked)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isLocked</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_EmitUnlocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.EmitUnlocked*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_EmitUnlocked_System_Boolean_" data-uid="VRBuilder.Core.Properties.LockableProperty.EmitUnlocked(System.Boolean)">EmitUnlocked(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EmitUnlocked(bool isLocked)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isLocked</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_HandleObjectLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.HandleObjectLocked*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_HandleObjectLocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_" data-uid="VRBuilder.Core.Properties.LockableProperty.HandleObjectLocked(System.Object,VRBuilder.Core.SceneObjects.LockStateChangedEventArgs)">HandleObjectLocked(Object, LockStateChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleObjectLocked(object sender, LockStateChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.SceneObjects.LockStateChangedEventArgs.html">LockStateChangedEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_HandleObjectUnlocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.HandleObjectUnlocked*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_HandleObjectUnlocked_System_Object_VRBuilder_Core_SceneObjects_LockStateChangedEventArgs_" data-uid="VRBuilder.Core.Properties.LockableProperty.HandleObjectUnlocked(System.Object,VRBuilder.Core.SceneObjects.LockStateChangedEventArgs)">HandleObjectUnlocked(Object, LockStateChangedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleObjectUnlocked(object sender, LockStateChangedEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.SceneObjects.LockStateChangedEventArgs.html">LockStateChangedEventArgs</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_InternalSetLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.InternalSetLocked*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_InternalSetLocked_System_Boolean_" data-uid="VRBuilder.Core.Properties.LockableProperty.InternalSetLocked(System.Boolean)">InternalSetLocked(Boolean)</h4>
   <div class="markdown level1 summary"><p>Handle your internal locking affairs here.</p>
@@ -244,13 +435,45 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_OnDisable.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.OnDisable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L55">View Source</a>
-  </span>
+  
+  
+  <a id="VRBuilder_Core_Properties_LockableProperty_LogLockState_" data-uid="VRBuilder.Core.Properties.LockableProperty.LogLockState*"></a>
+  <h4 id="VRBuilder_Core_Properties_LockableProperty_LogLockState_System_Boolean_VRBuilder_Core_IStepData_System_Boolean_" data-uid="VRBuilder.Core.Properties.LockableProperty.LogLockState(System.Boolean,VRBuilder.Core.IStepData,System.Boolean)">LogLockState(Boolean, IStepData, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void LogLockState(bool lockState, IStepData stepData, bool canLock)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">lockState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.IStepData.html">IStepData</a></td>
+        <td><span class="parametername">stepData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">canLock</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_OnDisable_" data-uid="VRBuilder.Core.Properties.LockableProperty.OnDisable*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_OnDisable" data-uid="VRBuilder.Core.Properties.LockableProperty.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"></div>
@@ -259,13 +482,8 @@ locking/unlocking your properties, extend this class.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_OnEnable.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.OnEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L47">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_OnEnable_" data-uid="VRBuilder.Core.Properties.LockableProperty.OnEnable*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_OnEnable" data-uid="VRBuilder.Core.Properties.LockableProperty.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -276,13 +494,8 @@ locking/unlocking your properties, extend this class.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="VRBuilder.Core.Properties.ProcessSceneObjectProperty.html#VRBuilder_Core_Properties_ProcessSceneObjectProperty_OnEnable">ProcessSceneObjectProperty.OnEnable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_RemoveUnlocker_VRBuilder_Core_IStepData_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.RemoveUnlocker(VRBuilder.Core.IStepData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L127">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_RemoveUnlocker_" data-uid="VRBuilder.Core.Properties.LockableProperty.RemoveUnlocker*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_RemoveUnlocker_VRBuilder_Core_IStepData_" data-uid="VRBuilder.Core.Properties.LockableProperty.RemoveUnlocker(VRBuilder.Core.IStepData)">RemoveUnlocker(IStepData)</h4>
   <div class="markdown level1 summary"><p>Manually removes a step data keeping the object unlocked.</p>
@@ -324,13 +537,8 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.RequestLocked(System.Boolean%2CVRBuilder.Core.IStepData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_RequestLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.RequestLocked*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_RequestLocked_System_Boolean_VRBuilder_Core_IStepData_" data-uid="VRBuilder.Core.Properties.LockableProperty.RequestLocked(System.Boolean,VRBuilder.Core.IStepData)">RequestLocked(Boolean, IStepData)</h4>
   <div class="markdown level1 summary"><p>Requests a change on the lock state of the object.</p>
@@ -362,13 +570,8 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_SetLocked_System_Boolean_.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.SetLocked(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L62">View Source</a>
-  </span>
+  
+  
   <a id="VRBuilder_Core_Properties_LockableProperty_SetLocked_" data-uid="VRBuilder.Core.Properties.LockableProperty.SetLocked*"></a>
   <h4 id="VRBuilder_Core_Properties_LockableProperty_SetLocked_System_Boolean_" data-uid="VRBuilder.Core.Properties.LockableProperty.SetLocked(System.Boolean)">SetLocked(Boolean)</h4>
   <div class="markdown level1 summary"><p>Changes the lock state of the object.</p>
@@ -397,13 +600,8 @@ locking/unlocking your properties, extend this class.</p>
   </table>
   <h3 id="events">Events
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_Locked.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.Locked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L21">View Source</a>
-  </span>
+  
+  
   <h4 id="VRBuilder_Core_Properties_LockableProperty_Locked" data-uid="VRBuilder.Core.Properties.LockableProperty.Locked">Locked</h4>
   <div class="markdown level1 summary"><p>Will be called when the object containing this interface is locked.</p>
 </div>
@@ -427,13 +625,8 @@ locking/unlocking your properties, extend this class.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty_Unlocked.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty.Unlocked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L23">View Source</a>
-  </span>
+  
+  
   <h4 id="VRBuilder_Core_Properties_LockableProperty_Unlocked" data-uid="VRBuilder.Core.Properties.LockableProperty.Unlocked">Unlocked</h4>
   <div class="markdown level1 summary"><p>Will be called when the object containing this interface is unlocked.</p>
 </div>
@@ -464,10 +657,6 @@ locking/unlocking your properties, extend this class.</p>
   <div>
       <a class="xref" href="VRBuilder.Core.SceneObjects.ILockable.html">ILockable</a>
   </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="VRBuilder.Core.SceneObjects.SceneObjectExtensions.html#VRBuilder_Core_SceneObjects_SceneObjectExtensions_AddProcessPropertyExtensions_VRBuilder_Core_Properties_ISceneObjectProperty_">SceneObjectExtensions.AddProcessPropertyExtensions(ISceneObjectProperty)</a>
-  </div>
 </article>
           </div>
           
@@ -475,12 +664,6 @@ locking/unlocking your properties, extend this class.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/new/develop/apiSpec/new?filename=VRBuilder_Core_Properties_LockableProperty.md&amp;value=---%0Auid%3A%20VRBuilder.Core.Properties.LockableProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/MindPort-GmbH/VR-Builder/blob/develop/Source/Core/Runtime/Properties/LockableProperty.cs/#L18" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
