@@ -8,7 +8,7 @@ By default the rig is configured for locomotion types that minimize discomfort. 
 
 For detailed explanations on all locomotion styles supported please refer to the XR Interaction Toolkit documentation. As of 04.08.2025 VR Builder uses XR Interaction Toolkit [version 3.1.2](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.1/manual/locomotion-landing.html) as the source of the rig.
 
-For a more in-depth guide on locomotion in VR we suggest reading the excellent guide at [Meta’s locomotion design guidelines](https://developers.meta.com/horizon/design/locomotion-overview).
+For a more in-depth guide on locomotion in VR we suggest reading the excellent guide at [Metaâ€™s locomotion design guidelines](https://developers.meta.com/horizon/design/locomotion-overview).
 
 ### Setup Teleportation in VR Builder
 
@@ -18,7 +18,7 @@ Teleportation requires the user to push the right thumbstick forward then releas
 
 It is recommended that teleportation use a layer different from normal interactions. By default, VR Builder uses the `Teleport` raycast layer for controller raycasts and the `Teleport` XRI interaction layer for teleport actions. When you import VR Builder, it attempts to create both layers at index 31 of their respective layer arrays.
 
-Interactors and interactables must be configured with these layers to function. In a new scene, the default rig’s teleport interactors are already set up to raycast and interact on these layers.
+Interactors and interactables must be configured with these layers to function. In a new scene, the default rigâ€™s teleport interactors are already set up to raycast and interact on these layers.
 
 ### Anchor and Area Setup
 
@@ -34,4 +34,4 @@ When creating a teleportation anchor or area, use the **Teleportation Anchor (VR
 
 #### Troubelshoting
 
-Teleportation generally works out of the box. If you encounter issues—such as after editing an old scene or moving the XR Teleport layer—you can reset all layers on the rig, anchors, and areas. To do this, select: `Tools > VR Builder > Developer > Configure Teleportation Layers`. Be aware that this will overwrite existing layer masks and assign the `Teleport` layer to all affected objects.
+Teleportation generally works out of the box. If you encounter issuesâ€”such as after editing an old scene or moving the XR Teleport layerâ€”you can reset all layers on the rig, anchors, and areas. To do this, select: `Tools > VR Builder > Developer > Configure Teleportation Layers`. Be aware that this will overwrite existing layer masks and assign the `Teleport` layer to all affected objects.
