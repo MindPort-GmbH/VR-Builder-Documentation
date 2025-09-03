@@ -16,7 +16,7 @@ VR Builder also includes an XR Rig that supports hand tracking. To use it, searc
 
 Just like the `VRB_XR_Setup`, the `VRB_XR_Setup_Hands` is built on top of the XR Interaction Toolkit samples and aligns with these standards. For example, it supports automatic switching between hands and controllers. During runtime, the following logic is used for determining which modality is active: If a hand begins tracking, this component will switch to the hand group of interactors. If the player wakes the motion controllers by grabbing them, this component will switch to the motion controller group of interactors once they become tracked. While waiting to activate the controller GameObject while not tracked, both groups will be deactivated. For the exact implementation behavior or if you want to modify it, refer to the `XRInputModalityManager` inside the rig.
 
-![VR Builder XR Rig](images/rig_vrb_xr_rig_hands.png)
+![VR Builder XR Rig with Hand Tracking](images/rig_vrb_xr_rig_hands.png)
 
 #### Hand Locomotion
 If users need to move with hand tracking enabled, there is the built-in Grab Move locomotion type. Other ways of locomotion (e.g., teleportation via a hand gesture) are possible but require custom implementation effort.
