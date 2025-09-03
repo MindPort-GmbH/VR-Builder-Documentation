@@ -22,6 +22,6 @@ Just like the `VRB_XR_Setup`, the `VRB_XR_Setup_Hands` is built on top of the XR
 If users need to move with hand tracking enabled, there is the built-in Grab Move locomotion type. Other ways of locomotion (e.g., teleportation via a hand gesture) are possible but require custom implementation effort.
 
 #### Troubleshooting
-If your hands do not show up, activate the OpenXR Feature Groups `Hand Tracking Subsystems` and `Meta Hand Tracking Aim`.
+If your hands do not show up, ensure that the OpenXR Feature Groups `Hand Tracking Subsystems` and `Meta Hand Tracking Aim` are enabled in the OpenXR page in the Project Settings.
 
 ![Missing OpenXR Feature Groups](images/hand_tracking_missing_feature_groups.png)
