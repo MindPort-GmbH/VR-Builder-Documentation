@@ -5012,7 +5012,7 @@
   "articles/core/xr-rig.html": {
     "href": "articles/core/xr-rig.html",
     "title": "XR Rig | VR Builder Documentation",
-    "keywords": "XR Rig The XR Rig is a game object that anchors the user’s head mounted display, controllers, or user’s hands when using hand tracking within the virtual space. Essentially, it represents the user in the scene. On the rig, you can configure which types of locomotion and interaction are available to the user. VR Builder XR Rig When creating a new scene with the VR Builder Scene Setup Wizard, you get a VRB_XR_Setup game object automatically added to the scene. VRB_XR_Setup is the VR Builder XR Rig and is built upon the suggested standards set by the Unity XR Interaction Toolkit. Therefore, VRB_XR_Setup is very similar to the XR Origin (XR Rig) found in the XR Interaction Toolkit samples but has some additional VR Builder–specific scripts added."
+    "keywords": "XR Rig The XR Rig is a game object that anchors the user’s head mounted display, controllers, or user’s hands when using hand tracking within the virtual space. Essentially, it represents the user in the scene. On the rig, you can configure which types of locomotion and interaction are available to the user. VR Builder XR Rig When creating a new scene with the VR Builder Scene Setup Wizard, you get a VRB_XR_Setup game object automatically added to the scene. VRB_XR_Setup is the VR Builder XR Rig and is built upon the suggested standards set by the Unity XR Interaction Toolkit. Therefore, VRB_XR_Setup is very similar to the XR Origin (XR Rig) found in the XR Interaction Toolkit samples but has some additional VR Builder–specific scripts added. The VRB_XR_Setup game object is a fully unpacked copy of the prefab with the same name. If you are familiar with Unity’s prefab workflows you can use the prefab or better your own prefab variant of it. VR Builder XR Rig with Hand Tracking VR Builder also includes an XR Rig that supports hand tracking. To use it, search for VRB_XR_Setup_Hands in the VR Builder Package and replace the VRB_XR_Setup game object with the VRB_XR_Setup_Hands prefab. Depending on your preferences, you can keep the VRB_XR_Setup_Hands prefab (see image below) or completely unpack it. Just like the VRB_XR_Setup , the VRB_XR_Setup_Hands is built on top of the XR Interaction Toolkit samples and aligns with these standards. For example, it supports automatic switching between hands and controllers. During runtime, the following logic is used for determining which modality is active: If a hand begins tracking, this component will switch to the hand group of interactors. If the player wakes the motion controllers by grabbing them, this component will switch to the motion controller group of interactors once they become tracked. While waiting to activate the controller GameObject while not tracked, both groups will be deactivated. For the exact implementation behavior or if you want to modify it, refer to the XRInputModalityManager inside the rig. Hand Locomotion If users need to move with hand tracking enabled, there is the built-in Grab Move locomotion type. Other ways of locomotion (e.g., teleportation via a hand gesture) are possible but require custom implementation effort. Troubleshooting If your hands do not show up, ensure that the OpenXR Feature Groups Hand Tracking Subsystems and Meta Hand Tracking Aim are enabled in the OpenXR page in the Project Settings."
   },
   "articles/pro/animations/animate-transform-behavior.html": {
     "href": "articles/pro/animations/animate-transform-behavior.html",
@@ -5023,11 +5023,6 @@
     "href": "articles/pro/animations/behaviors.html",
     "title": "Behaviors | VR Builder Documentation",
     "keywords": "Behaviors The Animations add-on includes the following behaviors."
-  },
-  "articles/pro/animations/contact.html": {
-    "href": "articles/pro/animations/contact.html",
-    "title": "Contact | VR Builder Documentation",
-    "keywords": "Contact Join our official Discord server for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder. Make sure to review our asset if you like it. It will help us immensely. If you have any issues, please contact contact@mindport.co . We’d love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance! Let’s build something extraordinary! You can also visit our website at mindport.co ."
   },
   "articles/pro/animations/follow-path-behavior.html": {
     "href": "articles/pro/animations/follow-path-behavior.html",
@@ -5069,11 +5064,6 @@
     "title": "Behaviors | VR Builder Documentation",
     "keywords": "Behaviors The Highlights and Guidance add-on includes the following behaviors."
   },
-  "articles/pro/highlights-and-guidance/contact.html": {
-    "href": "articles/pro/highlights-and-guidance/contact.html",
-    "title": "Contact | VR Builder Documentation",
-    "keywords": "Contact Join our official Discord server for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder. Make sure to review VR Builder and this asset if you like it. It will help us immensely. If you have any issues, please contact contact@mindport.co . We'd love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance! Let's build something extraordinary! You can also visit our website at mindport.co ."
-  },
   "articles/pro/highlights-and-guidance/introduction.html": {
     "href": "articles/pro/highlights-and-guidance/introduction.html",
     "title": "Introduction | VR Builder Documentation",
@@ -5099,11 +5089,6 @@
     "title": "Introduction | VR Builder Documentation",
     "keywords": "Introduction VR Builder Pro includes all add-ons previously released on the asset store."
   },
-  "articles/pro/process-menu/contact.html": {
-    "href": "articles/pro/process-menu/contact.html",
-    "title": "Contact | VR Builder Documentation",
-    "keywords": "Contact Join our official Discord server for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder. Make sure to review VR Builder and this asset if you like it. It will help us immensely. If you have any issues, please contact contact@mindport.co . We'd love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance! Let's build something extraordinary! You can also visit our website at mindport.co ."
-  },
   "articles/pro/process-menu/customizing-process-controller.html": {
     "href": "articles/pro/process-menu/customizing-process-controller.html",
     "title": "Customizing the Process Controller | VR Builder Documentation",
@@ -5122,17 +5107,12 @@
   "articles/pro/process-menu/quick-start.html": {
     "href": "articles/pro/process-menu/quick-start.html",
     "title": "Quick Start | VR Builder Documentation",
-    "keywords": "Quick Start Drag one of the prefabs in the Prefabs folder in your process scene. The menu will appear when pressing Play. Feel free to try it out with the demo scene included in VR Builder! The process starts automatically in VR Builder. If you want the process to be started from the menu, you will have to provide a custom [PROCESS_CONTROLLER] . You can find more information on how to do so here ."
+    "keywords": "Quick Start Drag the prefabs DesktopProcessControllerMenu and StandaloneProcessControllerMenu into your VR Builder scene. The desktop menu will appear on the desktop screen when pressing Play (see image below). To open the standalone menu, press the primary button (usually the A button) on your controller. The process starts automatically in VR Builder. If you want the process to be started from the menu, you will have to provide a custom [PROCESS_CONTROLLER] . You can find more information on how to do so here ."
   },
   "articles/pro/randomization/behaviors.html": {
     "href": "articles/pro/randomization/behaviors.html",
     "title": "Behaviors | VR Builder Documentation",
     "keywords": "Behaviors The behaviors included in the Randomization add-on allow you to generate random values in data properties. This section explains them in detail."
-  },
-  "articles/pro/randomization/contact.html": {
-    "href": "articles/pro/randomization/contact.html",
-    "title": "Contact | VR Builder Documentation",
-    "keywords": "Contact Join our official Discord server for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder. Make sure to review VR Builder and this asset if you like it. It will help us immensely. If you have any issues, please contact contact@mindport.co . We'd love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance! Let's build something extraordinary! You can also visit our website at mindport.co ."
   },
   "articles/pro/randomization/data-properties.html": {
     "href": "articles/pro/randomization/data-properties.html",
@@ -5174,11 +5154,6 @@
     "title": "Behaviors | VR Builder Documentation",
     "keywords": "Behaviors The behaviors included in the States and Data add-on are listed in this section."
   },
-  "articles/pro/states-and-data/contact.html": {
-    "href": "articles/pro/states-and-data/contact.html",
-    "title": "Contact | VR Builder Documentation",
-    "keywords": "Contact Join our official Discord server for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder. Make sure to review VR Builder and this asset if you like it. It will help us immensely. If you have any issues, please contact contact@mindport.co . We'd love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance! Let's build something extraordinary! You can also visit our website at mindport.co ."
-  },
   "articles/pro/states-and-data/data-properties.html": {
     "href": "articles/pro/states-and-data/data-properties.html",
     "title": "Data Properties | VR Builder Documentation",
@@ -5213,11 +5188,6 @@
     "href": "articles/pro/states-and-data/working-with-data-properties.html",
     "title": "Working with Data Properties | VR Builder Documentation",
     "keywords": "Working with Data Properties There are some standard tools to work with data properties. These are the Set/Reset Value behaviors, which are used to change the value stored in a data property, and the Compare Values conditions, which compare two values (from data properties or constant) to check if they are fulfilled. Set Value Behaviors These behaviors set the value of a data property to a value specified in the step inspector. There is one behavior for each data property type. The available behaviors are listed here. Set Number Set Boolean Set Text Set State Reset Value Behavior This behavior resets a data property's value to its default. This is zero for numerical values, false for booleans and an empty string for text, but a different default can be specified in the inspector of the data property. The property needs to be referenced in the step inspector, and will reset when the behavior is triggered. Compare Values Conditions In States and Data it is possible to use a Compare Numbers , Compare Text or Compare Booleans condition. They work in a similar way, but the comparison operators differ. You'll need to select two values and the operation between them. Use the radio buttons to select if a value comes from a data property or is a constant entered in the step inspector. In the example below, the condition will be fulfilled when the Score Tracker value is equal or greater than the Point Threshold value. Utilities Some data properties can have utility functions to make them handier to use with Unity events. At the moment the following utility functions are available: Number Data Property : You can use the IncreaseValue(float) function to increase or decrease the value of the data property. Boolean Data Property : you can use the InvertValue() function to switch it from true to false , or viceversa. Logging Data Properties It can be useful to log value changes to data properties in the console for debugging purposes. This can be enabled globally by ticking the relevant box in Project Settings -> VR Builder -> Settings . If the Log Data Property changes checkbox is enabled, changes to the value of the data property will be logged in the console like the following example. Note that the name provided is the game object's name."
-  },
-  "articles/pro/track-and-measure/contact.html": {
-    "href": "articles/pro/track-and-measure/contact.html",
-    "title": "Contact | VR Builder Documentation",
-    "keywords": "Contact Join our official Discord server for quick support from the developer and fellow users. Suggest and vote on new ideas to influence the future of the VR Builder. Make sure to review VR Builder and this asset if you like it. It will help us immensely. If you have any issues, please contact contact@mindport.co . We’d love to get your feedback, both positive and constructive. By sharing your feedback you help us improve - thank you in advance! Let’s build something extraordinary! You can also visit our website at mindport.co ."
   },
   "articles/pro/track-and-measure/data-properties.html": {
     "href": "articles/pro/track-and-measure/data-properties.html",
