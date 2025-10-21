@@ -1,6 +1,9 @@
 ## Quick Start
 
-Drag the prefabs `DesktopProcessControllerMenu` and `StandaloneProcessControllerMenu` into your VR Builder scene. The desktop menu will appear on the desktop screen when pressing Play (see image below). To open the standalone menu, press the primary button (usually the A button) on your controller.
+1. Search for the two prefabs `DesktopProcessControllerMenu`or `StandaloneProcessControllerMenu` in the Project explorer or go to the directory `Packages/VR Builder Pro/StaticAssets/Prefabs`
+2. Drag one or both UI prefabs in your process scene. 
+3. The menu will appear when pressing Play.
+4. Feel free to try it out with the demo scene included in VR Builder!
 
 ![Demo Scene](images/demo-scene.png)
 
