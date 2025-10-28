@@ -1,6 +1,6 @@
 ## Quick Start
 
-1. Search for the two prefabs `DesktopProcessControllerMenu`or `StandaloneProcessControllerMenu` in the Project explorer or go to the directory `Packages/VR Builder Pro/StaticAssets/Prefabs`
+1. Search for the two prefabs `DesktopProcessControllerMenu`or `StandaloneProcessControllerMenu` in the Project explorer or go to the directory `Packages/VR Builder Pro/StaticAssets/Prefabs`. When searching, ensure that you are searching in the `Packages` folder rather than `Assets`.
 2. Drag one or both UI prefabs in your process scene. 
 3. The menu will appear when pressing Play.
 4. Feel free to try it out with the demo scene included in VR Builder!
