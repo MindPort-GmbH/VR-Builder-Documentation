@@ -1,5 +1,7 @@
 ## How to Use the Menu
 
+Both menus are stored as a prefab under `Packages/VR Builder Pro/StaticAssets/Prefabs`.
+
 ### Desktop Process Menu
 
 The desktop process menu is laid out as follows.
@@ -15,7 +17,7 @@ The desktop process menu is laid out as follows.
 7. Restart process button. Clicking it will restart the process from the beginning.
 8. Audio toggle. Enables/disables process audio.
 
-The desktop menu can be used by clicking with the mouse on the desired option.
+The desktop menu can be used by clicking with the mouse on the desired option. The prefab can be found by searching for `DesktopProcessControllerMenu` in packages.
 
 ### Standalone Process Menu
 
@@ -32,7 +34,9 @@ The standalone process menu is laid out as follows.
 7. Restart process button. Clicking it will restart the process from the beginning.
 8. Audio toggle. Enables/disables process audio.
 
-The standalone menu is designed to be opened through user input. By default, the primary button on the right controller opens the menu. This can be changed on the `Standalone Menu Handler` component on the menu prefab. In case you want the menu to be permanently present in the scene, remove the `Standalone Menu Handler` component from the prefab.
+The standalone menu is designed to be opened through user input. The prefab can be found by searching for `StandaloneProcessControllerMenu` in packages. 
+
+By default, the primary button on the right controller opens the menu. This can be changed on the `Standalone Menu Handler` component on the menu prefab. In case you want the menu to be permanently present in the scene, remove the `Standalone Menu Handler` component from the prefab.
 
 ![Standalone Menu Handler](images/standalone-menu-handler.png)
 
