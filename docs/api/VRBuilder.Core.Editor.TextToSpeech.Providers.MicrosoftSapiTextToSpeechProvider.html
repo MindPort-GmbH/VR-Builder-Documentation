@@ -75,11 +75,7 @@
   
   <h1 id="VRBuilder_Core_Editor_TextToSpeech_Providers_MicrosoftSapiTextToSpeechProvider" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.MicrosoftSapiTextToSpeechProvider" class="text-break">Class MicrosoftSapiTextToSpeechProvider
   </h1>
-  <div class="markdown level0 summary"><p>TTS provider which uses Microsoft SAPI to generate audio.
-TextToSpeechConfig.Voice has to be either &quot;male&quot;, &quot;female&quot;, or &quot;neutral&quot;.
-TextToSpeechConfig.Language is a language code (&quot;de&quot; or &quot;de-DE&quot; for German, &quot;en&quot; or &quot;en-US&quot; for English).
-It runs the TTS synthesis in a separate thread, saving the result to a temporary cache file.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -137,12 +133,12 @@ It runs the TTS synthesis in a separate thread, saving the result to a temporary
   
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_MicrosoftSapiTextToSpeechProvider_ConvertTextToSpeech_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.MicrosoftSapiTextToSpeechProvider.ConvertTextToSpeech*"></a>
-  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_MicrosoftSapiTextToSpeechProvider_ConvertTextToSpeech_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.MicrosoftSapiTextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)">ConvertTextToSpeech(String, Locale)</h4>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_MicrosoftSapiTextToSpeechProvider_ConvertTextToSpeech_System_String_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.MicrosoftSapiTextToSpeechProvider.ConvertTextToSpeech(System.String,System.String,UnityEngine.Localization.Locale)">ConvertTextToSpeech(String, String, Locale)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AudioClip&gt; ConvertTextToSpeech(string text, Locale locale)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AudioClip&gt; ConvertTextToSpeech(string key, string text, Locale locale)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,6 +150,11 @@ It runs the TTS synthesis in a separate thread, saving the result to a temporary
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
@@ -210,8 +211,7 @@ It runs the TTS synthesis in a separate thread, saving the result to a temporary
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_MicrosoftSapiTextToSpeechProvider_SetConfig_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.MicrosoftSapiTextToSpeechProvider.SetConfig*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_MicrosoftSapiTextToSpeechProvider_SetConfig_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.MicrosoftSapiTextToSpeechProvider.SetConfig(VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration)">SetConfig(ITextToSpeechConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Used for setting the config file.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

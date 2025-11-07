@@ -117,13 +117,12 @@
   
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_CacheAudioClip_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.CacheAudioClip*"></a>
-  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_CacheAudioClip_System_String_UnityEngine_Localization_Locale_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.CacheAudioClip(System.String,UnityEngine.Localization.Locale,VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration)">CacheAudioClip(String, Locale, ITextToSpeechConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Generates TTS audio and creates a file.</p>
-</div>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_CacheAudioClip_System_String_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.CacheAudioClip(System.String,System.String,UnityEngine.Localization.Locale)">CacheAudioClip(String, String, Locale)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task CacheAudioClip(string text, Locale locale, ITextToSpeechConfiguration configuration)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task CacheAudioClip(string key, string text, Locale locale)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,17 +136,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">UnityEngine.Localization.Locale</span></td>
         <td><span class="parametername">locale</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.html">ITextToSpeechConfiguration</a></td>
-        <td><span class="parametername">configuration</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -171,8 +170,7 @@
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_CacheTextToSpeechClips_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.CacheTextToSpeechClips*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_CacheTextToSpeechClips_System_Collections_Generic_IEnumerable_VRBuilder_Core_TextToSpeech_ITextToSpeechContent__UnityEngine_Localization_Locale_System_String_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.CacheTextToSpeechClips(System.Collections.Generic.IEnumerable{VRBuilder.Core.TextToSpeech.ITextToSpeechContent},UnityEngine.Localization.Locale,System.String)">CacheTextToSpeechClips(IEnumerable&lt;ITextToSpeechContent&gt;, Locale, String)</h4>
-  <div class="markdown level1 summary"><p>Generates files for all <a class="xref" href="VRBuilder.Core.TextToSpeech.TextToSpeechAudio.html">TextToSpeechAudio</a> passed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -222,21 +220,126 @@
   </table>
   
   
-  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses*"></a>
-  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses">GenerateTextToSpeechForAllProcesses()</h4>
-  <div class="markdown level1 summary"><p>Generates TTS audio files for all project locales for all processes.</p>
-</div>
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechActiveScene_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechActiveScene*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechActiveScene" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechActiveScene">GenerateTextToSpeechActiveScene()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void GenerateTextToSpeechForAllProcesses()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task GenerateTextToSpeechActiveScene()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechActiveScene_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechActiveScene*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechActiveScene_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechActiveScene(UnityEngine.Localization.Locale)">GenerateTextToSpeechActiveScene(Locale)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task GenerateTextToSpeechActiveScene(Locale locale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Localization.Locale</span></td>
+        <td><span class="parametername">locale</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechActiveSceneAndActiveOrDefaultLocale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechActiveSceneAndActiveOrDefaultLocale*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechActiveSceneAndActiveOrDefaultLocale" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechActiveSceneAndActiveOrDefaultLocale">GenerateTextToSpeechActiveSceneAndActiveOrDefaultLocale()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task GenerateTextToSpeechActiveSceneAndActiveOrDefaultLocale()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses">GenerateTextToSpeechForAllProcesses()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task GenerateTextToSpeechForAllProcesses()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcesses_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcesses(UnityEngine.Localization.Locale)">GenerateTextToSpeechForAllProcesses(Locale)</h4>
-  <div class="markdown level1 summary"><p>Generates TTS audio files for all available processes for the specified <code data-dev-comment-type="paramref" class="paramref">locale</code>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -255,8 +358,7 @@
       <tr>
         <td><span class="xref">UnityEngine.Localization.Locale</span></td>
         <td><span class="parametername">locale</span></td>
-        <td><p>The locale for which audio files should be generated.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -279,13 +381,168 @@
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale">GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale()</h4>
-  <div class="markdown level1 summary"><p>Generates TTS audio files for the the active or default locale for all processes.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task GenerateTextToSpeechForAllProcessesAndActiveOrDefaultLocale()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForProcess_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForProcess*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForProcess_System_String_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForProcess(System.String)">GenerateTextToSpeechForProcess(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task GenerateTextToSpeechForProcess(string processName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">processName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForProcess_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForProcess*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_GenerateTextToSpeechForProcess_System_String_UnityEngine_Localization_Locale_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.GenerateTextToSpeechForProcess(System.String,UnityEngine.Localization.Locale,VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration)">GenerateTextToSpeechForProcess(String, Locale, ITextToSpeechConfiguration)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; GenerateTextToSpeechForProcess(string processName, Locale locale, ITextToSpeechConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">processName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Localization.Locale</span></td>
+        <td><span class="parametername">locale</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.html">ITextToSpeechConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_IsCached_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.IsCached*"></a>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_IsCached_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_VRBuilder_Core_TextToSpeech_ITextToSpeechContent_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.IsCached(VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration,VRBuilder.Core.TextToSpeech.ITextToSpeechContent)">IsCached(ITextToSpeechConfiguration, ITextToSpeechContent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsCached(this ITextToSpeechConfiguration configuration, ITextToSpeechContent content)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.html">ITextToSpeechConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.TextToSpeech.ITextToSpeechContent.html">ITextToSpeechContent</a></td>
+        <td><span class="parametername">content</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

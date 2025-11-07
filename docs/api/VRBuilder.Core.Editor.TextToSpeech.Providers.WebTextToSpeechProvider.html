@@ -75,8 +75,7 @@
   
   <h1 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider" class="text-break">Class WebTextToSpeechProvider
   </h1>
-  <div class="markdown level0 summary"><p>Abstract WebTextToSpeechProvider which can be used for web based provider.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -268,8 +267,7 @@
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_AudioType_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.AudioType*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_AudioType" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.AudioType">AudioType</h4>
-  <div class="markdown level1 summary"><p>The type of audio encoding for the downloaded audio clip.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -290,20 +288,17 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_AudioType_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Relevant for the Android platform.</p>
-</div>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_ConvertTextToSpeech_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.ConvertTextToSpeech*"></a>
-  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_ConvertTextToSpeech_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.ConvertTextToSpeech(System.String,UnityEngine.Localization.Locale)">ConvertTextToSpeech(String, Locale)</h4>
+  <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_ConvertTextToSpeech_System_String_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.ConvertTextToSpeech(System.String,System.String,UnityEngine.Localization.Locale)">ConvertTextToSpeech(String, String, Locale)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AudioClip&gt; ConvertTextToSpeech(string text, Locale locale)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AudioClip&gt; ConvertTextToSpeech(string key, string text, Locale locale)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,6 +310,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
@@ -346,8 +346,7 @@
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_CreateAudioClip_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.CreateAudioClip*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_CreateAudioClip_System_Byte___" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.CreateAudioClip(System.Byte[])">CreateAudioClip(Byte[])</h4>
-  <div class="markdown level1 summary"><p>This method converts an mp3 file from byte to an AudioClip. If you have a different format, override this method.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -385,16 +384,11 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_CreateAudioClip_System_Byte____remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The base implementation only works on Windows.</p>
-</div>
   
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_CreateRequest_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.CreateRequest*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_CreateRequest_System_String_System_String_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.CreateRequest(System.String,System.String)">CreateRequest(String, String)</h4>
-  <div class="markdown level1 summary"><p>Method to create the UnityWebRequest needed to get the file.
-If you have to add specific authorization or other header you can do it here.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -441,9 +435,7 @@ If you have to add specific authorization or other header you can do it here.</p
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_DownloadAudio_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.DownloadAudio*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_DownloadAudio_System_String_UnityEngine_Localization_Locale_System_Threading_Tasks_TaskCompletionSource_UnityEngine_AudioClip__" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.DownloadAudio(System.String,UnityEngine.Localization.Locale,System.Threading.Tasks.TaskCompletionSource{UnityEngine.AudioClip})">DownloadAudio(String, Locale, TaskCompletionSource&lt;AudioClip&gt;)</h4>
-  <div class="markdown level1 summary"><p>This method should asynchronous download the audio file to an AudioClip and call task OnFinish with it.
-You can use the ParseAudio method to convert the file (mp3) into an AudioClip.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -495,8 +487,7 @@ You can use the ParseAudio method to convert the file (mp3) into an AudioClip.</
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_GetAudioFileDownloadUrl_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.GetAudioFileDownloadUrl*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_GetAudioFileDownloadUrl_System_String_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.GetAudioFileDownloadUrl(System.String)">GetAudioFileDownloadUrl(String)</h4>
-  <div class="markdown level1 summary"><p>Creates the specific url for the given voice, language and text to download the voice file.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -515,8 +506,7 @@ You can use the ParseAudio method to convert the file (mp3) into an AudioClip.</
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td><p>The text that should be converted into an audio file.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -531,8 +521,7 @@ You can use the ParseAudio method to convert the file (mp3) into an AudioClip.</
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>The full url required to receive the audio file for the given text message</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -565,8 +554,7 @@ You can use the ParseAudio method to convert the file (mp3) into an AudioClip.</
   
   <a id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_SetConfig_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.SetConfig*"></a>
   <h4 id="VRBuilder_Core_Editor_TextToSpeech_Providers_WebTextToSpeechProvider_SetConfig_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_" data-uid="VRBuilder.Core.Editor.TextToSpeech.Providers.WebTextToSpeechProvider.SetConfig(VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration)">SetConfig(ITextToSpeechConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Used for setting the config file.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

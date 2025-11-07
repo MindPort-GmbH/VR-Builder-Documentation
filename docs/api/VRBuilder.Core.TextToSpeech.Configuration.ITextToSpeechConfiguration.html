@@ -75,8 +75,7 @@
   
   <h1 id="VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration" data-uid="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration" class="text-break">Interface ITextToSpeechConfiguration
   </h1>
-  <div class="markdown level0 summary"><p>Base interface to implement a new text to speech configuration</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.Core.TextToSpeech.Configuration.html">VRBuilder.Core.TextToSpeech.Configuration</a></h6>
   <h6><strong>Assembly</strong>: VRBuilder.Core.dll</h6>
@@ -84,122 +83,15 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ITextToSpeechConfiguration</code></pre>
   </div>
-  <h5 id="VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>It always should implement with SettingsObject to prevent type cast errors</p>
-</div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_GetUniqueIdentifier_" data-uid="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.GetUniqueIdentifier*"></a>
-  <h4 id="VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_GetUniqueIdentifier_System_String_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.GetUniqueIdentifier(System.String,System.String,UnityEngine.Localization.Locale)">GetUniqueIdentifier(String, String, Locale)</h4>
-  <div class="markdown level1 summary"><p>Get GetUniqueIdentifier to identify the text relative to the locale and hash value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string GetUniqueIdentifier(string text, string md5Hash, Locale locale)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>Text to get the identifier</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">md5Hash</span></td>
-        <td><p>Hashed text value</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Localization.Locale</span></td>
-        <td><span class="parametername">locale</span></td>
-        <td><p>Used locale</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>A unique identifier of the text</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_IsCached_" data-uid="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.IsCached*"></a>
-  <h4 id="VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_IsCached_UnityEngine_Localization_Locale_System_String_" data-uid="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.IsCached(UnityEngine.Localization.Locale,System.String)">IsCached(Locale, String)</h4>
-  <div class="markdown level1 summary"><p>Check if the localizedContent in the chosen locale is cached</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsCached(Locale locale, string localizedContent)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Localization.Locale</span></td>
-        <td><span class="parametername">locale</span></td>
-        <td><p>Used locale</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">localizedContent</span></td>
-        <td><p>Content to be checked</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the localizedContent in the chosen locale is cached</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.html#VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetUniqueTextToSpeechFilename_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_System_String_UnityEngine_Localization_Locale_System_String_">TextToSpeechUtils.GetUniqueTextToSpeechFilename(ITextToSpeechConfiguration, String, Locale, String)</a>
+      <a class="xref" href="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.html#VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetUniqueTextToSpeechFilename_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_System_String_System_String_UnityEngine_Localization_Locale_System_String_">TextToSpeechUtils.GetUniqueTextToSpeechFilename(ITextToSpeechConfiguration, String, String, Locale, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.html#VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_PrepareFilepathForText_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_System_String_System_String_UnityEngine_Localization_Locale_">TextToSpeechUtils.PrepareFilepathForText(ITextToSpeechConfiguration, String, String, Locale)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRBuilder.Core.Editor.TextToSpeech.Utils.TextToSpeechEditorUtils.html#VRBuilder_Core_Editor_TextToSpeech_Utils_TextToSpeechEditorUtils_IsCached_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_VRBuilder_Core_TextToSpeech_ITextToSpeechContent_">TextToSpeechEditorUtils.IsCached(ITextToSpeechConfiguration, ITextToSpeechContent)</a>
   </div>
 </article>
           </div>
