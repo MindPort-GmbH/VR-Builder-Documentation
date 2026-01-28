@@ -14,7 +14,7 @@ To show or hide the hands visualization, navigate to `Left Hand Visual` and `Rig
 
 ![Rig Controller Hands Visualization](images/rig_controller_hands_visualization.png)
 
-### Dual Visualisation
+### Dual Visualization
 
 It is possible to show both controllers and hands at the same time by having both visualizations active. However, our priority was that the animated hands work well on their own and interact smoothly with the grey `Poke Point` and the teleport ray. Because of this, the hand and finger positions are not accurately mapped to the controller buttons.
 
