@@ -70,15 +70,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider">
+            <article class="content wrap" id="_content" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider">
   
   
-  <h1 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider" class="text-break">Class DynamicMoveProvider
+  <h1 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider" class="text-break">Class DynamicMoveProvider
   </h1>
-  <div class="markdown level0 summary"><p>A version of continuous movement that automatically controls the frame of reference that
-determines the forward direction of movement based on user preference for each hand.
-For example, can configure to use head relative movement for the left hand and controller relative movement for the right hand.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -98,6 +95,9 @@ For example, can configure to use head relative movement for the left hand and c
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.OnDisable()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.OnLocomotionStateChanging(UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionState)</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.OnLocomotionStarting()</span>
@@ -208,6 +208,9 @@ For example, can configure to use head relative movement for the left hand and c
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.locomotionPhase</span>
     </div>
     <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.locomotionStateChanged</span>
+    </div>
+    <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.locomotionStarted</span>
     </div>
     <div>
@@ -215,6 +218,9 @@ For example, can configure to use head relative movement for the left hand and c
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.beforeStepLocomotion</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.afterStepLocomotion</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.startLocomotion</span>
@@ -226,9 +232,9 @@ For example, can configure to use head relative movement for the left hand and c
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.LocomotionProvider.endLocomotion</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="VRBuilder.XRInteraction.XRI.StarterAssets.html">VRBuilder.XRInteraction.XRI.StarterAssets</a></h6>
-  <h6><strong>Assembly</strong>: VRBuilder.XRInteraction.dll</h6>
-  <h5 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.html">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets</a></h6>
+  <h6><strong>Assembly</strong>: VRBuilder.Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll</h6>
+  <h5 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class DynamicMoveProvider : ContinuousMoveProvider, IGravityController</code></pre>
   </div>
@@ -236,8 +242,8 @@ For example, can configure to use head relative movement for the left hand and c
   </h3>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider__ctor_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.#ctor*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider__ctor" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.#ctor">DynamicMoveProvider()</h4>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider__ctor_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.#ctor*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider__ctor" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.#ctor">DynamicMoveProvider()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -248,10 +254,9 @@ For example, can configure to use head relative movement for the left hand and c
   </h3>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_headTransform_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.headTransform*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_headTransform" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.headTransform">headTransform</h4>
-  <div class="markdown level1 summary"><p>Directs the XR Origin&apos;s movement when using the head-relative mode. If not set, will automatically find and use the XR Origin Camera.</p>
-</div>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_headTransform_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.headTransform*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_headTransform" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.headTransform">headTransform</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -274,10 +279,9 @@ For example, can configure to use head relative movement for the left hand and c
   </table>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_leftControllerTransform_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.leftControllerTransform*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_leftControllerTransform" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.leftControllerTransform">leftControllerTransform</h4>
-  <div class="markdown level1 summary"><p>Directs the XR Origin&apos;s movement when using the hand-relative mode with the left hand.</p>
-</div>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_leftControllerTransform_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.leftControllerTransform*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_leftControllerTransform" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.leftControllerTransform">leftControllerTransform</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -300,10 +304,9 @@ For example, can configure to use head relative movement for the left hand and c
   </table>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_leftHandMovementDirection_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.leftHandMovementDirection*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_leftHandMovementDirection" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.leftHandMovementDirection">leftHandMovementDirection</h4>
-  <div class="markdown level1 summary"><p>Whether to use the specified head transform or controller transform to direct the XR Origin&apos;s movement for the left hand.</p>
-</div>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_leftHandMovementDirection_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.leftHandMovementDirection*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_leftHandMovementDirection" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.leftHandMovementDirection">leftHandMovementDirection</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -319,19 +322,15 @@ For example, can configure to use head relative movement for the left hand and c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></td>
+        <td><a class="xref" href="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_leftHandMovementDirection_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></div>
-  </div>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_rightControllerTransform_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.rightControllerTransform*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_rightControllerTransform" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.rightControllerTransform">rightControllerTransform</h4>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_rightControllerTransform_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.rightControllerTransform*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_rightControllerTransform" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.rightControllerTransform">rightControllerTransform</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -355,10 +354,9 @@ For example, can configure to use head relative movement for the left hand and c
   </table>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_rightHandMovementDirection_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.rightHandMovementDirection*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_rightHandMovementDirection" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.rightHandMovementDirection">rightHandMovementDirection</h4>
-  <div class="markdown level1 summary"><p>Whether to use the specified head transform or controller transform to direct the XR Origin&apos;s movement for the right hand.</p>
-</div>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_rightHandMovementDirection_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.rightHandMovementDirection*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_rightHandMovementDirection" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.rightHandMovementDirection">rightHandMovementDirection</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,21 +372,17 @@ For example, can configure to use head relative movement for the left hand and c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></td>
+        <td><a class="xref" href="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_rightHandMovementDirection_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.MovementDirection.html">DynamicMoveProvider.MovementDirection</a></div>
-  </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_Awake_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.Awake*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_Awake" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.Awake">Awake()</h4>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_Awake_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.Awake*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_Awake" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.Awake">Awake()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -399,8 +393,8 @@ For example, can configure to use head relative movement for the left hand and c
   <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement.ContinuousMoveProvider.Awake()</span></div>
   
   
-  <a id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_ComputeDesiredMove_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.ComputeDesiredMove*"></a>
-  <h4 id="VRBuilder_XRInteraction_XRI_StarterAssets_DynamicMoveProvider_ComputeDesiredMove_UnityEngine_Vector2_" data-uid="VRBuilder.XRInteraction.XRI.StarterAssets.DynamicMoveProvider.ComputeDesiredMove(UnityEngine.Vector2)">ComputeDesiredMove(Vector2)</h4>
+  <a id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_ComputeDesiredMove_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.ComputeDesiredMove*"></a>
+  <h4 id="UnityEngine_XR_Interaction_Toolkit_Samples_StarterAssets_DynamicMoveProvider_ComputeDesiredMove_UnityEngine_Vector2_" data-uid="UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider.ComputeDesiredMove(UnityEngine.Vector2)">ComputeDesiredMove(Vector2)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

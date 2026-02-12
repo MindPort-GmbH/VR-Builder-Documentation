@@ -75,9 +75,7 @@
   
   <h1 id="VRBuilder_Core_Editor_Setup_SceneSetup" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup" class="text-break">Class SceneSetup
   </h1>
-  <div class="markdown level0 summary"><p>This base class is supposed to be implemented by classes which will be called to setup the scene.
-Can be used to e.g. setup process classes or interaction frameworks.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -118,9 +116,6 @@ Can be used to e.g. setup process classes or interaction frameworks.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class SceneSetup</code></pre>
   </div>
-  <h5 id="VRBuilder_Core_Editor_Setup_SceneSetup_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>See <see cref="!:ProcessConfigurationSetup"></see> as a reference.</p>
-</div>
   <h3 id="constructors">Constructors
   </h3>
   
@@ -139,9 +134,7 @@ Can be used to e.g. setup process classes or interaction frameworks.</p>
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_Key_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.Key*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_Key" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.Key">Key</h4>
-  <div class="markdown level1 summary"><p>Identifier key for specific scene setup types,
-e.g. for every interaction framework.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -166,9 +159,7 @@ e.g. for every interaction framework.</p>
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_Priority_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.Priority*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_Priority" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.Priority">Priority</h4>
-  <div class="markdown level1 summary"><p>Priority lets you tweak in which order different <a class="xref" href="VRBuilder.Core.Editor.Setup.SceneSetup.html">SceneSetup</a>s will be performed.
-The priority is considered from lowest to highest.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -195,8 +186,7 @@ The priority is considered from lowest to highest.</p>
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_FindPrefab_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.FindPrefab*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_FindPrefab_System_String_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.FindPrefab(System.String)">FindPrefab(String)</h4>
-  <div class="markdown level1 summary"><p>Finds and returns a prefab</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -215,8 +205,7 @@ The priority is considered from lowest to highest.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">prefab</span></td>
-        <td><p>Name or path to the target resource to setup.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -235,31 +224,11 @@ The priority is considered from lowest to highest.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="VRBuilder_Core_Editor_Setup_SceneSetup_FindPrefab_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Extensions must be omitted. All asset names and paths in Unity use forward slashes, paths using backslashes will not work.</p>
-</div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IO.FileNotFoundException</span></td>
-        <td><p>Exception thrown if no prefab can be found in project with given <code data-dev-comment-type="paramref" class="paramref">prefab</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_IsPrefabMissingInScene_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.IsPrefabMissingInScene*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_IsPrefabMissingInScene_System_String_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.IsPrefabMissingInScene(System.String)">IsPrefabMissingInScene(String)</h4>
-  <div class="markdown level1 summary"><p>Returns true if given <code data-dev-comment-type="paramref" class="paramref">prefabName</code> is missing in current scene.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -301,10 +270,7 @@ The priority is considered from lowest to highest.</p>
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_SetPrefabParent_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.SetPrefabParent*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_SetPrefabParent_UnityEngine_GameObject_System_String_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.SetPrefabParent(UnityEngine.GameObject,System.String)">SetPrefabParent(GameObject, String)</h4>
-  <div class="markdown level1 summary"><p>Sets the parent transform of the given prefab instance based on a path string.
-The path can contain multiple levels separated by forward or back slashes.
-Missing GameObjects in the hierarchy will be created automatically.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -323,14 +289,12 @@ Missing GameObjects in the hierarchy will be created automatically.</p>
       <tr>
         <td><span class="xref">UnityEngine.GameObject</span></td>
         <td><span class="parametername">prefab</span></td>
-        <td><p>The prefab instance to set the parent for</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">parentPath</span></td>
-        <td><p>Path to the desired parent object in the scene hierarchy (e.g. &quot;Parent/Child&quot;)</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -338,8 +302,7 @@ Missing GameObjects in the hierarchy will be created automatically.</p>
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_Setup_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.Setup*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_Setup_VRBuilder_Core_Editor_Setup_ISceneSetupConfiguration_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.Setup(VRBuilder.Core.Editor.Setup.ISceneSetupConfiguration)">Setup(ISceneSetupConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Setup the scene with necessary objects and/or logic.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -366,8 +329,7 @@ Missing GameObjects in the hierarchy will be created automatically.</p>
   
   <a id="VRBuilder_Core_Editor_Setup_SceneSetup_SetupPrefab_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.SetupPrefab*"></a>
   <h4 id="VRBuilder_Core_Editor_Setup_SceneSetup_SetupPrefab_System_String_System_String_" data-uid="VRBuilder.Core.Editor.Setup.SceneSetup.SetupPrefab(System.String,System.String)">SetupPrefab(String, String)</h4>
-  <div class="markdown level1 summary"><p>Sets up given <code data-dev-comment-type="paramref" class="paramref">prefab</code> in current scene.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,8 +348,7 @@ Missing GameObjects in the hierarchy will be created automatically.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">prefab</span></td>
-        <td><p>Name or path to the target resource to setup.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
@@ -408,25 +369,6 @@ Missing GameObjects in the hierarchy will be created automatically.</p>
       <tr>
         <td><span class="xref">UnityEngine.GameObject</span></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="VRBuilder_Core_Editor_Setup_SceneSetup_SetupPrefab_System_String_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Extensions must be omitted. All asset names and paths in Unity use forward slashes, paths using backslashes will not work.</p>
-</div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IO.FileNotFoundException</span></td>
-        <td><p>Exception thrown if no prefab can be found in project with given <code data-dev-comment-type="paramref" class="paramref">prefab</code>.</p>
-</td>
       </tr>
     </tbody>
   </table>

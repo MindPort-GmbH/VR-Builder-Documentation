@@ -75,9 +75,7 @@
   
   <h1 id="VRBuilder_XRInteraction_Interactables_InteractableObject" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject" class="text-break">Class InteractableObject
   </h1>
-  <div class="markdown level0 summary"><p>Interactable component that allows basic &quot;grab&quot; functionality.
-Can attach to selecting interactor and follow it around while obeying physics (and inherit velocity when released).</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -102,6 +100,9 @@ Can attach to selecting interactor and follow it around while obeying physics (a
     <h5>Inherited Members</h5>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.OnDestroy()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.OnCollisionStay()</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.ProcessInteractable(UnityEngine.XR.Interaction.Toolkit.XRInteractionUpdateOrder.UpdatePhase)</span>
@@ -164,6 +165,9 @@ Can attach to selecting interactor and follow it around while obeying physics (a
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.AddDefaultMultipleGrabTransformer()</span>
     </div>
     <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.OnHoverEntering(UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs)</span>
+    </div>
+    <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.OnSelectExited(UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs)</span>
     </div>
     <div>
@@ -219,6 +223,9 @@ Can attach to selecting interactor and follow it around while obeying physics (a
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.movementType</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.predictedVisualsTransform</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.velocityDamping</span>
@@ -302,10 +309,25 @@ Can attach to selecting interactor and follow it around while obeying physics (a
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.farAttachMode</span>
     </div>
     <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.limitLinearVelocity</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.limitAngularVelocity</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.maxLinearVelocityDelta</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.maxAngularVelocityDelta</span>
+    </div>
+    <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.singleGrabTransformersCount</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.multipleGrabTransformersCount</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.allowVisualAttachTransform</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.attachPointCompatibilityMode</span>
@@ -420,9 +442,6 @@ Can attach to selecting interactor and follow it around while obeying physics (a
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnUnregistered(UnityEngine.XR.Interaction.Toolkit.InteractableUnregisteredEventArgs)</span>
-    </div>
-    <div>
-      <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnHoverEntering(UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs)</span>
     </div>
     <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnHoverEntered(UnityEngine.XR.Interaction.Toolkit.HoverEnterEventArgs)</span>
@@ -719,9 +738,6 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class InteractableObject : XRGrabInteractable, IXRActivateInteractable, IXRHoverInteractable, IXRSelectInteractable, IXRFocusInteractable, IXRInteractionStrengthInteractable, IXRInteractable, IXROverridesGazeAutoSelect, IFarAttachProvider, IInteractableObject</code></pre>
   </div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Adds extra control over applicable interactions.</p>
-</div>
   <h3 id="constructors">Constructors
   </h3>
   
@@ -765,8 +781,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsActivated_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsActivated*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsActivated" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsActivated">IsActivated</h4>
-  <div class="markdown level1 summary"><p>Gets whether this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> is currently being activated.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -791,8 +806,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsGrabbable_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsGrabbable*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsGrabbable" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsGrabbable">IsGrabbable</h4>
-  <div class="markdown level1 summary"><p>Determines if this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> can be grabbed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -817,8 +831,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsInSocket_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsInSocket*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsInSocket" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsInSocket">IsInSocket</h4>
-  <div class="markdown level1 summary"><p>Gets whether this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> is currently being selected by any &apos;XRSocketInteractor&apos;.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -843,8 +856,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsTouchable_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsTouchable*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsTouchable" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsTouchable">IsTouchable</h4>
-  <div class="markdown level1 summary"><p>Determines if this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> can be touched.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -869,8 +881,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsUsable_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsUsable*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsUsable" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsUsable">IsUsable</h4>
-  <div class="markdown level1 summary"><p>Determines if this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> can be used.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -895,8 +906,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_Rigidbody_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.Rigidbody*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_Rigidbody" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.Rigidbody">Rigidbody</h4>
-  <div class="markdown level1 summary"><p>This interactable&apos;s rigidbody.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,8 +931,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_SelectingSocket_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.SelectingSocket*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_SelectingSocket" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.SelectingSocket">SelectingSocket</h4>
-  <div class="markdown level1 summary"><p>Get the current selecting &apos;XRSocketInteractor&apos; for this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -961,22 +970,17 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_ForceStopInteracting_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.ForceStopInteracting*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_ForceStopInteracting" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.ForceStopInteracting">ForceStopInteracting()</h4>
-  <div class="markdown level1 summary"><p>Forces all hovering and selecting interactors to not have interactions with this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> for one frame.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void ForceStopInteracting()</code></pre>
   </div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_ForceStopInteracting_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Interactions are not disabled immediately.</p>
-</div>
   
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_ForceUse_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.ForceUse*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_ForceUse" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.ForceUse">ForceUse()</h4>
-  <div class="markdown level1 summary"><p>Attempts to use this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -986,8 +990,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsHoverableBy_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsHoverableBy*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsHoverableBy_UnityEngine_XR_Interaction_Toolkit_Interactors_IXRHoverInteractor_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsHoverableBy(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRHoverInteractor)">IsHoverableBy(IXRHoverInteractor)</h4>
-  <div class="markdown level1 summary"><p>Determines if this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> can be hovered by a given interactor.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1006,8 +1009,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
       <tr>
         <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRHoverInteractor</span></td>
         <td><span class="parametername">interactor</span></td>
-        <td><p>Interactor to check for a valid hover state with.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1022,8 +1024,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if hovering is valid this frame, False if not.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1033,8 +1034,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsSelectableBy_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsSelectableBy*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsSelectableBy_UnityEngine_XR_Interaction_Toolkit_Interactors_IXRSelectInteractor_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.IsSelectableBy(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)">IsSelectableBy(IXRSelectInteractor)</h4>
-  <div class="markdown level1 summary"><p>Determines if this <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html">InteractableObject</a> can be selected by a given interactor.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1053,8 +1053,7 @@ Can attach to selecting interactor and follow it around while obeying physics (a
       <tr>
         <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor</span></td>
         <td><span class="parametername">interactor</span></td>
-        <td><p>Interactor to check for a valid selection with.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1069,23 +1068,17 @@ Can attach to selecting interactor and follow it around while obeying physics (a
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if selection is valid this frame, False if not.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.IsSelectableBy(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor)</span></div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_IsSelectableBy_UnityEngine_XR_Interaction_Toolkit_Interactors_IXRSelectInteractor__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>It always returns false when <a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html#VRBuilder_XRInteraction_Interactables_InteractableObject_IsGrabbable">IsGrabbable</a> is false.</p>
-</div>
   
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnActivated_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnActivated*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnActivated_UnityEngine_XR_Interaction_Toolkit_ActivateEventArgs_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnActivated(UnityEngine.XR.Interaction.Toolkit.ActivateEventArgs)">OnActivated(ActivateEventArgs)</h4>
-  <div class="markdown level1 summary"><p>This method is called by the <span class="xref">UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor</span>
-when the Interactor begins an activation event on this selected Interactable.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1104,27 +1097,17 @@ when the Interactor begins an activation event on this selected Interactable.</p
       <tr>
         <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.ActivateEventArgs</span></td>
         <td><span class="parametername">arguments</span></td>
-        <td><p>Event data containing the Interactor that is sending the activate event.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnActivated(UnityEngine.XR.Interaction.Toolkit.ActivateEventArgs)</span></div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnActivated_UnityEngine_XR_Interaction_Toolkit_ActivateEventArgs__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><code data-dev-comment-type="paramref" class="paramref">arguments</code> is only valid during this method call, do not hold a reference to it.</p>
-</div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnActivated_UnityEngine_XR_Interaction_Toolkit_ActivateEventArgs__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html#VRBuilder_XRInteraction_Interactables_InteractableObject_OnDeactivated_UnityEngine_XR_Interaction_Toolkit_DeactivateEventArgs_">OnDeactivated(DeactivateEventArgs)</a></div>
-  </div>
   
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnDeactivated_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnDeactivated*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnDeactivated_UnityEngine_XR_Interaction_Toolkit_DeactivateEventArgs_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnDeactivated(UnityEngine.XR.Interaction.Toolkit.DeactivateEventArgs)">OnDeactivated(DeactivateEventArgs)</h4>
-  <div class="markdown level1 summary"><p>This method is called by the <span class="xref">UnityEngine.XR.Interaction.Toolkit.XRBaseControllerInteractor</span>
-when the Interactor ends an activation event on this selected Interactable.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1143,28 +1126,17 @@ when the Interactor ends an activation event on this selected Interactable.</p>
       <tr>
         <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.DeactivateEventArgs</span></td>
         <td><span class="parametername">arguments</span></td>
-        <td><p>Event data containing the Interactor that is sending the deactivate event.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.OnDeactivated(UnityEngine.XR.Interaction.Toolkit.DeactivateEventArgs)</span></div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnDeactivated_UnityEngine_XR_Interaction_Toolkit_DeactivateEventArgs__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><code data-dev-comment-type="paramref" class="paramref">arguments</code> is only valid during this method call, do not hold a reference to it.</p>
-</div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnDeactivated_UnityEngine_XR_Interaction_Toolkit_DeactivateEventArgs__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="VRBuilder.XRInteraction.Interactables.InteractableObject.html#VRBuilder_XRInteraction_Interactables_InteractableObject_OnActivated_UnityEngine_XR_Interaction_Toolkit_ActivateEventArgs_">OnActivated(ActivateEventArgs)</a></div>
-  </div>
   
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnSelectEntering_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnSelectEntering*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnSelectEntering_UnityEngine_XR_Interaction_Toolkit_SelectEnterEventArgs_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnSelectEntering(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs)">OnSelectEntering(SelectEnterEventArgs)</h4>
-  <div class="markdown level1 summary"><p>This method is called by the Interaction Manager
-right before the Interactor first initiates selection of an Interactable
-in a first pass.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1183,24 +1155,17 @@ in a first pass.</p>
       <tr>
         <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs</span></td>
         <td><span class="parametername">arguments</span></td>
-        <td><p>Event data containing the Interactor that is initiating the selection.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.OnSelectEntering(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs)</span></div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnSelectEntering_UnityEngine_XR_Interaction_Toolkit_SelectEnterEventArgs__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><code data-dev-comment-type="paramref" class="paramref">arguments</code> is only valid during this method call, do not hold a reference to it.</p>
-</div>
   
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnSelectExiting_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnSelectExiting*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnSelectExiting_UnityEngine_XR_Interaction_Toolkit_SelectExitEventArgs_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.OnSelectExiting(UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs)">OnSelectExiting(SelectExitEventArgs)</h4>
-  <div class="markdown level1 summary"><p>This method is called by the Interaction Manager
-right before the Interactor ends selection of an Interactable
-in a first pass.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1219,29 +1184,24 @@ in a first pass.</p>
       <tr>
         <td><span class="xref">UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs</span></td>
         <td><span class="parametername">arguments</span></td>
-        <td><p>Event data containing the Interactor that is ending the selection.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.OnSelectExiting(UnityEngine.XR.Interaction.Toolkit.SelectExitEventArgs)</span></div>
-  <h5 id="VRBuilder_XRInteraction_Interactables_InteractableObject_OnSelectExiting_UnityEngine_XR_Interaction_Toolkit_SelectExitEventArgs__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><code data-dev-comment-type="paramref" class="paramref">arguments</code> is only valid during this method call, do not hold a reference to it.</p>
-</div>
   
   
   <a id="VRBuilder_XRInteraction_Interactables_InteractableObject_Reset_" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.Reset*"></a>
   <h4 id="VRBuilder_XRInteraction_Interactables_InteractableObject_Reset" data-uid="VRBuilder.XRInteraction.Interactables.InteractableObject.Reset">Reset()</h4>
-  <div class="markdown level1 summary"><p>Reset to default values.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Reset()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.Reset()</span></div>
+  <div><span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable.Reset()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">UnityEngine.XR.Interaction.Toolkit.Interactables.IXRActivateInteractable</span>

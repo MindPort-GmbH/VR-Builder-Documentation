@@ -92,14 +92,55 @@
   </h3>
   
   
-  <a id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetUniqueTextToSpeechFilename_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.GetUniqueTextToSpeechFilename*"></a>
-  <h4 id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetUniqueTextToSpeechFilename_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_System_String_UnityEngine_Localization_Locale_System_String_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration,System.String,UnityEngine.Localization.Locale,System.String)">GetUniqueTextToSpeechFilename(ITextToSpeechConfiguration, String, Locale, String)</h4>
-  <div class="markdown level1 summary"><p>Returns filename which uniquly identifies the audio by Backend, Language, Voice and also the text.</p>
-</div>
+  <a id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetMd5Hash_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.GetMd5Hash*"></a>
+  <h4 id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetMd5Hash_System_String_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.GetMd5Hash(System.String)">GetMd5Hash(String)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetUniqueTextToSpeechFilename(this ITextToSpeechConfiguration configuration, string text, Locale locale, string format = &quot;wav&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetMd5Hash(string input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetUniqueTextToSpeechFilename_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.GetUniqueTextToSpeechFilename*"></a>
+  <h4 id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_GetUniqueTextToSpeechFilename_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_System_String_System_String_UnityEngine_Localization_Locale_System_String_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.GetUniqueTextToSpeechFilename(VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration,System.String,System.String,UnityEngine.Localization.Locale,System.String)">GetUniqueTextToSpeechFilename(ITextToSpeechConfiguration, String, String, Locale, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetUniqueTextToSpeechFilename(this ITextToSpeechConfiguration configuration, string key, string text, Locale locale, string format = &quot;wav&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,6 +155,11 @@
       <tr>
         <td><a class="xref" href="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.html">ITextToSpeechConfiguration</a></td>
         <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
       <tr>
@@ -150,10 +196,108 @@
   </table>
   
   
+  <a id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_PrepareFilepathForText_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.PrepareFilepathForText*"></a>
+  <h4 id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_PrepareFilepathForText_VRBuilder_Core_TextToSpeech_Configuration_ITextToSpeechConfiguration_System_String_System_String_UnityEngine_Localization_Locale_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.PrepareFilepathForText(VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration,System.String,System.String,UnityEngine.Localization.Locale)">PrepareFilepathForText(ITextToSpeechConfiguration, String, String, Locale)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string PrepareFilepathForText(this ITextToSpeechConfiguration configuration, string key, string text, Locale locale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="VRBuilder.Core.TextToSpeech.Configuration.ITextToSpeechConfiguration.html">ITextToSpeechConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Localization.Locale</span></td>
+        <td><span class="parametername">locale</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_RemoveArtifacts_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.RemoveArtifacts*"></a>
+  <h4 id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_RemoveArtifacts_System_Single___" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.RemoveArtifacts(System.Single[])">RemoveArtifacts(Single[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float[] RemoveArtifacts(float[] floats)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span>[]</td>
+        <td><span class="parametername">floats</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_ShortsInByteArrayToFloats_" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.ShortsInByteArrayToFloats*"></a>
   <h4 id="VRBuilder_Core_TextToSpeech_Utils_TextToSpeechUtils_ShortsInByteArrayToFloats_System_Byte___" data-uid="VRBuilder.Core.TextToSpeech.Utils.TextToSpeechUtils.ShortsInByteArrayToFloats(System.Byte[])">ShortsInByteArrayToFloats(Byte[])</h4>
-  <div class="markdown level1 summary"><p>The result comes in byte array, but there are actually short values inside (ranged from short.Min to short.Max).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
