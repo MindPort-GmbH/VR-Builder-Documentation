@@ -1,7 +1,7 @@
 ### Manual User Input Condition
 
 The **Manual User Input Condition** checks if the user presses a specific button on their VR controller.  
-When the selected input is pressed (or held for the required time), the step will move to the next one.
+When the selected input is pressed (or held for the required time), the condition will complete.
 
 This condition has three configurable parameters that let you define exactly how the input should work.
 
@@ -28,7 +28,7 @@ This condition has three configurable parameters that let you define exactly how
 
 - **Hold Duration (seconds)**  
   Set how long the selected input must be held down.
-  - **0 (default):** The condition is met with a quick press.  
+  - **0 (default):** The condition completes instantly as soon as the input is triggered.  
   - **Greater than 0:** The user must hold the button down for the specified number of seconds before the condition is met.  
 
   Example:  
