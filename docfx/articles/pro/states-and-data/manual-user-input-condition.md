@@ -5,9 +5,8 @@ When the selected input is pressed (or held for the required time), the step wil
 
 This condition has three configurable parameters that let you define exactly how the input should work.
 
-![Manual User Input Data Property](images/manual-user-input-condition.png)
+![Manual User Input Data Property](images/manual-user-input-condiiton.png)
 
-![State Data Property](images/state-data-property.png)
 ---
 
 #### Manual User Input Condition Parameters
