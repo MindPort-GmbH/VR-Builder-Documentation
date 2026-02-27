@@ -7,6 +7,7 @@ This condition has three configurable parameters that let you define exactly how
 
 ![Manual User Input Data Property](images/manual-user-input-condition.png)
 
+![State Data Property](images/state-data-property.png)
 ---
 
 #### Manual User Input Condition Parameters
