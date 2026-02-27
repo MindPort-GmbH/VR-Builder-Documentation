@@ -16,6 +16,8 @@ The **Animate Transform** behavior accepts the following parameters.
 
 **Duration (in seconds)**: Duration in seconds of the animation.
 
+**Use Position Curve, Use Rotation Curve, Use Scale Curve**: Enable or disable the corresponding transform animation. If a toggle is disabled, its curve will be ignored and that transform component will remain unchanged.
+
 **Position curve, Rotation curve, Scale curve**: These animation curves determine the object's transform at a given point in time. The curve can have values from 0 (the object's original position, rotation or scale) to 1 (the transform provider's position, rotation or scale). Note that the length of the curves is normalized: while it is possible to have the time axis greater or lesser than 1, this won't affect the duration of the animation - it is recommended to leave the time axis to the default length of 0 to 1.
 
 **Ping pong**: If this is checked, the animation will play backwards after finishing, resulting in the object animating and then returning to the original position. Note the total duration will be twice the value in the `Duration` field. This is similar to creating a symmetrical velocity curve, like for example a bell shape.
