@@ -7,14 +7,17 @@ This repository contains documentation for the VR Builder Unity plugin ecosystem
 - Additional add-ons in the `co.mindport.vrbuilder.*` namespace
 
 ## Repository Layout
-- `docfx/`: Source of truth for documentation.
-- `docfx/articles/`: Manual content (`.md`) and table of contents files (`toc.yml`).
-- `docfx/templates/`: DocFX templates, including the PDF template.
-- `docfx/docfx.json`: Main DocFX config (site build + Core PDF config).
-- `docfx/docfx-pro.json`: Pro PDF config.
-- `docfx/build-*.bat`: Canonical build scripts.
-- `docs/`: Generated HTML output published via GitHub Pages.
-- `docfx/pdf/`: Generated PDF output.
+```text
+[Repository Root]
+├── docfx/                       # Source of truth for documentation.
+│   ├── articles/                # Manual content (`.md`) and table of contents files (`toc.yml`).
+│   ├── templates/               # DocFX templates, including the PDF template.
+│   ├── docfx.json               # Main DocFX config (site build + Core PDF config).
+│   ├── docfx-pro.json           # Pro PDF config.
+│   ├── build-*.bat              # Canonical build scripts.
+│   └── pdf/                     # Generated PDF output.
+├── docs/                        # Generated HTML output published via GitHub Pages.
+```
 
 ## Non-Negotiable Rules
 1. Do not manually edit files in `docs/`.
