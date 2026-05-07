@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Poke Object | VR Builder Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Poke Object | VR Builder Documentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="VR Builder Documentation">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="poke-object">Poke Object</h3>
+
+<h4 id="description">Description</h4>
+<p>The Poke Object condition is fulfilled when any of the <code>Objects</code> is poked by the user&#39;s controller to the specified poke depth threshold and held for the required duration in seconds. If <code>Must Poke All Objects</code> is enabled, all listed objects must be poked to fulfill the condition. If a user is already poking any of the objects while this condition is active, this condition is fulfilled immediately once the depth and duration requirements are met.</p>
+<h4 id="configuration">Configuration</h4>
+<ul>
+<li><p><strong>Objects</strong></p>
+<p>  The <code>Process Scene Objects</code> to be poked. The objects need to have the <code>Pokable Property</code> and a collider component configured.</p>
+</li>
+<li><p><strong>Must Poke All Objects</strong></p>
+<p>  If enabled, all listed objects must be poked to fulfill the condition. If disabled, poking any one of the objects is sufficient.</p>
+</li>
+<li><p><strong>Poke Depth Threshold</strong></p>
+<p>  A value between 0 and 1 that defines how deep the poke must reach for the condition to register. A value of 0 means any contact is sufficient, while a value of 1 requires the poke to reach full depth.</p>
+</li>
+<li><p><strong>Required Hold Duration</strong></p>
+<p>  The time in seconds the user must hold the poke at or beyond the depth threshold for the condition to be fulfilled. A value of 0 means the condition is fulfilled as soon as the threshold is reached.</p>
+</li>
+<li><p><strong>Lock settings</strong></p>
+<p>  If the <code>Inherit Scene Object Lock State</code> is checked on the <code>Pokable Property</code>, the <code>Process Scene Object</code> will inherit the lock state of its parent <code>Process Scene Object</code>.</p>
+<p>  If the <code>Is Always Unlocked</code> is checked on the <code>Pokable Property</code>, the <code>Process Scene Object</code> will not be locked by the VR Builder process at runtime.
+  It is still possible to lock the <code>Pokable Property</code> manually.</p>
+</li>
+</ul>
+<h4 id="remarks">Remarks</h4>
+<ul>
+<li>The <code>Pokable Property</code> requires an <code>XRSimpleInteractable</code> and an <code>XRPokeFilter</code> component on the object. These are added automatically when the <code>Pokable Property</code> is configured.</li>
+<li>The <code>Pokable Property</code> is not compatible with the <code>Grabbable Property</code>, <code>Usable Property</code>, or <code>Touchable Property</code>. Only one of these interaction properties should be used on a given object.</li>
+</ul>
+<h4 id="poke-follow-affordance">Poke Follow Affordance</h4>
+<p>By default, the Poke Object condition works on any GameObject with a <code>Pokable Property</code> and does not require the object to visually move when poked.</p>
+<p>If you want the object to <strong>visually move or press</strong> in response to the poke (for example, a button that presses in when poked), you need to add the <code>XR Poke Follow Affordance</code> component. This requires a different setup from the standard poke configuration. Refer to the <code>pokeButton</code> prefab included in the project for a working example of how to set this up correctly.</p>
+<p>This setup is specifically for cases where the object should move on poke. For all other poke interactions, the standard <code>Pokable Property</code> configuration is sufficient.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MindPort-GmbH/VR-Builder-Documentation/blob/develop/docfx/articles/core/poke-object-condition.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
