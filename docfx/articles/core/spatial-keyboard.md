@@ -2,70 +2,42 @@
 
 VR Builder supports the XR Interaction Toolkit's spatial (non-native) keyboard as an in-world input method, so VR users can type without a hardware keyboard. This page covers:
 
-- The **automatic setup** done by the Scene Setup Wizard for UI Toolkit-based UI.
-- Using the **spatial keyboard with uGUI / TextMeshPro (legacy UI)**, which is handled directly by the XR Interaction Toolkit and needs no VR Builder wiring.
-- Using the **headset's native system keyboard** (e.g. Pico, Quest in some modes), which needs no VR Builder wiring either.
-- Plugging in a **different keyboard implementation** (for example, a third-party floating keyboard prefab) by implementing your own keyboard backend.
+- Adding the **spatial keyboard to the scene** through the Scene Setup Wizard.
+- Wiring **one or more UI Toolkit `UIDocument`s** to the keyboard with a bridge component.
+- The **multi-user** auto-setup that wires the keyboard to the built-in connection window.
+- Plugging in a **different keyboard implementation** (for example, a custom floating keyboard prefab) by implementing your own keyboard backend.
+- When you can rely on a **native headset keyboard** (Pico OS, Quest in supported modes, etc.) and skip the spatial keyboard setup entirely.
 
 ### Requirements
 
 - A VR Builder scene set up via the Scene Setup Wizard (see [XR Rig](xr-rig.md)).
-- The Unity **XR Interaction Toolkit** package, with the **XRI Spatial Keyboard** sample imported. This sample provides the `XRKeyboard`, `XRI Global Keyboard Manager` prefab, and `GlobalNonNativeKeyboard` types that the keyboard relies on.
+- The Unity **XR Interaction Toolkit** package, with the **XRI Spatial Keyboard** sample imported. This sample provides the `XRKeyboard`, the `XRI Global Keyboard Manager` prefab, and `GlobalNonNativeKeyboard`.
 
-If the XRI Spatial Keyboard sample is not imported, the **Add XR spatial keyboard** option in the Scene Setup Wizard is greyed out.
+The Scene Setup Wizard option for the spatial keyboard is greyed out when the XRI Spatial Keyboard sample is not imported.
 
-### Setting Up the Spatial Keyboard with UI Toolkit
+### Adding the Spatial Keyboard via Scene Setup
 
-The Scene Setup Wizard now does all the wiring for you. When you create a scene from `Tools > VR Builder > Scene Setup Wizard`, the configuration page contains a checkbox:
+When you create a scene from `Tools > VR Builder > Scene Setup Wizard`, the configuration page contains a checkbox to add the spatial keyboard. Enabling it makes VR Builder spawn the `XRI Global Keyboard Manager` prefab from the XRI sample into the scene. This is the single shared `XRKeyboard` instance that every text field will open.
 
-- **Add XR spatial keyboard** — *enabled by default.*
+What scene setup does **depends on the configuration you pick**:
 
-When this option is on and the XRI Spatial Keyboard sample is present, VR Builder automatically:
+- **Single-user scenes** — Scene setup only adds the `XRI Global Keyboard Manager` to the scene. It does **not** create a `UIDocument` for you and it does **not** add a bridge component anywhere. You are responsible for adding the `UITKKeyboardBridge` to each `UIDocument` you want connected to the keyboard (see the next section).
+- **Multi-user scenes (Netcode add-on)** — Scene setup adds the `XRI Global Keyboard Manager` **and** automatically attaches `UITKKeyboardBridge` to the built-in `CONNECTION_WINDOW` `UIDocument`, with its `Server IP` input field registered. The connection panel works out of the box; any additional `UIDocument`s you add later still need their own bridge.
 
-1. Spawns the `XRI Global Keyboard Manager` prefab from the sample into the scene. This is the shared `XRKeyboard` instance every text field opens.
-2. Creates a GameObject named **`VR Builder UI`** with the following pre-wired components:
-   - `UIDocument` — empty source asset; this is where you assign your UXML.
-   - `XriSpatialKeyboardBackend` — the keyboard backend that drives the XRI keyboard.
-   - `UITKKeyboardBridge` — wired to the backend, with `Close Keyboard On Focus Out = false` and `Close Keyboard On Submit = true`.
+### Wiring a UIDocument to the Keyboard
 
-After running the wizard, all you have to do is:
+To make the spatial keyboard open for a UI Toolkit `TextField` in your own `UIDocument`:
 
-1. Select the **`VR Builder UI`** GameObject in the scene.
-2. On its `UIDocument`, set the **Source Asset** to your own UXML.
-3. On the `UITKKeyboardBridge`, add the `name` of every UI Toolkit `TextField` you want to wire up to the **Text Field Names** list. Only fields whose names appear in this list will open the spatial keyboard — unlisted `TextField`s are ignored.
+1. Select the GameObject that holds the `UIDocument`.
+2. Add a **UITK Keyboard Bridge** (`UITKKeyboardBridge`) component to it. The component requires a `UIDocument` on the same GameObject (enforced by `[RequireComponent(typeof(UIDocument))]`).
+3. Add the **XRI Spatial Keyboard Backend** (`XriSpatialKeyboardBackend`) component to the same GameObject — or assign an existing backend from elsewhere via the bridge's **Keyboard Backend Behaviour** field. When left blank, the bridge auto-resolves any `IKeyboardBackend` component on its own GameObject.
+4. In the bridge's **Text Field Names** list, add the `name` of every UI Toolkit `TextField` you want to open the spatial keyboard. Only fields whose names are in this list will be hooked up; unlisted fields are ignored.
 
-That's it. Pointing at any registered `TextField` with an XR ray, poking it with a controller, or tabbing to it now opens the in-VR keyboard with the field's current text.
+#### Multiple UIDocuments
 
-#### Multi-User Scenes (Netcode Add-On)
-
-For multi-user scenes set up with the **Netcode for VR Builder** add-on, the `VR Builder UI` host is not created. Instead, the existing connection UI (`DefaultConnectionUI`) is wired up automatically — the `UITKKeyboardBridge` and `XriSpatialKeyboardBackend` are added to it at runtime by `DefaultConnectionUIXriKeyboardBridgeBootstrap`, configured for the `ServerIpInput` field. No manual setup is needed for the IP-entry field.
-
-If you add your own UI Toolkit screens to a multi-user scene, follow the same steps as in single-user: drop a GameObject with `UIDocument`, `XriSpatialKeyboardBackend`, and `UITKKeyboardBridge`, then list your field names in **Text Field Names**.
-
-### Using the Spatial Keyboard with uGUI / TextMeshPro (Legacy UI)
-
-If your UI uses Unity's legacy uGUI (`Canvas` with `InputField` or `TMP_InputField`) instead of UI Toolkit, you do not need the VR Builder bridge at all. The XR Interaction Toolkit's Spatial Keyboard sample integrates directly with uGUI input fields through `GlobalNonNativeKeyboard`.
-
-To enable it:
-
-1. In the Scene Setup Wizard, leave **Add XR spatial keyboard** enabled — this places the `XRI Global Keyboard Manager` prefab in the scene, which is everything XRI needs for legacy UI.
-2. Add your `Canvas` with `InputField` or `TMP_InputField` components as you normally would.
-
-For details on configuration, theming, and the XRI keyboard's behavior with legacy UI, see the [XR Interaction Toolkit documentation](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest) for the Spatial Keyboard sample.
-
-### Using the Headset's Native Keyboard
-
-If you would rather use the headset's built-in system keyboard (for example, the Pico OS keyboard, the Quest system keyboard in supported modes, or the OS keyboard on mobile / standalone) instead of an in-Unity keyboard, **no VR Builder setup is required**. Build your UI normally with UI Toolkit (`UIDocument` + `TextField`) — when a `TextField` gains focus on a device that exposes a native keyboard, the OS surfaces it automatically.
-
-For this path:
-
-- **Disable** the **Add XR spatial keyboard** checkbox in the Scene Setup Wizard, or simply delete the auto-created `VR Builder UI` host and the `XRI Global Keyboard Manager` from the scene. Otherwise the in-VR XRI keyboard will open in addition to (or instead of) the native one.
-- You do **not** need the `UITKKeyboardBridge`, the `XriSpatialKeyboardBackend`, or the XRI Spatial Keyboard sample at all.
-- Native keyboard availability depends on the runtime — on standalone headsets it varies by vendor and by whether the app is foregrounded inside a system overlay context. Test on your target device.
+A bridge serves a single `UIDocument` — its own. If you have several `UIDocument`s in the scene (for example, a main menu, a settings panel, and a debug HUD), add a separate `UITKKeyboardBridge` to **each** `UIDocument` GameObject and list that document's own field names in its bridge. They can all share the same `XriSpatialKeyboardBackend` instance, or each carry its own; they all drive the single `XRI Global Keyboard Manager` in the scene.
 
 ### Component Reference
-
-The components below are added automatically by the Scene Setup Wizard. You usually don't need to touch them — but knowing the fields helps when customizing behavior.
 
 **UITK Keyboard Bridge**
 
@@ -95,7 +67,7 @@ The bridge listens to events on every registered `TextField` — pointer down, f
 
 ### Using a Different Keyboard (Custom Backend)
 
-The XRI spatial keyboard is one option. If you want to drive UI Toolkit fields with the headset's native system keyboard, a third-party floating keyboard asset, or your own custom prefab, you can write your own backend and plug it into the same `UITKKeyboardBridge`.
+The XRI spatial keyboard is one option. If you want to drive UI Toolkit fields with a different in-VR keyboard — your own prefab, a third-party floating keyboard asset, or anything else — you can write your own backend and plug it into the same `UITKKeyboardBridge`.
 
 To add a custom keyboard:
 
@@ -105,21 +77,31 @@ To add a custom keyboard:
    - `StateUpdated`, `Submitted`, and `Closed` events that fire when the user types, submits, or closes the keyboard.
    Use `XriSpatialKeyboardBackend` as a reference implementation — it shows how to translate input events from an external keyboard into the `KeyboardTextState` the bridge expects.
 2. **Add your keyboard prefab to the scene**, or spawn it at runtime from your backend — whichever fits the keyboard you are integrating.
-3. **Swap the backend on the bridge.** On the **`VR Builder UI`** GameObject, replace `XriSpatialKeyboardBackend` with your new backend component, and assign it to the bridge's **Keyboard Backend Behaviour** field (or leave the field blank and let the bridge auto-resolve the `IKeyboardBackend` from the same GameObject). You can also disable **Add XR spatial keyboard** in the Scene Setup Wizard if you want to skip the XRI prefab and host setup entirely, then add your own host GameObject manually.
+3. **Assign the backend to the bridge.** On the GameObject that holds your `UIDocument` and `UITKKeyboardBridge`, add your backend component and either assign it to the bridge's **Keyboard Backend Behaviour** field or leave the field blank to let the bridge auto-resolve any `IKeyboardBackend` on the same GameObject.
 
-From that point on, the bridge talks to your backend exactly the same way it talks to the spatial keyboard — focusing a `TextField` opens your keyboard, and typing on your keyboard updates the `TextField`.
+In this setup you can skip the **Add XR spatial keyboard** option in the Scene Setup Wizard — the XRI Global Keyboard Manager is not needed when you're using your own backend.
+
+### Using a Native Headset Keyboard
+
+If you would rather use the headset's built-in system keyboard (for example, the Pico OS keyboard, or any other platform that exposes a native keyboard automatically for UI Toolkit input), **you do not need the spatial keyboard setup at all**. Build your UI normally with UI Toolkit (`UIDocument` + `TextField`) — when a `TextField` gains focus on a device that supports a native keyboard, the OS surfaces it directly.
+
+For this path:
+
+- **Leave the "Add XR spatial keyboard" option unchecked** in the Scene Setup Wizard. You don't need the `XRI Global Keyboard Manager`, the bridge, or the backend.
+- The XRI Spatial Keyboard sample does not need to be imported.
+- Native keyboard availability depends on the runtime — Pico supports it directly for UI Toolkit text fields, but other headsets may not. Test on your target device.
 
 ### Troubleshooting
 
 - **The "Add XR spatial keyboard" option is greyed out in the Scene Setup Wizard.**  
   The XRI Spatial Keyboard sample is not imported. Open the Package Manager, find the XR Interaction Toolkit, and import the **Spatial Keyboard** sample.
-- **"Scene setup could not find 'XRI Global Keyboard Manager' prefab."**  
-  Same cause as above — import the XRI Spatial Keyboard sample.
 - **"UITKKeyboardBridge could not find an available keyboard backend."**  
   The bridge could not resolve an `IKeyboardBackend`. Make sure `XriSpatialKeyboardBackend` (or your custom backend) is on the same GameObject as the bridge, or assigned to the **Keyboard Backend Behaviour** field.
 - **"XriSpatialKeyboardBackend could not find an XRKeyboard."**  
-  No `XRKeyboard` is in the scene. If you removed the `XRI Global Keyboard Manager`, drop it back in from the XRI Spatial Keyboard sample.
+  No `XRKeyboard` is in the scene. Re-run the Scene Setup Wizard with **Add XR spatial keyboard** enabled, or manually drop the `XRI Global Keyboard Manager` prefab from the XRI Spatial Keyboard sample into the scene.
 - **The keyboard does not open for a specific `TextField`.**  
   Confirm that the field's `name` appears in the bridge's **Text Field Names** list, and that the `TextField` is inside the `UIDocument` attached to the same GameObject as the bridge.
 - **The keyboard opens and immediately closes.**  
   This usually happens when `Close Keyboard On Focus Out` is enabled and the user's pointer moves from the `TextField` onto the keyboard. Disable that option so the editing session stays alive while the user is typing.
+- **A second `UIDocument` doesn't open the keyboard.**  
+  Each `UIDocument` needs its own `UITKKeyboardBridge`. Add the bridge to the second `UIDocument`'s GameObject and list its field names in **Text Field Names**.
