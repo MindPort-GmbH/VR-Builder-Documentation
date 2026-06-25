@@ -2,6 +2,14 @@
 
 The XR Rig is a game object that anchors the user’s head mounted display, controllers, or user’s hands when using hand tracking within the virtual space. Essentially, it represents the user in the scene. On the rig, you can configure which types of locomotion and interaction are available to the user.
 
+### Customizing the Rig
+
+If you plan to use the same rig in multiple scenes, just create a prefab of it and manually replace the default rig.
+
+The only requirement every VR Builder rig has, independent of the interaction system, is that it must contain a `User Scene Object` component. This component identifies the rig as the user, and is usually placed on the root of the rig. It should reference the head, hand and base transforms, so that VR Builder can access those positions when needed. If left empty, it will attempt to find the head by itself by looking for the camera's transform.
+
+It is also possible to add other `Process Scene Object`s on the rig in order to use hands, backpacks, toolbelts and so on in behaviors and conditions, depending on the use case.
+
 ### VR Builder XR Rig
 
 When creating a new scene with the VR Builder Scene Setup Wizard, you get a `VRB_XR_Setup` game object automatically added to the scene. `VRB_XR_Setup` is the VR Builder XR Rig and is built upon the suggested standards set by the Unity XR Interaction Toolkit. Therefore, `VRB_XR_Setup` is very similar to the `XR Origin (XR Rig)` found in the XR Interaction Toolkit samples but has some additional VR Builder–specific scripts added.
