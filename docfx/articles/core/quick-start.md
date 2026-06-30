@@ -32,7 +32,7 @@ If these properties are not added manually you will usually be prompted to add t
 
 ### The Rig
 
-When creating a VR Builder scene, the default rig is created directly in the scene and can be edited or replaced like any game object. Find more about rig customization in the [XR Rig](xr-rig.md) article.
+When creating a VR Builder scene, the default rig is created directly in the scene and can be edited or replaced like any game object. Learn more about rig customization in the [XR Rig](xr-rig.md) article.
 
 ### Process Editor
 
