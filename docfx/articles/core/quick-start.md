@@ -30,13 +30,9 @@ By looking at the other objects in the scene, we can see that some have a `Proce
 
 If these properties are not added manually you will usually be prompted to add them automatically when building the process of your VR application.
 
-### Customizing the Rig
+### The Rig
 
-When creating a VR Builder scene, the default rig is created directly in the scene and can be edited or replaced like any game object. If you plan to use the same rig in multiple scenes, just create a prefab of it and manually replace the default rig.
-
-The only requirement every VR Builder rig has, independent of the interaction system, is that it must contain a `User Scene Object` component. This component identifies the rig as the user, and is usually placed on the root of the rig. It should reference the head, hand and base transforms, so that VR Builder can access those positions when needed. If left empty, it will attempt to find the head by itself by looking for the camera's transform.
-
-It is also possible to add other `Process Scene Object`s on the rig in order to use hands, backpacks, toolbelts and so on in behaviors and conditions, depending on the use case.
+When creating a VR Builder scene, the default rig is created directly in the scene and can be edited or replaced like any game object. Learn more about rig customization in the [XR Rig](xr-rig.md) article.
 
 ### Process Editor
 
